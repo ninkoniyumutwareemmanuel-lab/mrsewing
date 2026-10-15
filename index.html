@@ -22,34 +22,43 @@
     header {
       background-color: #141414;
       border-bottom: 1px solid #2a2a2a;
-      padding: 15px 5%;
+      padding: 12px 4%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: nowrap; /* Prevents items from wrapping onto new lines */
+      gap: 10px;
     }
 
-    /* Left: Logo Only with Background Removal Trick */
+    /* Left: Logo Only */
     .header-logo {
-      height: 50px;
+      height: 45px;
       width: auto;
       object-fit: contain;
       display: block;
-      /* Blends out the black background of the image onto dark background */
-      mix-blend-mode: screen; 
+      mix-blend-mode: screen; /* Blends out dark logo background */
+      flex-shrink: 0;
     }
 
     /* Center: Navigation Links */
+    nav {
+      flex-shrink: 1;
+      overflow: hidden;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
-      gap: 30px;
+      gap: 20px;
       align-items: center;
+      justify-content: center;
+      white-space: nowrap;
     }
 
     nav a {
       color: #cccccc;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 500;
       transition: color 0.3s ease;
     }
@@ -62,17 +71,64 @@
     .order-btn {
       background-color: #d4af37;
       color: #000000;
-      padding: 10px 24px;
+      padding: 8px 18px;
       text-decoration: none;
       font-weight: 700;
       border-radius: 4px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: background-color 0.3s ease;
     }
 
     .order-btn:hover {
       background-color: #f3e5ab;
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 600px) {
+      header {
+        padding: 10px 2%;
+        gap: 6px;
+      }
+
+      .header-logo {
+        height: 32px; /* Smaller logo for phones */
+      }
+
+      nav ul {
+        gap: 8px; /* Tighter spacing between links */
+      }
+
+      nav a {
+        font-size: 0.72rem; /* Compact font size for mobile */
+      }
+
+      .order-btn {
+        padding: 6px 10px;
+        font-size: 0.7rem; /* Smaller button padding & font */
+      }
+    }
+
+    @media (max-width: 380px) {
+      nav ul {
+        gap: 5px;
+      }
+
+      nav a {
+        font-size: 0.65rem;
+      }
+
+      .header-logo {
+        height: 26px;
+      }
+
+      .order-btn {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+      }
     }
   </style>
 </head>
