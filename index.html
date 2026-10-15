@@ -26,21 +26,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: nowrap; /* Prevents items from wrapping onto new lines */
+      flex-wrap: nowrap;
       gap: 10px;
     }
 
-    /* Left: Logo Only */
     .header-logo {
       height: 45px;
       width: auto;
       object-fit: contain;
       display: block;
-      mix-blend-mode: screen; /* Blends out dark logo background */
+      mix-blend-mode: screen;
       flex-shrink: 0;
     }
 
-    /* Center: Navigation Links */
     nav {
       flex-shrink: 1;
       overflow: hidden;
@@ -64,10 +62,9 @@
     }
 
     nav a:hover {
-      color: #d4af37; /* Gold hover color */
+      color: #d4af37;
     }
 
-    /* Right: Order Button */
     .order-btn {
       background-color: #d4af37;
       color: #000000;
@@ -87,6 +84,78 @@
       background-color: #f3e5ab;
     }
 
+    /* Happy Customers Section */
+    .customers-section {
+      padding: 60px 4%;
+      background: radial-gradient(circle at top, #141414 0%, #0b0b0b 100%);
+      text-align: center;
+    }
+
+    .customers-section h2 {
+      font-size: 2.2rem;
+      color: #d4af37;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .customers-description {
+      font-size: 1.1rem;
+      color: #aaaaaa;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .customers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .customer-card {
+      background-color: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 20px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .customer-card:hover {
+      border-color: #d4af37;
+      transform: translateY(-5px);
+    }
+
+    .suit-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .card-actions a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .card-actions a:hover {
+      color: #ffffff;
+    }
+
     /* Mobile Responsive Adjustments */
     @media (max-width: 600px) {
       header {
@@ -95,50 +164,46 @@
       }
 
       .header-logo {
-        height: 32px; /* Smaller logo for phones */
+        height: 32px;
       }
 
       nav ul {
-        gap: 8px; /* Tighter spacing between links */
+        gap: 8px;
       }
 
       nav a {
-        font-size: 0.72rem; /* Compact font size for mobile */
+        font-size: 0.72rem;
       }
 
       .order-btn {
         padding: 6px 10px;
-        font-size: 0.7rem; /* Smaller button padding & font */
-      }
-    }
-
-    @media (max-width: 380px) {
-      nav ul {
-        gap: 5px;
+        font-size: 0.7rem;
       }
 
-      nav a {
-        font-size: 0.65rem;
+      .customers-section {
+        padding: 40px 2%;
       }
 
-      .header-logo {
-        height: 26px;
+      .customers-section h2 {
+        font-size: 1.8rem;
       }
 
-      .order-btn {
-        padding: 5px 8px;
-        font-size: 0.65rem;
+      .customers-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .suit-image {
+        height: 280px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header Section -->
   <header>
-    <!-- Left: Logo image only -->
     <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
-
-    <!-- Center: Navigation Links -->
     <nav>
       <ul>
         <li><a href="#suits">Suits</a></li>
@@ -146,10 +211,52 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-
-    <!-- Right: Order Button -->
     <a href="#order" class="order-btn">Order</a>
   </header>
+
+  <!-- Section 1: Happy Customers -->
+  <section class="customers-section">
+    <h2>Happy Customers</h2>
+    <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
+    
+    <div class="customers-grid">
+      <!-- Suit Card 1 -->
+      <div class="customer-card">
+        <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image">
+        <div class="card-actions">
+          <a href="#reviews-1">Read reviews</a>
+          <a href="#know-more-1">Know More</a>
+        </div>
+      </div>
+
+      <!-- Suit Card 2 -->
+      <div class="customer-card">
+        <img src="2.jpeg" alt="Custom Bespoke Suit 2" class="suit-image">
+        <div class="card-actions">
+          <a href="#reviews-2">Read reviews</a>
+          <a href="#know-more-2">Know More</a>
+        </div>
+      </div>
+
+      <!-- Suit Card 3 -->
+      <div class="customer-card">
+        <img src="3.jpeg" alt="Custom Bespoke Suit 3" class="suit-image">
+        <div class="card-actions">
+          <a href="#reviews-3">Read reviews</a>
+          <a href="#know-more-3">Know More</a>
+        </div>
+      </div>
+
+      <!-- Suit Card 4 -->
+      <div class="customer-card">
+        <img src="4.jpeg" alt="Custom Bespoke Suit 4" class="suit-image">
+        <div class="card-actions">
+          <a href="#reviews-4">Read reviews</a>
+          <a href="#know-more-4">Know More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
