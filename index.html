@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Sewing | Bespoke Tailoring & Made-to-Measure Suits</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            300: '#FCE09B',
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#C5A059',
+                            700: '#B89028',
+                        },
+                        jetBlack: '#000000',
+                        darkSection: '#0A0A0A',
+                        darkCard: '#111111',
+                        darkBorder: '#222222'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            background-color: #000000;
+        }
+        
+        /* Pure Gold Metallic Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFF0C2 0%, #D4AF37 50%, #997819 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Gold Glow Effect */
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+        }
+        .glow-gold:hover {
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222222;
+            border: 1px solid #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-jetBlack text-white font-sans antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 bg-jetBlack/95 backdrop-blur-md border-b border-gold-500/30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo with Needle & Thread SVG -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold-500/60 flex items-center justify-center bg-darkCard group-hover:border-gold-400 transition">
+                    <svg class="w-6 h-6 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <!-- Needle & Thread Icon -->
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L15 8L12 22L9 8L12 2Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 5A1 1 0 1 0 12 7A1 1 0 1 0 12 5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 6C18 3 21 8 18 12C15 16 20 20 22 22" stroke-dasharray="2 2"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-gold-gradient group-hover:opacity-90 transition">MR. SEWING</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-zinc-300 font-light -mt-1">Bespoke Tailoring</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider">
+                <a href="#home" class="text-white hover:text-gold-400 transition-colors">HOME</a>
+                <a href="#suits" class="text-white hover:text-gold-400 transition-colors">SUITS</a>
+                <a href="#sizing" class="text-white hover:text-gold-400 transition-colors">SIZING GUIDE</a>
+                <a href="#why-us" class="text-white hover:text-gold-400 transition-colors">WHY US</a>
+                <a href="#faq" class="text-white hover:text-gold-400 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Primary CTA -->
+            <div class="hidden md:flex items-center">
+                <a href="#footer-order" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 text-black font-semibold text-xs tracking-widest uppercase hover:brightness-110 transform hover:-translate-y-0.5 transition shadow-lg shadow-gold-500/20">
+                    Sign Up & Order
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gold-400 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkCard border-b border-gold-500/30 px-6 py-6 space-y-4">
+            <a href="#home" class="block text-gold-400 font-medium tracking-wider">HOME</a>
+            <a href="#suits" class="block text-white hover:text-gold-400 font-medium tracking-wider">SUITS</a>
+            <a href="#sizing" class="block text-white hover:text-gold-400 font-medium tracking-wider">SIZING GUIDE</a>
+            <a href="#why-us" class="block text-white hover:text-gold-400 font-medium tracking-wider">WHY US</a>
+            <a href="#faq" class="block text-white hover:text-gold-400 font-medium tracking-wider">FAQ</a>
+            <a href="#footer-order" class="block w-full text-center px-6 py-3 rounded-full bg-gold-500 text-black font-semibold text-xs tracking-widest uppercase mt-4">
+                Sign Up & Order
+            </a>
+        </div>
+    </header>
+
+
+    <!-- LAYER 1: HERO & TESTIMONIALS SECTION -->
+    <section id="home" class="relative py-16 lg:py-24 overflow-hidden bg-jetBlack border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Reviews & Tagline -->
+                <div class="lg:col-span-6 space-y-8 text-center lg:text-left">
+                    
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-darkCard border border-gold-500/50 text-gold-400 text-xs tracking-widest uppercase font-semibold">
+                        <svg class="w-4 h-4 fill-current text-gold-400" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <span>Happy Customers</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                        TESTIMONIALS & <br>
+                        <span class="text-gold-gradient">REVIEWS</span>
+                    </h1>
+
+                    <p class="text-zinc-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Discover why discerning gentlemen and women choose Mr. Sewing for bespoke elegance, precision tailoring, and unmatched custom luxury.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <!-- Check Reviews Button -->
+                        <button onclick="toggleReviewsModal(true)" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gold-500 text-black font-semibold text-xs tracking-widest uppercase hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/20 flex items-center justify-center space-x-2">
+                            <span>Check Reviews</span>
+                            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Made to Order Badge -->
+                    <div class="pt-6 border-t border-gold-500/20 inline-block w-full">
+                        <div class="flex items-center justify-center lg:justify-start space-x-4">
+                            <span class="h-px w-12 bg-gold-500"></span>
+                            <span class="font-serif text-2xl lg:text-3xl tracking-[0.25em] text-gold-400 font-semibold uppercase">
+                                Made to Order
+                            </span>
+                            <span class="h-px w-12 bg-gold-500"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Bespoke Suit Photo -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-gold-500/40 bg-darkCard shadow-2xl group glow-gold">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1200&q=80" 
+                             alt="Bespoke Tailor Fitting Suit" 
+                             class="w-full h-[450px] sm:h-[550px] object-cover object-top filter brightness-90 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-jetBlack via-transparent to-transparent opacity-90"></div>
+                        
+                        <!-- Floating Highlight Card -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-jetBlack/90 backdrop-blur-md p-5 rounded-xl border border-gold-500/30">
+                            <p class="font-serif italic text-white text-lg sm:text-xl">"A bespoke suit is not just clothing; it is a personal masterpiece crafted around you."</p>
+                            <p class="text-xs text-gold-400 tracking-wider uppercase mt-2">— Master Tailor at Mr. Sewing</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LAYER 2: SUITS SHOWCASE -->
+    <section id="suits" class="py-20 bg-darkSection border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-semibold tracking-[0.25em] text-xs uppercase">Custom Collections</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-gold-gradient mt-2">SUITS</h2>
+                <div class="w-20 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Two Distinct Cards: Women's Suits & Men's Suits -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Card 1: Women's Suits -->
+                <div class="group relative bg-darkCard rounded-2xl overflow-hidden border border-gold-500/30 hover:border-gold-400 transition-all duration-500 shadow-2xl flex flex-col glow-gold">
+                    <div class="relative h-[420px] overflow-hidden bg-jetBlack">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                             alt="Bespoke Women's Suits" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkCard via-darkCard/20 to-transparent"></div>
+                    </div>
+                    
+                    <div class="p-8 text-center flex-1 flex flex-col justify-between -mt-12 relative z-10 bg-darkCard">
+                        <div>
+                            <h3 class="font-serif text-3xl font-semibold text-white mb-2">Women's Suits</h3>
+                            <p class="text-zinc-300 text-sm font-light mb-6">
+                                Precision-cut blazers, tailored trousers, and bespoke ladies' formal wear engineered for modern sophistication.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#footer-order" class="inline-block w-full sm:w-auto px-8 py-3.5 rounded-full bg-gold-500 text-black font-semibold text-xs tracking-widest uppercase hover:bg-gold-400 transition-all shadow-md">
+                                Choose Yours
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Men's Suits -->
+                <div class="group relative bg-darkCard rounded-2xl overflow-hidden border border-gold-500/30 hover:border-gold-400 transition-all duration-500 shadow-2xl flex flex-col glow-gold">
+                    <div class="relative h-[420px] overflow-hidden bg-jetBlack">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
+                             alt="Bespoke Men's Suits" 
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkCard via-darkCard/20 to-transparent"></div>
+                    </div>
+                    
+                    <div class="p-8 text-center flex-1 flex flex-col justify-between -mt-12 relative z-10 bg-darkCard">
+                        <div>
+                            <h3 class="font-serif text-3xl font-semibold text-white mb-2">Men's Suits</h3>
+                            <p class="text-zinc-300 text-sm font-light mb-6">
+                                Timeless double-breasted jackets, three-piece tuxedos, and executive wear drafted precisely to your posture.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#footer-order" class="inline-block w-full sm:w-auto px-8 py-3.5 rounded-full bg-gold-500 text-black font-semibold text-xs tracking-widest uppercase hover:bg-gold-400 transition-all shadow-md">
+                                Choose Yours
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LAYER 3: WHY MADE TO MEASURE -->
+    <section id="sizing" class="py-20 bg-jetBlack border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-semibold tracking-[0.25em] text-xs uppercase">The Bespoke Standard</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">WHY MADE TO MEASURE?</h2>
+                <div class="w-20 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Feature 1: Measured to You -->
+                <div class="bg-darkCard p-8 sm:p-10 rounded-2xl border border-gold-500/30 hover:border-gold-400 transition-all duration-300 relative group glow-gold">
+                    <div class="w-14 h-14 rounded-full bg-jetBlack border border-gold-500/50 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-black transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-gold-400 mb-4">Measured to You</h3>
+                    <p class="text-white text-sm sm:text-base leading-relaxed font-light">
+                        Off-the-rack sizing forces your body into standardized templates. We take over 25 precise anatomical measurements—taking into account shoulder slope, torso length, stance, and arm drape—to guarantee a perfect fit tailored specifically to your silhouette.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Drafted to You -->
+                <div class="bg-darkCard p-8 sm:p-10 rounded-2xl border border-gold-500/30 hover:border-gold-400 transition-all duration-300 relative group glow-gold">
+                    <div class="w-14 h-14 rounded-full bg-jetBlack border border-gold-500/50 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-black transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-gold-400 mb-4">Drafted to You</h3>
+                    <p class="text-white text-sm sm:text-base leading-relaxed font-light">
+                        Every single garment begins as an exclusive individual pattern drafted from scratch. No pre-cut mass manufacturing. Every panel, lapel cut, pocket placement, and lining accent is drafted specifically to compliment your personal aesthetic.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LAYER 4: WHY CUSTOMERS CHOOSE MR. SEWING -->
+    <section id="why-us" class="py-20 bg-darkSection border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 font-semibold tracking-[0.25em] text-xs uppercase">Why Choose Us</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">WHY CUSTOMERS CHOOSE MR. SEWING</h2>
+                <div class="w-20 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Highlight 1 -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-gold-500/30 text-center flex flex-col items-center hover:border-gold-400 transition glow-gold">
+                    <div class="w-16 h-16 rounded-full bg-jetBlack border border-gold-500/50 flex items-center justify-center text-gold-400 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-7 7m7-7l-7-7"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-gold-400 mb-3">Crafted to You from Scratch</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">
+                        Every garment starts with raw, hand-selected luxury wools and silks, constructed ground-up to reflect your distinct individual taste.
+                    </p>
+                </div>
+
+                <!-- Highlight 2 -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-gold-500/30 text-center flex flex-col items-center hover:border-gold-400 transition glow-gold">
+                    <div class="w-16 h-16 rounded-full bg-jetBlack border border-gold-500/50 flex items-center justify-center text-gold-400 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-gold-400 mb-3">Your Choice, Your Way</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">
+                        You hold total creative freedom over fabric weave, button material, monogramming, peak or notch lapels, and custom silk linings.
+                    </p>
+                </div>
+
+                <!-- Highlight 3 -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-gold-500/30 text-center flex flex-col items-center hover:border-gold-400 transition glow-gold">
+                    <div class="w-16 h-16 rounded-full bg-jetBlack border border-gold-500/50 flex items-center justify-center text-gold-400 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-gold-400 mb-3">Punctual Direct Delivery</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">
+                        We value your calendar. Once meticulously crafted and inspected, your suit is hand-delivered on your exact specified schedule.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 bg-jetBlack border-b border-gold-500/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-gold-gradient">FREQUENTLY ASKED QUESTIONS</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="bg-darkCard border border-gold-500/30 rounded-xl p-5 group [&_summary::-webkit-details-marker]:none">
+                    <summary class="flex items-center justify-between cursor-pointer font-serif text-lg font-medium text-white">
+                        <span>How long does the bespoke process take?</span>
+                        <span class="text-gold-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-zinc-300 text-sm mt-3 font-light leading-relaxed">
+                        A typical custom order takes approximately 2 to 3 weeks from initial measurements to final fitting and direct delivery.
+                    </p>
+                </details>
+
+                <details class="bg-darkCard border border-gold-500/30 rounded-xl p-5 group [&_summary::-webkit-details-marker]:none">
+                    <summary class="flex items-center justify-between cursor-pointer font-serif text-lg font-medium text-white">
+                        <span>Can I select my own fabric and inner lining?</span>
+                        <span class="text-gold-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-zinc-300 text-sm mt-3 font-light leading-relaxed">
+                        Yes! You have full access to hundreds of premium wools, cashmeres, linens, and patterned silk linings.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LAYER 5: FOOTER & ORDER CTA -->
+    <footer id="footer-order" class="bg-jetBlack pt-20 pb-12 text-white text-sm border-t border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- PROMINENT ORDER BIG BUTTON -->
+            <div class="text-center pb-20 border-b border-gold-500/30">
+                <p class="text-gold-400 font-semibold tracking-widest text-xs uppercase mb-3">Begin Your Custom Experience</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mb-8">READY FOR YOUR BESPOKE FIT?</h2>
+                
+                <a href="#footer-order" onclick="alert('Order form initialising... Thank you for choosing Mr. Sewing!')" 
+                   class="inline-block px-12 py-5 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 text-black font-extrabold text-base tracking-[0.2em] uppercase hover:scale-105 transition-transform duration-300 shadow-2xl shadow-gold-500/30 border border-gold-300">
+                    ORDER NOW
+                </a>
+            </div>
+
+            <!-- FOOTER COLUMNS LAYOUT -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 border-b border-gold-500/20">
+                
+                <!-- Col 1: Quick Links -->
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-gold-400 tracking-wider mb-6">QUICK LINKS</h4>
+                    <ul class="space-y-3 font-light">
+                        <li><a href="#home" class="hover:text-gold-400 transition-colors">Home</a></li>
+                        <li><a href="#suits" class="hover:text-gold-400 transition-colors">Suits Collection</a></li>
+                        <li><a href="#sizing" class="hover:text-gold-400 transition-colors">Sizing Guide & About Us</a></li>
+                        <li><a href="#faq" class="hover:text-gold-400 transition-colors">FAQ & Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2: Location & Address -->
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-gold-400 tracking-wider mb-6">LOCATION & ATELIER</h4>
+                    <p class="text-white font-medium mb-1">Mr. Sewing Atelier</p>
+                    <p class="text-zinc-300 font-light mb-4 text-xs leading-relaxed">
+                        KN 3 Ave, Down Town Luxury District,<br>
+                        Kigali, Rwanda
+                    </p>
+                    <!-- Map Pin Preview -->
+                    <div class="rounded-xl overflow-hidden border border-gold-500/30 bg-darkCard p-3 flex items-center space-x-3 text-xs">
+                        <div class="w-8 h-8 rounded-lg bg-jetBlack border border-gold-500 flex items-center justify-center text-gold-400 shrink-0">
+                            📍
+                        </div>
+                        <div>
+                            <span class="text-white block font-medium">Kigali Workshop</span>
+                            <span class="text-gold-400 text-[11px]">Pinned Map Location Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Opening Hours -->
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-gold-400 tracking-wider mb-6">OPENING HOURS</h4>
+                    <ul class="space-y-2.5 font-light text-xs">
+                        <li class="flex justify-between py-1 border-b border-zinc-800">
+                            <span class="text-zinc-300">Monday - Friday:</span>
+                            <span class="text-gold-400 font-medium">8:00 AM - 7:00 PM</span>
+                        </li>
+                        <li class="flex justify-between py-1 border-b border-zinc-800">
+                            <span class="text-zinc-300">Saturday:</span>
+                            <span class="text-gold-400 font-medium">9:00 AM - 5:00 PM</span>
+                        </li>
+                        <li class="flex justify-between py-1">
+                            <span class="text-zinc-300">Sunday:</span>
+                            <span class="text-zinc-400">By Appointment Only</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Legal & Social Media -->
+                <div>
+                    <h4 class="font-serif text-lg font-semibold text-gold-400 tracking-wider mb-6">POLICIES & SOCIALS</h4>
+                    
+                    <ul class="space-y-2 font-light text-xs mb-6">
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Return Policy</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a></li>
+                    </ul>
+
+                    <!-- Social Icons (Gold Accent) -->
+                    <p class="text-xs text-zinc-300 mb-3 font-medium">Connect With Us:</p>
+                    <div class="flex items-center space-x-3">
+                        <!-- Facebook -->
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-9 h-9 rounded-full bg-darkCard border border-gold-500/40 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-black transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-9 h-9 rounded-full bg-darkCard border border-gold-500/40 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-black transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok" class="w-9 h-9 rounded-full bg-darkCard border border-gold-500/40 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-black transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.98-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="w-9 h-9 rounded-full bg-darkCard border border-gold-500/40 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-black transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 text-center text-xs text-zinc-400 font-light">
+                <p>&copy; 2026 Mr. Sewing. All Rights Reserved. Crafted with bespoke precision.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- REVIEWS MODAL OVERLAY -->
+    <div id="reviews-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-darkCard border border-gold-500/50 w-full max-w-2xl rounded-2xl p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto glow-gold">
+            
+            <button onclick="toggleReviewsModal(false)" class="absolute top-4 right-4 text-gold-400 hover:text-white p-2 text-xl font-bold">
+                ✕
+            </button>
+
+            <h3 class="font-serif text-3xl font-bold text-gold-gradient mb-2">CUSTOMER REVIEWS</h3>
+            <p class="text-xs text-zinc-300 tracking-wider uppercase mb-6">Verified Client Feedback</p>
+
+            <div class="space-y-4">
+                <div class="p-4 bg-jetBlack border border-gold-500/30 rounded-xl">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-white font-serif font-semibold">David K.</span>
+                        <span class="text-gold-400 text-xs">★★★★★</span>
+                    </div>
+                    <p class="text-zinc-300 text-xs font-light">"The fit on my bespoke wedding tuxedo was flawless. Crafted ground-up with exact measurements!"</p>
+                </div>
+
+                <div class="p-4 bg-jetBlack border border-gold-500/30 rounded-xl">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-white font-serif font-semibold">Claire M.</span>
+                        <span class="text-gold-400 text-xs">★★★★★</span>
+                    </div>
+                    <p class="text-zinc-300 text-xs font-light">"Finding a perfectly structured ladies' power blazer is difficult, but Mr. Sewing drafted it to perfection."</p>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <button onclick="toggleReviewsModal(false)" class="px-6 py-2.5 bg-gold-500 text-black text-xs font-semibold rounded-full tracking-wider uppercase hover:bg-gold-400 transition">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JS INTERACTION LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Reviews Modal Toggle
+        function toggleReviewsModal(show) {
+            const modal = document.getElementById('reviews-modal');
+            if (show) {
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
