@@ -169,7 +169,7 @@
       line-height: 1.5;
     }
 
-    /* Image Grid (Right Side) */
+    /* Image Grid (Section 1) */
     .customers-grid {
       flex: 1.2;
       display: grid;
@@ -230,94 +230,122 @@
 
     /* SECTION 2: Our Collections */
     .collections-section {
-      padding: 90px 6%;
+      padding: 80px 6%;
       max-width: 1600px;
       margin: 0 auto;
+      background-color: #0b0b0b;
     }
 
-    .collections-header {
+    .section-header {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .collections-header h2 {
-      font-size: 2.8rem;
+    .section-header h2 {
+      font-size: 2.2rem;
       color: #d4af37;
       text-transform: uppercase;
       letter-spacing: 3px;
       font-weight: 700;
     }
 
+    .header-divider {
+      height: 2px;
+      width: 80px;
+      background-color: #d4af37;
+      margin: 15px auto 0;
+    }
+
     .collection-block {
       margin-bottom: 70px;
     }
 
-    .collection-title-badge {
-      display: inline-block;
-      border: 1px solid #d4af37;
-      padding: 10px 30px;
-      border-radius: 50px;
+    .collection-title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
       margin-bottom: 25px;
     }
 
-    .collection-title-badge h3 {
-      font-size: 1.5rem;
-      color: #f5f5f5;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .collection-pill {
+      border: 1px solid #d4af37;
+      border-radius: 30px;
+      padding: 8px 30px;
+      color: #ffffff;
+      font-size: 1.2rem;
       font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background-color: #141414;
+      white-space: nowrap;
     }
 
-    .collection-card-wrapper {
+    .title-line {
+      flex: 1;
+      height: 1px;
+      background-color: #2a2a2a;
+    }
+
+    .collection-content {
       display: flex;
-      align-items: center;
-      background-color: #141414;
       border: 1px solid #2a2a2a;
+      background-color: #141414;
       border-radius: 8px;
       overflow: hidden;
+    }
+
+    .side-callout {
+      width: 220px;
+      border-right: 1px solid #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 25px;
-      gap: 25px;
-      transition: border-color 0.3s ease;
+      text-align: center;
+      background: linear-gradient(180deg, #141414 0%, #1a1a1a 100%);
+      flex-shrink: 0;
     }
 
-    .collection-card-wrapper:hover {
-      border-color: #d4af37;
-    }
-
-    .choose-yours-cta {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-size: 1.6rem;
-      color: #d4af37;
+    .side-callout span {
       font-family: 'Georgia', serif;
       font-style: italic;
-      letter-spacing: 2px;
-      padding: 10px;
-      text-align: center;
-      user-select: none;
-      flex-shrink: 0;
+      font-size: 1.4rem;
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+
+    .cta-subtitle {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #aaaaaa;
     }
 
     .collection-image-container {
       flex: 1;
-      width: 100%;
-      overflow: hidden;
-      border-radius: 4px;
+      min-height: 550px;
+      background-color: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
     }
 
+    /* Fixed Image Display (Full Image Visible) */
     .collection-image {
       width: 100%;
-      height: 450px;
-      object-fit: cover;
+      max-height: 600px;
+      object-fit: contain;
       display: block;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
-    .collection-card-wrapper:hover .collection-image {
-      transform: scale(1.02);
+    .collection-image:hover {
+      transform: scale(1.01);
     }
 
-    /* Mobile Responsive Adjustments */
+    /* Mobile Responsiveness */
     @media (max-width: 1024px) {
       .customers-section {
         flex-direction: column;
@@ -329,10 +357,6 @@
       .customers-text {
         text-align: center;
         max-width: 100%;
-      }
-
-      .customers-section h2, .made-to-order-title, .collections-header h2 {
-        font-size: 2rem;
       }
 
       .service-highlights {
@@ -348,20 +372,22 @@
       .suit-image {
         height: 300px;
       }
+    }
 
-      .collection-card-wrapper {
+    @media (max-width: 900px) {
+      .collection-content {
         flex-direction: column;
-        padding: 15px;
       }
 
-      .choose-yours-cta {
-        writing-mode: horizontal-tb;
-        transform: none;
-        font-size: 1.3rem;
+      .side-callout {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #2a2a2a;
+        padding: 20px;
       }
 
-      .collection-image {
-        height: 320px;
+      .collection-image-container {
+        min-height: 350px;
       }
     }
 
@@ -391,16 +417,12 @@
       .suit-image {
         height: 220px;
       }
-
-      .collection-image {
-        height: 240px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
+  <!-- Sticky Header Bar -->
   <header>
     <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
     <nav>
@@ -413,9 +435,8 @@
     <a href="#order" class="order-btn">Order</a>
   </header>
 
-  <!-- SECTION 1: Happy Customers & Made to Order -->
+  <!-- Section 1: Happy Customers & Made to Order -->
   <section class="customers-section">
-    <!-- Left Column: Copy & Tailoring Details -->
     <div class="customers-text">
       <h2>Happy Customers</h2>
       <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
@@ -423,7 +444,6 @@
       <div class="made-to-order-title">Made to Order</div>
       <p class="made-to-order-desc">Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.</p>
 
-      <!-- Custom Options & Delivery Highlights -->
       <div class="service-highlights">
         <div class="highlight-box">
           <h3>Custom Designs</h3>
@@ -447,9 +467,7 @@
       </div>
     </div>
     
-    <!-- Right Column: 2x2 Image Grid -->
     <div class="customers-grid">
-      <!-- Suit Card 1 -->
       <div class="customer-card">
         <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image">
         <div class="card-actions">
@@ -458,7 +476,6 @@
         </div>
       </div>
 
-      <!-- Suit Card 2 -->
       <div class="customer-card">
         <img src="2.jpeg" alt="Custom Bespoke Suit 2" class="suit-image">
         <div class="card-actions">
@@ -467,7 +484,6 @@
         </div>
       </div>
 
-      <!-- Suit Card 3 -->
       <div class="customer-card">
         <img src="3.jpeg" alt="Custom Bespoke Suit 3" class="suit-image">
         <div class="card-actions">
@@ -476,7 +492,6 @@
         </div>
       </div>
 
-      <!-- Suit Card 4 -->
       <div class="customer-card">
         <img src="4.jpeg" alt="Custom Bespoke Suit 4" class="suit-image">
         <div class="card-actions">
@@ -487,44 +502,52 @@
     </div>
   </section>
 
-  <!-- Section Divider -->
+  <!-- Gold Divider Line -->
   <div class="section-divider"></div>
 
-  <!-- SECTION 2: Our Collections -->
-  <section class="collections-section" id="suits">
-    <div class="collections-header">
+  <!-- Section 2: Our Collections -->
+  <section class="collections-section">
+    <div class="section-header">
       <h2>Our Collections</h2>
+      <div class="header-divider"></div>
     </div>
 
     <!-- Men's Suits Collection -->
     <div class="collection-block">
-      <div class="collection-title-badge">
-        <h3>Men's Suits</h3>
+      <div class="collection-title-wrapper">
+        <div class="collection-pill">Men's Suits</div>
+        <div class="title-line"></div>
       </div>
-      <div class="collection-card-wrapper">
-        <div class="choose-yours-cta">Choose Yours</div>
+
+      <div class="collection-content">
+        <div class="side-callout">
+          <span>The Executive Line</span>
+          <p class="cta-subtitle">Choose Yours</p>
+        </div>
         <div class="collection-image-container">
-          <img src="The Executive Line.jpeg" alt="The Executive Line - Men's Suits" class="collection-image">
+          <img src="executive line.jpg" alt="Men's Suits - The Executive Line" class="collection-image">
         </div>
       </div>
     </div>
 
     <!-- Women's Suits Collection -->
     <div class="collection-block">
-      <div class="collection-title-badge">
-        <h3>Women's Suits</h3>
+      <div class="collection-title-wrapper">
+        <div class="collection-pill">Women's Suits</div>
+        <div class="title-line"></div>
       </div>
-      <div class="collection-card-wrapper">
-        <div class="choose-yours-cta">Choose Yours</div>
+
+      <div class="collection-content">
+        <div class="side-callout">
+          <span>The Elegance Series</span>
+          <p class="cta-subtitle">Choose Yours</p>
+        </div>
         <div class="collection-image-container">
-          <img src="The Elegance Series.jpeg" alt="The Elegance Series - Women's Suits" class="collection-image">
+          <img src="the elegance series.jpg" alt="Women's Suits - The Elegance Series" class="collection-image">
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Section Divider -->
-  <div class="section-divider"></div>
 
 </body>
 </html>
