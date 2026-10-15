@@ -28,12 +28,14 @@
       align-items: center;
     }
 
-    /* Left: Logo Only */
+    /* Left: Logo Only with Background Removal Trick */
     .header-logo {
       height: 50px;
       width: auto;
       object-fit: contain;
       display: block;
+      /* Blends out the black background of the image onto dark background */
+      mix-blend-mode: screen; 
     }
 
     /* Center: Navigation Links */
