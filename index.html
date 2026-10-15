@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -293,6 +292,7 @@
       background-color: #141414;
       border-radius: 8px;
       overflow: hidden;
+      align-items: stretch;
     }
 
     .side-callout {
@@ -323,25 +323,29 @@
       color: #aaaaaa;
     }
 
-    /* SECTION 2: Show the complete photos without cropping */
+    /* Fixed Image Container to fit full photo without cropping */
     .collection-image-container {
       flex: 1;
-      min-width: 0;
+      width: 100%;
       height: auto;
-      min-height: 0;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 15px;
-      background-color: #111111;
+      background-color: #0b0b0b;
     }
 
     .collection-image {
-      display: block;
       width: 100%;
-      max-width: 100%;
       height: auto;
+      max-height: 700px;
       object-fit: contain;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .collection-image:hover {
+      transform: scale(1.02);
     }
 
     /* Mobile Responsiveness */
@@ -383,11 +387,6 @@
         border-right: none;
         border-bottom: 1px solid #2a2a2a;
         padding: 20px;
-      }
-
-      .collection-image-container {
-        height: auto;
-        min-height: 0;
       }
     }
 
@@ -440,7 +439,7 @@
     <div class="customers-text">
       <h2>Happy Customers</h2>
       <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
-
+      
       <div class="made-to-order-title">Made to Order</div>
       <p class="made-to-order-desc">Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.</p>
 
@@ -466,7 +465,7 @@
         </div>
       </div>
     </div>
-
+    
     <div class="customers-grid">
       <div class="customer-card">
         <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image">
@@ -525,7 +524,7 @@
           <p class="cta-subtitle">Choose Yours</p>
         </div>
         <div class="collection-image-container">
-          <img src="executive line.jpeg" alt="Men's Suits - The Executive Line" class="collection-image">
+          <img src="The Executive Line.jpeg" alt="Men's Suits - The Executive Line" class="collection-image">
         </div>
       </div>
     </div>
@@ -543,7 +542,7 @@
           <p class="cta-subtitle">Choose Yours</p>
         </div>
         <div class="collection-image-container">
-          <img src="the elegance series.jpeg" alt="Women's Suits - The Elegance Series" class="collection-image">
+          <img src="The Elegance Series.jpeg" alt="Women's Suits - The Elegance Series" class="collection-image">
         </div>
       </div>
     </div>
