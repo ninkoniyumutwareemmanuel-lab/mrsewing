@@ -87,7 +87,7 @@
       background-color: #f3e5ab;
     }
 
-    /* Section 1: Happy Customers & Bespoke Service */
+    /* SECTION 1: Happy Customers & Bespoke Service */
     .customers-section {
       padding: 80px 6%;
       background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
@@ -169,7 +169,7 @@
       line-height: 1.5;
     }
 
-    /* Section 1 Image Grid */
+    /* Image Grid (Right Side) */
     .customers-grid {
       flex: 1.2;
       display: grid;
@@ -220,7 +220,7 @@
       color: #ffffff;
     }
 
-    /* Gold Section Divider */
+    /* Section Divider Line */
     .section-divider {
       height: 1px;
       background: linear-gradient(to right, #0b0b0b, #d4af37, #0b0b0b);
@@ -228,119 +228,96 @@
       margin: 0 auto;
     }
 
-    /* Section 2: Our Collections */
+    /* SECTION 2: Our Collections */
     .collections-section {
-      padding: 80px 6%;
-      max-width: 1400px;
+      padding: 90px 6%;
+      max-width: 1600px;
       margin: 0 auto;
-      background-color: #0b0b0b;
     }
 
-    .section-header {
+    .collections-header {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .section-header h2 {
-      font-size: 2.2rem;
+    .collections-header h2 {
+      font-size: 2.8rem;
       color: #d4af37;
       text-transform: uppercase;
       letter-spacing: 3px;
       font-weight: 700;
     }
 
-    .header-divider {
-      height: 2px;
-      width: 80px;
-      background-color: #d4af37;
-      margin: 15px auto 0;
-    }
-
     .collection-block {
       margin-bottom: 70px;
     }
 
-    .collection-title-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .collection-title-badge {
+      display: inline-block;
+      border: 1px solid #d4af37;
+      padding: 10px 30px;
+      border-radius: 50px;
       margin-bottom: 25px;
     }
 
-    .collection-pill {
-      border: 1px solid #d4af37;
-      border-radius: 30px;
-      padding: 8px 30px;
-      color: #ffffff;
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
+    .collection-title-badge h3 {
+      font-size: 1.5rem;
+      color: #f5f5f5;
       text-transform: uppercase;
-      background-color: #141414;
-      white-space: nowrap;
+      letter-spacing: 2px;
+      font-weight: 600;
     }
 
-    .title-line {
-      flex: 1;
-      height: 1px;
-      background-color: #2a2a2a;
-    }
-
-    .collection-content {
+    .collection-card-wrapper {
       display: flex;
-      border: 1px solid #2a2a2a;
+      align-items: center;
       background-color: #141414;
+      border: 1px solid #2a2a2a;
       border-radius: 8px;
       overflow: hidden;
-    }
-
-    .side-callout {
-      width: 220px;
-      border-right: 1px solid #2a2a2a;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       padding: 25px;
-      text-align: center;
-      background: linear-gradient(180deg, #141414 0%, #1a1a1a 100%);
+      gap: 25px;
+      transition: border-color 0.3s ease;
     }
 
-    .side-callout span {
+    .collection-card-wrapper:hover {
+      border-color: #d4af37;
+    }
+
+    .choose-yours-cta {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 1.6rem;
+      color: #d4af37;
       font-family: 'Georgia', serif;
       font-style: italic;
-      font-size: 1.5rem;
-      color: #d4af37;
-      margin-bottom: 8px;
-    }
-
-    .cta-subtitle {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #aaaaaa;
+      letter-spacing: 2px;
+      padding: 10px;
+      text-align: center;
+      user-select: none;
+      flex-shrink: 0;
     }
 
     .collection-image-container {
       flex: 1;
-      height: 520px;
+      width: 100%;
       overflow: hidden;
-      background-color: #1a1a1a;
+      border-radius: 4px;
     }
 
     .collection-image {
       width: 100%;
-      height: 100%;
+      height: 450px;
       object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
     }
 
-    .collection-image:hover {
+    .collection-card-wrapper:hover .collection-image {
       transform: scale(1.02);
     }
 
-    /* Responsive Adjustments */
+    /* Mobile Responsive Adjustments */
     @media (max-width: 1024px) {
       .customers-section {
         flex-direction: column;
@@ -354,6 +331,10 @@
         max-width: 100%;
       }
 
+      .customers-section h2, .made-to-order-title, .collections-header h2 {
+        font-size: 2rem;
+      }
+
       .service-highlights {
         grid-template-columns: 1fr;
         text-align: left;
@@ -364,19 +345,23 @@
         width: 100%;
       }
 
-      .collection-content {
-        flex-direction: column;
+      .suit-image {
+        height: 300px;
       }
 
-      .side-callout {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #2a2a2a;
+      .collection-card-wrapper {
+        flex-direction: column;
         padding: 15px;
       }
 
-      .collection-image-container {
-        height: 380px;
+      .choose-yours-cta {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 1.3rem;
+      }
+
+      .collection-image {
+        height: 320px;
       }
     }
 
@@ -406,6 +391,10 @@
       .suit-image {
         height: 220px;
       }
+
+      .collection-image {
+        height: 240px;
+      }
     }
   </style>
 </head>
@@ -416,7 +405,7 @@
     <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
     <nav>
       <ul>
-        <li><a href="#collections">Collections</a></li>
+        <li><a href="#suits">Suits</a></li>
         <li><a href="#measurements">Measurements Guide</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -424,8 +413,9 @@
     <a href="#order" class="order-btn">Order</a>
   </header>
 
-  <!-- Section 1: Happy Customers & Made to Order -->
+  <!-- SECTION 1: Happy Customers & Made to Order -->
   <section class="customers-section">
+    <!-- Left Column: Copy & Tailoring Details -->
     <div class="customers-text">
       <h2>Happy Customers</h2>
       <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
@@ -433,6 +423,7 @@
       <div class="made-to-order-title">Made to Order</div>
       <p class="made-to-order-desc">Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.</p>
 
+      <!-- Custom Options & Delivery Highlights -->
       <div class="service-highlights">
         <div class="highlight-box">
           <h3>Custom Designs</h3>
@@ -456,7 +447,9 @@
       </div>
     </div>
     
+    <!-- Right Column: 2x2 Image Grid -->
     <div class="customers-grid">
+      <!-- Suit Card 1 -->
       <div class="customer-card">
         <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image">
         <div class="card-actions">
@@ -465,6 +458,7 @@
         </div>
       </div>
 
+      <!-- Suit Card 2 -->
       <div class="customer-card">
         <img src="2.jpeg" alt="Custom Bespoke Suit 2" class="suit-image">
         <div class="card-actions">
@@ -473,6 +467,7 @@
         </div>
       </div>
 
+      <!-- Suit Card 3 -->
       <div class="customer-card">
         <img src="3.jpeg" alt="Custom Bespoke Suit 3" class="suit-image">
         <div class="card-actions">
@@ -481,6 +476,7 @@
         </div>
       </div>
 
+      <!-- Suit Card 4 -->
       <div class="customer-card">
         <img src="4.jpeg" alt="Custom Bespoke Suit 4" class="suit-image">
         <div class="card-actions">
@@ -491,52 +487,44 @@
     </div>
   </section>
 
-  <!-- Gold Divider Line -->
+  <!-- Section Divider -->
   <div class="section-divider"></div>
 
-  <!-- Section 2: Our Collections -->
-  <section id="collections" class="collections-section">
-    <div class="section-header">
+  <!-- SECTION 2: Our Collections -->
+  <section class="collections-section" id="suits">
+    <div class="collections-header">
       <h2>Our Collections</h2>
-      <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits -->
+    <!-- Men's Suits Collection -->
     <div class="collection-block">
-      <div class="collection-title-wrapper">
-        <div class="collection-pill">Men's Suits</div>
-        <div class="title-line"></div>
+      <div class="collection-title-badge">
+        <h3>Men's Suits</h3>
       </div>
-
-      <div class="collection-content">
-        <div class="side-callout">
-          <span>The Executive Line</span>
-          <p class="cta-subtitle">Choose Yours</p>
-        </div>
+      <div class="collection-card-wrapper">
+        <div class="choose-yours-cta">Choose Yours</div>
         <div class="collection-image-container">
-          <img src="executive line.jpg" alt="Men's Suits - The Executive Line" class="collection-image">
+          <img src="The Executive Line.jpeg" alt="The Executive Line - Men's Suits" class="collection-image">
         </div>
       </div>
     </div>
 
-    <!-- Women's Suits -->
+    <!-- Women's Suits Collection -->
     <div class="collection-block">
-      <div class="collection-title-wrapper">
-        <div class="collection-pill">Women's Suits</div>
-        <div class="title-line"></div>
+      <div class="collection-title-badge">
+        <h3>Women's Suits</h3>
       </div>
-
-      <div class="collection-content">
-        <div class="side-callout">
-          <span>The Elegance Series</span>
-          <p class="cta-subtitle">Choose Yours</p>
-        </div>
+      <div class="collection-card-wrapper">
+        <div class="choose-yours-cta">Choose Yours</div>
         <div class="collection-image-container">
-          <img src="the elegance series.jpg" alt="Women's Suits - The Elegance Series" class="collection-image">
+          <img src="The Elegance Series.jpeg" alt="The Elegance Series - Women's Suits" class="collection-image">
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
 
 </body>
 </html>
