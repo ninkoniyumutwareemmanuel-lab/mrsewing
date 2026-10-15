@@ -347,48 +347,150 @@
       transform: scale(1.02);
     }
 
-    /* SECTION 3: Why Made to Measure? */
+    /* SECTION 3: Why Made to Measure? (With Measurement Image) */
     .why-mtm-section {
       padding: 80px 6%;
-      max-width: 1200px;
+      max-width: 1600px;
       margin: 0 auto;
       background-color: #0b0b0b;
     }
 
-    .why-mtm-card {
+    .why-mtm-container {
+      display: flex;
       background-color: #141414;
       border: 1px solid #2a2a2a;
       border-top: 3px solid #d4af37;
       border-radius: 8px;
-      padding: 50px 40px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      align-items: center;
     }
 
-    .why-mtm-card h2 {
-      font-size: 2.3rem;
+    .why-mtm-text {
+      flex: 1;
+      padding: 50px 40px;
+    }
+
+    .why-mtm-text h2 {
+      font-size: 2.2rem;
       color: #d4af37;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       font-weight: 700;
     }
 
     .why-mtm-subtitle {
       font-family: 'Georgia', serif;
       font-style: italic;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: #ffffff;
-      margin-bottom: 25px;
-      letter-spacing: 1px;
+      margin-bottom: 20px;
     }
 
     .why-mtm-body {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #cccccc;
       line-height: 1.8;
-      max-width: 900px;
+    }
+
+    .why-mtm-image-wrapper {
+      flex: 1;
+      min-height: 400px;
+      overflow: hidden;
+      border-left: 1px solid #2a2a2a;
+    }
+
+    .why-mtm-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* SECTION 4: Why Customers Choose Mr. Sewing (With Fabric Image) */
+    .why-choose-section {
+      padding: 80px 6%;
+      max-width: 1600px;
       margin: 0 auto;
+      background-color: #0b0b0b;
+    }
+
+    .why-choose-container {
+      display: flex;
+      background-color: #141414;
+      border: 1px solid #2a2a2a;
+      border-left: 3px solid #d4af37;
+      border-radius: 8px;
+      overflow: hidden;
+      gap: 30px;
+    }
+
+    .why-choose-left {
+      flex: 1.2;
+      padding: 50px 40px;
+    }
+
+    .why-choose-left h2 {
+      font-size: 2.2rem;
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .choose-reasons-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .reason-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .reason-number {
+      background-color: #0b0b0b;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 0.95rem;
+    }
+
+    .reason-content h3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .reason-content p {
+      font-size: 0.92rem;
+      color: #aaaaaa;
+      line-height: 1.5;
+    }
+
+    .why-choose-right {
+      flex: 1;
+      overflow: hidden;
+      border-left: 1px solid #2a2a2a;
+    }
+
+    .why-choose-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* Mobile Responsiveness */
@@ -418,18 +520,18 @@
       .suit-image {
         height: 300px;
       }
-    }
 
-    @media (max-width: 900px) {
-      .collection-content {
+      .why-mtm-container,
+      .why-choose-container {
         flex-direction: column;
       }
 
-      .side-callout {
+      .why-mtm-image-wrapper,
+      .why-choose-right {
         width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #2a2a2a;
-        padding: 20px;
+        min-height: 300px;
+        border-left: none;
+        border-top: 1px solid #2a2a2a;
       }
     }
 
@@ -460,16 +562,14 @@
         height: 220px;
       }
 
-      .why-mtm-card {
+      .why-mtm-text,
+      .why-choose-left {
         padding: 30px 20px;
       }
 
-      .why-mtm-card h2 {
+      .why-mtm-text h2,
+      .why-choose-left h2 {
         font-size: 1.8rem;
-      }
-
-      .why-mtm-subtitle {
-        font-size: 1.1rem;
       }
     }
   </style>
@@ -608,12 +708,66 @@
 
   <!-- Section 3: Why Made to Measure? -->
   <section class="why-mtm-section">
-    <div class="why-mtm-card">
-      <h2>Why Made to Measure?</h2>
-      <div class="why-mtm-subtitle">Measured to you and drafted to you.</div>
-      <p class="why-mtm-body">
-        Investing in made-to-measure clothing ensures that every garment is crafted to your precise specifications, offering a flawless silhouette that off-the-rack items simply cannot replicate. Each piece is engineered with careful attention to your individual posture and proportions, giving you complete control over fabrics, linings, and personalized details. The result is a comfortable, timeless garment that perfectly reflects your personal style.
-      </p>
+    <div class="why-mtm-container">
+      <div class="why-mtm-text">
+        <h2>Why Made to Measure?</h2>
+        <div class="why-mtm-subtitle">Measured to you and drafted to you.</div>
+        <p class="why-mtm-body">
+          Investing in made-to-measure clothing ensures that every garment is crafted to your precise specifications, offering a flawless silhouette that off-the-rack items simply cannot replicate. Each piece is engineered with careful attention to your individual posture and proportions, giving you complete control over fabrics, linings, and personalized details.
+        </p>
+      </div>
+      <div class="why-mtm-image-wrapper">
+        <img src="measurement.jpeg" alt="Master Tailor Taking Precise Body Measurements">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Section 4: Why Customers Choose Mr. Sewing -->
+  <section class="why-choose-section">
+    <div class="why-choose-container">
+      <div class="why-choose-left">
+        <h2>Why Customers Choose Mr. Sewing</h2>
+        <div class="choose-reasons-list">
+          <div class="reason-item">
+            <div class="reason-number">1</div>
+            <div class="reason-content">
+              <h3>Uncompromised Craftsmanship</h3>
+              <p>Every stitch is executed with precision by experienced tailors dedicated to sartorial excellence.</p>
+            </div>
+          </div>
+
+          <div class="reason-item">
+            <div class="reason-number">2</div>
+            <div class="reason-content">
+              <h3>Exclusive Fabric Selection</h3>
+              <p>Access high-grade suitings and linings curated for durability, comfort, and timeless luxury.</p>
+            </div>
+          </div>
+
+          <div class="reason-item">
+            <div class="reason-number">3</div>
+            <div class="reason-content">
+              <h3>Guaranteed Perfect Fit</h3>
+              <p>We tailor directly to your unique body draft, ensuring maximum comfort and an impeccable finish.</p>
+            </div>
+          </div>
+
+          <div class="reason-item">
+            <div class="reason-number">4</div>
+            <div class="reason-content">
+              <h3>Dedicated Personal Service</h3>
+              <p>From initial design consultation to final delivery, we provide a personalized experience every step of the way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-choose-right">
+        <img src="fabric.jpeg" alt="Luxury Suiting Fabric Selection at Mr. Sewing">
+      </div>
     </div>
   </section>
 
