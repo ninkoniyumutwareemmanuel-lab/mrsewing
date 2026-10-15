@@ -101,7 +101,7 @@
       margin: 0 auto;
     }
 
-    /* Left Side - Text & Branding Details */
+    /* Left Side - Text Content Column */
     .customers-text {
       flex: 1;
       max-width: 550px;
@@ -112,7 +112,7 @@
     .customers-section h2 {
       font-size: 2.5rem;
       color: #d4af37;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 2px;
       line-height: 1.2;
@@ -127,7 +127,7 @@
       font-weight: 400;
     }
 
-    /* Matching Heading Style for "MADE TO ORDER" */
+    /* Heading Style for MADE TO ORDER */
     .made-to-order {
       font-size: 2.5rem;
       color: #d4af37;
@@ -135,9 +135,17 @@
       letter-spacing: 2px;
       font-weight: 700;
       line-height: 1.2;
-      margin-top: 10px;
+      margin-top: 20px;
       border-top: 1px solid #222222;
       padding-top: 25px;
+      margin-bottom: 20px;
+    }
+
+    .made-to-order-description {
+      font-size: 1.15rem;
+      color: #b0b0b0;
+      line-height: 1.8;
+      font-weight: 400;
     }
 
     /* Right Side - 2x2 Grid aligned to the right corner */
@@ -243,7 +251,8 @@
         letter-spacing: 1px;
       }
 
-      .customers-description {
+      .customers-description,
+      .made-to-order-description {
         font-size: 1rem;
       }
 
@@ -275,13 +284,17 @@
 
   <!-- Section 1: Happy Customers & Made to Order -->
   <section class="customers-section">
-    <!-- Left Column: Heading, Description, and Made to Order -->
+    <!-- Left Column: Text Content -->
     <div class="customers-text">
       <h2>HAPPY CUSTOMERS</h2>
       <p class="customers-description">
-        Explore bespoke creations tailored exclusively for our distinguished clientele. Every suit represents timeless sophistication, precision fitting, and master tailoring designed to showcase personal style and confidence. Read genuine feedback from clients who trust Mr. Sewing for their most memorable occasions.
+        Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.
       </p>
+      
       <div class="made-to-order">MADE TO ORDER</div>
+      <p class="made-to-order-description">
+        Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.
+      </p>
     </div>
     
     <!-- Right Column: 2x2 Grid of Suits -->
