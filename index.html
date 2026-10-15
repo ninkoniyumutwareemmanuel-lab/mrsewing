@@ -323,7 +323,6 @@
       color: #aaaaaa;
     }
 
-    /* Fixed Image Container to fit full photo without cropping */
     .collection-image-container {
       flex: 1;
       width: 100%;
@@ -346,6 +345,50 @@
 
     .collection-image:hover {
       transform: scale(1.02);
+    }
+
+    /* SECTION 3: Why Made to Measure? */
+    .why-mtm-section {
+      padding: 80px 6%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #0b0b0b;
+    }
+
+    .why-mtm-card {
+      background-color: #141414;
+      border: 1px solid #2a2a2a;
+      border-top: 3px solid #d4af37;
+      border-radius: 8px;
+      padding: 50px 40px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .why-mtm-card h2 {
+      font-size: 2.3rem;
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .why-mtm-subtitle {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .why-mtm-body {
+      font-size: 1.05rem;
+      color: #cccccc;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     /* Mobile Responsiveness */
@@ -415,6 +458,18 @@
 
       .suit-image {
         height: 220px;
+      }
+
+      .why-mtm-card {
+        padding: 30px 20px;
+      }
+
+      .why-mtm-card h2 {
+        font-size: 1.8rem;
+      }
+
+      .why-mtm-subtitle {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -545,6 +600,20 @@
           <img src="The Elegance Series.jpeg" alt="Women's Suits - The Elegance Series" class="collection-image">
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider Line -->
+  <div class="section-divider"></div>
+
+  <!-- Section 3: Why Made to Measure? -->
+  <section class="why-mtm-section">
+    <div class="why-mtm-card">
+      <h2>Why Made to Measure?</h2>
+      <div class="why-mtm-subtitle">Measured to you and drafted to you.</div>
+      <p class="why-mtm-body">
+        Investing in made-to-measure clothing ensures that every garment is crafted to your precise specifications, offering a flawless silhouette that off-the-rack items simply cannot replicate. Each piece is engineered with careful attention to your individual posture and proportions, giving you complete control over fabrics, linings, and personalized details. The result is a comfortable, timeless garment that perfectly reflects your personal style.
+      </p>
     </div>
   </section>
 
