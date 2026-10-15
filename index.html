@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Sewing</title>
+  <title>Mr. Sewing | Bespoke Tailoring & Custom Suits</title>
   <style>
     /* Reset & Page Setup */
     * {
@@ -16,22 +16,26 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0b0b0b;
       color: #f5f5f5;
+      overflow-x: hidden;
     }
 
     /* Header Bar */
     header {
       background-color: #141414;
       border-bottom: 1px solid #2a2a2a;
-      padding: 12px 4%;
+      padding: 12px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: nowrap;
-      gap: 10px;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .header-logo {
-      height: 45px;
+      height: 48px;
       width: auto;
       object-fit: contain;
       display: block;
@@ -47,7 +51,7 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 20px;
+      gap: 25px;
       align-items: center;
       justify-content: center;
       white-space: nowrap;
@@ -68,7 +72,7 @@
     .order-btn {
       background-color: #d4af37;
       color: #000000;
-      padding: 8px 18px;
+      padding: 9px 20px;
       text-decoration: none;
       font-weight: 700;
       border-radius: 4px;
@@ -77,41 +81,73 @@
       font-size: 0.85rem;
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .order-btn:hover {
       background-color: #f3e5ab;
+      transform: translateY(-1px);
     }
 
-    /* Happy Customers Section */
+    /* Section 1: Happy Customers Layout (Text Left, Grid Right) */
     .customers-section {
-      padding: 60px 4%;
-      background: radial-gradient(circle at top, #141414 0%, #0b0b0b 100%);
-      text-align: center;
+      padding: 70px 5%;
+      background: radial-gradient(circle at top left, #1a1a1a 0%, #0b0b0b 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    /* Left Side - Text & Branding Details */
+    .customers-text {
+      flex: 1;
+      max-width: 550px;
+      text-align: left;
+      padding-top: 10px;
     }
 
     .customers-section h2 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       color: #d4af37;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       text-transform: uppercase;
       letter-spacing: 2px;
+      line-height: 1.2;
+      font-weight: 700;
     }
 
     .customers-description {
-      font-size: 1.1rem;
-      color: #aaaaaa;
-      max-width: 700px;
-      margin: 0 auto 40px;
+      font-size: 1.15rem;
+      color: #b0b0b0;
+      line-height: 1.8;
+      margin-bottom: 35px;
+      font-weight: 400;
     }
 
+    /* Matching Heading Style for "MADE TO ORDER" */
+    .made-to-order {
+      font-size: 2.5rem;
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-top: 10px;
+      border-top: 1px solid #222222;
+      padding-top: 25px;
+    }
+
+    /* Right Side - 2x2 Grid aligned to the right corner */
     .customers-grid {
+      flex: 1.2;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 24px;
+      width: 100%;
+      max-width: 750px;
     }
 
     .customer-card {
@@ -119,36 +155,39 @@
       border: 1px solid #2a2a2a;
       border-radius: 8px;
       overflow: hidden;
-      padding: 20px;
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      padding: 16px;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .customer-card:hover {
       border-color: #d4af37;
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
     }
 
     .suit-image {
       width: 100%;
-      height: 350px;
+      height: 320px;
       object-fit: cover;
       border-radius: 4px;
       display: block;
+      background-color: #1f1f1f;
     }
 
     .card-actions {
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5px 5px 5px;
     }
 
     .card-actions a {
       color: #d4af37;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
       transition: color 0.3s ease;
     }
 
@@ -156,36 +195,56 @@
       color: #ffffff;
     }
 
-    /* Mobile Responsive Adjustments */
-    @media (max-width: 600px) {
+    /* Responsive Adjustments for Tablet & Mobile */
+    @media (max-width: 1024px) {
+      .customers-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 4%;
+        gap: 40px;
+      }
+
+      .customers-text {
+        text-align: left;
+        max-width: 100%;
+      }
+
+      .customers-grid {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 650px) {
       header {
-        padding: 10px 2%;
-        gap: 6px;
-      }
-
-      .header-logo {
-        height: 32px;
-      }
-
-      nav ul {
+        padding: 10px 3%;
         gap: 8px;
       }
 
+      .header-logo {
+        height: 36px;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+
       nav a {
-        font-size: 0.72rem;
+        font-size: 0.75rem;
       }
 
       .order-btn {
-        padding: 6px 10px;
-        font-size: 0.7rem;
+        padding: 6px 12px;
+        font-size: 0.75rem;
       }
 
-      .customers-section {
-        padding: 40px 2%;
-      }
-
-      .customers-section h2 {
+      .customers-section h2,
+      .made-to-order {
         font-size: 1.8rem;
+        letter-spacing: 1px;
+      }
+
+      .customers-description {
+        font-size: 1rem;
       }
 
       .customers-grid {
@@ -194,7 +253,7 @@
       }
 
       .suit-image {
-        height: 280px;
+        height: 340px;
       }
     }
   </style>
@@ -203,7 +262,7 @@
 
   <!-- Header Section -->
   <header>
-    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
+    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo" onerror="this.onerror=null; this.src='https://placehold.co/150x50/141414/d4af37?text=MR.+SEWING';">
     <nav>
       <ul>
         <li><a href="#suits">Suits</a></li>
@@ -214,15 +273,22 @@
     <a href="#order" class="order-btn">Order</a>
   </header>
 
-  <!-- Section 1: Happy Customers -->
+  <!-- Section 1: Happy Customers & Made to Order -->
   <section class="customers-section">
-    <h2>Happy Customers</h2>
-    <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
+    <!-- Left Column: Heading, Description, and Made to Order -->
+    <div class="customers-text">
+      <h2>HAPPY CUSTOMERS</h2>
+      <p class="customers-description">
+        Explore bespoke creations tailored exclusively for our distinguished clientele. Every suit represents timeless sophistication, precision fitting, and master tailoring designed to showcase personal style and confidence. Read genuine feedback from clients who trust Mr. Sewing for their most memorable occasions.
+      </p>
+      <div class="made-to-order">MADE TO ORDER</div>
+    </div>
     
+    <!-- Right Column: 2x2 Grid of Suits -->
     <div class="customers-grid">
       <!-- Suit Card 1 -->
       <div class="customer-card">
-        <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image">
+        <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image" onerror="this.onerror=null; this.src='https://placehold.co/400x500/1e1e1e/d4af37?text=Bespoke+Suit+1';">
         <div class="card-actions">
           <a href="#reviews-1">Read reviews</a>
           <a href="#know-more-1">Know More</a>
@@ -231,7 +297,7 @@
 
       <!-- Suit Card 2 -->
       <div class="customer-card">
-        <img src="2.jpeg" alt="Custom Bespoke Suit 2" class="suit-image">
+        <img src="2.jpeg" alt="Custom Bespoke Suit 2" class="suit-image" onerror="this.onerror=null; this.src='https://placehold.co/400x500/1e1e1e/d4af37?text=Bespoke+Suit+2';">
         <div class="card-actions">
           <a href="#reviews-2">Read reviews</a>
           <a href="#know-more-2">Know More</a>
@@ -240,7 +306,7 @@
 
       <!-- Suit Card 3 -->
       <div class="customer-card">
-        <img src="3.jpeg" alt="Custom Bespoke Suit 3" class="suit-image">
+        <img src="3.jpeg" alt="Custom Bespoke Suit 3" class="suit-image" onerror="this.onerror=null; this.src='https://placehold.co/400x500/1e1e1e/d4af37?text=Bespoke+Suit+3';">
         <div class="card-actions">
           <a href="#reviews-3">Read reviews</a>
           <a href="#know-more-3">Know More</a>
@@ -249,7 +315,7 @@
 
       <!-- Suit Card 4 -->
       <div class="customer-card">
-        <img src="4.jpeg" alt="Custom Bespoke Suit 4" class="suit-image">
+        <img src="4.jpeg" alt="Custom Bespoke Suit 4" class="suit-image" onerror="this.onerror=null; this.src='https://placehold.co/400x500/1e1e1e/d4af37?text=Bespoke+Suit+4';">
         <div class="card-actions">
           <a href="#reviews-4">Read reviews</a>
           <a href="#know-more-4">Know More</a>
