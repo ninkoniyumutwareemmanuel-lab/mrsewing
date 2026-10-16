@@ -209,7 +209,7 @@
 
     /* Order popup (terms & conditions, then WhatsApp) */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
-    .modal-overlay.open { display: flex; }
+    .modal-overlay.open, .modal-overlay:target { display: flex; }
     .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
     .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
     .modal-close:hover { color: #d4af37; }
@@ -244,7 +244,7 @@
         <li><a href="#faq">FAQs</a></li>
       </ul>
     </nav>
-    <a href="#order" class="order-btn">Order</a>
+    <a href="#orderModal" class="order-btn">Order</a>
   </header>
 
   <!-- Intro Heading -->
@@ -468,10 +468,10 @@
       </div>
 
       <!-- Order Button Column -->
-      <div class="footer-col footer-order-col" id="order">
+      <div class="footer-col footer-order-col">
         <h3>Start Your Order</h3>
         <p>Ready to craft your bespoke piece?</p>
-        <a href="#order" class="order-btn footer-order-btn">Order</a>
+        <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
       </div>
     </div>
 
@@ -518,10 +518,15 @@
         agree.checked = false;
         wa.setAttribute('aria-disabled', 'true');
         hint.textContent = '';
+        if (location.hash === '#orderModal') {
+          history.replaceState(null, '', location.pathname + location.search);
+        }
       }
 
-      document.querySelectorAll('.order-btn').forEach(function (btn) {
-        btn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+      // Any click on an Order button opens the popup (never scrolls the page)
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
+        if (btn) { e.preventDefault(); openModal(); }
       });
 
       agree.addEventListener('change', function () {
@@ -539,9 +544,12 @@
       });
 
       document.getElementById('termsLink').addEventListener('click', closeModal);
-      document.getElementById('orderClose').addEventListener('click', closeModal);
+      document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
       modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+      // If the page was opened with #orderModal in the address, show the popup
+      if (location.hash === '#orderModal') { openModal(); }
     })();
   </script>
 
