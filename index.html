@@ -162,7 +162,6 @@
     .collection-image { width: 100%; height: auto; max-height: 700px; object-fit: contain; display: block; transition: transform 0.5s ease; }
     .collection-image:hover { transform: scale(1.02); }
 
-    /* Men's / Women's collection links (pill, callout and photo) */
     a.collection-pill, a.side-callout, a.collection-image-container { text-decoration: none; }
     a.collection-pill { transition: background-color 0.3s ease, color 0.3s ease; }
     a.collection-pill:hover { background-color: #d4af37; color: #000000; }
@@ -216,7 +215,7 @@
     .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
     .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
 
-    /* Order popup (terms & conditions, then WhatsApp) */
+    /* Order popup */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
     .modal-overlay.open, .modal-overlay:target { display: flex; }
     .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
@@ -231,35 +230,6 @@
     .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
     .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
 
-    /* ABOUT US, FAQS & CONTACT SECTIONS */
-    .info-section { padding: clamp(32px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
-    .info-panel { background: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; padding: clamp(18px, 4vw, 48px); }
-    .info-section h2 { color: #d4af37; font-size: clamp(1.2rem, 3vw, 2.2rem); text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); margin-bottom: 16px; }
-    .info-section h3 { color: #d4af37; font-size: clamp(0.95rem, 2vw, 1.25rem); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 8px; }
-    .info-section p, .info-section li { color: #cccccc; font-size: clamp(0.85rem, 1.4vw, 1rem); line-height: 1.8; }
-    .about-grid, .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 3vw, 28px); }
-    .about-card, .contact-card { background: #0f0f0f; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 6px; padding: clamp(14px, 2.5vw, 24px); }
-    .about-card h3, .contact-card h3 { margin-top: 0; }
-    .contact-card a { color: #d4af37; text-decoration: none; overflow-wrap: anywhere; }
-    .contact-card a:hover { color: #ffffff; text-decoration: underline; }
-    .faq-list { display: flex; flex-direction: column; gap: 10px; }
-    .faq-category { margin: 24px 0 10px; color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem; }
-    .faq-item { border: 1px solid #2a2a2a; border-radius: 6px; background: #0f0f0f; overflow: hidden; }
-    .faq-item summary { cursor: pointer; color: #f5f5f5; font-weight: 600; padding: 15px 18px; line-height: 1.5; list-style: none; position: relative; padding-right: 42px; }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary::after { content: '+'; color: #d4af37; position: absolute; right: 18px; top: 12px; font-size: 1.35rem; }
-    .faq-item[open] summary::after { content: '−'; }
-    .faq-answer { padding: 0 18px 18px; }
-    .faq-answer ul { padding-left: 22px; margin: 8px 0; }
-    .faq-answer li { margin-bottom: 5px; }
-    .price-note { margin-top: 12px; padding: 12px; background: #141414; border-left: 2px solid #d4af37; }
-    .contact-card p + p { margin-top: 8px; }
-    @media (max-width: 700px) {
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .info-section { scroll-margin-top: 140px; }
-    }
-
-    /* Small screens: everything stays side by side; only the tightest spots adjust */
     @media (max-width: 700px) {
       header { flex-wrap: wrap; row-gap: 8px; }
       nav { order: 3; width: 100%; overflow: visible; }
@@ -367,7 +337,7 @@
       <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection (pill, callout and photo all open men-suits.html) -->
+    <!-- Men's Suits Collection -->
     <div class="collection-block">
       <div class="collection-title-wrapper">
         <a href="men-suits.html" class="collection-pill">Men's Suits</a>
@@ -384,7 +354,7 @@
       </div>
     </div>
 
-    <!-- Women's Suits Collection (pill, callout and photo all open women-suits.html) -->
+    <!-- Women's Suits Collection -->
     <div class="collection-block">
       <div class="collection-title-wrapper">
         <a href="women-suits.html" class="collection-pill">Women's Suits</a>
@@ -392,208 +362,3 @@
       </div>
       <div class="collection-content">
         <a href="women-suits.html" class="side-callout">
-          <span>The Elegance Series</span>
-          <p class="cta-subtitle">Choose Yours</p>
-        </a>
-        <a href="women-suits.html" class="collection-image-container" aria-label="Browse women's suits">
-          <img src="The Elegance Series.jpeg" alt="Women's custom suits Kigali Rwanda - The Elegance Series by Mr. Sewing" class="collection-image" loading="lazy">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Measurements Guide teaser -->
-  <!-- Section 3: Why Made to Measure? -->
-  <section class="why-mtm-section" id="measurements">
-    <div class="why-mtm-container">
-      <div class="why-mtm-text">
-        <h2>Why Made to Measure?</h2>
-        <div class="why-mtm-subtitle">Measured to you and drafted to you.</div>
-        <p class="why-mtm-body">
-          Investing in made-to-measure clothing ensures that every garment is crafted to your precise specifications, offering a flawless silhouette that off-the-rack items simply cannot replicate. Each piece is engineered with careful attention to your individual posture and proportions, giving you complete control over fabrics, linings, and personalized details.
-        </p>
-      </div>
-      <div class="why-mtm-image-wrapper">
-        <img src="measurements.jpeg" alt="Master tailor taking precise body measurements for a made-to-measure suit in Kigali" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- Gold Divider Line -->
-  <div class="section-divider"></div>
-
-  <!-- Section 4: Why Customers Choose Mr. Sewing -->
-  <section class="why-choose-section">
-    <div class="why-choose-container">
-      <div class="why-choose-left">
-        <h2>Why Customers Choose Mr. Sewing</h2>
-        <div class="choose-reasons-list">
-          <div class="reason-item">
-            <div class="reason-number">1</div>
-            <div class="reason-content">
-              <h3>Express Order Service</h3>
-              <p>For urgent occasions, our express turnaround delivers your fully tailored garment within 24 to 72 hours without compromising on craftsmanship.</p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">2</div>
-            <div class="reason-content">
-              <h3>Standard Order Service</h3>
-              <p>Our standard tailoring process takes 1 to 2 weeks to complete, allowing meticulous attention to every seam and detail.</p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">3</div>
-            <div class="reason-content">
-              <h3>Guaranteed Timely Delivery</h3>
-              <p>Time is time—nothing can be changed. We guarantee your outfit will be ready exactly when promised, with strict adherence to schedules.</p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">4</div>
-            <div class="reason-content">
-              <h3>Uncompromised Accuracy</h3>
-              <p>Every draft and cut is executed with complete precision to match your personal body structure and stylistic vision.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="why-choose-right">
-        <img src="fabric.jpeg" alt="Luxury suiting fabric selection at Mr. Sewing bespoke tailor, Kigali" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- Dedicated FAQ and Contact pages are linked from the navigation. -->
-
-  <!-- SECTION 5: Footer -->
-  <footer>
-    <div class="footer-top">
-      <!-- Quick Links Column -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="suits.html">Suits</a></li>
-          <li><a href="measurements.html">Measurements Guide</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Location Column -->
-      <div class="footer-col">
-        <h3>Location</h3>
-        <div class="location-block">
-          <strong>Branch 1:</strong>
-          <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
-          <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
-        </div>
-        <div class="location-block">
-          <strong>Branch 2:</strong>
-          <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
-        </div>
-      </div>
-
-      <!-- Opening Hours & Policies Column -->
-      <div class="footer-col">
-        <h3>Opening Hours & Policies</h3>
-        <p><strong>Working Hours:</strong><br>
-        Monday - Friday: 9:00 AM – 5:00 PM<br>
-        Saturday & Sunday: Booking / Call Required<br>
-        <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
-        <ul>
-          <li><a href="refund-policy.html">Refund Policy</a></li>
-          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Order Button Column -->
-      <div class="footer-col footer-order-col">
-        <h3>Start Your Order</h3>
-        <p>Ready to craft your bespoke piece?</p>
-        <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
-      </div>
-    </div>
-
-    <!-- Social Media Bar -->
-    <div class="footer-social-wrapper">
-      <div class="social-title">Connect With Us</div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-      <div class="footer-bottom-copy">
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Order popup: customer must agree to Terms & Conditions before WhatsApp opens -->
-  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-    <div class="modal-box">
-      <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
-      <h3 id="orderModalTitle">Place Your Order</h3>
-      <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
-      <label class="terms-check">
-        <input type="checkbox" id="termsAgree">
-        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
-      </label>
-      <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
-      <div class="terms-hint" id="termsHint"></div>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      var modal = document.getElementById('orderModal');
-      var agree = document.getElementById('termsAgree');
-      var wa = document.getElementById('whatsappBtn');
-      var hint = document.getElementById('termsHint');
-
-      function openModal() { modal.classList.add('open'); }
-      function closeModal() {
-        modal.classList.remove('open');
-        agree.checked = false;
-        wa.setAttribute('aria-disabled', 'true');
-        hint.textContent = '';
-        if (location.hash === '#orderModal') {
-          history.replaceState(null, '', location.pathname + location.search);
-        }
-      }
-
-      // Any click on an Order button opens the popup (never scrolls the page)
-      document.addEventListener('click', function (e) {
-        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
-        if (btn) { e.preventDefault(); openModal(); }
-      });
-
-      agree.addEventListener('change', function () {
-        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
-        hint.textContent = '';
-      });
-
-      wa.addEventListener('click', function (e) {
-        if (!agree.checked) {
-          e.preventDefault();
-          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
-        } else {
-          setTimeout(closeModal, 300);
-        }
-      });
-
-      document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-
-      // If the page was opened with #orderModal in the address, show the popup
-      if (location.hash === '#orderModal') { openModal(); }
-    })();
-  </script>
-
-</body>
-</html>
