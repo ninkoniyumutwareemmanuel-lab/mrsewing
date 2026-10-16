@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mr. Sewing Fashion | Bespoke Suits in Kigali</title>
+    
+    <!-- SEO Meta Tags & Keywords for Google Ranking -->
+    <meta name="description" content="Contact Mr. Sewing Fashion in Kigali, Rwanda. Visit our bespoke tailoring workshop in Nyarugenge or book an appointment at the MIC Building Downtown. Call/WhatsApp +250 787 411 501.">
+    <meta name="keywords" content="Mr Sewing Fashion contact, tailor in Kigali, bespoke suits Rwanda contact, Nyarugenge tailor, MIC Building Kigali, Made in Rwanda fashion">
+    <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
+
+    <!-- Favicon / Logo for Browser and Google Search Bar -->
+    <link rel="icon" href="MR LOGO.jpeg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="MR LOGO.jpeg">
+
+    <!-- Open Graph / Link Preview Tags -->
+    <meta property="og:title" content="Contact Us - Mr. Sewing Fashion">
+    <meta property="og:description" content="Get in touch with Mr. Sewing Fashion in Kigali, Rwanda for custom bespoke suits and tailoring consultations.">
+    <meta property="og:image" content="MR LOGO.jpeg">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #141414;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #d4af37;
+            --text-main: #f4f4f4;
+            --text-muted: #aaaaaa;
+            --border-color: #262626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header / Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+            padding: 10px;
+            background-color: var(--card-bg);
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .contact-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p, .contact-card a {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-gold);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold-hover);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: var(--bg-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo">
+            <a href="index.html" class="logo-text">MR. SEWING</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="suits.html">Suits</a></li>
+                <li><a href="measurements.html">Measurements Guide</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html" class="active">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Contact Content -->
+    <main class="container">
+        <div class="page-title">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team for consultations, orders, and bespoke tailoring appointments.</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Call / WhatsApp Card -->
+            <div class="contact-card">
+                <h3>Call / WhatsApp</h3>
+                <p>Reach out directly for inquiries, measurements support, and bookings.</p>
+                <a href="https://wa.me/250787411501" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: var(--accent-gold);">+250 787 411 501</a>
+                <a href="https://wa.me/250787411501" target="_blank" rel="noopener noreferrer" class="btn">Chat on WhatsApp</a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+                <h3>Email Us</h3>
+                <p>Send us your questions, measurement details, or custom design requests.</p>
+                <a href="mailto:Mrsewingfashiondesgner@gmail.com" style="word-break: break-all; font-weight: bold; color: var(--accent-gold);">Mrsewingfashiondesgner@gmail.com</a>
+                <a href="mailto:Mrsewingfashiondesgner@gmail.com" class="btn">Send Email</a>
+            </div>
+
+            <!-- Workshop Location Card -->
+            <div class="contact-card">
+                <h3>Main Workshop Location</h3>
+                <p>Kigali, Nyarugenge, Karama, Norvege, KN 441 St</p>
+                <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--text-main);">Please call ahead before visiting to coordinate your session.</p>
+            </div>
+
+            <!-- Downtown Branch Card -->
+            <div class="contact-card">
+                <h3>Downtown Branch</h3>
+                <p>MIC Building, Downtown Kigali</p>
+                <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--accent-gold); font-weight: 600;">Available by booking / appointment only.</p>
+            </div>
+
+            <!-- Working Hours Card -->
+            <div class="contact-card" style="grid-column: 1 / -1;">
+                <h3>Working Hours</h3>
+                <p><strong>Monday – Friday:</strong> 9:00 AM – 5:00 PM</p>
+                <p><strong>Saturday & Sunday:</strong> Booking / Call Required</p>
+                <p style="font-size: 0.9rem; color: var(--accent-gold); margin-top: 0.5rem;"><em>Note: Closed on the last Saturday of the month for Umuganda.</em></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
