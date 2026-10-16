@@ -150,6 +150,14 @@
             position: relative;
         }
 
+        .measurement-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
         .measurement-number {
             position: absolute;
             top: 1rem;
@@ -209,6 +217,23 @@
             font-size: 0.95rem;
         }
 
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #000;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold-hover);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -266,72 +291,84 @@
         <div class="measurements-grid">
             <div class="measurement-card">
                 <div class="measurement-number">1</div>
+                <img src="neck.jpeg" alt="Measuring Neck">
                 <h3>Neck</h3>
                 <p>Measure around your neck at the height where your collar, if buttoned, would naturally sit.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">2</div>
+                <img src="shoulder.jpeg" alt="Measuring Shoulder">
                 <h3>Shoulder</h3>
                 <p>Measure straight across the back from the end of the right shoulder seam to the end of the left shoulder.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">3</div>
+                <img src="sleeve_length.jpeg" alt="Measuring Sleeve Length">
                 <h3>Sleeve Length</h3>
                 <p>Measure from the top of your shoulder down along the arm to the knuckle of your thumb.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">4</div>
+                <img src="bicep.jpeg" alt="Measuring Bicep">
                 <h3>Bicep</h3>
                 <p>Measure around the fullest part of your bicep with your arm relaxed.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">5</div>
+                <img src="wrist.jpeg" alt="Measuring Wrist">
                 <h3>Wrist</h3>
                 <p>Measure snugly around the fullest part of your wrist.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">6</div>
+                <img src="chest.jpeg" alt="Measuring Chest">
                 <h3>Chest</h3>
-                <p>Measure around the fullest part of your chest. Ensure the tape is held level and firm around the body.</p>
+                <p>Measure around the fullest part of your chest. Ensure the tape is level and firm around the body.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">7</div>
+                <img src="belly.jpeg" alt="Measuring Belly">
                 <h3>Belly</h3>
                 <p>Measure around the widest part of your stomach, typically right across or just above the belly button area.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">8</div>
+                <img src="waist.jpeg" alt="Measuring Waist">
                 <h3>Waist</h3>
                 <p>Measure around your natural waistline at the exact level where you normally wear your trousers' belt.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">9</div>
+                <img src="hip.jpeg" alt="Measuring Hip">
                 <h3>Hip</h3>
                 <p>Measure around your hips and the largest part of your buttocks.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">10</div>
+                <img src="jacket_length.jpeg" alt="Measuring Jacket Length">
                 <h3>Jacket Length</h3>
                 <p>Measure vertically from the base of the back of your neck down to the point where your thumb knuckle rests.</p>
             </div>
 
             <div class="measurement-card">
-                <div class="measurement-number">11</div>
+                <div class="measurement-number">5</div>
+                <img src="trouser_length.jpeg" alt="Measuring Trousers Length">
                 <h3>Trousers Length</h3>
                 <p>Measure from the top of your waistband down your outer leg to your desired ankle length.</p>
             </div>
 
             <div class="measurement-card">
                 <div class="measurement-number">12</div>
+                <img src="thigh.jpeg" alt="Measuring Thigh">
                 <h3>Thigh</h3>
                 <p>Measure around your upper thigh at its widest point just below the crotch.</p>
             </div>
@@ -353,6 +390,15 @@
             <div class="faq-item">
                 <h4>Can I request custom adjustments?</h4>
                 <p>Yes! If you have specific fitting preferences (e.g., slim fit vs. classic fit), you can include notes when placing your order.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I get my measurements from another tailor?</h4>
+                <p>Yes, if you don't have a tape measure or aren't comfortable taking measurements yourself, you can visit a local tailor to have them measure you based on our guide, and then submit those numbers to us.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#" class="btn">Submit your measurements</a>
             </div>
         </div>
     </main>
