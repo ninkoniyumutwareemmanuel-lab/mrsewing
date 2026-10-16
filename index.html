@@ -35,6 +35,31 @@
   <meta name="twitter:description" content="Bespoke tailoring, custom men’s and women’s suits, and made-to-measure fashion in Kigali, Rwanda.">
   <meta name="twitter:image" content="https://mrsewingfashion.com/1.jpeg">
 
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Mr. Sewing",
+    "description": "Bespoke tailoring and made-to-measure custom suits for men and women in Kigali, Rwanda.",
+    "url": "https://mrsewingfashion.com/",
+    "image": "https://mrsewingfashion.com/1.jpeg",
+    "areaServed": "Kigali, Rwanda",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MIC Building, Downtown",
+      "addressLocality": "Nyarugenge, Kigali",
+      "addressCountry": "RW"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  }
+  </script>
+
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -82,12 +107,11 @@
     }
     .order-btn:hover { background-color: #f3e5ab; }
 
-    /* HERO BANNER SECTION (Desktop Fix Included) */
+    /* HERO BANNER SECTION */
     .hero-section {
       position: relative;
-      background: linear-gradient(rgba(11, 11, 11, 0.70), rgba(11, 11, 11, 0.85)), url('The Executive Line.jpeg') center top / cover no-repeat;
-      min-height: 70vh;
-      padding: clamp(60px, 10vw, 120px) 4%;
+      background: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.85)), url('The Executive Line.jpeg') center/cover no-repeat;
+      padding: clamp(60px, 12vw, 140px) 4%;
       text-align: center;
       border-bottom: 1px solid #2a2a2a;
       display: flex;
@@ -153,15 +177,6 @@
       font-size: clamp(0.75rem, 1.4vw, 0.95rem);
     }
     .hero-btn-secondary:hover { background-color: #d4af37; color: #000000; }
-
-    /* Interactive Zoomable Images Class */
-    .zoomable-img {
-      cursor: zoom-in;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    .zoomable-img:hover {
-      filter: brightness(1.1);
-    }
 
     /* SECTION 1: Happy Customers */
     .customers-section {
@@ -266,7 +281,7 @@
     .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
     .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
 
-    /* Order Popup Modal */
+    /* Order popup */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
     .modal-overlay.open, .modal-overlay:target { display: flex; }
     .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
@@ -280,17 +295,6 @@
     .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
     .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
     .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
-
-    /* IMAGE ZOOM LIGHTBOX MODAL */
-    .lightbox-modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.92); display: none; align-items: center; justify-content: center; z-index: 3000; padding: 20px; flex-direction: column; }
-    .lightbox-modal.open { display: flex; }
-    .lightbox-img-wrapper { max-width: 90vw; max-height: 80vh; overflow: auto; display: flex; justify-content: center; align-items: center; border: 1px solid #d4af37; border-radius: 6px; background-color: #0b0b0b; }
-    .lightbox-img { max-width: 100%; max-height: 80vh; object-fit: contain; transition: transform 0.25s ease; transform-origin: center; }
-    .lightbox-controls { margin-top: 15px; display: flex; gap: 15px; align-items: center; }
-    .lightbox-btn { background-color: #141414; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; font-weight: 700; border-radius: 4px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease; }
-    .lightbox-btn:hover { background-color: #d4af37; color: #000; }
-    .lightbox-close { position: absolute; top: 15px; right: 25px; color: #aaaaaa; font-size: 2.2rem; background: none; border: none; cursor: pointer; }
-    .lightbox-close:hover { color: #d4af37; }
 
     @media (max-width: 700px) {
       header { flex-wrap: wrap; row-gap: 8px; }
@@ -366,8 +370,7 @@
 
     <div class="customers-grid">
       <div class="customer-card">
-        <!-- Photo 1: Change "1.jpeg" below to any file name you want -->
-        <img src="1.jpeg" alt="Custom bespoke suit made in Kigali, Rwanda - Mr. Sewing 1" class="suit-image zoomable-img">
+        <img src="1.jpeg" alt="Custom bespoke suit made in Kigali, Rwanda - Mr. Sewing 1" class="suit-image">
         <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <div class="card-actions">
           <a href="reviews-1.html">Read reviews</a>
@@ -375,8 +378,7 @@
         </div>
       </div>
       <div class="customer-card">
-        <!-- Photo 2: Change "2.jpeg" below to any file name you want -->
-        <img src="2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing 2" class="suit-image zoomable-img">
+        <img src="2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing 2" class="suit-image">
         <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <div class="card-actions">
           <a href="reviews-2.html">Read reviews</a>
@@ -384,8 +386,7 @@
         </div>
       </div>
       <div class="customer-card">
-        <!-- Photo 3: Change "3.jpeg" below to any file name you want -->
-        <img src="3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing 3" class="suit-image zoomable-img">
+        <img src="3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing 3" class="suit-image">
         <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <div class="card-actions">
           <a href="reviews-3.html">Read reviews</a>
@@ -393,8 +394,7 @@
         </div>
       </div>
       <div class="customer-card">
-        <!-- Photo 4: Change "4.jpeg" below to any file name you want -->
-        <img src="4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing 4" class="suit-image zoomable-img">
+        <img src="4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing 4" class="suit-image">
         <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <div class="card-actions">
           <a href="reviews-4.html">Read reviews</a>
@@ -423,8 +423,7 @@
       
       <div class="collection-grid">
         <div class="collection-item-card">
-          <!-- Change image filename in src below when ready -->
-          <img src="The Executive Line.jpeg" alt="Double Breasted Tuxedo - Mr. Sewing" class="collection-item-img zoomable-img">
+          <img src="The Executive Line.jpeg" alt="Double Breasted Tuxedo - Mr. Sewing" class="collection-item-img">
           <div class="collection-item-info">
             <div>
               <h3>Double Breasted Tuxedo</h3>
@@ -435,8 +434,7 @@
         </div>
 
         <div class="collection-item-card">
-          <!-- REMOVED INCORRECT WOMEN'S PHOTO 1.jpeg -> Replace "placeholder-men.jpg" below with your new photo -->
-          <img src="placeholder-men.jpg" alt="Classic 3-Piece Executive Suit - Mr. Sewing" class="collection-item-img zoomable-img">
+          <img src="1.jpeg" alt="Classic 3-Piece Executive Suit - Mr. Sewing" class="collection-item-img">
           <div class="collection-item-info">
             <div>
               <h3>Classic 3-Piece Executive</h3>
@@ -447,8 +445,7 @@
         </div>
 
         <div class="collection-item-card">
-          <!-- Change image filename in src below when ready -->
-          <img src="3.jpeg" alt="Modern Slim Fit Suit - Mr. Sewing" class="collection-item-img zoomable-img">
+          <img src="3.jpeg" alt="Modern Slim Fit Suit - Mr. Sewing" class="collection-item-img">
           <div class="collection-item-info">
             <div>
               <h3>Modern Slim Fit Suit</h3>
@@ -469,8 +466,7 @@
       
       <div class="collection-grid">
         <div class="collection-item-card">
-          <!-- Change image filename in src below when ready -->
-          <img src="The Elegance Series.jpeg" alt="White Power Pantsuit - Mr. Sewing" class="collection-item-img zoomable-img">
+          <img src="The Elegance Series.jpeg" alt="White Power Pantsuit - Mr. Sewing" class="collection-item-img">
           <div class="collection-item-info">
             <div>
               <h3>White Power Pantsuit</h3>
@@ -481,8 +477,7 @@
         </div>
 
         <div class="collection-item-card">
-          <!-- Change image filename in src below when ready -->
-          <img src="2.jpeg" alt="Tailored Double-Breasted Blazer - Mr. Sewing" class="collection-item-img zoomable-img">
+          <img src="2.jpeg" alt="Tailored Double-Breasted Blazer - Mr. Sewing" class="collection-item-img">
           <div class="collection-item-info">
             <div>
               <h3>Double-Breasted Blazer Set</h3>
@@ -493,8 +488,7 @@
         </div>
 
         <div class="collection-item-card">
-          <!-- REMOVED INCORRECT PHOTO 4.jpeg -> Replace "placeholder-women.jpg" below with your new photo -->
-          <img src="placeholder-women.jpg" alt="Bespoke Elegance Tuxedo - Mr. Sewing" class="collection-item-img zoomable-img">
+          <img src="4.jpeg" alt="Bespoke Elegance Tuxedo - Mr. Sewing" class="collection-item-img">
           <div class="collection-item-info">
             <div>
               <h3>Bespoke Elegance Tuxedo</h3>
@@ -518,7 +512,7 @@
         </p>
       </div>
       <div class="why-mtm-image-wrapper">
-        <img src="measurements.jpeg" alt="Master tailor taking precise body measurements for a made-to-measure suit in Kigali" class="zoomable-img" loading="lazy">
+        <img src="measurements.jpeg" alt="Master tailor taking precise body measurements for a made-to-measure suit in Kigali" loading="lazy">
       </div>
     </div>
   </section>
@@ -563,7 +557,7 @@
         </div>
       </div>
       <div class="why-choose-right">
-        <img src="fabric.jpeg" alt="Luxury suiting fabric selection at Mr. Sewing bespoke tailor, Kigali" class="zoomable-img" loading="lazy">
+        <img src="fabric.jpeg" alt="Luxury suiting fabric selection at Mr. Sewing bespoke tailor, Kigali" loading="lazy">
       </div>
     </div>
   </section>
@@ -635,7 +629,7 @@
     </div>
   </footer>
 
-  <!-- Order Popup Modal -->
+  <!-- Order popup -->
   <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
     <div class="modal-box">
       <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
@@ -650,22 +644,8 @@
     </div>
   </div>
 
-  <!-- Image Zoom Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
-    <button class="lightbox-close" id="lightboxClose">&times;</button>
-    <div class="lightbox-img-wrapper">
-      <img src="" alt="Zoomed View" class="lightbox-img" id="lightboxImg">
-    </div>
-    <div class="lightbox-controls">
-      <button class="lightbox-btn" id="zoomInBtn"><i class="fas fa-search-plus"></i> Zoom In</button>
-      <button class="lightbox-btn" id="zoomOutBtn"><i class="fas fa-search-minus"></i> Zoom Out</button>
-      <button class="lightbox-btn" id="zoomResetBtn"><i class="fas fa-undo"></i> Reset</button>
-    </div>
-  </div>
-
   <script>
     (function () {
-      // 1. WhatsApp Order Modal Script
       var modal = document.getElementById('orderModal');
       var agree = document.getElementById('termsAgree');
       var wa = document.getElementById('whatsappBtn');
@@ -703,55 +683,9 @@
 
       document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
       modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
       if (location.hash === '#orderModal') { openModal(); }
-
-      // 2. Click-to-Zoom Lightbox Script for All Site Photos
-      var lightbox = document.getElementById('lightboxModal');
-      var lightboxImg = document.getElementById('lightboxImg');
-      var lightboxClose = document.getElementById('lightboxClose');
-      var zoomInBtn = document.getElementById('zoomInBtn');
-      var zoomOutBtn = document.getElementById('zoomOutBtn');
-      var zoomResetBtn = document.getElementById('zoomResetBtn');
-      var currentScale = 1;
-
-      document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('zoomable-img')) {
-          lightboxImg.src = e.target.src;
-          currentScale = 1;
-          lightboxImg.style.transform = 'scale(1)';
-          lightbox.classList.add('open');
-        }
-      });
-
-      function closeLightbox() { lightbox.classList.remove('open'); }
-
-      lightboxClose.addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
-
-      zoomInBtn.addEventListener('click', function () {
-        currentScale += 0.25;
-        lightboxImg.style.transform = 'scale(' + currentScale + ')';
-      });
-
-      zoomOutBtn.addEventListener('click', function () {
-        if (currentScale > 0.5) {
-          currentScale -= 0.25;
-          lightboxImg.style.transform = 'scale(' + currentScale + ')';
-        }
-      });
-
-      zoomResetBtn.addEventListener('click', function () {
-        currentScale = 1;
-        lightboxImg.style.transform = 'scale(1)';
-      });
-
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          closeModal();
-          closeLightbox();
-        }
-      });
     })();
   </script>
 
