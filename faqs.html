@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Mr. Sewing Fashion | Bespoke Suits in Kigali</title>
+    
+    <!-- SEO Meta Tags & Keywords for Google Ranking -->
+    <meta name="description" content="Find answers to common questions about Mr. Sewing Fashion's custom bespoke suits, pricing tiers, workshop locations in Kigali, Rwanda, and ordering policies.">
+    <meta name="keywords" content="Mr Sewing Fashion FAQs, suit pricing Kigali, bespoke tailoring questions, custom suits Rwanda, tailor location Kigali, Made in Rwanda FAQ">
+    <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
+
+    <!-- Favicon / Logo for Browser and Google Search Bar -->
+    <link rel="icon" href="MR LOGO.jpeg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="MR LOGO.jpeg">
+
+    <!-- Open Graph / Link Preview Tags -->
+    <meta property="og:title" content="Frequently Asked Questions - Mr. Sewing Fashion">
+    <meta property="og:description" content="Get answers about our bespoke suit pricing, production times, workshop locations in Kigali, and custom tailoring policies.">
+    <meta property="og:image" content="MR LOGO.jpeg">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #141414;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #d4af37;
+            --text-main: #f4f4f4;
+            --text-muted: #aaaaaa;
+            --border-color: #262626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header / Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+            padding: 10px;
+            background-color: var(--card-bg);
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .faq-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .faq-category h2 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Accordion Details */
+        details {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--accent-gold);
+        }
+
+        summary {
+            padding: 1.2rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .faq-content ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .faq-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: var(--bg-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo">
+            <a href="index.html" class="logo-text">MR. SEWING</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="suits.html">Suits</a></li>
+                <li><a href="measurements.html">Measurements Guide</a></li>
+                <li><a href="faq.html" class="active">FAQs</a></li>
+                <li><a href="index.html#contact">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main FAQ Content -->
+    <main class="container">
+        <div class="page-title">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about our bespoke tailoring, pricing, and services.</p>
+        </div>
+
+        <!-- Location & Visiting -->
+        <div class="faq-category">
+            <h2>Location & Visiting</h2>
+            
+            <details>
+                <summary>Where are you located?</summary>
+                <div class="faq-content">
+                    Our main workshop is in Kigali, Nyarugenge, Karama, Norvege, KN 441 St. We also operate at the MIC Building Downtown by booking/appointment only.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do I need to call before visiting?</summary>
+                <div class="faq-content">
+                    Yes, please call +250 787 411 501 before visiting so we can provide exact directions and prepare for your consultation.
+                </div>
+            </details>
+        </div>
+
+        <!-- Ordering & Production -->
+        <div class="faq-category">
+            <h2>Ordering & Production</h2>
+            
+            <details>
+                <summary>Do you have ready-made clothes in stock?</summary>
+                <div class="faq-content">
+                    No, every garment is custom-made strictly on order to ensure a precision fit.
+                </div>
+            </details>
+
+            <details>
+                <summary>How long does it take to make a suit?</summary>
+                <div class="faq-content">
+                    Standard orders take 1 to 2 weeks. Express orders take 1 to 3 days (requires an additional 35% express rush fee).
+                </div>
+            </details>
+
+            <details>
+                <summary>When does production officially start?</summary>
+                <div class="faq-content">
+                    Production begins after a 70% advance deposit is confirmed and you receive our official "Your order is officially started" notification.
+                </div>
+            </details>
+        </div>
+
+        <!-- Pricing & Services -->
+        <div class="faq-category">
+            <h2>Pricing & Services</h2>
+            
+            <details>
+                <summary>What are your suit prices?</summary>
+                <div class="faq-content">
+                    <p><strong>Men's 2-Piece Suits:</strong></p>
+                    <ul>
+                        <li>Tier 1: 150,000 RWF</li>
+                        <li>Tier 2: 250,000 RWF</li>
+                        <li>Tier 3: 350,000 RWF</li>
+                        <li>Tier 4: 450,000 RWF</li>
+                    </ul>
+                    <p style="margin-top: 0.8rem;"><strong>Men's 3-Piece Suits:</strong></p>
+                    <ul>
+                        <li>Tier 1: 200,000 RWF</li>
+                        <li>Tier 2: 350,000 RWF</li>
+                        <li>Tier 3: 550,000 RWF</li>
+                        <li>Tier 4: 650,000 RWF</li>
+                    </ul>
+                    <p style="margin-top: 0.8rem;"><strong>Women's 2-Piece Suits:</strong></p>
+                    <ul>
+                        <li>Tier 1: 100,000 RWF</li>
+                        <li>Tier 2: 150,000 RWF</li>
+                        <li>Tier 3: 200,000 RWF</li>
+                        <li>Tier 4: 250,000 RWF</li>
+                    </ul>
+                    <p style="margin-top: 0.8rem;"><strong>Women's 3-Piece Suits:</strong></p>
+                    <ul>
+                        <li>Tier 1: 150,000 RWF</li>
+                        <li>Tier 2: 250,000 RWF</li>
+                        <li>Tier 3: 350,000 RWF</li>
+                        <li>Tier 4: 450,000 RWF</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><em>Note on Pricing:</em> Listed prices are for standard fabric tiers. Because all our items are fully bespoke and custom-made, special or premium fabric selections and highly custom designs may vary or exceed these rates. Please contact us directly for a personalized quote.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>What services do you offer?</summary>
+                <div class="faq-content">
+                    We specialize in custom suits (men and women), custom shirts, and expert garment alterations. We do not sell standalone trousers, coats, or dresses.
+                </div>
+            </details>
+        </div>
+
+        <!-- Policies & Discounts -->
+        <div class="faq-category">
+            <h2>Policies & Discounts</h2>
+            
+            <details>
+                <summary>What is your return policy?</summary>
+                <div class="faq-content">
+                    Because items are custom-tailored, we do not offer returns or refunds once production begins. We offer free fitting adjustments within 72 hours of delivery.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do you offer discounts?</summary>
+                <div class="faq-content">
+                    Yes! Enjoy 5% off for ordering 2+ items or for returning customers, and 10% off when you refer a friend who makes a purchase.
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
