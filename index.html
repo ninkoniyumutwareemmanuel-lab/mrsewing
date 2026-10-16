@@ -162,6 +162,12 @@
     .collection-image { width: 100%; height: auto; max-height: 700px; object-fit: contain; display: block; transition: transform 0.5s ease; }
     .collection-image:hover { transform: scale(1.02); }
 
+    /* Men's / Women's collection links (pill, callout and photo) */
+    a.collection-pill, a.side-callout, a.collection-image-container { text-decoration: none; }
+    a.collection-pill { transition: background-color 0.3s ease, color 0.3s ease; }
+    a.collection-pill:hover { background-color: #d4af37; color: #000000; }
+    a.side-callout:hover { background: #1f1f1f; }
+
     /* SECTION 3: Why Made to Measure? */
     .why-mtm-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
     .why-mtm-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; align-items: stretch; }
@@ -323,29 +329,29 @@
       <div class="customer-card">
         <img src="1.jpeg" alt="Custom bespoke suit made in Kigali, Rwanda - Mr. Sewing 1" class="suit-image">
         <div class="card-actions">
-          <a href="#reviews-1">Read reviews</a>
-          <a href="#know-more-1">Know More</a>
+          <a href="reviews-1.html">Read reviews</a>
+          <a href="know-more-1.html">Know More</a>
         </div>
       </div>
       <div class="customer-card">
         <img src="2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing 2" class="suit-image">
         <div class="card-actions">
-          <a href="#reviews-2">Read reviews</a>
-          <a href="#know-more-2">Know More</a>
+          <a href="reviews-2.html">Read reviews</a>
+          <a href="know-more-2.html">Know More</a>
         </div>
       </div>
       <div class="customer-card">
         <img src="3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing 3" class="suit-image">
         <div class="card-actions">
-          <a href="#reviews-3">Read reviews</a>
-          <a href="#know-more-3">Know More</a>
+          <a href="reviews-3.html">Read reviews</a>
+          <a href="know-more-3.html">Know More</a>
         </div>
       </div>
       <div class="customer-card">
         <img src="4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing 4" class="suit-image">
         <div class="card-actions">
-          <a href="#reviews-4">Read reviews</a>
-          <a href="#know-more-4">Know More</a>
+          <a href="reviews-4.html">Read reviews</a>
+          <a href="know-more-4.html">Know More</a>
         </div>
       </div>
     </div>
@@ -361,37 +367,37 @@
       <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection -->
+    <!-- Men's Suits Collection (pill, callout and photo all open men-suits.html) -->
     <div class="collection-block">
       <div class="collection-title-wrapper">
-        <div class="collection-pill">Men's Suits</div>
+        <a href="men-suits.html" class="collection-pill">Men's Suits</a>
         <div class="title-line"></div>
       </div>
       <div class="collection-content">
-        <div class="side-callout">
+        <a href="men-suits.html" class="side-callout">
           <span>The Executive Line</span>
           <p class="cta-subtitle">Choose Yours</p>
-        </div>
-        <div class="collection-image-container">
+        </a>
+        <a href="men-suits.html" class="collection-image-container" aria-label="Browse men's suits">
           <img src="The Executive Line.jpeg" alt="Men's custom suits Kigali Rwanda - The Executive Line by Mr. Sewing" class="collection-image" loading="lazy">
-        </div>
+        </a>
       </div>
     </div>
 
-    <!-- Women's Suits Collection -->
+    <!-- Women's Suits Collection (pill, callout and photo all open women-suits.html) -->
     <div class="collection-block">
       <div class="collection-title-wrapper">
-        <div class="collection-pill">Women's Suits</div>
+        <a href="women-suits.html" class="collection-pill">Women's Suits</a>
         <div class="title-line"></div>
       </div>
       <div class="collection-content">
-        <div class="side-callout">
+        <a href="women-suits.html" class="side-callout">
           <span>The Elegance Series</span>
           <p class="cta-subtitle">Choose Yours</p>
-        </div>
-        <div class="collection-image-container">
+        </a>
+        <a href="women-suits.html" class="collection-image-container" aria-label="Browse women's suits">
           <img src="The Elegance Series.jpeg" alt="Women's custom suits Kigali Rwanda - The Elegance Series by Mr. Sewing" class="collection-image" loading="lazy">
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -498,9 +504,9 @@
         Saturday & Sunday: Booking / Call Required<br>
         <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
         <ul>
-          <li><a href="#refund-policy">Refund Policy</a></li>
-          <li><a href="#terms-and-conditions">Terms & Conditions</a></li>
-          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -535,7 +541,7 @@
       <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
       <label class="terms-check">
         <input type="checkbox" id="termsAgree">
-        <span>I have read and agree to the <a href="#terms-and-conditions" id="termsLink">Terms &amp; Conditions</a>.</span>
+        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
       </label>
       <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
       <div class="terms-hint" id="termsHint"></div>
@@ -580,7 +586,6 @@
         }
       });
 
-      document.getElementById('termsLink').addEventListener('click', closeModal);
       document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
       modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
