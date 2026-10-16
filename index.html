@@ -207,6 +207,21 @@
     .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
     .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
 
+    /* Order popup (terms & conditions, then WhatsApp) */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
+    .modal-overlay.open { display: flex; }
+    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
+    .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
+    .modal-close:hover { color: #d4af37; }
+    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
+    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
+    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
+    .terms-check a { color: #d4af37; }
+    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
+    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
+    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
+
     /* Small screens: everything stays side by side; only the tightest spots adjust */
     @media (max-width: 700px) {
       .service-highlights { grid-template-columns: 1fr; }
@@ -474,6 +489,61 @@
       </div>
     </div>
   </footer>
+
+  <!-- Order popup: customer must agree to Terms & Conditions before WhatsApp opens -->
+  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
+      <h3 id="orderModalTitle">Place Your Order</h3>
+      <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
+      <label class="terms-check">
+        <input type="checkbox" id="termsAgree">
+        <span>I have read and agree to the <a href="#terms-and-conditions" id="termsLink">Terms &amp; Conditions</a>.</span>
+      </label>
+      <a href="https://wa.me/250787411501?text=Hello%20Mr.%20Sewing%2C%20I%20would%20like%20to%20place%20an%20order.%20I%20have%20read%20and%20agree%20to%20the%20Terms%20%26%20Conditions." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
+      <div class="terms-hint" id="termsHint"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('orderModal');
+      var agree = document.getElementById('termsAgree');
+      var wa = document.getElementById('whatsappBtn');
+      var hint = document.getElementById('termsHint');
+
+      function openModal() { modal.classList.add('open'); }
+      function closeModal() {
+        modal.classList.remove('open');
+        agree.checked = false;
+        wa.setAttribute('aria-disabled', 'true');
+        hint.textContent = '';
+      }
+
+      document.querySelectorAll('.order-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+      });
+
+      agree.addEventListener('change', function () {
+        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+        hint.textContent = '';
+      });
+
+      wa.addEventListener('click', function (e) {
+        if (!agree.checked) {
+          e.preventDefault();
+          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
+        } else {
+          setTimeout(closeModal, 300);
+        }
+      });
+
+      document.getElementById('termsLink').addEventListener('click', closeModal);
+      document.getElementById('orderClose').addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
 
 </body>
 </html>
