@@ -224,6 +224,9 @@
 
     /* Small screens: everything stays side by side; only the tightest spots adjust */
     @media (max-width: 700px) {
+      header { flex-wrap: wrap; row-gap: 8px; }
+      nav { order: 3; width: 100%; }
+      nav ul { gap: 14px; }
       .service-highlights { grid-template-columns: 1fr; }
       .customers-grid { grid-template-columns: 1fr; }
       .suit-image { aspect-ratio: 3 / 4; }
@@ -239,6 +242,8 @@
     <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
     <nav>
       <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#suits">Suits</a></li>
         <li><a href="#measurements">Measurements Guide</a></li>
         <li><a href="#faq">FAQs</a></li>
@@ -479,10 +484,10 @@
     <div class="footer-social-wrapper">
       <div class="social-title">Connect With Us</div>
       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
       <div class="footer-bottom-copy">
         <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
@@ -500,7 +505,7 @@
         <input type="checkbox" id="termsAgree">
         <span>I have read and agree to the <a href="#terms-and-conditions" id="termsLink">Terms &amp; Conditions</a>.</span>
       </label>
-      <a href="https://wa.me/250787411501?text=Hello%20Mr.%20Sewing%2C%20I%20would%20like%20to%20place%20an%20order.%20I%20have%20read%20and%20agree%20to%20the%20Terms%20%26%20Conditions." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
+      <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
       <div class="terms-hint" id="termsHint"></div>
     </div>
   </div>
