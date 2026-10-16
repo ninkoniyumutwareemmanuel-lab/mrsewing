@@ -3,766 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Sewing | Bespoke Tailoring & Made-to-Measure Suits in Kigali, Rwanda</title>
-  
+  <title>Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda</title>
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Mr. Sewing is Kigali's premier bespoke tailor offering custom men's and women's suits, office wear, casual attire, and express tailoring with guaranteed timely delivery in Rwanda.">
-  <meta name="keywords" content="Mr. Sewing, Mr Sewing, bespoke tailoring Kigali, custom suits Rwanda, made to measure suits Kigali, men's suits Kigali, women's suits Kigali, bespoke suits Rwanda, custom tailors Kigali, suits Rwanda, casual suits Kigali, office suits Kigali, formal wear Rwanda, custom clothing Kigali, tailored suits Kigali, Made in Rwanda fashion, suit design Kigali, tailor in Nyarugenge, MIC building tailor, Norvège tailor Kigali, express suit tailoring, standard suit tailoring, custom wedding suits Kigali, luxury suiting Rwanda">
+  <meta name="description" content="Mr. Sewing is a bespoke tailor in Kigali, Rwanda. Custom men's and women's suits, made-to-measure office wear, wedding suits and casual attire, with express 24-72h and standard 1-week delivery.">
+  <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, bespoke tailoring Kigali, bespoke tailor Rwanda, custom suits Kigali, custom suits Rwanda, made to measure suits Kigali, made to measure Rwanda, men's suits Kigali, women's suits Kigali, bespoke suits Rwanda, custom tailors Kigali, best tailor in Kigali, tailor near me Kigali, suits Rwanda, wedding suits Kigali, groom suits Rwanda, office wear Kigali, formal wear Rwanda, business suits Kigali, tailored suits Kigali, custom clothing Kigali, fashion designer Kigali, Made in Rwanda fashion, express suit tailoring, tailor Nyarugenge, tailor MIC building Kigali, tailor Norvege Kigali, luxury suiting Rwanda, kitenge tailor Kigali, couturier Kigali, costume sur mesure Kigali, tailleur Kigali">
   <meta name="author" content="Mr. Sewing">
   <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="RW-01">
+  <meta name="geo.placename" content="Kigali, Rwanda">
+  <meta name="theme-color" content="#0b0b0b">
+  <!-- TODO: replace YOUR-SITE-URL with your real address, e.g. https://username.github.io/repo-name -->
+  <link rel="canonical" href="https://YOUR-SITE-URL/">
 
-  <!-- Open Graph for Social Media -->
-  <meta property="og:title" content="Mr. Sewing | Bespoke Tailoring & Made-to-Measure Suits in Kigali">
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn link previews) -->
+  <meta property="og:site_name" content="Mr. Sewing">
+  <meta property="og:title" content="Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda">
   <meta property="og:description" content="Crafting flawless custom suits for men and women in Kigali, Rwanda. Express 24-72h orders and standard 1-week delivery available.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-SITE-URL/">
+  <meta property="og:image" content="https://YOUR-SITE-URL/1.jpeg">
+  <meta property="og:image:alt" content="Custom bespoke suit made by Mr. Sewing in Kigali, Rwanda">
+  <meta property="og:locale" content="en_US">
 
-  <!-- Font Awesome CDN for Social Media Icons -->
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda">
+  <meta name="twitter:description" content="Custom men's and women's suits, made to measure in Kigali, Rwanda.">
+  <meta name="twitter:image" content="https://YOUR-SITE-URL/1.jpeg">
+
+  <!-- Structured data for Google (local business) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Mr. Sewing",
+    "description": "Bespoke tailoring and made-to-measure custom suits for men and women in Kigali, Rwanda.",
+    "url": "https://YOUR-SITE-URL/",
+    "image": "https://YOUR-SITE-URL/1.jpeg",
+    "areaServed": "Kigali, Rwanda",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MIC Building, Basement Floor, Downtown",
+      "addressLocality": "Nyarugenge, Kigali",
+      "addressCountry": "RW"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  }
+  </script>
+
+  <!-- Font Awesome CDN for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <style>
     /* Reset & Page Setup */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b0b0b;
-      color: #f5f5f5;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; }
+    img { max-width: 100%; }
 
     /* Header Bar */
     header {
       background-color: #141414;
       border-bottom: 1px solid #2a2a2a;
-      padding: 14px 5%;
+      padding: 12px 4%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: nowrap;
-      gap: 15px;
+      gap: clamp(6px, 2vw, 15px);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-
-    .header-logo {
-      height: 45px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-      mix-blend-mode: screen;
-      flex-shrink: 0;
-    }
-
-    nav {
-      flex-shrink: 1;
-      overflow: hidden;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-    }
-
-    nav a {
-      color: #cccccc;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
+    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
+    nav { flex-shrink: 1; overflow: hidden; }
+    nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
+    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover { color: #d4af37; }
 
     .order-btn {
       background-color: #d4af37;
       color: #000000;
-      padding: 9px 20px;
+      padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
       text-decoration: none;
       font-weight: 700;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      font-size: 0.85rem;
+      font-size: clamp(0.68rem, 1.3vw, 0.85rem);
       white-space: nowrap;
       flex-shrink: 0;
       transition: background-color 0.3s ease;
       display: inline-block;
     }
+    .order-btn:hover { background-color: #f3e5ab; }
 
-    .order-btn:hover {
-      background-color: #f3e5ab;
-    }
+    /* Intro Heading Strip */
+    .search-strip { background-color: #0f0f0f; border-bottom: 1px solid #2a2a2a; padding: clamp(12px, 2vw, 22px) 4%; text-align: center; }
+    .search-strip h1 { font-size: clamp(0.8rem, 1.8vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 0; }
 
-    /* SECTION 1: Happy Customers & Bespoke Service */
+    /* SECTION 1: Happy Customers (text left, photos right on every screen) */
     .customers-section {
-      padding: 80px 6%;
+      padding: clamp(28px, 6vw, 80px) 4%;
       background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 70px;
+      gap: clamp(14px, 4vw, 70px);
       max-width: 1800px;
       margin: 0 auto;
     }
+    .customers-text { flex: 1 1 45%; min-width: 0; text-align: left; }
+    .customers-section h2 { font-size: clamp(1.05rem, 3.2vw, 2.5rem); color: #d4af37; margin-bottom: 12px; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); line-height: 1.2; font-weight: 700; }
+    .customers-description, .made-to-order-desc { font-size: clamp(0.76rem, 1.6vw, 1.1rem); color: #aaaaaa; line-height: 1.6; margin-bottom: clamp(18px, 3vw, 35px); }
+    .made-to-order-title { font-size: clamp(0.95rem, 2.8vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
 
-    .customers-text {
-      flex: 1;
-      max-width: 600px;
-      text-align: left;
-    }
+    .service-highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 1.5vw, 20px); margin-top: 10px; }
+    .highlight-box { background-color: #141414; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 6px; padding: clamp(10px, 1.6vw, 20px); }
+    .highlight-box h3 { font-size: clamp(0.72rem, 1.3vw, 1.05rem); color: #d4af37; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+    .highlight-box p { font-size: clamp(0.68rem, 1.1vw, 0.9rem); color: #cccccc; line-height: 1.5; }
 
-    .customers-section h2 {
-      font-size: 2.5rem;
-      color: #d4af37;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 1.2;
-      font-weight: 700;
-    }
-
-    .customers-description {
-      font-size: 1.1rem;
-      color: #aaaaaa;
-      line-height: 1.6;
-      margin-bottom: 35px;
-    }
-
-    .made-to-order-title {
-      font-size: 2.2rem;
-      color: #d4af37;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .made-to-order-desc {
-      font-size: 1.1rem;
-      color: #aaaaaa;
-      line-height: 1.6;
-      margin-bottom: 35px;
-    }
-
-    /* Service Feature Highlights Grid */
-    .service-highlights {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-top: 10px;
-    }
-
-    .highlight-box {
-      background-color: #141414;
-      border: 1px solid #2a2a2a;
-      border-left: 3px solid #d4af37;
-      border-radius: 6px;
-      padding: 20px;
-    }
-
-    .highlight-box h3 {
-      font-size: 1.05rem;
-      color: #d4af37;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .highlight-box p {
-      font-size: 0.9rem;
-      color: #cccccc;
-      line-height: 1.5;
-    }
-
-    /* Image Grid (Section 1) */
-    .customers-grid {
-      flex: 1.2;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      max-width: 850px;
-    }
-
-    .customer-card {
-      background-color: #141414;
-      border: 1px solid #2a2a2a;
-      border-radius: 8px;
-      overflow: hidden;
-      padding: 18px;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .customer-card:hover {
-      border-color: #d4af37;
-      transform: translateY(-5px);
-    }
-
-    .suit-image {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 4px;
-      display: block;
-    }
-
-    .card-actions {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 18px;
-    }
-
-    .card-actions a {
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      transition: color 0.3s ease;
-    }
-
-    .card-actions a:hover {
-      color: #ffffff;
-    }
+    .customers-grid { flex: 1.2 1 55%; min-width: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 2vw, 25px); max-width: 850px; }
+    .customer-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: clamp(6px, 1.4vw, 18px); transition: transform 0.3s ease, border-color 0.3s ease; }
+    .customer-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+    .suit-image { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 4px; display: block; }
+    .card-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px clamp(8px, 2vw, 25px); margin-top: clamp(8px, 1.5vw, 18px); }
+    .card-actions a { color: #d4af37; text-decoration: none; font-weight: 600; font-size: clamp(0.6rem, 1.2vw, 0.9rem); text-transform: uppercase; transition: color 0.3s ease; }
+    .card-actions a:hover { color: #ffffff; }
 
     /* Section Divider Line */
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(to right, #0b0b0b, #d4af37, #0b0b0b);
-      max-width: 1600px;
-      margin: 0 auto;
-    }
+    .section-divider { height: 1px; background: linear-gradient(to right, #0b0b0b, #d4af37, #0b0b0b); max-width: 1600px; margin: 0 auto; }
 
     /* SECTION 2: Our Collections */
-    .collections-section {
-      padding: 80px 6%;
-      max-width: 1600px;
-      margin: 0 auto;
-      background-color: #0b0b0b;
-    }
+    .collections-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; }
+    .section-header { text-align: center; margin-bottom: clamp(26px, 5vw, 60px); }
+    .section-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
+    .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
+    .collection-block { margin-bottom: clamp(30px, 5vw, 70px); }
+    .collection-title-wrapper { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); margin-bottom: clamp(12px, 2vw, 25px); }
+    .collection-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(5px, 1vw, 8px) clamp(14px, 3vw, 30px); color: #ffffff; font-size: clamp(0.72rem, 1.8vw, 1.2rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background-color: #141414; white-space: nowrap; }
+    .title-line { flex: 1; height: 1px; background-color: #2a2a2a; }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-header h2 {
-      font-size: 2.2rem;
-      color: #d4af37;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 700;
-    }
-
-    .header-divider {
-      height: 2px;
-      width: 80px;
-      background-color: #d4af37;
-      margin: 15px auto 0;
-    }
-
-    .collection-block {
-      margin-bottom: 70px;
-    }
-
-    .collection-title-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 25px;
-    }
-
-    .collection-pill {
-      border: 1px solid #d4af37;
-      border-radius: 30px;
-      padding: 8px 30px;
-      color: #ffffff;
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      background-color: #141414;
-      white-space: nowrap;
-    }
-
-    .title-line {
-      flex: 1;
-      height: 1px;
-      background-color: #2a2a2a;
-    }
-
-    .collection-content {
-      display: flex;
-      border: 1px solid #2a2a2a;
-      background-color: #141414;
-      border-radius: 8px;
-      overflow: hidden;
-      align-items: stretch;
-    }
-
-    .side-callout {
-      width: 220px;
-      border-right: 1px solid #2a2a2a;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 25px;
-      text-align: center;
-      background: linear-gradient(180deg, #141414 0%, #1a1a1a 100%);
-      flex-shrink: 0;
-    }
-
-    .side-callout span {
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      font-size: 1.4rem;
-      color: #d4af37;
-      margin-bottom: 8px;
-    }
-
-    .cta-subtitle {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #aaaaaa;
-    }
-
-    .collection-image-container {
-      flex: 1;
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #0b0b0b;
-    }
-
-    .collection-image {
-      width: 100%;
-      height: auto;
-      max-height: 700px;
-      object-fit: contain;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .collection-image:hover {
-      transform: scale(1.02);
-    }
+    .collection-content { display: flex; flex-direction: row; border: 1px solid #2a2a2a; background-color: #141414; border-radius: 8px; overflow: hidden; align-items: stretch; }
+    .side-callout { width: clamp(80px, 18vw, 220px); border-right: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: clamp(8px, 2vw, 25px); text-align: center; background: linear-gradient(180deg, #141414 0%, #1a1a1a 100%); flex-shrink: 0; }
+    .side-callout span { font-family: 'Georgia', serif; font-style: italic; font-size: clamp(0.75rem, 1.9vw, 1.4rem); color: #d4af37; margin-bottom: 8px; }
+    .cta-subtitle { font-size: clamp(0.6rem, 1.2vw, 0.85rem); text-transform: uppercase; letter-spacing: 1px; color: #aaaaaa; }
+    .collection-image-container { flex: 1; min-width: 0; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #0b0b0b; }
+    .collection-image { width: 100%; height: auto; max-height: 700px; object-fit: contain; display: block; transition: transform 0.5s ease; }
+    .collection-image:hover { transform: scale(1.02); }
 
     /* SECTION 3: Why Made to Measure? */
-    .why-mtm-section {
-      padding: 80px 6%;
-      max-width: 1600px;
-      margin: 0 auto;
-      background-color: #0b0b0b;
-    }
-
-    .why-mtm-container {
-      display: flex;
-      background-color: #141414;
-      border: 1px solid #2a2a2a;
-      border-top: 3px solid #d4af37;
-      border-radius: 8px;
-      overflow: hidden;
-      align-items: center;
-    }
-
-    .why-mtm-text {
-      flex: 1;
-      padding: 50px 40px;
-    }
-
-    .why-mtm-text h2 {
-      font-size: 2.2rem;
-      color: #d4af37;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .why-mtm-subtitle {
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      font-size: 1.25rem;
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-
-    .why-mtm-body {
-      font-size: 1rem;
-      color: #cccccc;
-      line-height: 1.8;
-    }
-
-    .why-mtm-image-wrapper {
-      flex: 1;
-      min-height: 400px;
-      overflow: hidden;
-      border-left: 1px solid #2a2a2a;
-    }
-
-    .why-mtm-image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .why-mtm-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; }
+    .why-mtm-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; align-items: stretch; }
+    .why-mtm-text { flex: 1; min-width: 0; padding: clamp(16px, 4vw, 50px) clamp(12px, 3.5vw, 40px); align-self: center; }
+    .why-mtm-text h2 { font-size: clamp(1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); margin-bottom: 10px; font-weight: 700; }
+    .why-mtm-subtitle { font-family: 'Georgia', serif; font-style: italic; font-size: clamp(0.8rem, 2vw, 1.25rem); color: #ffffff; margin-bottom: 14px; }
+    .why-mtm-body { font-size: clamp(0.72rem, 1.5vw, 1rem); color: #cccccc; line-height: 1.8; }
+    .why-mtm-image-wrapper { flex: 1; min-width: 0; min-height: clamp(200px, 38vw, 400px); overflow: hidden; border-left: 1px solid #2a2a2a; }
+    .why-mtm-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* SECTION 4: Why Customers Choose Mr. Sewing */
-    .why-choose-section {
-      padding: 80px 6%;
-      max-width: 1600px;
-      margin: 0 auto;
-      background-color: #0b0b0b;
-    }
-
-    .why-choose-container {
-      display: flex;
-      background-color: #141414;
-      border: 1px solid #2a2a2a;
-      border-left: 3px solid #d4af37;
-      border-radius: 8px;
-      overflow: hidden;
-      gap: 30px;
-    }
-
-    .why-choose-left {
-      flex: 1.2;
-      padding: 50px 40px;
-    }
-
-    .why-choose-left h2 {
-      font-size: 2.2rem;
-      color: #d4af37;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
-      font-weight: 700;
-    }
-
-    .choose-reasons-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .reason-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-    }
-
-    .reason-number {
-      background-color: #0b0b0b;
-      border: 1px solid #d4af37;
-      color: #d4af37;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      flex-shrink: 0;
-      font-size: 0.95rem;
-    }
-
-    .reason-content h3 {
-      font-size: 1.1rem;
-      color: #ffffff;
-      margin-bottom: 5px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .reason-content p {
-      font-size: 0.92rem;
-      color: #aaaaaa;
-      line-height: 1.5;
-    }
-
-    .why-choose-right {
-      flex: 1;
-      overflow: hidden;
-      border-left: 1px solid #2a2a2a;
-    }
-
-    .why-choose-right img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .why-choose-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; }
+    .why-choose-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 8px; overflow: hidden; gap: clamp(0px, 2vw, 30px); }
+    .why-choose-left { flex: 1.2; min-width: 0; padding: clamp(16px, 4vw, 50px) clamp(12px, 3.5vw, 40px); }
+    .why-choose-left h2 { font-size: clamp(1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); margin-bottom: clamp(14px, 2.5vw, 25px); font-weight: 700; }
+    .choose-reasons-list { display: flex; flex-direction: column; gap: clamp(10px, 2vw, 20px); }
+    .reason-item { display: flex; align-items: flex-start; gap: clamp(8px, 1.5vw, 15px); }
+    .reason-number { background-color: #0b0b0b; border: 1px solid #d4af37; color: #d4af37; width: clamp(24px, 3.5vw, 36px); height: clamp(24px, 3.5vw, 36px); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 700; flex-shrink: 0; font-size: clamp(0.7rem, 1.3vw, 0.95rem); }
+    .reason-content h3 { font-size: clamp(0.75rem, 1.5vw, 1.1rem); color: #ffffff; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .reason-content p { font-size: clamp(0.68rem, 1.2vw, 0.92rem); color: #aaaaaa; line-height: 1.5; }
+    .why-choose-right { flex: 1; min-width: 0; overflow: hidden; border-left: 1px solid #2a2a2a; }
+    .why-choose-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* SECTION 5: Footer */
-    footer {
-      background-color: #141414;
-      border-top: 1px solid #2a2a2a;
-      padding: 70px 6% 30px;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-      max-width: 1600px;
-      margin: 0 auto 50px;
-    }
-
-    .footer-col h3 {
-      font-size: 1.1rem;
-      color: #d4af37;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col ul li {
-      margin-bottom: 12px;
-    }
-
-    .footer-col ul a {
-      color: #aaaaaa;
-      text-decoration: none;
-      font-size: 0.92rem;
-      transition: color 0.3s ease;
-    }
-
-    .footer-col ul a:hover {
-      color: #d4af37;
-    }
-
-    .footer-col p {
-      color: #aaaaaa;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
-    .footer-col .location-block {
-      margin-bottom: 16px;
-    }
-
-    .footer-col .location-block strong {
-      color: #ffffff;
-      display: block;
-      font-size: 0.95rem;
-      margin-bottom: 3px;
-    }
-
-    .map-link {
-      color: #d4af37;
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 4px;
-      transition: color 0.3s ease;
-    }
-
-    .map-link:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .footer-order-col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-
-    .footer-order-btn {
-      margin-top: 10px;
-      padding: 12px 28px;
-      font-size: 0.9rem;
-    }
+    footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
+    .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; }
+    .footer-col { min-width: 0; }
+    .footer-col h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 700; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul a { color: #aaaaaa; text-decoration: none; font-size: clamp(0.75rem, 1.3vw, 0.92rem); transition: color 0.3s ease; }
+    .footer-col ul a:hover { color: #d4af37; }
+    .footer-col p { color: #aaaaaa; font-size: clamp(0.75rem, 1.3vw, 0.92rem); line-height: 1.6; margin-bottom: 10px; }
+    .footer-col .location-block { margin-bottom: 16px; }
+    .footer-col .location-block strong { color: #ffffff; display: block; font-size: 0.95rem; margin-bottom: 3px; }
+    .map-link { color: #d4af37; text-decoration: none; font-size: clamp(0.72rem, 1.2vw, 0.88rem); font-weight: 600; display: inline-block; margin-top: 4px; transition: color 0.3s ease; }
+    .map-link:hover { color: #ffffff; text-decoration: underline; }
+    .footer-order-col { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
+    .footer-order-btn { margin-top: 10px; padding: 12px 28px; font-size: 0.9rem; }
 
     /* Social Media Bar */
-    .footer-social-wrapper {
-      border-top: 1px solid #2a2a2a;
-      padding-top: 35px;
-      text-align: center;
-      max-width: 1600px;
-      margin: 0 auto;
-    }
+    .footer-social-wrapper { border-top: 1px solid #2a2a2a; padding-top: 35px; text-align: center; max-width: 1600px; margin: 0 auto; }
+    .social-title { font-size: 0.9rem; color: #888888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+    .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+    .social-icons a { color: #cccccc; font-size: 1.4rem; background-color: #0b0b0b; border: 1px solid #2a2a2a; width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
+    .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
+    .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
 
-    .social-title {
-      font-size: 0.9rem;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 18px;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-bottom: 30px;
-    }
-
-    .social-icons a {
-      color: #cccccc;
-      font-size: 1.4rem;
-      background-color: #0b0b0b;
-      border: 1px solid #2a2a2a;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #d4af37;
-      border-color: #d4af37;
-      transform: translateY(-3px);
-    }
-
-    .footer-bottom-copy {
-      color: #666666;
-      font-size: 0.85rem;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 1024px) {
-      .customers-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 4%;
-        gap: 50px;
-      }
-
-      .customers-text {
-        text-align: center;
-        max-width: 100%;
-      }
-
-      .service-highlights {
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
-
-      .customers-grid {
-        max-width: 100%;
-        width: 100%;
-      }
-
-      .suit-image {
-        height: 300px;
-      }
-
-      .why-mtm-container,
-      .why-choose-container {
-        flex-direction: column;
-      }
-
-      .why-mtm-image-wrapper,
-      .why-choose-right {
-        width: 100%;
-        min-height: 300px;
-        border-left: none;
-        border-top: 1px solid #2a2a2a;
-      }
-
-      .footer-top {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 10px 3%;
-        gap: 8px;
-      }
-
-      .header-logo {
-        height: 32px;
-      }
-
-      nav ul {
-        gap: 10px;
-      }
-
-      nav a {
-        font-size: 0.75rem;
-      }
-
-      .order-btn {
-        padding: 6px 12px;
-        font-size: 0.72rem;
-      }
-
-      .suit-image {
-        height: 220px;
-      }
-
-      .why-mtm-text,
-      .why-choose-left {
-        padding: 30px 20px;
-      }
-
-      .why-mtm-text h2,
-      .why-choose-left h2 {
-        font-size: 1.8rem;
-      }
-
-      .footer-top {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .footer-order-col {
-        align-items: center;
-      }
+    /* Small screens: everything stays side by side; only the tightest spots adjust */
+    @media (max-width: 700px) {
+      .service-highlights { grid-template-columns: 1fr; }
+      .customers-grid { grid-template-columns: 1fr; }
+      .suit-image { aspect-ratio: 3 / 4; }
+      .footer-top { grid-template-columns: repeat(2, 1fr); }
+      .social-icons a { width: 42px; height: 42px; font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
   <!-- Sticky Header Bar -->
-  <header>
-    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
+  <header id="home">
+    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
     <nav>
       <ul>
         <li><a href="#suits">Suits</a></li>
         <li><a href="#measurements">Measurements Guide</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#faq">FAQs</a></li>
       </ul>
     </nav>
     <a href="#order" class="order-btn">Order</a>
   </header>
+
+  <!-- Intro Heading -->
+  <div class="search-strip">
+    <h1>Bespoke Tailoring & Custom Suits in Kigali, Rwanda</h1>
+  </div>
 
   <!-- Section 1: Happy Customers & Made to Order -->
   <section class="customers-section">
     <div class="customers-text">
       <h2>Happy Customers</h2>
       <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
-      
+
       <div class="made-to-order-title">Made to Order</div>
       <p class="made-to-order-desc">Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.</p>
 
@@ -771,51 +251,45 @@
           <h3>Custom Designs</h3>
           <p>Bring your own dedicated model or inspiration photo, and our tailors will craft it to your exact vision.</p>
         </div>
-
         <div class="highlight-box">
           <h3>Premium Fabrics</h3>
           <p>Choose from an exclusive selection of high-grade fabrics, linings, and customized finishes.</p>
         </div>
-
         <div class="highlight-box">
           <h3>Direct Delivery</h3>
           <p>Seamless door-to-door delivery service ensuring your garment arrives impeccably pressed and ready.</p>
         </div>
-
         <div class="highlight-box">
           <h3>Guaranteed Fit</h3>
           <p>Bespoke measurements crafted precisely to match your unique posture and silhouette.</p>
         </div>
       </div>
     </div>
-    
+
     <div class="customers-grid">
       <div class="customer-card">
-        <img src="1.jpeg" alt="Custom Bespoke Suit 1" class="suit-image">
+        <img src="1.jpeg" alt="Custom bespoke suit made in Kigali, Rwanda - Mr. Sewing 1" class="suit-image">
         <div class="card-actions">
           <a href="#reviews-1">Read reviews</a>
           <a href="#know-more-1">Know More</a>
         </div>
       </div>
-
       <div class="customer-card">
-        <img src="2.jpeg" alt="Custom Bespoke Suit 2" class="suit-image">
+        <img src="2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing 2" class="suit-image">
         <div class="card-actions">
           <a href="#reviews-2">Read reviews</a>
           <a href="#know-more-2">Know More</a>
         </div>
       </div>
-
       <div class="customer-card">
-        <img src="3.jpeg" alt="Custom Bespoke Suit 3" class="suit-image">
+        <img src="3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing 3" class="suit-image">
         <div class="card-actions">
           <a href="#reviews-3">Read reviews</a>
           <a href="#know-more-3">Know More</a>
         </div>
       </div>
-
       <div class="customer-card">
-        <img src="4.jpeg" alt="Custom Bespoke Suit 4" class="suit-image">
+        <img src="4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing 4" class="suit-image">
         <div class="card-actions">
           <a href="#reviews-4">Read reviews</a>
           <a href="#know-more-4">Know More</a>
@@ -828,7 +302,7 @@
   <div class="section-divider"></div>
 
   <!-- Section 2: Our Collections -->
-  <section class="collections-section">
+  <section class="collections-section" id="suits">
     <div class="section-header">
       <h2>Our Collections</h2>
       <div class="header-divider"></div>
@@ -840,14 +314,13 @@
         <div class="collection-pill">Men's Suits</div>
         <div class="title-line"></div>
       </div>
-
       <div class="collection-content">
         <div class="side-callout">
           <span>The Executive Line</span>
           <p class="cta-subtitle">Choose Yours</p>
         </div>
         <div class="collection-image-container">
-          <img src="The Executive Line.jpeg" alt="Men's Suits - The Executive Line" class="collection-image">
+          <img src="The Executive Line.jpeg" alt="Men's custom suits Kigali Rwanda - The Executive Line by Mr. Sewing" class="collection-image" loading="lazy">
         </div>
       </div>
     </div>
@@ -858,14 +331,13 @@
         <div class="collection-pill">Women's Suits</div>
         <div class="title-line"></div>
       </div>
-
       <div class="collection-content">
         <div class="side-callout">
           <span>The Elegance Series</span>
           <p class="cta-subtitle">Choose Yours</p>
         </div>
         <div class="collection-image-container">
-          <img src="The Elegance Series.jpeg" alt="Women's Suits - The Elegance Series" class="collection-image">
+          <img src="The Elegance Series.jpeg" alt="Women's custom suits Kigali Rwanda - The Elegance Series by Mr. Sewing" class="collection-image" loading="lazy">
         </div>
       </div>
     </div>
@@ -875,7 +347,7 @@
   <div class="section-divider"></div>
 
   <!-- Section 3: Why Made to Measure? -->
-  <section class="why-mtm-section">
+  <section class="why-mtm-section" id="measurements">
     <div class="why-mtm-container">
       <div class="why-mtm-text">
         <h2>Why Made to Measure?</h2>
@@ -885,7 +357,7 @@
         </p>
       </div>
       <div class="why-mtm-image-wrapper">
-        <img src="measurements.jpeg" alt="Master Tailor Taking Precise Body Measurements">
+        <img src="measurements.jpeg" alt="Master tailor taking precise body measurements for a made-to-measure suit in Kigali" loading="lazy">
       </div>
     </div>
   </section>
@@ -906,7 +378,6 @@
               <p>For urgent occasions, our express turnaround delivers your fully tailored garment within 24 to 72 hours without compromising on craftsmanship.</p>
             </div>
           </div>
-
           <div class="reason-item">
             <div class="reason-number">2</div>
             <div class="reason-content">
@@ -914,7 +385,6 @@
               <p>Our standard tailoring process takes exactly 1 week to complete, allowing meticulous attention to every seam and detail.</p>
             </div>
           </div>
-
           <div class="reason-item">
             <div class="reason-number">3</div>
             <div class="reason-content">
@@ -922,7 +392,6 @@
               <p>Time is time—nothing can be changed. We guarantee your outfit will be ready exactly when promised, with strict adherence to schedules.</p>
             </div>
           </div>
-
           <div class="reason-item">
             <div class="reason-number">4</div>
             <div class="reason-content">
@@ -932,9 +401,8 @@
           </div>
         </div>
       </div>
-
       <div class="why-choose-right">
-        <img src="fabric.jpeg" alt="Luxury Suiting Fabric Selection at Mr. Sewing">
+        <img src="fabric.jpeg" alt="Luxury suiting fabric selection at Mr. Sewing bespoke tailor, Kigali" loading="lazy">
       </div>
     </div>
   </section>
@@ -946,18 +414,18 @@
   <footer>
     <div class="footer-top">
       <!-- Quick Links Column -->
-      <div class="footer-col">
+      <div class="footer-col" id="about">
         <h3>Quick Links</h3>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contacts">Contacts</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#faq">FAQs</a></li>
         </ul>
       </div>
 
       <!-- Location Column -->
-      <div class="footer-col">
+      <div class="footer-col" id="contacts">
         <h3>Location</h3>
         <div class="location-block">
           <strong>Branch 1:</strong>
@@ -985,7 +453,7 @@
       </div>
 
       <!-- Order Button Column -->
-      <div class="footer-col footer-order-col">
+      <div class="footer-col footer-order-col" id="order">
         <h3>Start Your Order</h3>
         <p>Ready to craft your bespoke piece?</p>
         <a href="#order" class="order-btn footer-order-btn">Order</a>
