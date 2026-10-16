@@ -12,7 +12,7 @@
   <meta name="geo.region" content="RW-01">
   <meta name="geo.placename" content="Kigali, Rwanda">
   <meta name="theme-color" content="#0b0b0b">
-  <link rel="canonical" href="https://YOUR-SITE-URL/about.html">
+  <link rel="canonical" href="https://mrsewingfashion.com/about.html">
   <link rel="icon" href="MR%20LOGO.jpeg" type="image/jpeg">
   <link rel="shortcut icon" href="MR%20LOGO.jpeg" type="image/jpeg">
   <link rel="apple-touch-icon" href="MR%20LOGO.jpeg">
@@ -20,20 +20,24 @@
   <meta property="og:title" content="About Us | Mr. Sewing - Bespoke Tailoring &amp; Custom Suits in Kigali">
   <meta property="og:description" content="A Rwanda-based fashion house and bespoke tailoring brand. Discover our mission, vision and Made in Rwanda craftsmanship.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://YOUR-SITE-URL/about.html">
-  <meta property="og:image" content="https://YOUR-SITE-URL/MR%20LOGO.jpeg">
+  <meta property="og:url" content="https://mrsewingfashion.com/about.html">
+  <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
   <meta property="og:image:alt" content="Mr. Sewing logo - bespoke tailoring in Kigali, Rwanda">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="About Us | Mr. Sewing - Bespoke Tailoring in Kigali">
   <meta name="twitter:description" content="A Rwanda-based fashion house and bespoke tailoring brand. Custom suits for men and women.">
-  <meta name="twitter:image" content="https://YOUR-SITE-URL/MR%20LOGO.jpeg">
+  <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {"@type":"AboutPage","@id":"https://YOUR-SITE-URL/about.html#webpage","url":"https://YOUR-SITE-URL/about.html","name":"About Us | Mr. Sewing","about":{"@id":"https://YOUR-SITE-URL/#organization"}},
-      {"@type":"Organization","@id":"https://YOUR-SITE-URL/#organization","name":"Mr. Sewing","alternateName":"Mr. Sewing Fashion","url":"https://YOUR-SITE-URL/","logo":"https://YOUR-SITE-URL/MR%20LOGO.jpeg","description":"Rwanda-based fashion house and bespoke tailoring brand offering custom suits for men and women in Kigali.","parentOrganization":{"@type":"Organization","name":"NINKONIYUMUTWARE NEXUS LTD"},"address":{"@type":"PostalAddress","streetAddress":"KN 441 St, Norvège, Karama","addressLocality":"Nyarugenge, Kigali","addressCountry":"RW"},"telephone":"+250787411501","email":"Mrsewingfashiondesgner@gmail.com","sameAs":["https://www.facebook.com/share/19tDCGATYj/","https://www.instagram.com/mr_sewing_fashion","https://www.tiktok.com/@mrsewingfashion","https://youtube.com/@mr.sewingfashiondesigner"]}
+      {"@type":"AboutPage","@id":"https://mrsewingfashion.com/about.html#webpage","url":"https://mrsewingfashion.com/about.html","name":"About Us | Mr. Sewing","about":{"@id":"https://mrsewingfashion.com/#organization"}},
+      {"@type":"Organization","@id":"https://mrsewingfashion.com/#organization","name":"Mr. Sewing","alternateName":"Mr. Sewing Fashion","url":"https://mrsewingfashion.com/","logo":"https://mrsewingfashion.com/MR%20LOGO.jpeg","description":"Rwanda-based fashion house and bespoke tailoring brand offering custom suits for men and women in Kigali.","parentOrganization":{"@type":"Organization","name":"NINKONIYUMUTWARE NEXUS LTD"},"address":{"@type":"PostalAddress","streetAddress":"KN 441 St, Norvège, Karama","addressLocality":"Nyarugenge, Kigali","addressCountry":"RW"},"telephone":"+250787411501","email":"Mrsewingfashiondesgner@gmail.com","sameAs":["https://www.facebook.com/share/19tDCGATYj/","https://www.instagram.com/mr_sewing_fashion","https://www.tiktok.com/@mrsewingfashion","https://youtube.com/@mr.sewingfashiondesigner"]}
     ]
   }
   </script>
@@ -45,14 +49,44 @@
     a { color:inherit; }
     img { max-width:100%; display:block; }
     a:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
-    header { background:var(--dark); border-bottom:1px solid var(--border); padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; position:sticky; top:0; z-index:1000; }
-    .logo-container { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
-    .header-logo { width:48px; height:48px; object-fit:contain; mix-blend-mode:screen; }
-    .logo-text { color:var(--gold); font-weight:800; letter-spacing:1.5px; font-size:1.1rem; }
-    nav ul { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; list-style:none; gap:20px; }
-    nav a { color:#cccccc; text-decoration:none; font-size:.9rem; transition:color .3s ease; }
-    nav a:hover, nav a.active { color:var(--gold); }
-    nav a.active { border-bottom:2px solid var(--gold); padding-bottom:5px; }
+    
+    /* Header Bar */
+    header {
+      background-color: #141414;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 12px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: clamp(6px, 2vw, 15px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
+    nav { flex-shrink: 1; overflow: hidden; }
+    nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
+    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover, nav a.active { color: #d4af37; }
+
+    .order-btn {
+      background-color: #d4af37;
+      color: #000000;
+      padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: clamp(0.68rem, 1.3vw, 0.85rem);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    .order-btn:hover { background-color: #f3e5ab; }
+
     .page-hero { text-align:center; padding:85px 6% 75px; background:radial-gradient(ellipse at top,#242015 0%,var(--black) 70%); border-bottom:1px solid var(--border); }
     .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:3px; font-size:.8rem; font-weight:700; margin-bottom:12px; }
     .page-hero h1 { font-size:clamp(2.2rem,5vw,4rem); line-height:1.2; margin-bottom:20px; }
@@ -86,25 +120,63 @@
     .cta-buttons { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
     .gold-button { display:inline-block; padding:12px 25px; background:var(--gold); color:#000; text-decoration:none; border-radius:4px; font-weight:700; transition:background .3s; }
     .gold-button:hover { background:#f3e5ab; }
-    footer { background:var(--dark); border-top:1px solid var(--border); padding:45px 6% 25px; }
-    .footer-top { max-width:1200px; margin:auto; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
-    .footer-col h3 { color:var(--gold); text-transform:uppercase; letter-spacing:1px; font-size:1rem; margin-bottom:16px; }
-    .footer-col ul { list-style:none; }
-    .footer-col li { margin-bottom:9px; }
-    .footer-col a { color:var(--grey); text-decoration:none; transition:color .3s; }
-    .footer-col a:hover { color:var(--gold); }
-    .footer-col p { color:var(--grey); font-size:.9rem; margin-bottom:10px; overflow-wrap:anywhere; }
-    .footer-bottom { max-width:1200px; margin:35px auto 0; padding-top:20px; border-top:1px solid var(--border); text-align:center; color:#777; font-size:.85rem; }
-    @media(max-width:850px) { .about-grid{grid-template-columns:1fr;gap:30px;} .services-grid{grid-template-columns:repeat(2,minmax(0,1fr));} header{justify-content:center;} nav{width:100%;} nav ul{gap:14px;} }
-    @media(max-width:550px) { .page-hero{padding:55px 5%;} .section{padding:50px 5%;} .values-grid,.services-grid,.advantages-list,.footer-top{grid-template-columns:1fr;} .header-logo{width:38px;height:38px;} .logo-text{font-size:1rem;} nav ul{gap:10px 15px;} nav a{font-size:.82rem;} .value-card{padding:23px;} }
+    
+    /* Footer */
+    footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
+    .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; }
+    .footer-col { min-width: 0; }
+    .footer-col h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 700; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul a { color: #aaaaaa; text-decoration: none; font-size: clamp(0.75rem, 1.3vw, 0.92rem); transition: color 0.3s ease; }
+    .footer-col ul a:hover { color: #d4af37; }
+    .footer-col p { color: #aaaaaa; font-size: clamp(0.75rem, 1.3vw, 0.92rem); line-height: 1.6; margin-bottom: 10px; }
+    .footer-col .location-block { margin-bottom: 16px; }
+    .footer-col .location-block strong { color: #ffffff; display: block; font-size: 0.95rem; margin-bottom: 3px; }
+    .map-link { color: #d4af37; text-decoration: none; font-size: clamp(0.72rem, 1.2vw, 0.88rem); font-weight: 600; display: inline-block; margin-top: 4px; transition: color 0.3s ease; }
+    .map-link:hover { color: #ffffff; text-decoration: underline; }
+    .footer-order-col { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
+    .footer-order-btn { margin-top: 10px; padding: 12px 28px; font-size: 0.9rem; }
+
+    /* Social Media Bar */
+    .footer-social-wrapper { border-top: 1px solid #2a2a2a; padding-top: 35px; text-align: center; max-width: 1600px; margin: 0 auto; }
+    .social-title { font-size: 0.9rem; color: #888888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+    .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+    .social-icons a { color: #cccccc; font-size: 1.4rem; background-color: #0b0b0b; border: 1px solid #2a2a2a; width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
+    .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
+    .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
+
+    /* Order popup */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
+    .modal-overlay.open, .modal-overlay:target { display: flex; }
+    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
+    .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
+    .modal-close:hover { color: #d4af37; }
+    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
+    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
+    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
+    .terms-check a { color: #d4af37; }
+    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
+    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
+    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
+
+    @media(max-width:850px) { .about-grid{grid-template-columns:1fr;gap:30px;} .services-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+    @media(max-width:700px) {
+      header { flex-wrap: wrap; row-gap: 8px; }
+      nav { order: 3; width: 100%; overflow: visible; }
+      nav ul { gap: 8px 14px; flex-wrap: wrap; white-space: normal; }
+      .footer-top { grid-template-columns: repeat(2, 1fr); }
+      .social-icons a { width: 42px; height: 42px; font-size: 1.2rem; }
+    }
+    @media(max-width:550px) { .page-hero{padding:55px 5%;} .section{padding:50px 5%;} .values-grid,.services-grid,.advantages-list,.footer-top{grid-template-columns:1fr;} .value-card{padding:23px;} }
   </style>
 </head>
-<body>
+<body id="top">
+
+  <!-- Sticky Header Bar -->
   <header>
-    <a href="index.html" class="logo-container" aria-label="Mr. Sewing Fashion Home">
-      <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion logo" class="header-logo">
-      <span class="logo-text">MR. SEWING</span>
-    </a>
+    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -112,15 +184,18 @@
         <li><a href="suits.html">Suits</a></li>
         <li><a href="measurements.html">Measurements Guide</a></li>
         <li><a href="faq.html">FAQs</a></li>
-        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
+    <a href="#orderModal" class="order-btn">Order</a>
   </header>
+
   <section class="page-hero">
     <div class="eyebrow">Our Story · Our Craft · Our Purpose</div>
     <h1>About <span>Mr. Sewing</span></h1>
     <p>Bespoke tailoring and custom suits in Kigali, Rwanda, designed around quality, precise fit, and clothing that reflects your personal style.</p>
   </section>
+
   <main>
     <section class="section">
       <div class="about-grid">
@@ -134,10 +209,12 @@
         <div class="about-image"><img src="MR LOGO.jpeg" alt="Mr. Sewing logo - bespoke tailoring and fashion house in Kigali, Rwanda" loading="lazy"></div>
       </div>
     </section>
+
     <section class="values-section"><div class="section"><div class="values-grid">
       <article class="value-card"><div class="symbol" aria-hidden="true">✦</div><h3>Our Mission</h3><p>To empower individuals by providing exceptional, accessible, locally manufactured clothing that fosters national pride, while championing the "Made in Rwanda" initiative with stylish, durable, culturally inspired garments.</p></article>
       <article class="value-card"><div class="symbol" aria-hidden="true">◎</div><h3>Our Vision</h3><p>To become Rwanda's leading tailoring and fashion destination, making "Made in Rwanda" apparel the top choice for every citizen.</p></article>
     </div></div></section>
+
     <section class="section">
       <h2 class="section-heading">Our Products &amp; Services</h2><div class="gold-line"></div>
       <p>We offer clothing solutions for professional, formal, and personal occasions. Our focus is on combining style, fit, and customer preferences.</p>
@@ -150,15 +227,18 @@
         <article class="service-card"><h3>Personalized Service</h3><p>Guidance on measurements, fabrics, fit, and design details throughout the ordering process.</p></article>
       </div>
     </section>
+
     <section class="values-section"><div class="section">
       <h2 class="section-heading">Who We Serve</h2><div class="gold-line"></div>
       <div class="target-box"><p>Mr. Sewing serves individuals who appreciate quality clothing, personal presentation, and thoughtful design. Our intended customers include professionals, business owners, wedding clients, event attendees, and anyone looking for personalized tailoring.</p><p>Based in Kigali, Rwanda, we aim to serve customers who want clothing that reflects their needs, preferences, and personal identity.</p></div>
     </div></section>
+
     <section class="section">
       <h2 class="section-heading">Why Choose Mr. Sewing?</h2><div class="gold-line"></div>
       <p>We aim to make the tailoring experience clear, personal, and focused on the customer's needs.</p>
       <ul class="advantages-list"><li>Personalized designs and clothing options</li><li>Attention to measurements and fit</li><li>A selection of fabrics and finishing details</li><li>Standard and express order options, subject to confirmation</li><li>Communication throughout the order process</li><li>A focus on quality fashion made in Rwanda</li></ul>
     </section>
+
     <section class="cta-section">
       <h2>Let's Create Your Style</h2>
       <p>Have a design in mind or need a suit for an upcoming occasion? Explore our collections or contact us to discuss your order.</p>
@@ -168,13 +248,133 @@
       </div>
     </section>
   </main>
+
+  <!-- SECTION 5: Footer -->
   <footer>
     <div class="footer-top">
-      <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html" aria-current="page">About Us</a></li><li><a href="suits.html">Suits</a></li><li><a href="measurements.html">Measurements Guide</a></li><li><a href="faq.html">FAQs</a></li><li><a href="contact.html">Contacts</a></li></ul></div>
-      <div class="footer-col"><h3>Our Services</h3><ul><li><a href="suits.html">Men's Suits</a></li><li><a href="suits.html">Women's Suits</a></li><li><a href="measurements.html">Made-to-Measure</a></li><li><a href="contact.html">Custom Orders</a></li></ul></div>
-      <div class="footer-col"><h3>Mr. Sewing</h3><p>Bespoke tailoring and personalized fashion in Kigali, Rwanda.</p><p><a href="https://wa.me/250787411501" target="_blank" rel="noopener noreferrer">Contact us on WhatsApp</a></p><p>Follow us: <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.instagram.com/mr_sewing_fashion" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.tiktok.com/@mrsewingfashion" target="_blank" rel="noopener noreferrer">TikTok</a> · <a href="https://youtube.com/@mr.sewingfashiondesigner" target="_blank" rel="noopener noreferrer">YouTube</a></p></div>
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="suits.html">Suits</a></li>
+          <li><a href="measurements.html">Measurements Guide</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Location Column -->
+      <div class="footer-col">
+        <h3>Location</h3>
+        <div class="location-block">
+          <strong>Branch 1:</strong>
+          <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
+          <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
+        </div>
+        <div class="location-block">
+          <strong>Branch 2:</strong>
+          <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
+        </div>
+      </div>
+
+      <!-- Opening Hours & Policies Column -->
+      <div class="footer-col">
+        <h3>Opening Hours & Policies</h3>
+        <p><strong>Working Hours:</strong><br>
+        Monday - Friday: 9:00 AM – 5:00 PM<br>
+        Saturday & Sunday: Booking / Call Required<br>
+        <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
+        <ul>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Order Button Column -->
+      <div class="footer-col footer-order-col">
+        <h3>Start Your Order</h3>
+        <p>Ready to craft your bespoke piece?</p>
+        <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
+      </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p></div>
+
+    <!-- Social Media Bar -->
+    <div class="footer-social-wrapper">
+      <div class="social-title">Connect With Us</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-bottom-copy">
+        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Order popup -->
+  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
+      <h3 id="orderModalTitle">Place Your Order</h3>
+      <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
+      <label class="terms-check">
+        <input type="checkbox" id="termsAgree">
+        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+      </label>
+      <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
+      <div class="terms-hint" id="termsHint"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var modal = document.getElementById('orderModal');
+      var agree = document.getElementById('termsAgree');
+      var wa = document.getElementById('whatsappBtn');
+      var hint = document.getElementById('termsHint');
+
+      function openModal() { modal.classList.add('open'); }
+      function closeModal() {
+        modal.classList.remove('open');
+        agree.checked = false;
+        wa.setAttribute('aria-disabled', 'true');
+        hint.textContent = '';
+        if (location.hash === '#orderModal') {
+          history.replaceState(null, '', location.pathname + location.search);
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
+        if (btn) { e.preventDefault(); openModal(); }
+      });
+
+      agree.addEventListener('change', function () {
+        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+        hint.textContent = '';
+      });
+
+      wa.addEventListener('click', function (e) {
+        if (!agree.checked) {
+          e.preventDefault();
+          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
+        } else {
+          setTimeout(closeModal, 300);
+        }
+      });
+
+      document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+      if (location.hash === '#orderModal') { openModal(); }
+    })();
+  </script>
+
 </body>
 </html>
