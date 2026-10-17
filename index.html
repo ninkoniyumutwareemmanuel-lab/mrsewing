@@ -6,8 +6,8 @@
   <title>Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Mr. Sewing is a bespoke tailor and fashion designer in Kigali, Rwanda, creating custom men’s and women’s suits, made-to-measure formal wear, wedding suits, and locally made fashion.">
-  <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, bespoke tailoring Kigali, custom suits Kigali, made to measure suits Kigali, wedding suits Kigali">
+  <meta name="description" content="Mr. Sewing is a bespoke tailor and fashion designer in Kigali, Rwanda, creating custom men’s and women’s suits, made-to-measure formal wear, wedding suits, clothing alterations, and VIP mobile fittings.">
+  <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, bespoke tailoring Kigali, custom suits Kigali, made to measure suits Kigali, tailor in Rwanda, clothing alterations Kigali, VIP mobile fittings Kigali">
   <meta name="author" content="Mr. Sewing">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://mrsewingfashion.com/">
@@ -18,7 +18,7 @@
   <!-- Open Graph & Social Cards -->
   <meta property="og:site_name" content="Mr. Sewing">
   <meta property="og:title" content="Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda">
-  <meta property="og:description" content="Bespoke tailoring, custom suits, and made-to-measure fashion in Kigali, Rwanda.">
+  <meta property="og:description" content="Bespoke tailoring, custom suits, VIP mobile fittings, and clothing adjustments in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/">
   <meta property="og:image" content="https://mrsewingfashion.com/1.jpeg">
@@ -32,6 +32,18 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; }
     img { max-width: 100%; }
+
+    /* Full Width Container Framework for Dynamic Component Mounting */
+    #site-header,
+    #hero-section,
+    #customers-section,
+    #collections-section,
+    #services-section,
+    #why-mtm-section,
+    #why-choose-section,
+    #site-footer {
+      width: 100%;
+    }
 
     /* ============================================================
        1. HEADER SECTION
@@ -52,7 +64,7 @@
     .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
     nav { flex-shrink: 1; overflow: hidden; }
     nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
-    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
+    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; line-height: 1.4; display: inline-block; padding: 2px 0; }
     nav a:hover, nav a.active { color: #d4af37; }
 
     .order-btn {
@@ -67,11 +79,11 @@
       font-size: clamp(0.68rem, 1.3vw, 0.85rem);
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
       display: inline-block;
       cursor: pointer;
     }
-    .order-btn:hover { background-color: #f3e5ab; }
+    .order-btn:hover { background-color: #f3e5ab; transform: translateY(-2px); }
 
     /* ============================================================
        2. HERO SECTION
@@ -127,10 +139,11 @@
       letter-spacing: 1px;
       border-radius: 4px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
       font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+      display: inline-block;
     }
-    .hero-btn-primary:hover { background-color: #f3e5ab; }
+    .hero-btn-primary:hover { background-color: #f3e5ab; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25); }
     .hero-btn-secondary {
       background-color: transparent;
       color: #d4af37;
@@ -141,11 +154,12 @@
       letter-spacing: 1px;
       border-radius: 4px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.3s ease, transform 0.2s ease;
       font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+      display: inline-block;
       cursor: pointer;
     }
-    .hero-btn-secondary:hover { background-color: #d4af37; color: #000000; }
+    .hero-btn-secondary:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
 
     /* ============================================================
        3. HAPPY CUSTOMERS SECTION
@@ -172,9 +186,9 @@
     .highlight-box p { font-size: clamp(0.68rem, 1.1vw, 0.9rem); color: #cccccc; line-height: 1.5; }
 
     .customers-grid { flex: 1.2 1 55%; min-width: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 2vw, 25px); max-width: 850px; }
-    .customer-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: clamp(6px, 1.4vw, 18px); transition: transform 0.3s ease, border-color 0.3s ease; text-align: center; }
+    .customer-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: clamp(6px, 1.4vw, 18px); transition: transform 0.3s ease, border-color 0.3s ease; text-align: center; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
     .customer-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-    .suit-image { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 4px; display: block; }
+    .suit-image { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; object-position: center top; border-radius: 4px; display: block; }
     .star-rating { color: #d4af37; font-size: clamp(0.75rem, 1.2vw, 0.95rem); margin-top: 10px; }
     .card-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px clamp(8px, 2vw, 25px); margin-top: clamp(6px, 1vw, 12px); }
     .card-actions a { color: #d4af37; text-decoration: none; font-weight: 600; font-size: clamp(0.6rem, 1.2vw, 0.9rem); text-transform: uppercase; transition: color 0.3s ease; }
@@ -192,22 +206,39 @@
     .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
     .collection-block { margin-bottom: clamp(30px, 5vw, 70px); }
     .collection-title-wrapper { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); margin-bottom: clamp(16px, 2.5vw, 30px); }
-    .collection-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(5px, 1vw, 8px) clamp(14px, 3vw, 30px); color: #ffffff; font-size: clamp(0.72rem, 1.8vw, 1.2rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background-color: #141414; white-space: nowrap; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease; }
-    .collection-pill:hover { background-color: #d4af37; color: #000000; }
+    .collection-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(5px, 1vw, 8px) clamp(14px, 3vw, 30px); color: #ffffff; font-size: clamp(0.72rem, 1.8vw, 1.2rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background-color: #141414; white-space: nowrap; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; display: inline-block; }
+    .collection-pill:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
     .title-line { flex: 1; height: 1px; background-color: #2a2a2a; }
 
     .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 2.5vw, 30px); }
-    .collection-item-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .collection-item-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: transform 0.3s ease, border-color 0.3s ease; }
     .collection-item-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-    .collection-item-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+    .collection-item-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; display: block; }
     .collection-item-info { padding: clamp(12px, 2vw, 20px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
     .collection-item-info h3 { font-size: clamp(0.85rem, 1.5vw, 1.2rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
     .collection-item-info p { font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: #d4af37; margin-bottom: 14px; font-style: italic; }
-    .collection-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; font-size: clamp(0.65rem, 1.1vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; display: inline-block; }
-    .collection-btn:hover { background-color: #d4af37; color: #000000; }
+    .collection-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; font-size: clamp(0.65rem, 1.1vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease, transform 0.2s ease; display: inline-block; }
+    .collection-btn:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
 
     /* ============================================================
-       5. WHY MADE TO MEASURE SECTION
+       5. SERVICES & PRIVATE FITTINGS SECTION
+       ============================================================ */
+    .services-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
+    .services-header { text-align: center; margin-bottom: clamp(26px, 5vw, 60px); }
+    .services-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
+    .services-subtitle { color: #cccccc; font-size: clamp(0.8rem, 1.4vw, 1.05rem); margin-top: 8px; font-style: italic; }
+    .services-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 30px); }
+    .service-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; padding: clamp(20px, 3vw, 35px) clamp(16px, 2.5vw, 28px); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .service-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+    .service-icon { color: #d4af37; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 16px; }
+    .service-card h3 { color: #ffffff; font-size: clamp(0.95rem, 1.8vw, 1.3rem); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 700; line-height: 1.3; }
+    .service-card p { color: #aaaaaa; font-size: clamp(0.78rem, 1.3vw, 0.95rem); line-height: 1.7; margin-bottom: 22px; flex-grow: 1; }
+    .service-action-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 10px 20px; font-size: clamp(0.7rem, 1.2vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease, transform 0.2s ease; display: inline-block; text-align: center; }
+    .service-action-btn:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
+
+    /* ============================================================
+       6. WHY MADE TO MEASURE SECTION
        ============================================================ */
     .why-mtm-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
     .why-mtm-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; align-items: stretch; }
@@ -219,7 +250,7 @@
     .why-mtm-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ============================================================
-       6. WHY CHOOSE US SECTION
+       7. WHY CHOOSE US SECTION
        ============================================================ */
     .why-choose-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; }
     .why-choose-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 8px; overflow: hidden; gap: clamp(0px, 2vw, 30px); }
@@ -234,7 +265,7 @@
     .why-choose-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ============================================================
-       7. FOOTER SECTION
+       8. FOOTER SECTION
        ============================================================ */
     footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
     .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; }
@@ -261,7 +292,7 @@
     .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
 
     /* ============================================================
-       8. ORDER MODAL POPUP STYLES
+       9. QUICK ORDER MODAL POPUP (WHATSAPP QUICK ORDER)
        ============================================================ */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
     .modal-overlay.open, .modal-overlay:target { display: flex; }
@@ -281,12 +312,12 @@
     @media (max-width: 700px) {
       header { flex-wrap: wrap; row-gap: 8px; }
       nav { order: 3; width: 100%; overflow: visible; }
-      nav ul { gap: 8px 14px; flex-wrap: wrap; white-space: normal; }
-      .collections-section, .why-mtm-section { scroll-margin-top: 140px; }
+      nav ul { gap: 10px 14px; flex-wrap: wrap; white-space: normal; line-height: 1.4; }
+      .collections-section, .services-section, .why-mtm-section { scroll-margin-top: 140px; }
       .customers-section { flex-direction: column; }
       .service-highlights { grid-template-columns: 1fr; }
       .customers-grid { grid-template-columns: 1fr; width: 100%; }
-      .collection-grid { grid-template-columns: 1fr; }
+      .collection-grid, .services-grid { grid-template-columns: 1fr; }
       .why-mtm-container, .why-choose-container { flex-direction: column; }
       .why-mtm-image-wrapper, .why-choose-right { border-left: none; border-top: 1px solid #2a2a2a; }
       .footer-top { grid-template-columns: repeat(2, 1fr); }
@@ -296,317 +327,44 @@
 </head>
 <body>
 
-  <!-- 1. Header -->
-  <header id="home">
-    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="suits.html">Suits</a></li>
-        <li><a href="measurements.html">Measurements Guide</a></li>
-        <li><a href="faq.html">FAQs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <a href="#orderModal" class="order-btn">Order</a>
-  </header>
-
-  <!-- 2. Hero Section -->
-  <section class="hero-section">
-    <div class="hero-subtitle">Bespoke Tailoring & Custom Suits</div>
-    <h1 class="hero-title">Elegance & Precision Craftsmanship</h1>
-    <p class="hero-description">Experience Kigali’s premier made-to-measure fashion house. Handcrafted luxury suits for men and women, tailored to your exact posture and silhouette.</p>
-    <div class="hero-actions">
-      <a href="suits.html" class="hero-btn-primary">Explore Collections</a>
-      <a href="#orderModal" class="hero-btn-secondary order-btn">Book Consultation</a>
-    </div>
-  </section>
-
-  <!-- 3. Happy Customers Section -->
-  <section class="customers-section">
-    <div class="customers-text">
-      <h2>Happy Customers</h2>
-      <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
-
-      <div class="made-to-order-title">Made to Order</div>
-      <p class="made-to-order-desc">Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.</p>
-
-      <div class="service-highlights">
-        <div class="highlight-box">
-          <h3>Custom Designs</h3>
-          <p>Bring your own dedicated model or inspiration photo, and our tailors will craft it to your exact vision.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Premium Fabrics</h3>
-          <p>Choose from an exclusive selection of high-grade fabrics, linings, and customized finishes.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Direct Delivery</h3>
-          <p>Seamless door-to-door delivery service ensuring your garment arrives impeccably pressed and ready.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Guaranteed Fit</h3>
-          <p>Bespoke measurements crafted precisely to match your unique posture and silhouette.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="customers-grid">
-      <div class="customer-card">
-        <img src="1.jpeg" alt="Custom bespoke suit made in Kigali - Mr. Sewing 1" class="suit-image">
-        <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <div class="card-actions">
-          <a href="reviews-1.html">Read reviews</a>
-          <a href="know-more-1.html">Know More</a>
-        </div>
-      </div>
-      <div class="customer-card">
-        <img src="2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing 2" class="suit-image">
-        <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <div class="card-actions">
-          <a href="reviews-2.html">Read reviews</a>
-          <a href="know-more-2.html">Know More</a>
-        </div>
-      </div>
-      <div class="customer-card">
-        <img src="3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing 3" class="suit-image">
-        <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <div class="card-actions">
-          <a href="reviews-3.html">Read reviews</a>
-          <a href="know-more-3.html">Know More</a>
-        </div>
-      </div>
-      <div class="customer-card">
-        <img src="4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing 4" class="suit-image">
-        <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <div class="card-actions">
-          <a href="reviews-4.html">Read reviews</a>
-          <a href="know-more-4.html">Know More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gold Divider Line -->
-  <div class="section-divider"></div>
-
-  <!-- 4. Collections Section -->
-  <section class="collections-section" id="suits">
-    <div class="section-header">
-      <h2>Our Collections</h2>
-      <div class="header-divider"></div>
-    </div>
-
-    <div class="collection-block">
-      <div class="collection-title-wrapper">
-        <a href="men-suits.html" class="collection-pill">Men's Suits</a>
-        <div class="title-line"></div>
-      </div>
-      
-      <div class="collection-grid">
-        <div class="collection-item-card">
-          <img src="The Executive Line.jpeg" alt="Double Breasted Tuxedo" class="collection-item-img">
-          <div class="collection-item-info">
-            <div>
-              <h3>Double Breasted Tuxedo</h3>
-              <p>The Executive Line</p>
-            </div>
-            <a href="men-suits.html" class="collection-btn">View Details</a>
-          </div>
-        </div>
-
-        <div class="collection-item-card">
-          <img src="1.jpeg" alt="Classic 3-Piece Executive Suit" class="collection-item-img">
-          <div class="collection-item-info">
-            <div>
-              <h3>Classic 3-Piece Executive</h3>
-              <p>The Executive Line</p>
-            </div>
-            <a href="men-suits.html" class="collection-btn">View Details</a>
-          </div>
-        </div>
-
-        <div class="collection-item-card">
-          <img src="3.jpeg" alt="Modern Slim Fit Suit" class="collection-item-img">
-          <div class="collection-item-info">
-            <div>
-              <h3>Modern Slim Fit Suit</h3>
-              <p>The Executive Line</p>
-            </div>
-            <a href="men-suits.html" class="collection-btn">View Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="collection-block">
-      <div class="collection-title-wrapper">
-        <a href="women-suits.html" class="collection-pill">Women's Suits</a>
-        <div class="title-line"></div>
-      </div>
-      
-      <div class="collection-grid">
-        <div class="collection-item-card">
-          <img src="The Elegance Series.jpeg" alt="White Power Pantsuit" class="collection-item-img">
-          <div class="collection-item-info">
-            <div>
-              <h3>White Power Pantsuit</h3>
-              <p>The Elegance Series</p>
-            </div>
-            <a href="women-suits.html" class="collection-btn">View Details</a>
-          </div>
-        </div>
-
-        <div class="collection-item-card">
-          <img src="2.jpeg" alt="Double-Breasted Blazer Set" class="collection-item-img">
-          <div class="collection-item-info">
-            <div>
-              <h3>Double-Breasted Blazer Set</h3>
-              <p>The Elegance Series</p>
-            </div>
-            <a href="women-suits.html" class="collection-btn">View Details</a>
-          </div>
-        </div>
-
-        <div class="collection-item-card">
-          <img src="4.jpeg" alt="Bespoke Elegance Tuxedo" class="collection-item-img">
-          <div class="collection-item-info">
-            <div>
-              <h3>Bespoke Elegance Tuxedo</h3>
-              <p>The Elegance Series</p>
-            </div>
-            <a href="women-suits.html" class="collection-btn">View Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Why Made to Measure Section -->
-  <section class="why-mtm-section" id="measurements">
-    <div class="why-mtm-container">
-      <div class="why-mtm-text">
-        <h2>Why Made to Measure?</h2>
-        <div class="why-mtm-subtitle">Measured to you and drafted to you.</div>
-        <p class="why-mtm-body">
-          Investing in made-to-measure clothing ensures that every garment is crafted to your precise specifications, offering a flawless silhouette that off-the-rack items simply cannot replicate. Each piece is engineered with careful attention to your individual posture and proportions, giving you complete control over fabrics, linings, and personalized details.
-        </p>
-      </div>
-      <div class="why-mtm-image-wrapper">
-        <img src="measurements.jpeg" alt="Tailor taking precise measurements" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- Gold Divider Line -->
-  <div class="section-divider"></div>
-
-  <!-- 6. Why Choose Us Section -->
-  <section class="why-choose-section">
-    <div class="why-choose-container">
-      <div class="why-choose-left">
-        <h2>Why Customers Choose Mr. Sewing</h2>
-        <div class="choose-reasons-list">
-          <div class="reason-item">
-            <div class="reason-number">1</div>
-            <div class="reason-content">
-              <h3>Express Order Service</h3>
-              <p>For urgent occasions, our express turnaround delivers your fully tailored garment within 24 to 72 hours without compromising on craftsmanship.</p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">2</div>
-            <div class="reason-content">
-              <h3>Standard Order Service</h3>
-              <p>Our standard tailoring process takes 1 to 2 weeks to complete, allowing meticulous attention to every seam and detail.</p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">3</div>
-            <div class="reason-content">
-              <h3>Guaranteed Timely Delivery</h3>
-              <p>Time is time—nothing can be changed. We guarantee your outfit will be ready exactly when promised, with strict adherence to schedules.</p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">4</div>
-            <div class="reason-content">
-              <h3>Uncompromised Accuracy</h3>
-              <p>Every draft and cut is executed with complete precision to match your personal body structure and stylistic vision.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="why-choose-right">
-        <img src="fabric.jpeg" alt="Luxury suiting fabric selection" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. Footer -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col">
-        <h3>Quick Links</h3>
+  <!-- Dynamic Section Holders -->
+  <div id="site-header">
+    <header id="home">
+      <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
+      <nav aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="suits.html">Suits</a></li>
           <li><a href="measurements.html">Measurements Guide</a></li>
           <li><a href="faq.html">FAQs</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
-      </div>
+      </nav>
+      <a href="#orderModal" class="order-btn">Order</a>
+    </header>
+  </div>
 
-      <div class="footer-col">
-        <h3>Location</h3>
-        <div class="location-block">
-          <strong>Branch 1:</strong>
-          <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
-          <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
-        </div>
-        <div class="location-block">
-          <strong>Branch 2:</strong>
-          <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
-        </div>
+  <div id="hero-section">
+    <section class="hero-section">
+      <div class="hero-subtitle">Bespoke Tailoring & Custom Suits</div>
+      <h1 class="hero-title">Elegance & Precision Craftsmanship</h1>
+      <p class="hero-description">Experience Kigali’s premier made-to-measure fashion house. Handcrafted luxury suits for men and women, tailored to your exact posture and silhouette.</p>
+      <div class="hero-actions">
+        <a href="suits.html" class="hero-btn-primary">Explore Collections</a>
+        <a href="booking.html" class="hero-btn-secondary">Book Consultation</a>
       </div>
+    </section>
+  </div>
 
-      <div class="footer-col">
-        <h3>Opening Hours & Policies</h3>
-        <p><strong>Working Hours:</strong><br>
-        Monday - Friday: 9:00 AM – 5:00 PM<br>
-        Saturday & Sunday: Booking / Call Required<br>
-        <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
-        <ul>
-          <li><a href="refund-policy.html">Refund Policy</a></li>
-          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
+  <div id="customers-section"></div>
+  <div id="collections-section"></div>
+  <div id="services-section"></div>
+  <div id="why-mtm-section"></div>
+  <div id="why-choose-section"></div>
+  <div id="site-footer"></div>
 
-      <div class="footer-col footer-order-col">
-        <h3>Start Your Order</h3>
-        <p>Ready to craft your bespoke piece?</p>
-        <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
-      </div>
-    </div>
-
-    <div class="footer-social-wrapper">
-      <div class="social-title">Connect With Us</div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-      <div class="footer-bottom-copy">
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- 8. Order Modal Popup -->
+  <!-- Order Modal Popup (Quick WhatsApp Order) -->
   <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
     <div class="modal-box">
       <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
@@ -622,6 +380,26 @@
   </div>
 
   <script>
+    // Fallback Component Loader
+    const components = [
+      { id: 'customers-section', file: 'happy-customers.html' },
+      { id: 'collections-section', file: 'collections.html' },
+      { id: 'services-section', file: 'services.html' },
+      { id: 'why-mtm-section', file: 'why-mtm.html' },
+      { id: 'why-choose-section', file: 'why-choose.html' },
+      { id: 'site-footer', file: 'footer.html' }
+    ];
+
+    components.forEach(comp => {
+      fetch(comp.file)
+        .then(res => res.ok ? res.text() : '')
+        .then(data => {
+          if (data) document.getElementById(comp.id).innerHTML = data;
+        })
+        .catch(err => console.log(`Notice: Loading ${comp.file} via static fallback`));
+    });
+
+    // Modal Interaction Logic
     (function () {
       var modal = document.getElementById('orderModal');
       var agree = document.getElementById('termsAgree');
