@@ -1,0 +1,118 @@
+<style>
+    .collections-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
+    .section-header { text-align: center; margin-bottom: clamp(26px, 5vw, 60px); }
+    .section-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
+    .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
+    .collection-block { margin-bottom: clamp(30px, 5vw, 70px); }
+    .collection-title-wrapper { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); margin-bottom: clamp(16px, 2.5vw, 30px); }
+    .collection-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(5px, 1vw, 8px) clamp(14px, 3vw, 30px); color: #ffffff; font-size: clamp(0.72rem, 1.8vw, 1.2rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background-color: #141414; white-space: nowrap; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease; }
+    .collection-pill:hover { background-color: #d4af37; color: #000000; }
+    .title-line { flex: 1; height: 1px; background-color: #2a2a2a; }
+
+    .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 2.5vw, 30px); }
+    .collection-item-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .collection-item-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+    .collection-item-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+    .collection-item-info { padding: clamp(12px, 2vw, 20px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .collection-item-info h3 { font-size: clamp(0.85rem, 1.5vw, 1.2rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
+    .collection-item-info p { font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: #d4af37; margin-bottom: 14px; font-style: italic; }
+    .collection-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; font-size: clamp(0.65rem, 1.1vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; display: inline-block; }
+    .collection-btn:hover { background-color: #d4af37; color: #000000; }
+
+    @media (max-width: 700px) {
+        .collection-grid { grid-template-columns: 1fr; }
+    }
+</style>
+
+<section class="collections-section" id="suits">
+    <div class="section-header">
+        <h2>Our Collections</h2>
+        <div class="header-divider"></div>
+    </div>
+
+    <!-- Men's Suits Collection -->
+    <div class="collection-block">
+        <div class="collection-title-wrapper">
+            <a href="men-suits.html" class="collection-pill">Men's Suits</a>
+            <div class="title-line"></div>
+        </div>
+        
+        <div class="collection-grid">
+            <div class="collection-item-card">
+                <img src="The Executive Line.jpeg" alt="Double Breasted Tuxedo - Mr. Sewing" class="collection-item-img">
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Double Breasted Tuxedo</h3>
+                        <p>The Executive Line</p>
+                    </div>
+                    <a href="men-suits.html" class="collection-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="collection-item-card">
+                <img src="1.jpeg" alt="Classic 3-Piece Executive Suit - Mr. Sewing" class="collection-item-img">
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Classic 3-Piece Executive</h3>
+                        <p>The Executive Line</p>
+                    </div>
+                    <a href="men-suits.html" class="collection-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="collection-item-card">
+                <img src="3.jpeg" alt="Modern Slim Fit Suit - Mr. Sewing" class="collection-item-img">
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Modern Slim Fit Suit</h3>
+                        <p>The Executive Line</p>
+                    </div>
+                    <a href="men-suits.html" class="collection-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Women's Suits Collection -->
+    <div class="collection-block">
+        <div class="collection-title-wrapper">
+            <a href="women-suits.html" class="collection-pill">Women's Suits</a>
+            <div class="title-line"></div>
+        </div>
+        
+        <div class="collection-grid">
+            <div class="collection-item-card">
+                <img src="The Elegance Series.jpeg" alt="White Power Pantsuit - Mr. Sewing" class="collection-item-img">
+                <div class="collection-item-info">
+                    <div>
+                        <h3>White Power Pantsuit</h3>
+                        <p>The Elegance Series</p>
+                    </div>
+                    <a href="women-suits.html" class="collection-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="collection-item-card">
+                <img src="2.jpeg" alt="Tailored Double-Breasted Blazer - Mr. Sewing" class="collection-item-img">
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Double-Breasted Blazer Set</h3>
+                        <p>The Elegance Series</p>
+                    </div>
+                    <a href="women-suits.html" class="collection-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="collection-item-card">
+                <img src="4.jpeg" alt="Bespoke Elegance Tuxedo - Mr. Sewing" class="collection-item-img">
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Bespoke Elegance Tuxedo</h3>
+                        <p>The Elegance Series</p>
+                    </div>
+                    <a href="women-suits.html" class="collection-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
