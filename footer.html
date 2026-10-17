@@ -1,63 +1,242 @@
-<div class="footer-top">
-    <!-- Quick Links Column -->
-    <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="suits.html">Suits</a></li>
-            <li><a href="measurements.html">Measurements Guide</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
+<style>
+    /* Footer Container - Direct Match from index.html */
+    footer, #site-footer footer {
+        background-color: #141414 !important;
+        border-top: 1px solid #2a2a2a !important;
+        padding: clamp(30px, 5vw, 70px) 4% 30px !important;
+        color: #aaaaaa !important;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
 
-    <!-- Location Column -->
-    <div class="footer-col">
-        <h3>Location</h3>
-        <div class="location-block">
-            <strong>Branch 1:</strong>
-            <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
-            <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
+    .footer-top {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: clamp(18px, 3vw, 40px) !important;
+        max-width: 1600px !important;
+        margin: 0 auto 50px !important;
+    }
+
+    .footer-col {
+        min-width: 0 !important;
+    }
+
+    .footer-col h3 {
+        font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+        color: #d4af37 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 16px !important;
+        font-weight: 700 !important;
+    }
+
+    .footer-col ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 12px !important;
+    }
+
+    .footer-col ul a {
+        color: #aaaaaa !important;
+        text-decoration: none !important;
+        font-size: clamp(0.75rem, 1.3vw, 0.92rem) !important;
+        transition: color 0.3s ease !important;
+    }
+
+    .footer-col ul a:hover {
+        color: #d4af37 !important;
+    }
+
+    .footer-col p {
+        color: #aaaaaa !important;
+        font-size: clamp(0.75rem, 1.3vw, 0.92rem) !important;
+        line-height: 1.6 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-col .location-block {
+        margin-bottom: 16px !important;
+    }
+
+    .footer-col .location-block strong {
+        color: #ffffff !important;
+        display: block !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    .map-link {
+        color: #d4af37 !important;
+        text-decoration: none !important;
+        font-size: clamp(0.72rem, 1.2vw, 0.88rem) !important;
+        font-weight: 600 !important;
+        display: inline-block !important;
+        margin-top: 4px !important;
+        transition: color 0.3s ease !important;
+    }
+
+    .map-link:hover {
+        color: #ffffff !important;
+        text-decoration: underline !important;
+    }
+
+    .footer-order-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+    }
+
+    .footer-order-btn {
+        background-color: #d4af37 !important;
+        color: #000000 !important;
+        padding: 12px 28px !important;
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        border-radius: 4px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        margin-top: 10px !important;
+        display: inline-block !important;
+        transition: background-color 0.3s ease !important;
+    }
+
+    .footer-order-btn:hover {
+        background-color: #f3e5ab !important;
+    }
+
+    /* Social Media Bar */
+    .footer-social-wrapper {
+        border-top: 1px solid #2a2a2a !important;
+        padding-top: 35px !important;
+        text-align: center !important;
+        max-width: 1600px !important;
+        margin: 0 auto !important;
+    }
+
+    .social-title {
+        font-size: 0.9rem !important;
+        color: #888888 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .social-icons {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 25px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .social-icons a {
+        color: #cccccc !important;
+        font-size: 1.4rem !important;
+        background-color: #0b0b0b !important;
+        border: 1px solid #2a2a2a !important;
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-decoration: none !important;
+        transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease !important;
+    }
+
+    .social-icons a:hover {
+        color: #d4af37 !important;
+        border-color: #d4af37 !important;
+        transform: translateY(-3px) !important;
+    }
+
+    .footer-bottom-copy {
+        color: #666666 !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Mobile Responsive Layout for Footer */
+    @media (max-width: 700px) {
+        .footer-top {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+
+        .social-icons a {
+            width: 42px !important;
+            height: 42px !important;
+            font-size: 1.2rem !important;
+        }
+    }
+</style>
+
+<footer>
+    <div class="footer-top">
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="suits.html">Suits</a></li>
+                <li><a href="measurements.html">Measurements Guide</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </div>
-        <div class="location-block">
-            <strong>Branch 2:</strong>
-            <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
+
+        <!-- Location Column -->
+        <div class="footer-col">
+            <h3>Location</h3>
+            <div class="location-block">
+                <strong>Branch 1:</strong>
+                <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
+                <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
+            </div>
+            <div class="location-block">
+                <strong>Branch 2:</strong>
+                <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
+            </div>
+        </div>
+
+        <!-- Opening Hours & Policies Column -->
+        <div class="footer-col">
+            <h3>Opening Hours &amp; Policies</h3>
+            <p><strong>Working Hours:</strong><br>
+            Monday - Friday: 9:00 AM – 5:00 PM<br>
+            Saturday &amp; Sunday: Booking / Call Required<br>
+            <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
+            <ul>
+                <li><a href="refund-policy.html">Refund Policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Order Button Column -->
+        <div class="footer-col footer-order-col">
+            <h3>Start Your Order</h3>
+            <p>Ready to craft your bespoke piece?</p>
+            <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="footer-order-btn">Order</a>
         </div>
     </div>
 
-    <!-- Opening Hours & Policies Column -->
-    <div class="footer-col">
-        <h3>Opening Hours &amp; Policies</h3>
-        <p><strong>Working Hours:</strong><br>
-        Monday - Friday: 9:00 AM – 5:00 PM<br>
-        Saturday &amp; Sunday: Booking / Call Required<br>
-        <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
-        <ul>
-            <li><a href="refund-policy.html">Refund Policy</a></li>
-            <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        </ul>
+    <!-- Social Media Bar -->
+    <div class="footer-social-wrapper">
+        <div class="social-title">Connect With Us</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom-copy">
+            <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
+        </div>
     </div>
-
-    <!-- Order Button Column -->
-    <div class="footer-col footer-order-col">
-        <h3>Start Your Order</h3>
-        <p>Ready to craft your bespoke piece?</p>
-        <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
-    </div>
-</div>
-
-<!-- Social Media Bar -->
-<div class="footer-social-wrapper">
-    <div class="social-title">Connect With Us</div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    </div>
-    <div class="footer-bottom-copy">
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-    </div>
-</div>
+</footer>
