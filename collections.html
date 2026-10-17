@@ -7,21 +7,32 @@
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="Explore luxury bespoke men's and women's suit collections by Mr. Sewing in Kigali, Rwanda. Custom double-breasted tuxedos, executive 3-piece suits, and power pantsuits.">
-  <meta name="keywords" content="Mr Sewing Fashion, suit collections Kigali, men suits Kigali, women suits Kigali, double breasted tuxedo, white power pantsuit, bespoke tailoring Rwanda, custom tailor Nyarugenge">
+  <meta name="keywords" content="Mr Sewing Fashion, suit collections Kigali, men suits Kigali, women suits Kigali, double breasted tuxedo, white power pantsuit, bespoke tailoring Rwanda, custom tailor Nyarugenge, custom suits Kigali, made to measure suits Kigali, bespoke suits Rwanda, Made in Rwanda fashion">
   <meta name="author" content="Mr. Sewing">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://mrsewingfashion.com/collection.html">
 
+  <!-- Logo shown in browser tabs and Google search results -->
   <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
+  <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
 
-  <!-- Open Graph Meta Tags -->
+  <!-- Open Graph Meta Tags (link previews) -->
   <meta property="og:site_name" content="Mr. Sewing">
   <meta property="og:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
   <meta property="og:description" content="Discover handcrafted luxury suit collections for men and women by Mr. Sewing in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/collection.html">
-  <meta property="og:image" content="https://mrsewingfashion.com/1.jpeg">
+  <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
+  <meta property="og:image:alt" content="Mr. Sewing logo - bespoke suits in Kigali, Rwanda">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
+  <meta name="twitter:description" content="Handcrafted luxury suits for men and women in Kigali, Rwanda.">
+  <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,10 +42,12 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; color-scheme: dark; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; color-scheme: dark; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
 
-    #site-header, #site-footer { width: 100%; }
+    /* Header holder keeps the menu fixed at the top while scrolling */
+    #site-header { position: sticky; top: 0; z-index: 1000; width: 100%; }
+    #site-footer, #men-suits-section, #women-suits-section { width: 100%; }
 
     .collections-section { 
         flex: 1;
@@ -87,125 +100,60 @@
     .collection-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; font-size: clamp(0.65rem, 1.1vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease, transform 0.2s ease; display: inline-block; }
     .collection-btn:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
 
+    /* Shown only if a file fails to load */
+    .load-error { color: #777777; text-align: center; padding: 24px 10px; font-size: 0.9rem; }
+
     @media (max-width: 700px) {
+        html { scroll-padding-top: 130px; }
         .collection-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Shared Header Placeholder -->
+  <!-- Shared Header (fetched from header.html) -->
   <div id="site-header"></div>
 
   <!-- Main Content -->
   <main class="collections-section" id="suits">
     <div class="section-header">
+        <h1 style="display:none">Bespoke Suit Collections for Men and Women in Kigali, Rwanda</h1>
         <h2>Our Collections</h2>
         <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection -->
-    <div class="collection-block">
-        <div class="collection-title-wrapper">
-            <a href="mensuits.html" class="collection-pill">Men's Suits</a>
-            <div class="title-line"></div>
-        </div>
-        
-        <div class="collection-grid">
-            <div class="collection-item-card">
-                <img src="The Executive Line.jpeg" alt="Double Breasted Tuxedo - Mr. Sewing" class="collection-item-img" loading="lazy">
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Double Breasted Tuxedo</h3>
-                        <p>The Executive Line</p>
-                    </div>
-                    <a href="mensuits.html" class="collection-btn">View Details</a>
-                </div>
-            </div>
+    <!-- Men's Suits section (fetched from mensuits.html) -->
+    <div id="men-suits-section"></div>
 
-            <div class="collection-item-card">
-                <img src="1.jpeg" alt="Classic 3-Piece Executive Suit - Mr. Sewing" class="collection-item-img" loading="lazy">
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Classic 3-Piece Executive</h3>
-                        <p>The Executive Line</p>
-                    </div>
-                    <a href="mensuits.html" class="collection-btn">View Details</a>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
-                <img src="3.jpeg" alt="Modern Slim Fit Suit - Mr. Sewing" class="collection-item-img" loading="lazy">
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Modern Slim Fit Suit</h3>
-                        <p>The Executive Line</p>
-                    </div>
-                    <a href="mensuits.html" class="collection-btn">View Details</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Women's Suits Collection -->
-    <div class="collection-block">
-        <div class="collection-title-wrapper">
-            <a href="womensuits.html" class="collection-pill">Women's Suits</a>
-            <div class="title-line"></div>
-        </div>
-        
-        <div class="collection-grid">
-            <div class="collection-item-card">
-                <img src="The Elegance Series.jpeg" alt="White Power Pantsuit - Mr. Sewing" class="collection-item-img" loading="lazy">
-                <div class="collection-item-info">
-                    <div>
-                        <h3>White Power Pantsuit</h3>
-                        <p>The Elegance Series</p>
-                    </div>
-                    <a href="womensuits.html" class="collection-btn">View Details</a>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
-                <img src="2.jpeg" alt="Tailored Double-Breasted Blazer - Mr. Sewing" class="collection-item-img" loading="lazy">
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Double-Breasted Blazer Set</h3>
-                        <p>The Elegance Series</p>
-                    </div>
-                    <a href="womensuits.html" class="collection-btn">View Details</a>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
-                <img src="4.jpeg" alt="Bespoke Elegance Tuxedo - Mr. Sewing" class="collection-item-img" loading="lazy">
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Bespoke Elegance Tuxedo</h3>
-                        <p>The Elegance Series</p>
-                    </div>
-                    <a href="womensuits.html" class="collection-btn">View Details</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Women's Suits section (fetched from womensuits.html) -->
+    <div id="women-suits-section"></div>
   </main>
 
-  <!-- Shared Footer Placeholder -->
+  <!-- Shared Footer (fetched from footer.html) -->
   <div id="site-footer"></div>
 
   <!-- Component Loader Script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('header.html')
-        .then(res => res.ok ? res.text() : '')
-        .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
-        .catch(err => console.error('Header load error:', err));
+    // To rename a file, change it here only.
+    var parts = [
+      { id: 'site-header',         file: 'header.html' },
+      { id: 'men-suits-section',   file: 'mensuits.html' },
+      { id: 'women-suits-section', file: 'womensuits.html' },
+      { id: 'site-footer',         file: 'footer.html' }
+    ];
 
-      fetch('footer.html')
-        .then(res => res.ok ? res.text() : '')
-        .then(data => { if (data) document.getElementById('site-footer').innerHTML = data; })
-        .catch(err => console.error('Footer load error:', err));
+    parts.forEach(function (part) {
+      var holder = document.getElementById(part.id);
+      fetch(part.file)
+        .then(function (res) {
+          if (!res.ok) { throw new Error(res.status + ' ' + res.statusText); }
+          return res.text();
+        })
+        .then(function (html) { holder.innerHTML = html; })
+        .catch(function (err) {
+          console.error('Could not load ' + part.file + ':', err);
+          holder.innerHTML = '<p class="load-error">This section could not be loaded. Please refresh the page.</p>';
+        });
     });
   </script>
 
