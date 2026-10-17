@@ -1,100 +1,110 @@
-<!-- Header HTML with Embedded Styles -->
+<!-- Header HTML with Fixed Compact Dimensions -->
 <style>
-    /* Header Container Styling */
-    header, #site-header, #header-placeholder header {
-        background-color: #141414;
-        border-bottom: 1px solid #2a2a2a;
-        padding: 12px 4%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: clamp(6px, 2vw, 15px);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        width: 100%;
-        box-sizing: border-box;
+    /* Force Header Heights & Layout */
+    header#home, 
+    header, 
+    #site-header header, 
+    #header-placeholder header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        background-color: #141414 !important;
+        border-bottom: 1px solid #2a2a2a !important;
+        padding: 10px 4% !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+        height: 70px !important;
+        max-height: 70px !important;
+        box-sizing: border-box !important;
     }
 
-    /* Logo Image */
+    /* Lock Logo Dimensions to Prevent Over-expansion */
     .header-logo {
-        height: clamp(30px, 5vw, 45px);
-        width: auto;
-        object-fit: contain;
-        display: block;
-        mix-blend-mode: screen;
-        flex-shrink: 0;
+        height: 38px !important;
+        max-height: 38px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        mix-blend-mode: screen !important;
+        flex-shrink: 0 !important;
     }
 
-    /* Navigation Links */
+    /* Navigation Menu */
     header nav {
-        flex-shrink: 1;
-        overflow: hidden;
+        flex-shrink: 1 !important;
+        overflow: hidden !important;
     }
 
     header nav ul {
-        display: flex;
-        list-style: none;
-        gap: clamp(8px, 2.5vw, 25px);
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap;
-        margin: 0;
-        padding: 0;
+        display: flex !important;
+        list-style: none !important;
+        gap: 20px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     header nav a {
-        color: #cccccc;
-        text-decoration: none;
-        font-size: clamp(0.68rem, 1.5vw, 0.95rem);
-        font-weight: 500;
-        transition: color 0.3s ease;
+        color: #cccccc !important;
+        text-decoration: none !important;
+        font-size: 0.9rem !important;
+        font-weight: 500 !important;
+        transition: color 0.3s ease !important;
     }
 
     header nav a:hover, 
     header nav a.active {
-        color: #d4af37;
+        color: #d4af37 !important;
     }
 
     /* Order Button */
     .order-btn {
-        background-color: #d4af37;
-        color: #000000;
-        padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
-        text-decoration: none;
-        font-weight: 700;
-        border-radius: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-size: clamp(0.68rem, 1.3vw, 0.85rem);
-        white-space: nowrap;
-        flex-shrink: 0;
-        transition: background-color 0.3s ease;
-        display: inline-block;
+        background-color: #d4af37 !important;
+        color: #000000 !important;
+        padding: 7px 16px !important;
+        text-decoration: none !important;
+        font-weight: 700 !important;
+        border-radius: 4px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
     }
 
-    .order-btn:hover {
-        background-color: #f3e5ab;
-    }
-
-    /* Responsive Handling for Mobile Screens */
+    /* Mobile Responsive Breakpoint */
     @media (max-width: 700px) {
-        header, #site-header, #header-placeholder header {
-            flex-wrap: wrap;
-            row-gap: 8px;
+        header#home, header, #site-header header, #header-placeholder header {
+            height: auto !important;
+            max-height: none !important;
+            flex-wrap: wrap !important;
+            row-gap: 8px !important;
+            padding: 8px 12px !important;
         }
 
         header nav {
-            order: 3;
-            width: 100%;
-            overflow: visible;
+            order: 3 !important;
+            width: 100% !important;
         }
 
         header nav ul {
-            gap: 8px 14px;
-            flex-wrap: wrap;
-            white-space: normal;
+            gap: 8px 12px !important;
+            flex-wrap: wrap !important;
+            white-space: normal !important;
+        }
+
+        header nav a {
+            font-size: 0.8rem !important;
+        }
+
+        .header-logo {
+            height: 30px !important;
+            max-height: 30px !important;
         }
     }
 </style>
