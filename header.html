@@ -1,16 +1,15 @@
 <style>
-    /* Base Header Container */
-    header#home,
-    header,
+    /* Header Bar — Exact index.html Mirror */
+    header, 
     #site-header header {
         background-color: #141414 !important;
         border-bottom: 1px solid #2a2a2a !important;
-        padding: 10px 4% !important;
+        padding: 12px 4% !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        flex-wrap: wrap !important;
-        row-gap: 8px !important;
+        flex-wrap: nowrap !important;
+        gap: clamp(6px, 2vw, 15px) !important;
         position: sticky !important;
         top: 0 !important;
         z-index: 1000 !important;
@@ -18,96 +17,89 @@
         box-sizing: border-box !important;
     }
 
-    /* Logo Image */
-    .header-logo {
-        height: clamp(28px, 4.5vw, 40px) !important;
-        width: auto !important;
-        object-fit: contain !important;
-        display: block !important;
-        mix-blend-mode: screen !important;
-        flex-shrink: 0 !important;
+    .header-logo { 
+        height: clamp(30px, 5vw, 45px) !important; 
+        width: auto !important; 
+        object-fit: contain !important; 
+        display: block !important; 
+        mix-blend-mode: screen !important; 
+        flex-shrink: 0 !important; 
     }
 
-    /* Navigation Menu */
-    header nav {
-        flex-shrink: 1 !important;
-        overflow: visible !important;
+    header nav,
+    #site-header nav { 
+        flex-shrink: 1 !important; 
+        overflow: hidden !important; 
     }
 
-    header nav ul {
-        display: flex !important;
-        list-style: none !important;
-        gap: clamp(8px, 2vw, 22px) !important;
-        align-items: center !important;
-        justify-content: center !important;
-        white-space: nowrap !important;
+    header nav ul,
+    #site-header nav ul { 
+        display: flex !important; 
+        list-style: none !important; 
+        gap: clamp(8px, 2.5vw, 25px) !important; 
+        align-items: center !important; 
+        justify-content: center !important; 
+        white-space: nowrap !important; 
         margin: 0 !important;
         padding: 0 !important;
     }
 
-    header nav a {
-        color: #cccccc !important;
-        text-decoration: none !important;
-        font-size: clamp(0.68rem, 1.4vw, 0.9rem) !important;
-        font-weight: 500 !important;
-        white-space: nowrap !important;
-        transition: color 0.3s ease !important;
+    header nav a,
+    #site-header nav a { 
+        color: #cccccc !important; 
+        text-decoration: none !important; 
+        font-size: clamp(0.68rem, 1.5vw, 0.95rem) !important; 
+        font-weight: 500 !important; 
+        transition: color 0.3s ease !important; 
     }
 
     header nav a:hover, 
-    header nav a.active {
-        color: #d4af37 !important;
+    header nav a.active,
+    #site-header nav a:hover,
+    #site-header nav a.active { 
+        color: #d4af37 !important; 
     }
 
-    /* Order Button */
     .order-btn {
         background-color: #d4af37 !important;
         color: #000000 !important;
-        padding: 5px 14px !important;
+        padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px) !important;
         text-decoration: none !important;
         font-weight: 700 !important;
         border-radius: 4px !important;
         text-transform: uppercase !important;
         letter-spacing: 0.5px !important;
-        font-size: 0.78rem !important;
+        font-size: clamp(0.68rem, 1.3vw, 0.85rem) !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
+        transition: background-color 0.3s ease !important;
         display: inline-block !important;
     }
 
-    /* Mobile Layout Fix: Logo & Order on Top Row, All Links on One Single Bottom Line */
-    @media (max-width: 768px) {
-        header#home, header, #site-header header {
-            padding: 8px 10px !important;
+    .order-btn:hover { 
+        background-color: #f3e5ab !important; 
+    }
+
+    /* Mobile Responsive Rule — Exact index.html Breakpoint */
+    @media (max-width: 700px) {
+        header, 
+        #site-header header { 
+            flex-wrap: wrap !important; 
+            row-gap: 8px !important; 
         }
 
-        .header-logo {
-            order: 1 !important;
-            height: 28px !important;
+        header nav,
+        #site-header nav { 
+            order: 3 !important; 
+            width: 100% !important; 
+            overflow: visible !important; 
         }
 
-        .order-btn {
-            order: 2 !important;
-            padding: 4px 10px !important;
-            font-size: 0.72rem !important;
-        }
-
-        header nav {
-            order: 3 !important;
-            width: 100% !important;
-            margin-top: 2px !important;
-        }
-
-        header nav ul {
-            justify-content: space-between !important;
-            gap: 2px !important;
-            flex-wrap: nowrap !important;
-            white-space: nowrap !important;
-        }
-
-        header nav a {
-            font-size: 0.70rem !important;
-            letter-spacing: -0.2px !important;
+        header nav ul,
+        #site-header nav ul { 
+            gap: 8px 14px !important; 
+            flex-wrap: wrap !important; 
+            white-space: normal !important; 
         }
     }
 </style>
