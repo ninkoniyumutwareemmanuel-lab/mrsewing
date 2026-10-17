@@ -44,7 +44,7 @@
             line-height: 1.7;
         }
 
-        /* Header / Navigation */
+        /* Header / Navigation Placeholder Container */
         header {
             display: flex;
             justify-content: space-between;
@@ -174,7 +174,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
+        /* Footer Placeholder Container */
         footer {
             text-align: center;
             padding: 2.5rem 2rem;
@@ -200,23 +200,8 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="logo-container">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo">
-            <a href="index.html" class="logo-text">MR. SEWING</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="suits.html">Suits</a></li>
-                <li><a href="measurements.html">Measurements Guide</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <header id="site-header"></header>
 
     <!-- Main Content -->
     <main class="container">
@@ -324,10 +309,25 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-    </footer>
+    <!-- Footer Placeholder -->
+    <footer id="site-footer"></footer>
+
+    <!-- Script to Fetch Header & Footer Dynamically -->
+    <script>
+      // Load external Header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('site-header').innerHTML = data;
+        });
+
+      // Load external Footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('site-footer').innerHTML = data;
+        });
+    </script>
 
 </body>
 </html>
