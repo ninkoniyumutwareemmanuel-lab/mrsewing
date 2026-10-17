@@ -1,0 +1,81 @@
+<style>
+    .hero-section {
+        position: relative;
+        background: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.85)), url('The Executive Line.jpeg') center/cover no-repeat;
+        padding: clamp(60px, 12vw, 140px) 4%;
+        text-align: center;
+        border-bottom: 1px solid #2a2a2a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-subtitle {
+        color: #d4af37;
+        font-size: clamp(0.75rem, 1.5vw, 1.1rem);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    .hero-title {
+        font-size: clamp(1.8rem, 5vw, 3.8rem);
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: clamp(1px, 0.3vw, 4px);
+        font-weight: 800;
+        line-height: 1.15;
+        margin-bottom: 16px;
+        max-width: 1000px;
+    }
+    .hero-description {
+        font-size: clamp(0.85rem, 1.8vw, 1.2rem);
+        color: #cccccc;
+        max-width: 750px;
+        line-height: 1.6;
+        margin-bottom: clamp(24px, 4vw, 36px);
+    }
+    .hero-actions {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-btn-primary {
+        background-color: #d4af37;
+        color: #000000;
+        padding: 12px 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+    }
+    .hero-btn-primary:hover { background-color: #f3e5ab; }
+    .hero-btn-secondary {
+        background-color: transparent;
+        color: #d4af37;
+        border: 2px solid #d4af37;
+        padding: 10px 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+    }
+    .hero-btn-secondary:hover { background-color: #d4af37; color: #000000; }
+</style>
+
+<section class="hero-section">
+    <div class="hero-subtitle">Bespoke Tailoring & Custom Suits</div>
+    <h1 class="hero-title">Elegance & Precision Craftsmanship</h1>
+    <p class="hero-description">Experience Kigali’s premier made-to-measure fashion house. Handcrafted luxury suits for men and women, tailored to your exact posture and silhouette.</p>
+    <div class="hero-actions">
+        <a href="#suits" class="hero-btn-primary">Explore Collections</a>
+        <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="hero-btn-secondary">Book Consultation</a>
+    </div>
+</section>
