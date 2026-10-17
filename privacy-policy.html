@@ -20,6 +20,9 @@
     <meta property="og:image" content="MR LOGO.jpeg">
     <meta property="og:type" content="website">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --bg-color: #0d0d0d;
@@ -44,12 +47,30 @@
             line-height: 1.7;
         }
 
-        /* Header / Navigation Placeholder Container */
+        /* --- Safety Constraints for Dynamic Header --- */
+        #site-header {
+            width: 100%;
+            min-height: 70px;
+            background-color: var(--bg-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #site-header img,
+        #site-header .header-logo {
+            max-height: 38px !important;
+            height: 38px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        /* Header / Navigation fallback styles */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
+            padding: 10px 4%;
             background-color: var(--bg-color);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
@@ -174,7 +195,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer Placeholder Container */
+        /* Footer */
         footer {
             text-align: center;
             padding: 2.5rem 2rem;
@@ -312,16 +333,14 @@
     <!-- Footer Placeholder -->
     <footer id="site-footer"></footer>
 
-    <!-- Script to Fetch Header & Footer Dynamically -->
+    <!-- External Script to Fetch Header & Footer -->
     <script>
-      // Load external Header
       fetch('header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('site-header').innerHTML = data;
         });
 
-      // Load external Footer
       fetch('footer.html')
         .then(response => response.text())
         .then(data => {
