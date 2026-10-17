@@ -6,8 +6,8 @@
   <title>Men's Bespoke Suits & Custom Tailoring Kigali | Mr. Sewing</title>
 
   <!-- High-Impact Local SEO Meta Tags -->
-  <meta name="description" content="Discover premium handcrafted men's suits in Kigali, Rwanda. Custom tuxedo, double-breasted jackets, groom wedding wear, and executive made-to-measure tailoring by Mr. Sewing in Nyarugenge & Norvège.">
-  <meta name="keywords" content="men suit Kigali, custom men suits Rwanda, bespoke suits for men Kigali, tuxedo rental Kigali, wedding suits for men Kigali, made to measure suits Rwanda, best tailor for men Kigali, executive tailoring Kigali, suit maker Rwanda, custom blazers Nyarugenge">
+  <meta name="description" content="Explore our complete collection of men's bespoke suits in Kigali, Rwanda. Custom double-breasted tuxedos, 3-piece executive suits, and groom wedding wear by Mr. Sewing in Nyarugenge & Norvège.">
+  <meta name="keywords" content="men suit Kigali, double breasted tuxedo Kigali, custom men suits Rwanda, bespoke suits for men Kigali, tuxedo rental Kigali, wedding suits for men Kigali, made to measure suits Rwanda, best tailor for men Kigali, executive tailoring Kigali, suit maker Rwanda">
   <meta name="author" content="Mr. Sewing">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://mrsewingfashion.com/mensuits.html">
@@ -102,9 +102,10 @@
       gap: clamp(16px, 2.5vw, 30px);
     }
 
+    /* Card Styling matching exact screenshot design */
     .photo-card {
-      background-color: #141414;
-      border: 1px solid #2a2a2a;
+      background-color: #0d0d0d;
+      border: 1px solid #222222;
       border-radius: 8px;
       overflow: hidden;
       display: flex;
@@ -138,58 +139,57 @@
 
     .photo-card:hover .photo-img { transform: scale(1.04); }
 
+    /* Exact Text & Button Section Layout */
     .photo-info {
-      padding: clamp(14px, 2vw, 20px);
+      padding: 16px 14px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #0b0b0b;
       flex-grow: 1;
       justify-content: space-between;
     }
 
-    .photo-caption {
+    .photo-title-text {
       color: #ffffff;
-      font-size: clamp(0.85rem, 1.4vw, 1.05rem);
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 14px;
+      font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      line-height: 1.2;
+      margin-bottom: 4px;
     }
 
-    .photo-actions-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid #2a2a2a;
-      padding-top: 12px;
-      gap: 8px;
-    }
-
-    .btn-action {
-      background: transparent;
-      border: 1px solid #2a2a2a;
-      color: #aaaaaa;
-      padding: 6px 10px;
-      font-size: 0.8rem;
-      border-radius: 4px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .btn-action:hover { border-color: #d4af37; color: #d4af37; }
-    .btn-action.liked { background-color: rgba(212, 175, 55, 0.1); border-color: #d4af37; color: #d4af37; }
-
-    .view-photo-link {
+    .photo-subtitle-text {
       color: #d4af37;
-      text-decoration: none;
-      font-size: 0.8rem;
+      font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+      font-style: italic;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .view-details-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid #d4af37;
+      color: #ffffff;
+      padding: 10px;
+      font-size: 0.82rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
     }
-    .view-photo-link:hover { color: #ffffff; text-decoration: underline; }
+
+    .view-details-btn:hover {
+      background-color: #d4af37;
+      color: #000000;
+    }
 
     .scroll-loader {
       text-align: center;
@@ -204,29 +204,14 @@
     .scroll-loader i { margin-right: 8px; animation: spin 1s linear infinite; }
     @keyframes spin { 100% { transform: rotate(360deg); } }
 
-    .toast-msg {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #d4af37;
-      color: #000000;
-      padding: 12px 22px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      display: none;
-      z-index: 3000;
-    }
-
     @media (max-width: 1200px) { .photo-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 900px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) {
       .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .photo-info { padding: 10px; }
-      .photo-caption { font-size: 0.78rem; margin-bottom: 8px; }
-      .btn-action { padding: 4px 6px; font-size: 0.7rem; }
-      .view-photo-link { font-size: 0.68rem; }
+      .photo-info { padding: 12px 8px; }
+      .photo-title-text { font-size: 0.78rem; }
+      .photo-subtitle-text { font-size: 0.7rem; margin-bottom: 10px; }
+      .view-details-btn { padding: 8px 4px; font-size: 0.72rem; }
     }
   </style>
 </head>
@@ -239,7 +224,7 @@
   <main class="gallery-container">
     <div class="gallery-intro">
       <h1>Men's Bespoke Suit Collection</h1>
-      <p>Precision, authority, and masculine elegance. Explore our luxury collection of men's bespoke suits, double-breasted blazers, executive two-piece sets, and groom wedding wear handcrafted by Mr. Sewing in Kigali, Rwanda.</p>
+      <p>Precision, authority, and masculine elegance. Explore our luxury collection of men's bespoke suits, double-breasted tuxedos, executive three-piece sets, and groom wedding wear handcrafted by Mr. Sewing in Kigali, Rwanda.</p>
       <div class="gallery-divider"></div>
     </div>
 
@@ -252,24 +237,23 @@
     </div>
   </main>
 
-  <div id="toastMsg" class="toast-msg">Link copied to clipboard!</div>
-
   <!-- Shared Footer Placeholder -->
   <div id="site-footer"></div>
 
   <script>
-    // Men's Suits Photo Registry
+    // Men's Suits Registry
     const menPhotos = [
-      { id: "men-photo-1", file: "1.jpeg", title: "Bespoke Royal Navy Suit — Handcrafted Men's Tailoring Kigali", target: "photo-1.html" },
-      { id: "men-photo-2", file: "2.jpeg", title: "Executive Charcoal Suit — Custom Made-to-Measure Fit", target: "photo-2.html" },
-      { id: "men-photo-3", file: "3.jpeg", title: "VIP Groom Wedding Suit Collection — Modern Slim Fit", target: "photo-3.html" },
-      { id: "men-photo-4", file: "4.jpeg", title: "Double-Breasted Statement Suit — Custom Craftsmanship", target: "photo-4.html" }
+      { id: "men-photo-1", file: "1.jpeg", title: "DOUBLE BREASTED TUXEDO", subtitle: "The Executive Line", target: "photo-1.html" },
+      { id: "men-photo-2", file: "2.jpeg", title: "CLASSIC 3-PIECE EXECUTIVE", subtitle: "The Executive Line", target: "photo-2.html" },
+      { id: "men-photo-3", file: "3.jpeg", title: "BESPOKE ELEGANCE TUXEDO", subtitle: "The Elegance Series", target: "photo-3.html" },
+      { id: "men-photo-4", file: "4.jpeg", title: "ROYAL NAVY SLIM FIT SUIT", subtitle: "The Heritage Collection", target: "photo-4.html" }
     ];
 
     document.addEventListener('DOMContentLoaded', function() {
       fetch('header.html').then(r => r.ok ? r.text() : '').then(d => { if (d) document.getElementById('site-header').innerHTML = d; });
       fetch('footer.html').then(r => r.ok ? r.text() : '').then(d => { if (d) document.getElementById('site-footer').innerHTML = d; });
       renderMenGrid();
+      setupInfiniteScroll();
     });
 
     function renderMenGrid() {
@@ -277,77 +261,40 @@
       grid.innerHTML = '';
 
       menPhotos.forEach(photo => {
-        const isLiked = localStorage.getItem('like_' + photo.id) === 'true';
-        let baseCount = 22 + parseInt(photo.id.replace('men-photo-', '')) * 4;
-        if (isLiked) baseCount += 1;
-
         const card = document.createElement('article');
         card.className = 'photo-card';
         card.innerHTML = `
           <div class="photo-img-wrapper">
             <a href="${photo.target}">
-              <img src="${photo.file}" alt="${photo.title} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
+              <img src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
             </a>
           </div>
           <div class="photo-info">
-            <div class="photo-caption">${photo.title}</div>
-            <div class="photo-actions-row">
-              <button class="btn-action like-btn ${isLiked ? 'liked' : ''}" data-id="${photo.id}" aria-label="Like photo">
-                <i class="${isLiked ? 'fas' : 'far'} fa-heart"></i> <span class="like-count">${baseCount}</span>
-              </button>
-              <button class="btn-action share-btn" data-url="https://mrsewingfashion.com/${photo.target}" data-title="${photo.title}" aria-label="Share photo">
-                <i class="fas fa-share-alt"></i>
-              </button>
-              <a href="https://wa.me/250787411501?text=Hello%20Mr.%20Sewing%2C%20I%20am%20interested%20in%20this%20Men's%20Suit%3A%20${encodeURIComponent(photo.title)}" target="_blank" rel="noopener" class="btn-action" aria-label="Comment on WhatsApp">
-                <i class="far fa-comment"></i>
-              </a>
-              <a href="${photo.target}" class="view-photo-link">View Details</a>
+            <div>
+              <div class="photo-title-text">${photo.title}</div>
+              <div class="photo-subtitle-text">${photo.subtitle}</div>
             </div>
+            <a href="${photo.target}" class="view-details-btn">VIEW DETAILS</a>
           </div>
         `;
         grid.appendChild(card);
       });
-
-      attachEvents();
     }
 
-    function attachEvents() {
-      document.querySelectorAll('.like-btn').forEach(btn => {
-        btn.onclick = function() {
-          const id = btn.getAttribute('data-id');
-          const countSpan = btn.querySelector('.like-count');
-          const icon = btn.querySelector('i');
-          const currentlyLiked = localStorage.getItem('like_' + id) === 'true';
-          let num = parseInt(countSpan.textContent);
-
-          if (currentlyLiked) {
-            localStorage.setItem('like_' + id, 'false');
-            btn.classList.remove('liked');
-            icon.className = 'far fa-heart';
-            countSpan.textContent = num - 1;
-          } else {
-            localStorage.setItem('like_' + id, 'true');
-            btn.classList.add('liked');
-            icon.className = 'fas fa-heart';
-            countSpan.textContent = num + 1;
+    function setupInfiniteScroll() {
+      let isFetching = false;
+      window.addEventListener('scroll', function() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 400) {
+          if (!isFetching) {
+            isFetching = true;
+            const loader = document.getElementById('scrollLoader');
+            loader.style.display = 'block';
+            setTimeout(() => {
+              loader.style.display = 'none';
+              isFetching = false;
+            }, 800);
           }
-        };
-      });
-
-      document.querySelectorAll('.share-btn').forEach(btn => {
-        btn.onclick = function() {
-          const url = btn.getAttribute('data-url');
-          const title = btn.getAttribute('data-title');
-          if (navigator.share) {
-            navigator.share({ title: title, text: 'Check out this men\'s suit design by Mr. Sewing in Kigali!', url: url }).catch(() => {});
-          } else {
-            navigator.clipboard.writeText(url).then(() => {
-              const toast = document.getElementById('toastMsg');
-              toast.style.display = 'block';
-              setTimeout(() => { toast.style.display = 'none'; }, 3000);
-            });
-          }
-        };
+        }
       });
     }
   </script>
