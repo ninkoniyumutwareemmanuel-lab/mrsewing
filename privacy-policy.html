@@ -47,88 +47,12 @@
             line-height: 1.7;
         }
 
-        /* Fixed Single-Row Header Styling */
-        #site-header header, header#home {
-            background-color: #141414;
-            border-bottom: 1px solid #2a2a2a;
-            padding: 10px 3%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-            gap: clamp(6px, 1.8vw, 15px);
+        /* Container for injected header */
+        #site-header {
+            width: 100%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .header-logo {
-            height: clamp(28px, 4.5vw, 38px);
-            width: auto;
-            object-fit: contain;
-            display: block;
-            mix-blend-mode: screen;
-            flex-shrink: 0;
-        }
-
-        #site-header nav {
-            flex-grow: 1;
-            flex-shrink: 1;
-            overflow-x: auto;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE/Edge */
-            margin: 0 6px;
-        }
-
-        #site-header nav::-webkit-scrollbar {
-            display: none; /* Chrome/Safari */
-        }
-
-        #site-header nav ul {
-            display: flex;
-            list-style: none;
-            gap: clamp(6px, 1.8vw, 20px);
-            align-items: center;
-            justify-content: center;
-            white-space: nowrap;
-            flex-wrap: nowrap;
-            margin: 0;
-            padding: 0;
-        }
-
-        #site-header nav a {
-            color: #cccccc;
-            text-decoration: none;
-            font-size: clamp(0.65rem, 1.3vw, 0.88rem);
-            font-weight: 500;
-            white-space: nowrap;
-            transition: color 0.3s ease;
-        }
-
-        #site-header nav a:hover, 
-        #site-header nav a.active {
-            color: #d4af37;
-        }
-
-        .order-btn {
-            background-color: #d4af37;
-            color: #000000;
-            padding: clamp(5px, 1vw, 7px) clamp(10px, 1.5vw, 16px);
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: clamp(0.65rem, 1.2vw, 0.78rem);
-            white-space: nowrap;
-            flex-shrink: 0;
-            display: inline-block;
-        }
-
-        .order-btn:hover {
-            background-color: #f3e5ab;
         }
 
         /* Main Content Styles */
@@ -223,23 +147,8 @@
 </head>
 <body>
 
-    <!-- Header Section with Static Fallback -->
-    <div id="site-header">
-        <header id="home">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="suits.html">Suits</a></li>
-                    <li><a href="measurements.html">Measurements Guide</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <a href="#orderModal" class="order-btn">Order</a>
-        </header>
-    </div>
+    <!-- Header Placeholder Container -->
+    <div id="site-header"></div>
 
     <!-- Main Content -->
     <main class="container">
@@ -347,27 +256,22 @@
         </div>
     </main>
 
-    <!-- Footer Placeholder -->
+    <!-- Footer Placeholder Container -->
     <div id="site-footer"></div>
 
-    <!-- Script to Dynamic Fetch Header/Footer -->
+    <!-- Script to Fetch Header & Footer -->
     <script>
       fetch('header.html')
-        .then(response => {
-            if (!response.ok) throw new Error("Header fetch failed");
-            return response.text();
-        })
+        .then(response => response.text())
         .then(data => {
-            document.getElementById('site-header').innerHTML = data;
-        })
-        .catch(err => console.log('Using inline header fallback.'));
+          document.getElementById('site-header').innerHTML = data;
+        });
 
       fetch('footer.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('site-footer').innerHTML = data;
-        })
-        .catch(err => console.log('Footer fetch pending.'));
+          document.getElementById('site-footer').innerHTML = data;
+        });
     </script>
 
 </body>
