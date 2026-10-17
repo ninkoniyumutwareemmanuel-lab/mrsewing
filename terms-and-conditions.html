@@ -25,13 +25,13 @@
 
     <style>
         :root {
-            --bg-color: #0b0b0b;
+            --bg-color: #0d0d0d;
             --card-bg: #141414;
-            --accent-gold: #d4af37;
-            --accent-gold-hover: #f3e5ab;
-            --text-main: #f5f5f5;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #d4af37;
+            --text-main: #f4f4f4;
             --text-muted: #aaaaaa;
-            --border-color: #2a2a2a;
+            --border-color: #262626;
         }
 
         * {
@@ -41,54 +41,85 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* Header Bar Styling for loaded content */
-        header {
-            background-color: #141414;
-            border-bottom: 1px solid #2a2a2a;
-            padding: 12px 4%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-            gap: clamp(6px, 2vw, 15px);
+        /* --- Safety Constraints for Dynamic Header --- */
+        #site-header {
+            width: 100%;
+            min-height: 70px;
+            background-color: var(--bg-color);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
-        nav { flex-shrink: 1; overflow: hidden; }
-        nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
-        nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover, nav a.active { color: #d4af37; }
 
-        .order-btn {
-            background-color: #d4af37;
-            color: #000000;
-            padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: clamp(0.68rem, 1.3vw, 0.85rem);
-            white-space: nowrap;
-            flex-shrink: 0;
-            transition: background-color 0.3s ease;
-            display: inline-block;
+        #site-header img,
+        #site-header .header-logo {
+            max-height: 38px !important;
+            height: 38px !important;
+            width: auto !important;
+            object-fit: contain !important;
         }
-        .order-btn:hover { background-color: #f3e5ab; }
+
+        /* Header / Navigation fallback styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
 
         /* Main Content Styles */
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+            padding: 4rem 2rem;
         }
 
         .page-title {
@@ -97,10 +128,10 @@
         }
 
         .about-logo {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             border-radius: 50%;
             border: 2px solid var(--accent-gold);
             padding: 10px;
@@ -108,27 +139,25 @@
         }
 
         .page-title h1 {
-            font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+            font-size: 2.5rem;
             color: var(--accent-gold);
             margin-bottom: 0.5rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 700;
         }
 
         .page-title p {
             color: var(--text-muted);
-            font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+            font-size: 1.1rem;
         }
 
         .policy-intro {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 2rem;
             margin-bottom: 2.5rem;
             color: var(--text-muted);
-            font-size: 0.98rem;
+            font-size: 1.05rem;
             text-align: center;
         }
 
@@ -136,7 +165,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 1.5rem 1.8rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
         }
 
@@ -146,19 +175,18 @@
             margin-bottom: 1.2rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
-            text-transform: uppercase;
         }
 
         .policy-section h3 {
             color: var(--text-main);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-top: 1.2rem;
             margin-bottom: 0.4rem;
         }
 
         .policy-section p, .policy-section li {
             color: var(--text-muted);
-            font-size: 0.98rem;
+            font-size: 1rem;
             margin-bottom: 0.8rem;
         }
 
@@ -167,60 +195,34 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer Styling for loaded content */
-        footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
-        .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; text-align: left; }
-        .footer-col { min-width: 0; }
-        .footer-col h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 700; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col ul a { color: #aaaaaa; text-decoration: none; font-size: clamp(0.75rem, 1.3vw, 0.92rem); transition: color 0.3s ease; }
-        .footer-col ul a:hover { color: #d4af37; }
-        .footer-col p { color: #aaaaaa; font-size: clamp(0.75rem, 1.3vw, 0.92rem); line-height: 1.6; margin-bottom: 10px; }
-        .footer-col .location-block { margin-bottom: 16px; }
-        .footer-col .location-block strong { color: #ffffff; display: block; font-size: 0.95rem; margin-bottom: 3px; }
-        .map-link { color: #d4af37; text-decoration: none; font-size: clamp(0.72rem, 1.2vw, 0.88rem); font-weight: 600; display: inline-block; margin-top: 4px; transition: color 0.3s ease; }
-        .map-link:hover { color: #ffffff; text-decoration: underline; }
-        .footer-order-col { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
-        .footer-order-btn { margin-top: 10px; padding: 12px 28px; font-size: 0.9rem; }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background-color: var(--bg-color);
+        }
 
-        /* Social Media Bar */
-        .footer-social-wrapper { border-top: 1px solid #2a2a2a; padding-top: 35px; text-align: center; max-width: 1600px; margin: 0 auto; }
-        .social-title { font-size: 0.9rem; color: #888888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
-        .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
-        .social-icons a { color: #cccccc; font-size: 1.4rem; background-color: #0b0b0b; border: 1px solid #2a2a2a; width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
-        .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
-        .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
-
-        /* Order popup */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
-        .modal-overlay.open, .modal-overlay:target { display: flex; }
-        .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; text-align: left; }
-        .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
-        .modal-close:hover { color: #d4af37; }
-        .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
-        .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
-        .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
-        .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
-        .terms-check a { color: #d4af37; }
-        .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
-        .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
-        .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
-
-        @media (max-width: 700px) {
-            header { flex-wrap: wrap; row-gap: 8px; }
-            nav { order: 3; width: 100%; overflow: visible; }
-            nav ul { gap: 8px 14px; flex-wrap: wrap; white-space: normal; }
-            .policy-section { padding: 1.2rem; }
-            .footer-top { grid-template-columns: repeat(2, 1fr); }
-            .social-icons a { width: 42px; height: 42px; font-size: 1.2rem; }
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            header {
+                padding: 1rem;
+            }
+            .page-title h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
-<body id="top">
+<body>
 
     <!-- Header Placeholder -->
-    <header id="header-placeholder"></header>
+    <header id="site-header"></header>
 
     <!-- Main Content -->
     <main class="container">
@@ -329,84 +331,21 @@
     </main>
 
     <!-- Footer Placeholder -->
-    <footer id="footer-placeholder"></footer>
+    <footer id="site-footer"></footer>
 
-    <!-- Order popup -->
-    <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-        <div class="modal-box">
-            <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
-            <h3 id="orderModalTitle">Place Your Order</h3>
-            <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
-            <label class="terms-check">
-                <input type="checkbox" id="termsAgree">
-                <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
-            </label>
-            <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
-            <div class="terms-hint" id="termsHint"></div>
-        </div>
-    </div>
-
-    <!-- Script to dynamically load external Header and Footer -->
+    <!-- External Script to Fetch Header & Footer -->
     <script>
-        // Fetch and inject Header
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('site-header').innerHTML = data;
+        });
 
-        // Fetch and inject Footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-
-        // Modal Handler Logic
-        (function () {
-            var modal = document.getElementById('orderModal');
-            var agree = document.getElementById('termsAgree');
-            var wa = document.getElementById('whatsappBtn');
-            var hint = document.getElementById('termsHint');
-
-            function openModal() { modal.classList.add('open'); }
-            function closeModal() {
-                modal.classList.remove('open');
-                agree.checked = false;
-                wa.setAttribute('aria-disabled', 'true');
-                hint.textContent = '';
-                if (location.hash === '#orderModal') {
-                    history.replaceState(null, '', location.pathname + location.search);
-                }
-            }
-
-            document.addEventListener('click', function (e) {
-                var btn = e.target.closest ? e.target.closest('.order-btn') : null;
-                if (btn) { e.preventDefault(); openModal(); }
-            });
-
-            agree.addEventListener('change', function () {
-                wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
-                hint.textContent = '';
-            });
-
-            wa.addEventListener('click', function (e) {
-                if (!agree.checked) {
-                    e.preventDefault();
-                    hint.textContent = 'Please agree to the Terms & Conditions to continue.';
-                } else {
-                    setTimeout(closeModal, 300);
-                }
-            });
-
-            document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-            modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-
-            if (location.hash === '#orderModal') { openModal(); }
-        })();
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('site-footer').innerHTML = data;
+        });
     </script>
 
 </body>
