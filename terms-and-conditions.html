@@ -20,15 +20,18 @@
     <meta property="og:image" content="MR LOGO.jpeg">
     <meta property="og:type" content="website">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --bg-color: #0d0d0d;
+            --bg-color: #0b0b0b;
             --card-bg: #141414;
-            --accent-gold: #c5a059;
-            --accent-gold-hover: #d4af37;
-            --text-main: #f4f4f4;
+            --accent-gold: #d4af37;
+            --accent-gold-hover: #f3e5ab;
+            --text-main: #f5f5f5;
             --text-muted: #aaaaaa;
-            --border-color: #262626;
+            --border-color: #2a2a2a;
         }
 
         * {
@@ -38,67 +41,54 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        /* Header / Navigation */
+        /* Header Bar */
         header {
+            background-color: #141414;
+            border-bottom: 1px solid #2a2a2a;
+            padding: 12px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
-            background-color: var(--bg-color);
-            border-bottom: 1px solid var(--border-color);
+            flex-wrap: nowrap;
+            gap: clamp(6px, 2vw, 15px);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+        .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
+        nav { flex-shrink: 1; overflow: hidden; }
+        nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
+        nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: #d4af37; }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-container img {
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            color: var(--text-main);
+        .order-btn {
+            background-color: #d4af37;
+            color: #000000;
+            padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
+            text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
-            text-decoration: none;
-            letter-spacing: 1px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: clamp(0.68rem, 1.3vw, 0.85rem);
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease;
+            display: inline-block;
         }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-gold);
-        }
+        .order-btn:hover { background-color: #f3e5ab; }
 
         /* Main Content Styles */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 5vw, 4rem) 1.5rem;
         }
 
         .page-title {
@@ -107,10 +97,10 @@
         }
 
         .about-logo {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             object-fit: contain;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             border-radius: 50%;
             border: 2px solid var(--accent-gold);
             padding: 10px;
@@ -118,25 +108,27 @@
         }
 
         .page-title h1 {
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 3.5vw, 2.3rem);
             color: var(--accent-gold);
             margin-bottom: 0.5rem;
             letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
         }
 
         .page-title p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: clamp(0.85rem, 1.8vw, 1.05rem);
         }
 
         .policy-intro {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 2rem;
+            padding: 1.5rem;
             margin-bottom: 2.5rem;
             color: var(--text-muted);
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             text-align: center;
         }
 
@@ -144,7 +136,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 2.5rem;
+            padding: 1.5rem 1.8rem;
             margin-bottom: 2rem;
         }
 
@@ -154,18 +146,19 @@
             margin-bottom: 1.2rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
+            text-transform: uppercase;
         }
 
         .policy-section h3 {
             color: var(--text-main);
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin-top: 1.2rem;
             margin-bottom: 0.4rem;
         }
 
         .policy-section p, .policy-section li {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.98rem;
             margin-bottom: 0.8rem;
         }
 
@@ -175,47 +168,71 @@
         }
 
         /* Footer */
-        footer {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            background-color: var(--bg-color);
-        }
+        footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
+        .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; text-align: left; }
+        .footer-col { min-width: 0; }
+        .footer-col h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 700; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul a { color: #aaaaaa; text-decoration: none; font-size: clamp(0.75rem, 1.3vw, 0.92rem); transition: color 0.3s ease; }
+        .footer-col ul a:hover { color: #d4af37; }
+        .footer-col p { color: #aaaaaa; font-size: clamp(0.75rem, 1.3vw, 0.92rem); line-height: 1.6; margin-bottom: 10px; }
+        .footer-col .location-block { margin-bottom: 16px; }
+        .footer-col .location-block strong { color: #ffffff; display: block; font-size: 0.95rem; margin-bottom: 3px; }
+        .map-link { color: #d4af37; text-decoration: none; font-size: clamp(0.72rem, 1.2vw, 0.88rem); font-weight: 600; display: inline-block; margin-top: 4px; transition: color 0.3s ease; }
+        .map-link:hover { color: #ffffff; text-decoration: underline; }
+        .footer-order-col { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
+        .footer-order-btn { margin-top: 10px; padding: 12px 28px; font-size: 0.9rem; }
 
-        @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-            header {
-                padding: 1rem;
-            }
-            .page-title h1 {
-                font-size: 2rem;
-            }
+        /* Social Media Bar */
+        .footer-social-wrapper { border-top: 1px solid #2a2a2a; padding-top: 35px; text-align: center; max-width: 1600px; margin: 0 auto; }
+        .social-title { font-size: 0.9rem; color: #888888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+        .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+        .social-icons a { color: #cccccc; font-size: 1.4rem; background-color: #0b0b0b; border: 1px solid #2a2a2a; width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
+        .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
+        .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
+
+        /* Order popup */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
+        .modal-overlay.open, .modal-overlay:target { display: flex; }
+        .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; text-align: left; }
+        .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
+        .modal-close:hover { color: #d4af37; }
+        .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
+        .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+        .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
+        .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
+        .terms-check a { color: #d4af37; }
+        .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
+        .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
+        .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
+
+        @media (max-width: 700px) {
+            header { flex-wrap: wrap; row-gap: 8px; }
+            nav { order: 3; width: 100%; overflow: visible; }
+            nav ul { gap: 8px 14px; flex-wrap: wrap; white-space: normal; }
+            .policy-section { padding: 1.2rem; }
+            .footer-top { grid-template-columns: repeat(2, 1fr); }
+            .social-icons a { width: 42px; height: 42px; font-size: 1.2rem; }
         }
     </style>
 </head>
-<body>
+<body id="top">
 
-    <!-- Header Navigation -->
+    <!-- Sticky Header Bar -->
     <header>
-        <div class="logo-container">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo">
-            <a href="index.html" class="logo-text">MR. SEWING</a>
-        </div>
-        <nav>
+        <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="suits.html">Suits</a></li>
                 <li><a href="measurements.html">Measurements Guide</a></li>
                 <li><a href="faq.html">FAQs</a></li>
-                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <a href="#orderModal" class="order-btn">Order</a>
     </header>
 
     <!-- Main Content -->
@@ -326,8 +343,130 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
+        <div class="footer-top">
+            <!-- Quick Links Column -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="suits.html">Suits</a></li>
+                    <li><a href="measurements.html">Measurements Guide</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Location Column -->
+            <div class="footer-col">
+                <h3>Location</h3>
+                <div class="location-block">
+                    <strong>Branch 1:</strong>
+                    <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
+                    <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
+                </div>
+                <div class="location-block">
+                    <strong>Branch 2:</strong>
+                    <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
+                </div>
+            </div>
+
+            <!-- Opening Hours & Policies Column -->
+            <div class="footer-col">
+                <h3>Opening Hours &amp; Policies</h3>
+                <p><strong>Working Hours:</strong><br>
+                Monday - Friday: 9:00 AM – 5:00 PM<br>
+                Saturday &amp; Sunday: Booking / Call Required<br>
+                <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
+                <ul>
+                    <li><a href="refund-policy.html">Refund Policy</a></li>
+                    <li><a href="terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Order Button Column -->
+            <div class="footer-col footer-order-col">
+                <h3>Start Your Order</h3>
+                <p>Ready to craft your bespoke piece?</p>
+                <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
+            </div>
+        </div>
+
+        <!-- Social Media Bar -->
+        <div class="footer-social-wrapper">
+            <div class="social-title">Connect With Us</div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom-copy">
+                <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Order popup -->
+    <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+        <div class="modal-box">
+            <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
+            <h3 id="orderModalTitle">Place Your Order</h3>
+            <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
+            <label class="terms-check">
+                <input type="checkbox" id="termsAgree">
+                <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+            </label>
+            <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
+            <div class="terms-hint" id="termsHint"></div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var modal = document.getElementById('orderModal');
+            var agree = document.getElementById('termsAgree');
+            var wa = document.getElementById('whatsappBtn');
+            var hint = document.getElementById('termsHint');
+
+            function openModal() { modal.classList.add('open'); }
+            function closeModal() {
+                modal.classList.remove('open');
+                agree.checked = false;
+                wa.setAttribute('aria-disabled', 'true');
+                hint.textContent = '';
+                if (location.hash === '#orderModal') {
+                    history.replaceState(null, '', location.pathname + location.search);
+                }
+            }
+
+            document.addEventListener('click', function (e) {
+                var btn = e.target.closest ? e.target.closest('.order-btn') : null;
+                if (btn) { e.preventDefault(); openModal(); }
+            });
+
+            agree.addEventListener('change', function () {
+                wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+                hint.textContent = '';
+            });
+
+            wa.addEventListener('click', function (e) {
+                if (!agree.checked) {
+                    e.preventDefault();
+                    hint.textContent = 'Please agree to the Terms & Conditions to continue.';
+                } else {
+                    setTimeout(closeModal, 300);
+                }
+            });
+
+            document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
+            modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+            if (location.hash === '#orderModal') { openModal(); }
+        })();
+    </script>
 
 </body>
 </html>
