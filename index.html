@@ -6,24 +6,61 @@
   <title>Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Mr. Sewing is a bespoke tailor and fashion designer in Kigali, Rwanda, creating custom men’s and women’s suits, made-to-measure formal wear, wedding suits, clothing alterations, and VIP mobile fittings.">
-  <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, bespoke tailoring Kigali, custom suits Kigali, made to measure suits Kigali, tailor in Rwanda, clothing alterations Kigali, VIP mobile fittings Kigali">
+  <meta name="description" content="Mr. Sewing is a bespoke tailor and fashion designer in Kigali, Rwanda, creating custom men’s and women’s suits, made-to-measure formal wear, wedding suits, and locally made fashion.">
+  <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, bespoke tailoring Kigali, bespoke tailor Rwanda, custom suits Kigali, custom suits Rwanda, made to measure suits Kigali, made to measure Rwanda, men's suits Kigali, women's suits Kigali, bespoke suits Rwanda, custom tailors Kigali, best tailor in Kigali, tailor near me Kigali, suits Rwanda, wedding suits Kigali, groom suits Rwanda, office wear Kigali, formal wear Rwanda, business suits Kigali, tailored suits Kigali, custom clothing Kigali, fashion designer Kigali, Made in Rwanda fashion, express suit tailoring, tailor Nyarugenge, tailor MIC building Kigali, tailor Norvege Kigali, luxury suiting Rwanda, kitenge tailor Kigali, couturier Kigali, costume sur mesure Kigali, tailleur Kigali, custom tailoring Kigali Rwanda, suit maker Kigali, suit designer Rwanda, bespoke fashion house Kigali, men's tailor Rwanda, women's tailor Rwanda, tailor for wedding suits Kigali, graduation suits Kigali, corporate uniforms Kigali, office suits for men Rwanda, women's formal suits Rwanda, made-to-measure clothing Rwanda, premium custom suits Kigali, luxury tailor Kigali Rwanda, suit alterations Kigali, fashion atelier Kigali, local clothing manufacturer Rwanda, Rwanda fashion designer, Kigali suit shop, custom blazer Kigali, formal wear tailor Kigali, tailored clothing for men and women Rwanda">
   <meta name="author" content="Mr. Sewing">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="RW-01">
+  <meta name="geo.placename" content="Kigali, Rwanda">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://mrsewingfashion.com/">
-  
+  <!-- Browser tab / bookmark logo. Keep MR LOGO.jpeg in the website root. -->
   <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
+  <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
 
-  <!-- Open Graph & Social Cards -->
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn link previews) -->
   <meta property="og:site_name" content="Mr. Sewing">
   <meta property="og:title" content="Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda">
-  <meta property="og:description" content="Bespoke tailoring, custom suits, VIP mobile fittings, and clothing adjustments in Kigali, Rwanda.">
+  <meta property="og:description" content="Mr. Sewing offers bespoke tailoring, custom men’s and women’s suits, made-to-measure formal wear, and fashion design in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/">
   <meta property="og:image" content="https://mrsewingfashion.com/1.jpeg">
+  <meta property="og:image:alt" content="Custom bespoke suit made by Mr. Sewing in Kigali, Rwanda">
+  <meta property="og:locale" content="en_US">
 
-  <!-- Font Awesome CDN -->
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mr. Sewing | Bespoke Tailoring & Custom Suits in Kigali, Rwanda">
+  <meta name="twitter:description" content="Bespoke tailoring, custom men’s and women’s suits, and made-to-measure fashion in Kigali, Rwanda.">
+  <meta name="twitter:image" content="https://mrsewingfashion.com/1.jpeg">
+
+  <!-- Structured data for Google (local business) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Mr. Sewing",
+    "description": "Bespoke tailoring and made-to-measure custom suits for men and women in Kigali, Rwanda.",
+    "url": "https://mrsewingfashion.com/",
+    "image": "https://mrsewingfashion.com/1.jpeg",
+    "areaServed": "Kigali, Rwanda",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MIC Building, Downtown",
+      "addressLocality": "Nyarugenge, Kigali",
+      "addressCountry": "RW"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  }
+  </script>
+
+  <!-- Font Awesome CDN for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -33,21 +70,7 @@
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; }
     img { max-width: 100%; }
 
-    /* Full Width Container Framework for Dynamic Component Mounting */
-    #site-header,
-    #hero-section,
-    #customers-section,
-    #collections-section,
-    #services-section,
-    #why-mtm-section,
-    #why-choose-section,
-    #site-footer {
-      width: 100%;
-    }
-
-    /* ============================================================
-       1. HEADER SECTION
-       ============================================================ */
+    /* Header Bar */
     header {
       background-color: #141414;
       border-bottom: 1px solid #2a2a2a;
@@ -64,8 +87,8 @@
     .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
     nav { flex-shrink: 1; overflow: hidden; }
     nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
-    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; line-height: 1.4; display: inline-block; padding: 2px 0; }
-    nav a:hover, nav a.active { color: #d4af37; }
+    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover { color: #d4af37; }
 
     .order-btn {
       background-color: #d4af37;
@@ -79,91 +102,16 @@
       font-size: clamp(0.68rem, 1.3vw, 0.85rem);
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: background-color 0.3s ease;
       display: inline-block;
-      cursor: pointer;
     }
-    .order-btn:hover { background-color: #f3e5ab; transform: translateY(-2px); }
+    .order-btn:hover { background-color: #f3e5ab; }
 
-    /* ============================================================
-       2. HERO SECTION
-       ============================================================ */
-    .hero-section {
-      position: relative;
-      background: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.85)), url('The Executive Line.jpeg') center/cover no-repeat;
-      padding: clamp(60px, 12vw, 140px) 4%;
-      text-align: center;
-      border-bottom: 1px solid #2a2a2a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-subtitle {
-      color: #d4af37;
-      font-size: clamp(0.75rem, 1.5vw, 1.1rem);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    .hero-title {
-      font-size: clamp(1.8rem, 5vw, 3.8rem);
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: clamp(1px, 0.3vw, 4px);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      max-width: 1000px;
-    }
-    .hero-description {
-      font-size: clamp(0.85rem, 1.8vw, 1.2rem);
-      color: #cccccc;
-      max-width: 750px;
-      line-height: 1.6;
-      margin-bottom: clamp(24px, 4vw, 36px);
-    }
-    .hero-actions {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .hero-btn-primary {
-      background-color: #d4af37;
-      color: #000000;
-      padding: 12px 28px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      font-size: clamp(0.75rem, 1.4vw, 0.95rem);
-      display: inline-block;
-    }
-    .hero-btn-primary:hover { background-color: #f3e5ab; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25); }
-    .hero-btn-secondary {
-      background-color: transparent;
-      color: #d4af37;
-      border: 2px solid #d4af37;
-      padding: 10px 26px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: all 0.3s ease, transform 0.2s ease;
-      font-size: clamp(0.75rem, 1.4vw, 0.95rem);
-      display: inline-block;
-      cursor: pointer;
-    }
-    .hero-btn-secondary:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
+    /* Intro Heading Strip */
+    .search-strip { background-color: #0f0f0f; border-bottom: 1px solid #2a2a2a; padding: clamp(12px, 2vw, 22px) 4%; text-align: center; }
+    .search-strip h1 { font-size: clamp(0.8rem, 1.8vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 0; }
 
-    /* ============================================================
-       3. HAPPY CUSTOMERS SECTION
-       ============================================================ */
+    /* SECTION 1: Happy Customers (text left, photos right on every screen) */
     .customers-section {
       padding: clamp(28px, 6vw, 80px) 4%;
       background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
@@ -186,60 +134,35 @@
     .highlight-box p { font-size: clamp(0.68rem, 1.1vw, 0.9rem); color: #cccccc; line-height: 1.5; }
 
     .customers-grid { flex: 1.2 1 55%; min-width: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 2vw, 25px); max-width: 850px; }
-    .customer-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: clamp(6px, 1.4vw, 18px); transition: transform 0.3s ease, border-color 0.3s ease; text-align: center; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+    .customer-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: clamp(6px, 1.4vw, 18px); transition: transform 0.3s ease, border-color 0.3s ease; }
     .customer-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-    .suit-image { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; object-position: center top; border-radius: 4px; display: block; }
-    .star-rating { color: #d4af37; font-size: clamp(0.75rem, 1.2vw, 0.95rem); margin-top: 10px; }
-    .card-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px clamp(8px, 2vw, 25px); margin-top: clamp(6px, 1vw, 12px); }
+    .suit-image { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 4px; display: block; }
+    .card-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px clamp(8px, 2vw, 25px); margin-top: clamp(8px, 1.5vw, 18px); }
     .card-actions a { color: #d4af37; text-decoration: none; font-weight: 600; font-size: clamp(0.6rem, 1.2vw, 0.9rem); text-transform: uppercase; transition: color 0.3s ease; }
     .card-actions a:hover { color: #ffffff; }
 
     /* Section Divider Line */
     .section-divider { height: 1px; background: linear-gradient(to right, #0b0b0b, #d4af37, #0b0b0b); max-width: 1600px; margin: 0 auto; }
 
-    /* ============================================================
-       4. COLLECTIONS SECTION
-       ============================================================ */
+    /* SECTION 2: Our Collections */
     .collections-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
     .section-header { text-align: center; margin-bottom: clamp(26px, 5vw, 60px); }
     .section-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
     .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
     .collection-block { margin-bottom: clamp(30px, 5vw, 70px); }
-    .collection-title-wrapper { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); margin-bottom: clamp(16px, 2.5vw, 30px); }
-    .collection-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(5px, 1vw, 8px) clamp(14px, 3vw, 30px); color: #ffffff; font-size: clamp(0.72rem, 1.8vw, 1.2rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background-color: #141414; white-space: nowrap; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; display: inline-block; }
-    .collection-pill:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
+    .collection-title-wrapper { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); margin-bottom: clamp(12px, 2vw, 25px); }
+    .collection-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(5px, 1vw, 8px) clamp(14px, 3vw, 30px); color: #ffffff; font-size: clamp(0.72rem, 1.8vw, 1.2rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background-color: #141414; white-space: nowrap; }
     .title-line { flex: 1; height: 1px; background-color: #2a2a2a; }
 
-    .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 2.5vw, 30px); }
-    .collection-item-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: transform 0.3s ease, border-color 0.3s ease; }
-    .collection-item-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-    .collection-item-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; display: block; }
-    .collection-item-info { padding: clamp(12px, 2vw, 20px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .collection-item-info h3 { font-size: clamp(0.85rem, 1.5vw, 1.2rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
-    .collection-item-info p { font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: #d4af37; margin-bottom: 14px; font-style: italic; }
-    .collection-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; font-size: clamp(0.65rem, 1.1vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease, transform 0.2s ease; display: inline-block; }
-    .collection-btn:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
+    .collection-content { display: flex; flex-direction: row; border: 1px solid #2a2a2a; background-color: #141414; border-radius: 8px; overflow: hidden; align-items: stretch; }
+    .side-callout { width: clamp(80px, 18vw, 220px); border-right: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: clamp(8px, 2vw, 25px); text-align: center; background: linear-gradient(180deg, #141414 0%, #1a1a1a 100%); flex-shrink: 0; }
+    .side-callout span { font-family: 'Georgia', serif; font-style: italic; font-size: clamp(0.75rem, 1.9vw, 1.4rem); color: #d4af37; margin-bottom: 8px; }
+    .cta-subtitle { font-size: clamp(0.6rem, 1.2vw, 0.85rem); text-transform: uppercase; letter-spacing: 1px; color: #aaaaaa; }
+    .collection-image-container { flex: 1; min-width: 0; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #0b0b0b; }
+    .collection-image { width: 100%; height: auto; max-height: 700px; object-fit: contain; display: block; transition: transform 0.5s ease; }
+    .collection-image:hover { transform: scale(1.02); }
 
-    /* ============================================================
-       5. SERVICES & PRIVATE FITTINGS SECTION
-       ============================================================ */
-    .services-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
-    .services-header { text-align: center; margin-bottom: clamp(26px, 5vw, 60px); }
-    .services-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
-    .services-subtitle { color: #cccccc; font-size: clamp(0.8rem, 1.4vw, 1.05rem); margin-top: 8px; font-style: italic; }
-    .services-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 30px); }
-    .service-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; padding: clamp(20px, 3vw, 35px) clamp(16px, 2.5vw, 28px); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease, border-color 0.3s ease; }
-    .service-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-    .service-icon { color: #d4af37; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 16px; }
-    .service-card h3 { color: #ffffff; font-size: clamp(0.95rem, 1.8vw, 1.3rem); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 700; line-height: 1.3; }
-    .service-card p { color: #aaaaaa; font-size: clamp(0.78rem, 1.3vw, 0.95rem); line-height: 1.7; margin-bottom: 22px; flex-grow: 1; }
-    .service-action-btn { background-color: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 10px 20px; font-size: clamp(0.7rem, 1.2vw, 0.85rem); text-transform: uppercase; font-weight: 700; border-radius: 4px; text-decoration: none; transition: all 0.3s ease, transform 0.2s ease; display: inline-block; text-align: center; }
-    .service-action-btn:hover { background-color: #d4af37; color: #000000; transform: translateY(-2px); }
-
-    /* ============================================================
-       6. WHY MADE TO MEASURE SECTION
-       ============================================================ */
+    /* SECTION 3: Why Made to Measure? */
     .why-mtm-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
     .why-mtm-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; align-items: stretch; }
     .why-mtm-text { flex: 1; min-width: 0; padding: clamp(16px, 4vw, 50px) clamp(12px, 3.5vw, 40px); align-self: center; }
@@ -249,9 +172,7 @@
     .why-mtm-image-wrapper { flex: 1; min-width: 0; min-height: clamp(200px, 38vw, 400px); overflow: hidden; border-left: 1px solid #2a2a2a; }
     .why-mtm-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* ============================================================
-       7. WHY CHOOSE US SECTION
-       ============================================================ */
+    /* SECTION 4: Why Customers Choose Mr. Sewing */
     .why-choose-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; }
     .why-choose-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 8px; overflow: hidden; gap: clamp(0px, 2vw, 30px); }
     .why-choose-left { flex: 1.2; min-width: 0; padding: clamp(16px, 4vw, 50px) clamp(12px, 3.5vw, 40px); }
@@ -264,9 +185,7 @@
     .why-choose-right { flex: 1; min-width: 0; overflow: hidden; border-left: 1px solid #2a2a2a; }
     .why-choose-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* ============================================================
-       8. FOOTER SECTION
-       ============================================================ */
+    /* SECTION 5: Footer */
     footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
     .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; }
     .footer-col { min-width: 0; }
@@ -291,80 +210,92 @@
     .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
     .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
 
-    /* ============================================================
-       9. QUICK ORDER MODAL POPUP (WHATSAPP QUICK ORDER)
-       ============================================================ */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
+    /* Order popup (terms & conditions, then WhatsApp) */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
     .modal-overlay.open, .modal-overlay:target { display: flex; }
-    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
-    .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
-    .modal-close:hover { color: #d4af37; }
+    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(24px, 4vw, 32px); padding-top: 48px; position: relative; box-sizing: border-box; }
+    .modal-close { position: absolute; top: 8px; right: 10px; z-index: 5; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; background: #222222; border: 1px solid #444444; border-radius: 50%; color: #ffffff; font-size: 2rem; line-height: 1; cursor: pointer; }
+    .modal-close:hover, .modal-close:focus-visible { color: #d4af37; border-color: #d4af37; outline: 2px solid #d4af37; outline-offset: 2px; }
     .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
     .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
     .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
     .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
-    .terms-check a { color: #d4af37; text-decoration: underline; }
+    .terms-check a { color: #d4af37; }
     .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
     .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
     .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
 
-    /* Mobile Responsive Overrides */
+    /* ABOUT US, FAQS & CONTACT SECTIONS */
+    .info-section { padding: clamp(32px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
+    .info-panel { background: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; padding: clamp(18px, 4vw, 48px); }
+    .info-section h2 { color: #d4af37; font-size: clamp(1.2rem, 3vw, 2.2rem); text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); margin-bottom: 16px; }
+    .info-section h3 { color: #d4af37; font-size: clamp(0.95rem, 2vw, 1.25rem); text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 8px; }
+    .info-section p, .info-section li { color: #cccccc; font-size: clamp(0.85rem, 1.4vw, 1rem); line-height: 1.8; }
+    .about-grid, .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 3vw, 28px); }
+    .about-card, .contact-card { background: #0f0f0f; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 6px; padding: clamp(14px, 2.5vw, 24px); }
+    .about-card h3, .contact-card h3 { margin-top: 0; }
+    .contact-card a { color: #d4af37; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-card a:hover { color: #ffffff; text-decoration: underline; }
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-category { margin: 24px 0 10px; color: #d4af37; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem; }
+    .faq-item { border: 1px solid #2a2a2a; border-radius: 6px; background: #0f0f0f; overflow: hidden; }
+    .faq-item summary { cursor: pointer; color: #f5f5f5; font-weight: 600; padding: 15px 18px; line-height: 1.5; list-style: none; position: relative; padding-right: 42px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: #d4af37; position: absolute; right: 18px; top: 12px; font-size: 1.35rem; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-answer { padding: 0 18px 18px; }
+    .faq-answer ul { padding-left: 22px; margin: 8px 0; }
+    .faq-answer li { margin-bottom: 5px; }
+    .price-note { margin-top: 12px; padding: 12px; background: #141414; border-left: 2px solid #d4af37; }
+    .contact-card p + p { margin-top: 8px; }
+    @media (max-width: 700px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .info-section { scroll-margin-top: 140px; }
+    }
+
+    /* Small screens: everything stays side by side; only the tightest spots adjust */
     @media (max-width: 700px) {
       header { flex-wrap: wrap; row-gap: 8px; }
       nav { order: 3; width: 100%; overflow: visible; }
-      nav ul { gap: 10px 14px; flex-wrap: wrap; white-space: normal; line-height: 1.4; }
-      .collections-section, .services-section, .why-mtm-section { scroll-margin-top: 140px; }
-      .customers-section { flex-direction: column; }
+      nav ul { gap: 8px 14px; flex-wrap: wrap; white-space: normal; }
+      .collections-section, .why-mtm-section { scroll-margin-top: 140px; }
       .service-highlights { grid-template-columns: 1fr; }
-      .customers-grid { grid-template-columns: 1fr; width: 100%; }
-      .collection-grid, .services-grid { grid-template-columns: 1fr; }
-      .why-mtm-container, .why-choose-container { flex-direction: column; }
-      .why-mtm-image-wrapper, .why-choose-right { border-left: none; border-top: 1px solid #2a2a2a; }
+      .customers-grid { grid-template-columns: 1fr; }
+      .suit-image { aspect-ratio: 3 / 4; }
       .footer-top { grid-template-columns: repeat(2, 1fr); }
       .social-icons a { width: 42px; height: 42px; font-size: 1.2rem; }
     }
+  
+    /* Component mounts span the full viewport width without adding layout constraints. */
+    .site-component { width: 100%; min-width: 0; }
+    #main-content { display: block; width: 100%; }
+    :focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
   </style>
 </head>
-<body>
+<body id="top">
+  <!-- Shared site header: loaded from header.html -->
+  <div id="site-header" class="site-component" aria-label="Website header"></div>
 
-  <!-- Dynamic Section Holders -->
-  <div id="site-header">
-    <header id="home">
-      <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="suits.html">Suits</a></li>
-          <li><a href="measurements.html">Measurements Guide</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-      <a href="#orderModal" class="order-btn">Order</a>
-    </header>
-  </div>
+  <main id="main-content">
+    <!-- Homepage components load in this exact order. Keep these IDs in sync with loadComponents(). -->
+    <div id="hero-section" class="site-component"></div>
+    <div id="customers-section" class="site-component"></div>
+    <div id="collections-section" class="site-component"></div>
+    <div id="services-section" class="site-component"></div>
+    <div id="why-mtm-section" class="site-component"></div>
+    <div id="why-choose-section" class="site-component"></div>
+  </main>
 
-  <div id="hero-section">
-    <section class="hero-section">
-      <div class="hero-subtitle">Bespoke Tailoring & Custom Suits</div>
-      <h1 class="hero-title">Elegance & Precision Craftsmanship</h1>
-      <p class="hero-description">Experience Kigali’s premier made-to-measure fashion house. Handcrafted luxury suits for men and women, tailored to your exact posture and silhouette.</p>
-      <div class="hero-actions">
-        <a href="suits.html" class="hero-btn-primary">Explore Collections</a>
-        <a href="booking.html" class="hero-btn-secondary">Book Consultation</a>
-      </div>
-    </section>
-  </div>
+  <!-- Shared site footer: loaded from footer.html -->
+  <div id="site-footer" class="site-component"></div>
 
-  <div id="customers-section"></div>
-  <div id="collections-section"></div>
-  <div id="services-section"></div>
-  <div id="why-mtm-section"></div>
-  <div id="why-choose-section"></div>
-  <div id="site-footer"></div>
+  <noscript>
+    <p style="padding:20px;text-align:center;color:#f5f5f5;background:#141414;">
+      Mr. Sewing Fashion — bespoke tailoring and custom suits in Kigali, Rwanda. Please enable JavaScript to view all website sections.
+    </p>
+  </noscript>
 
-  <!-- Order Modal Popup (Quick WhatsApp Order) -->
+  <!-- Order popup: customer must agree to Terms & Conditions before WhatsApp opens -->
   <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
     <div class="modal-box">
       <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
@@ -372,7 +303,7 @@
       <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
       <label class="terms-check">
         <input type="checkbox" id="termsAgree">
-        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+        <span>I have read and agree to the <a href="#terms-and-conditions" id="termsLink">Terms &amp; Conditions</a>.</span>
       </label>
       <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
       <div class="terms-hint" id="termsHint"></div>
@@ -380,69 +311,83 @@
   </div>
 
   <script>
-    // Fallback Component Loader
-    const components = [
-      { id: 'customers-section', file: 'happy-customers.html' },
-      { id: 'collections-section', file: 'collections.html' },
-      { id: 'services-section', file: 'services.html' },
-      { id: 'why-mtm-section', file: 'why-mtm.html' },
-      { id: 'why-choose-section', file: 'why-choose.html' },
-      { id: 'site-footer', file: 'footer.html' }
-    ];
+    /* GitHub Pages-compatible component loader. Files must be in the same folder as index.html. */
+    (async function loadComponents() {
+      const components = [
+        { id: 'site-header', file: 'header.html' },
+        { id: 'hero-section', file: 'hero.html' },
+        { id: 'customers-section', file: 'happy-customers.html' },
+        { id: 'collections-section', file: 'collections.html' },
+        { id: 'services-section', file: 'services.html' },
+        { id: 'why-mtm-section', file: 'why-mtm.html' },
+        { id: 'why-choose-section', file: 'why-choose.html' },
+        { id: 'site-footer', file: 'footer.html' }
+      ];
 
-    components.forEach(comp => {
-      fetch(comp.file)
-        .then(res => res.ok ? res.text() : '')
-        .then(data => {
-          if (data) document.getElementById(comp.id).innerHTML = data;
-        })
-        .catch(err => console.log(`Notice: Loading ${comp.file} via static fallback`));
-    });
+      const results = await Promise.allSettled(components.map(async (component) => {
+        const mount = document.getElementById(component.id);
+        try {
+          const response = await fetch(component.file, { cache: 'no-cache' });
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          mount.innerHTML = await response.text();
+          mount.dataset.loaded = 'true';
+        } catch (error) {
+          console.error('Could not load ' + component.file + ':', error);
+          mount.innerHTML = '<section style="padding:16px 4%;color:#ccc;background:#141414">This section could not be loaded. Please refresh the page later.</section>';
+          mount.dataset.loaded = 'false';
+        }
+      }));
 
-    // Modal Interaction Logic
-    (function () {
-      var modal = document.getElementById('orderModal');
-      var agree = document.getElementById('termsAgree');
-      var wa = document.getElementById('whatsappBtn');
-      var hint = document.getElementById('termsHint');
+      /* Announce when components are ready for accessibility and other scripts. */
+      document.documentElement.dataset.componentsLoaded = 'true';
+      document.dispatchEvent(new CustomEvent('sitecomponentsloaded', { detail: { results } }));
+    })();
 
-      function openModal() { modal.classList.add('open'); }
+    /* Shared order modal: delegated clicks work for buttons injected from header/footer. */
+    (function setupOrderModal() {
+      const modal = document.getElementById('orderModal');
+      const agree = document.getElementById('termsAgree');
+      const whatsapp = document.getElementById('whatsappBtn');
+      const hint = document.getElementById('termsHint');
+      const closeButton = document.getElementById('orderClose');
+      const termsLink = document.getElementById('termsLink');
+      if (!modal || !agree || !whatsapp || !hint) return;
+
+      function openModal() {
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      }
       function closeModal() {
         modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
         agree.checked = false;
-        wa.setAttribute('aria-disabled', 'true');
+        whatsapp.setAttribute('aria-disabled', 'true');
         hint.textContent = '';
-        if (location.hash === '#orderModal') {
-          history.replaceState(null, '', location.pathname + location.search);
-        }
+        if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
       }
 
-      document.addEventListener('click', function (e) {
-        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
-        if (btn) { e.preventDefault(); openModal(); }
+      document.addEventListener('click', function (event) {
+        const button = event.target.closest && event.target.closest('.order-btn');
+        if (button) { event.preventDefault(); openModal(); }
       });
-
       agree.addEventListener('change', function () {
-        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+        whatsapp.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
         hint.textContent = '';
       });
-
-      wa.addEventListener('click', function (e) {
+      whatsapp.addEventListener('click', function (event) {
         if (!agree.checked) {
-          e.preventDefault();
+          event.preventDefault();
           hint.textContent = 'Please agree to the Terms & Conditions to continue.';
         } else {
-          setTimeout(closeModal, 300);
+          closeModal();
         }
       });
-
-      document.getElementById('orderClose').addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-
-      if (location.hash === '#orderModal') { openModal(); }
+      if (termsLink) termsLink.addEventListener('click', closeModal);
+      if (closeButton) closeButton.addEventListener('click', function (event) { event.preventDefault(); closeModal(); });
+      modal.addEventListener('click', function (event) { if (event.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeModal(); });
+      if (location.hash === '#orderModal') openModal();
     })();
   </script>
-
 </body>
 </html>
