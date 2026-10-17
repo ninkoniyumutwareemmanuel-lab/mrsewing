@@ -1,0 +1,149 @@
+<style>
+    /* Bespoke Services & Private Fittings Section */
+    .services-section {
+        padding: clamp(28px, 6vw, 80px) 4%;
+        max-width: 1600px;
+        margin: 0 auto;
+        background-color: #0b0b0b;
+        scroll-margin-top: 95px;
+    }
+    .services-header {
+        text-align: center;
+        margin-bottom: clamp(26px, 5vw, 60px);
+    }
+    .services-header h2 {
+        font-size: clamp(1.1rem, 3vw, 2.2rem);
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: clamp(1px, 0.3vw, 3px);
+        font-weight: 700;
+    }
+    .services-subtitle {
+        color: #cccccc;
+        font-size: clamp(0.8rem, 1.4vw, 1.05rem);
+        margin-top: 8px;
+        font-style: italic;
+    }
+    .services-divider {
+        height: 2px;
+        width: 80px;
+        background-color: #d4af37;
+        margin: 15px auto 0;
+    }
+
+    /* 3-Card Grid Setup */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(16px, 2.5vw, 30px);
+    }
+    .service-card {
+        background-color: #141414;
+        border: 1px solid #2a2a2a;
+        border-top: 3px solid #d4af37;
+        border-radius: 8px;
+        padding: clamp(20px, 3vw, 35px) clamp(16px, 2.5vw, 28px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+        border-color: #d4af37;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.15);
+    }
+    .service-icon {
+        color: #d4af37;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        margin-bottom: 16px;
+    }
+    .service-card h3 {
+        color: #ffffff;
+        font-size: clamp(0.95rem, 1.8vw, 1.3rem);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    .service-card p {
+        color: #aaaaaa;
+        font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+        line-height: 1.7;
+        margin-bottom: 22px;
+        flex-grow: 1;
+    }
+    .service-action-btn {
+        background-color: transparent;
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        padding: 10px 20px;
+        font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.3s ease, transform 0.2s ease;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+    }
+    .service-action-btn:hover {
+        background-color: #d4af37;
+        color: #000000;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<section class="services-section" id="services">
+    <div class="services-header">
+        <h2>Bespoke Services &amp; Private Fittings</h2>
+        <p class="services-subtitle">Precision tailoring, VIP house calls, and professional garment adjustments across Kigali, Rwanda.</p>
+        <div class="services-divider"></div>
+    </div>
+
+    <div class="services-grid">
+        <!-- Service 1: Workplace Fittings -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon"><i class="fas fa-store"></i></div>
+                <h3>Workplace Consultations &amp; Tailoring</h3>
+                <p>
+                    Visit premier fashion atelier workplaces in Kigali, at the MIC Building in Downtown Nyarugenge or Norvège. Browse exclusive suiting fabrics, explore custom design models, and get measured by master tailors in an environment dedicated to excellence.
+                </p>
+            </div>
+            <a href="#orderModal" class="service-action-btn order-btn">Book Workplace Appointment</a>
+        </article>
+
+        <!-- Service 2: VIP House Calls -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                <h3>VIP Mobile Fittings &amp; House Calls</h3>
+                <p>
+                    Maximum convenience for executives, diplomats, and busy professionals. Our dedicated tailor comes directly to your home, private residence, office, or hotel anywhere in Kigali for private measurements, fabric selections, and personalized fittings.
+                </p>
+            </div>
+            <a href="#orderModal" class="service-action-btn order-btn">Request Mobile House Call</a>
+        </article>
+
+        <!-- Service 3: Clothing Adjustments & Restyling -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon"><i class="fas fa-cut"></i></div>
+                <h3>Garment Adjustments &amp; Restyling</h3>
+                <p>
+                    Revitalize your wardrobe with expert tailoring and clothing alterations in Kigali. Bring in personal suits, trousers, coats, or dresses for precision resizing, waist adjustments, tapering, hem refitting, and custom restyling to achieve a flawless fit.
+                </p>
+            </div>
+            <a href="#orderModal" class="service-action-btn order-btn">Schedule Garment Adjustment</a>
+        </article>
+    </div>
+</section>
