@@ -20,6 +20,9 @@
     <meta property="og:image" content="MR LOGO.jpeg">
     <meta property="og:type" content="website">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --bg-color: #0d0d0d;
@@ -200,23 +203,8 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="logo-container">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo">
-            <a href="index.html" class="logo-text">MR. SEWING</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="suits.html">Suits</a></li>
-                <li><a href="measurements.html">Measurements Guide</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header Placeholder -->
+    <header id="site-header"></header>
 
     <!-- Main Content -->
     <main class="container">
@@ -324,10 +312,23 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-    </footer>
+    <!-- Footer Placeholder -->
+    <footer id="site-footer"></footer>
+
+    <!-- External Script to Fetch Header & Footer -->
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('site-header').innerHTML = data;
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('site-footer').innerHTML = data;
+        });
+    </script>
 
 </body>
 </html>
