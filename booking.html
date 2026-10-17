@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation | Mr. Sewing Bespoke Tailoring Kigali</title>
+
+  <meta name="description" content="Book a private tailoring consultation or VIP house call with Mr. Sewing in Kigali, Rwanda. Custom suit fittings, workplace appointments, and garment alterations.">
+  <meta name="author" content="Mr. Sewing">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Header Styling */
+    header {
+      background-color: #141414;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 12px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; mix-blend-mode: screen; }
+    nav ul { display: flex; list-style: none; gap: clamp(10px, 2vw, 20px); align-items: center; }
+    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.72rem, 1.4vw, 0.92rem); font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover { color: #d4af37; }
+
+    /* Main Container */
+    .booking-wrapper {
+      flex: 1;
+      padding: clamp(30px, 6vw, 80px) 4%;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .booking-card {
+      background-color: #141414;
+      border: 1px solid #2a2a2a;
+      border-top: 3px solid #d4af37;
+      border-radius: 8px;
+      padding: clamp(20px, 5vw, 40px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .booking-title {
+      color: #d4af37;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .booking-desc {
+      color: #aaaaaa;
+      text-align: center;
+      font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+      margin-bottom: clamp(24px, 4vw, 36px);
+      line-height: 1.5;
+    }
+
+    /* Form Fields */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(12px, 2.5vw, 20px);
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+    label {
+      color: #d4af37;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      background-color: #0b0b0b;
+      border: 1px solid #2a2a2a;
+      color: #ffffff;
+      padding: 12px 14px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #d4af37;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Terms & Submit Button */
+    .terms-box {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #cccccc;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .terms-box input {
+      accent-color: #d4af37;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .submit-btn {
+      background-color: #d4af37;
+      color: #000000;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .submit-btn:hover {
+      background-color: #f3e5ab;
+      transform: translateY(-2px);
+    }
+
+    /* Success Message State */
+    .success-box {
+      display: none;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    .success-box i {
+      font-size: 3.5rem;
+      color: #d4af37;
+      margin-bottom: 16px;
+    }
+    .success-box h3 {
+      color: #ffffff;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .success-box p {
+      color: #cccccc;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .back-home-btn {
+      display: inline-block;
+      background-color: transparent;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      padding: 10px 24px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .back-home-btn:hover {
+      background-color: #d4af37;
+      color: #000000;
+    }
+
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full-width { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="suits.html">Suits</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Booking Form Wrapper -->
+  <main class="booking-wrapper">
+    <div class="booking-card">
+      <h1 class="booking-title">Book a Consultation</h1>
+      <p class="booking-desc">Schedule a private session with our master tailor at our workplace or request a VIP mobile house call across Kigali.</p>
+
+      <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c72d28a35">
+        <input type="hidden" name="subject" value="New Consultation Booking - Mr. Sewing Website">
+        <input type="hidden" name="from_name" value="Mr. Sewing Website">
+
+        <div class="form-grid">
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="Full Name" placeholder="e.g. Emmanuel Ninkoniyumutware" required>
+          </div>
+
+          <!-- WhatsApp / Phone Number -->
+          <div class="form-group">
+            <label for="phone">WhatsApp / Phone Number *</label>
+            <input type="tel" id="phone" name="Phone Number" placeholder="+250 78X XXX XXX" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="Email Address" placeholder="mrsewingfashiondesigner@gmail.com" required>
+          </div>
+
+          <!-- Consultation Type -->
+          <div class="form-group">
+            <label for="serviceType">Service Type *</label>
+            <select id="serviceType" name="Service Type" required>
+              <option value="Workplace Fitting - MIC Building Downtown">Workplace Visit - Downtown MIC Building</option>
+              <option value="Workplace Fitting - Norvège KN 441 St">Workplace Visit - Norvège Branch</option>
+              <option value="VIP Mobile House Call - Residence / Hotel / Office">VIP House Call (Mobile Fitting in Kigali)</option>
+              <option value="Garment Alterations & Restyling">Garment Alterations & Restyling</option>
+            </select>
+          </div>
+
+          <!-- Date -->
+          <div class="form-group">
+            <label for="preferredDate">Preferred Date *</label>
+            <input type="date" id="preferredDate" name="Preferred Date" required>
+          </div>
+
+          <!-- Time Slot -->
+          <div class="form-group">
+            <label for="preferredTime">Preferred Time *</label>
+            <select id="preferredTime" name="Preferred Time" required>
+              <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+              <option value="Afternoon (12:00 PM - 3:00 PM)">Afternoon (12:00 PM - 3:00 PM)</option>
+              <option value="Late Afternoon (3:00 PM - 5:00 PM)">Late Afternoon (3:00 PM - 5:00 PM)</option>
+            </select>
+          </div>
+
+          <!-- Location / Address Notes -->
+          <div class="form-group full-width">
+            <label for="locationDetails">Location / Special Requests</label>
+            <textarea id="locationDetails" name="Location or Notes" placeholder="If requesting a house call, specify your neighborhood/landmark. You can also describe the garment or suit style you want."></textarea>
+          </div>
+        </div>
+
+        <!-- Agreement -->
+        <div class="terms-box">
+          <input type="checkbox" id="agreeTerms" required>
+          <label for="agreeTerms">I agree to be contacted via WhatsApp/Email regarding my consultation booking.</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Confirm Consultation Booking</button>
+      </form>
+
+      <!-- Success Screen -->
+      <div class="success-box" id="successBox">
+        <i class="fas fa-calendar-check"></i>
+        <h3>Booking Request Received!</h3>
+        <p>Thank you for booking with Mr. Sewing. We have received your consultation details and will reach out shortly via WhatsApp/Email to confirm your time slot.</p>
+        <a href="index.html" class="back-home-btn">Return to Homepage</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const successBox = document.getElementById('successBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async (response) => {
+        if (response.status === 200) {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try submitting again or contact us directly on WhatsApp.');
+        }
+      })
+      .catch(error => {
+        alert('Form submission error. Please try again.');
+      });
+    });
+  </script>
+
+</body>
+</html>
