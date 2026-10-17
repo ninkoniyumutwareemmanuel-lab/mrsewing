@@ -26,74 +26,15 @@
 
   <style>
     :root{--black:#0b0b0b;--dark:#141414;--gold:#d4af37;--white:#f5f5f5;--grey:#aaa;--border:#2a2a2a}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}body{font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;background:var(--black);color:var(--white);line-height:1.7}a{color:inherit}img{max-width:100%;display:block}a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}body{font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;background:var(--black);color:var(--white);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}a{color:inherit}img{max-width:100%;display:block}a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
     
-    /* Header Bar */
-    header {
-      background-color: #141414;
-      border-bottom: 1px solid #2a2a2a;
-      padding: 12px 4%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: clamp(6px, 2vw, 15px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
-    nav { flex-shrink: 1; overflow: hidden; }
-    nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
-    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
-    nav a:hover, nav a.active { color: #d4af37; }
-
-    .order-btn {
-      background-color: #d4af37;
-      color: #000000;
-      padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: clamp(0.68rem, 1.3vw, 0.85rem);
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-    .order-btn:hover { background-color: #f3e5ab; }
+    #site-header, #site-footer { width: 100%; }
 
     .page-hero{text-align:center;padding:75px 6% 65px;background:radial-gradient(ellipse at top,#242015 0%,var(--black) 70%);border-bottom:1px solid var(--border)}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;font-weight:700;margin-bottom:12px}.page-hero h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.2;margin-bottom:18px}.page-hero h1 span{color:var(--gold)}.page-hero p{max-width:720px;margin:0 auto 26px;color:var(--grey);font-size:1.05rem}.jump-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}.jump-links a{border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:9px 22px;border-radius:30px;font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:.85rem;transition:background .3s,color .3s}.jump-links a:hover{background:var(--gold);color:#000}
-    .category-section{max-width:1300px;margin:auto;padding:clamp(36px,6vw,70px) 5%}.title-wrapper{display:flex;align-items:center;gap:clamp(10px,2vw,20px);margin-bottom:clamp(18px,3vw,32px)}.title-pill{border:1px solid var(--gold);border-radius:30px;padding:clamp(6px,1vw,9px) clamp(18px,3vw,34px);color:#fff;font-size:clamp(.95rem,2.2vw,1.4rem);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:var(--dark)}.title-line{flex:1;height:1px;background:var(--border)}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,25px);align-items:start}.category-card{background:var(--dark);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,transform .3s}.category-card:hover{border-color:var(--gold);transform:translateY(-5px)}.category-photo{background:var(--black);border-bottom:1px solid var(--border)}.photo-link{display:block;text-decoration:none;cursor:pointer}.category-photo img{width:100%;height:auto;display:block;transition:opacity .25s}.photo-link:hover img{opacity:.82}.category-photo.no-photo{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px}.category-photo.no-photo img{display:none}.photo-hint{display:none;color:#999;font-size:.85rem;line-height:1.5;overflow-wrap:anywhere}.category-photo.no-photo .photo-hint{display:block}.category-info{padding:clamp(10px,2vw,18px)}.category-info h3{color:var(--gold);text-transform:uppercase;letter-spacing:1px;font-size:clamp(.76rem,1.6vw,1.05rem);margin-bottom:6px;line-height:1.35}.category-info p{color:var(--grey);font-size:clamp(.68rem,1.3vw,.92rem);line-height:1.6}.section-divider{height:1px;background:linear-gradient(to right,var(--black),var(--gold),var(--black));max-width:1300px;margin:0 auto}
+    
+    .category-section{max-width:1300px;margin:auto;padding:clamp(36px,6vw,70px) 5%}.title-wrapper{display:flex;align-items:center;gap:clamp(10px,2vw,20px);margin-bottom:clamp(18px,3vw,32px)}.title-pill{border:1px solid var(--gold);border-radius:30px;padding:clamp(6px,1vw,9px) clamp(18px,3vw,34px);color:#fff;font-size:clamp(.95rem,2.2vw,1.4rem);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:var(--dark);text-decoration:none;display:inline-block}.title-pill:hover{background:var(--gold);color:#000}.title-line{flex:1;height:1px;background:var(--border)}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,25px);align-items:start}.category-card{background:var(--dark);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,transform .3s}.category-card:hover{border-color:var(--gold);transform:translateY(-5px)}.category-photo{background:var(--black);border-bottom:1px solid var(--border)}.photo-link{display:block;text-decoration:none;cursor:pointer}.category-photo img{width:100%;height:auto;display:block;transition:opacity .25s}.photo-link:hover img{opacity:.82}.category-photo.no-photo{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px}.category-photo.no-photo img{display:none}.photo-hint{display:none;color:#999;font-size:.85rem;line-height:1.5;overflow-wrap:anywhere}.category-photo.no-photo .photo-hint{display:block}.category-info{padding:clamp(10px,2vw,18px)}.category-info h3{color:var(--gold);text-transform:uppercase;letter-spacing:1px;font-size:clamp(.76rem,1.6vw,1.05rem);margin-bottom:6px;line-height:1.35}.category-info p{color:var(--grey);font-size:clamp(.68rem,1.3vw,.92rem);line-height:1.6}.section-divider{height:1px;background:linear-gradient(to right,var(--black),var(--gold),var(--black));max-width:1300px;margin:0 auto}
     .cta-section{text-align:center;background:linear-gradient(135deg,#19170f,#0b0b0b);border-top:1px solid var(--border);padding:60px 6%}.cta-section h2{color:var(--gold);font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:14px}.cta-section p{color:var(--grey);max-width:650px;margin:0 auto 24px}.cta-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}.gold-button{display:inline-block;padding:12px 25px;background:var(--gold);color:#000;text-decoration:none;border-radius:4px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:.9rem;transition:background .3s}.gold-button:hover{background:#f3e5ab}
     
-    /* Footer */
-    footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
-    .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; }
-    .footer-col { min-width: 0; }
-    .footer-col h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 700; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 12px; }
-    .footer-col ul a { color: #aaaaaa; text-decoration: none; font-size: clamp(0.75rem, 1.3vw, 0.92rem); transition: color 0.3s ease; }
-    .footer-col ul a:hover { color: #d4af37; }
-    .footer-col p { color: #aaaaaa; font-size: clamp(0.75rem, 1.3vw, 0.92rem); line-height: 1.6; margin-bottom: 10px; }
-    .footer-col .location-block { margin-bottom: 16px; }
-    .footer-col .location-block strong { color: #ffffff; display: block; font-size: 0.95rem; margin-bottom: 3px; }
-    .map-link { color: #d4af37; text-decoration: none; font-size: clamp(0.72rem, 1.2vw, 0.88rem); font-weight: 600; display: inline-block; margin-top: 4px; transition: color 0.3s ease; }
-    .map-link:hover { color: #ffffff; text-decoration: underline; }
-    .footer-order-col { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
-    .footer-order-btn { margin-top: 10px; padding: 12px 28px; font-size: 0.9rem; }
-
-    /* Social Media Bar */
-    .footer-social-wrapper { border-top: 1px solid #2a2a2a; padding-top: 35px; text-align: center; max-width: 1600px; margin: 0 auto; }
-    .social-title { font-size: 0.9rem; color: #888888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
-    .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
-    .social-icons a { color: #cccccc; font-size: 1.4rem; background-color: #0b0b0b; border: 1px solid #2a2a2a; width: 48px; height: 48px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
-    .social-icons a:hover { color: #d4af37; border-color: #d4af37; transform: translateY(-3px); }
-    .footer-bottom-copy { color: #666666; font-size: 0.85rem; }
-
     /* Order popup */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
     .modal-overlay.open, .modal-overlay:target { display: flex; }
@@ -110,58 +51,43 @@
     .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
 
     @media(max-width:700px){
-      header { flex-wrap: wrap; row-gap: 8px; }
-      nav { order: 3; width: 100%; overflow: visible; }
-      nav ul { gap: 8px 14px; flex-wrap: wrap; white-space: normal; }
       .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .title-pill{white-space:normal}
-      .footer-top { grid-template-columns: repeat(2, 1fr); }
-      .social-icons a { width: 42px; height: 42px; font-size: 1.2rem; }
     }
     @media(max-width:550px){.page-hero{padding:50px 5%}}
   </style>
 </head>
 <body id="top">
 
-  <!-- Sticky Header Bar -->
-  <header>
-    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="suits.html" class="active" aria-current="page">Suits</a></li>
-        <li><a href="measurements.html">Measurements Guide</a></li>
-        <li><a href="faq.html">FAQs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <a href="#orderModal" class="order-btn">Order</a>
-  </header>
+  <!-- Shared Header Placeholder -->
+  <div id="site-header"></div>
 
   <section class="page-hero">
     <div class="eyebrow">Bespoke Suits · Made to Measure · Kigali, Rwanda</div>
     <h1>Suit <span>Categories</span></h1>
     <p>Explore the suit styles we craft for men and women. Every suit is custom made strictly on order, tailored to your measurements.</p>
-    <div class="jump-links"><a href="mens-suits.html">Men's Suits</a><a href="womens-suits.html">Women's Suits</a></div>
+    <div class="jump-links"><a href="mensuits.html">Men's Suits</a><a href="womensuits.html">Women's Suits</a></div>
   </section>
 
   <main>
     <!-- Men's Suits Section -->
     <section class="category-section" id="men">
-      <div class="title-wrapper"><h2 class="title-pill">Men's Suits</h2><div class="title-line"></div></div>
+      <div class="title-wrapper">
+        <a href="mensuits.html" class="title-pill">Men's Suits</a>
+        <div class="title-line"></div>
+      </div>
       <div class="category-grid">
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mens-suits.html" aria-label="Explore men's single-breasted suits"><img src="suits-men-single-breasted.jpeg" alt="Men's single-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-single-breasted.jpeg</span></a></div><div class="category-info"><h3>Single-Breasted Suits</h3><p>One row of buttons. A classic, versatile cut for business and everyday elegance.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mensuits.html" aria-label="Explore men's single-breasted suits"><img src="suits-men-single-breasted.jpeg" alt="Men's single-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-single-breasted.jpeg</span></a></div><div class="category-info"><h3>Single-Breasted Suits</h3><p>One row of buttons. A classic, versatile cut for business and everyday elegance.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mens-suits.html" aria-label="Explore men's double-breasted suits"><img src="suits-men-double-breasted.jpeg" alt="Men's double-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-double-breasted.jpeg</span></a></div><div class="category-info"><h3>Double-Breasted Suits</h3><p>An overlapping front with two rows of buttons for a bold, powerful look.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mensuits.html" aria-label="Explore men's double-breasted suits"><img src="suits-men-double-breasted.jpeg" alt="Men's double-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-double-breasted.jpeg</span></a></div><div class="category-info"><h3>Double-Breasted Suits</h3><p>An overlapping front with two rows of buttons for a bold, powerful look.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mens-suits.html" aria-label="Explore men's 2-piece suits"><img src="suits-men-2-piece.jpeg" alt="Men's 2-piece suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-2-piece.jpeg</span></a></div><div class="category-info"><h3>2-Piece Suits</h3><p>Jacket and trousers, tailored precisely to your measurements.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mensuits.html" aria-label="Explore men's 2-piece suits"><img src="suits-men-2-piece.jpeg" alt="Men's 2-piece suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-2-piece.jpeg</span></a></div><div class="category-info"><h3>2-Piece Suits</h3><p>Jacket and trousers, tailored precisely to your measurements.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mens-suits.html" aria-label="Explore men's 3-piece suits"><img src="suits-men-3-piece.jpeg" alt="Men's 3-piece suit with waistcoat custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-3-piece.jpeg</span></a></div><div class="category-info"><h3>3-Piece Suits</h3><p>Jacket, trousers and waistcoat for a complete, refined formal look.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mensuits.html" aria-label="Explore men's 3-piece suits"><img src="suits-men-3-piece.jpeg" alt="Men's 3-piece suit with waistcoat custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-3-piece.jpeg</span></a></div><div class="category-info"><h3>3-Piece Suits</h3><p>Jacket, trousers and waistcoat for a complete, refined formal look.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mens-suits.html" aria-label="Explore men's wedding and groom suits"><img src="suits-men-wedding-groom.jpeg" alt="Men's wedding and groom suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-wedding-groom.jpeg</span></a></div><div class="category-info"><h3>Wedding &amp; Groom Suits</h3><p>Distinguished suits for grooms, groomsmen and wedding guests.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mensuits.html" aria-label="Explore men's wedding and groom suits"><img src="suits-men-wedding-groom.jpeg" alt="Men's wedding and groom suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-wedding-groom.jpeg</span></a></div><div class="category-info"><h3>Wedding &amp; Groom Suits</h3><p>Distinguished suits for grooms, groomsmen and wedding guests.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mens-suits.html" aria-label="Explore men's office and business suits"><img src="suits-men-office-business.jpeg" alt="Men's office and business suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-office-business.jpeg</span></a></div><div class="category-info"><h3>Office &amp; Business Suits</h3><p>Sharp, comfortable suits for the boardroom and every working day.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="mensuits.html" aria-label="Explore men's office and business suits"><img src="suits-men-office-business.jpeg" alt="Men's office and business suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-men-office-business.jpeg</span></a></div><div class="category-info"><h3>Office &amp; Business Suits</h3><p>Sharp, comfortable suits for the boardroom and every working day.</p></div></article>
       </div>
     </section>
 
@@ -169,19 +95,22 @@
 
     <!-- Women's Suits Section -->
     <section class="category-section" id="women" style="padding-top:clamp(36px,6vw,70px)">
-      <div class="title-wrapper"><h2 class="title-pill">Women's Suits</h2><div class="title-line"></div></div>
+      <div class="title-wrapper">
+        <a href="womensuits.html" class="title-pill">Women's Suits</a>
+        <div class="title-line"></div>
+      </div>
       <div class="category-grid">
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womens-suits.html" aria-label="Explore women's single-breasted suits"><img src="suits-women-single-breasted.jpeg" alt="Women's single-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-single-breasted.jpeg</span></a></div><div class="category-info"><h3>Single-Breasted Suits</h3><p>One row of buttons. A timeless, flattering cut for work and special occasions.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womensuits.html" aria-label="Explore women's single-breasted suits"><img src="suits-women-single-breasted.jpeg" alt="Women's single-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-single-breasted.jpeg</span></a></div><div class="category-info"><h3>Single-Breasted Suits</h3><p>One row of buttons. A timeless, flattering cut for work and special occasions.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womens-suits.html" aria-label="Explore women's double-breasted suits"><img src="suits-women-double-breasted.jpeg" alt="Women's double-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-double-breasted.jpeg</span></a></div><div class="category-info"><h3>Double-Breasted Suits</h3><p>Two rows of buttons for a confident, structured and elegant silhouette.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womensuits.html" aria-label="Explore women's double-breasted suits"><img src="suits-women-double-breasted.jpeg" alt="Women's double-breasted suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-double-breasted.jpeg</span></a></div><div class="category-info"><h3>Double-Breasted Suits</h3><p>Two rows of buttons for a confident, structured and elegant silhouette.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womens-suits.html" aria-label="Explore women's 2-piece suits"><img src="suits-women-2-piece.jpeg" alt="Women's 2-piece suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-2-piece.jpeg</span></a></div><div class="category-info"><h3>2-Piece Suits</h3><p>Jacket and trousers, tailored precisely to your measurements.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womensuits.html" aria-label="Explore women's 2-piece suits"><img src="suits-women-2-piece.jpeg" alt="Women's 2-piece suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-2-piece.jpeg</span></a></div><div class="category-info"><h3>2-Piece Suits</h3><p>Jacket and trousers, tailored precisely to your measurements.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womens-suits.html" aria-label="Explore women's 3-piece suits"><img src="suits-women-3-piece.jpeg" alt="Women's 3-piece suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-3-piece.jpeg</span></a></div><div class="category-info"><h3>3-Piece Suits</h3><p>Jacket, trousers and waistcoat for a complete, polished formal look.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womensuits.html" aria-label="Explore women's 3-piece suits"><img src="suits-women-3-piece.jpeg" alt="Women's 3-piece suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-3-piece.jpeg</span></a></div><div class="category-info"><h3>3-Piece Suits</h3><p>Jacket, trousers and waistcoat for a complete, polished formal look.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womens-suits.html" aria-label="Explore women's skirt suits"><img src="suits-women-skirt-suits.jpeg" alt="Women's skirt suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-skirt-suits.jpeg</span></a></div><div class="category-info"><h3>Skirt Suits</h3><p>A tailored jacket paired with a skirt for refined, professional elegance.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womensuits.html" aria-label="Explore women's skirt suits"><img src="suits-women-skirt-suits.jpeg" alt="Women's skirt suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-skirt-suits.jpeg</span></a></div><div class="category-info"><h3>Skirt Suits</h3><p>A tailored jacket paired with a skirt for refined, professional elegance.</p></div></article>
         
-        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womens-suits.html" aria-label="Explore women's wedding and occasion suits"><img src="suits-women-wedding-occasion.jpeg" alt="Women's wedding and occasion suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-wedding-occasion.jpeg</span></a></div><div class="category-info"><h3>Wedding &amp; Occasion Suits</h3><p>Elegant suits for weddings, ceremonies and special events.</p></div></article>
+        <article class="category-card"><div class="category-photo"><a class="photo-link" href="womensuits.html" aria-label="Explore women's wedding and occasion suits"><img src="suits-women-wedding-occasion.jpeg" alt="Women's wedding and occasion suit custom made in Kigali, Rwanda" loading="lazy" onerror="this.parentNode.parentNode.classList.add('no-photo')"><span class="photo-hint">Photo: suits-women-wedding-occasion.jpeg</span></a></div><div class="category-info"><h3>Wedding &amp; Occasion Suits</h3><p>Elegant suits for weddings, ceremonies and special events.</p></div></article>
       </div>
     </section>
 
@@ -196,72 +125,8 @@
     </section>
   </main>
 
-  <!-- SECTION 5: Footer -->
-  <footer>
-    <div class="footer-top">
-      <!-- Quick Links Column -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="suits.html" aria-current="page">Suits</a></li>
-          <li><a href="measurements.html">Measurements Guide</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Location Column -->
-      <div class="footer-col">
-        <h3>Location</h3>
-        <div class="location-block">
-          <strong>Branch 1:</strong>
-          <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
-          <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
-        </div>
-        <div class="location-block">
-          <strong>Branch 2:</strong>
-          <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
-        </div>
-      </div>
-
-      <!-- Opening Hours & Policies Column -->
-      <div class="footer-col">
-        <h3>Opening Hours & Policies</h3>
-        <p><strong>Working Hours:</strong><br>
-        Monday - Friday: 9:00 AM – 5:00 PM<br>
-        Saturday & Sunday: Booking / Call Required<br>
-        <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
-        <ul>
-          <li><a href="refund-policy.html">Refund Policy</a></li>
-          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Order Button Column -->
-      <div class="footer-col footer-order-col">
-        <h3>Start Your Order</h3>
-        <p>Ready to craft your bespoke piece?</p>
-        <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
-      </div>
-    </div>
-
-    <!-- Social Media Bar -->
-    <div class="footer-social-wrapper">
-      <div class="social-title">Connect With Us</div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-      <div class="footer-bottom-copy">
-        <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared Footer Placeholder -->
+  <div id="site-footer"></div>
 
   <!-- Order popup -->
   <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
@@ -279,7 +144,17 @@
   </div>
 
   <script>
-    (function () {
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load Shared Components
+      fetch('header.html')
+        .then(res => res.ok ? res.text() : '')
+        .then(data => { if (data) document.getElementById('site-header').innerHTML = data; });
+
+      fetch('footer.html')
+        .then(res => res.ok ? res.text() : '')
+        .then(data => { if (data) document.getElementById('site-footer').innerHTML = data; });
+
+      // Modal Order Handler
       var modal = document.getElementById('orderModal');
       var agree = document.getElementById('termsAgree');
       var wa = document.getElementById('whatsappBtn');
@@ -320,7 +195,7 @@
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
       if (location.hash === '#orderModal') { openModal(); }
-    })();
+    });
   </script>
 
 </body>
