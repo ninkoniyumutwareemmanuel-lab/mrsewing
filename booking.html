@@ -36,11 +36,11 @@
     nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.72rem, 1.4vw, 0.92rem); font-weight: 500; transition: color 0.3s ease; }
     nav a:hover { color: #d4af37; }
 
-    /* Main Container */
+    /* Main Container (bigger box) */
     .booking-wrapper {
       flex: 1;
       padding: clamp(30px, 6vw, 80px) 4%;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       width: 100%;
     }
@@ -49,8 +49,10 @@
       border: 1px solid #2a2a2a;
       border-top: 3px solid #d4af37;
       border-radius: 8px;
-      padding: clamp(20px, 5vw, 40px);
+      padding: clamp(20px, 5vw, 56px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      overflow: hidden;
     }
     .booking-title {
       color: #d4af37;
@@ -69,16 +71,18 @@
       line-height: 1.5;
     }
 
-    /* Form Fields */
+    /* Form Fields (two equal columns, nothing sticks out) */
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: clamp(12px, 2.5vw, 20px);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 2.5vw, 24px);
+      width: 100%;
     }
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 6px;
+      min-width: 0;
     }
     .form-group.full-width {
       grid-column: span 2;
@@ -90,6 +94,11 @@
       letter-spacing: 0.5px;
       font-weight: 600;
     }
+    .hint {
+      color: #888888;
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
     input, select, textarea {
       background-color: #0b0b0b;
       border: 1px solid #2a2a2a;
@@ -100,8 +109,11 @@
       outline: none;
       transition: border-color 0.3s ease;
       font-family: inherit;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
     }
-    
+
     /* Cross-browser Date Input Calendar Picker Styling */
     input[type="date"] {
       position: relative;
@@ -126,7 +138,7 @@
     }
     textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 120px;
     }
 
     /* Terms & Submit Button */
@@ -206,7 +218,7 @@
     }
 
     @media (max-width: 600px) {
-      .form-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: minmax(0, 1fr); }
       .form-group.full-width { grid-column: span 1; }
     }
   </style>
@@ -236,35 +248,35 @@
       <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- Web3Forms Access Key -->
         <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c72d28a35">
-        <input type="hidden" name="subject" value="New Consultation Booking - Mr. Sewing Website">
+        <input type="hidden" name="subject" value="New Booking - Mr. Sewing">
         <input type="hidden" name="from_name" value="Mr. Sewing Website">
 
         <div class="form-grid">
           <!-- Full Name -->
           <div class="form-group">
             <label for="fullName">Full Name *</label>
-            <input type="text" id="fullName" name="Full Name" placeholder="e.g. John Doe" required>
+            <input type="text" id="fullName" name="Full Name" placeholder="e.g. John Doe" autocomplete="name" required>
           </div>
 
-          <!-- WhatsApp / Phone Number -->
+          <!-- WhatsApp / Phone Number (any country) -->
           <div class="form-group">
             <label for="phone">WhatsApp / Phone Number *</label>
-            <input type="tel" id="phone" name="Phone Number" placeholder="+250 78X XXX XXX" required>
+            <input type="tel" id="phone" name="Phone Number" placeholder="e.g. +250 78X XXX XXX" inputmode="tel" autocomplete="tel" required>
+            <span class="hint">Start with your country code (for example +250 for Rwanda). Spaces, dashes and + are fine.</span>
           </div>
 
-          <!-- Email Address -->
+          <!-- Email Address (optional) -->
           <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="Email Address" placeholder="e.g. client@example.com" required>
+            <label for="email">Email Address (Optional)</label>
+            <input type="email" id="email" name="Email Address" placeholder="e.g. client@example.com" autocomplete="email">
           </div>
 
-          <!-- Service Type -->
+          <!-- Booking Type -->
           <div class="form-group">
-            <label for="serviceType">Service Type *</label>
-            <select id="serviceType" name="Service Type" required>
-              <option value="Workplace Visit - Norvège Branch">Workplace Visit (Recommended: Norvège Branch)</option>
-              <option value="VIP Mobile House Call">VIP Mobile House Call (Fitting at Residence / Office)</option>
-              <option value="Garment Alterations & Restyling">Garment Alterations & Restyling</option>
+            <label for="serviceType">Booking Type *</label>
+            <select id="serviceType" name="Booking Type" required>
+              <option value="Visit our workplace (Recommended: Norvège Branch)">Visit our workplace (Recommended: Norvège Branch)</option>
+              <option value="VIP mobile house call (we come to you)">VIP mobile house call (we come to you)</option>
             </select>
           </div>
 
@@ -289,10 +301,10 @@
             </select>
           </div>
 
-          <!-- Location / Address Notes -->
+          <!-- What the customer needs -->
           <div class="form-group full-width">
-            <label for="locationDetails">Location / Special Requests</label>
-            <textarea id="locationDetails" name="Location or Notes" placeholder="For Workplace visits, our primary recommended location is our Norvège branch. If requesting a VIP Mobile House Call, specify your address or hotel."></textarea>
+            <label for="locationDetails">Tell us what you need</label>
+            <textarea id="locationDetails" name="Customer Message" placeholder="Tell us what you would like us to do for you, or what you are looking for. For a VIP house call, please also include your location (address or hotel)."></textarea>
           </div>
         </div>
 
@@ -321,7 +333,7 @@
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
       dateInput.setAttribute('min', today);
-      
+
       dateInput.addEventListener('click', function() {
         if (typeof this.showPicker === 'function') {
           this.showPicker();
@@ -329,27 +341,74 @@
       });
     }
 
+    // Phone number: any country. Allows digits, +, spaces, dashes, brackets and dots.
+    const phoneInput = document.getElementById('phone');
+    function checkPhone() {
+      const value = phoneInput.value.trim();
+      const digits = value.replace(/\D/g, '');
+      const ok = /^[0-9+\-\s().]+$/.test(value) && digits.length >= 7 && digits.length <= 15;
+      phoneInput.setCustomValidity(ok ? '' : 'Please enter a valid phone number starting with your country code, e.g. +250 78X XXX XXX');
+    }
+    phoneInput.addEventListener('input', checkPhone);
+    checkPhone();
+
     const form = document.getElementById('bookingForm');
     const successBox = document.getElementById('successBox');
 
+    // Add ?debug=1 to the page address to see the real error reason in the alert box
+    const debugMode = location.search.indexOf('debug=1') !== -1;
+
+    function showError(message, reason) {
+      alert(message + (debugMode ? '\n\nReason: ' + reason : ''));
+    }
+
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const formData = new FormData(form);
+
+      // Collect the fields in the order they appear on the page
+      const data = Object.fromEntries(new FormData(form));
+      if (!data['Email Address'] || !data['Email Address'].trim()) {
+        data['Email Address'] = 'Not provided';
+      } else {
+        data['replyto'] = data['Email Address'].trim();
+      }
+      if (!data['Customer Message'] || !data['Customer Message'].trim()) {
+        data['Customer Message'] = 'No message provided';
+      }
 
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
       })
-      .then(async (response) => {
-        if (response.status === 200) {
+      .then(function(response) {
+        return response.json().catch(function() { return {}; }).then(function(result) {
+          return { response: response, result: result };
+        });
+      })
+      .then(function(output) {
+        const response = output.response;
+        const result = output.result;
+
+        if (response.ok && result.success !== false) {
           form.style.display = 'none';
           successBox.style.display = 'block';
         } else {
-          alert('Something went wrong. Please try submitting again or contact us directly on WhatsApp.');
+          const reason = (result && result.message) ? result.message : ('HTTP ' + response.status + ' ' + response.statusText);
+          console.error('Booking form was refused by Web3Forms:', {
+            status: response.status,
+            statusText: response.statusText,
+            reply: result
+          });
+          showError('Something went wrong. Please try submitting again or contact us directly on WhatsApp.', reason);
         }
       })
-      .catch(error => {
-        alert('Form submission error. Please try again.');
+      .catch(function(error) {
+        console.error('Booking form could not reach Web3Forms (network or browser problem):', error);
+        showError('Form submission error. Please try again.', error && error.message ? error.message : String(error));
       });
     });
   </script>
