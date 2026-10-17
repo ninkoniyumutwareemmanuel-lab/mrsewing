@@ -1,25 +1,26 @@
 <style>
-    /* Absolute reset for header container */
+    /* Base Header Container */
     header#home,
     header,
     #site-header header {
+        background-color: #141414 !important;
+        border-bottom: 1px solid #2a2a2a !important;
+        padding: 12px 4% !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        background-color: #141414 !important;
-        border-bottom: 1px solid #2a2a2a !important;
-        padding: 10px 3% !important;
+        flex-wrap: wrap !important; /* Allows links to drop below logo on mobile */
+        row-gap: 10px !important;
         position: sticky !important;
         top: 0 !important;
         z-index: 1000 !important;
         width: 100% !important;
         box-sizing: border-box !important;
-        flex-wrap: nowrap !important;
     }
 
-    /* Logo constraint */
+    /* Logo Image */
     .header-logo {
-        height: 32px !important;
+        height: clamp(30px, 5vw, 42px) !important;
         width: auto !important;
         object-fit: contain !important;
         display: block !important;
@@ -27,28 +28,19 @@
         flex-shrink: 0 !important;
     }
 
-    /* Navigation - single row layout */
+    /* Navigation Menu */
     header nav {
-        flex-grow: 1 !important;
         flex-shrink: 1 !important;
-        overflow-x: auto !important;
-        scrollbar-width: none !important; /* Firefox */
-        -ms-overflow-style: none !important;  /* IE/Edge */
-        margin: 0 8px !important;
-    }
-
-    header nav::-webkit-scrollbar {
-        display: none !important; /* Chrome/Safari */
+        overflow: visible !important;
     }
 
     header nav ul {
         display: flex !important;
         list-style: none !important;
-        gap: clamp(6px, 1.8vw, 18px) !important;
+        gap: clamp(10px, 2.5vw, 22px) !important;
         align-items: center !important;
         justify-content: center !important;
         white-space: nowrap !important;
-        flex-wrap: nowrap !important;
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -56,9 +48,8 @@
     header nav a {
         color: #cccccc !important;
         text-decoration: none !important;
-        font-size: clamp(0.65rem, 1.2vw, 0.85rem) !important;
+        font-size: clamp(0.72rem, 1.5vw, 0.9rem) !important;
         font-weight: 500 !important;
-        white-space: nowrap !important;
         transition: color 0.3s ease !important;
     }
 
@@ -71,16 +62,48 @@
     .order-btn {
         background-color: #d4af37 !important;
         color: #000000 !important;
-        padding: 6px 12px !important;
+        padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2vw, 18px) !important;
         text-decoration: none !important;
         font-weight: 700 !important;
         border-radius: 4px !important;
         text-transform: uppercase !important;
         letter-spacing: 0.5px !important;
-        font-size: 0.72rem !important;
+        font-size: clamp(0.72rem, 1.3vw, 0.82rem) !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
         display: inline-block !important;
+    }
+
+    /* Mobile Layout Fix: Stack Logo & Order on Top, Links Below */
+    @media (max-width: 768px) {
+        header#home, header, #site-header header {
+            padding: 10px 15px !important;
+        }
+
+        .header-logo {
+            order: 1 !important;
+        }
+
+        .order-btn {
+            order: 2 !important;
+        }
+
+        header nav {
+            order: 3 !important;
+            width: 100% !important;
+            margin-top: 4px !important;
+        }
+
+        header nav ul {
+            justify-content: space-between !important;
+            gap: 6px 12px !important;
+            flex-wrap: wrap !important;
+            white-space: normal !important;
+        }
+
+        header nav a {
+            font-size: 0.82rem !important;
+        }
     }
 </style>
 
