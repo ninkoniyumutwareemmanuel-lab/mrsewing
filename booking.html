@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Consultation | Mr. Sewing Bespoke Tailoring Kigali</title>
 
-  <meta name="description" content="Book a private tailoring consultation or VIP house call with Mr. Sewing in Kigali, Rwanda. Custom suit fittings, workplace appointments, and garment alterations.">
+  <meta name="description" content="Book a private tailoring consultation or VIP house call with Mr. Sewing at our workplace in Norvège or across Kigali, Rwanda.">
   <meta name="author" content="Mr. Sewing">
   <meta name="theme-color" content="#0b0b0b">
 
@@ -101,10 +101,26 @@
       transition: border-color 0.3s ease;
       font-family: inherit;
     }
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(1);
+    
+    /* Cross-browser Date Input Calendar Picker Styling */
+    input[type="date"] {
+      position: relative;
       cursor: pointer;
+      color-scheme: dark;
     }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      background: transparent;
+      bottom: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: auto;
+    }
+
     input:focus, select:focus, textarea:focus {
       border-color: #d4af37;
     }
@@ -215,7 +231,7 @@
   <main class="booking-wrapper">
     <div class="booking-card">
       <h1 class="booking-title">Book a Consultation</h1>
-      <p class="booking-desc">Schedule a private session with our master tailor at our workplace or request a VIP mobile house call across Kigali.</p>
+      <p class="booking-desc">Schedule a private session with our master tailor at our workplace (Recommended: Norvège Branch) or request a VIP mobile house call across Kigali.</p>
 
       <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- Web3Forms Access Key -->
@@ -227,7 +243,7 @@
           <!-- Full Name -->
           <div class="form-group">
             <label for="fullName">Full Name *</label>
-            <input type="text" id="fullName" name="Full Name" placeholder="e.g. Emmanuel Ninkoniyumutware" required>
+            <input type="text" id="fullName" name="Full Name" placeholder="e.g. John Doe" required>
           </div>
 
           <!-- WhatsApp / Phone Number -->
@@ -239,15 +255,15 @@
           <!-- Email Address -->
           <div class="form-group">
             <label for="email">Email Address *</label>
-            <input type="email" id="email" name="Email Address" placeholder="mrsewingfashiondesigner@gmail.com" required>
+            <input type="email" id="email" name="Email Address" placeholder="e.g. client@example.com" required>
           </div>
 
           <!-- Service Type -->
           <div class="form-group">
             <label for="serviceType">Service Type *</label>
             <select id="serviceType" name="Service Type" required>
-              <option value="Workplace Visit">Workplace Visit</option>
-              <option value="VIP Mobile House Call">VIP Mobile House Call (Fitting in Kigali)</option>
+              <option value="Workplace Visit - Norvège Branch">Workplace Visit (Recommended: Norvège Branch)</option>
+              <option value="VIP Mobile House Call">VIP Mobile House Call (Fitting at Residence / Office)</option>
               <option value="Garment Alterations & Restyling">Garment Alterations & Restyling</option>
             </select>
           </div>
@@ -276,7 +292,7 @@
           <!-- Location / Address Notes -->
           <div class="form-group full-width">
             <label for="locationDetails">Location / Special Requests</label>
-            <textarea id="locationDetails" name="Location or Notes" placeholder="Specify preferred branch/address or garment details."></textarea>
+            <textarea id="locationDetails" name="Location or Notes" placeholder="For Workplace visits, our primary recommended location is our Norvège branch. If requesting a VIP Mobile House Call, specify your address or hotel."></textarea>
           </div>
         </div>
 
@@ -300,11 +316,17 @@
   </main>
 
   <script>
-    // Set minimum date to today automatically
+    // Set minimum date to today automatically and force picker trigger on click
     const dateInput = document.getElementById('preferredDate');
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
       dateInput.setAttribute('min', today);
+      
+      dateInput.addEventListener('click', function() {
+        if (typeof this.showPicker === 'function') {
+          this.showPicker();
+        }
+      });
     }
 
     const form = document.getElementById('bookingForm');
