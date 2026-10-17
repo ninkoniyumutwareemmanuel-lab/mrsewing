@@ -1,12 +1,115 @@
-<img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="suits.html">Suits</a></li>
-        <li><a href="measurements.html">Measurements Guide</a></li>
-        <li><a href="faq.html">FAQs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-</nav>
-<a href="#orderModal" class="order-btn">Order</a>
+<!-- Header HTML with Embedded Styles -->
+<style>
+    /* Header Container Styling */
+    header, #site-header, #header-placeholder header {
+        background-color: #141414;
+        border-bottom: 1px solid #2a2a2a;
+        padding: 12px 4%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: clamp(6px, 2vw, 15px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Logo Image */
+    .header-logo {
+        height: clamp(30px, 5vw, 45px);
+        width: auto;
+        object-fit: contain;
+        display: block;
+        mix-blend-mode: screen;
+        flex-shrink: 0;
+    }
+
+    /* Navigation Links */
+    header nav {
+        flex-shrink: 1;
+        overflow: hidden;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        gap: clamp(8px, 2.5vw, 25px);
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav a {
+        color: #cccccc;
+        text-decoration: none;
+        font-size: clamp(0.68rem, 1.5vw, 0.95rem);
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    header nav a:hover, 
+    header nav a.active {
+        color: #d4af37;
+    }
+
+    /* Order Button */
+    .order-btn {
+        background-color: #d4af37;
+        color: #000000;
+        padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: clamp(0.68rem, 1.3vw, 0.85rem);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .order-btn:hover {
+        background-color: #f3e5ab;
+    }
+
+    /* Responsive Handling for Mobile Screens */
+    @media (max-width: 700px) {
+        header, #site-header, #header-placeholder header {
+            flex-wrap: wrap;
+            row-gap: 8px;
+        }
+
+        header nav {
+            order: 3;
+            width: 100%;
+            overflow: visible;
+        }
+
+        header nav ul {
+            gap: 8px 14px;
+            flex-wrap: wrap;
+            white-space: normal;
+        }
+    }
+</style>
+
+<header id="home">
+    <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="suits.html">Suits</a></li>
+            <li><a href="measurements.html">Measurements Guide</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <a href="#orderModal" class="order-btn">Order</a>
+</header>
