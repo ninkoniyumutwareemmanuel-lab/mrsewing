@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official Store Policies & Terms - Mr. Sewing Fashion | Kigali, Rwanda</title>
     
-    <!-- SEO Meta Tags & Keywords for Google Ranking -->
+    <!-- SEO Meta Tags & Keywords -->
     <meta name="description" content="Read official store policies, terms & conditions, production timelines, storage rules, and privacy policy for Mr. Sewing Fashion bespoke suits in Kigali, Rwanda.">
     <meta name="keywords" content="Mr Sewing Fashion terms, store policies, bespoke suit policy Kigali, tailoring terms and conditions, privacy policy Rwanda, custom suit rules">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
 
-    <!-- Favicon / Logo for Browser and Google Search Bar -->
+    <!-- Favicon / Logo -->
     <link rel="icon" href="MR LOGO.jpeg" type="image/jpeg">
     <link rel="apple-touch-icon" href="MR LOGO.jpeg">
 
-    <!-- Open Graph / Link Preview Tags -->
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Official Store Policies & Terms - Mr. Sewing Fashion">
     <meta property="og:description" content="Review our complete terms and conditions, production timelines, refund policies, and privacy terms for bespoke tailoring in Kigali.">
     <meta property="og:image" content="MR LOGO.jpeg">
@@ -47,72 +47,12 @@
             line-height: 1.7;
         }
 
-        /* --- Safety Constraints for Dynamic Header --- */
+        /* Container for injected header */
         #site-header {
             width: 100%;
-            min-height: 70px;
-            background-color: var(--bg-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-        }
-
-        #site-header img,
-        #site-header .header-logo {
-            max-height: 38px !important;
-            height: 38px !important;
-            width: auto !important;
-            object-fit: contain !important;
-        }
-
-        /* Header / Navigation fallback styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 4%;
-            background-color: var(--bg-color);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-container img {
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            color: var(--text-main);
-            font-weight: 700;
-            font-size: 1.2rem;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent-gold);
         }
 
         /* Main Content Styles */
@@ -195,23 +135,9 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            background-color: var(--bg-color);
-        }
-
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-            header {
-                padding: 1rem;
+            .container {
+                padding: 2rem 1rem;
             }
             .page-title h1 {
                 font-size: 2rem;
@@ -222,7 +148,7 @@
 <body>
 
     <!-- Header Placeholder -->
-    <header id="site-header"></header>
+    <div id="site-header"></div>
 
     <!-- Main Content -->
     <main class="container">
@@ -331,9 +257,9 @@
     </main>
 
     <!-- Footer Placeholder -->
-    <footer id="site-footer"></footer>
+    <div id="site-footer"></div>
 
-    <!-- External Script to Fetch Header & Footer -->
+    <!-- Script to Fetch Header & Footer -->
     <script>
       fetch('header.html')
         .then(response => response.text())
