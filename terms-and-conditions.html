@@ -47,7 +47,7 @@
             line-height: 1.6;
         }
 
-        /* Header Bar */
+        /* Header Bar Styling for loaded content */
         header {
             background-color: #141414;
             border-bottom: 1px solid #2a2a2a;
@@ -167,7 +167,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
+        /* Footer Styling for loaded content */
         footer { background-color: #141414; border-top: 1px solid #2a2a2a; padding: clamp(30px, 5vw, 70px) 4% 30px; }
         .footer-top { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); max-width: 1600px; margin: 0 auto 50px; text-align: left; }
         .footer-col { min-width: 0; }
@@ -219,21 +219,8 @@
 </head>
 <body id="top">
 
-    <!-- Sticky Header Bar -->
-    <header>
-        <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo - Bespoke Tailor Kigali" class="header-logo">
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="suits.html">Suits</a></li>
-                <li><a href="measurements.html">Measurements Guide</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <a href="#orderModal" class="order-btn">Order</a>
-    </header>
+    <!-- Header Placeholder -->
+    <header id="header-placeholder"></header>
 
     <!-- Main Content -->
     <main class="container">
@@ -341,72 +328,8 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-top">
-            <!-- Quick Links Column -->
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="suits.html">Suits</a></li>
-                    <li><a href="measurements.html">Measurements Guide</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Location Column -->
-            <div class="footer-col">
-                <h3>Location</h3>
-                <div class="location-block">
-                    <strong>Branch 1:</strong>
-                    <p>Kigali, Nyarugenge, Downtown, MIC Building</p>
-                    <a href="https://maps.app.goo.gl/ftgaY9eZ4avU7LEG7?g_st=ac" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i> Find us on Google Maps</a>
-                </div>
-                <div class="location-block">
-                    <strong>Branch 2:</strong>
-                    <p>Kigali, Nyarugenge, Norvège, KN 441 St</p>
-                </div>
-            </div>
-
-            <!-- Opening Hours & Policies Column -->
-            <div class="footer-col">
-                <h3>Opening Hours &amp; Policies</h3>
-                <p><strong>Working Hours:</strong><br>
-                Monday - Friday: 9:00 AM – 5:00 PM<br>
-                Saturday &amp; Sunday: Booking / Call Required<br>
-                <em>(Closed on the last Saturday of the month for Umuganda)</em></p>
-                <ul>
-                    <li><a href="refund-policy.html">Refund Policy</a></li>
-                    <li><a href="terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <!-- Order Button Column -->
-            <div class="footer-col footer-order-col">
-                <h3>Start Your Order</h3>
-                <p>Ready to craft your bespoke piece?</p>
-                <a href="#orderModal" class="order-btn footer-order-btn">Order</a>
-            </div>
-        </div>
-
-        <!-- Social Media Bar -->
-        <div class="footer-social-wrapper">
-            <div class="social-title">Connect With Us</div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/mr_sewing_fashion?xtok=NzExNnpkbXNraHky" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@mrsewingfashion?_r=1&amp;_t=ZS-9Ab0qwQoTFk" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://youtube.com/@mr.sewingfashiondesigner?si=sIuQYXdc6QOwb9UL" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-            <div class="footer-bottom-copy">
-                <p>&copy; 2026 Mr. Sewing. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <footer id="footer-placeholder"></footer>
 
     <!-- Order popup -->
     <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
@@ -423,7 +346,25 @@
         </div>
     </div>
 
+    <!-- Script to dynamically load external Header and Footer -->
     <script>
+        // Fetch and inject Header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Fetch and inject Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+        // Modal Handler Logic
         (function () {
             var modal = document.getElementById('orderModal');
             var agree = document.getElementById('termsAgree');
