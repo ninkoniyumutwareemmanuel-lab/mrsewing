@@ -47,12 +47,30 @@
             line-height: 1.7;
         }
 
-        /* Header / Navigation */
+        /* --- Safety Constraints for Dynamic Header --- */
+        #site-header {
+            width: 100%;
+            min-height: 70px;
+            background-color: var(--bg-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #site-header img,
+        #site-header .header-logo {
+            max-height: 38px !important;
+            height: 38px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        /* Header / Navigation fallback styles */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
+            padding: 10px 4%;
             background-color: var(--bg-color);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
