@@ -1,63 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Primary Pages -->
   <url>
     <loc>https://mrsewingfashion.com/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://mrsewingfashion.com/index.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://mrsewingfashion.com/about.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Product & Gallery Pages -->
   <url>
     <loc>https://mrsewingfashion.com/suits.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://mrsewingfashion.com/men-suits.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.80</priority>
+    <loc>https://mrsewingfashion.com/mensuits.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://mrsewingfashion.com/women-suits.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://mrsewingfashion.com/womensuits.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mrsewingfashion.com/collections.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Service & Interactive Pages -->
+  <url>
+    <loc>https://mrsewingfashion.com/booking.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mrsewingfashion.com/services.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://mrsewingfashion.com/measurements.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://mrsewingfashion.com/reviews.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mrsewingfashion.com/happy-customers.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Information & Feature Pages -->
+  <url>
+    <loc>https://mrsewingfashion.com/why-choose.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://mrsewingfashion.com/why-mtm.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://mrsewingfashion.com/faq.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://mrsewingfashion.com/contact.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Legal & Policy Pages -->
   <url>
-    <loc>https://mrsewingfashion.com/refund-policy.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.50</priority>
+    <loc>https://mrsewingfashion.com/privacy-policy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
   <url>
     <loc>https://mrsewingfashion.com/terms-and-conditions.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://mrsewingfashion.com/privacy-policy.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <priority>0.50</priority>
+    <loc>https://mrsewingfashion.com/refund-policy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
+
 </urlset>
