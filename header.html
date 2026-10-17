@@ -1,29 +1,22 @@
-<!-- Header HTML with Fixed Compact Dimensions -->
 <style>
-    /* Force Header Heights & Layout */
-    header#home, 
-    header, 
-    #site-header header, 
-    #header-placeholder header {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
+    header {
         background-color: #141414 !important;
         border-bottom: 1px solid #2a2a2a !important;
         padding: 10px 4% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        gap: clamp(6px, 2vw, 15px) !important;
         position: sticky !important;
         top: 0 !important;
         z-index: 1000 !important;
         width: 100% !important;
-        height: 70px !important;
-        max-height: 70px !important;
         box-sizing: border-box !important;
     }
 
-    /* Lock Logo Dimensions to Prevent Over-expansion */
     .header-logo {
-        height: 38px !important;
-        max-height: 38px !important;
+        height: clamp(28px, 4.5vw, 40px) !important;
         width: auto !important;
         object-fit: contain !important;
         display: block !important;
@@ -31,16 +24,21 @@
         flex-shrink: 0 !important;
     }
 
-    /* Navigation Menu */
     header nav {
         flex-shrink: 1 !important;
-        overflow: hidden !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important; /* Firefox */
+        -ms-overflow-style: none !important;  /* IE/Edge */
+    }
+
+    header nav::-webkit-scrollbar {
+        display: none !important; /* Chrome/Safari */
     }
 
     header nav ul {
         display: flex !important;
         list-style: none !important;
-        gap: 20px !important;
+        gap: clamp(8px, 2vw, 22px) !important;
         align-items: center !important;
         justify-content: center !important;
         white-space: nowrap !important;
@@ -51,7 +49,7 @@
     header nav a {
         color: #cccccc !important;
         text-decoration: none !important;
-        font-size: 0.9rem !important;
+        font-size: clamp(0.68rem, 1.4vw, 0.9rem) !important;
         font-weight: 500 !important;
         transition: color 0.3s ease !important;
     }
@@ -61,51 +59,19 @@
         color: #d4af37 !important;
     }
 
-    /* Order Button */
     .order-btn {
         background-color: #d4af37 !important;
         color: #000000 !important;
-        padding: 7px 16px !important;
+        padding: clamp(5px, 1vw, 8px) clamp(10px, 1.8vw, 18px) !important;
         text-decoration: none !important;
         font-weight: 700 !important;
         border-radius: 4px !important;
         text-transform: uppercase !important;
         letter-spacing: 0.5px !important;
-        font-size: 0.8rem !important;
+        font-size: clamp(0.65rem, 1.2vw, 0.8rem) !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
         display: inline-block !important;
-    }
-
-    /* Mobile Responsive Breakpoint */
-    @media (max-width: 700px) {
-        header#home, header, #site-header header, #header-placeholder header {
-            height: auto !important;
-            max-height: none !important;
-            flex-wrap: wrap !important;
-            row-gap: 8px !important;
-            padding: 8px 12px !important;
-        }
-
-        header nav {
-            order: 3 !important;
-            width: 100% !important;
-        }
-
-        header nav ul {
-            gap: 8px 12px !important;
-            flex-wrap: wrap !important;
-            white-space: normal !important;
-        }
-
-        header nav a {
-            font-size: 0.8rem !important;
-        }
-
-        .header-logo {
-            height: 30px !important;
-            max-height: 30px !important;
-        }
     }
 </style>
 
