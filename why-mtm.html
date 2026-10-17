@@ -1,0 +1,30 @@
+<style>
+    .why-mtm-section { padding: clamp(28px, 6vw, 80px) 4%; max-width: 1600px; margin: 0 auto; background-color: #0b0b0b; scroll-margin-top: 95px; }
+    .why-mtm-container { display: flex; flex-direction: row; background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; align-items: stretch; }
+    .why-mtm-text { flex: 1; min-width: 0; padding: clamp(16px, 4vw, 50px) clamp(12px, 3.5vw, 40px); align-self: center; }
+    .why-mtm-text h2 { font-size: clamp(1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); margin-bottom: 10px; font-weight: 700; }
+    .why-mtm-subtitle { font-family: 'Georgia', serif; font-style: italic; font-size: clamp(0.8rem, 2vw, 1.25rem); color: #ffffff; margin-bottom: 14px; }
+    .why-mtm-body { font-size: clamp(0.72rem, 1.5vw, 1rem); color: #cccccc; line-height: 1.8; }
+    .why-mtm-image-wrapper { flex: 1; min-width: 0; min-height: clamp(200px, 38vw, 400px); overflow: hidden; border-left: 1px solid #2a2a2a; }
+    .why-mtm-image-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    @media (max-width: 700px) {
+        .why-mtm-container { flex-direction: column; }
+        .why-mtm-image-wrapper { border-left: none; border-top: 1px solid #2a2a2a; }
+    }
+</style>
+
+<section class="why-mtm-section" id="measurements">
+    <div class="why-mtm-container">
+        <div class="why-mtm-text">
+            <h2>Why Made to Measure?</h2>
+            <div class="why-mtm-subtitle">Measured to you and drafted to you.</div>
+            <p class="why-mtm-body">
+                Investing in made-to-measure clothing ensures that every garment is crafted to your precise specifications, offering a flawless silhouette that off-the-rack items simply cannot replicate. Each piece is engineered with careful attention to your individual posture and proportions, giving you complete control over fabrics, linings, and personalized details.
+            </p>
+        </div>
+        <div class="why-mtm-image-wrapper">
+            <img src="measurements.jpeg" alt="Master tailor taking precise body measurements for a made-to-measure suit in Kigali" loading="lazy">
+        </div>
+    </div>
+</section>
