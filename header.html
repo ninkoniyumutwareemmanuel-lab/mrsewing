@@ -51,6 +51,9 @@
         font-size: clamp(0.68rem, 1.5vw, 0.95rem) !important; 
         font-weight: 500 !important; 
         transition: color 0.3s ease !important; 
+        line-height: 1.4 !important;
+        display: inline-block !important;
+        padding: 2px 0 !important;
     }
 
     header nav a:hover, 
@@ -80,7 +83,7 @@
         background-color: #f3e5ab !important; 
     }
 
-    /* Mobile Breakpoint — Exact index.html Parity */
+    /* Mobile Breakpoint — Enhanced Tapping Space & Line Height */
     @media (max-width: 700px) {
         header, 
         #site-header header { 
@@ -97,9 +100,10 @@
 
         header nav ul,
         #site-header nav ul { 
-            gap: 8px 14px !important; 
+            gap: 10px 14px !important; 
             flex-wrap: wrap !important; 
             white-space: normal !important; 
+            line-height: 1.4 !important;
         }
     }
 </style>
