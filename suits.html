@@ -150,11 +150,11 @@
     .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* ENDLESS SHUFFLED GRID */
+    /* GRID FOR COMPACT MEDIUM THUMBNAILS */
     .infinite-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
       margin-top: 20px;
     }
     .gallery-card {
@@ -186,11 +186,11 @@
       transform: scale(1.03);
     }
     
-    /* CARD ACTION BUTTONS (WHATSAPP, COPY, VIEW DETAILS) */
+    /* COMPACT DETACHED BUTTONS BELOW PICTURE */
     .card-actions {
       display: flex;
-      gap: 6px;
-      padding: 10px;
+      gap: 4px;
+      padding: 8px;
       background: #141414;
       border-top: 1px solid #222222;
       align-items: center;
@@ -201,16 +201,16 @@
       background: #222222;
       color: #cccccc;
       border: 1px solid #444444;
-      padding: 7px 6px;
+      padding: 6px 4px;
       border-radius: 4px;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 4px;
+      gap: 3px;
       text-decoration: none;
       transition: all 0.2s;
       white-space: nowrap;
@@ -237,11 +237,11 @@
     }
     .action-btn:hover { border-color: #d4af37; color: #d4af37; }
 
-    /* LIGHTBOX FULL-SCREEN VIEWER MODAL */
+    /* LIGHTBOX FULL-SCREEN VIEWER MODAL (PICTURE ONLY) */
     .lightbox-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       z-index: 3000;
       display: none;
       align-items: center;
@@ -259,7 +259,7 @@
     }
     .lightbox-img {
       max-width: 100%;
-      max-height: 70vh;
+      max-height: 75vh;
       object-fit: contain;
       border-radius: 6px;
       border: 1px solid #333333;
@@ -286,7 +286,7 @@
       gap: 10px;
       margin-top: 15px;
       width: 100%;
-      max-width: 400px;
+      max-width: 360px;
     }
 
     /* LOADING SPINNER */
@@ -300,8 +300,8 @@
     }
 
     @media (max-width: 600px) {
-      .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .action-btn { font-size: 0.62rem; padding: 6px 4px; }
+      .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .action-btn { font-size: 0.58rem; padding: 5px 2px; }
     }
   </style>
 </head>
@@ -319,12 +319,12 @@
   <main>
     <div class="gallery-header">
       <h1>Endless Style Gallery</h1>
-      <p>Scroll through our pure visual showcase. Tap any photo to view full size or check details.</p>
+      <p>Scroll through our visual showcase. Tap any photo to view full size.</p>
     </div>
 
-    <!-- INFINITE SHUFFLED GRID -->
+    <!-- INFINITE BATCH GRID -->
     <div class="infinite-grid" id="infiniteGrid">
-      <!-- Dynamically generated items load here -->
+      <!-- Photos load here in performance batches -->
     </div>
 
     <div class="infinite-loader" id="infiniteLoader">
@@ -332,7 +332,7 @@
     </div>
   </main>
 
-  <!-- LIGHTBOX FULL-SCREEN PHOTO VIEWER MODAL -->
+  <!-- LIGHTBOX FULL-SCREEN PHOTO VIEWER MODAL (PICTURE ONLY) -->
   <div class="lightbox-overlay" id="lightboxModal" role="dialog" aria-modal="true">
     <div class="lightbox-container">
       <button class="lightbox-close" id="lightboxClose" aria-label="Close Viewer">&times;</button>
@@ -351,22 +351,22 @@
     </div>
   </div>
 
-  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX, 3-BUTTON LAYOUT, IN-BUTTON "COPIED!" FEEDBACK -->
+  <!-- SCRIPT: 24-HOUR 50-PHOTO ROTATION & PERFORMANCE BATCH LOADING -->
   <script>
-    function generateDynamicPool() {
+    // Generate master list of all potential photo files up to 1000+
+    function generateAllFiles() {
       let pool = [];
       const maxLimit = 1000;
-
       for (let i = 1; i <= maxLimit; i++) pool.push(`m${i}.jpeg`);
       for (let i = 1; i <= maxLimit; i++) pool.push(`w${i}.jpeg`);
       for (let i = 1; i <= maxLimit; i++) pool.push(`h${i}.jpeg`);
       for (let i = 1; i <= maxLimit; i++) pool.push(`r${i}.jpeg`);
-
       return pool;
     }
 
-    const masterImageFiles = generateDynamicPool();
+    const allFiles = generateAllFiles();
 
+    // Shuffle Function
     function shuffleArray(array) {
       let arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
@@ -376,7 +376,30 @@
       return arr;
     }
 
-    // Modern in-button copy feedback function (no popups)
+    // 24-Hour Rotating Pool Logic (Refreshes shuffled queue every 24 hours)
+    function getDailyGalleryPool() {
+      const now = new Date().getTime();
+      const twentyFourHours = 24 * 60 * 60 * 1000;
+      
+      let storedTime = localStorage.getItem('mrSewing_poolTime');
+      let storedPool = localStorage.getItem('mrSewing_shuffledPool');
+
+      if (!storedTime || !storedPool || (now - storedTime > twentyFourHours)) {
+        // Time expired or first visit: create a brand new 24-hour shuffle
+        const newShuffled = shuffleArray(allFiles);
+        localStorage.setItem('mrSewing_poolTime', now);
+        localStorage.setItem('mrSewing_shuffledPool', JSON.stringify(newShuffled));
+        return newShuffled;
+      } else {
+        return JSON.parse(storedPool);
+      }
+    }
+
+    const dailyPool = getDailyGalleryPool();
+    let currentIndex = 0;
+    const batchSize = 50; // Loads 50 photos per batch for maximum performance
+
+    // Modern in-button copy feedback function
     function copyLinkWithFeedback(buttonElement, urlToCopy) {
       navigator.clipboard.writeText(urlToCopy).then(() => {
         const originalHTML = buttonElement.innerHTML;
@@ -387,7 +410,7 @@
           buttonElement.classList.remove('copied');
         }, 2000);
       }).catch(err => {
-        console.error('Failed to copy text: ', err);
+        console.error('Copy failed: ', err);
       });
     }
 
@@ -419,11 +442,16 @@
     lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
-    function renderBatch() {
-      const shuffled = shuffleArray(masterImageFiles);
-      const batch = shuffled.slice(0, 12);
-      
-      batch.forEach(imgFile => {
+    function loadNextBatch() {
+      if (currentIndex >= dailyPool.length) {
+        loader.innerHTML = "All styles displayed for today. Check back tomorrow for fresh photos!";
+        return;
+      }
+
+      const nextBatch = dailyPool.slice(currentIndex, currentIndex + batchSize);
+      currentIndex += batchSize;
+
+      nextBatch.forEach(imgFile => {
         const fullPhotoUrl = window.location.origin + '/' + imgFile;
         const baseName = imgFile.substring(0, imgFile.lastIndexOf('.'));
         const detailPageUrl = `detail-${baseName}.html`;
@@ -433,6 +461,7 @@
         const card = document.createElement('article');
         card.className = 'gallery-card';
         
+        // Smart loader check: only renders cards for files that actually exist
         const imgTest = new Image();
         imgTest.src = imgFile;
         imgTest.onload = function() {
@@ -441,13 +470,13 @@
               <img src="${imgFile}" alt="Bespoke suit style - Mr. Sewing Kigali" loading="lazy">
             </div>
             <div class="card-actions">
-              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo to WhatsApp">
+              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo">
                 <i class="fab fa-whatsapp"></i> Share
               </a>
-              <button class="action-btn" onclick="copyLinkWithFeedback(this, '${fullPhotoUrl}')" title="Copy exact photo link">
+              <button class="action-btn" onclick="copyLinkWithFeedback(this, '${fullPhotoUrl}')" title="Copy photo link">
                 <i class="fas fa-link"></i> Copy
               </button>
-              <a href="${detailPageUrl}" class="action-btn details" title="View pricing, fabrics and details">
+              <a href="${detailPageUrl}" class="action-btn details" title="View pricing and details">
                 <i class="fas fa-info-circle"></i> Details
               </a>
             </div>
@@ -457,14 +486,15 @@
       });
     }
 
-    renderBatch();
-    renderBatch();
+    // Initial load
+    loadNextBatch();
 
+    // Infinite scroll listener to load next batch of 50
     window.addEventListener('scroll', () => {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
         loader.style.display = 'block';
         setTimeout(() => {
-          renderBatch();
+          loadNextBatch();
           loader.style.display = 'none';
         }, 300);
       }
