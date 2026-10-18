@@ -23,7 +23,7 @@
     <!-- Open Graph / Link Preview Tags -->
     <meta property="og:site_name" content="Mr. Sewing">
     <meta property="og:title" content="Submit Your Measurements &amp; Order - Mr. Sewing Fashion">
-    <meta property="og:description" content="Submit your 12-point measurements and custom suit design photo directly to Mr. Sewing in Kigali, Rwanda.">
+    <meta property="og:description" content="Submit your 12-point measurements directly to Mr. Sewing in Kigali, Rwanda.">
     <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
     <meta property="og:image:alt" content="Mr. Sewing logo - bespoke suits in Kigali, Rwanda">
     <meta property="og:type" content="website">
@@ -33,7 +33,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Submit Your Measurements &amp; Order - Mr. Sewing Fashion">
-    <meta name="twitter:description" content="Submit your measurements and custom suit design photo directly to Mr. Sewing in Kigali, Rwanda.">
+    <meta name="twitter:description" content="Submit your measurements directly to Mr. Sewing in Kigali, Rwanda.">
     <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
     <!-- Google Structured Data -->
@@ -46,7 +46,7 @@
           "@id": "https://mrsewingfashion.com/submission-page.html#webpage",
           "url": "https://mrsewingfashion.com/submission-page.html",
           "name": "Submit Measurements & Order | Mr. Sewing",
-          "description": "Custom measurement and design submission form for bespoke suits in Kigali, Rwanda.",
+          "description": "Custom measurement submission form for bespoke suits in Kigali, Rwanda.",
           "isPartOf": {
             "@type": "WebSite",
             "@id": "https://mrsewingfashion.com/#website",
@@ -192,11 +192,6 @@
             border-color: var(--accent-gold);
         }
 
-        input[type="file"] {
-            color: var(--text-muted);
-            padding: 8px 0;
-        }
-
         .measurements-form-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -335,11 +330,11 @@
         <div class="page-title">
             <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo">
             <h1>Submit Your Measurements &amp; Order</h1>
-            <p>Fill out your personal details, 12-point measurements, and attach your design photo below.</p>
+            <p>Fill out your personal details, 12-point measurements, and special fit notes below.</p>
         </div>
 
         <div class="form-card">
-            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="submissionForm">
+            <form action="https://api.web3forms.com/submit" method="POST" id="submissionForm">
                 
                 <!-- Web3Forms Access Key -->
                 <input type="hidden" name="apikey" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
@@ -452,15 +447,9 @@
                     </div>
                 </div>
 
-                <!-- SECTION 3: Design Photo & Notes -->
-                <div class="form-section-title" style="margin-top: 2rem;"><i class="fas fa-camera"></i> 3. Design Photo &amp; Special Notes</div>
+                <!-- SECTION 3: Special Notes -->
+                <div class="form-section-title" style="margin-top: 2rem;"><i class="fas fa-clipboard-list"></i> 3. Special Notes</div>
                 
-                <div class="form-group">
-                    <label for="designPhoto">Attach Suit Style / Inspiration Photo (Optional)</label>
-                    <input type="file" id="designPhoto" name="Design Inspiration Image" accept="image/*">
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Upload a photo of the style, cut, or color you want.</p>
-                </div>
-
                 <div class="form-group" style="margin-top: 1.2rem;">
                     <label for="notes">Custom Fit Notes &amp; Instructions</label>
                     <textarea id="notes" name="Custom Notes" rows="4" placeholder="Mention any specific fitting preferences (e.g. slim fit, extra room, specific fabric color or buttons)..."></textarea>
@@ -544,7 +533,7 @@
             }
         });
 
-        // AJAX Submission Handling supporting file uploads via FormData
+        // AJAX Submission Handling (Standard JSON submission matching your working booking forms)
         const submissionForm = document.getElementById('submissionForm');
         const successBox = document.getElementById('successBox');
         const debugMode = location.search.indexOf('debug=1') !== -1;
@@ -557,19 +546,20 @@
             submissionForm.addEventListener('submit', function (e) {
                 e.preventDefault();
 
-                const formData = new FormData(submissionForm);
-                if (!formData.get('Email') || !formData.get('Email').trim()) {
-                    formData.set('Email', 'Not provided');
+                const data = Object.fromEntries(new FormData(submissionForm));
+                if (!data['Email'] || !data['Email'].trim()) {
+                    data['Email'] = 'Not provided';
                 } else {
-                    formData.set('replyto', formData.get('Email').trim());
+                    data['replyto'] = data['Email'].trim();
                 }
 
                 fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    body: formData,
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
-                    }
+                    },
+                    body: JSON.stringify(data)
                 })
                 .then(function(response) {
                     return response.json().catch(function() { return {}; }).then(function(result) {
