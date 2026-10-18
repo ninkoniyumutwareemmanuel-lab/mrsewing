@@ -59,14 +59,7 @@
       letter-spacing: 1.5px;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 8px;
-    }
-    .booking-desc {
-      color: #aaaaaa;
-      text-align: center;
-      font-size: clamp(0.85rem, 1.5vw, 1.05rem);
-      margin-bottom: clamp(24px, 4vw, 36px);
-      line-height: 1.5;
+      margin-bottom: 24px;
     }
 
     .form-grid {
@@ -152,6 +145,11 @@
       height: 18px;
       cursor: pointer;
       flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .terms-box a {
+      color: #d4af37;
+      text-decoration: underline;
     }
     .submit-btn {
       background-color: #d4af37;
@@ -168,9 +166,21 @@
       margin-top: 24px;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    .submit-btn:hover {
+    .submit-btn:hover:not(:disabled) {
       background-color: #f3e5ab;
       transform: translateY(-2px);
+    }
+    .submit-btn:disabled {
+      background-color: #2a2a2a;
+      color: #777777;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .form-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888888;
+      margin-top: 12px;
     }
 
     .success-box {
@@ -187,7 +197,7 @@
       color: #ffffff;
       font-size: 1.6rem;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
     .success-box p {
       color: #cccccc;
@@ -237,10 +247,9 @@
   <main class="booking-wrapper">
     <div class="booking-card">
       <h1 class="booking-title">Schedule Garment Adjustment</h1>
-      <p class="booking-desc">Have clothes that need resizing, tapering, hem adjustment, or repair? Book a fitting session with our tailoring experts.</p>
 
       <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
+        <input type="hidden" name="apikey" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
         <input type="hidden" name="subject" value="New Garment Adjustment Request - Mr. Sewing">
         <input type="hidden" name="from_name" value="Mr. Sewing Alterations">
 
@@ -308,16 +317,17 @@
 
         <div class="terms-box">
           <input type="checkbox" id="agreeTerms" required>
-          <label for="agreeTerms">I agree to be contacted via WhatsApp/Email to confirm my adjustment fitting appointment.</label>
+          <label for="agreeTerms">I have read and agree to the <a href="terms-and-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</label>
         </div>
 
-        <button type="submit" class="submit-btn">Schedule Garment Adjustment</button>
+        <button type="submit" class="submit-btn" id="submitBtn" disabled>Schedule Garment Adjustment</button>
+        <p class="form-note">This information will be sent directly to Mr. Sewing.</p>
       </form>
 
       <div class="success-box" id="successBox">
         <i class="fas fa-cut"></i>
-        <h3>Adjustment Scheduled!</h3>
-        <p>Thank you! We have received your garment adjustment request and will reach out shortly via WhatsApp to confirm your fitting slot.</p>
+        <h3>Adjustment Request Received!</h3>
+        <p>Thank you for scheduling your garment adjustment with Mr. Sewing. Your details have been submitted. You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us on this number, call or WhatsApp: +250 787 411 501.</p>
         <a href="index.html" class="back-home-btn">Return to Homepage</a>
       </div>
     </div>
@@ -339,6 +349,14 @@
       phoneInput.setCustomValidity(ok ? '' : 'Please enter a valid phone number starting with your country code.');
     }
     phoneInput.addEventListener('input', checkPhone);
+
+    const agreeTerms = document.getElementById('agreeTerms');
+    const submitBtn = document.getElementById('submitBtn');
+    if (agreeTerms && submitBtn) {
+      agreeTerms.addEventListener('change', function() {
+        submitBtn.disabled = !this.checked;
+      });
+    }
 
     const form = document.getElementById('bookingForm');
     const successBox = document.getElementById('successBox');
