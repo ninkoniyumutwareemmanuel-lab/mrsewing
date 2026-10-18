@@ -134,11 +134,12 @@
     .jump-links a:hover { background: #d4af37; color: #000000; }
 
     /* CATEGORY SECTIONS */
-    .category-section { max-width: 1300px; margin: 0 auto; padding: clamp(36px, 6vw, 70px) 5%; }
+    .category-section { max-width: 1300px; margin: 0 auto; padding: clamp(20px, 3vw, 36px) 5%; }
+    /* Keep the men's and women's photo grids close together for continuous scrolling. */
+    #women { padding-top: 0; }
     .title-wrapper { display: flex; align-items: center; gap: clamp(10px, 2vw, 20px); margin-bottom: clamp(18px, 3vw, 32px); }
     .title-pill { border: 1px solid #d4af37; border-radius: 30px; padding: clamp(6px, 1vw, 9px) clamp(18px, 3vw, 34px); color: #ffffff; font-size: clamp(0.95rem, 2.2vw, 1.4rem); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background: #141414; white-space: normal; }
     .title-line { flex: 1; height: 1px; background: #2a2a2a; }
-    .section-divider { height: 1px; background: linear-gradient(to right, #0b0b0b, #d4af37, #0b0b0b); max-width: 1300px; margin: 0 auto; }
 
     /* Cards: 3 across on large screens, 2 across on phones (always side by side) */
     .category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 2vw, 25px); align-items: start; }
@@ -287,8 +288,6 @@
 
       </div>
     </section>
-
-    <div class="section-divider"></div>
 
     <!-- ===================== WOMEN'S SUITS ===================== -->
     <section class="category-section" id="women">
