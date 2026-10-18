@@ -105,47 +105,56 @@
     .site-component { width: 100%; min-width: 0; }
     main { flex: 1; padding: 20px 4% 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
 
-    /* STICKY TOP ACTION BAR */
-    .sticky-action-bar {
+    /* FIXED TOP NAVIGATION BAR WITH HOME BUTTON */
+    .fixed-top-nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 15, 15, 0.95);
+      background: rgba(11, 11, 11, 0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid #2a2a2a;
-      padding: 12px 4%;
+      padding: 12px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
     }
-    .sticky-brand { color: #d4af37; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; text-decoration: none; }
-    .sticky-buttons { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .action-chip {
+    .home-nav-btn {
       background: #141414;
       border: 1px solid #d4af37;
       color: #d4af37;
-      padding: 6px 14px;
+      padding: 8px 18px;
       border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.8rem;
+      font-weight: 700;
       text-transform: uppercase;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       transition: all 0.2s ease;
     }
-    .action-chip:hover, .action-chip.gold { background: #d4af37; color: #000000; }
+    .home-nav-btn:hover {
+      background: #d4af37;
+      color: #000000;
+    }
+    .nav-brand {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
     /* PAGE HEADER */
-    .gallery-header { text-align: center; padding: 30px 0 20px; }
-    .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+    .gallery-header { text-align: center; padding: 20px 0 15px; }
+    .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* ENDLESS SHUFFLED GRID (MEDIUM SIZED THUMBNAILS) */
+    /* ENDLESS SHUFFLED GRID */
     .infinite-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
       margin-top: 20px;
     }
     .gallery-card {
@@ -164,76 +173,123 @@
       aspect-ratio: 4 / 5;
       background: #0b0b0b;
       overflow: hidden;
+      cursor: pointer;
     }
     .card-img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center top;
+      transition: transform 0.3s ease;
+    }
+    .card-img-wrapper:hover img {
+      transform: scale(1.03);
     }
     
-    .card-body {
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-    }
-    .card-title {
-      font-size: 0.95rem;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-    .card-subtitle {
-      font-size: 0.78rem;
-      color: #d4af37;
-      font-style: italic;
-      margin-bottom: 12px;
-    }
-
-    /* SHARING CONTROLS */
+    /* CARD ACTION BUTTONS (WHATSAPP, COPY, VIEW DETAILS) */
     .card-actions {
       display: flex;
-      gap: 8px;
+      gap: 6px;
+      padding: 10px;
+      background: #141414;
       border-top: 1px solid #222222;
-      padding-top: 10px;
+      align-items: center;
+      justify-content: center;
     }
-    .share-whatsapp-btn {
+    .action-btn {
       flex: 1;
-      background: #25D366;
-      color: #000000;
-      border: none;
-      padding: 8px;
+      background: #222222;
+      color: #cccccc;
+      border: 1px solid #444444;
+      padding: 7px 6px;
       border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 700;
+      font-size: 0.7rem;
+      font-weight: 600;
       text-transform: uppercase;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 4px;
       text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .share-whatsapp-btn:hover { opacity: 0.9; }
-    
-    .copy-link-btn {
-      background: #222222;
-      color: #cccccc;
-      border: 1px solid #444444;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      cursor: pointer;
       transition: all 0.2s;
+      white-space: nowrap;
     }
-    .copy-link-btn:hover { border-color: #d4af37; color: #d4af37; }
+    .action-btn.whatsapp {
+      background: #25D366;
+      color: #000000;
+      border-color: #25D366;
+      font-weight: 700;
+    }
+    .action-btn.whatsapp:hover { opacity: 0.9; }
+    .action-btn.details {
+      background: transparent;
+      color: #d4af37;
+      border-color: #d4af37;
+      font-weight: 700;
+    }
+    .action-btn.details:hover { background: #d4af37; color: #000000; }
+    .action-btn.copied {
+      background: #d4af37 !important;
+      color: #000000 !important;
+      border-color: #d4af37 !important;
+      font-weight: 700;
+    }
+    .action-btn:hover { border-color: #d4af37; color: #d4af37; }
 
-    /* LOADING SPINNER / ENDLESS INDICATOR */
+    /* LIGHTBOX FULL-SCREEN VIEWER MODAL */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox-overlay.open { display: flex; }
+    .lightbox-container {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 6px;
+      border: 1px solid #333333;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: #222222;
+      border: 1px solid #444444;
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
+    .lightbox-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* LOADING SPINNER */
     .infinite-loader {
       text-align: center;
       padding: 40px;
@@ -243,95 +299,74 @@
       letter-spacing: 1px;
     }
 
-    /* Order modal overlay */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
-    .modal-overlay.open, .modal-overlay:target { display: flex; }
-    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: 24px; position: relative; }
-    .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
-    .modal-close:hover { color: #d4af37; }
-    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
-    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
-    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
-    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
-    .terms-check a { color: #d4af37; }
-    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; }
-    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
-    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; }
-
     @media (max-width: 600px) {
       .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .card-body { padding: 10px; }
-      .card-title { font-size: 0.82rem; }
+      .action-btn { font-size: 0.62rem; padding: 6px 4px; }
     }
   </style>
 </head>
 
 <body id="top">
 
-  <!-- STICKY ACTION BAR (Replaces footer for endless browsing) -->
-  <header class="sticky-action-bar">
-    <a href="index.html" class="sticky-brand"><i class="fas fa-cut"></i> Mr. Sewing Gallery</a>
-    <div class="sticky-buttons">
-      <a href="#top" class="action-chip">Top</a>
-      <a href="booking.html" class="action-chip">Consultation</a>
-      <a href="#orderModal" class="action-chip gold order-btn">Place Order</a>
-    </div>
+  <!-- FIXED TOP NAVIGATION BAR WITH HOME BUTTON -->
+  <header class="fixed-top-nav">
+    <a href="index.html" class="home-nav-btn">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <span class="nav-brand">Mr. Sewing Gallery</span>
   </header>
 
   <main>
     <div class="gallery-header">
-      <h1>Endless Style Feed</h1>
-      <p>Scroll through our randomized showcase of custom men's &amp; women's suits, customer moments, and reviews.</p>
+      <h1>Endless Style Gallery</h1>
+      <p>Scroll through our pure visual showcase. Tap any photo to view full size or check details.</p>
     </div>
 
-    <!-- INFINITE SHUFFLED GRID CONTAINER -->
+    <!-- INFINITE SHUFFLED GRID -->
     <div class="infinite-grid" id="infiniteGrid">
-      <!-- Cards will be injected & shuffled dynamically via script -->
+      <!-- Dynamically generated items load here -->
     </div>
 
     <div class="infinite-loader" id="infiniteLoader">
-      <i class="fas fa-spinner fa-spin"></i> Loading more bespoke styles...
+      <i class="fas fa-spinner fa-spin"></i> Loading more styles...
     </div>
   </main>
 
-  <!-- Order Modal Overlay -->
-  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-    <div class="modal-box">
-      <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
-      <h3 id="orderModalTitle">Place Your Order</h3>
-      <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
-      <label class="terms-check">
-        <input type="checkbox" id="termsAgree">
-        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
-      </label>
-      <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
-      <div class="terms-hint" id="termsHint"></div>
+  <!-- LIGHTBOX FULL-SCREEN PHOTO VIEWER MODAL -->
+  <div class="lightbox-overlay" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Viewer">&times;</button>
+      <img src="" alt="Full size suit preview - Mr. Sewing Kigali" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-actions">
+        <a href="" target="_blank" rel="noopener" class="action-btn whatsapp" id="lightboxWaBtn">
+          <i class="fab fa-whatsapp"></i> Share
+        </a>
+        <button class="action-btn" id="lightboxCopyBtn" onclick="copyLinkWithFeedback(this, lightboxImg.src)">
+          <i class="fas fa-link"></i> Copy
+        </button>
+        <a href="" class="action-btn details" id="lightboxDetailsBtn">
+          <i class="fas fa-info-circle"></i> Details
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- GALLERY & INFINITE SCROLL SCRIPT -->
+  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX, 3-BUTTON LAYOUT, IN-BUTTON "COPIED!" FEEDBACK -->
   <script>
-    // Master pool of items (Suits, Customer Photos, Reviews)
-    // You can easily add new photos here in the future!
-    const masterGalleryItems = [
-      { img: 'm1.jpeg', title: 'Classic Executive Suit', subtitle: 'Men\'s Collection', category: 'Suit' },
-      { img: 'm2.jpeg', title: 'Double Breast Suit', subtitle: 'Men\'s Collection', category: 'Suit' },
-      { img: 'm3.jpeg', title: 'Two Piece Suit', subtitle: 'Men\'s Collection', category: 'Suit' },
-      { img: 'm4.jpeg', title: 'Three Piece Suit', subtitle: 'Men\'s Collection', category: 'Suit' },
-      { img: 'm5.jpeg', title: 'Kaunda Suit', subtitle: 'Heritage Line', category: 'Suit' },
-      { img: 'm6.jpeg', title: 'Modern Contemporary Suit', subtitle: 'Men\'s Collection', category: 'Suit' },
-      { img: 'w1.jpeg', title: 'Classic Women\'s Suit', subtitle: 'Elegance Series', category: 'Suit' },
-      { img: 'w2.jpeg', title: 'Double Breast Pantsuit', subtitle: 'Elegance Series', category: 'Suit' },
-      { img: 'w3.jpeg', title: 'Two Piece Executive', subtitle: 'Elegance Series', category: 'Suit' },
-      { img: 'w4.jpeg', title: 'Three Piece Tailored', subtitle: 'Elegance Series', category: 'Suit' },
-      { img: 'w5.jpeg', title: 'Modern Women\'s Suit', subtitle: 'Elegance Series', category: 'Suit' },
-      // Placeholder slots for Customer Photos (H1, H2...) and Reviews if available
-      { img: 'h1.jpeg', title: 'Happy Customer Fit', subtitle: 'Kigali Client Showcase', category: 'Customer' },
-      { img: 'h2.jpeg', title: 'Custom Tailored Look', subtitle: 'Client Fitting Session', category: 'Customer' },
-      { img: 'review1.jpeg', title: 'Verified Client Review', subtitle: 'Quality & Precision', category: 'Review' }
-    ];
+    function generateDynamicPool() {
+      let pool = [];
+      const maxLimit = 1000;
 
-    // Shuffle Function (Fisher-Yates)
+      for (let i = 1; i <= maxLimit; i++) pool.push(`m${i}.jpeg`);
+      for (let i = 1; i <= maxLimit; i++) pool.push(`w${i}.jpeg`);
+      for (let i = 1; i <= maxLimit; i++) pool.push(`h${i}.jpeg`);
+      for (let i = 1; i <= maxLimit; i++) pool.push(`r${i}.jpeg`);
+
+      return pool;
+    }
+
+    const masterImageFiles = generateDynamicPool();
+
     function shuffleArray(array) {
       let arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
@@ -341,100 +376,99 @@
       return arr;
     }
 
-    const grid = document.getElementById('infiniteGrid');
-    const loader = document.getElementById('infiniteLoader');
-
-    function renderBatch() {
-      // Shuffle the master items to mix men, women, customers, and reviews
-      const shuffled = shuffleArray(masterGalleryItems);
-      
-      shuffled.forEach(item => {
-        const card = document.createElement('article');
-        card.className = 'gallery-card';
-        
-        const shareText = encodeURIComponent(`Hey Mr. Sewing, I like this style from your gallery: ${item.title} (${item.img}). Can we discuss making one for me?`);
-        const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
-        const currentLink = window.location.href.split('#')[0] + '#' + item.img;
-
-        card.innerHTML = `
-          <div class="card-img-wrapper">
-            <img src="${item.img}" alt="${item.title} - Mr. Sewing Kigali" loading="lazy" onerror="this.src='MR LOGO.jpeg'">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">${item.title}</h3>
-              <p class="card-subtitle">${item.subtitle}</p>
-            </div>
-            <div class="card-actions">
-              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="share-whatsapp-btn">
-                <i class="fab fa-whatsapp"></i> Share to WhatsApp
-              </a>
-              <button class="copy-link-btn" onclick="navigator.clipboard.writeText('${currentLink}'); alert('Style link copied to clipboard!');" title="Copy Link">
-                <i class="fas fa-link"></i>
-              </button>
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
+    // Modern in-button copy feedback function (no popups)
+    function copyLinkWithFeedback(buttonElement, urlToCopy) {
+      navigator.clipboard.writeText(urlToCopy).then(() => {
+        const originalHTML = buttonElement.innerHTML;
+        buttonElement.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        buttonElement.classList.add('copied');
+        setTimeout(() => {
+          buttonElement.innerHTML = originalHTML;
+          buttonElement.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
       });
     }
 
-    // Initial render
+    const grid = document.getElementById('infiniteGrid');
+    const loader = document.getElementById('infiniteLoader');
+
+    // Lightbox Elements
+    const lightbox = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxWaBtn = document.getElementById('lightboxWaBtn');
+    const lightboxCopyBtn = document.getElementById('lightboxCopyBtn');
+    const lightboxDetailsBtn = document.getElementById('lightboxDetailsBtn');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(imgSrc, fullPhotoUrl, detailPageUrl) {
+      lightboxImg.src = imgSrc;
+      const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
+      lightboxWaBtn.href = `https://wa.me/250787411501?text=${shareText}`;
+      lightboxDetailsBtn.href = detailPageUrl;
+      lightbox.classList.add('open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+
+    function renderBatch() {
+      const shuffled = shuffleArray(masterImageFiles);
+      const batch = shuffled.slice(0, 12);
+      
+      batch.forEach(imgFile => {
+        const fullPhotoUrl = window.location.origin + '/' + imgFile;
+        const baseName = imgFile.substring(0, imgFile.lastIndexOf('.'));
+        const detailPageUrl = `detail-${baseName}.html`;
+        const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
+        const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
+
+        const card = document.createElement('article');
+        card.className = 'gallery-card';
+        
+        const imgTest = new Image();
+        imgTest.src = imgFile;
+        imgTest.onload = function() {
+          card.innerHTML = `
+            <div class="card-img-wrapper" onclick="openLightbox('${imgFile}', '${fullPhotoUrl}', '${detailPageUrl}')">
+              <img src="${imgFile}" alt="Bespoke suit style - Mr. Sewing Kigali" loading="lazy">
+            </div>
+            <div class="card-actions">
+              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo to WhatsApp">
+                <i class="fab fa-whatsapp"></i> Share
+              </a>
+              <button class="action-btn" onclick="copyLinkWithFeedback(this, '${fullPhotoUrl}')" title="Copy exact photo link">
+                <i class="fas fa-link"></i> Copy
+              </button>
+              <a href="${detailPageUrl}" class="action-btn details" title="View pricing, fabrics and details">
+                <i class="fas fa-info-circle"></i> Details
+              </a>
+            </div>
+          `;
+          grid.appendChild(card);
+        };
+      });
+    }
+
+    renderBatch();
     renderBatch();
 
-    // Endless scrolling listener to append more shuffled batches infinitely
     window.addEventListener('scroll', () => {
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-        // Simulate minor loading feel for endless effect
         loader.style.display = 'block';
         setTimeout(() => {
           renderBatch();
-        }, 400);
+          loader.style.display = 'none';
+        }, 300);
       }
     });
-
-    /* Modal Popup Controller */
-    (function setupOrderModal() {
-      var modal = document.getElementById('orderModal');
-      var agree = document.getElementById('termsAgree');
-      var wa = document.getElementById('whatsappBtn');
-      var hint = document.getElementById('termsHint');
-      var closeBtn = document.getElementById('orderClose');
-
-      if (!modal || !agree || !wa || !hint) return;
-
-      function openModal() { modal.classList.add('open'); }
-      function closeModal() {
-        modal.classList.remove('open');
-        agree.checked = false;
-        wa.setAttribute('aria-disabled', 'true');
-        hint.textContent = '';
-      }
-
-      document.addEventListener('click', function (e) {
-        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
-        if (btn) { e.preventDefault(); openModal(); }
-      });
-
-      agree.addEventListener('change', function () {
-        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
-        hint.textContent = '';
-      });
-
-      wa.addEventListener('click', function (e) {
-        if (!agree.checked) {
-          e.preventDefault();
-          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
-        } else {
-          setTimeout(closeModal, 300);
-        }
-      });
-
-      if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-      if (location.hash === '#orderModal') { openModal(); }
-    })();
   </script>
 
 </body>
