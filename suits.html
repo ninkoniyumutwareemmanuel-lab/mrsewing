@@ -6,9 +6,9 @@
 
   <title>Suit Categories for Men & Women | Mr. Sewing - Bespoke Suits in Kigali, Rwanda</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Explore Mr. Sewing suit categories in Kigali, Rwanda: single-breasted, double-breasted, 2-piece and 3-piece suits for men and women, all custom made to measure.">
-  <meta name="keywords" content="Mr. Sewing suits, suits Kigali, suits Rwanda, custom suits Kigali, bespoke suits Rwanda, men's suits Kigali, women's suits Kigali, double-breasted suit Kigali, single-breasted suit Kigali, two-piece suit Kigali, three-piece suit Kigali, wedding suits Kigali, groom suit Rwanda, office suits Kigali, business suits Kigali, skirt suit Kigali, made to measure suits Kigali, best tailor in Kigali, Made in Rwanda fashion, costume sur mesure Kigali">
+  <!-- Expanded SEO & Keywords -->
+  <meta name="description" content="Explore Mr. Sewing (mr_sewing_fashion / Mr. Fashion) suit categories in Kigali, Rwanda: single-breasted, double-breasted, 2-piece and 3-piece suits for men and women, all custom made to measure.">
+  <meta name="keywords" content="Mr. Sewing suits, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion Designer, suits Kigali, suits Rwanda, custom suits Kigali, bespoke suits Rwanda, men's suits Kigali, women's suits Kigali, double-breasted suit Kigali, single-breasted suit Kigali, two-piece suit Kigali, three-piece suit Kigali, wedding suits Kigali, groom suit Rwanda, office suits Kigali, business suits Kigali, skirt suit Kigali, made to measure suits Kigali, best tailor in Kigali, Made in Rwanda fashion, costume sur mesure Kigali, suit alterations Kigali">
   <meta name="author" content="Mr. Sewing">
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="RW-01">
@@ -37,32 +37,68 @@
   <meta name="twitter:description" content="Custom made to measure suits for men and women in Kigali, Rwanda.">
   <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
-  <!-- Structured data for Google -->
+  <!-- Structured Data for Google (CollectionPage + SiteNavigationElement Sitelinks Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Suit Categories | Mr. Sewing",
-    "url": "https://mrsewingfashion.com/suits.html",
-    "description": "Suit categories for men and women, custom made to measure in Kigali, Rwanda.",
-    "isPartOf": { "@type": "WebSite", "name": "Mr. Sewing", "url": "https://mrsewingfashion.com/" },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Men's Single-Breasted Suits" },
-        { "@type": "ListItem", "position": 2, "name": "Men's Double-Breasted Suits" },
-        { "@type": "ListItem", "position": 3, "name": "Men's 2-Piece Suits" },
-        { "@type": "ListItem", "position": 4, "name": "Men's 3-Piece Suits" },
-        { "@type": "ListItem", "position": 5, "name": "Men's Wedding & Groom Suits" },
-        { "@type": "ListItem", "position": 6, "name": "Men's Office & Business Suits" },
-        { "@type": "ListItem", "position": 7, "name": "Women's Single-Breasted Suits" },
-        { "@type": "ListItem", "position": 8, "name": "Women's Double-Breasted Suits" },
-        { "@type": "ListItem", "position": 9, "name": "Women's 2-Piece Suits" },
-        { "@type": "ListItem", "position": 10, "name": "Women's 3-Piece Suits" },
-        { "@type": "ListItem", "position": 11, "name": "Women's Skirt Suits" },
-        { "@type": "ListItem", "position": 12, "name": "Women's Wedding & Occasion Suits" }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://mrsewingfashion.com/suits.html#webpage",
+        "url": "https://mrsewingfashion.com/suits.html",
+        "name": "Suit Categories | Mr. Sewing",
+        "description": "Suit categories for men and women, custom made to measure in Kigali, Rwanda.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mrsewingfashion.com/#website",
+          "name": "Mr. Sewing",
+          "url": "https://mrsewingfashion.com/"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Men's Single-Breasted Suits" },
+            { "@type": "ListItem", "position": 2, "name": "Men's Double-Breasted Suits" },
+            { "@type": "ListItem", "position": 3, "name": "Men's 2-Piece Suits" },
+            { "@type": "ListItem", "position": 4, "name": "Men's 3-Piece Suits" },
+            { "@type": "ListItem", "position": 5, "name": "Men's Wedding & Groom Suits" },
+            { "@type": "ListItem", "position": 6, "name": "Men's Office & Business Suits" },
+            { "@type": "ListItem", "position": 7, "name": "Women's Single-Breasted Suits" },
+            { "@type": "ListItem", "position": 8, "name": "Women's Double-Breasted Suits" },
+            { "@type": "ListItem", "position": 9, "name": "Women's 2-Piece Suits" },
+            { "@type": "ListItem", "position": 10, "name": "Women's 3-Piece Suits" },
+            { "@type": "ListItem", "position": 11, "name": "Women's Skirt Suits" },
+            { "@type": "ListItem", "position": 12, "name": "Women's Wedding & Occasion Suits" }
+          ]
+        }
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "@id": "https://mrsewingfashion.com/#navigation",
+        "name": [
+          "Home",
+          "About Us",
+          "Suits",
+          "Men's Suits",
+          "Women's Suits",
+          "Measurements Guide",
+          "FAQs",
+          "Contact Us",
+          "Consultation Booking"
+        ],
+        "url": [
+          "https://mrsewingfashion.com/index.html",
+          "https://mrsewingfashion.com/about.html",
+          "https://mrsewingfashion.com/suits.html",
+          "https://mrsewingfashion.com/mensuits.html",
+          "https://mrsewingfashion.com/womensuits.html",
+          "https://mrsewingfashion.com/measurements.html",
+          "https://mrsewingfashion.com/faq.html",
+          "https://mrsewingfashion.com/contact.html",
+          "https://mrsewingfashion.com/booking.html"
+        ]
+      }
+    ]
   }
   </script>
 
@@ -72,13 +108,12 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 90px; color-scheme: dark; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; line-height: 1.7; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
     img { max-width: 100%; }
     a:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
 
-    /* Shared header holder: keeps the menu fixed at the top while scrolling */
-    #site-header { position: sticky; top: 0; z-index: 1000; width: 100%; }
-    #site-footer { width: 100%; }
+    .site-component { width: 100%; min-width: 0; }
+    main { flex: 1; }
 
     /* Shown only if header.html or footer.html fails to load */
     .load-error { color: #777777; text-align: center; padding: 24px 10px; font-size: 0.9rem; }
@@ -131,6 +166,21 @@
     .outline-button { background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 10px 23px; }
     .outline-button:hover { background: #d4af37; color: #000000; }
 
+    /* Order popup modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
+    .modal-overlay.open, .modal-overlay:target { display: flex; }
+    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; }
+    .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
+    .modal-close:hover { color: #d4af37; }
+    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
+    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
+    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
+    .terms-check a { color: #d4af37; }
+    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
+    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
+    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
+
     @media (max-width: 700px) {
       html { scroll-padding-top: 130px; }
       .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -138,10 +188,10 @@
   </style>
 </head>
 
-<body>
+<body id="top">
 
-  <!-- Shared Header (fetched from header.html) -->
-  <div id="site-header"></div>
+  <!-- Shared Header Component -->
+  <div id="site-header" class="site-component" aria-label="Website header"></div>
 
   <!-- PAGE INTRODUCTION -->
   <section class="page-hero">
@@ -337,36 +387,104 @@
         book a consultation to discuss your design, fabric and measurements.
       </p>
       <div class="cta-buttons">
-        <a href="index.html#orderModal" class="gold-button">Place Your Order</a>
+        <a href="#orderModal" class="gold-button order-btn">Place Your Order</a>
         <a href="booking.html" class="gold-button outline-button">Book Consultation</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Shared Footer (fetched from footer.html) -->
-  <div id="site-footer"></div>
+  <!-- Shared Footer Component -->
+  <div id="site-footer" class="site-component"></div>
 
-  <!-- Loader: fetches header.html and footer.html -->
+  <!-- Order Modal Overlay -->
+  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
+      <h3 id="orderModalTitle">Place Your Order</h3>
+      <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
+      <label class="terms-check">
+        <input type="checkbox" id="termsAgree">
+        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+      </label>
+      <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
+      <div class="terms-hint" id="termsHint"></div>
+    </div>
+  </div>
+
+  <!-- Component Loader Script for Header and Footer -->
   <script>
-    var parts = [
-      { id: 'site-header', file: 'header.html' },
-      { id: 'site-footer', file: 'footer.html' }
-    ];
+    (async function loadComponents() {
+      const components = [
+        { id: 'site-header', file: 'header.html' },
+        { id: 'site-footer', file: 'footer.html' }
+      ];
 
-    parts.forEach(function (part) {
-      var holder = document.getElementById(part.id);
-      fetch(part.file)
-        .then(function (res) {
-          if (!res.ok) { throw new Error(res.status + ' ' + res.statusText); }
-          return res.text();
-        })
-        .then(function (html) { holder.innerHTML = html; })
-        .catch(function (err) {
-          console.error('Could not load ' + part.file + ':', err);
-          holder.innerHTML = '<p class="load-error">This part of the page could not be loaded. Please refresh.</p>';
-        });
-    });
+      await Promise.allSettled(components.map(async (component) => {
+        const mount = document.getElementById(component.id);
+        if (!mount) return;
+        try {
+          const response = await fetch(component.file, { cache: 'no-cache' });
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          mount.innerHTML = await response.text();
+          mount.dataset.loaded = 'true';
+        } catch (error) {
+          console.error('Could not load ' + component.file + ':', error);
+          mount.innerHTML = '<p class="load-error">This part of the page could not be loaded. Please refresh.</p>';
+          mount.dataset.loaded = 'false';
+        }
+      }));
+
+      document.documentElement.dataset.componentsLoaded = 'true';
+      document.dispatchEvent(new CustomEvent('sitecomponentsloaded'));
+    })();
+
+    /* Modal Popup Controller */
+    (function setupOrderModal() {
+      var modal = document.getElementById('orderModal');
+      var agree = document.getElementById('termsAgree');
+      var wa = document.getElementById('whatsappBtn');
+      var hint = document.getElementById('termsHint');
+      var closeBtn = document.getElementById('orderClose');
+
+      if (!modal || !agree || !wa || !hint) return;
+
+      function openModal() { modal.classList.add('open'); }
+      function closeModal() {
+        modal.classList.remove('open');
+        agree.checked = false;
+        wa.setAttribute('aria-disabled', 'true');
+        hint.textContent = '';
+        if (location.hash === '#orderModal') {
+          history.replaceState(null, '', location.pathname + location.search);
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
+        if (btn) { e.preventDefault(); openModal(); }
+      });
+
+      agree.addEventListener('change', function () {
+        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+        hint.textContent = '';
+      });
+
+      wa.addEventListener('click', function (e) {
+        if (!agree.checked) {
+          e.preventDefault();
+          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
+        } else {
+          setTimeout(closeModal, 300);
+        }
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+      if (location.hash === '#orderModal') { openModal(); }
+    })();
   </script>
 
 </body>
