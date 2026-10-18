@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endless Style Gallery & Suit Categories | Mr. Sewing - Kigali, Rwanda</title>
+  <title>Bespoke Suit Collections | Mr. Sewing - Kigali, Rwanda</title>
 
   <!-- Expanded SEO & Keywords -->
-  <meta name="description" content="Explore Mr. Sewing's endless style gallery in Kigali, Rwanda: custom men's and women's suits, customer photos, reviews, and made-to-measure tailoring.">
+  <meta name="description" content="Explore Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom men's and women's suits, customer photos, reviews, and made-to-measure tailoring.">
   <meta name="keywords" content="Mr. Sewing, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion Designer, suits Kigali, suits Rwanda, custom suits Kigali, bespoke suits Rwanda, men's suits Kigali, women's suits Kigali, double-breasted suit Kigali, single-breasted suit Kigali, two-piece suit Kigali, three-piece suit Kigali, wedding suits Kigali, groom suit Rwanda, office suits Kigali, business suits Kigali, skirt suit Kigali, made to measure suits Kigali, best tailor in Kigali, Made in Rwanda fashion, costume sur mesure Kigali, suit alterations Kigali, mobile tailor Kigali">
   <meta name="author" content="Mr. Sewing">
   <meta name="robots" content="index, follow">
@@ -22,8 +22,8 @@
 
   <!-- Link preview (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:site_name" content="Mr. Sewing">
-  <meta property="og:title" content="Endless Style Gallery | Mr. Sewing Kigali">
-  <meta property="og:description" content="Endless shuffled gallery of custom suits, customer photos, and reviews in Kigali, Rwanda.">
+  <meta property="og:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
+  <meta property="og:description" content="Custom suits, customer photos, and reviews in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/suits.html">
   <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
@@ -32,8 +32,8 @@
 
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Endless Style Gallery | Mr. Sewing Kigali">
-  <meta name="twitter:description" content="Endless shuffled gallery of custom suits, customer photos, and reviews in Kigali, Rwanda.">
+  <meta name="twitter:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
+  <meta name="twitter:description" content="Custom suits, customer photos, and reviews in Kigali, Rwanda.">
   <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
   <!-- Structured Data for Google (Local Business / Tailor Schema) -->
@@ -82,8 +82,8 @@
         "@type": "CollectionPage",
         "@id": "https://mrsewingfashion.com/suits.html#webpage",
         "url": "https://mrsewingfashion.com/suits.html",
-        "name": "Endless Style Gallery | Mr. Sewing",
-        "description": "Endless shuffled gallery of custom suits, customer photos, and reviews.",
+        "name": "Suit Collections | Mr. Sewing",
+        "description": "Bespoke suit collections, customer photos, and reviews.",
         "isPartOf": {
           "@id": "https://mrsewingfashion.com/#website"
         }
@@ -103,7 +103,7 @@
     a:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
 
     .site-component { width: 100%; min-width: 0; }
-    main { flex: 1; padding: 20px 4% 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
+    main { flex: 1; padding: 20px 4% 80px; max-width: 1600px; margin: 0 auto; width: 100%; }
 
     /* FIXED TOP NAVIGATION BAR WITH HOME BUTTON */
     .fixed-top-nav {
@@ -146,17 +146,36 @@
     }
 
     /* PAGE HEADER */
-    .gallery-header { text-align: center; padding: 20px 0 15px; }
+    .gallery-header { text-align: center; padding: 30px 0 25px; }
     .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* GRID FOR COMPACT MEDIUM THUMBNAILS */
-    .infinite-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 20px;
+    /* COLLECTION SECTIONS & HORIZONTAL SCROLLING */
+    .collection-block { margin-bottom: clamp(40px, 6vw, 60px); }
+    .block-title {
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 15px;
+      border-left: 4px solid #d4af37;
+      padding-left: 12px;
     }
+    .collection-carousel {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 16px;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: #d4af37 #141414;
+    }
+    .collection-carousel::-webkit-scrollbar { height: 6px; }
+    .collection-carousel::-webkit-scrollbar-track { background: #141414; border-radius: 4px; }
+    .collection-carousel::-webkit-scrollbar-thumb { background-color: #d4af37; border-radius: 4px; }
+
+    /* CARD STYLING */
     .gallery-card {
       background: #141414;
       border: 1px solid #2a2a2a;
@@ -164,6 +183,8 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      flex: 0 0 clamp(200px, 25vw, 260px);
+      scroll-snap-align: start;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
     .gallery-card:hover { border-color: #d4af37; transform: translateY(-3px); }
@@ -182,9 +203,7 @@
       object-position: center top;
       transition: transform 0.3s ease;
     }
-    .card-img-wrapper:hover img {
-      transform: scale(1.03);
-    }
+    .card-img-wrapper:hover img { transform: scale(1.03); }
     
     /* COMPACT DETACHED BUTTONS BELOW PICTURE */
     .card-actions {
@@ -282,18 +301,7 @@
     }
     .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
 
-    /* LOADING SPINNER */
-    .infinite-loader {
-      text-align: center;
-      padding: 40px;
-      color: #888888;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
     @media (max-width: 600px) {
-      .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .action-btn { font-size: 0.58rem; padding: 5px 2px; }
     }
   </style>
@@ -311,72 +319,52 @@
 
   <main>
     <div class="gallery-header">
-      <h1>Endless Style Gallery</h1>
-      <p>Scroll through our visual showcase. Tap any photo to view full size.</p>
+      <h1>Suit Collections &amp; Showcase</h1>
+      <p>Scroll through our curated styles, customer moments, and reviews. Tap any photo to view full size.</p>
     </div>
 
-    <!-- INFINITE BATCH GRID -->
-    <div class="infinite-grid" id="infiniteGrid">
-      <!-- Photos load here in performance batches -->
+    <!-- MEN'S SUITS SECTION -->
+    <div class="collection-block">
+      <h2 class="block-title">Men's Suits</h2>
+      <div class="collection-carousel" id="mensCarousel"></div>
     </div>
 
-    <div class="infinite-loader" id="infiniteLoader">
-      <i class="fas fa-spinner fa-spin"></i> Loading more styles...
+    <!-- WOMEN'S SUITS SECTION -->
+    <div class="collection-block">
+      <h2 class="block-title">Women's Suits</h2>
+      <div class="collection-carousel" id="womensCarousel"></div>
+    </div>
+
+    <!-- HAPPY CUSTOMERS SECTION -->
+    <div class="collection-block">
+      <h2 class="block-title">Happy Customers</h2>
+      <div class="collection-carousel" id="customersCarousel"></div>
+    </div>
+
+    <!-- REVIEWS SECTION -->
+    <div class="collection-block">
+      <h2 class="block-title">Client Reviews &amp; Details</h2>
+      <div class="collection-carousel" id="reviewsCarousel"></div>
     </div>
   </main>
 
-  <!-- LIGHTBOX FULL-SCREEN PHOTO VIEWER MODAL (PICTURE ONLY, NO BUTTONS) -->
+  <!-- LIGHTBOX FULL-SCREEN PHOTO VIEWER MODAL (PICTURE ONLY) -->
   <div class="lightbox-overlay" id="lightboxModal" role="dialog" aria-modal="true">
     <div class="lightbox-container">
       <button class="lightbox-close" id="lightboxClose" aria-label="Close Viewer">&times;</button>
-      <img src="" alt="Full size suit preview - Mr. Sewing Kigali" class="lightbox-img" id="lightboxImg">
+      <img src="" alt="Full size preview - Mr. Sewing Kigali" class="lightbox-img" id="lightboxImg">
     </div>
   </div>
 
-  <!-- SCRIPT: 24-HOUR 50-PHOTO ROTATION & PERFORMANCE BATCH LOADING -->
+  <!-- SCRIPT: MANUAL EXPLICIT LISTING & CAROUSEL BUILDER -->
   <script>
-    function generateAllFiles() {
-      let pool = [];
-      const maxLimit = 1000;
-      for (let i = 1; i <= maxLimit; i++) pool.push(`m${i}.jpeg`);
-      for (let i = 1; i <= maxLimit; i++) pool.push(`w${i}.jpeg`);
-      for (let i = 1; i <= maxLimit; i++) pool.push(`h${i}.jpeg`);
-      for (let i = 1; i <= maxLimit; i++) pool.push(`r${i}.jpeg`);
-      return pool;
-    }
+    // Explicit lists of your photo files. When you add new photos (e.g., m7.jpeg), simply add them here!
+    const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg'];
+    const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg'];
+    const customerFiles = ['h1.jpeg', 'h2.jpeg'];
+    const reviewFiles = ['r1.jpeg'];
 
-    const allFiles = generateAllFiles();
-
-    function shuffleArray(array) {
-      let arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    function getDailyGalleryPool() {
-      const now = new Date().getTime();
-      const twentyFourHours = 24 * 60 * 60 * 1000;
-      
-      let storedTime = localStorage.getItem('mrSewing_poolTime');
-      let storedPool = localStorage.getItem('mrSewing_shuffledPool');
-
-      if (!storedTime || !storedPool || (now - storedTime > twentyFourHours)) {
-        const newShuffled = shuffleArray(allFiles);
-        localStorage.setItem('mrSewing_poolTime', now);
-        localStorage.setItem('mrSewing_shuffledPool', JSON.stringify(newShuffled));
-        return newShuffled;
-      } else {
-        return JSON.parse(storedPool);
-      }
-    }
-
-    const dailyPool = getDailyGalleryPool();
-    let currentIndex = 0;
-    const batchSize = 50;
-
+    // Modern in-button copy feedback function
     function copyLinkWithFeedback(buttonElement, urlToCopy) {
       navigator.clipboard.writeText(urlToCopy).then(() => {
         const originalHTML = buttonElement.innerHTML;
@@ -391,10 +379,7 @@
       });
     }
 
-    const grid = document.getElementById('infiniteGrid');
-    const loader = document.getElementById('infiniteLoader');
-
-    // Lightbox Elements (Picture Only)
+    // Lightbox Elements
     const lightbox = document.getElementById('lightboxModal');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
@@ -413,16 +398,12 @@
     lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
-    function loadNextBatch() {
-      if (currentIndex >= dailyPool.length) {
-        loader.innerHTML = "All styles displayed for today. Check back tomorrow for fresh photos!";
-        return;
-      }
+    // Populate Carousel Helper
+    function populateCarousel(fileList, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
 
-      const nextBatch = dailyPool.slice(currentIndex, currentIndex + batchSize);
-      currentIndex += batchSize;
-
-      nextBatch.forEach(imgFile => {
+      fileList.forEach(imgFile => {
         const fullPhotoUrl = window.location.origin + '/' + imgFile;
         const baseName = imgFile.substring(0, imgFile.lastIndexOf('.'));
         const detailPageUrl = `detail-${baseName}.html`;
@@ -431,13 +412,14 @@
 
         const card = document.createElement('article');
         card.className = 'gallery-card';
-        
+
+        // Check if image exists before rendering
         const imgTest = new Image();
         imgTest.src = imgFile;
         imgTest.onload = function() {
           card.innerHTML = `
             <div class="card-img-wrapper" onclick="openLightbox('${imgFile}')">
-              <img src="${imgFile}" alt="Bespoke suit style - Mr. Sewing Kigali" loading="lazy">
+              <img src="${imgFile}" alt="Bespoke tailoring style - Mr. Sewing Kigali" loading="lazy">
             </div>
             <div class="card-actions">
               <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo">
@@ -451,22 +433,16 @@
               </a>
             </div>
           `;
-          grid.appendChild(card);
+          container.appendChild(card);
         };
       });
     }
 
-    loadNextBatch();
-
-    window.addEventListener('scroll', () => {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
-        loader.style.display = 'block';
-        setTimeout(() => {
-          loadNextBatch();
-          loader.style.display = 'none';
-        }, 300);
-      }
-    });
+    // Initialize Carousels
+    populateCarousel(menFiles, 'mensCarousel');
+    populateCarousel(womenFiles, 'womensCarousel');
+    populateCarousel(customerFiles, 'customersCarousel');
+    populateCarousel(reviewFiles, 'reviewsCarousel');
   </script>
 
 </body>
