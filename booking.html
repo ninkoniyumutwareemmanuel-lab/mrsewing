@@ -71,7 +71,7 @@
       line-height: 1.5;
     }
 
-    /* Form Fields (two equal columns, nothing sticks out) */
+    /* Form Fields */
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -114,7 +114,6 @@
       max-width: 100%;
     }
 
-    /* Cross-browser Date Input Calendar Picker Styling */
     input[type="date"] {
       position: relative;
       cursor: pointer;
@@ -157,6 +156,11 @@
       height: 18px;
       cursor: pointer;
       flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .terms-box a {
+      color: #d4af37;
+      text-decoration: underline;
     }
     .submit-btn {
       background-color: #d4af37;
@@ -176,6 +180,12 @@
     .submit-btn:hover {
       background-color: #f3e5ab;
       transform: translateY(-2px);
+    }
+    .form-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888888;
+      margin-top: 12px;
     }
 
     /* Success Message State */
@@ -258,14 +268,14 @@
             <input type="text" id="fullName" name="Full Name" placeholder="e.g. John Doe" autocomplete="name" required>
           </div>
 
-          <!-- WhatsApp / Phone Number (any country) -->
+          <!-- WhatsApp / Phone Number -->
           <div class="form-group">
             <label for="phone">WhatsApp / Phone Number *</label>
             <input type="tel" id="phone" name="Phone Number" placeholder="e.g. +250 78X XXX XXX" inputmode="tel" autocomplete="tel" required>
-            <span class="hint">Start with your country code (for example +250 for Rwanda). Spaces, dashes and + are fine.</span>
+            <span class="hint">Start with your country code (for example +250 for Rwanda).</span>
           </div>
 
-          <!-- Email Address (optional) -->
+          <!-- Email Address -->
           <div class="form-group">
             <label for="email">Email Address (Optional)</label>
             <input type="email" id="email" name="Email Address" placeholder="e.g. client@example.com" autocomplete="email">
@@ -311,24 +321,24 @@
         <!-- Agreement -->
         <div class="terms-box">
           <input type="checkbox" id="agreeTerms" required>
-          <label for="agreeTerms">I agree to be contacted via WhatsApp/Email regarding my consultation booking.</label>
+          <label for="agreeTerms">I have read and agree to the <a href="terms-and-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</label>
         </div>
 
         <button type="submit" class="submit-btn">Confirm Consultation Booking</button>
+        <p class="form-note">This information will be sent directly to Mr. Sewing.</p>
       </form>
 
       <!-- Success Screen -->
       <div class="success-box" id="successBox">
         <i class="fas fa-calendar-check"></i>
         <h3>Booking Request Received!</h3>
-        <p>Thank you for booking with Mr. Sewing. We have received your consultation details and will reach out shortly via WhatsApp/Email to confirm your time slot.</p>
+        <p>Thank you for booking with Mr. Sewing. Your consultation details have been submitted successfully.<br><br>You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us via WhatsApp at +250 787 411 501.</p>
         <a href="index.html" class="back-home-btn">Return to Homepage</a>
       </div>
     </div>
   </main>
 
   <script>
-    // Set minimum date to today automatically and force picker trigger on click
     const dateInput = document.getElementById('preferredDate');
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
@@ -341,7 +351,6 @@
       });
     }
 
-    // Phone number: any country. Allows digits, +, spaces, dashes, brackets and dots.
     const phoneInput = document.getElementById('phone');
     function checkPhone() {
       const value = phoneInput.value.trim();
@@ -354,8 +363,6 @@
 
     const form = document.getElementById('bookingForm');
     const successBox = document.getElementById('successBox');
-
-    // Add ?debug=1 to the page address to see the real error reason in the alert box
     const debugMode = location.search.indexOf('debug=1') !== -1;
 
     function showError(message, reason) {
@@ -365,7 +372,6 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // Collect the fields in the order they appear on the page
       const data = Object.fromEntries(new FormData(form));
       if (!data['Email Address'] || !data['Email Address'].trim()) {
         data['Email Address'] = 'Not provided';
@@ -407,7 +413,7 @@
         }
       })
       .catch(function(error) {
-        console.error('Booking form could not reach Web3Forms (network or browser problem):', error);
+        console.error('Booking form could not reach Web3Forms:', error);
         showError('Form submission error. Please try again.', error && error.message ? error.message : String(error));
       });
     });
