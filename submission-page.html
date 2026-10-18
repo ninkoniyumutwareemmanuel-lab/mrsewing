@@ -238,6 +238,14 @@
             .measurements-form-grid { grid-template-columns: 1fr; }
         }
 
+        .terms-container {
+            margin-top: 1.8rem;
+            padding: 1rem;
+            background-color: #0b0b0b;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
         .submit-btn {
             display: block;
             width: 100%;
@@ -253,11 +261,17 @@
             letter-spacing: 1px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: 2rem;
+            margin-top: 1.2rem;
         }
 
         .submit-btn:hover {
             background-color: var(--accent-gold-hover);
+        }
+
+        .submit-btn:disabled {
+            background-color: #2a2a2a;
+            color: #777777;
+            cursor: not-allowed;
         }
 
         .form-note {
@@ -275,7 +289,7 @@
         .modal-close:hover { color: #d4af37; }
         .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
         .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
-        .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
+        .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; cursor: pointer; }
         .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
         .terms-check a { color: #d4af37; }
         .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
@@ -296,11 +310,13 @@
             <p>Fill out your personal details, 12-point measurements, and attach your design photo below.</p>
         </div>
 
-        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="form-card">
+        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="form-card" id="submissionForm">
             
             <!-- Web3Forms Access Key: Replace with your actual key -->
             <input type="hidden" name="apikey" value="YOUR_WEB3FORMS_ACCESS_KEY">
             <input type="hidden" name="subject" value="New Suit Order & Measurements Submission - Mr. Sewing">
+            <!-- Redirect to success confirmation page after submission -->
+            <input type="hidden" name="redirect" value="https://mrsewingfashion.com/success.html">
             <input type="checkbox" name="botcheck" style="display: none;">
 
             <!-- SECTION 1: Personal Information -->
@@ -422,8 +438,16 @@
                 <textarea id="notes" name="Custom Notes" rows="4" placeholder="Mention any specific fitting preferences (e.g. slim fit, extra room, specific fabric color or buttons)..."></textarea>
             </div>
 
-            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Measurements &amp; Order</button>
-            <p class="form-note">This information will be securely sent directly to Mr. Sewing only.</p>
+            <!-- Terms & Conditions Agreement Box -->
+            <div class="terms-container">
+                <label class="terms-check">
+                    <input type="checkbox" id="formTermsAgree" required>
+                    <span>I have read and agree to the <a href="terms-and-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="formSubmitBtn" disabled><i class="fas fa-paper-plane"></i> Submit Measurements &amp; Order</button>
+            <p class="form-note">This information will be sent directly to Mr. Sewing.</p>
         </form>
     </main>
 
@@ -445,7 +469,7 @@
         </div>
     </div>
 
-    <!-- Component Loader Script & Modal Controller -->
+    <!-- Component Loader Script & Modal & Form Validation Controller -->
     <script>
         (async function loadComponents() {
           const components = [
@@ -470,6 +494,18 @@
           document.documentElement.dataset.componentsLoaded = 'true';
           document.dispatchEvent(new CustomEvent('sitecomponentsloaded'));
         })();
+
+        // Form Terms & Conditions toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            var formTerms = document.getElementById('formTermsAgree');
+            var submitBtn = document.getElementById('formSubmitBtn');
+
+            if (formTerms && submitBtn) {
+                formTerms.addEventListener('change', function () {
+                    submitBtn.disabled = !formTerms.checked;
+                });
+            }
+        });
 
         (function () {
             var modal = document.getElementById('orderModal');
