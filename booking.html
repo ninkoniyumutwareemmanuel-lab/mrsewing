@@ -36,7 +36,7 @@
     nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.72rem, 1.4vw, 0.92rem); font-weight: 500; transition: color 0.3s ease; }
     nav a:hover { color: #d4af37; }
 
-    /* Main Container (bigger box) */
+    /* Main Container */
     .booking-wrapper {
       flex: 1;
       padding: clamp(30px, 6vw, 80px) 4%;
@@ -61,14 +61,7 @@
       letter-spacing: 1.5px;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 8px;
-    }
-    .booking-desc {
-      color: #aaaaaa;
-      text-align: center;
-      font-size: clamp(0.85rem, 1.5vw, 1.05rem);
-      margin-bottom: clamp(24px, 4vw, 36px);
-      line-height: 1.5;
+      margin-bottom: 24px;
     }
 
     /* Form Fields */
@@ -177,9 +170,15 @@
       margin-top: 24px;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    .submit-btn:hover {
+    .submit-btn:hover:not(:disabled) {
       background-color: #f3e5ab;
       transform: translateY(-2px);
+    }
+    .submit-btn:disabled {
+      background-color: #2a2a2a;
+      color: #777777;
+      cursor: not-allowed;
+      transform: none;
     }
     .form-note {
       text-align: center;
@@ -203,7 +202,7 @@
       color: #ffffff;
       font-size: 1.6rem;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
     .success-box p {
       color: #cccccc;
@@ -253,12 +252,11 @@
   <main class="booking-wrapper">
     <div class="booking-card">
       <h1 class="booking-title">Book a Consultation</h1>
-      <p class="booking-desc">Schedule a private session with our master tailor at our workplace (Recommended: Norvège Branch) or request a VIP mobile house call across Kigali.</p>
 
       <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- Web3Forms Access Key -->
-        <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
-        <input type="hidden" name="subject" value="New Booking - Mr. Sewing">
+        <input type="hidden" name="apikey" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
+        <input type="hidden" name="subject" value="New Consultation Booking - Mr. Sewing">
         <input type="hidden" name="from_name" value="Mr. Sewing Website">
 
         <div class="form-grid">
@@ -324,7 +322,7 @@
           <label for="agreeTerms">I have read and agree to the <a href="terms-and-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</label>
         </div>
 
-        <button type="submit" class="submit-btn">Confirm Consultation Booking</button>
+        <button type="submit" class="submit-btn" id="submitBtn" disabled>Confirm Consultation Booking</button>
         <p class="form-note">This information will be sent directly to Mr. Sewing.</p>
       </form>
 
@@ -332,7 +330,7 @@
       <div class="success-box" id="successBox">
         <i class="fas fa-calendar-check"></i>
         <h3>Booking Request Received!</h3>
-        <p>Thank you for booking with Mr. Sewing. Your consultation details have been submitted successfully.<br><br>You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us via WhatsApp at +250 787 411 501.</p>
+        <p>Thank you for booking with Mr. Sewing. Your consultation details have been submitted. You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us on this number, call or WhatsApp: +250 787 411 501.</p>
         <a href="index.html" class="back-home-btn">Return to Homepage</a>
       </div>
     </div>
@@ -360,6 +358,14 @@
     }
     phoneInput.addEventListener('input', checkPhone);
     checkPhone();
+
+    const agreeTerms = document.getElementById('agreeTerms');
+    const submitBtn = document.getElementById('submitBtn');
+    if (agreeTerms && submitBtn) {
+      agreeTerms.addEventListener('change', function() {
+        submitBtn.disabled = !this.checked;
+      });
+    }
 
     const form = document.getElementById('bookingForm');
     const successBox = document.getElementById('successBox');
