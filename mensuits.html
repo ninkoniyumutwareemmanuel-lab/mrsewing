@@ -177,10 +177,10 @@
       transform: scale(1.03);
     }
     
-    /* COMPACT ACTION BAR (WHATSAPP & COPY MATCHING SIZE) */
+    /* CARD ACTION BUTTONS (WHATSAPP, COPY, VIEW DETAILS) */
     .card-actions {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       padding: 10px;
       background: #141414;
       border-top: 1px solid #222222;
@@ -192,16 +192,16 @@
       background: #222222;
       color: #cccccc;
       border: 1px solid #444444;
-      padding: 7px 10px;
+      padding: 7px 6px;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 600;
       text-transform: uppercase;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 4px;
       text-decoration: none;
       transition: all 0.2s;
       white-space: nowrap;
@@ -213,6 +213,13 @@
       font-weight: 700;
     }
     .action-btn.whatsapp:hover { opacity: 0.9; }
+    .action-btn.details {
+      background: transparent;
+      color: #d4af37;
+      border-color: #d4af37;
+      font-weight: 700;
+    }
+    .action-btn.details:hover { background: #d4af37; color: #000000; }
     .action-btn:hover { border-color: #d4af37; color: #d4af37; }
 
     /* LIGHTBOX FULL-SCREEN VIEWER MODAL */
@@ -237,7 +244,7 @@
     }
     .lightbox-img {
       max-width: 100%;
-      max-height: 75vh;
+      max-height: 70vh;
       object-fit: contain;
       border-radius: 6px;
       border: 1px solid #333333;
@@ -261,10 +268,10 @@
     .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
     .lightbox-actions {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       margin-top: 15px;
       width: 100%;
-      max-width: 350px;
+      max-width: 400px;
     }
 
     /* LOADING SPINNER */
@@ -294,6 +301,7 @@
 
     @media (max-width: 600px) {
       .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .action-btn { font-size: 0.62rem; padding: 6px 4px; }
     }
   </style>
 </head>
@@ -313,10 +321,10 @@
   <main>
     <div class="gallery-header">
       <h1>Endless Style Gallery</h1>
-      <p>Scroll through our pure visual showcase. Tap any photo to view full size.</p>
+      <p>Scroll through our pure visual showcase. Tap any photo to view full size or check details.</p>
     </div>
 
-    <!-- INFINITE SHUFFLED GRID (NO DESCRIPTIONS) -->
+    <!-- INFINITE SHUFFLED GRID -->
     <div class="infinite-grid" id="infiniteGrid">
       <!-- Dynamically generated items load here -->
     </div>
@@ -333,11 +341,14 @@
       <img src="" alt="Full size suit preview - Mr. Sewing Kigali" class="lightbox-img" id="lightboxImg">
       <div class="lightbox-actions">
         <a href="" target="_blank" rel="noopener" class="action-btn whatsapp" id="lightboxWaBtn">
-          <i class="fab fa-whatsapp"></i> Share to WhatsApp
+          <i class="fab fa-whatsapp"></i> Share
         </a>
         <button class="action-btn" id="lightboxCopyBtn">
-          <i class="fas fa-link"></i> Copy Link
+          <i class="fas fa-link"></i> Copy
         </button>
+        <a href="" class="action-btn details" id="lightboxDetailsBtn">
+          <i class="fas fa-info-circle"></i> Details
+        </a>
       </div>
     </div>
   </div>
@@ -357,7 +368,7 @@
     </div>
   </div>
 
-  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX VIEWER, EXACT PHOTO LINK SHARING -->
+  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX, 3-BUTTON LAYOUT (WHATSAPP, COPY, DETAILS) -->
   <script>
     function generateDynamicPool() {
       let pool = [];
@@ -390,9 +401,10 @@
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxWaBtn = document.getElementById('lightboxWaBtn');
     const lightboxCopyBtn = document.getElementById('lightboxCopyBtn');
+    const lightboxDetailsBtn = document.getElementById('lightboxDetailsBtn');
     const lightboxClose = document.getElementById('lightboxClose');
 
-    function openLightbox(imgSrc, fullPhotoUrl) {
+    function openLightbox(imgSrc, fullPhotoUrl, detailPageUrl) {
       lightboxImg.src = imgSrc;
       const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
       lightboxWaBtn.href = `https://wa.me/250787411501?text=${shareText}`;
@@ -400,6 +412,7 @@
         navigator.clipboard.writeText(fullPhotoUrl);
         alert('Photo link copied to clipboard!');
       };
+      lightboxDetailsBtn.href = detailPageUrl;
       lightbox.classList.add('open');
     }
 
@@ -418,6 +431,8 @@
       
       batch.forEach(imgFile => {
         const fullPhotoUrl = window.location.origin + '/' + imgFile;
+        const baseName = imgFile.substring(0, imgFile.lastIndexOf('.'));
+        const detailPageUrl = `detail-${baseName}.html`;
         const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
         const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
 
@@ -428,16 +443,19 @@
         imgTest.src = imgFile;
         imgTest.onload = function() {
           card.innerHTML = `
-            <div class="card-img-wrapper" onclick="openLightbox('${imgFile}', '${fullPhotoUrl}')">
+            <div class="card-img-wrapper" onclick="openLightbox('${imgFile}', '${fullPhotoUrl}', '${detailPageUrl}')">
               <img src="${imgFile}" alt="Bespoke suit style - Mr. Sewing Kigali" loading="lazy">
             </div>
             <div class="card-actions">
-              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp">
+              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo to WhatsApp">
                 <i class="fab fa-whatsapp"></i> Share
               </a>
-              <button class="action-btn" onclick="navigator.clipboard.writeText('${fullPhotoUrl}'); alert('Photo link copied!');" title="Copy Photo Link">
+              <button class="action-btn" onclick="navigator.clipboard.writeText('${fullPhotoUrl}'); alert('Photo link copied!');" title="Copy exact photo link">
                 <i class="fas fa-link"></i> Copy
               </button>
+              <a href="${detailPageUrl}" class="action-btn details" title="View pricing, fabrics and details">
+                <i class="fas fa-info-circle"></i> Details
+              </a>
             </div>
           `;
           grid.appendChild(card);
@@ -496,7 +514,7 @@
       });
 
       if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (event.target === modal) closeModal(); });
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
       if (location.hash === '#orderModal') { openModal(); }
     })();
