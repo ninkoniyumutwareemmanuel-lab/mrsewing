@@ -141,11 +141,11 @@
     .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* ENDLESS SHUFFLED GRID (MEDIUM SIZED THUMBNAILS) */
+    /* ENDLESS SHUFFLED GRID */
     .infinite-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
       margin-top: 20px;
     }
     .gallery-card {
@@ -164,76 +164,110 @@
       aspect-ratio: 4 / 5;
       background: #0b0b0b;
       overflow: hidden;
+      cursor: pointer;
     }
     .card-img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center top;
+      transition: transform 0.3s ease;
+    }
+    .card-img-wrapper:hover img {
+      transform: scale(1.03);
     }
     
-    .card-body {
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-    }
-    .card-title {
-      font-size: 0.95rem;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-    .card-subtitle {
-      font-size: 0.78rem;
-      color: #d4af37;
-      font-style: italic;
-      margin-bottom: 12px;
-    }
-
-    /* SHARING CONTROLS */
+    /* COMPACT ACTION BAR (WHATSAPP & COPY MATCHING SIZE) */
     .card-actions {
       display: flex;
       gap: 8px;
+      padding: 10px;
+      background: #141414;
       border-top: 1px solid #222222;
-      padding-top: 10px;
+      align-items: center;
+      justify-content: center;
     }
-    .share-whatsapp-btn {
+    .action-btn {
       flex: 1;
-      background: #25D366;
-      color: #000000;
-      border: none;
-      padding: 8px;
+      background: #222222;
+      color: #cccccc;
+      border: 1px solid #444444;
+      padding: 7px 10px;
       border-radius: 4px;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
       text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .share-whatsapp-btn:hover { opacity: 0.9; }
-    
-    .copy-link-btn {
-      background: #222222;
-      color: #cccccc;
-      border: 1px solid #444444;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      cursor: pointer;
       transition: all 0.2s;
+      white-space: nowrap;
     }
-    .copy-link-btn:hover { border-color: #d4af37; color: #d4af37; }
+    .action-btn.whatsapp {
+      background: #25D366;
+      color: #000000;
+      border-color: #25D366;
+      font-weight: 700;
+    }
+    .action-btn.whatsapp:hover { opacity: 0.9; }
+    .action-btn:hover { border-color: #d4af37; color: #d4af37; }
 
-    /* LOADING SPINNER / ENDLESS INDICATOR */
+    /* LIGHTBOX FULL-SCREEN VIEWER MODAL */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox-overlay.open { display: flex; }
+    .lightbox-container {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 6px;
+      border: 1px solid #333333;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: #222222;
+      border: 1px solid #444444;
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
+    .lightbox-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    /* LOADING SPINNER */
     .infinite-loader {
       text-align: center;
       padding: 40px;
@@ -260,15 +294,13 @@
 
     @media (max-width: 600px) {
       .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .card-body { padding: 10px; }
-      .card-title { font-size: 0.82rem; }
     }
   </style>
 </head>
 
 <body id="top">
 
-  <!-- STICKY ACTION BAR -->
+  <!-- STICKY TOP ACTION BAR -->
   <header class="sticky-action-bar">
     <a href="index.html" class="sticky-brand"><i class="fas fa-cut"></i> Mr. Sewing Gallery</a>
     <div class="sticky-buttons">
@@ -280,19 +312,35 @@
 
   <main>
     <div class="gallery-header">
-      <h1>Endless Style Feed</h1>
-      <p>Scroll through our randomized showcase of custom men's &amp; women's suits, customer moments, and reviews.</p>
+      <h1>Endless Style Gallery</h1>
+      <p>Scroll through our pure visual showcase. Tap any photo to view full size.</p>
     </div>
 
-    <!-- INFINITE SHUFFLED GRID CONTAINER -->
+    <!-- INFINITE SHUFFLED GRID (NO DESCRIPTIONS) -->
     <div class="infinite-grid" id="infiniteGrid">
-      <!-- Dynamically generated items up to 1000+ will load here -->
+      <!-- Dynamically generated items load here -->
     </div>
 
     <div class="infinite-loader" id="infiniteLoader">
-      <i class="fas fa-spinner fa-spin"></i> Loading more bespoke styles...
+      <i class="fas fa-spinner fa-spin"></i> Loading more styles...
     </div>
   </main>
+
+  <!-- LIGHTBOX FULL-SCREEN PHOTO VIEWER MODAL -->
+  <div class="lightbox-overlay" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Viewer">&times;</button>
+      <img src="" alt="Full size suit preview - Mr. Sewing Kigali" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-actions">
+        <a href="" target="_blank" rel="noopener" class="action-btn whatsapp" id="lightboxWaBtn">
+          <i class="fab fa-whatsapp"></i> Share to WhatsApp
+        </a>
+        <button class="action-btn" id="lightboxCopyBtn">
+          <i class="fas fa-link"></i> Copy Link
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Order Modal Overlay -->
   <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
@@ -309,59 +357,22 @@
     </div>
   </div>
 
-  <!-- DYNAMIC 1000+ AUTO-GENERATING & SHUFFLING SCRIPT -->
+  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX VIEWER, EXACT PHOTO LINK SHARING -->
   <script>
-    // Automatically generate item pools up to 1000+ for each category prefix (m, w, h, r)
     function generateDynamicPool() {
       let pool = [];
-      const maxLimit = 1000; // Automatically scans up to 1000 files per category
+      const maxLimit = 1000;
 
-      // Men's Suits (m1.jpeg to m1000.jpeg)
-      for (let i = 1; i <= maxLimit; i++) {
-        pool.push({
-          img: `m${i}.jpeg`,
-          title: `Bespoke Men's Suit #${i}`,
-          subtitle: "The Executive Line",
-          category: "Suit"
-        });
-      }
-
-      // Women's Suits (w1.jpeg to w1000.jpeg)
-      for (let i = 1; i <= maxLimit; i++) {
-        pool.push({
-          img: `w${i}.jpeg`,
-          title: `Bespoke Women's Suit #${i}`,
-          subtitle: "The Elegance Series",
-          category: "Suit"
-        });
-      }
-
-      // Happy Customers (h1.jpeg to h1000.jpeg)
-      for (let i = 1; i <= maxLimit; i++) {
-        pool.push({
-          img: `h${i}.jpeg`,
-          title: `Happy Customer Fit #${i}`,
-          subtitle: "Kigali Client Showcase",
-          category: "Customer"
-        });
-      }
-
-      // Reviews / Photos (r1.jpeg to r1000.jpeg)
-      for (let i = 1; i <= maxLimit; i++) {
-        pool.push({
-          img: `r${i}.jpeg`,
-          title: `Client Review & Detail #${i}`,
-          subtitle: "Quality & Precision",
-          category: "Review"
-        });
-      }
+      for (let i = 1; i <= maxLimit; i++) pool.push(`m${i}.jpeg`);
+      for (let i = 1; i <= maxLimit; i++) pool.push(`w${i}.jpeg`);
+      for (let i = 1; i <= maxLimit; i++) pool.push(`h${i}.jpeg`);
+      for (let i = 1; i <= maxLimit; i++) pool.push(`r${i}.jpeg`);
 
       return pool;
     }
 
-    const masterGalleryItems = generateDynamicPool();
+    const masterImageFiles = generateDynamicPool();
 
-    // Shuffle Function (Fisher-Yates)
     function shuffleArray(array) {
       let arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
@@ -374,40 +385,59 @@
     const grid = document.getElementById('infiniteGrid');
     const loader = document.getElementById('infiniteLoader');
 
+    // Lightbox Elements
+    const lightbox = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxWaBtn = document.getElementById('lightboxWaBtn');
+    const lightboxCopyBtn = document.getElementById('lightboxCopyBtn');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(imgSrc, fullPhotoUrl) {
+      lightboxImg.src = imgSrc;
+      const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
+      lightboxWaBtn.href = `https://wa.me/250787411501?text=${shareText}`;
+      lightboxCopyBtn.onclick = function() {
+        navigator.clipboard.writeText(fullPhotoUrl);
+        alert('Photo link copied to clipboard!');
+      };
+      lightbox.classList.add('open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+
     function renderBatch() {
-      const shuffled = shuffleArray(masterGalleryItems);
-      // Take a random batch of 12 items per render scroll to keep performance lightning fast
+      const shuffled = shuffleArray(masterImageFiles);
       const batch = shuffled.slice(0, 12);
       
-      batch.forEach(item => {
+      batch.forEach(imgFile => {
+        const fullPhotoUrl = window.location.origin + '/' + imgFile;
+        const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
+        const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
+
         const card = document.createElement('article');
         card.className = 'gallery-card';
         
-        // Smart loader check: Only append if the image actually loads successfully, hiding missing numbers
         const imgTest = new Image();
-        imgTest.src = item.img;
+        imgTest.src = imgFile;
         imgTest.onload = function() {
-          const shareText = encodeURIComponent(`Hey Mr. Sewing, I like this style from your gallery: ${item.title} (${item.img}). Can we discuss making one for me?`);
-          const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
-          const currentLink = window.location.href.split('#')[0] + '#' + item.img;
-
           card.innerHTML = `
-            <div class="card-img-wrapper">
-              <img src="${item.img}" alt="${item.title} - Mr. Sewing Kigali" loading="lazy">
+            <div class="card-img-wrapper" onclick="openLightbox('${imgFile}', '${fullPhotoUrl}')">
+              <img src="${imgFile}" alt="Bespoke suit style - Mr. Sewing Kigali" loading="lazy">
             </div>
-            <div class="card-body">
-              <div>
-                <h3 class="card-title">${item.title}</h3>
-                <p class="card-subtitle">${item.subtitle}</p>
-              </div>
-              <div class="card-actions">
-                <a href="${whatsappUrl}" target="_blank" rel="noopener" class="share-whatsapp-btn">
-                  <i class="fab fa-whatsapp"></i> Share to WhatsApp
-                </a>
-                <button class="copy-link-btn" onclick="navigator.clipboard.writeText('${currentLink}'); alert('Style link copied to clipboard!');" title="Copy Link">
-                  <i class="fas fa-link"></i>
-                </button>
-              </div>
+            <div class="card-actions">
+              <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> Share
+              </a>
+              <button class="action-btn" onclick="navigator.clipboard.writeText('${fullPhotoUrl}'); alert('Photo link copied!');" title="Copy Photo Link">
+                <i class="fas fa-link"></i> Copy
+              </button>
             </div>
           `;
           grid.appendChild(card);
@@ -415,11 +445,9 @@
       });
     }
 
-    // Initial render batches
     renderBatch();
     renderBatch();
 
-    // Endless scrolling listener to append more shuffled batches infinitely
     window.addEventListener('scroll', () => {
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
         loader.style.display = 'block';
@@ -468,7 +496,7 @@
       });
 
       if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      modal.addEventListener('click', function (e) { if (event.target === modal) closeModal(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
       if (location.hash === '#orderModal') { openModal(); }
     })();
