@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Workplace Appointment | Mr. Sewing Kigali</title>
+
+  <meta name="description" content="Book a workplace fitting appointment or place an order at Mr. Sewing in Norvège or MIC Building, Kigali.">
+  <meta name="author" content="Mr. Sewing">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; color-scheme: dark; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Header Styling */
+    header {
+      background-color: #141414;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 12px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; mix-blend-mode: screen; }
+    nav ul { display: flex; list-style: none; gap: clamp(10px, 2vw, 20px); align-items: center; }
+    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.72rem, 1.4vw, 0.92rem); font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover { color: #d4af37; }
+
+    /* Main Container */
+    .booking-wrapper {
+      flex: 1;
+      padding: clamp(30px, 6vw, 80px) 4%;
+      max-width: 1000px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .booking-card {
+      background-color: #141414;
+      border: 1px solid #2a2a2a;
+      border-top: 3px solid #d4af37;
+      border-radius: 8px;
+      padding: clamp(20px, 5vw, 56px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      overflow: hidden;
+    }
+    .booking-title {
+      color: #d4af37;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .booking-desc {
+      color: #aaaaaa;
+      text-align: center;
+      font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+      margin-bottom: clamp(24px, 4vw, 36px);
+      line-height: 1.5;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 2.5vw, 24px);
+      width: 100%;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+    label {
+      color: #d4af37;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .hint {
+      color: #888888;
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+    input, select, textarea {
+      background-color: #0b0b0b;
+      border: 1px solid #2a2a2a;
+      color: #ffffff;
+      padding: 12px 14px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    input[type="date"] {
+      position: relative;
+      cursor: pointer;
+      color-scheme: dark;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      background: transparent;
+      bottom: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: auto;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #d4af37;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .terms-box {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #cccccc;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .terms-box input {
+      accent-color: #d4af37;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .submit-btn {
+      background-color: #d4af37;
+      color: #000000;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .submit-btn:hover {
+      background-color: #f3e5ab;
+      transform: translateY(-2px);
+    }
+
+    .success-box {
+      display: none;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    .success-box i {
+      font-size: 3.5rem;
+      color: #d4af37;
+      margin-bottom: 16px;
+    }
+    .success-box h3 {
+      color: #ffffff;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .success-box p {
+      color: #cccccc;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .back-home-btn {
+      display: inline-block;
+      background-color: transparent;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      padding: 10px 24px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .back-home-btn:hover {
+      background-color: #d4af37;
+      color: #000000;
+    }
+
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: minmax(0, 1fr); }
+      .form-group.full-width { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+      <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="suits.html">Suits</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Form Wrapper -->
+  <main class="booking-wrapper">
+    <div class="booking-card">
+      <h1 class="booking-title">Book Workplace Appointment</h1>
+      <p class="booking-desc">Schedule a session to take measurements, finalize fabrics, or complete a fitting at one of our Kigali locations.</p>
+
+      <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
+        <input type="hidden" name="subject" value="New Workplace Appointment Request - Mr. Sewing">
+        <input type="hidden" name="from_name" value="Mr. Sewing Website">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="Full Name" placeholder="e.g. John Doe" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">WhatsApp / Phone Number *</label>
+            <input type="tel" id="phone" name="Phone Number" placeholder="e.g. +250 78X XXX XXX" inputmode="tel" autocomplete="tel" required>
+            <span class="hint">Start with country code (e.g. +250).</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address (Optional)</label>
+            <input type="email" id="email" name="Email Address" placeholder="e.g. client@example.com" autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="branch">Select Branch Location *</label>
+            <select id="branch" name="Selected Branch" required>
+              <option value="Norvège Branch (KN 441 St)">Branch 1: Norvège (KN 441 St) - Recommended</option>
+              <option value="MIC Building (Downtown)">Branch 2: MIC Building (Downtown Kigali)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fittingStage">Fitting Stage / Session Type *</label>
+            <select id="fittingStage" name="Fitting Stage" required>
+              <option value="Initial Measurements & Order Placement">Initial Measurements & Order Placement</option>
+              <option value="Mid-Way Suit Fitting">Mid-Way Suit Fitting</option>
+              <option value="Final Suit Pick-up & Check">Final Suit Pick-up & Check</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="preferredDate">Preferred Date *</label>
+            <input type="date" id="preferredDate" name="Preferred Date" required>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="preferredTime">Preferred Time *</label>
+            <select id="preferredTime" name="Preferred Time" required>
+              <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+              <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+              <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+              <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+              <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+              <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+              <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="orderNotes">Order Details / Special Notes</label>
+            <textarea id="orderNotes" name="Order Notes" placeholder="Tell us about the suit style, fabric preferences, or order details..."></textarea>
+          </div>
+        </div>
+
+        <div class="terms-box">
+          <input type="checkbox" id="agreeTerms" required>
+          <label for="agreeTerms">I agree to be contacted via WhatsApp/Email regarding my workplace appointment.</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Confirm Workplace Appointment</button>
+      </form>
+
+      <div class="success-box" id="successBox">
+        <i class="fas fa-calendar-check"></i>
+        <h3>Appointment Request Received!</h3>
+        <p>Thank you for booking your workplace session with Mr. Sewing. We will reach out shortly via WhatsApp to confirm your appointment time.</p>
+        <a href="index.html" class="back-home-btn">Return to Homepage</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const dateInput = document.getElementById('preferredDate');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+      dateInput.addEventListener('click', function() { if (typeof this.showPicker === 'function') this.showPicker(); });
+    }
+
+    const phoneInput = document.getElementById('phone');
+    function checkPhone() {
+      const value = phoneInput.value.trim();
+      const digits = value.replace(/\D/g, '');
+      const ok = /^[0-9+\-\s().]+$/.test(value) && digits.length >= 7 && digits.length <= 15;
+      phoneInput.setCustomValidity(ok ? '' : 'Please enter a valid phone number starting with your country code.');
+    }
+    phoneInput.addEventListener('input', checkPhone);
+
+    const form = document.getElementById('bookingForm');
+    const successBox = document.getElementById('successBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      if (!data['Email Address'] || !data['Email Address'].trim()) data['Email Address'] = 'Not provided';
+      else data['replyto'] = data['Email Address'].trim();
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(result => {
+        if (result.success !== false) {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please contact us on WhatsApp.');
+        }
+      })
+      .catch(() => alert('Submission error. Please try again.'));
+    });
+  </script>
+
+</body>
+</html>
