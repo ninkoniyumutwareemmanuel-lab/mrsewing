@@ -103,7 +103,7 @@
     a:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
 
     .site-component { width: 100%; min-width: 0; }
-    main { flex: 1; padding: 20px 4% 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
+    main { flex: 1; padding: 20px 4% 80px; max-width: 1600px; margin: 0 auto; width: 100%; }
 
     /* FIXED TOP NAVIGATION BAR WITH HOME BUTTON */
     .fixed-top-nav {
@@ -150,33 +150,40 @@
     .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* TWO-COLUMN SECTION LAYOUT (MEN & WOMEN SIDE BY SIDE) */
-    .sections-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: start;
+    /* COLLECTION SECTIONS & HORIZONTAL SCROLLING CAROUSELS */
+    .collection-block { margin-bottom: clamp(40px, 6vw, 65px); }
+    .block-title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
     }
-    .collection-block { margin-bottom: clamp(40px, 6vw, 60px); }
     .block-title {
       font-size: clamp(1.1rem, 2.2vw, 1.5rem);
       color: #ffffff;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin-bottom: 20px;
-      border-left: 4px solid #d4af37;
-      padding-left: 12px;
+      white-space: nowrap;
+    }
+    .block-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, #d4af37, #2a2a2a);
     }
 
-    /* VERTICAL GRID LAYOUT (TOP TO BOTTOM SCROLLING) */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+    .collection-carousel {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 16px;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: #d4af37 #141414;
     }
-    .single-column-grid {
-      grid-template-columns: 1fr;
-    }
+    .collection-carousel::-webkit-scrollbar { height: 6px; }
+    .collection-carousel::-webkit-scrollbar-track { background: #141414; border-radius: 4px; }
+    .collection-carousel::-webkit-scrollbar-thumb { background-color: #d4af37; border-radius: 4px; }
 
     /* CARD STYLING */
     .gallery-card {
@@ -186,6 +193,8 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      flex: 0 0 clamp(200px, 25vw, 260px);
+      scroll-snap-align: start;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
     .gallery-card:hover { border-color: #d4af37; transform: translateY(-3px); }
@@ -302,11 +311,7 @@
     }
     .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
 
-    @media (max-width: 900px) {
-      .sections-container { grid-template-columns: 1fr; gap: 0; }
-    }
     @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .action-btn { font-size: 0.58rem; padding: 5px 2px; }
     }
   </style>
@@ -325,30 +330,34 @@
   <main>
     <div class="gallery-header">
       <h1>Suit Collections &amp; Showcase</h1>
-      <p>Scroll down through our curated styles and creations made by us. Tap any photo to view full size.</p>
+      <p>Scroll horizontally through our curated styles and creations. Tap any photo to view full size.</p>
     </div>
 
-    <!-- TWO COLUMN LAYOUT: WOMEN'S SUITS (LEFT) & MEN'S SUITS (RIGHT) -->
-    <div class="sections-container">
-      
-      <!-- WOMEN'S SUITS SECTION (Left) -->
-      <div class="collection-block">
+    <!-- WOMEN'S SUITS SECTION -->
+    <div class="collection-block">
+      <div class="block-title-wrapper">
         <h2 class="block-title">Women's Suits</h2>
-        <div class="gallery-grid" id="womensGrid"></div>
+        <div class="block-line"></div>
       </div>
-
-      <!-- MEN'S SUITS SECTION (Right) -->
-      <div class="collection-block">
-        <h2 class="block-title">Men's Suits</h2>
-        <div class="gallery-grid" id="mensGrid"></div>
-      </div>
-
+      <div class="collection-carousel" id="womensCarousel"></div>
     </div>
 
-    <!-- "MADE BY US" SECTION (Below) -->
-    <div class="collection-block" style="margin-top: 20px;">
-      <h2 class="block-title">Made By Us</h2>
-      <div class="gallery-grid" id="madeByUsGrid" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));"></div>
+    <!-- MEN'S SUITS SECTION -->
+    <div class="collection-block">
+      <div class="block-title-wrapper">
+        <h2 class="block-title">Men's Suits</h2>
+        <div class="block-line"></div>
+      </div>
+      <div class="collection-carousel" id="mensCarousel"></div>
+    </div>
+
+    <!-- "MADE BY US" SECTION -->
+    <div class="collection-block">
+      <div class="block-title-wrapper">
+        <h2 class="block-title">Made By Us</h2>
+        <div class="block-line"></div>
+      </div>
+      <div class="collection-carousel" id="madeByUsCarousel"></div>
     </div>
   </main>
 
@@ -360,7 +369,7 @@
     </div>
   </div>
 
-  <!-- SCRIPT: MANUAL EXPLICIT LISTING & GRID BUILDER -->
+  <!-- SCRIPT: MANUAL EXPLICIT LISTING & CAROUSEL BUILDER -->
   <script>
     // Explicit lists of your photo files. Update these arrays whenever you add new photos!
     const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg'];
@@ -401,8 +410,8 @@
     lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
-    // Populate Grid Helper
-    function populateGrid(fileList, containerId) {
+    // Populate Carousel Helper
+    function populateCarousel(fileList, containerId) {
       const container = document.getElementById(containerId);
       if (!container) return;
 
@@ -441,10 +450,10 @@
       });
     }
 
-    // Initialize Grids
-    populateGrid(womenFiles, 'womensGrid');
-    populateGrid(menFiles, 'mensGrid');
-    populateGrid(madeByUsFiles, 'madeByUsGrid');
+    // Initialize Carousels
+    populateCarousel(womenFiles, 'womensCarousel');
+    populateCarousel(menFiles, 'mensCarousel');
+    populateCarousel(madeByUsFiles, 'madeByUsCarousel');
   </script>
 
 </body>
