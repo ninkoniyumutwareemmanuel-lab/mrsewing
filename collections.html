@@ -168,7 +168,7 @@
     #imageModal {
         display: none;
         position: fixed;
-        z-index: 9999;
+        z-index: 99999;
         top: 0;
         left: 0;
         width: 100%;
@@ -226,7 +226,7 @@
     <div class="collection-block">
         <div class="collection-grid">
             <div class="collection-item-card">
-                <img src="m1.jpeg" alt="Classic suits, bespoke men's suit made in Kigali, Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="m1.jpeg" alt="Classic suits, bespoke men's suit made in Kigali, Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Classic Suits</h3>
@@ -236,7 +236,7 @@
             </div>
 
             <div class="collection-item-card">
-                <img src="m2.jpeg" alt="Double breast suits, custom men's suit Kigali - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="m2.jpeg" alt="Double breast suits, custom men's suit Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Double Breast Suits</h3>
@@ -246,7 +246,7 @@
             </div>
 
             <div class="collection-item-card">
-                <img src="m3.jpeg" alt="Two pieces suits, made to measure men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="m3.jpeg" alt="Two pieces suits, made to measure men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Two Pieces Suits</h3>
@@ -256,7 +256,7 @@
             </div>
 
             <div class="collection-item-card">
-                <img src="m4.jpeg" alt="Three pieces suits, custom men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="m4.jpeg" alt="Three pieces suits, custom men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Three Pieces Suits</h3>
@@ -276,7 +276,7 @@
     <div class="collection-block">
         <div class="collection-grid">
             <div class="collection-item-card">
-                <img src="w1.jpeg" alt="Classic suits, bespoke women's suit made in Kigali, Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="w1.jpeg" alt="Classic suits, bespoke women's suit made in Kigali, Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Classic Suits</h3>
@@ -286,7 +286,7 @@
             </div>
 
             <div class="collection-item-card">
-                <img src="w2.jpeg" alt="Double breast suits, custom women's suit Kigali - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="w2.jpeg" alt="Double breast suits, custom women's suit Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Double Breast Suits</h3>
@@ -296,7 +296,7 @@
             </div>
 
             <div class="collection-item-card">
-                <img src="w3.jpeg" alt="Two pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="w3.jpeg" alt="Two pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Two Pieces Suits</h3>
@@ -306,7 +306,7 @@
             </div>
 
             <div class="collection-item-card">
-                <img src="w4.jpeg" alt="Three pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="w4.jpeg" alt="Three pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 <div class="collection-item-info">
                     <div>
                         <h3>Three Pieces Suits</h3>
@@ -324,7 +324,7 @@
   </main>
 
   <!-- Fullscreen Lightbox Modal Container -->
-  <div id="imageModal" onclick="closeLightbox()">
+  <div id="imageModal">
     <span class="close-modal">&times;</span>
     <img id="modalImg" src="" alt="Enlarged suit view - Mr. Sewing">
   </div>
@@ -332,9 +332,10 @@
   <!-- Shared Footer Placeholder -->
   <div id="site-footer"></div>
 
-  <!-- Component Loader & Lightbox Script -->
+  <!-- Component Loader & Bulletproof Lightbox Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Load Header & Footer
       fetch('header.html')
         .then(res => res.ok ? res.text() : '')
         .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
@@ -344,19 +345,31 @@
         .then(res => res.ok ? res.text() : '')
         .then(data => { if (data) document.getElementById('site-footer').innerHTML = data; })
         .catch(err => console.error('Footer load error:', err));
-    });
 
-    // Lightbox functions for full-screen view
-    function openLightbox(imageSrc) {
+      // Bulletproof Lightbox Event Listeners
       const modal = document.getElementById('imageModal');
       const modalImg = document.getElementById('modalImg');
-      modal.style.display = 'flex';
-      modalImg.src = imageSrc;
-    }
+      const closeBtn = document.querySelector('.close-modal');
+      const suitImages = document.querySelectorAll('.collection-item-img');
 
-    function closeLightbox() {
-      document.getElementById('imageModal').style.display = 'none';
-    }
+      suitImages.forEach(img => {
+        img.addEventListener('click', function() {
+          modal.style.display = 'flex';
+          modalImg.src = this.src;
+        });
+      });
+
+      function closeModal() {
+        modal.style.display = 'none';
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    });
   </script>
 
 </body>
