@@ -103,7 +103,7 @@
     a:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
 
     .site-component { width: 100%; min-width: 0; }
-    main { flex: 1; padding: 20px 4% 80px; max-width: 1600px; margin: 0 auto; width: 100%; }
+    main { flex: 1; padding: 20px 4% 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
 
     /* FIXED TOP NAVIGATION BAR WITH HOME BUTTON */
     .fixed-top-nav {
@@ -150,30 +150,24 @@
     .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* COLLECTION SECTIONS & HORIZONTAL SCROLLING */
+    /* SECTION STYLING */
     .collection-block { margin-bottom: clamp(40px, 6vw, 60px); }
     .block-title {
       font-size: clamp(1.1rem, 2.2vw, 1.5rem);
       color: #ffffff;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-left: 4px solid #d4af37;
       padding-left: 12px;
     }
-    .collection-carousel {
-      display: flex;
-      flex-direction: row;
-      overflow-x: auto;
+
+    /* VERTICAL GRID LAYOUT (TOP TO BOTTOM SCROLLING) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 16px;
-      padding-bottom: 15px;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: thin;
-      scrollbar-color: #d4af37 #141414;
     }
-    .collection-carousel::-webkit-scrollbar { height: 6px; }
-    .collection-carousel::-webkit-scrollbar-track { background: #141414; border-radius: 4px; }
-    .collection-carousel::-webkit-scrollbar-thumb { background-color: #d4af37; border-radius: 4px; }
 
     /* CARD STYLING */
     .gallery-card {
@@ -183,8 +177,6 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      flex: 0 0 clamp(200px, 25vw, 260px);
-      scroll-snap-align: start;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
     .gallery-card:hover { border-color: #d4af37; transform: translateY(-3px); }
@@ -302,6 +294,7 @@
     .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
 
     @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .action-btn { font-size: 0.58rem; padding: 5px 2px; }
     }
   </style>
@@ -320,31 +313,31 @@
   <main>
     <div class="gallery-header">
       <h1>Suit Collections &amp; Showcase</h1>
-      <p>Scroll through our curated styles, customer moments, and reviews. Tap any photo to view full size.</p>
+      <p>Scroll down through our curated styles, customer moments, and reviews. Tap any photo to view full size.</p>
     </div>
 
     <!-- MEN'S SUITS SECTION -->
     <div class="collection-block">
       <h2 class="block-title">Men's Suits</h2>
-      <div class="collection-carousel" id="mensCarousel"></div>
+      <div class="gallery-grid" id="mensGrid"></div>
     </div>
 
     <!-- WOMEN'S SUITS SECTION -->
     <div class="collection-block">
       <h2 class="block-title">Women's Suits</h2>
-      <div class="collection-carousel" id="womensCarousel"></div>
+      <div class="gallery-grid" id="womensGrid"></div>
     </div>
 
     <!-- HAPPY CUSTOMERS SECTION -->
     <div class="collection-block">
       <h2 class="block-title">Happy Customers</h2>
-      <div class="collection-carousel" id="customersCarousel"></div>
+      <div class="gallery-grid" id="customersGrid"></div>
     </div>
 
     <!-- REVIEWS SECTION -->
     <div class="collection-block">
       <h2 class="block-title">Client Reviews &amp; Details</h2>
-      <div class="collection-carousel" id="reviewsCarousel"></div>
+      <div class="gallery-grid" id="reviewsGrid"></div>
     </div>
   </main>
 
@@ -356,9 +349,9 @@
     </div>
   </div>
 
-  <!-- SCRIPT: MANUAL EXPLICIT LISTING & CAROUSEL BUILDER -->
+  <!-- SCRIPT: MANUAL EXPLICIT LISTING & VERTICAL GRID BUILDER -->
   <script>
-    // Explicit lists of your photo files. When you add new photos (e.g., m7.jpeg), simply add them here!
+    // Explicit lists of your photo files. Update these arrays whenever you add new photos!
     const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg'];
     const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg'];
     const customerFiles = ['h1.jpeg', 'h2.jpeg'];
@@ -398,8 +391,8 @@
     lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
-    // Populate Carousel Helper
-    function populateCarousel(fileList, containerId) {
+    // Populate Grid Helper
+    function populateGrid(fileList, containerId) {
       const container = document.getElementById(containerId);
       if (!container) return;
 
@@ -438,11 +431,11 @@
       });
     }
 
-    // Initialize Carousels
-    populateCarousel(menFiles, 'mensCarousel');
-    populateCarousel(womenFiles, 'womensCarousel');
-    populateCarousel(customerFiles, 'customersCarousel');
-    populateCarousel(reviewFiles, 'reviewsCarousel');
+    // Initialize Grids
+    populateGrid(menFiles, 'mensGrid');
+    populateGrid(womenFiles, 'womensGrid');
+    populateGrid(customerFiles, 'customersGrid');
+    populateGrid(reviewFiles, 'reviewsGrid');
   </script>
 
 </body>
