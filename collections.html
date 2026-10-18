@@ -30,6 +30,61 @@
   <meta property="og:image:alt" content="Mr. Sewing logo - bespoke suits in Kigali, Rwanda">
   <meta property="og:locale" content="en_US">
 
+  <!-- Google Structured Data (JSON-LD LocalBusiness / Tailor Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Tailor",
+        "name": "Mr. Sewing Fashion",
+        "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+        "@id": "https://mrsewingfashion.com/#tailor",
+        "url": "https://mrsewingfashion.com/",
+        "telephone": "+250 787 411 501",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "KN 2 Ave, Nyarugenge",
+          "addressLocality": "Kigali",
+          "addressRegion": "Kigali City",
+          "addressCountry": "RW"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -1.9441,
+          "longitude": 30.0619
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        "sameAs": [
+          "https://www.instagram.com/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mrsewingfashion.com/#website",
+        "url": "https://mrsewingfashion.com/",
+        "name": "Mr. Sewing Fashion",
+        "publisher": {
+          "@id": "https://mrsewingfashion.com/#tailor"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -63,14 +118,35 @@
         color: #ffffff;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         border-left: 4px solid #d4af37;
         padding-left: 15px;
     }
     
-    .collection-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 2.5vw, 20px); margin-bottom: 20px; }
+    /* Horizontal Scrolling Carousel (Right-to-Left friendly scroll) */
+    .collection-carousel {
+        display: flex;
+        flex-direction: row-reverse; /* Starts/scrolls naturally from right to left */
+        overflow-x: auto;
+        gap: clamp(12px, 2vw, 20px);
+        padding-bottom: 15px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: #d4af37 #141414;
+    }
+    .collection-carousel::-webkit-scrollbar {
+        height: 6px;
+    }
+    .collection-carousel::-webkit-scrollbar-track {
+        background: #141414;
+        border-radius: 4px;
+    }
+    .collection-carousel::-webkit-scrollbar-thumb {
+        background-color: #d4af37;
+        border-radius: 4px;
+    }
     
-    /* Card Styling */
+    /* Compact Card Styling for Horizontal Scrolling */
     .collection-item-card { 
         background-color: #141414; 
         border: 1px solid #2a2a2a; 
@@ -79,12 +155,13 @@
         display: flex; 
         flex-direction: column; 
         justify-content: space-between;
-        height: 100%;
+        flex: 0 0 clamp(200px, 26vw, 280px); /* Keeps images compact and perfectly sized */
+        scroll-snap-align: start;
         transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
     }
     .collection-item-card:hover { 
         border-color: #d4af37; 
-        transform: translateY(-5px); 
+        transform: translateY(-4px); 
         box-shadow: 0 6px 16px rgba(212, 175, 55, 0.15);
     }
     .image-link {
@@ -103,16 +180,9 @@
     .image-link:hover .collection-item-img {
         opacity: 0.9;
     }
-    .collection-item-info { padding: clamp(12px, 2vw, 20px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .collection-item-info h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
-    .collection-item-info p { font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: #d4af37; margin-bottom: 14px; font-style: italic; }
-
-    @media (max-width: 1024px) {
-        .collection-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-        .collection-grid { grid-template-columns: 1fr; }
-    }
+    .collection-item-info { padding: clamp(10px, 1.5vw, 16px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .collection-item-info h3 { font-size: clamp(0.8rem, 1.3vw, 1rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; font-weight: 600; }
+    .collection-item-info p { font-size: clamp(0.68rem, 1.1vw, 0.85rem); color: #d4af37; margin-bottom: 0; font-style: italic; }
   </style>
 </head>
 <body>
@@ -128,10 +198,10 @@
         <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection Section -->
+    <!-- Men's Suits Collection Section (Horizontal Scroll Right-to-Left) -->
     <div class="collection-block" id="mens-collection">
         <h2 class="block-title">Men's Collections</h2>
-        <div class="collection-grid">
+        <div class="collection-carousel">
             
             <div class="collection-item-card">
                 <a href="m-classicsuits.html" class="image-link">
@@ -208,10 +278,10 @@
         </div>
     </div>
 
-    <!-- Women's Suits Collection Section -->
+    <!-- Women's Suits Collection Section (Horizontal Scroll Right-to-Left) -->
     <div class="collection-block" id="womens-collection">
         <h2 class="block-title">Women's Collections</h2>
-        <div class="collection-grid">
+        <div class="collection-carousel">
             
             <div class="collection-item-card">
                 <a href="w-classicsuits.html" class="image-link">
