@@ -105,40 +105,9 @@
     .site-component { width: 100%; min-width: 0; }
     main { flex: 1; padding: 20px 4% 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
 
-    /* STICKY TOP ACTION BAR */
-    .sticky-action-bar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(15, 15, 15, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #2a2a2a;
-      padding: 12px 4%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .sticky-brand { color: #d4af37; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; text-decoration: none; }
-    .sticky-buttons { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .action-chip {
-      background: #141414;
-      border: 1px solid #d4af37;
-      color: #d4af37;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .action-chip:hover, .action-chip.gold { background: #d4af37; color: #000000; }
-
     /* PAGE HEADER */
-    .gallery-header { text-align: center; padding: 30px 0 20px; }
-    .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+    .gallery-header { text-align: center; padding: 20px 0 15px; }
+    .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
     /* ENDLESS SHUFFLED GRID */
@@ -220,6 +189,12 @@
       font-weight: 700;
     }
     .action-btn.details:hover { background: #d4af37; color: #000000; }
+    .action-btn.copied {
+      background: #d4af37 !important;
+      color: #000000 !important;
+      border-color: #d4af37 !important;
+      font-weight: 700;
+    }
     .action-btn:hover { border-color: #d4af37; color: #d4af37; }
 
     /* LIGHTBOX FULL-SCREEN VIEWER MODAL */
@@ -284,21 +259,6 @@
       letter-spacing: 1px;
     }
 
-    /* Order modal overlay */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
-    .modal-overlay.open, .modal-overlay:target { display: flex; }
-    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: 24px; position: relative; }
-    .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
-    .modal-close:hover { color: #d4af37; }
-    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
-    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
-    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
-    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
-    .terms-check a { color: #d4af37; }
-    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; }
-    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
-    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; }
-
     @media (max-width: 600px) {
       .infinite-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .action-btn { font-size: 0.62rem; padding: 6px 4px; }
@@ -307,16 +267,6 @@
 </head>
 
 <body id="top">
-
-  <!-- STICKY TOP ACTION BAR -->
-  <header class="sticky-action-bar">
-    <a href="index.html" class="sticky-brand"><i class="fas fa-cut"></i> Mr. Sewing Gallery</a>
-    <div class="sticky-buttons">
-      <a href="#top" class="action-chip">Top</a>
-      <a href="booking.html" class="action-chip">Consultation</a>
-      <a href="#orderModal" class="action-chip gold order-btn">Place Order</a>
-    </div>
-  </header>
 
   <main>
     <div class="gallery-header">
@@ -343,7 +293,7 @@
         <a href="" target="_blank" rel="noopener" class="action-btn whatsapp" id="lightboxWaBtn">
           <i class="fab fa-whatsapp"></i> Share
         </a>
-        <button class="action-btn" id="lightboxCopyBtn">
+        <button class="action-btn" id="lightboxCopyBtn" onclick="copyLinkWithFeedback(this, lightboxImg.src)">
           <i class="fas fa-link"></i> Copy
         </button>
         <a href="" class="action-btn details" id="lightboxDetailsBtn">
@@ -353,22 +303,7 @@
     </div>
   </div>
 
-  <!-- Order Modal Overlay -->
-  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-    <div class="modal-box">
-      <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
-      <h3 id="orderModalTitle">Place Your Order</h3>
-      <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
-      <label class="terms-check">
-        <input type="checkbox" id="termsAgree">
-        <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
-      </label>
-      <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
-      <div class="terms-hint" id="termsHint"></div>
-    </div>
-  </div>
-
-  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX, 3-BUTTON LAYOUT (WHATSAPP, COPY, DETAILS) -->
+  <!-- SCRIPT: DYNAMIC POOL, LIGHTBOX, 3-BUTTON LAYOUT, IN-BUTTON "COPIED!" FEEDBACK -->
   <script>
     function generateDynamicPool() {
       let pool = [];
@@ -393,6 +328,21 @@
       return arr;
     }
 
+    // Modern in-button copy feedback function (no popups)
+    function copyLinkWithFeedback(buttonElement, urlToCopy) {
+      navigator.clipboard.writeText(urlToCopy).then(() => {
+        const originalHTML = buttonElement.innerHTML;
+        buttonElement.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        buttonElement.classList.add('copied');
+        setTimeout(() => {
+          buttonElement.innerHTML = originalHTML;
+          buttonElement.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+
     const grid = document.getElementById('infiniteGrid');
     const loader = document.getElementById('infiniteLoader');
 
@@ -408,10 +358,6 @@
       lightboxImg.src = imgSrc;
       const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
       lightboxWaBtn.href = `https://wa.me/250787411501?text=${shareText}`;
-      lightboxCopyBtn.onclick = function() {
-        navigator.clipboard.writeText(fullPhotoUrl);
-        alert('Photo link copied to clipboard!');
-      };
       lightboxDetailsBtn.href = detailPageUrl;
       lightbox.classList.add('open');
     }
@@ -450,7 +396,7 @@
               <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo to WhatsApp">
                 <i class="fab fa-whatsapp"></i> Share
               </a>
-              <button class="action-btn" onclick="navigator.clipboard.writeText('${fullPhotoUrl}'); alert('Photo link copied!');" title="Copy exact photo link">
+              <button class="action-btn" onclick="copyLinkWithFeedback(this, '${fullPhotoUrl}')" title="Copy exact photo link">
                 <i class="fas fa-link"></i> Copy
               </button>
               <a href="${detailPageUrl}" class="action-btn details" title="View pricing, fabrics and details">
@@ -475,49 +421,6 @@
         }, 300);
       }
     });
-
-    /* Modal Popup Controller */
-    (function setupOrderModal() {
-      var modal = document.getElementById('orderModal');
-      var agree = document.getElementById('termsAgree');
-      var wa = document.getElementById('whatsappBtn');
-      var hint = document.getElementById('termsHint');
-      var closeBtn = document.getElementById('orderClose');
-
-      if (!modal || !agree || !wa || !hint) return;
-
-      function openModal() { modal.classList.add('open'); }
-      function closeModal() {
-        modal.classList.remove('open');
-        agree.checked = false;
-        wa.setAttribute('aria-disabled', 'true');
-        hint.textContent = '';
-      }
-
-      document.addEventListener('click', function (e) {
-        var btn = e.target.closest ? e.target.closest('.order-btn') : null;
-        if (btn) { e.preventDefault(); openModal(); }
-      });
-
-      agree.addEventListener('change', function () {
-        wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
-        hint.textContent = '';
-      });
-
-      wa.addEventListener('click', function (e) {
-        if (!agree.checked) {
-          e.preventDefault();
-          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
-        } else {
-          setTimeout(closeModal, 300);
-        }
-      });
-
-      if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-      if (location.hash === '#orderModal') { openModal(); }
-    })();
   </script>
 
 </body>
