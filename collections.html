@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
 
-  <!-- Open Graph Meta Tags (link previews on Facebook, WhatsApp, LinkedIn) -->
+  <!-- Open Graph Meta Tags -->
   <meta property="og:site_name" content="Mr. Sewing">
   <meta property="og:title" content="Bespoke Suits for Men & Women in Kigali, Rwanda | Mr. Sewing">
   <meta property="og:description" content="Handcrafted luxury suits for men and women, custom made to measure in Kigali, Rwanda.">
@@ -29,48 +29,6 @@
   <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
   <meta property="og:image:alt" content="Mr. Sewing logo - bespoke suits in Kigali, Rwanda">
   <meta property="og:locale" content="en_US">
-
-  <!-- Twitter / X card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bespoke Suits for Men & Women in Kigali, Rwanda | Mr. Sewing">
-  <meta name="twitter:description" content="Custom double-breasted tuxedos, executive 3-piece suits and women's pantsuits, made to measure in Kigali.">
-  <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
-
-  <!-- Structured data for Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mrsewingfashion.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Collections", "item": "https://mrsewingfashion.com/collection.html" }
-        ]
-      },
-      {
-        "@type": "CollectionPage",
-        "name": "Bespoke Suit Collections | Mr. Sewing",
-        "url": "https://mrsewingfashion.com/collection.html",
-        "description": "Bespoke men's and women's suit collections, custom made to measure in Kigali, Rwanda.",
-        "isPartOf": { "@type": "WebSite", "name": "Mr. Sewing", "url": "https://mrsewingfashion.com/" },
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "item": { "@type": "Thing", "name": "Classic Suits (Men's Suits)", "image": "https://mrsewingfashion.com/m1.jpeg" } },
-            { "@type": "ListItem", "position": 2, "item": { "@type": "Thing", "name": "Double Breast Suits (Men's Suits)", "image": "https://mrsewingfashion.com/m2.jpeg" } },
-            { "@type": "ListItem", "position": 3, "item": { "@type": "Thing", "name": "Two Pieces Suits (Men's Suits)", "image": "https://mrsewingfashion.com/m3.jpeg" } },
-            { "@type": "ListItem", "position": 4, "item": { "@type": "Thing", "name": "Three Pieces Suits (Men's Suits)", "image": "https://mrsewingfashion.com/m4.jpeg" } },
-            { "@type": "ListItem", "position": 5, "item": { "@type": "Thing", "name": "Classic Suits (Women's Suits)", "image": "https://mrsewingfashion.com/w1.jpeg" } },
-            { "@type": "ListItem", "position": 6, "item": { "@type": "Thing", "name": "Double Breast Suits (Women's Suits)", "image": "https://mrsewingfashion.com/w2.jpeg" } },
-            { "@type": "ListItem", "position": 7, "item": { "@type": "Thing", "name": "Two Pieces Suits (Women's Suits)", "image": "https://mrsewingfashion.com/w3.jpeg" } },
-            { "@type": "ListItem", "position": 8, "item": { "@type": "Thing", "name": "Three Pieces Suits (Women's Suits)", "image": "https://mrsewingfashion.com/w4.jpeg" } }
-          ]
-        }
-      }
-    ]
-  }
-  </script>
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -94,12 +52,48 @@
         background-color: #0b0b0b; 
         scroll-margin-top: 95px; 
     }
-    .section-header { text-align: center; margin-bottom: clamp(26px, 5vw, 60px); }
+    .section-header { text-align: center; margin-bottom: clamp(20px, 4vw, 40px); }
     .section-header h1, .section-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
     .section-subtitle { color: #aaaaaa; font-size: clamp(0.8rem, 1.5vw, 1.05rem); margin: 10px auto 0; max-width: 700px; line-height: 1.6; }
     .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
     
+    /* Top Category Filter Nav */
+    .category-filter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: clamp(30px, 5vw, 60px);
+    }
+    .filter-pill {
+        border: 1px solid #d4af37;
+        border-radius: 30px;
+        padding: clamp(10px, 1.5vw, 14px) clamp(25px, 3.5vw, 45px);
+        color: #ffffff;
+        font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        background-color: #141414;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        display: inline-block;
+    }
+    .filter-pill:hover {
+        background-color: #d4af37;
+        color: #000000;
+        transform: translateY(-2px);
+    }
+
     .collection-block { margin-bottom: clamp(40px, 6vw, 80px); }
+    .block-title {
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+        border-left: 4px solid #d4af37;
+        padding-left: 15px;
+    }
     
     .collection-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 2.5vw, 20px); margin-bottom: 20px; }
     
@@ -140,40 +134,12 @@
     .collection-item-info h3 { font-size: clamp(0.85rem, 1.5vw, 1.1rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
     .collection-item-info p { font-size: clamp(0.7rem, 1.2vw, 0.9rem); color: #d4af37; margin-bottom: 14px; font-style: italic; }
 
-    /* Bottom Button Wrapper (Right/Bottom aligned for easy mobile access) */
-    .collection-footer-action {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 15px;
-    }
-    .collection-pill { 
-        border: 1px solid #d4af37; 
-        border-radius: 30px; 
-        padding: clamp(8px, 1.2vw, 12px) clamp(20px, 3vw, 35px); 
-        color: #ffffff; 
-        font-size: clamp(0.8rem, 1.5vw, 1.05rem); 
-        font-weight: 600; 
-        letter-spacing: 1.5px; 
-        text-transform: uppercase; 
-        background-color: #141414; 
-        white-space: nowrap; 
-        text-decoration: none; 
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; 
-        display: inline-block; 
-    }
-    .collection-pill:hover { 
-        background-color: #d4af37; 
-        color: #000000; 
-        transform: translateY(-2px); 
-    }
-
     @media (max-width: 1024px) {
         .collection-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 600px) {
         .collection-grid { grid-template-columns: 1fr; }
-        .collection-footer-action { justify-content: center; }
+        .category-filter-nav { flex-direction: column; align-items: center; gap: 12px; }
     }
   </style>
 </head>
@@ -190,11 +156,19 @@
         <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection -->
-    <div class="collection-block">
+    <!-- Top Category Selector Buttons -->
+    <div class="category-filter-nav">
+        <a href="#mens-collection" class="filter-pill">Men's Suits</a>
+        <a href="#womens-collection" class="filter-pill">Women's Suits</a>
+    </div>
+
+    <!-- Men's Suits Collection Section -->
+    <div class="collection-block" id="mens-collection">
+        <h2 class="block-title">Men's Collections</h2>
         <div class="collection-grid">
+            
             <div class="collection-item-card">
-                <a href="m1.html" class="image-link">
+                <a href="m-classicsuits.html" class="image-link">
                     <img src="m1.jpeg" alt="Classic suits, bespoke men's suit made in Kigali, Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -206,7 +180,7 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="m2.html" class="image-link">
+                <a href="m-doublebreasted.html" class="image-link">
                     <img src="m2.jpeg" alt="Double breast suits, custom men's suit Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -218,7 +192,7 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="m3.html" class="image-link">
+                <a href="m-twopieces.html" class="image-link">
                     <img src="m3.jpeg" alt="Two pieces suits, made to measure men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -230,7 +204,7 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="m4.html" class="image-link">
+                <a href="m-threepieces.html" class="image-link">
                     <img src="m4.jpeg" alt="Three pieces suits, custom men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -240,19 +214,41 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Men's Suits Button at the Bottom Right -->
-        <div class="collection-footer-action">
-            <a href="mensuits.html" class="collection-pill">Men's Suits</a>
+            <div class="collection-item-card">
+                <a href="m-kaundasuits.html" class="image-link">
+                    <img src="m5.jpeg" alt="Kaunda suits, bespoke African formal wear in Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
+                </a>
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Kaunda Suits</h3>
+                        <p>The Heritage Line</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collection-item-card">
+                <a href="m-modernsuits.html" class="image-link">
+                    <img src="m6.jpeg" alt="Modern suits, custom contemporary tailoring Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
+                </a>
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Modern Suits</h3>
+                        <p>The Contemporary Line</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- Women's Suits Collection -->
-    <div class="collection-block">
+    <!-- Women's Suits Collection Section -->
+    <div class="collection-block" id="womens-collection">
+        <h2 class="block-title">Women's Collections</h2>
         <div class="collection-grid">
+            
             <div class="collection-item-card">
-                <a href="w1.html" class="image-link">
+                <a href="w-classicsuits.html" class="image-link">
                     <img src="w1.jpeg" alt="Classic suits, bespoke women's suit made in Kigali, Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -264,7 +260,7 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="w2.html" class="image-link">
+                <a href="w-doublebreasted.html" class="image-link">
                     <img src="w2.jpeg" alt="Double breast suits, custom women's suit Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -276,7 +272,7 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="w3.html" class="image-link">
+                <a href="w-twopieces.html" class="image-link">
                     <img src="w3.jpeg" alt="Two pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -288,7 +284,7 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="w4.html" class="image-link">
+                <a href="w-threepieces.html" class="image-link">
                     <img src="w4.jpeg" alt="Three pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
@@ -298,11 +294,19 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Women's Suits Button at the Bottom Right -->
-        <div class="collection-footer-action">
-            <a href="womensuits.html" class="collection-pill">Women's Suits</a>
+            <div class="collection-item-card">
+                <a href="w-modernsuits.html" class="image-link">
+                    <img src="w5.jpeg" alt="Modern suits, custom women's executive tailoring Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
+                </a>
+                <div class="collection-item-info">
+                    <div>
+                        <h3>Modern Suits</h3>
+                        <p>The Elegance Series</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
   </main>
