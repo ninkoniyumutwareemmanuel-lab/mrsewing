@@ -52,38 +52,11 @@
         background-color: #0b0b0b; 
         scroll-margin-top: 95px; 
     }
-    .section-header { text-align: center; margin-bottom: clamp(20px, 4vw, 40px); }
-    .section-header h1, .section-header h2 { font-size: clamp(1.1rem, 3vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
-    .section-subtitle { color: #aaaaaa; font-size: clamp(0.8rem, 1.5vw, 1.05rem); margin: 10px auto 0; max-width: 700px; line-height: 1.6; }
+    .section-header { text-align: center; margin-bottom: clamp(30px, 5vw, 60px); }
+    .section-header h1, .section-header h2 { font-size: clamp(1.2rem, 3.5vw, 2.5rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(1px, 0.3vw, 3px); font-weight: 700; }
+    .section-subtitle { color: #cccccc; font-size: clamp(0.9rem, 1.6vw, 1.15rem); margin: 12px auto 0; max-width: 750px; line-height: 1.6; font-style: italic; }
     .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
     
-    /* Top Category Filter Nav */
-    .category-filter-nav {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-bottom: clamp(30px, 5vw, 60px);
-    }
-    .filter-pill {
-        border: 1px solid #d4af37;
-        border-radius: 30px;
-        padding: clamp(10px, 1.5vw, 14px) clamp(25px, 3.5vw, 45px);
-        color: #ffffff;
-        font-size: clamp(0.85rem, 1.5vw, 1.1rem);
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        background-color: #141414;
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-        display: inline-block;
-    }
-    .filter-pill:hover {
-        background-color: #d4af37;
-        color: #000000;
-        transform: translateY(-2px);
-    }
-
     .collection-block { margin-bottom: clamp(40px, 6vw, 80px); }
     .block-title {
         font-size: clamp(1.2rem, 2.5vw, 1.8rem);
@@ -139,7 +112,6 @@
     }
     @media (max-width: 600px) {
         .collection-grid { grid-template-columns: 1fr; }
-        .category-filter-nav { flex-direction: column; align-items: center; gap: 12px; }
     }
   </style>
 </head>
@@ -151,15 +123,9 @@
   <!-- Main Content -->
   <main class="collections-section" id="suits">
     <div class="section-header">
-        <h1>Our Collections</h1>
-        <p class="section-subtitle">Custom-made men's and women's suits, tailored to your measurements in Kigali, Rwanda.</p>
+        <h1>Collections</h1>
+        <p class="section-subtitle">Have a look at what you like. Let us know, and we will custom-make it for you.</p>
         <div class="header-divider"></div>
-    </div>
-
-    <!-- Top Category Selector Buttons -->
-    <div class="category-filter-nav">
-        <a href="#mens-collection" class="filter-pill">Men's Suits</a>
-        <a href="#womens-collection" class="filter-pill">Women's Suits</a>
     </div>
 
     <!-- Men's Suits Collection Section -->
