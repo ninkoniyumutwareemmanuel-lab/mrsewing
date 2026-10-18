@@ -6,7 +6,7 @@
   <title>Bespoke Suit Collections | Mr. Sewing - Kigali, Rwanda</title>
 
   <!-- Expanded SEO & Keywords -->
-  <meta name="description" content="Explore Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom men's and women's suits, customer photos, reviews, and made-to-measure tailoring.">
+  <meta name="description" content="Explore Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom men's and women's suits, made by us, and made-to-measure tailoring.">
   <meta name="keywords" content="Mr. Sewing, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion Designer, suits Kigali, suits Rwanda, custom suits Kigali, bespoke suits Rwanda, men's suits Kigali, women's suits Kigali, double-breasted suit Kigali, single-breasted suit Kigali, two-piece suit Kigali, three-piece suit Kigali, wedding suits Kigali, groom suit Rwanda, office suits Kigali, business suits Kigali, skirt suit Kigali, made to measure suits Kigali, best tailor in Kigali, Made in Rwanda fashion, costume sur mesure Kigali, suit alterations Kigali, mobile tailor Kigali">
   <meta name="author" content="Mr. Sewing">
   <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@
   <!-- Link preview (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:site_name" content="Mr. Sewing">
   <meta property="og:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
-  <meta property="og:description" content="Custom suits, customer photos, and reviews in Kigali, Rwanda.">
+  <meta property="og:description" content="Custom suits and creations made by us in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/suits.html">
   <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
@@ -33,7 +33,7 @@
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
-  <meta name="twitter:description" content="Custom suits, customer photos, and reviews in Kigali, Rwanda.">
+  <meta name="twitter:description" content="Custom suits and creations made by us in Kigali, Rwanda.">
   <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
   <!-- Structured Data for Google (Local Business / Tailor Schema) -->
@@ -83,7 +83,7 @@
         "@id": "https://mrsewingfashion.com/suits.html#webpage",
         "url": "https://mrsewingfashion.com/suits.html",
         "name": "Suit Collections | Mr. Sewing",
-        "description": "Bespoke suit collections, customer photos, and reviews.",
+        "description": "Bespoke suit collections and creations made by us.",
         "isPartOf": {
           "@id": "https://mrsewingfashion.com/#website"
         }
@@ -150,7 +150,13 @@
     .gallery-header h1 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
     .gallery-header p { color: #aaaaaa; font-size: clamp(0.85rem, 1.4vw, 1rem); }
 
-    /* SECTION STYLING */
+    /* TWO-COLUMN SECTION LAYOUT (MEN & WOMEN SIDE BY SIDE) */
+    .sections-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
     .collection-block { margin-bottom: clamp(40px, 6vw, 60px); }
     .block-title {
       font-size: clamp(1.1rem, 2.2vw, 1.5rem);
@@ -165,8 +171,11 @@
     /* VERTICAL GRID LAYOUT (TOP TO BOTTOM SCROLLING) */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .single-column-grid {
+      grid-template-columns: 1fr;
     }
 
     /* CARD STYLING */
@@ -293,8 +302,11 @@
     }
     .lightbox-close:hover { color: #d4af37; border-color: #d4af37; }
 
+    @media (max-width: 900px) {
+      .sections-container { grid-template-columns: 1fr; gap: 0; }
+    }
     @media (max-width: 600px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .action-btn { font-size: 0.58rem; padding: 5px 2px; }
     }
   </style>
@@ -313,31 +325,30 @@
   <main>
     <div class="gallery-header">
       <h1>Suit Collections &amp; Showcase</h1>
-      <p>Scroll down through our curated styles, customer moments, and reviews. Tap any photo to view full size.</p>
+      <p>Scroll down through our curated styles and creations made by us. Tap any photo to view full size.</p>
     </div>
 
-    <!-- MEN'S SUITS SECTION -->
-    <div class="collection-block">
-      <h2 class="block-title">Men's Suits</h2>
-      <div class="gallery-grid" id="mensGrid"></div>
+    <!-- TWO COLUMN LAYOUT: WOMEN'S SUITS (LEFT) & MEN'S SUITS (RIGHT) -->
+    <div class="sections-container">
+      
+      <!-- WOMEN'S SUITS SECTION (Left) -->
+      <div class="collection-block">
+        <h2 class="block-title">Women's Suits</h2>
+        <div class="gallery-grid" id="womensGrid"></div>
+      </div>
+
+      <!-- MEN'S SUITS SECTION (Right) -->
+      <div class="collection-block">
+        <h2 class="block-title">Men's Suits</h2>
+        <div class="gallery-grid" id="mensGrid"></div>
+      </div>
+
     </div>
 
-    <!-- WOMEN'S SUITS SECTION -->
-    <div class="collection-block">
-      <h2 class="block-title">Women's Suits</h2>
-      <div class="gallery-grid" id="womensGrid"></div>
-    </div>
-
-    <!-- HAPPY CUSTOMERS SECTION -->
-    <div class="collection-block">
-      <h2 class="block-title">Happy Customers</h2>
-      <div class="gallery-grid" id="customersGrid"></div>
-    </div>
-
-    <!-- REVIEWS SECTION -->
-    <div class="collection-block">
-      <h2 class="block-title">Client Reviews &amp; Details</h2>
-      <div class="gallery-grid" id="reviewsGrid"></div>
+    <!-- "MADE BY US" SECTION (Below) -->
+    <div class="collection-block" style="margin-top: 20px;">
+      <h2 class="block-title">Made By Us</h2>
+      <div class="gallery-grid" id="madeByUsGrid" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));"></div>
     </div>
   </main>
 
@@ -349,13 +360,12 @@
     </div>
   </div>
 
-  <!-- SCRIPT: MANUAL EXPLICIT LISTING & VERTICAL GRID BUILDER -->
+  <!-- SCRIPT: MANUAL EXPLICIT LISTING & GRID BUILDER -->
   <script>
     // Explicit lists of your photo files. Update these arrays whenever you add new photos!
-    const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg'];
     const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg'];
-    const customerFiles = ['h1.jpeg', 'h2.jpeg'];
-    const reviewFiles = ['r1.jpeg'];
+    const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg'];
+    const madeByUsFiles = ['r1.jpeg']; // Add your "Made By Us" files here (e.g. r1.jpeg, r2.jpeg, etc.)
 
     // Modern in-button copy feedback function
     function copyLinkWithFeedback(buttonElement, urlToCopy) {
@@ -432,10 +442,9 @@
     }
 
     // Initialize Grids
-    populateGrid(menFiles, 'mensGrid');
     populateGrid(womenFiles, 'womensGrid');
-    populateGrid(customerFiles, 'customersGrid');
-    populateGrid(reviewFiles, 'reviewsGrid');
+    populateGrid(menFiles, 'mensGrid');
+    populateGrid(madeByUsFiles, 'madeByUsGrid');
   </script>
 
 </body>
