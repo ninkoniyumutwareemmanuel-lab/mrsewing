@@ -168,6 +168,7 @@
       flex-shrink: 0;
       transition: background-color 0.3s ease;
       display: inline-block;
+      cursor: pointer;
     }
     .order-btn:hover { background-color: #f3e5ab; }
 
@@ -215,6 +216,32 @@
       .service-highlights { grid-template-columns: 1fr; }
     }
 
+    /* Fixed Modal Overlay (Ensures it stays hidden until opened and doesn't block header/footer clicks) */
+    .modal-overlay { 
+      position: fixed; 
+      inset: 0; 
+      background: rgba(0, 0, 0, 0.85); 
+      display: none; 
+      align-items: center; 
+      justify-content: center; 
+      z-index: 99999; 
+      padding: 16px; 
+    }
+    .modal-overlay.open { 
+      display: flex; 
+    }
+    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(24px, 4vw, 32px); padding-top: 48px; position: relative; box-sizing: border-box; }
+    .modal-close { position: absolute; top: 8px; right: 10px; z-index: 5; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; background: #222222; border: 1px solid #444444; border-radius: 50%; color: #ffffff; font-size: 2rem; line-height: 1; cursor: pointer; }
+    .modal-close:hover, .modal-close:focus-visible { color: #d4af37; border-color: #d4af37; outline: 2px solid #d4af37; outline-offset: 2px; }
+    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
+    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
+    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
+    .terms-check a { color: #d4af37; }
+    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
+    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
+    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
+
     /* Component mounts span the full viewport width without adding layout constraints. */
     .site-component { width: 100%; min-width: 0; }
     #main-content { display: block; width: 100%; }
@@ -226,7 +253,7 @@
   <div id="site-header" class="site-component" aria-label="Website header"></div>
 
   <main id="main-content">
-    <!-- Homepage components loaded in the exact agreed sequence: Hero -> Happy Customers -> Services -> Collections -> Why MTM -> Why Choose -->
+    <!-- Homepage components loaded in the exact agreed sequence -->
     <div id="hero-section" class="site-component"></div>
     <div id="customers-section" class="site-component"></div>
     <div id="services-section" class="site-component"></div>
@@ -260,7 +287,7 @@
   </div>
 
   <script>
-    /* GitHub Pages-compatible component loader fetching happy-customers.html in correct order */
+    /* GitHub Pages-compatible component loader */
     (async function loadComponents() {
       const components = [
         { id: 'site-header', file: 'header.html' },
@@ -292,7 +319,7 @@
       document.dispatchEvent(new CustomEvent('sitecomponentsloaded', { detail: { results } }));
     })();
 
-    /* Shared order modal setup */
+    /* Shared order modal setup with event delegation for dynamically loaded header/footer buttons */
     (function setupOrderModal() {
       const modal = document.getElementById('orderModal');
       const agree = document.getElementById('termsAgree');
@@ -315,10 +342,15 @@
         if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
       }
 
+      /* Event delegation: captures clicks on .order-btn even inside fetched header/footer */
       document.addEventListener('click', function (event) {
         const button = event.target.closest && event.target.closest('.order-btn');
-        if (button) { event.preventDefault(); openModal(); }
+        if (button) { 
+          event.preventDefault(); 
+          openModal(); 
+        }
       });
+
       agree.addEventListener('change', function () {
         whatsapp.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
         hint.textContent = '';
