@@ -235,14 +235,14 @@
         <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection Section (Horizontal Scroll with Working Arrows) -->
+    <!-- Men's Suits Collection Section -->
     <div class="collection-block" id="mens-collection">
         <div class="block-title-wrapper">
             <h2 class="block-title">Men's Collections</h2>
             <div class="block-line"></div>
             <div class="scroll-btn-group">
-                <button class="scroll-arrow-btn" onclick="scrollCarousel('mensCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-arrow-btn" onclick="scrollCarousel('mensCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+                <button class="scroll-arrow-btn mens-left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-arrow-btn mens-right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
         <div class="collection-carousel" id="mensCarousel">
@@ -322,14 +322,14 @@
         </div>
     </div>
 
-    <!-- Women's Suits Collection Section (Horizontal Scroll with Working Arrows) -->
+    <!-- Women's Suits Collection Section -->
     <div class="collection-block" id="womens-collection">
         <div class="block-title-wrapper">
             <h2 class="block-title">Women's Collections</h2>
             <div class="block-line"></div>
             <div class="scroll-btn-group">
-                <button class="scroll-arrow-btn" onclick="scrollCarousel('womensCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-arrow-btn" onclick="scrollCarousel('womensCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+                <button class="scroll-arrow-btn womens-left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-arrow-btn womens-right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
         <div class="collection-carousel" id="womensCarousel">
@@ -384,7 +384,7 @@
 
             <div class="collection-item-card">
                 <a href="w-modernsuits.html" class="image-link">
-                    <img src="w5.jpeg" alt="Modern suits, custom women's executive tailoring Kigali - Mr. Sewing" class="collection-item-img>
+                    <img src="w5.jpeg" alt="Modern suits, custom women's executive tailoring Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
                 <div class="collection-item-info">
                     <div>
@@ -401,16 +401,34 @@
   <!-- Shared Footer Placeholder -->
   <div id="site-footer"></div>
 
-  <!-- Component Loader Script & Scroll Helper -->
+  <!-- Component Loader & Bulletproof Click Handlers -->
   <script>
-    function scrollCarousel(containerId, distance) {
-      const container = document.getElementById(containerId);
-      if (container) {
-        container.scrollBy({ left: distance, behavior: 'smooth' });
-      }
-    }
-
     document.addEventListener('DOMContentLoaded', function() {
+      // Men's Carousel Buttons
+      const mensCarousel = document.getElementById('mensCarousel');
+      const mensLeft = document.querySelector('.mens-left');
+      const mensRight = document.querySelector('.mens-right');
+
+      if (mensLeft && mensCarousel) {
+        mensLeft.addEventListener('click', () => mensCarousel.scrollBy({ left: -300, behavior: 'smooth' }));
+      }
+      if (mensRight && mensCarousel) {
+        mensRight.addEventListener('click', () => mensCarousel.scrollBy({ left: 300, behavior: 'smooth' }));
+      }
+
+      // Women's Carousel Buttons
+      const womensCarousel = document.getElementById('womensCarousel');
+      const womensLeft = document.querySelector('.womens-left');
+      const womensRight = document.querySelector('.womens-right');
+
+      if (womensLeft && womensCarousel) {
+        womensLeft.addEventListener('click', () => womensCarousel.scrollBy({ left: -300, behavior: 'smooth' }));
+      }
+      if (womensRight && womensCarousel) {
+        womensRight.addEventListener('click', () => womensCarousel.scrollBy({ left: 300, behavior: 'smooth' }));
+      }
+
+      // Component Loaders
       fetch('header.html')
         .then(res => res.ok ? res.text() : '')
         .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
