@@ -1,59 +1,82 @@
 <section class="customers-section">
-    <div class="customers-text">
-      <h2>Happy Customers</h2>
-      <p class="customers-description">Explore bespoke creations made for our valued clients. See our detailed tailoring up close and read genuine feedback from our customers.</p>
+  <div class="customers-text">
+    <h2>Happy Customers</h2>
+    <p class="customers-description">Explore bespoke creations crafted for our valued clients across Kigali. Real custom tailoring, real fit, and genuine satisfaction.</p>
 
-      <div class="made-to-order-title">Made to Order</div>
-      <p class="made-to-order-desc">Every suit we craft is made strictly on order. Our clients placed their trust in us, shared their vision, and received exactly what they expected right when they needed it. They envisioned perfection—and now they are completely satisfied with the fit, quality, and timeless craftsmanship.</p>
+    <div class="made-to-order-title">Made to Order</div>
+    <p class="made-to-order-desc">Every suit is crafted strictly on order. Our clients share their vision, trusting us to deliver emotional perfection—handcrafted precisely to their unique posture, silhouette, and style.</p>
+  </div>
 
-      <div class="service-highlights">
-        <div class="highlight-box">
-          <h3>Custom Designs</h3>
-          <p>Bring your own dedicated model or inspiration photo, and our tailors will craft it to your exact vision.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Premium Fabrics</h3>
-          <p>Choose from an exclusive selection of high-grade fabrics, linings, and customized finishes.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Direct Delivery</h3>
-          <p>Seamless door-to-door delivery service ensuring your garment arrives impeccably pressed and ready.</p>
-        </div>
-        <div class="highlight-box">
-          <h3>Guaranteed Fit</h3>
-          <p>Bespoke measurements crafted precisely to match your unique posture and silhouette.</p>
-        </div>
+  <div class="customers-interactive-container">
+    <!-- Featured Client Spotlight Card (Top) -->
+    <div class="client-spotlight-card">
+      <img src="h1.jpeg" alt="Featured Bespoke Client - Mr. Sewing Kigali" class="spotlight-image" loading="lazy">
+      <div class="spotlight-content">
+        <span class="spotlight-tag">Featured Client Spotlight</span>
+        <h3>The Executive Fit</h3>
+        <p>Crafted with premium fabric and customized finishes for an impeccable downtown Kigali appearance.</p>
+        <a href="reviews.html" class="spotlight-btn">Explore Full Gallery &amp; Reviews</a>
       </div>
     </div>
 
-    <div class="customers-grid">
-      <div class="customer-card">
-        <img src="h1.jpeg" alt="Custom bespoke suit made in Kigali, Rwanda - Mr. Sewing 1" class="suit-image">
-        <div class="card-actions">
-          <a href="reviews.html">Read reviews</a>
-          <a href="reviews.html">Know More</a>
-        </div>
+    <!-- Sliding Gallery for Remaining Client Photos (Below) -->
+    <div class="customers-slider">
+      <div class="customer-card-slide">
+        <img src="h2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing" class="suit-image" loading="lazy">
       </div>
-      <div class="customer-card">
-        <img src="h2.jpeg" alt="Made-to-measure suit Kigali - Mr. Sewing 2" class="suit-image">
-        <div class="card-actions">
-          <a href="reviews.html">Read reviews</a>
-          <a href="reviews.html">Know More</a>
-        </div>
+      <div class="customer-card-slide">
+        <img src="h3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing" class="suit-image" loading="lazy">
       </div>
-      <div class="customer-card">
-        <img src="h3.jpeg" alt="Tailored suit Rwanda - Mr. Sewing 3" class="suit-image">
-        <div class="card-actions">
-          <a href="reviews.html">Read reviews</a>
-          <a href="reviews.html">Know More</a>
-        </div>
-      </div>
-      <div class="customer-card">
-        <img src="h4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing 4" class="suit-image">
-        <div class="card-actions">
-          <a href="reviews.html">Read reviews</a>
-          <a href="reviews.html">Know More</a>
-        </div>
+      <div class="customer-card-slide">
+        <img src="h4.jpeg" alt="Custom suit by bespoke tailor in Kigali - Mr. Sewing" class="suit-image" loading="lazy">
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  /* Happy Customers Section Refined Styles */
+  .customers-section {
+    padding: clamp(30px, 6vw, 80px) 4%;
+    background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(20px, 4vw, 60px);
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .customers-text { flex: 1 1 40%; min-width: 0; text-align: left; }
+  .customers-section h2 { font-size: clamp(1.2rem, 3vw, 2.5rem); color: #d4af37; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  .customers-description, .made-to-order-desc { font-size: clamp(0.85rem, 1.5vw, 1.05rem); color: #aaaaaa; line-height: 1.7; margin-bottom: 20px; }
+  .made-to-order-title { font-size: clamp(1rem, 2.2vw, 1.8rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 10px; }
+
+  .customers-interactive-container { flex: 1.2 1 55%; min-width: 0; display: flex; flex-direction: column; gap: 20px; max-width: 850px; }
+  
+  /* Spotlight Card */
+  .client-spotlight-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+  .spotlight-image { width: 100%; height: clamp(280px, 35vw, 420px); object-fit: cover; display: block; }
+  .spotlight-content { padding: 20px; text-align: left; }
+  .spotlight-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #d4af37; font-weight: 600; display: block; margin-bottom: 6px; }
+  .client-spotlight-card h3 { font-size: clamp(1rem, 2vw, 1.3rem); color: #ffffff; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .client-spotlight-card p { font-size: 0.88rem; color: #aaaaaa; line-height: 1.5; margin-bottom: 16px; }
+  .spotlight-btn { display: inline-block; background-color: #d4af37; color: #000000; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 20px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s ease; }
+  .spotlight-btn:hover { background-color: #f3e5ab; }
+
+  /* Sliding Gallery (Horizontal Scroll on Mobile/Desktop) */
+  .customers-slider { display: flex; gap: 15px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; -webkit-overflow-scrolling: touch; }
+  .customers-slider::-webkit-scrollbar { height: 6px; }
+  .customers-slider::-webkit-scrollbar-track { background: #141414; border-radius: 3px; }
+  .customers-slider::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 3px; }
+  
+  .customer-card-slide { flex: 0 0 240px; scroll-snap-align: start; background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: 10px; }
+  .customer-card-slide img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; display: block; }
+
+  @media (max-width: 900px) {
+    .customers-section { flex-direction: column; }
+    .customers-interactive-container { width: 100%; max-width: none; }
+    .customer-card-slide { flex: 0 0 200px; }
+  }
+</style>
