@@ -3,375 +3,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work & Happy Customers | Mr. Sewing Bespoke Tailoring Kigali</title>
+  <title>Our Work &amp; Client Moments | Mr. Sewing Kigali</title>
 
-  <!-- High-Ranking Local SEO Meta Tags -->
-  <meta name="description" content="Browse our endless gallery of handcrafted bespoke suits, made-to-measure tailoring, VIP fashion designs, and happy customer fittings by Mr. Sewing in Kigali, Rwanda. Top-rated tailor in Nyarugenge & Norvège.">
-  <meta name="keywords" content="Mr Sewing Fashion, tailor in Kigali, bespoke tailoring Kigali, custom suits Kigali, clothing alterations Kigali, fashion designer Rwanda, made to measure suits Kigali, best tailor in Rwanda, custom wedding suits Kigali">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore real client moments, bespoke tailoring projects, and customer reviews from Mr. Sewing in Kigali, Rwanda. See our custom suits and fitted garments in action.">
+  <meta name="keywords" content="Mr Sewing reviews, client moments Kigali, bespoke tailoring portfolio Rwanda, custom suit gallery Kigali, Mr Sewing work">
   <meta name="author" content="Mr. Sewing">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://mrsewingfashion.com/reviews.html">
 
+  <!-- Logo shown in browser tabs -->
   <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
+  <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
   <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
 
-  <!-- Open Graph & Social Sharing Cards -->
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Mr. Sewing">
-  <meta property="og:title" content="Our Work & Happy Customers | Mr. Sewing Bespoke Tailoring Kigali">
-  <meta property="og:description" content="Explore handcrafted bespoke suits and satisfied client fittings across Kigali, Rwanda. Expert custom tailoring and garment restyling.">
+  <meta property="og:title" content="Our Work &amp; Client Moments | Mr. Sewing Kigali">
+  <meta property="og:description" content="Real stories, bespoke fits, and cherished milestones crafted in Kigali.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/reviews.html">
-  <meta property="og:image" content="https://mrsewingfashion.com/1.jpeg">
+  <meta property="og:image" content="https://mrsewingfashion.com/The%20Executive%20Line.jpeg">
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Reset & Setup */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; color-scheme: dark; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
 
     #site-header, #site-footer { width: 100%; }
 
-    /* Gallery Container */
-    .gallery-container {
+    .work-section { 
       flex: 1;
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: clamp(30px, 6vw, 80px) 4%;
+      padding: clamp(30px, 6vw, 90px) 4%; 
+      max-width: 1500px; 
+      margin: 0 auto; 
+      width: 100%;
+    }
+    
+    .section-header { text-align: center; margin-bottom: clamp(40px, 6vw, 70px); }
+    .section-header h1 { font-size: clamp(1.4rem, 3.5vw, 2.8rem); color: #d4af37; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 15px; }
+    .section-subtitle { color: #cccccc; font-size: clamp(0.95rem, 1.6vw, 1.15rem); margin: 0 auto; max-width: 800px; line-height: 1.7; font-style: italic; }
+    .header-divider { height: 2px; width: 90px; background-color: #d4af37; margin: 20px auto 0; }
+
+    /* Professional Grid Layout for Photos R1 to R10 */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: clamp(20px, 3vw, 35px);
       width: 100%;
     }
 
-    .gallery-intro {
-      text-align: center;
-      margin-bottom: clamp(30px, 5vw, 60px);
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .gallery-intro h1 {
-      font-size: clamp(1.6rem, 4vw, 2.8rem);
-      color: #d4af37;
-      text-transform: uppercase;
-      letter-spacing: clamp(1px, 0.3vw, 3px);
-      font-weight: 800;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-
-    .gallery-intro p {
-      font-size: clamp(0.88rem, 1.6vw, 1.1rem);
-      color: #cccccc;
-      line-height: 1.7;
-    }
-
-    .gallery-divider {
-      height: 2px;
-      width: 80px;
-      background-color: #d4af37;
-      margin: 20px auto 0;
-    }
-
-    /* 4-Column Photo Grid Layout */
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: clamp(16px, 2.5vw, 30px);
-    }
-
-    /* Photo Card Styling */
-    .photo-card {
+    .work-card {
       background-color: #141414;
       border: 1px solid #2a2a2a;
+      border-top: 3px solid #d4af37;
       border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .photo-card:hover {
+    .work-card:hover {
       border-color: #d4af37;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
     }
 
-    .photo-img-wrapper {
-      position: relative;
+    .work-image-link {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .work-img {
       width: 100%;
       aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background-color: #000000;
-    }
-
-    .photo-img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
       object-position: center top;
       display: block;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
+    }
+    .work-card:hover .work-img {
+      transform: scale(1.03);
     }
 
-    .photo-card:hover .photo-img {
-      transform: scale(1.04);
-    }
-
-    .photo-info {
-      padding: clamp(14px, 2vw, 20px);
+    .work-content {
+      padding: clamp(16px, 2vw, 24px);
+      text-align: left;
+      flex: 1;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
       justify-content: space-between;
+      gap: 14px;
     }
 
-    .photo-caption {
-      color: #ffffff;
-      font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    .work-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #d4af37;
       font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 14px;
     }
 
-    .photo-actions-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid #2a2a2a;
-      padding-top: 12px;
-      gap: 8px;
-    }
-
-    .btn-action {
-      background: transparent;
-      border: 1px solid #2a2a2a;
-      color: #aaaaaa;
-      padding: 6px 10px;
-      font-size: 0.8rem;
-      border-radius: 4px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .btn-action:hover {
-      border-color: #d4af37;
-      color: #d4af37;
-    }
-
-    .btn-action.liked {
-      background-color: rgba(212, 175, 55, 0.1);
-      border-color: #d4af37;
-      color: #d4af37;
-    }
-
-    .view-photo-link {
-      color: #d4af37;
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 700;
+    .work-title {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: #ffffff;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      transition: color 0.3s ease;
-    }
-
-    .view-photo-link:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    /* Scroll Indicator Loader */
-    .scroll-loader {
-      text-align: center;
-      padding: 40px 0;
-      color: #d4af37;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
       font-weight: 600;
-      display: none;
     }
 
-    .scroll-loader i {
-      margin-right: 8px;
-      animation: spin 1s linear infinite;
+    .work-desc {
+      font-size: 0.88rem;
+      color: #aaaaaa;
+      line-height: 1.6;
     }
 
-    @keyframes spin { 100% { transform: rotate(360deg); } }
-
-    .toast-msg {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
+    .detail-btn {
+      display: inline-block;
+      background-color: transparent;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 9px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-top: 5px;
+    }
+    .detail-btn:hover {
       background-color: #d4af37;
       color: #000000;
-      padding: 12px 22px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      display: none;
-      z-index: 3000;
     }
 
-    @media (max-width: 1200px) {
-      .photo-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 900px) {
-      .photo-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 480px) {
-      .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .photo-info { padding: 10px; }
-      .photo-caption { font-size: 0.78rem; margin-bottom: 8px; }
-      .btn-action { padding: 4px 6px; font-size: 0.7rem; }
-      .view-photo-link { font-size: 0.68rem; }
+    @media (max-width: 600px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Placeholder -->
+  <!-- Shared Header Placeholder -->
   <div id="site-header"></div>
 
-  <!-- Main Content -->
-  <main class="gallery-container">
-    <div class="gallery-intro">
-      <h1>Our Work &amp; Happy Customers</h1>
-      <p>Every outfit tells a story. Discover the craftsmanship, style, and attention to detail behind Mr Sewing Fashion. From perfectly tailored suits to elegant fashion designs in Kigali, explore our work and the customers who inspire us. We are proud to help our clients look confident, feel exceptional, and express their personal style.</p>
-      <div class="gallery-divider"></div>
+  <!-- Main Work & Client Moments Gallery -->
+  <main class="work-section">
+    <div class="section-header">
+      <h1>Our Work &amp; Client Moments</h1>
+      <p class="section-subtitle">Real stories, bespoke fits, and cherished milestones crafted with precision in Kigali. Explore our gallery of custom garments and the happy moments of those who wear them.</p>
+      <div class="header-divider"></div>
     </div>
 
-    <!-- Photo Cards Grid (Populated automatically by JavaScript) -->
-    <div class="photo-grid" id="photoGrid"></div>
+    <div class="work-grid">
 
-    <!-- Scroll Loader -->
-    <div class="scroll-loader" id="scrollLoader">
-      <i class="fas fa-spinner"></i> Loading More Customer Fittings...
+      <!-- Card 1: R1 -->
+      <div class="work-card">
+        <a href="r1-details.html" class="work-image-link">
+          <img src="r1.jpeg" alt="Bespoke Elegance in Kigali - Mr. Sewing Client" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Spotlight</span>
+            <h3 class="work-title">Bespoke Elegance in Kigali</h3>
+            <p class="work-desc">Crafted to perfection, celebrating our client's unique presence with bespoke tailoring and unmatched comfort for a special day.</p>
+          </div>
+          <a href="r1-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 2: R2 -->
+      <div class="work-card">
+        <a href="r2-details.html" class="work-image-link">
+          <img src="r2.jpeg" alt="Executive Tailoring - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Executive Presence</h3>
+            <p class="work-desc">Designed for high-stakes meetings and boardrooms. Impeccable lines and a confident fit that speaks volumes.</p>
+          </div>
+          <a href="r2-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 3: R3 -->
+      <div class="work-card">
+        <a href="r3-details.html" class="work-image-link">
+          <img src="r3.jpeg" alt="Custom Suit Craftsmanship - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Refined Modern Cut</h3>
+            <p class="work-desc">A celebration of contemporary style and traditional tailoring craftsmanship tailored precisely to client measurements.</p>
+          </div>
+          <a href="r3-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 4: R4 -->
+      <div class="work-card">
+        <a href="r4-details.html" class="work-image-link">
+          <img src="r4.jpeg" alt="Wedding &amp; Ceremony Suiting - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Wedding Celebration</h3>
+            <p class="work-desc">Handcrafted wedding and ceremony attire ensuring the groom and wedding party look extraordinary and feel entirely at home.</p>
+          </div>
+          <a href="r4-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 5: R5 -->
+      <div class="work-card">
+        <a href="r5-details.html" class="work-image-link">
+          <img src="r5.jpeg" alt="Signature Bespoke Suit - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Signature Bespoke Suit</h3>
+            <p class="work-desc">Created with premium fabric selection and hand-stitched detailing, reflecting true sartorial artistry.</p>
+          </div>
+          <a href="r5-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 6: R6 -->
+      <div class="work-card">
+        <a href="r6-details.html" class="work-image-link">
+          <img src="r6.jpeg" alt="Tailored Distinction - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Tailored Distinction</h3>
+            <p class="work-desc">An embodiment of sharp posture and custom elegance, fitted in our Kigali atelier for an exceptional client experience.</p>
+          </div>
+          <a href="r6-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 7: R7 -->
+      <div class="work-card">
+        <a href="r7-details.html" class="work-image-link">
+          <img src="r7.jpeg" alt="Everyday Luxury - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Everyday Luxury</h3>
+            <p class="work-desc">Proving that comfort and uncompromising high fashion go hand in hand for daily professional wear.</p>
+          </div>
+          <a href="r7-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 8: R8 -->
+      <div class="work-card">
+        <a href="r8-details.html" class="work-image-link">
+          <img src="r8.jpeg" alt="Statement Formal Wear - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Statement Formal Wear</h3>
+            <p class="work-desc">Designed to command attention at prestigious evening events and galas across Kigali and beyond.</p>
+          </div>
+          <a href="r8-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 9: R9 -->
+      <div class="work-card">
+        <a href="r9-details.html" class="work-image-link">
+          <img src="r9.jpeg" alt="Heritage &amp; Culture Line - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Heritage &amp; Modern Fusion</h3>
+            <p class="work-desc">Blending cultural sophistication with modern tailoring lines for a distinct, unforgettable appearance.</p>
+          </div>
+          <a href="r9-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
+      <!-- Card 10: R10 -->
+      <div class="work-card">
+        <a href="r10-details.html" class="work-image-link">
+          <img src="r10.jpeg" alt="Immaculate Craftsmanship - Mr. Sewing" class="work-img" loading="lazy">
+        </a>
+        <div class="work-content">
+          <div>
+            <span class="work-tag">Client Moment</span>
+            <h3 class="work-title">Immaculate Craftsmanship</h3>
+            <p class="work-desc">A celebration of trust, quality materials, and personal connection between master tailor and client.</p>
+          </div>
+          <a href="r10-details.html" class="detail-btn">View Full Story &amp; Details</a>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <div id="toastMsg" class="toast-msg">Link copied to clipboard!</div>
-
-  <!-- Footer Placeholder -->
+  <!-- Shared Footer Placeholder -->
   <div id="site-footer"></div>
 
+  <!-- Component Loader Script -->
   <script>
-    /* =======================================================
-       EASY PHOTO LIST MANAGEMENT:
-       To add a new photo in the future, simply add its file name 
-       and title to this list! The page will render it automatically.
-       ======================================================= */
-    const myPhotos = [
-      { id: "photo-1", file: "1.jpeg", title: "Bespoke Royal Navy Suit — Handcrafted Tailoring in Kigali", target: "photo-1.html" },
-      { id: "photo-2", file: "2.jpeg", title: "Executive Charcoal Suit — Precision Made-to-Measure Fit", target: "photo-2.html" },
-      { id: "photo-3", file: "3.jpeg", title: "VIP Wedding Collection — Modern Groom Tailoring", target: "photo-3.html" },
-      { id: "photo-4", file: "4.jpeg", title: "Double-Breasted Statement Suit — Custom Craftsmanship", target: "photo-4.html" }
-      // To add photo 5 in the future, just add:
-      // { id: "photo-5", file: "5.jpeg", title: "Custom Tailored Jacket — Norvège Branch Fitting", target: "photo-5.html" }
-    ];
-
     document.addEventListener('DOMContentLoaded', function() {
-      // 1. Fetch Shared Header and Footer
-      fetch('header.html').then(r => r.ok ? r.text() : '').then(d => { if (d) document.getElementById('site-header').innerHTML = d; });
-      fetch('footer.html').then(r => r.ok ? r.text() : '').then(d => { if (d) document.getElementById('site-footer').innerHTML = d; });
+      fetch('header.html')
+        .then(res => res.ok ? res.text() : '')
+        .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
+        .catch(err => console.error('Header load error:', err));
 
-      // 2. Automatically Render All Photos into the Grid
-      renderPhotoGrid();
+      fetch('footer.html')
+        .then(res => res.ok ? res.text() : '')
+        .then(data => { if (data) document.getElementById('site-footer').innerHTML = data; })
+        .catch(err => console.error('Footer load error:', err));
     });
-
-    function renderPhotoGrid() {
-      const grid = document.getElementById('photoGrid');
-      grid.innerHTML = '';
-
-      myPhotos.forEach(photo => {
-        const isLiked = localStorage.getItem('like_' + photo.id) === 'true';
-        let baseCount = 18 + parseInt(photo.id.replace('photo-', '')) * 3;
-        if (isLiked) baseCount += 1;
-
-        const card = document.createElement('article');
-        card.className = 'photo-card';
-        card.innerHTML = `
-          <div class="photo-img-wrapper">
-            <a href="${photo.target}">
-              <img src="${photo.file}" alt="${photo.title} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
-            </a>
-          </div>
-          <div class="photo-info">
-            <div class="photo-caption">${photo.title}</div>
-            <div class="photo-actions-row">
-              <button class="btn-action like-btn ${isLiked ? 'liked' : ''}" data-id="${photo.id}" aria-label="Like photo">
-                <i class="${isLiked ? 'fas' : 'far'} fa-heart"></i> <span class="like-count">${baseCount}</span>
-              </button>
-              <button class="btn-action share-btn" data-url="https://mrsewingfashion.com/${photo.target}" data-title="${photo.title}" aria-label="Share photo">
-                <i class="fas fa-share-alt"></i>
-              </button>
-              <a href="https://wa.me/250787411501?text=Hello%20Mr.%20Sewing%2C%20I%20saw%20${encodeURIComponent(photo.title)}%20on%20your%20website%20and%20wanted%20to%20leave%20a%20comment." target="_blank" rel="noopener" class="btn-action" aria-label="Comment on WhatsApp">
-                <i class="far fa-comment"></i>
-              </a>
-              <a href="${photo.target}" class="view-photo-link">View Details</a>
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-
-      // Attach button events after rendering
-      attachEvents();
-    }
-
-    function attachEvents() {
-      // Like Toggle
-      document.querySelectorAll('.like-btn').forEach(btn => {
-        btn.onclick = function() {
-          const id = btn.getAttribute('data-id');
-          const countSpan = btn.querySelector('.like-count');
-          const icon = btn.querySelector('i');
-          const currentlyLiked = localStorage.getItem('like_' + id) === 'true';
-
-          let num = parseInt(countSpan.textContent);
-
-          if (currentlyLiked) {
-            localStorage.setItem('like_' + id, 'false');
-            btn.classList.remove('liked');
-            icon.className = 'far fa-heart';
-            countSpan.textContent = num - 1;
-          } else {
-            localStorage.setItem('like_' + id, 'true');
-            btn.classList.add('liked');
-            icon.className = 'fas fa-heart';
-            countSpan.textContent = num + 1;
-          }
-        };
-      });
-
-      // Share Trigger
-      document.querySelectorAll('.share-btn').forEach(btn => {
-        btn.onclick = function() {
-          const url = btn.getAttribute('data-url');
-          const title = btn.getAttribute('data-title');
-
-          if (navigator.share) {
-            navigator.share({ title: title, text: 'Check out this suit fitting by Mr. Sewing in Kigali!', url: url }).catch(() => {});
-          } else {
-            navigator.clipboard.writeText(url).then(() => {
-              const toast = document.getElementById('toastMsg');
-              toast.style.display = 'block';
-              setTimeout(() => { toast.style.display = 'none'; }, 3000);
-            });
-          }
-        };
-      });
-    }
   </script>
+
 </body>
 </html>
