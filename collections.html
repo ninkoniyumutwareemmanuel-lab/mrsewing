@@ -159,10 +159,10 @@
         color: #000000;
     }
     
-    /* Horizontal Scrolling Carousel (Left-to-Right friendly start) */
+    /* Horizontal Scrolling Carousel */
     .collection-carousel {
         display: flex;
-        flex-direction: row; /* Starts naturally from left (m1/w1) to right */
+        flex-direction: row;
         overflow-x: auto;
         gap: clamp(12px, 2vw, 20px);
         padding-bottom: 15px;
@@ -192,7 +192,7 @@
         display: flex; 
         flex-direction: column; 
         justify-content: space-between;
-        flex: 0 0 clamp(200px, 26vw, 280px); /* Keeps images compact and perfectly sized */
+        flex: 0 0 clamp(200px, 26vw, 280px); 
         scroll-snap-align: start;
         transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
     }
@@ -235,7 +235,7 @@
         <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection Section (Horizontal Scroll with Arrows) -->
+    <!-- Men's Suits Collection Section (Horizontal Scroll with Working Arrows) -->
     <div class="collection-block" id="mens-collection">
         <div class="block-title-wrapper">
             <h2 class="block-title">Men's Collections</h2>
@@ -322,7 +322,7 @@
         </div>
     </div>
 
-    <!-- Women's Suits Collection Section (Horizontal Scroll with Arrows) -->
+    <!-- Women's Suits Collection Section (Horizontal Scroll with Working Arrows) -->
     <div class="collection-block" id="womens-collection">
         <div class="block-title-wrapper">
             <h2 class="block-title">Women's Collections</h2>
@@ -384,7 +384,7 @@
 
             <div class="collection-item-card">
                 <a href="w-modernsuits.html" class="image-link">
-                    <img src="w5.jpeg" alt="Modern suits, custom women's executive tailoring Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
+                    <img src="w5.jpeg" alt="Modern suits, custom women's executive tailoring Kigali - Mr. Sewing" class="collection-item-img>
                 </a>
                 <div class="collection-item-info">
                     <div>
@@ -399,7 +399,6 @@
   </main>
 
   <!-- Shared Footer Placeholder -->
-  <div id="site-header"></div>
   <div id="site-footer"></div>
 
   <!-- Component Loader Script & Scroll Helper -->
