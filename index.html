@@ -309,7 +309,7 @@
       document.dispatchEvent(new CustomEvent('sitecomponentsloaded', { detail: { results } }));
     })();
 
-    /* Universal Global Event Delegation (Handles Order Buttons & Universal Slider Arrows Across All Sections) */
+    /* Truly Universal Global Event Delegation (Handles Order Buttons & Universal Slider Arrows Across All Sections) */
     (function setupGlobalDelegation() {
       const modal = document.getElementById('orderModal');
       const agree = document.getElementById('termsAgree');
@@ -333,7 +333,7 @@
         if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
       }
 
-      /* Universal click delegation for order buttons and any slider arrows */
+      /* Universal click delegation that works for any loaded section */
       document.addEventListener('click', function (event) {
         // 1. Handle order buttons
         const button = event.target.closest && event.target.closest('.order-btn');
@@ -343,18 +343,23 @@
           return;
         }
 
-        // 2. Universal Slider Arrow Delegation (works for any section with slide buttons & sliders)
-        const leftArrow = event.target.closest('[id*="slideLeft"], .slide-left, [data-action="scroll-left"]');
-        const rightArrow = event.target.closest('[id*="slideRight"], .slide-right, [data-action="scroll-right"]');
-        
-        if (leftArrow || rightArrow) {
+        // 2. Universal Slider Arrow Delegation (Matches ID patterns, classes, or data attributes)
+        const leftClick = event.target.closest('[id*="slideLeft"], .slide-left, [data-slide="left"], .fa-chevron-left');
+        const rightClick = event.target.closest('[id*="slideRight"], .slide-right, [data-slide="right"], .fa-chevron-right');
+
+        if (leftClick || rightClick) {
           event.preventDefault();
-          const container = leftArrow ? leftArrow.closest('section, div') : rightArrow.closest('section, div');
-          const slider = container ? container.querySelector('.customers-slider, .slider-container, [data-slider], .collections-slider') : null;
-          
+          const targetTrigger = leftClick || rightClick;
+          // Find the nearest wrapper container and look for any slider inside it
+          const container = targetTrigger.closest('section, div.customers-interactive-container, div');
+          const slider = container ? container.querySelector('.customers-slider, .slider, [data-slider]') : document.getElementById('customersSlider');
+
           if (slider) {
-            const scrollDist = slider.clientWidth > 600 ? 300 : 200;
-            slider.scrollBy({ left: leftArrow ? -scrollDist : scrollDist, behavior: 'smooth' });
+            const scrollAmount = 260;
+            slider.scrollBy({
+              left: leftClick ? -scrollAmount : scrollAmount,
+              behavior: 'smooth'
+            });
           }
         }
       });
