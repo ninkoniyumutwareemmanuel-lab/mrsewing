@@ -216,155 +216,75 @@
 
     <div class="work-grid">
 
-      <!-- Card 1: R1 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r1.jpeg', 'Bespoke Elegance in Kigali')">
-          <img src="r1.jpeg" alt="Bespoke Elegance in Kigali - Mr. Sewing Client" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Spotlight</span>
-            <h3 class="work-title">Bespoke Elegance in Kigali</h3>
-            <p class="work-desc">Crafted to perfection, celebrating our client's unique presence with bespoke tailoring and unmatched comfort for a special day.</p>
-          </div>
-          <a href="r1-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
+      <!-- Dynamic Generation of Cards r1 through r43 -->
+      <script>
+        // Array containing all image filenames and their display titles
+        const galleryItems = [
+          { file: 'r1.jpeg', title: 'Bespoke Elegance in Kigali', desc: 'Crafted to perfection, celebrating our client\'s unique presence with bespoke tailoring.' },
+          { file: 'r2.jpeg', title: 'Executive Presence', desc: 'Designed for high-stakes meetings and boardrooms with impeccable lines.' },
+          { file: 'r3.jpeg', title: 'Refined Modern Cut', desc: 'A celebration of contemporary style and traditional tailoring craftsmanship.' },
+          { file: 'r4.jpeg', title: 'Wedding Celebration', desc: 'Handcrafted wedding and ceremony attire for an extraordinary appearance.' },
+          { file: 'r5.jpeg', title: 'Signature Bespoke Suit', desc: 'Created with premium fabric selection and hand-stitched detailing.' },
+          { file: 'r6.jpeg', title: 'Tailored Distinction', desc: 'An embodiment of sharp posture and custom elegance in our Kigali atelier.' },
+          { file: 'r7.jpeg', title: 'Everyday Luxury', desc: 'Proving that comfort and uncompromising high fashion go hand in hand.' },
+          { file: 'r8.jpeg', title: 'Statement Formal Wear', desc: 'Designed to command attention at prestigious evening events and galas.' },
+          { file: 'r9.jpeg', title: 'Heritage & Modern Fusion', desc: 'Blending cultural sophistication with modern tailoring lines.' },
+          { file: 'r10.jpeg', title: 'Immaculate Craftsmanship', desc: 'A celebration of trust, quality materials, and personal connection.' },
+          { file: 'r11.jpeg', title: 'Atelier Masterpiece I', desc: 'Precision-cut bespoke suit tailored to exact client proportions.' },
+          { file: 'r12.jpeg', title: 'Atelier Masterpiece II', desc: 'Impeccable stitchwork and luxury suiting from our Kigali house.' },
+          { file: 'r13.jpeg', title: 'Executive Suiting Line', desc: 'Tailored for professionals who demand excellence and poise.' },
+          { file: 'r14.jpeg', title: 'Groom & Wedding Attire', desc: 'Unforgettable custom ceremony wear crafted for landmark moments.' },
+          { file: 'r15.jpeg', title: 'Custom Blazer & Trouser', desc: 'Versatile smart-casual bespoke wear designed for effortless style.' },
+          { file: 'r16.jpeg', title: 'Classic Double-Breasted', desc: 'Timeless sartorial sophistication with a modern tailored silhouette.' },
+          { file: 'r17.jpeg', title: 'Sharply Fitted Elegance', desc: 'Engineered for confidence, comfort, and uncompromising distinction.' },
+          { file: 'r18.jpeg', title: 'Bespoke Three-Piece', desc: 'Complete harmony in fabric, cut, and meticulous construction.' },
+          { file: 'r19.jpeg', title: 'Modern Executive Style', desc: 'Sleek lines and premium materials tailored right in Nyarugenge.' },
+          { file: 'r20.jpeg', title: 'Atelier Spotlight Look', desc: 'Showcasing our dedication to supreme fit and personal tailoring.' },
+          { file: 'r21.jpeg', title: 'Client Milestone Moment', desc: 'Celebrating success and special milestones in custom Mr. Sewing attire.' },
+          { file: 'r22.jpeg', title: 'Refined Tailoring Project', desc: 'Custom garment crafted to highlight individual style and posture.' },
+          { file: 'r23.jpeg', title: 'Signature Suit Design', desc: 'Exclusive fabric pairing and hand-finished detailing.' },
+          { file: 'r25.jpeg', title: 'Elite Custom Suiting', desc: 'Crafted for leaders, achievers, and connoisseurs of fine fashion.' },
+          { file: 'r26.jpeg', title: 'Contemporary Bespoke', desc: 'Where modern aesthetics meet traditional master tailoring.' },
+          { file: 'r27.jpeg', title: 'Ceremony & Gala Wear', desc: 'Standing out with distinction at high-profile gatherings.' },
+          { file: 'r28.jpeg', title: 'Immaculate Posture & Fit', desc: 'Designed to make you look and feel your absolute best.' },
+          { file: 'r29.jpeg', title: 'Artisanal Suit Creation', desc: 'Every seam and button placement executed with precision.' },
+          { file: 'r30.jpeg', title: 'Executive Boardroom Look', desc: 'Authoritative style paired with supreme comfort.' },
+          { file: 'r31.jpeg', title: 'Premier Tailoring Showcase', desc: 'Handcrafted excellence from our Kigali fashion house.' },
+          { file: 'r32.jpeg', title: 'Bespoke Custom Elegance', desc: 'Tailored strictly to your measurements and preferences.' },
+          { file: 'r33.jpeg', title: 'Distinguished Formal Wear', desc: 'Crafted for unforgettable evenings and celebrations.' },
+          { file: 'r34.jpeg', title: 'Master Tailor Creation', desc: 'Uncompromising quality and attention to every detail.' },
+          { file: 'r35.jpeg', title: 'Luxury Suiting Statement', desc: 'Elevating your wardrobe with custom bespoke masterpieces.' },
+          { file: 'r36.jpeg', title: 'Tailored Perfection', desc: 'Designed for comfort, prestige, and timeless style.' },
+          { file: 'r37.jpeg', title: 'Exclusive Client Fitting', desc: 'Real moments of satisfaction in custom Kigali tailoring.' },
+          { file: 'r38.jpeg', title: 'Signature Collection Piece', desc: 'Crafted with passion and master sartorial expertise.' },
+          { file: 'r39.jpeg', title: 'High-End Bespoke Suit', desc: 'Engineered for a sharp silhouette and lasting impression.' },
+          { file: 'r40.jpeg', title: 'Atelier Spotlight Feature', desc: 'Proudly crafted in Kigali, Rwanda by Mr. Sewing.' },
+          { file: 'r41.jpeg', title: 'Custom Tailored Distinction', desc: 'Celebrating style, precision, and personal achievement.' },
+          { file: 'r42.jpeg', title: 'Masterpiece Suiting', desc: 'The pinnacle of bespoke fashion and custom tailoring.' },
+          { file: 'r43.jpeg', title: 'Final Gallery Showcase', desc: 'A testament to craftsmanship, elegance, and happy clients.' }
+        ];
 
-      <!-- Card 2: R2 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r2.jpeg', 'Executive Presence')">
-          <img src="r2.jpeg" alt="Executive Tailoring - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Executive Presence</h3>
-            <p class="work-desc">Designed for high-stakes meetings and boardrooms. Impeccable lines and a confident fit that speaks volumes.</p>
-          </div>
-          <a href="r2-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 3: R3 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r3.jpeg', 'Refined Modern Cut')">
-          <img src="r3.jpeg" alt="Custom Suit Craftsmanship - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Refined Modern Cut</h3>
-            <p class="work-desc">A celebration of contemporary style and traditional tailoring craftsmanship tailored precisely to client measurements.</p>
-          </div>
-          <a href="r3-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 4: R4 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r4.jpeg', 'Wedding Celebration')">
-          <img src="r4.jpeg" alt="Wedding &amp; Ceremony Suiting - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Wedding Celebration</h3>
-            <p class="work-desc">Handcrafted wedding and ceremony attire ensuring the groom and wedding party look extraordinary and feel entirely at home.</p>
-          </div>
-          <a href="r4-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 5: R5 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r5.jpeg', 'Signature Bespoke Suit')">
-          <img src="r5.jpeg" alt="Signature Bespoke Suit - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Signature Bespoke Suit</h3>
-            <p class="work-desc">Created with premium fabric selection and hand-stitched detailing, reflecting true sartorial artistry.</p>
-          </div>
-          <a href="r5-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 6: R6 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r6.jpeg', 'Tailored Distinction')">
-          <img src="r6.jpeg" alt="Tailored Distinction - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Tailored Distinction</h3>
-            <p class="work-desc">An embodiment of sharp posture and custom elegance, fitted in our Kigali atelier for an exceptional client experience.</p>
-          </div>
-          <a href="r6-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 7: R7 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r7.jpeg', 'Everyday Luxury')">
-          <img src="r7.jpeg" alt="Everyday Luxury - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Everyday Luxury</h3>
-            <p class="work-desc">Proving that comfort and uncompromising high fashion go hand in hand for daily professional wear.</p>
-          </div>
-          <a href="r7-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 8: R8 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r8.jpeg', 'Statement Formal Wear')">
-          <img src="r8.jpeg" alt="Statement Formal Wear - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Statement Formal Wear</h3>
-            <p class="work-desc">Designed to command attention at prestigious evening events and galas across Kigali and beyond.</p>
-          </div>
-          <a href="r8-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 9: R9 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r9.jpeg', 'Heritage & Modern Fusion')">
-          <img src="r9.jpeg" alt="Heritage &amp; Culture Line - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Heritage &amp; Modern Fusion</h3>
-            <p class="work-desc">Blending cultural sophistication with modern tailoring lines for a distinct, unforgettable appearance.</p>
-          </div>
-          <a href="r9-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
-
-      <!-- Card 10: R10 -->
-      <div class="work-card">
-        <div class="work-image-wrapper" onclick="openLightbox('r10.jpeg', 'Immaculate Craftsmanship')">
-          <img src="r10.jpeg" alt="Immaculate Craftsmanship - Mr. Sewing" class="work-img" loading="lazy">
-        </div>
-        <div class="work-content">
-          <div>
-            <span class="work-tag">Client Moment</span>
-            <h3 class="work-title">Immaculate Craftsmanship</h3>
-            <p class="work-desc">A celebration of trust, quality materials, and personal connection between master tailor and client.</p>
-          </div>
-          <a href="r10-details.html" class="detail-btn">View Full Story &amp; Details</a>
-        </div>
-      </div>
+        // Loop through all items and generate the cards dynamically
+        galleryItems.forEach((item, index) => {
+          const detailFile = item.file.replace('.jpeg', '-details.html');
+          const cardHTML = `
+            <div class="work-card">
+              <div class="work-image-wrapper" onclick="openLightbox('${item.file}', '${item.title}')">
+                <img src="${item.file}" alt="${item.title} - Mr. Sewing" class="work-img" loading="lazy">
+              </div>
+              <div class="work-content">
+                <div>
+                  <span class="work-tag">Client Moment</span>
+                  <h3 class="work-title">${item.title}</h3>
+                  <p class="work-desc">${item.desc}</p>
+                </div>
+                <a href="${detailFile}" class="detail-btn">View Full Story &amp; Details</a>
+              </div>
+            </div>
+          `;
+          document.write(cardHTML);
+        });
+      </script>
 
     </div>
   </main>
