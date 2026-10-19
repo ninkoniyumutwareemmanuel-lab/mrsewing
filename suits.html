@@ -6,7 +6,7 @@
   <title>Bespoke Suit Collections | Mr. Sewing - Kigali, Rwanda</title>
 
   <!-- Expanded SEO & Keywords -->
-  <meta name="description" content="Explore Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom men's and women's suits, made by us, and made-to-measure tailoring.">
+  <meta name="description" content="Explore Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom men's and women's suits, made by Mr. Sewing, and made-to-measure tailoring.">
   <meta name="keywords" content="Mr. Sewing, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion Designer, suits Kigali, suits Rwanda, custom suits Kigali, bespoke suits Rwanda, men's suits Kigali, women's suits Kigali, double-breasted suit Kigali, single-breasted suit Kigali, two-piece suit Kigali, three-piece suit Kigali, wedding suits Kigali, groom suit Rwanda, office suits Kigali, business suits Kigali, skirt suit Kigali, made to measure suits Kigali, best tailor in Kigali, Made in Rwanda fashion, costume sur mesure Kigali, suit alterations Kigali, mobile tailor Kigali">
   <meta name="author" content="Mr. Sewing">
   <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@
   <!-- Link preview (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:site_name" content="Mr. Sewing">
   <meta property="og:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
-  <meta property="og:description" content="Custom suits and creations made by us in Kigali, Rwanda.">
+  <meta property="og:description" content="Custom suits and creations made by Mr. Sewing in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/suits.html">
   <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
@@ -33,7 +33,7 @@
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bespoke Suit Collections | Mr. Sewing Kigali">
-  <meta name="twitter:description" content="Custom suits and creations made by us in Kigali, Rwanda.">
+  <meta name="twitter:description" content="Custom suits and creations made by Mr. Sewing in Kigali, Rwanda.">
   <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
   <!-- Structured Data for Google (Local Business / Tailor Schema) -->
@@ -83,7 +83,7 @@
         "@id": "https://mrsewingfashion.com/suits.html#webpage",
         "url": "https://mrsewingfashion.com/suits.html",
         "name": "Suit Collections | Mr. Sewing",
-        "description": "Bespoke suit collections and creations made by us.",
+        "description": "Bespoke suit collections and creations made by Mr. Sewing.",
         "isPartOf": {
           "@id": "https://mrsewingfashion.com/#website"
         }
@@ -157,6 +157,7 @@
       align-items: center;
       gap: 15px;
       margin-bottom: 18px;
+      flex-wrap: wrap;
     }
     .block-title {
       font-size: clamp(1.1rem, 2.2vw, 1.5rem);
@@ -169,6 +170,30 @@
       flex: 1;
       height: 2px;
       background: linear-gradient(to right, #d4af37, #2a2a2a);
+      min-width: 50px;
+    }
+    /* SCROLL BUTTONS (< and >) */
+    .scroll-btn-group {
+      display: flex;
+      gap: 6px;
+    }
+    .scroll-arrow-btn {
+      background: #141414;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .scroll-arrow-btn:hover {
+      background: #d4af37;
+      color: #000000;
     }
 
     .collection-carousel {
@@ -177,6 +202,7 @@
       overflow-x: auto;
       gap: 16px;
       padding-bottom: 15px;
+      scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
       scrollbar-width: thin;
       scrollbar-color: #d4af37 #141414;
@@ -319,7 +345,7 @@
 
 <body id="top">
 
-  <!-- FIXED TOP NAVIGATION BAR WITH HOME BUTTON -->
+  <!-- HEADER FETCH / FIXED TOP NAVIGATION BAR -->
   <header class="fixed-top-nav">
     <a href="index.html" class="home-nav-btn">
       <i class="fas fa-home"></i> Home
@@ -338,6 +364,10 @@
       <div class="block-title-wrapper">
         <h2 class="block-title">Featured Suits</h2>
         <div class="block-line"></div>
+        <div class="scroll-btn-group">
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('featuredSuitsCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('featuredSuitsCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
       <div class="collection-carousel" id="featuredSuitsCarousel"></div>
     </div>
@@ -347,6 +377,10 @@
       <div class="block-title-wrapper">
         <h2 class="block-title">Women's Suits</h2>
         <div class="block-line"></div>
+        <div class="scroll-btn-group">
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('womensCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('womensCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
       <div class="collection-carousel" id="womensCarousel"></div>
     </div>
@@ -356,15 +390,23 @@
       <div class="block-title-wrapper">
         <h2 class="block-title">Men's Suits</h2>
         <div class="block-line"></div>
+        <div class="scroll-btn-group">
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('mensCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('mensCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
       <div class="collection-carousel" id="mensCarousel"></div>
     </div>
 
-    <!-- "MADE BY US" SECTION (R1 - R10 including sub-files) -->
+    <!-- "MADE BY MR. SEWING" SECTION (R1 - R10 including sub-files) -->
     <div class="collection-block">
       <div class="block-title-wrapper">
-        <h2 class="block-title">Made By Us</h2>
+        <h2 class="block-title">Made By Mr. Sewing</h2>
         <div class="block-line"></div>
+        <div class="scroll-btn-group">
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('madeByUsCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-arrow-btn" onclick="scrollCarousel('madeByUsCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
       <div class="collection-carousel" id="madeByUsCarousel"></div>
     </div>
@@ -378,13 +420,21 @@
     </div>
   </div>
 
-  <!-- SCRIPT: UPDATED EXPLICIT ARRAYS FOR S, W, M, R FILES -->
+  <!-- SCRIPT: EXPLICIT ARRAYS & CAROUSEL NAVIGATION -->
   <script>
     // Explicit lists connected to S, W, M, and R files (1 through 10)
     const featuredSuitsFiles = ['s1.jpeg', 's2.jpeg', 's3.jpeg', 's4.jpeg', 's5.jpeg', 's6.jpeg', 's7.jpeg', 's8.jpeg', 's9.jpeg', 's10.jpeg'];
     const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg', 'w6.jpeg', 'w7.jpeg', 'w8.jpeg', 'w9.jpeg', 'w10.jpeg'];
     const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg', 'm7.jpeg', 'm8.jpeg', 'm9.jpeg', 'm10.jpeg'];
     const madeByUsFiles = ['r1.jpeg', 'r1.2.jpeg', 'r1.3.jpeg', 'r2.jpeg', 'r3.jpeg', 'r3.4.jpeg', 'r3.5.jpeg', 'r4.jpeg', 'r5.jpeg', 'r6.jpeg', 'r7.jpeg', 'r8.jpeg', 'r9.jpeg', 'r10.jpeg'];
+
+    // Carousel scroll helper for arrow buttons
+    function scrollCarousel(containerId, distance) {
+      const container = document.getElementById(containerId);
+      if (container) {
+        container.scrollBy({ left: distance, behavior: 'smooth' });
+      }
+    }
 
     // Modern in-button copy feedback function
     function copyLinkWithFeedback(buttonElement, urlToCopy) {
