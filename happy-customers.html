@@ -119,21 +119,3 @@
     .customer-card-slide { flex: 0 0 180px; }
   }
 </style>
-
-<script>
-  /* Simple smooth scroll helper for slider arrow buttons */
-  document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('customersSlider');
-    const btnLeft = document.getElementById('slideLeft');
-    const btnRight = document.getElementById('slideRight');
-
-    if (slider && btnLeft && btnRight) {
-      btnLeft.addEventListener('click', () => {
-        slider.scrollBy({ left: -240, behavior: 'smooth' });
-      });
-      btnRight.addEventListener('click', () => {
-        slider.scrollBy({ left: 240, behavior: 'smooth' });
-      });
-    }
-  });
-</script>
