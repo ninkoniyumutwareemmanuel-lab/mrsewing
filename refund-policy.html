@@ -1,37 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Store Policies & Terms - Mr. Sewing Fashion | Kigali, Rwanda</title>
-    
-    <!-- SEO Meta Tags & Keywords -->
-    <meta name="description" content="Read official store policies, terms & conditions, production timelines, storage rules, and privacy policy for Mr. Sewing Fashion bespoke suits in Kigali, Rwanda.">
-    <meta name="keywords" content="Mr Sewing Fashion terms, store policies, bespoke suit policy Kigali, tailoring terms and conditions, privacy policy Rwanda, custom suit rules">
+
+    <title>Refund Policy | Mr. Sewing Fashion – Kigali, Rwanda</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read the official refund, cancellation, alteration, and quality policy of Mr. Sewing Fashion, a bespoke tailoring brand operating in Kigali, Rwanda, under NINKONIYUMUTWARE NEXUS LTD.">
+    <meta name="keywords" content="Mr Sewing Fashion refund policy, custom suit refund policy Kigali, bespoke tailoring returns Rwanda, tailoring alterations, cancellation policy, custom clothing policy">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mrsewingfashion.com/refund-policy.html">
 
     <!-- Favicon / Logo -->
     <link rel="icon" href="MR LOGO.jpeg" type="image/jpeg">
     <link rel="apple-touch-icon" href="MR LOGO.jpeg">
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Official Store Policies & Terms - Mr. Sewing Fashion">
-    <meta property="og:description" content="Review our complete terms and conditions, production timelines, refund policies, and privacy terms for bespoke tailoring in Kigali.">
-    <meta property="og:image" content="MR LOGO.jpeg">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Refund Policy | Mr. Sewing Fashion">
+    <meta property="og:description" content="Understand our refund, cancellation, fitting adjustment, and quality procedures for custom-made garments.">
+    <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mrsewingfashion.com/refund-policy.html">
 
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --bg-color: #0d0d0d;
+            --bg-color: #0b0b0b;
             --card-bg: #141414;
-            --accent-gold: #c5a059;
-            --accent-gold-hover: #d4af37;
+            --accent-gold: #d4af37;
+            --accent-gold-dark: #c5a059;
             --text-main: #f4f4f4;
-            --text-muted: #aaaaaa;
-            --border-color: #262626;
+            --text-muted: #b5b5b5;
+            --border-color: #292929;
+            --success-bg: #142019;
+            --success-border: #315b40;
         }
 
         * {
@@ -40,14 +49,19 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
-        /* Container for Dynamic Injected Header */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.75;
+        }
+
         #site-header {
             width: 100%;
             position: sticky;
@@ -55,223 +69,870 @@
             z-index: 1000;
         }
 
-        /* Main Content Styles */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 3rem 1.5rem 5rem;
         }
 
         .page-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .about-logo {
-            width: 120px;
-            height: 120px;
+            width: 112px;
+            height: 112px;
             object-fit: contain;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             border-radius: 50%;
             border: 2px solid var(--accent-gold);
             padding: 10px;
             background-color: var(--card-bg);
         }
 
-        .page-title h1 {
-            font-size: 2.5rem;
+        .eyebrow {
             color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 0.5rem;
-            letter-spacing: 1px;
+        }
+
+        .page-title h1 {
+            color: var(--accent-gold);
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
         }
 
         .page-title p {
+            max-width: 720px;
+            margin: 0 auto;
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+        }
+
+        .policy-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.7rem 1.5rem;
+            margin-top: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .policy-meta i {
+            color: var(--accent-gold);
+            margin-right: 0.35rem;
         }
 
         .policy-intro {
-            background-color: var(--card-bg);
+            background: linear-gradient(145deg, #171717, #101010);
             border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
             border-radius: 8px;
             padding: 2rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .policy-intro h2 {
+            color: var(--accent-gold);
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .policy-intro p {
             color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .policy-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .key-rule {
+            background-color: #19160e;
+            border: 1px solid #55451e;
+            border-radius: 8px;
+            padding: 1.3rem 1.5rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .key-rule h3 {
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
             font-size: 1.05rem;
-            text-align: center;
+        }
+
+        .key-rule p {
+            color: var(--text-muted);
+            margin: 0;
         }
 
         .policy-section {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .policy-section h2 {
             color: var(--accent-gold);
-            font-size: 1.5rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.1rem;
+            padding-bottom: 0.65rem;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
+            line-height: 1.4;
         }
 
         .policy-section h3 {
             color: var(--text-main);
-            font-size: 1.15rem;
-            margin-top: 1.2rem;
-            margin-bottom: 0.4rem;
+            font-size: 1.08rem;
+            margin-top: 1.35rem;
+            margin-bottom: 0.45rem;
         }
 
-        .policy-section p, .policy-section li {
+        .policy-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .policy-section p,
+        .policy-section li {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.98rem;
+        }
+
+        .policy-section p {
+            margin-bottom: 0.9rem;
+        }
+
+        .policy-section ul,
+        .policy-section ol {
+            padding-left: 1.4rem;
+            margin: 0.6rem 0 1rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.65rem;
+            padding-left: 0.15rem;
+        }
+
+        .policy-section strong {
+            color: var(--text-main);
+        }
+
+        .policy-section a,
+        .policy-intro a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .policy-section a:hover,
+        .policy-intro a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .steps {
+            counter-reset: policy-step;
+            list-style: none;
+            padding-left: 0 !important;
+        }
+
+        .steps li {
+            counter-increment: policy-step;
+            position: relative;
+            padding-left: 2.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .steps li::before {
+            content: counter(policy-step);
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.8rem;
+            height: 1.8rem;
+            border: 1px solid var(--accent-gold-dark);
+            border-radius: 50%;
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .contact-panel {
+            background: linear-gradient(145deg, #19160e, #121212);
+            border: 1px solid #55451e;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-panel h2 {
+            color: var(--accent-gold);
+            font-size: 1.45rem;
             margin-bottom: 0.8rem;
         }
 
-        .policy-section ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
+        .contact-panel p {
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-details {
+            margin-top: 1.2rem;
+            display: grid;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .contact-details a {
+            color: var(--text-main);
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-details a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-details i {
+            color: var(--accent-gold);
+            width: 22px;
+            margin-right: 0.4rem;
+        }
+
+        .closing-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 2rem;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 2rem 1rem;
+                padding: 2rem 1rem 3.5rem;
             }
+
+            .policy-section {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .policy-intro,
+            .contact-panel {
+                padding: 1.5rem 1.2rem;
+            }
+
             .page-title h1 {
-                font-size: 2rem;
+                font-size: 2.1rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.25rem;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Dynamic Header Placeholder -->
+    <!-- Dynamic Site Header -->
     <div id="site-header"></div>
 
-    <!-- Main Content -->
     <main class="container">
-        <div class="page-title">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo">
-            <h1>Official Store Policies</h1>
-            <p>Terms & Conditions, Storage Rules, Return Policy, and Privacy Policy</p>
-        </div>
 
-        <div class="policy-intro">
-            Welcome to Mr. Sewing Fashion. We are committed to crafting high-quality, bespoke suits and shirts tailored to your exact measurements and design specifications. To ensure a smooth experience and maintain clear expectations, please carefully read our complete operational policies below.
-        </div>
+        <!-- Page Heading -->
+        <header class="page-title">
+            <img
+                src="MR LOGO.jpeg"
+                alt="Mr. Sewing Fashion logo"
+                class="about-logo"
+            >
 
-        <!-- 1. Terms & Conditions -->
-        <div class="policy-section">
-            <h2>1. Terms & Conditions</h2>
-            
-            <h3>1.1 Scope of Specialization</h3>
+            <div class="eyebrow">Mr. Sewing Fashion</div>
+
+            <h1>Refund &amp; Alteration Policy</h1>
+
+            <p>
+                Our official policy for cancellations, advance payments,
+                fitting adjustments, quality concerns, and completed
+                custom-made garments.
+            </p>
+
+            <div class="policy-meta">
+                <span><i class="fa-solid fa-building"></i> NINKONIYUMUTWARE NEXUS LTD</span>
+                <span><i class="fa-solid fa-location-dot"></i> Kigali, Rwanda</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Official Store Policy</span>
+            </div>
+        </header>
+
+        <!-- Introduction -->
+        <section class="policy-intro">
+            <h2>Our Commitment to Quality, Craftsmanship &amp; Fair Service</h2>
+
+            <p>
+                At Mr. Sewing Fashion, we create custom-made garments based
+                on each customer's measurements, design preferences, fabric
+                selection, and agreed specifications. Every order represents
+                individual craftsmanship, dedicated production time, and
+                materials selected for that particular customer.
+            </p>
+
+            <p>
+                We are committed to providing professional service, clear
+                communication, and a responsible process for addressing
+                genuine fitting concerns and manufacturing defects. This
+                policy explains what customers can expect when requesting
+                a cancellation, refund, adjustment, or other resolution.
+            </p>
+
+            <p>
+                Please review this policy before confirming an order or
+                making an advance payment. It should be read together with
+                our <a href="terms-and-conditions.html">Terms &amp; Conditions</a>.
+            </p>
+        </section>
+
+        <!-- Key Rule -->
+        <aside class="key-rule">
+            <h3><i class="fa-solid fa-circle-info"></i> Important Policy Summary</h3>
+            <p>
+                Production begins only after the required advance payment
+                has been confirmed and the customer receives the official
+                message: <strong>"Your order is officially started."</strong>
+                Once production has officially started, cancellations,
+                returns, and cash refunds are not offered for change of mind
+                on custom-made orders, subject to applicable rights under
+                Rwandan law. Genuine fitting concerns or manufacturing
+                defects should be reported within 72 hours of receiving
+                the garment to be considered for free adjustments.
+            </p>
+        </aside>
+
+        <!-- 1. Scope -->
+        <section class="policy-section" id="scope">
+            <h2>1. Scope of This Policy</h2>
+
+            <p>
+                This policy applies to bespoke garments ordered from
+                Mr. Sewing Fashion, operating under NINKONIYUMUTWARE
+                NEXUS LTD, including eligible custom-made suits and shirts.
+            </p>
+
+            <p>
+                It covers order cancellations, advance payments, fitting
+                adjustments, reported manufacturing defects, and requests
+                for refunds or other resolutions.
+            </p>
+
+            <p>
+                Because our garments are made according to individual
+                customer requirements, they are not treated in the same
+                way as standard ready-made stock. Each request will be
+                assessed according to the confirmed order specifications,
+                the circumstances of the concern, and applicable law.
+            </p>
+        </section>
+
+        <!-- 2. Custom Orders -->
+        <section class="policy-section" id="custom-orders">
+            <h2>2. Custom-Made Orders &amp; No-Refund Rule</h2>
+
+            <h3>2.1 Bespoke Production</h3>
+
+            <p>
+                Custom-made garments are produced for a particular customer
+                using the agreed measurements, design, fabric, and order
+                specifications. Production may involve fabric preparation,
+                cutting, sewing, fitting, and other work that cannot always
+                be reversed or reused for another customer.
+            </p>
+
+            <h3>2.2 Cancellations After Production Starts</h3>
+
+            <p>
+                Once the customer has received the official production-start
+                confirmation, the order is considered to be in production.
+                We therefore do not accept ordinary change-of-mind
+                cancellations or provide cash refunds solely because a
+                customer changes their preference, no longer needs the
+                garment, or decides not to collect it.
+            </p>
+
+            <h3>2.3 Returns of Custom-Made Garments</h3>
+
+            <p>
+                We do not accept returns simply because a customer changes
+                their mind about a confirmed custom design, fabric selection,
+                or style after production has officially started. This
+                restriction does not remove any rights or remedies that
+                cannot lawfully be excluded under applicable Rwandan law.
+            </p>
+
+            <h3>2.4 Advance Payments</h3>
+
+            <p>
+                A minimum advance payment of <strong>70% of the agreed order
+                price</strong> is required before production can begin.
+                The remaining 30% must be paid in full before or at the time
+                of final pickup or delivery.
+            </p>
+
+            <p>
+                The advance payment authorizes the order to proceed once
+                payment is confirmed and Mr. Sewing Fashion sends the
+                official production-start message. Treatment of any
+                cancellation request made before production starts will
+                depend on the work already undertaken, materials committed,
+                the terms confirmed for that order, and applicable law.
+                A refund before production starts is not automatic.
+            </p>
+        </section>
+
+        <!-- 3. Before Production -->
+        <section class="policy-section" id="before-production">
+            <h2>3. Requests Made Before Production Starts</h2>
+
+            <p>
+                If you need to cancel or change an order, contact us as
+                soon as possible and before receiving the official
+                production-start confirmation.
+            </p>
+
+            <p>
+                We will review the order's status and confirm what options
+                are available. If work has not begun, the agreed materials
+                have not been committed, and no other applicable costs
+                have been incurred, we may be able to offer a cancellation
+                or another suitable resolution.
+            </p>
+
+            <p>
+                Any approved refund or deduction will be communicated to
+                the customer before the request is finalized. Customers
+                should not assume that a deposit is automatically refundable
+                merely because the official production-start message has
+                not yet been received.
+            </p>
+        </section>
+
+        <!-- 4. Fit and Defects -->
+        <section class="policy-section" id="adjustments">
+            <h2>4. Fit Concerns, Adjustments &amp; Quality Assurance</h2>
+
+            <h3>4.1 Our Commitment to a Good Fit</h3>
+
+            <p>
+                We aim to produce garments that reflect the customer's
+                agreed design and measurement specifications. If you
+                discover a genuine fitting concern or manufacturing defect,
+                contact us promptly so that we can review the issue and
+                determine an appropriate next step.
+            </p>
+
+            <h3>4.2 The 72-Hour Reporting Window</h3>
+
+            <p>
+                Fitting concerns and suspected manufacturing defects should
+                be reported within <strong>72 hours (three days)</strong>
+                of receiving or collecting the garment.
+            </p>
+
+            <p>
+                To help us assess your request, provide your name, order
+                details, a description of the concern, and clear photographs
+                where appropriate. We may ask to inspect the garment or
+                arrange an in-person fitting at our workshop.
+            </p>
+
+            <h3>4.3 Eligibility for Free Adjustments</h3>
+
+            <p>
+                Where a reported fitting issue or manufacturing defect
+                qualifies under this policy, we will provide appropriate
+                adjustments without an additional alteration charge,
+                provided that:
+            </p>
+
             <ul>
-                <li><strong>Products Offered:</strong> We specialize exclusively in custom-crafted complete suits and shirts.</li>
-                <li><strong>Exclusions:</strong> We do not produce or sell separate trousers, separate coats/blazers without a matching set, or dresses.</li>
+                <li>
+                    The concern is reported within the 72-hour window.
+                </li>
+                <li>
+                    The garment has not been worn in a way that affects
+                    the reported issue.
+                </li>
+                <li>
+                    The garment has not been altered by another tailor
+                    or third party.
+                </li>
+                <li>
+                    The garment has not been damaged, misused, or changed
+                    after collection.
+                </li>
+                <li>
+                    The concern relates to the agreed order specifications
+                    or a manufacturing defect that can reasonably be
+                    assessed by our team.
+                </li>
             </ul>
 
-            <h3>1.2 Order Commencement & Payment Terms</h3>
+            <h3>4.4 Assessment and Resolution</h3>
+
+            <p>
+                We may request that the customer bring the garment to our
+                workshop for assessment. If an eligible issue is confirmed,
+                we will discuss the required adjustment and coordinate
+                the next steps with the customer.
+            </p>
+
+            <p>
+                An adjustment is the normal first resolution for an eligible
+                fitting concern or correctable defect. It does not mean
+                that every complaint automatically qualifies for a cash
+                refund or replacement. If an issue cannot reasonably be
+                resolved through adjustment, we will review the circumstances
+                and discuss an appropriate remedy, subject to applicable law.
+            </p>
+
+            <h3>4.5 Requests Made After 72 Hours</h3>
+
+            <p>
+                Requests reported after the 72-hour window may be subject
+                to our standard alteration fees. We will explain any
+                applicable charges before carrying out paid work.
+                This reporting window does not remove any rights that
+                applicable law may provide to a customer.
+            </p>
+        </section>
+
+        <!-- 5. Non-qualifying Concerns -->
+        <section class="policy-section" id="non-qualifying">
+            <h2>5. Situations That May Not Qualify for Free Adjustments</h2>
+
+            <p>
+                The free-adjustment procedure is intended to address
+                eligible fitting concerns and manufacturing defects.
+                The following situations may require paid alterations
+                or may not qualify for a free adjustment:
+            </p>
+
             <ul>
-                <li><strong>Deposit Requirement:</strong> Production on any order begins only after a minimum 70% advance payment (deposit) is confirmed.</li>
-                <li><strong>Official Confirmation:</strong> Your order timeline officially starts when you receive our confirmation message stating: <em>"Your order is officially started."</em></li>
-                <li><strong>Final Balance:</strong> The remaining 30% balance must be settled in full prior to or at the time of final pickup/delivery.</li>
+                <li>
+                    <strong>Customer-provided measurements:</strong>
+                    inaccuracies resulting from measurements supplied
+                    by the customer, including measurements taken
+                    remotely without professional assistance.
+                </li>
+                <li>
+                    <strong>Changes in preference:</strong>
+                    requests to change an approved style, design, fabric,
+                    or fit preference after production has started.
+                </li>
+                <li>
+                    <strong>Third-party alterations:</strong>
+                    changes made by another tailor or service provider
+                    after collection.
+                </li>
+                <li>
+                    <strong>Damage after collection:</strong>
+                    damage, misuse, or changes caused after the garment
+                    has been received by the customer.
+                </li>
+                <li>
+                    <strong>Late requests:</strong>
+                    adjustment requests reported after the 72-hour
+                    reporting window may incur standard alteration fees.
+                </li>
             </ul>
 
-            <h3>1.3 Production Timeline & Rush Orders</h3>
+            <p>
+                Each concern will be considered according to the facts.
+                These examples do not automatically determine the outcome
+                where a customer's rights under applicable law require
+                a different result.
+            </p>
+        </section>
+
+        <!-- 6. Customer Responsibilities -->
+        <section class="policy-section" id="customer-responsibilities">
+            <h2>6. Customer Responsibilities</h2>
+
+            <p>
+                To help us deliver the garment agreed upon, customers
+                are responsible for:
+            </p>
+
             <ul>
-                <li><strong>Standard Production:</strong> Standard custom orders take 1 to 2 weeks to craft from the date of official order confirmation.</li>
-                <li><strong>Express Production:</strong> Rush orders required within 2 to 3 days are subject to an additional 35% express fee on the total order value. Express orders are subject to workshop availability.</li>
+                <li>
+                    Providing accurate measurements and contact details.
+                </li>
+                <li>
+                    Carefully reviewing the agreed design, fabric,
+                    and order specifications before production starts.
+                </li>
+                <li>
+                    Communicating requested changes as early as possible.
+                </li>
+                <li>
+                    Inspecting the garment promptly after collection
+                    or delivery.
+                </li>
+                <li>
+                    Reporting fitting concerns or suspected defects
+                    within the stated 72-hour window.
+                </li>
+                <li>
+                    Keeping the garment in its received condition while
+                    an adjustment request is being assessed.
+                </li>
             </ul>
 
-            <h3>1.4 Fitting & Measurements</h3>
-            <ul>
-                <li><strong>In-Person Measurement:</strong> Clients may visit our workshop located in Karama for professional fittings. Please contact us in advance at +250 787 411 501 to schedule an appointment.</li>
-                <li><strong>Client-Provided Measurements:</strong> If you choose to submit your own measurements remotely, Mr. Sewing Fashion is not responsible for fitting errors resulting from inaccurate self-measurement.</li>
-            </ul>
-        </div>
+            <p>
+                We recommend professional in-person measurement at our
+                workshop whenever possible. Where a customer chooses to
+                provide their own measurements remotely, we cannot take
+                responsibility for fitting errors caused by inaccurate
+                measurements supplied by the customer.
+            </p>
+        </section>
 
-        <!-- 2. Uncollected Garments & Storage Fee Policy -->
-        <div class="policy-section">
-            <h2>2. Uncollected Garments & Storage Fee Policy</h2>
-            <p>To manage space in our workshop and ensure timely operations, the following strict rules apply to completed garments awaiting pickup:</p>
+        <!-- 7. Design and Fabric -->
+        <section class="policy-section" id="design-and-fabric">
+            <h2>7. Approved Designs, Fabric &amp; Order Changes</h2>
 
-            <h3>2.1 Free Grace Period</h3>
-            <p>Completed garments are held free of charge for seven (7) calendar days (1 week) starting from the date you receive official notification that your order is ready for pickup or delivery.</p>
+            <p>
+                Customers should confirm the design, fabric, measurements,
+                and other order details before production begins. Once
+                production has officially started, requested changes may
+                not be possible or may require additional charges and
+                production time.
+            </p>
 
-            <h3>2.2 Daily Storage Fee Calculation</h3>
-            <ul>
-                <li><strong>Fee Structure:</strong> Starting from the 8th calendar day, a daily holding and storage fee equivalent to 10% of the total cost of the product per day will be applied for every day the item remains uncollected.</li>
-                <li><strong>Accumulation:</strong> Storage fees will accumulate daily and must be paid in full along with any remaining order balance before the garment is released.</li>
-            </ul>
+            <p>
+                Slight variations in fabric colour, texture, or appearance
+                may occur due to lighting, screens, fabric characteristics,
+                and the nature of handmade tailoring. Such variations
+                should be assessed in context and do not automatically
+                establish a manufacturing defect.
+            </p>
 
-            <h3>2.3 Forfeiture & Resale of Uncollected Garments</h3>
-            <ul>
-                <li><strong>50% Threshold:</strong> Once accumulated storage fees reach 50% of the total cost of the product (on the 5th day after the grace period ends, or Day 12 total), the item is deemed abandoned.</li>
-                <li><strong>Loss of Claim:</strong> When the accumulated storage fees reach or exceed 50% of the product cost, the item is no longer available to the customer, and all ownership rights and deposits paid are forfeited.</li>
-                <li><strong>Resale Right:</strong> Mr. Sewing Fashion reserves the absolute right to resell, re-tailor, or liquidate abandoned garments to recover lost workshop storage fees and unpaid production costs.</li>
-            </ul>
-        </div>
+            <p>
+                If you believe that a garment materially differs from the
+                specifications confirmed for your order, contact us within
+                the stated reporting window so that we can review the matter.
+            </p>
+        </section>
 
-        <!-- 3. Refund & Return Policy -->
-        <div class="policy-section">
-            <h2>3. Refund & Return Policy</h2>
+        <!-- 8. Delivery and Collection -->
+        <section class="policy-section" id="delivery">
+            <h2>8. Collection, Delivery &amp; Uncollected Orders</h2>
 
-            <h3>3.1 Custom-Crafted Items</h3>
-            <p>Because every garment is bespoke—handcrafted specifically to your unique measurements, style selections, and fabric choices—we do not offer cash refunds, order cancellations, or returns once production has officially started.</p>
+            <p>
+                Customers will be notified when a completed garment is
+                ready for collection or delivery. We ask customers to
+                inspect their garments promptly and contact us if they
+                identify a fitting concern or suspected defect.
+            </p>
 
-            <h3>3.2 Free Adjustments & Quality Guarantee</h3>
-            <p>We are committed to delivering a perfect fit. If you experience any fitting issues or discover manufacturing defects upon receiving your garment:</p>
-            <ul>
-                <li><strong>Notification Window:</strong> You must notify us within 72 hours (3 days) of receiving or picking up your item.</li>
-                <li><strong>Correction Service:</strong> We will provide free adjustments and alterations to rectify fitting issues or defects within this 72-hour window, provided the garment has not been worn, altered by third parties, or damaged.</li>
-                <li><strong>Late Notifications:</strong> Adjustment requests made after the 72-hour window will incur standard alteration fees.</li>
-            </ul>
-        </div>
+            <p>
+                Completed garments are held free of charge for seven
+                calendar days from the date the customer receives official
+                notification that the order is ready.
+            </p>
 
-        <!-- 4. Privacy Policy -->
-        <div class="policy-section">
-            <h2>4. Privacy Policy</h2>
-            <p>At Mr. Sewing Fashion, we respect your personal data and privacy.</p>
+            <p>
+                Starting on the eighth calendar day, the Terms &amp;
+                Conditions provide for a daily storage fee equivalent to
+                10% of the total product cost for each day the garment
+                remains uncollected. The stated policy also provides for
+                an abandonment threshold when accumulated storage fees
+                reach 50% of the product cost.
+            </p>
 
-            <h3>4.1 Data Collection & Usage</h3>
-            <p>We collect essential personal information—including your full name, phone number, physical measurements, delivery address, and style preferences—solely for the purpose of fulfilling your custom order, managing billing, and delivering personalized customer service.</p>
+            <p>
+                For full details, including the stated storage schedule
+                and collection arrangements, read our
+                <a href="terms-and-conditions.html">
+                    Terms &amp; Conditions
+                </a>.
+            </p>
 
-            <h3>4.2 Data Protection & Third-Party Sharing</h3>
-            <ul>
-                <li><strong>Confidentiality:</strong> Your personal measurements and contact details are kept secure and strictly confidential within our management system.</li>
-                <li><strong>Third Parties:</strong> We never sell, rent, or trade your personal details to third parties. Information is only shared with trusted third-party courier/delivery services strictly necessary to fulfill order deliveries.</li>
-            </ul>
-        </div>
+            <p>
+                Storage and collection rules are separate from the process
+                for reporting a fitting concern or manufacturing defect.
+                Customers should contact us promptly if a concern arises.
+            </p>
+        </section>
 
-        <!-- 5. Contact Information -->
-        <div class="policy-section">
-            <h2>5. Contact Information</h2>
-            <p>For fittings, inquiries, or policy questions, please contact us at:</p>
-            <ul>
-                <li><strong>Phone / WhatsApp:</strong> +250 787 411 501</li>
-                <li><strong>Location:</strong> Karama Workshop</li>
-            </ul>
-        </div>
+        <!-- 9. How to Submit -->
+        <section class="policy-section" id="submit-request">
+            <h2>9. How to Submit a Refund or Adjustment Request</h2>
+
+            <p>
+                All refund, cancellation, and adjustment requests should
+                be communicated directly to Mr. Sewing Fashion through
+                our official phone or WhatsApp contact.
+            </p>
+
+            <ol class="steps">
+                <li>
+                    <strong>Contact our team.</strong>
+                    Explain whether your request concerns cancellation,
+                    a fitting issue, a suspected manufacturing defect,
+                    or another order-related matter.
+                </li>
+                <li>
+                    <strong>Identify your order.</strong>
+                    Provide your full name, order details, and the date
+                    you paid for or received the garment.
+                </li>
+                <li>
+                    <strong>Describe the concern.</strong>
+                    Explain the problem clearly and include photographs
+                    where they may help us understand the issue.
+                </li>
+                <li>
+                    <strong>Cooperate with the assessment.</strong>
+                    If necessary, arrange to bring the garment to our
+                    workshop for an in-person review or fitting.
+                </li>
+                <li>
+                    <strong>Review the proposed resolution.</strong>
+                    We will communicate the outcome of our assessment
+                    and explain any applicable alteration charges or
+                    available next steps.
+                </li>
+            </ol>
+
+            <p>
+                Please retain any order confirmation and payment
+                confirmation that may help us review your request.
+                We aim to handle customer concerns professionally and
+                communicate our decisions clearly.
+            </p>
+        </section>
+
+        <!-- 10. Refund Processing -->
+        <section class="policy-section" id="refund-processing">
+            <h2>10. Approved Refunds &amp; Resolution</h2>
+
+            <p>
+                Where a refund is approved following an assessment,
+                the applicable amount and refund arrangement will be
+                communicated to the customer. The method and timing
+                will be confirmed directly with the customer.
+            </p>
+
+            <p>
+                This policy does not promise a refund where the request
+                does not qualify under the agreed order terms. However,
+                nothing in this policy is intended to exclude or restrict
+                a remedy that a customer is entitled to under applicable
+                Rwandan law.
+            </p>
+
+            <p>
+                Customers should contact us directly if they have questions
+                about the status of a submitted request.
+            </p>
+        </section>
+
+        <!-- 11. Legal -->
+        <section class="policy-section" id="legal">
+            <h2>11. Applicable Law &amp; Customer Rights</h2>
+
+            <p>
+                This policy should be read together with the Terms &amp;
+                Conditions applicable to the customer's order. Matters
+                not specifically addressed in this policy will be assessed
+                according to the agreed order details and applicable law
+                in Rwanda.
+            </p>
+
+            <p>
+                Nothing in this policy is intended to waive, exclude,
+                or limit any mandatory consumer protection right or
+                legal remedy that cannot lawfully be excluded.
+            </p>
+
+            <p>
+                If a customer disagrees with the outcome of a request,
+                they are encouraged to contact us first so that we can
+                review the concern and seek a fair resolution.
+            </p>
+        </section>
+
+        <!-- 12. Contact -->
+        <section class="contact-panel" id="contact">
+            <h2>Need Assistance With Your Order?</h2>
+
+            <p>
+                Our team is available to discuss refund requests,
+                fitting concerns, alterations, and order-related questions.
+                Please contact us directly with your order details.
+            </p>
+
+            <div class="contact-details">
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/250787411501" target="_blank" rel="noopener noreferrer">
+                        WhatsApp: +250 787 411 501
+                    </a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+250787411501">
+                        Phone: +250 787 411 501
+                    </a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>
+                        Mr. Sewing Fashion Workshop, Karama,
+                        Nyarugenge, Kigali, Rwanda
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <p class="closing-note">
+            Mr. Sewing Fashion — Bespoke Craftsmanship, Professional Service,
+            and Clear Customer Policies.
+        </p>
+
     </main>
 
-    <!-- Dynamic Footer Placeholder -->
-    <div id="site-footer"></div>
-
-    <!-- Script to Fetch Header & Footer -->
+    <!-- Dynamic Header Only: No Footer -->
     <script>
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('site-header').innerHTML = data;
-        });
-
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('site-footer').innerHTML = data;
-        });
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Unable to load the site header.');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('site-header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Header loading error:', error);
+            });
     </script>
 
 </body>
