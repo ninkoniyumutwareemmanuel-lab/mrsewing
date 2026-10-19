@@ -176,9 +176,9 @@
     .search-strip { background-color: #0f0f0f; border-bottom: 1px solid #2a2a2a; padding: clamp(12px, 2vw, 22px) 4%; text-align: center; }
     .search-strip h1 { font-size: clamp(0.8rem, 1.8vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 0; }
 
-    /* SECTION 1: Happy Customers Styling (Fixed Left Alignment) */
+    /* SECTION 1: Happy Customers Styling (Flush to the left edge with zero left padding) */
     .customers-section {
-      padding: clamp(30px, 6vw, 80px) 4%;
+      padding: clamp(30px, 6vw, 80px) 4% clamp(30px, 6vw, 80px) 0;
       background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
       display: flex;
       flex-direction: row;
@@ -188,7 +188,7 @@
       width: 100%;
       box-sizing: border-box;
     }
-    .customers-text { flex: 0 0 42%; max-width: 42%; text-align: left; }
+    .customers-text { flex: 0 0 42%; max-width: 42%; text-align: left; padding-left: 4%; }
     .customers-section h2 { font-size: clamp(1.2rem, 3vw, 2.5rem); color: #d4af37; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
     .customers-description, .made-to-order-desc { font-size: clamp(0.85rem, 1.5vw, 1.05rem); color: #aaaaaa; line-height: 1.7; margin-bottom: 20px; }
     .made-to-order-title { font-size: clamp(1rem, 2.2vw, 1.8rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 10px; }
@@ -202,8 +202,8 @@
     }
 
     @media (max-width: 900px) {
-      .customers-section { flex-direction: column; }
-      .customers-text, .customers-interactive-container { flex: 1 1 100%; max-width: 100%; }
+      .customers-section { flex-direction: column; padding: clamp(30px, 6vw, 80px) 4%; }
+      .customers-text, .customers-interactive-container { flex: 1 1 100%; max-width: 100%; padding-left: 0; }
     }
 
     /* Fixed Modal Overlay */
@@ -309,7 +309,7 @@
       document.dispatchEvent(new CustomEvent('sitecomponentsloaded', { detail: { results } }));
     })();
 
-    /* Shared order modal setup with global event delegation for order buttons and slider arrows */
+    /* Universal Global Event Delegation (Handles Order Buttons & Universal Slider Arrows Across All Sections) */
     (function setupGlobalDelegation() {
       const modal = document.getElementById('orderModal');
       const agree = document.getElementById('termsAgree');
@@ -333,9 +333,9 @@
         if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
       }
 
-      /* Global click delegation for order buttons and slider arrows */
+      /* Universal click delegation for order buttons and any slider arrows */
       document.addEventListener('click', function (event) {
-        // Handle order buttons
+        // 1. Handle order buttons
         const button = event.target.closest && event.target.closest('.order-btn');
         if (button) { 
           event.preventDefault(); 
@@ -343,14 +343,18 @@
           return;
         }
 
-        // Handle review slider arrows
-        const slider = document.getElementById('customersSlider');
-        if (slider) {
-          if (event.target.closest('#slideLeft')) {
-            slider.scrollBy({ left: -240, behavior: 'smooth' });
-          }
-          if (event.target.closest('#slideRight')) {
-            slider.scrollBy({ left: 240, behavior: 'smooth' });
+        // 2. Universal Slider Arrow Delegation (works for any section with slide buttons & sliders)
+        const leftArrow = event.target.closest('[id*="slideLeft"], .slide-left, [data-action="scroll-left"]');
+        const rightArrow = event.target.closest('[id*="slideRight"], .slide-right, [data-action="scroll-right"]');
+        
+        if (leftArrow || rightArrow) {
+          event.preventDefault();
+          const container = leftArrow ? leftArrow.closest('section, div') : rightArrow.closest('section, div');
+          const slider = container ? container.querySelector('.customers-slider, .slider-container, [data-slider], .collections-slider') : null;
+          
+          if (slider) {
+            const scrollDist = slider.clientWidth > 600 ? 300 : 200;
+            slider.scrollBy({ left: leftArrow ? -scrollDist : scrollDist, behavior: 'smooth' });
           }
         }
       });
