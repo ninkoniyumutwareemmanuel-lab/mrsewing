@@ -209,11 +209,12 @@
 
     @media (max-width: 900px) {
       .customers-section { flex-direction: column; }
-      .customers-grid { width: 100%; max-width: none; grid-template-columns: repeat(2, 1fr); }
+      .customers-grid { width: 100%; max-width: none; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     }
-    @media (max-width: 600px) {
-      .customers-grid { grid-template-columns: 1fr; }
+    @media (max-width: 500px) {
+      .customers-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .service-highlights { grid-template-columns: 1fr; }
+      .suit-image { aspect-ratio: 3 / 4; }
     }
 
     /* Fixed Modal Overlay (Ensures it stays hidden until opened and doesn't block header/footer clicks) */
