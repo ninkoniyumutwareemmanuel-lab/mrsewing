@@ -83,7 +83,7 @@
     html { scroll-behavior: smooth; color-scheme: dark; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
 
-    #site-header, #site-footer { width: 100%; }
+    #site-header { width: 100%; }
 
     .express-section {
         flex: 1;
@@ -135,7 +135,6 @@
         color: #aaaaaa;
         font-size: clamp(0.9rem, 1.5vw, 1.1rem);
         line-height: 1.7;
-        margin-bottom: 25px;
     }
     .express-media-box {
         flex: 1 1 45%;
@@ -149,7 +148,6 @@
         min-height: 280px;
         position: relative;
     }
-    /* Video or fallback image styling for the ticking clock / urgency visual */
     .express-media-box video, .express-media-box img {
         width: 100%;
         height: 100%;
@@ -258,13 +256,13 @@
     .order-btn {
       background-color: #d4af37;
       color: #000000;
-      padding: 12px 28px;
+      padding: 14px 32px;
       text-decoration: none;
       font-weight: 700;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       display: inline-block;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
@@ -320,13 +318,11 @@
               <span class="express-badge">Priority Fast-Track Service</span>
               <h1>Express Tailoring (24 to 72 Hours)</h1>
               <p>Time is short, but your standards are uncompromising. When high-priority events, urgent diplomatic meetings, or sudden weddings arise in Kigali, Mr. Sewing delivers master bespoke craftsmanship with rapid precision.</p>
-              <a href="#orderModal" class="order-btn">Book Express Order Now</a>
           </div>
           <div class="express-media-box">
-              <!-- Video slot for your ticking clock or urgency visual -->
+              <!-- Video filename set to express-clock.mp4 -->
               <video autoplay muted loop playsinline aria-label="Express tailoring ticking clock animation">
                   <source src="express-clock.mp4" type="video/mp4">
-                  <!-- Fallback image if video is loading -->
                   <img src="The Executive Line.jpeg" alt="Mr. Sewing Express Suit Tailoring Kigali">
               </video>
           </div>
@@ -338,25 +334,25 @@
           <div class="steps-grid">
               <div class="step-card">
                   <div class="step-number">01</div>
-                  <h3>Immediate Contact</h3>
-                  <p>Reach out directly via WhatsApp with your exact event date and timeline so our master tailors can review priority queue availability.</p>
+                  <h3>Immediate Contact &amp; Payment</h3>
+                  <p>Reach out via WhatsApp. Express orders require a <strong>70% upfront payment</strong>, with a <strong>35% express priority addition</strong> applied to the service.</p>
               </div>
               <div class="step-card">
                   <div class="step-number">02</div>
-                  <h3>Priority Cutting &amp; Fitting</h3>
-                  <p>Your garment jumps straight to the front of our atelier queue at MIC Building or Norvège in Nyarugenge for urgent cutting and fitting.</p>
+                  <h3>Official Start Confirmation</h3>
+                  <p>Production officially begins strictly <strong>4 hours after payment is made</strong> and an official confirmation message is received from the Mr. Sewing team.</p>
               </div>
               <div class="step-card">
                   <div class="step-number">03</div>
                   <h3>Immaculate Delivery</h3>
-                  <p>Your custom suit or garment is pressed, inspected, and delivered right on schedule, ready for you to step out in absolute confidence.</p>
+                  <p>Your custom suit is precision-tailored, professionally pressed, and delivered right on schedule within your 24 to 72-hour window.</p>
               </div>
           </div>
       </section>
 
       <!-- Information Needed from Client -->
       <section class="express-block">
-          <h2>Information We Need For Your Express Order</h2>
+          <h2>Information Needed For Your Express Order</h2>
           <div class="checklist-box">
               <ul class="checklist-list">
                   <li class="checklist-item">
@@ -369,11 +365,11 @@
                   </li>
                   <li class="checklist-item">
                       <i class="fas fa-check-circle"></i>
-                      <span><strong>Body Measurements:</strong> Provide your measurements or request an emergency mobile house call in Kigali.</span>
+                      <span><strong>Payment &amp; Confirmation:</strong> 70% upfront payment completed and official start message received from our team.</span>
                   </li>
                   <li class="checklist-item">
                       <i class="fas fa-check-circle"></i>
-                      <span><strong>Fabric Choice:</strong> Select from our atelier stock or arrange customer fabric bring-in.</span>
+                      <span><strong>Measurements &amp; Fabric:</strong> Provide your measurements and fabric choice or request an urgent mobile house call in Kigali.</span>
                   </li>
               </ul>
           </div>
@@ -383,7 +379,7 @@
       <section class="express-cta-box">
           <h2>Don't Let Time Compromise Your Style</h2>
           <p>Secure your express tailoring slot right now. Chat directly with Mr. Sewing on WhatsApp to start your fast-track order.</p>
-          <a href="#orderModal" class="order-btn">Lock In Express Order Now</a>
+          <a href="#orderModal" class="order-btn">Book Express Order Now</a>
       </section>
   </main>
 
@@ -402,9 +398,6 @@
     </div>
   </div>
 
-  <!-- Shared Footer Placeholder -->
-  <div id="site-footer"></div>
-
   <!-- Component Loader & Modal Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -412,11 +405,6 @@
         .then(res => res.ok ? res.text() : '')
         .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
         .catch(err => console.error('Header load error:', err));
-
-      fetch('footer.html')
-        .then(res => res.ok ? res.text() : '')
-        .then(data => { if (data) document.getElementById('site-footer').innerHTML = data; })
-        .catch(err => console.error('Footer load error:', err));
     });
 
     /* Order Modal Setup */
