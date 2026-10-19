@@ -19,8 +19,17 @@
       </div>
     </div>
 
+    <!-- Slider Header with Navigation Arrows -->
+    <div class="slider-header-row">
+      <span class="slider-title">More Client Moments</span>
+      <div class="slider-nav-btns">
+        <button class="slider-arrow" id="slideLeft" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow" id="slideRight" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
     <!-- Sliding Gallery starting strictly from the left -->
-    <div class="customers-slider">
+    <div class="customers-slider" id="customersSlider">
       <div class="customer-card-slide"><img src="r2.jpeg" alt="Client review r2" class="suit-image" loading="lazy"></div>
       <div class="customer-card-slide"><img src="r3.jpeg" alt="Client review r3" class="suit-image" loading="lazy"></div>
       <div class="customer-card-slide"><img src="r4.jpeg" alt="Client review r4" class="suit-image" loading="lazy"></div>
@@ -53,7 +62,17 @@
   .customers-description, .made-to-order-desc { font-size: clamp(0.85rem, 1.5vw, 1.05rem); color: #aaaaaa; line-height: 1.7; margin-bottom: 20px; }
   .made-to-order-title { font-size: clamp(1rem, 2.2vw, 1.8rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 10px; }
 
-  .customers-interactive-container { flex: 1.2 1 55%; min-width: 0; display: flex; flex-direction: column; gap: 20px; width: 100%; }
+  /* Interactive container stretched fully to the left edge of its column */
+  .customers-interactive-container { 
+    flex: 1.2 1 55%; 
+    min-width: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+  }
   
   /* Spotlight Card with precise face framing */
   .client-spotlight-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; width: 100%; }
@@ -65,6 +84,13 @@
   .spotlight-btn { display: inline-block; background-color: #d4af37; color: #000000; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 20px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s ease; }
   .spotlight-btn:hover { background-color: #f3e5ab; }
 
+  /* Slider Header Row with Arrows */
+  .slider-header-row { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 5px; }
+  .slider-title { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: #d4af37; font-weight: 600; }
+  .slider-nav-btns { display: flex; gap: 8px; }
+  .slider-arrow { background-color: #141414; border: 1px solid #2a2a2a; color: #d4af37; width: 34px; height: 34px; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; }
+  .slider-arrow:hover { background-color: #d4af37; color: #000000; border-color: #d4af37; }
+
   /* Sliding Gallery aligned strictly to the left across full container width */
   .customers-slider { 
     display: flex; 
@@ -75,7 +101,10 @@
     scroll-snap-type: x mandatory; 
     padding-bottom: 10px; 
     width: 100%;
+    margin: 0;
     -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin;
+    scrollbar-color: #d4af37 #141414;
   }
   .customers-slider::-webkit-scrollbar { height: 6px; }
   .customers-slider::-webkit-scrollbar-track { background: #141414; border-radius: 3px; }
@@ -90,3 +119,21 @@
     .customer-card-slide { flex: 0 0 180px; }
   }
 </style>
+
+<script>
+  /* Simple smooth scroll helper for slider arrow buttons */
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('customersSlider');
+    const btnLeft = document.getElementById('slideLeft');
+    const btnRight = document.getElementById('slideRight');
+
+    if (slider && btnLeft && btnRight) {
+      btnLeft.addEventListener('click', () => {
+        slider.scrollBy({ left: -240, behavior: 'smooth' });
+      });
+      btnRight.addEventListener('click', () => {
+        slider.scrollBy({ left: 240, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
