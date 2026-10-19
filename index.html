@@ -186,7 +186,7 @@
   <div id="site-header" class="site-component" aria-label="Website header"></div>
 
   <main id="main-content">
-    <!-- Homepage components loaded in the agreed psychological sequence: Hero -> Happy Customers -> Services -> Collections -> Why MTM -> Why Choose -->
+    <!-- Homepage components loaded in the exact agreed sequence: Hero -> Happy Customers -> Services -> Collections -> Why MTM -> Why Choose -->
     <div id="hero-section" class="site-component"></div>
     <div id="customers-section" class="site-component"></div>
     <div id="services-section" class="site-component"></div>
@@ -220,7 +220,7 @@
   </div>
 
   <script>
-    /* GitHub Pages-compatible component loader. */
+    /* GitHub Pages-compatible component loader fetching happy-customers.html in correct order */
     (async function loadComponents() {
       const components = [
         { id: 'site-header', file: 'header.html' },
