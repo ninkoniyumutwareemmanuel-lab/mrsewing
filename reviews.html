@@ -34,7 +34,7 @@
     html { scroll-behavior: smooth; color-scheme: dark; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
 
-    #site-header, #site-footer { width: 100%; }
+    #site-header { width: 100%; }
 
     .work-section { 
       flex: 1;
@@ -49,7 +49,7 @@
     .section-subtitle { color: #cccccc; font-size: clamp(0.95rem, 1.6vw, 1.15rem); margin: 0 auto; max-width: 800px; line-height: 1.7; font-style: italic; }
     .header-divider { height: 2px; width: 90px; background-color: #d4af37; margin: 20px auto 0; }
 
-    /* Professional Grid Layout for Photos R1 to R10 */
+    /* Professional Grid Layout */
     .work-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -73,10 +73,11 @@
       box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
     }
 
-    .work-image-link {
-      display: block;
+    .work-image-wrapper {
+      position: relative;
       width: 100%;
       overflow: hidden;
+      cursor: zoom-in;
     }
     .work-img {
       width: 100%;
@@ -143,6 +144,56 @@
       color: #000000;
     }
 
+    /* Full-Screen Lightbox Modal for Image Viewing */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      padding: 20px;
+    }
+    .lightbox-modal.open {
+      display: flex;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 6px;
+      border: 1px solid #d4af37;
+      display: block;
+      margin: 0 auto;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: #141414;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+    .lightbox-close:hover {
+      background: #d4af37;
+      color: #000000;
+    }
+
     @media (max-width: 600px) {
       .work-grid {
         grid-template-columns: 1fr;
@@ -159,7 +210,7 @@
   <main class="work-section">
     <div class="section-header">
       <h1>Our Work &amp; Client Moments</h1>
-      <p class="section-subtitle">Real stories, bespoke fits, and cherished milestones crafted with precision in Kigali. Explore our gallery of custom garments and the happy moments of those who wear them.</p>
+      <p class="section-subtitle">Real stories, bespoke fits, and cherished milestones crafted with precision in Kigali. Click any photo to view in full screen, or explore individual client stories.</p>
       <div class="header-divider"></div>
     </div>
 
@@ -167,9 +218,9 @@
 
       <!-- Card 1: R1 -->
       <div class="work-card">
-        <a href="r1-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r1.jpeg', 'Bespoke Elegance in Kigali')">
           <img src="r1.jpeg" alt="Bespoke Elegance in Kigali - Mr. Sewing Client" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Spotlight</span>
@@ -182,9 +233,9 @@
 
       <!-- Card 2: R2 -->
       <div class="work-card">
-        <a href="r2-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r2.jpeg', 'Executive Presence')">
           <img src="r2.jpeg" alt="Executive Tailoring - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -197,9 +248,9 @@
 
       <!-- Card 3: R3 -->
       <div class="work-card">
-        <a href="r3-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r3.jpeg', 'Refined Modern Cut')">
           <img src="r3.jpeg" alt="Custom Suit Craftsmanship - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -212,9 +263,9 @@
 
       <!-- Card 4: R4 -->
       <div class="work-card">
-        <a href="r4-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r4.jpeg', 'Wedding Celebration')">
           <img src="r4.jpeg" alt="Wedding &amp; Ceremony Suiting - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -227,9 +278,9 @@
 
       <!-- Card 5: R5 -->
       <div class="work-card">
-        <a href="r5-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r5.jpeg', 'Signature Bespoke Suit')">
           <img src="r5.jpeg" alt="Signature Bespoke Suit - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -242,9 +293,9 @@
 
       <!-- Card 6: R6 -->
       <div class="work-card">
-        <a href="r6-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r6.jpeg', 'Tailored Distinction')">
           <img src="r6.jpeg" alt="Tailored Distinction - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -257,9 +308,9 @@
 
       <!-- Card 7: R7 -->
       <div class="work-card">
-        <a href="r7-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r7.jpeg', 'Everyday Luxury')">
           <img src="r7.jpeg" alt="Everyday Luxury - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -272,9 +323,9 @@
 
       <!-- Card 8: R8 -->
       <div class="work-card">
-        <a href="r8-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r8.jpeg', 'Statement Formal Wear')">
           <img src="r8.jpeg" alt="Statement Formal Wear - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -287,9 +338,9 @@
 
       <!-- Card 9: R9 -->
       <div class="work-card">
-        <a href="r9-details.html" class="work-image-link">
+        <div class="work-image-wrapper" onclick="openLightbox('r9.jpeg', 'Heritage & Modern Fusion')">
           <img src="r9.jpeg" alt="Heritage &amp; Culture Line - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -302,9 +353,9 @@
 
       <!-- Card 10: R10 -->
       <div class="work-card">
-        <a href="r10-details.html" class="work-image-link">
-          <img src="r10.jpeg" alt="Immaculate Craftsmanship - Mr. Sewing" class="work-img" loading="lazy">
-        </a>
+        <div class="work-image-wrapper" onclick="openLightbox('r10.jpeg', 'Immaculate Craftsmanship')">
+          <img src="r10.jpeg" alt="Immaculate Craftsmanship - Mr. Sewing" class="work-img" loading="json">
+        </div>
         <div class="work-content">
           <div>
             <span class="work-tag">Client Moment</span>
@@ -318,21 +369,52 @@
     </div>
   </main>
 
-  <!-- Shared Footer Placeholder -->
-  <div id="site-footer"></div>
+  <!-- Full-Screen Lightbox Modal Container -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <img id="lightboxImage" src="" alt="Enlarged client moment preview">
+    </div>
+  </div>
 
-  <!-- Component Loader Script -->
+  <!-- Component Loader & Lightbox Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Header loader
       fetch('header.html')
         .then(res => res.ok ? res.text() : '')
         .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
         .catch(err => console.error('Header load error:', err));
+    });
 
-      fetch('footer.html')
-        .then(res => res.ok ? res.text() : '')
-        .then(data => { if (data) document.getElementById('site-footer').innerHTML = data; })
-        .catch(err => console.error('Footer load error:', err));
+    // Lightbox functions
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('lightboxClose');
+
+    function openLightbox(imgSrc, imgAlt) {
+      if (modal && modalImg) {
+        modalImg.src = imgSrc;
+        modalImg.alt = imgAlt;
+        modal.classList.add('open');
+      }
+    }
+
+    function closeLightbox() {
+      if (modal) {
+        modal.classList.remove('open');
+        modalImg.src = '';
+      }
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeLightbox();
+      });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
     });
   </script>
 
