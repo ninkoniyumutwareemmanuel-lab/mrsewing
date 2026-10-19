@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bespoke Suits for Men & Women in Kigali, Rwanda | Mr. Sewing</title>
+  <title>Bespoke Suits for Men &amp; Women in Kigali, Rwanda | Mr. Sewing</title>
 
   <!-- SEO Meta Tags & Master Keywords -->
   <meta name="description" content="Browse Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom double-breasted tuxedos, 3-piece executive suits, women's pantsuits, made to measure.">
@@ -22,7 +22,7 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:site_name" content="Mr. Sewing">
-  <meta property="og:title" content="Bespoke Suits for Men & Women in Kigali, Rwanda | Mr. Sewing">
+  <meta property="og:title" content="Bespoke Suits for Men &amp; Women in Kigali, Rwanda | Mr. Sewing">
   <meta property="og:description" content="Handcrafted luxury suits for men and women, custom made to measure in Kigali, Rwanda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/collection.html">
@@ -69,7 +69,7 @@
           "closes": "20:00"
         },
         "sameAs": [
-          "https://www.instagram.com/"
+          "https://www.instagram.com/mr_sewing_fashion"
         ]
       },
       {
@@ -113,23 +113,60 @@
     .header-divider { height: 2px; width: 80px; background-color: #d4af37; margin: 15px auto 0; }
     
     .collection-block { margin-bottom: clamp(40px, 6vw, 80px); }
+    .block-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
     .block-title {
         font-size: clamp(1.2rem, 2.5vw, 1.8rem);
         color: #ffffff;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin-bottom: 20px;
         border-left: 4px solid #d4af37;
         padding-left: 15px;
+        white-space: nowrap;
+    }
+    .block-line {
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(to right, #d4af37, #2a2a2a);
+        min-width: 50px;
+    }
+    /* SCROLL BUTTONS (< and >) */
+    .scroll-btn-group {
+        display: flex;
+        gap: 6px;
+    }
+    .scroll-arrow-btn {
+        background: #141414;
+        border: 1px solid #d4af37;
+        color: #d4af37;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .scroll-arrow-btn:hover {
+        background: #d4af37;
+        color: #000000;
     }
     
-    /* Horizontal Scrolling Carousel (Right-to-Left friendly scroll) */
+    /* Horizontal Scrolling Carousel (Left-to-Right friendly start) */
     .collection-carousel {
         display: flex;
-        flex-direction: row-reverse; /* Starts/scrolls naturally from right to left */
+        flex-direction: row; /* Starts naturally from left (m1/w1) to right */
         overflow-x: auto;
         gap: clamp(12px, 2vw, 20px);
         padding-bottom: 15px;
+        scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
         scrollbar-width: thin;
         scrollbar-color: #d4af37 #141414;
@@ -198,10 +235,17 @@
         <div class="header-divider"></div>
     </div>
 
-    <!-- Men's Suits Collection Section (Horizontal Scroll Right-to-Left) -->
+    <!-- Men's Suits Collection Section (Horizontal Scroll with Arrows) -->
     <div class="collection-block" id="mens-collection">
-        <h2 class="block-title">Men's Collections</h2>
-        <div class="collection-carousel">
+        <div class="block-title-wrapper">
+            <h2 class="block-title">Men's Collections</h2>
+            <div class="block-line"></div>
+            <div class="scroll-btn-group">
+                <button class="scroll-arrow-btn" onclick="scrollCarousel('mensCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-arrow-btn" onclick="scrollCarousel('mensCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="collection-carousel" id="mensCarousel">
             
             <div class="collection-item-card">
                 <a href="m-classicsuits.html" class="image-link">
@@ -278,10 +322,17 @@
         </div>
     </div>
 
-    <!-- Women's Suits Collection Section (Horizontal Scroll Right-to-Left) -->
+    <!-- Women's Suits Collection Section (Horizontal Scroll with Arrows) -->
     <div class="collection-block" id="womens-collection">
-        <h2 class="block-title">Women's Collections</h2>
-        <div class="collection-carousel">
+        <div class="block-title-wrapper">
+            <h2 class="block-title">Women's Collections</h2>
+            <div class="block-line"></div>
+            <div class="scroll-btn-group">
+                <button class="scroll-arrow-btn" onclick="scrollCarousel('womensCarousel', -300)" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-arrow-btn" onclick="scrollCarousel('womensCarousel', 300)" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="collection-carousel" id="womensCarousel">
             
             <div class="collection-item-card">
                 <a href="w-classicsuits.html" class="image-link">
@@ -351,8 +402,15 @@
   <div id="site-header"></div>
   <div id="site-footer"></div>
 
-  <!-- Component Loader Script -->
+  <!-- Component Loader Script & Scroll Helper -->
   <script>
+    function scrollCarousel(containerId, distance) {
+      const container = document.getElementById(containerId);
+      if (container) {
+        container.scrollBy({ left: distance, behavior: 'smooth' });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       fetch('header.html')
         .then(res => res.ok ? res.text() : '')
