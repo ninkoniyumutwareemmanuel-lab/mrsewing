@@ -41,7 +41,7 @@
     background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Forces content to align from the left */
+    justify-content: flex-start;
     align-items: flex-start;
     gap: clamp(20px, 4vw, 60px);
     max-width: 1800px;
@@ -56,7 +56,7 @@
   .customers-interactive-container { flex: 1.2 1 55%; min-width: 0; display: flex; flex-direction: column; gap: 20px; width: 100%; }
   
   /* Spotlight Card with precise face framing */
-  .client-spotlight-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+  .client-spotlight-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; width: 100%; }
   .spotlight-image { width: 100%; height: clamp(320px, 40vw, 480px); object-fit: cover; object-position: center 20%; display: block; }
   .spotlight-content { padding: 20px; text-align: left; }
   .spotlight-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #d4af37; font-weight: 600; display: block; margin-bottom: 6px; }
@@ -65,10 +65,11 @@
   .spotlight-btn { display: inline-block; background-color: #d4af37; color: #000000; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 20px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s ease; }
   .spotlight-btn:hover { background-color: #f3e5ab; }
 
-  /* Sliding Gallery aligned strictly to the left */
+  /* Sliding Gallery aligned strictly to the left across full container width */
   .customers-slider { 
     display: flex; 
-    justify-content: flex-start; /* Ensures items start from the left */
+    justify-content: flex-start; 
+    align-items: flex-start;
     gap: 15px; 
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
