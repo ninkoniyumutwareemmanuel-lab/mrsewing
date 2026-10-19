@@ -176,47 +176,6 @@
     .search-strip { background-color: #0f0f0f; border-bottom: 1px solid #2a2a2a; padding: clamp(12px, 2vw, 22px) 4%; text-align: center; }
     .search-strip h1 { font-size: clamp(0.8rem, 1.8vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 0; }
 
-    /* SECTION 1: Happy Customers Styling */
-    .customers-section {
-      padding: clamp(28px, 6vw, 80px) 4%;
-      background: radial-gradient(circle at top right, #141414 0%, #0b0b0b 100%);
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: clamp(14px, 4vw, 70px);
-      max-width: 1800px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .customers-text { flex: 1 1 45%; min-width: 0; text-align: left; }
-    .customers-section h2 { font-size: clamp(1.05rem, 3.2vw, 2.5rem); color: #d4af37; margin-bottom: 12px; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); line-height: 1.2; font-weight: 700; }
-    .customers-description, .made-to-order-desc { font-size: clamp(0.76rem, 1.6vw, 1.1rem); color: #aaaaaa; line-height: 1.6; margin-bottom: clamp(18px, 3vw, 35px); }
-    .made-to-order-title { font-size: clamp(0.95rem, 2.8vw, 2.2rem); color: #d4af37; text-transform: uppercase; letter-spacing: clamp(0.5px, 0.2vw, 2px); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
-
-    .service-highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 1.5vw, 20px); margin-top: 10px; }
-    .highlight-box { background-color: #141414; border: 1px solid #2a2a2a; border-left: 3px solid #d4af37; border-radius: 6px; padding: clamp(10px, 1.6vw, 20px); }
-    .highlight-box h3 { font-size: clamp(0.72rem, 1.3vw, 1.05rem); color: #d4af37; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
-    .highlight-box p { font-size: clamp(0.68rem, 1.1vw, 0.9rem); color: #cccccc; line-height: 1.5; }
-
-    .customers-grid { flex: 1.2 1 55%; min-width: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 2vw, 25px); max-width: 850px; }
-    .customer-card { background-color: #141414; border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; padding: clamp(6px, 1.4vw, 18px); transition: transform 0.3s ease, border-color 0.3s ease; }
-    .customer-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-    .suit-image { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 4px; display: block; }
-    .card-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px clamp(8px, 2vw, 25px); margin-top: clamp(8px, 1.5vw, 18px); }
-    .card-actions a { color: #d4af37; text-decoration: none; font-weight: 600; font-size: clamp(0.6rem, 1.2vw, 0.9rem); text-transform: uppercase; transition: color 0.3s ease; }
-    .card-actions a:hover { color: #ffffff; }
-
-    @media (max-width: 900px) {
-      .customers-section { flex-direction: column; }
-      .customers-grid { width: 100%; max-width: none; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    }
-    @media (max-width: 500px) {
-      .customers-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .service-highlights { grid-template-columns: 1fr; }
-      .suit-image { aspect-ratio: 3 / 4; }
-    }
-
     /* Fixed Modal Overlay */
     .modal-overlay { 
       position: fixed; 
@@ -320,53 +279,72 @@
       document.dispatchEvent(new CustomEvent('sitecomponentsloaded', { detail: { results } }));
     })();
 
-    /* Shared order modal setup with event delegation for dynamically loaded header/footer buttons */
-    (function setupOrderModal() {
+    /* Universal Event Delegation for Order Buttons & Slider Arrows */
+    (function setupGlobalDelegation() {
       const modal = document.getElementById('orderModal');
       const agree = document.getElementById('termsAgree');
       const whatsapp = document.getElementById('whatsappBtn');
       const hint = document.getElementById('termsHint');
       const closeButton = document.getElementById('orderClose');
       const termsLink = document.getElementById('termsLink');
-      if (!modal || !agree || !whatsapp || !hint) return;
 
       function openModal() {
+        if (!modal) return;
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
       }
       function closeModal() {
+        if (!modal) return;
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
-        agree.checked = false;
-        whatsapp.setAttribute('aria-disabled', 'true');
-        hint.textContent = '';
+        if (agree) agree.checked = false;
+        if (whatsapp) whatsapp.setAttribute('aria-disabled', 'true');
+        if (hint) hint.textContent = '';
         if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
       }
 
-      /* Event delegation: captures clicks on .order-btn even inside fetched header/footer */
       document.addEventListener('click', function (event) {
+        // 1. Order modal button handler
         const button = event.target.closest && event.target.closest('.order-btn');
         if (button) { 
           event.preventDefault(); 
           openModal(); 
+          return;
+        }
+
+        // 2. Universal slider arrows handler
+        const leftClick = event.target.closest('#slideLeft, .slide-left');
+        const rightClick = event.target.closest('#slideRight, .slide-right');
+        if (leftClick || rightClick) {
+          event.preventDefault();
+          const slider = document.getElementById('customersSlider') || document.querySelector('.customers-slider');
+          if (slider) {
+            slider.scrollBy({ left: leftClick ? -280 : 280, behavior: 'smooth' });
+          }
         }
       });
 
-      agree.addEventListener('change', function () {
-        whatsapp.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
-        hint.textContent = '';
-      });
-      whatsapp.addEventListener('click', function (event) {
-        if (!agree.checked) {
-          event.preventDefault();
-          hint.textContent = 'Please agree to the Terms & Conditions to continue.';
-        } else {
-          closeModal();
-        }
-      });
+      if (agree) {
+        agree.addEventListener('change', function () {
+          if (whatsapp) whatsapp.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+          if (hint) hint.textContent = '';
+        });
+      }
+      if (whatsapp) {
+        whatsapp.addEventListener('click', function (event) {
+          if (agree && !agree.checked) {
+            event.preventDefault();
+            if (hint) hint.textContent = 'Please agree to the Terms & Conditions to continue.';
+          } else {
+            closeModal();
+          }
+        });
+      }
       if (termsLink) termsLink.addEventListener('click', closeModal);
       if (closeButton) closeButton.addEventListener('click', function (event) { event.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (event) { if (event.target === modal) closeModal(); });
+      if (modal) {
+        modal.addEventListener('click', function (event) { if (event.target === modal) closeModal(); });
+      }
       document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeModal(); });
       if (location.hash === '#orderModal') openModal();
     })();
