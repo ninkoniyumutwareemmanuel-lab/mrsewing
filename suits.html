@@ -333,7 +333,16 @@
       <p>Scroll horizontally through our curated styles and creations. Tap any photo to view full size.</p>
     </div>
 
-    <!-- WOMEN'S SUITS SECTION -->
+    <!-- FEATURED SUITS COLLECTION (S1 - S10) -->
+    <div class="collection-block">
+      <div class="block-title-wrapper">
+        <h2 class="block-title">Featured Suits</h2>
+        <div class="block-line"></div>
+      </div>
+      <div class="collection-carousel" id="featuredSuitsCarousel"></div>
+    </div>
+
+    <!-- WOMEN'S SUITS SECTION (W1 - W10) -->
     <div class="collection-block">
       <div class="block-title-wrapper">
         <h2 class="block-title">Women's Suits</h2>
@@ -342,7 +351,7 @@
       <div class="collection-carousel" id="womensCarousel"></div>
     </div>
 
-    <!-- MEN'S SUITS SECTION -->
+    <!-- MEN'S SUITS SECTION (M1 - M10) -->
     <div class="collection-block">
       <div class="block-title-wrapper">
         <h2 class="block-title">Men's Suits</h2>
@@ -351,7 +360,7 @@
       <div class="collection-carousel" id="mensCarousel"></div>
     </div>
 
-    <!-- "MADE BY US" SECTION -->
+    <!-- "MADE BY US" SECTION (R1 - R10 including sub-files) -->
     <div class="collection-block">
       <div class="block-title-wrapper">
         <h2 class="block-title">Made By Us</h2>
@@ -369,12 +378,13 @@
     </div>
   </div>
 
-  <!-- SCRIPT: MANUAL EXPLICIT LISTING & CAROUSEL BUILDER -->
+  <!-- SCRIPT: UPDATED EXPLICIT ARRAYS FOR S, W, M, R FILES -->
   <script>
-    // Explicit lists of your photo files. Update these arrays whenever you add new photos!
-    const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg'];
-    const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg'];
-    const madeByUsFiles = ['r1.jpeg']; // Add your "Made By Us" files here (e.g. r1.jpeg, r2.jpeg, etc.)
+    // Explicit lists connected to S, W, M, and R files (1 through 10)
+    const featuredSuitsFiles = ['s1.jpeg', 's2.jpeg', 's3.jpeg', 's4.jpeg', 's5.jpeg', 's6.jpeg', 's7.jpeg', 's8.jpeg', 's9.jpeg', 's10.jpeg'];
+    const womenFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg', 'w6.jpeg', 'w7.jpeg', 'w8.jpeg', 'w9.jpeg', 'w10.jpeg'];
+    const menFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg', 'm7.jpeg', 'm8.jpeg', 'm9.jpeg', 'm10.jpeg'];
+    const madeByUsFiles = ['r1.jpeg', 'r1.2.jpeg', 'r1.3.jpeg', 'r2.jpeg', 'r3.jpeg', 'r3.4.jpeg', 'r3.5.jpeg', 'r4.jpeg', 'r5.jpeg', 'r6.jpeg', 'r7.jpeg', 'r8.jpeg', 'r9.jpeg', 'r10.jpeg'];
 
     // Modern in-button copy feedback function
     function copyLinkWithFeedback(buttonElement, urlToCopy) {
@@ -417,7 +427,7 @@
 
       fileList.forEach(imgFile => {
         const fullPhotoUrl = window.location.origin + '/' + imgFile;
-        const baseName = imgFile.substring(0, imgFile.lastIndexOf('.'));
+        const baseName = imgFile.substring(0, imgFile.lastIndexOf('.')).replace('.', '-');
         const detailPageUrl = `detail-${baseName}.html`;
         const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
         const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
@@ -451,6 +461,7 @@
     }
 
     // Initialize Carousels
+    populateCarousel(featuredSuitsFiles, 'featuredSuitsCarousel');
     populateCarousel(womenFiles, 'womensCarousel');
     populateCarousel(menFiles, 'mensCarousel');
     populateCarousel(madeByUsFiles, 'madeByUsCarousel');
