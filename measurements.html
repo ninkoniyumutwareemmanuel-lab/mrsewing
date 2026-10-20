@@ -340,21 +340,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Order popup modal */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 16px; }
-        .modal-overlay.open, .modal-overlay:target { display: flex; }
-        .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(20px, 4vw, 32px); position: relative; text-align: left; }
-        .modal-close { position: absolute; top: 6px; right: 12px; background: none; border: none; color: #aaaaaa; font-size: 1.8rem; cursor: pointer; }
-        .modal-close:hover { color: #d4af37; }
-        .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
-        .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
-        .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
-        .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
-        .terms-check a { color: #d4af37; }
-        .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
-        .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
-        .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
-
         @media (max-width: 700px) {
             .measurements-grid { grid-template-columns: 1fr; }
         }
@@ -513,7 +498,7 @@
             </div>
 
             <div style="text-align: center;">
-                <a href="#orderModal" class="btn order-btn">Submit Your Measurements</a>
+                <a href="measurement-submission.html" class="btn">Submit Your Measurements</a>
             </div>
         </div>
     </main>
@@ -524,22 +509,7 @@
         <p>KN 2 Ave, Nyarugenge, Kigali, Rwanda | Tel: +250 787 411 501</p>
     </footer>
 
-    <!-- Order popup modal -->
-    <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-        <div class="modal-box">
-            <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
-            <h3 id="orderModalTitle">Submit Measurements &amp; Consult</h3>
-            <p>You will continue to WhatsApp to chat with Mr. Sewing, share your measurements or standard suit size, and confirm your project details.</p>
-            <label class="terms-check">
-                <input type="checkbox" id="termsAgree">
-                <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
-            </label>
-            <a href="https://wa.me/250787411501?text=Hello%20Mr.%20Sewing%2C%20I%20would%20like%20to%20submit%20my%20measurements%20or%20discuss%20my%20sizing%20details." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
-            <div class="terms-hint" id="termsHint"></div>
-        </div>
-    </div>
-
-    <!-- Component Loader Script & Modal Controller -->
+    <!-- Component Loader Script -->
     <script>
         (async function loadComponents() {
           const mount = document.getElementById('site-header');
@@ -553,53 +523,6 @@
             console.error('Could not load header.html:', error);
             mount.dataset.loaded = 'false';
           }
-        })();
-
-        (function () {
-            var modal = document.getElementById('orderModal');
-            var agree = document.getElementById('termsAgree');
-            var wa = document.getElementById('whatsappBtn');
-            var hint = document.getElementById('termsHint');
-
-            function openModal(e) { 
-                if (e) e.preventDefault();
-                modal.classList.add('open'); 
-            }
-            function closeModal() {
-                modal.classList.remove('open');
-                agree.checked = false;
-                wa.setAttribute('aria-disabled', 'true');
-                hint.textContent = '';
-                if (location.hash === '#orderModal') {
-                    history.replaceState(null, '', location.pathname + location.search);
-                }
-            }
-
-            document.addEventListener('click', function (e) {
-                var btn = e.target.closest ? e.target.closest('.order-btn') : null;
-                if (btn) { e.preventDefault(); openModal(); }
-            });
-
-            agree.addEventListener('change', function () {
-                wa.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
-                hint.textContent = '';
-            });
-
-            wa.addEventListener('click', function (e) {
-                if (!agree.checked) {
-                    e.preventDefault();
-                    hint.textContent = 'Please agree to the Terms & Conditions to continue.';
-                } else {
-                    setTimeout(closeModal, 300);
-                }
-            });
-
-            var closeBtn = document.getElementById('orderClose');
-            if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-            modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-
-            if (location.hash === '#orderModal') { openModal(); }
         })();
     </script>
 
