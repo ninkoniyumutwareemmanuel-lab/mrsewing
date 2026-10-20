@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Measurement Guide - Mr. Sewing Fashion | Bespoke Suits in Kigali</title>
+    <title>Master Measurement &amp; Sizing Guide | Mr. Sewing Kigali</title>
     
     <!-- SEO Meta Tags & Keywords for Google Ranking -->
-    <meta name="description" content="Follow Mr. Sewing Fashion's (mr_sewing_fashion / Mr. Fashion) easy 12-point custom measurement guide for bespoke men's and women's suits in Kigali, Rwanda. Get a flawless fit with Made in Rwanda tailoring.">
-    <meta name="keywords" content="custom measurement guide, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion Designer, bespoke suits Kigali, tailor in Rwanda, men suits, women suits, Made in Rwanda fashion, custom tailoring, Mr Sewing Fashion, suit alterations Kigali">
+    <meta name="description" content="Professional custom measurement guide for bespoke men's and women's suits by Mr. Sewing Fashion in Kigali, Rwanda. Follow our expert protocol or book an in-person master fitting.">
+    <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, Custom measurement guide Rwanda, Bespoke suit sizing Kigali, Tailor MIC building Kigali, Suit size chart Rwanda, Professional tailoring consultation Kigali, Made in Rwanda bespoke">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="geo.region" content="RW-01">
     <meta name="geo.placename" content="Kigali, Rwanda">
     <meta name="theme-color" content="#0b0b0b">
@@ -22,8 +22,8 @@
 
     <!-- Open Graph / Link Preview Tags -->
     <meta property="og:site_name" content="Mr. Sewing">
-    <meta property="og:title" content="Custom Measurement Guide - Mr. Sewing Fashion">
-    <meta property="og:description" content="Follow our easy 12-point step-by-step guide for a flawless bespoke suit fit in Kigali, Rwanda.">
+    <meta property="og:title" content="Master Measurement &amp; Sizing Guide | Mr. Sewing Kigali">
+    <meta property="og:description" content="Expert measurement protocols, sizing references, and 12-point bespoke fitting guides for executive suiting in Kigali, Rwanda.">
     <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
     <meta property="og:image:alt" content="Mr. Sewing logo - bespoke suits in Kigali, Rwanda">
     <meta property="og:type" content="website">
@@ -32,8 +32,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Custom Measurement Guide - Mr. Sewing Fashion">
-    <meta name="twitter:description" content="Follow our easy 12-point step-by-step guide for a flawless bespoke suit fit in Kigali, Rwanda.">
+    <meta name="twitter:title" content="Master Measurement &amp; Sizing Guide | Mr. Sewing Kigali">
+    <meta name="twitter:description" content="Expert measurement protocols, sizing references, and 12-point bespoke fitting guides for executive suiting in Kigali, Rwanda.">
     <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
     <!-- Google Structured Data (WebPage + SiteNavigationElement Sitelinks Schema) -->
@@ -45,8 +45,8 @@
           "@type": "WebPage",
           "@id": "https://mrsewingfashion.com/measurements.html#webpage",
           "url": "https://mrsewingfashion.com/measurements.html",
-          "name": "Custom Measurement Guide | Mr. Sewing",
-          "description": "12-point step-by-step custom measurement guide for bespoke men's and women's suits in Kigali, Rwanda.",
+          "name": "Master Measurement & Sizing Guide | Mr. Sewing",
+          "description": "Professional 12-point custom measurement guide and fitting protocols for bespoke suits in Kigali, Rwanda.",
           "isPartOf": {
             "@type": "WebSite",
             "@id": "https://mrsewingfashion.com/#website",
@@ -119,7 +119,7 @@
 
         /* Main Content Styles */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: clamp(2rem, 5vw, 4rem) 1.5rem;
             width: 100%;
@@ -155,29 +155,66 @@
             font-size: clamp(0.85rem, 1.8vw, 1.05rem);
         }
 
-        .info-box {
+        /* Professional Protocol Box (Tiered Recommendations) */
+        .protocol-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-top: 3px solid var(--accent-gold);
+            border-top: 4px solid var(--accent-gold);
             border-radius: 8px;
-            padding: clamp(1.2rem, 3vw, 2rem);
-            margin-bottom: 2.5rem;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 3rem;
+        }
+
+        .protocol-box h2 {
+            color: var(--accent-gold);
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
             text-align: center;
         }
 
-        .info-box h3 {
-            color: var(--accent-gold);
-            margin-bottom: 0.75rem;
-            font-size: clamp(1rem, 2.2vw, 1.3rem);
-            text-transform: uppercase;
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .info-box p {
-            color: #cccccc;
-            font-size: clamp(0.8rem, 1.6vw, 1rem);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
+        .protocol-card {
+            background-color: #0f0f0f;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .protocol-card .tier-badge {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .protocol-card h4 {
+            color: var(--text-main);
+            font-size: 0.98rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .protocol-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         .measurements-grid {
@@ -319,13 +356,38 @@
     <main class="container">
         <div class="page-title">
             <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo">
-            <h1>Custom Measurement Guide</h1>
-            <p>Follow our easy 12-point step-by-step guide for a flawless bespoke suit fit.</p>
+            <h1>Master Measurement &amp; Sizing Guide</h1>
+            <p>Uncompromising precision for executive bespoke suiting in Kigali, Rwanda.</p>
         </div>
 
-        <div class="info-box">
-            <h3>Accuracy Matters</h3>
-            <p>We don't need extra room added — simply measure your body directly. Our expert tailoring team calculates all necessary wearing ease and adjustments for you. Grab a measuring tape and ask a friend to help for the best accuracy!</p>
+        <!-- Professional Recommendation Protocol -->
+        <div class="protocol-box">
+            <h2>Our Professional Fitting Protocols</h2>
+            <p style="color: #cccccc; text-align: center; font-size: 0.95rem; max-width: 850px; margin: 0 auto;">
+                To achieve the flawless silhouette expected of an elite bespoke garment, we recommend the following measurement hierarchy:
+            </p>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <span class="tier-badge">Gold Standard</span>
+                    <h4>Atelier or Mobile Fitting</h4>
+                    <p>Visit our master tailors at the MIC Building / Norvège or schedule a VIP workplace/house call for precision in-person measurement.</p>
+                </div>
+                <div class="protocol-card">
+                    <span class="tier-badge">Alternative 1</span>
+                    <h4>Professional Tailor</h4>
+                    <p>Have an experienced local tailor measure you using our 12-point guide if you cannot visit our atelier directly.</p>
+                </div>
+                <div class="protocol-card">
+                    <span class="tier-badge">Alternative 2</span>
+                    <h4>Assisted DIY Method</h4>
+                    <p>If taking measurements at home, <strong>never do it alone</strong>. Always enlist a trusted family member or friend to hold the tape.</p>
+                </div>
+                <div class="protocol-card">
+                    <span class="tier-badge">Alternative 3</span>
+                    <h4>Standard Sizing Reference</h4>
+                    <p>Provide your tried-and-true standard suit size (e.g., EU/US sizes or S/M/L/XL) from an unadjusted garment that fits you perfectly.</p>
+                </div>
+            </div>
         </div>
 
         <div class="measurements-grid">
@@ -418,27 +480,27 @@
             <h2>Frequently Asked Questions</h2>
             
             <div class="faq-item">
-                <h4>Can I measure myself?</h4>
-                <p>Yes, our guide makes it easy to measure at home. You only need a measuring tape, though asking a friend to help ensures maximum accuracy.</p>
+                <h4>Should I add extra wearing ease to my measurements?</h4>
+                <p>No. Please provide your exact anatomical body measurements. Our master tailoring team calculates all necessary structural ease and posture adjustments for you.</p>
             </div>
 
             <div class="faq-item">
-                <h4>Should I add extra inches to my numbers?</h4>
-                <p>No. Please provide your actual body measurements. Our master tailors will calculate the precise wearing ease based on your preferred suit fit.</p>
+                <h4>What if I prefer using my standard suit size?</h4>
+                <p>If you already wear a standard ready-to-wear suit size (e.g., EU/US 40, 42, 44 or S/M/L/XL) from unadjusted garments, you can simply share that size with us during your consultation.</p>
             </div>
 
             <div class="faq-item">
-                <h4>Can I request custom adjustments?</h4>
-                <p>Yes! If you have specific fitting preferences (e.g., slim fit vs. classic fit), you can include notes when placing your order.</p>
+                <h4>Can I have another professional tailor measure me?</h4>
+                <p>Yes. If you cannot visit our Kigali atelier, you may have an experienced local tailor take your measurements using this 12-point guide and submit the numbers to us.</p>
             </div>
 
             <div class="faq-item">
-                <h4>Can I get my measurements from another tailor?</h4>
-                <p>Yes, if you don't have a tape measure or aren't comfortable taking measurements yourself, you can visit a local tailor to have them measure you based on our guide, and then submit those numbers to us.</p>
+                <h4>Can I take my measurements at home?</h4>
+                <p>Yes, but we strictly recommend having a trusted family member or friend assist you to ensure absolute tape accuracy.</p>
             </div>
 
             <div style="text-align: center;">
-                <a href="submission-page.html" class="btn">Submit your measurements</a>
+                <a href="#orderModal" class="btn order-btn">Submit Your Measurements</a>
             </div>
         </div>
     </main>
@@ -450,13 +512,13 @@
     <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
         <div class="modal-box">
             <button class="modal-close" id="orderClose" aria-label="Close">&times;</button>
-            <h3 id="orderModalTitle">Place Your Order</h3>
-            <p>You will continue to WhatsApp to chat with Mr. Sewing and place your order.</p>
+            <h3 id="orderModalTitle">Submit Measurements &amp; Consult</h3>
+            <p>You will continue to WhatsApp to chat with Mr. Sewing, share your measurements or standard suit size, and confirm your project details.</p>
             <label class="terms-check">
                 <input type="checkbox" id="termsAgree">
                 <span>I have read and agree to the <a href="terms-and-conditions.html" id="termsLink" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</span>
             </label>
-            <a href="https://wa.me/250787411501?text=Hey%20Mr.%20Sewing%2C%20I%20need%20to%20place%20an%20order." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
+            <a href="https://wa.me/250787411501?text=Hello%20Mr.%20Sewing%2C%20I%20would%20like%20to%20submit%20my%20measurements%20or%20discuss%20my%20sizing%20details." target="_blank" rel="noopener" class="whatsapp-btn" id="whatsappBtn" aria-disabled="true"><i class="fab fa-whatsapp"></i> Continue to WhatsApp</a>
             <div class="terms-hint" id="termsHint"></div>
         </div>
     </div>
@@ -493,7 +555,10 @@
             var wa = document.getElementById('whatsappBtn');
             var hint = document.getElementById('termsHint');
 
-            function openModal() { modal.classList.add('open'); }
+            function openModal(e) { 
+                if (e) e.preventDefault();
+                modal.classList.add('open'); 
+            }
             function closeModal() {
                 modal.classList.remove('open');
                 agree.checked = false;
