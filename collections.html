@@ -6,7 +6,7 @@
   <title>Bespoke Suits for Men &amp; Women in Kigali, Rwanda | Mr. Sewing</title>
 
   <!-- SEO Meta Tags & Master Keywords -->
-  <meta name="description" content="Browse Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom double-breasted tuxedos, 3-piece executive suits, women's pantsuits, made to measure.">
+  <meta name="description" content="Browse Mr. Sewing's bespoke suit collections in Kigali, Rwanda: custom double-breasted tuxedos, classic executive suits, women's pantsuits, made to measure.">
   <meta name="keywords" content="Mr. Sewing, Mr Sewing Kigali, Mr. Fashion, Mr Fashion in Kigali, Mr Fashion in Rwanda, Mr Sewing Fashion, Mr Sewing Fashion Designer, Tailor in Kigali, Tailor in Rwanda, Fashion in Kigali, Fashion in Rwanda, Clothes in Kigali, Clothes in Rwanda, Suit in Kigali, Suit in Rwanda, Suits in Kigali, Suits in Rwanda, Bespoke tailor in Kigali, Bespoke tailor in Rwanda, Custom suit in Kigali, Custom suit in Rwanda, Best tailor in Kigali, Best tailor in Rwanda, Wedding suit in Kigali, Wedding suit in Rwanda, Made to measure suit in Kigali, Made to measure suit in Rwanda, Men suit in Kigali, Men suit in Rwanda, Women suit in Kigali, Women suit in Rwanda, Tailor near me Kigali, Tailor near me Rwanda, Tailor Nyarugenge, Tailor Nyarugenge Rwanda, Tailor MIC building Kigali, Tailor MIC building Rwanda, Tailor Norvege Kigali, Tailor Norvege Rwanda, Kigali suit shop, Rwanda suit shop, Custom suits Kigali, Custom suits Rwanda, Made to measure suits Kigali, Made to measure suits Rwanda, Men's suits Kigali, Men's suits Rwanda, Women's suits Kigali, Women's suits Rwanda, Bespoke suits Kigali, Bespoke suits Rwanda, Wedding suits Kigali, Wedding suits Rwanda, Groom suits Kigali, Groom suits Rwanda, Office wear Kigali, Office wear Rwanda, Formal wear Kigali, Formal wear Rwanda, Business suits Kigali, Business suits Rwanda, Tailored suits Kigali, Tailored suits Rwanda, Custom clothing Kigali, Custom clothing Rwanda, Custom blazer Kigali, Custom blazer Rwanda, Formal wear tailor Kigali, Formal wear tailor Rwanda, Tailored clothing for men and women Kigali, Tailored clothing for men and women Rwanda, Graduation suits Kigali, Graduation suits Rwanda, Corporate uniforms Kigali, Corporate uniforms Rwanda, Office suits for men Kigali, Office suits for men Rwanda, Women's formal suits Kigali, Women's formal suits Rwanda, Made-to-measure clothing Kigali, Made-to-measure clothing Rwanda, Premium custom suits Kigali, Premium custom suits Rwanda, Luxury tailor Kigali, Luxury tailor Rwanda, Business suit Kigali, Business suit Rwanda, Office suit Kigali, Office suit Rwanda, Corporate suit Kigali, Corporate suit Rwanda, Counter suit Kigali, Counter suit Rwanda, Counter suits Kigali, Counter suits Rwanda, Double breast suit Kigali, Double breast suit Rwanda, Double breast suits Kigali, Double breast suits Rwanda, Double-breasted suit Kigali, Double-breasted suit Rwanda, Double-breasted suits Kigali, Double-breasted suits Rwanda, Ceremony suit Kigali, Ceremony suit Rwanda, Ceremony suits Kigali, Ceremony suits Rwanda, Groom suit Kigali, Groom suit Rwanda, Fashion designer Kigali, Fashion designer Rwanda, Made in Rwanda fashion, Made in Kigali fashion, Express suit tailoring Kigali, Express suit tailoring Rwanda, Luxury suiting Kigali, Luxury suiting Rwanda, Kitenge tailor Kigali, Kitenge tailor Rwanda, Couturier Kigali, Couturier Rwanda, Costume sur mesure Kigali, Costume sur mesure Rwanda, Tailleur Kigali, Tailleur Rwanda, Custom tailoring Kigali, Custom tailoring Rwanda, Suit maker Kigali, Suit maker Rwanda, Suit designer Kigali, Suit designer Rwanda, Bespoke fashion house Kigali, Bespoke fashion house Rwanda, Men's tailor Kigali, Men's tailor Rwanda, Women's tailor Kigali, Women's tailor Rwanda, Fashion atelier Kigali, Fashion atelier Rwanda, Local clothing manufacturer Kigali, Local clothing manufacturer Rwanda, Suit alterations Kigali, Suit alterations Rwanda, Clothes adjustment Kigali, Clothes adjustment Rwanda, Tailor for suit alterations Kigali, Tailor for suit alterations Rwanda, Clothing repair and alteration Kigali, Clothing repair and alteration Rwanda, Suit resizing Kigali, Suit resizing Rwanda, Suit tailoring and fitting Kigali, Suit tailoring and fitting Rwanda, Home service tailor Kigali, Home service tailor Rwanda, Home visit tailor Kigali, Home visit tailor Rwanda, Doorstep tailor Kigali, Doorstep tailor Rwanda, Office measurement visit Kigali, Office measurement visit Rwanda, Mobile tailor Kigali, Mobile tailor Rwanda, Tailor comes to you Kigali, Tailor comes to you Rwanda, Custom suit home fitting Kigali, Custom suit home fitting Rwanda, On call tailor Kigali, On call tailor Rwanda">
   <meta name="author" content="Mr. Sewing">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -101,7 +101,7 @@
     .collections-section { 
         flex: 1;
         padding: clamp(28px, 6vw, 80px) 4%; 
-        max-width: 1600px; 
+        max-width: 1400px; 
         margin: 0 auto; 
         width: 100%;
         background-color: #0b0b0b; 
@@ -117,7 +117,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         flex-wrap: wrap;
     }
     .block-title {
@@ -135,55 +135,15 @@
         background: linear-gradient(to right, #d4af37, #2a2a2a);
         min-width: 50px;
     }
-    /* SCROLL BUTTONS (< and >) */
-    .scroll-btn-group {
-        display: flex;
-        gap: 6px;
-    }
-    .scroll-arrow-btn {
-        background: #141414;
-        border: 1px solid #d4af37;
-        color: #d4af37;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.85rem;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-    .scroll-arrow-btn:hover {
-        background: #d4af37;
-        color: #000000;
+    
+    /* Static Grid Layout (Replacing Carousels) */
+    .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: clamp(20px, 2.5vw, 30px);
     }
     
-    /* Horizontal Scrolling Carousel */
-    .collection-carousel {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        gap: clamp(12px, 2vw, 20px);
-        padding-bottom: 15px;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
-        scrollbar-color: #d4af37 #141414;
-    }
-    .collection-carousel::-webkit-scrollbar {
-        height: 6px;
-    }
-    .collection-carousel::-webkit-scrollbar-track {
-        background: #141414;
-        border-radius: 4px;
-    }
-    .collection-carousel::-webkit-scrollbar-thumb {
-        background-color: #d4af37;
-        border-radius: 4px;
-    }
-    
-    /* Compact Card Styling for Horizontal Scrolling */
+    /* Card Styling */
     .collection-item-card { 
         background-color: #141414; 
         border: 1px solid #2a2a2a; 
@@ -192,8 +152,6 @@
         display: flex; 
         flex-direction: column; 
         justify-content: space-between;
-        flex: 0 0 clamp(200px, 26vw, 280px); 
-        scroll-snap-align: start;
         transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
     }
     .collection-item-card:hover { 
@@ -217,9 +175,9 @@
     .image-link:hover .collection-item-img {
         opacity: 0.9;
     }
-    .collection-item-info { padding: clamp(10px, 1.5vw, 16px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .collection-item-info h3 { font-size: clamp(0.8rem, 1.3vw, 1rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; font-weight: 600; }
-    .collection-item-info p { font-size: clamp(0.68rem, 1.1vw, 0.85rem); color: #d4af37; margin-bottom: 0; font-style: italic; }
+    .collection-item-info { padding: clamp(14px, 1.8vw, 20px); text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .collection-item-info h3 { font-size: clamp(0.9rem, 1.4vw, 1.1rem); color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
+    .collection-item-info p { font-size: clamp(0.75rem, 1.2vw, 0.9rem); color: #d4af37; margin-bottom: 0; font-style: italic; }
   </style>
 </head>
 <body>
@@ -240,12 +198,8 @@
         <div class="block-title-wrapper">
             <h2 class="block-title">Men's Collections</h2>
             <div class="block-line"></div>
-            <div class="scroll-btn-group">
-                <button class="scroll-arrow-btn mens-left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-arrow-btn mens-right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
-            </div>
         </div>
-        <div class="collection-carousel" id="mensCarousel">
+        <div class="collection-grid">
             
             <div class="collection-item-card">
                 <a href="m-classicsuits.html" class="image-link">
@@ -266,30 +220,6 @@
                 <div class="collection-item-info">
                     <div>
                         <h3>Double Breast Suits</h3>
-                        <p>The Executive Line</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
-                <a href="m-twopieces.html" class="image-link">
-                    <img src="m3.jpeg" alt="Two pieces suits, made to measure men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
-                </a>
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Two Pieces Suits</h3>
-                        <p>The Executive Line</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
-                <a href="m-threepieces.html" class="image-link">
-                    <img src="m4.jpeg" alt="Three pieces suits, custom men's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
-                </a>
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Three Pieces Suits</h3>
                         <p>The Executive Line</p>
                     </div>
                 </div>
@@ -327,12 +257,8 @@
         <div class="block-title-wrapper">
             <h2 class="block-title">Women's Collections</h2>
             <div class="block-line"></div>
-            <div class="scroll-btn-group">
-                <button class="scroll-arrow-btn womens-left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-arrow-btn womens-right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
-            </div>
         </div>
-        <div class="collection-carousel" id="womensCarousel">
+        <div class="collection-grid">
             
             <div class="collection-item-card">
                 <a href="w-classicsuits.html" class="image-link">
@@ -359,30 +285,6 @@
             </div>
 
             <div class="collection-item-card">
-                <a href="w-twopieces.html" class="image-link">
-                    <img src="w3.jpeg" alt="Two pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
-                </a>
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Two Pieces Suits</h3>
-                        <p>The Elegance Series</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
-                <a href="w-threepieces.html" class="image-link">
-                    <img src="w4.jpeg" alt="Three pieces suits, custom women's suit Kigali Rwanda - Mr. Sewing" class="collection-item-img" loading="lazy">
-                </a>
-                <div class="collection-item-info">
-                    <div>
-                        <h3>Three Pieces Suits</h3>
-                        <p>The Elegance Series</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collection-item-card">
                 <a href="w-modernsuits.html" class="image-link">
                     <img src="w5.jpeg" alt="Modern suits, custom women's executive tailoring Kigali - Mr. Sewing" class="collection-item-img" loading="lazy">
                 </a>
@@ -401,34 +303,9 @@
   <!-- Shared Footer Placeholder -->
   <div id="site-footer"></div>
 
-  <!-- Component Loader & Bulletproof Click Handlers -->
+  <!-- Component Loader -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Men's Carousel Buttons
-      const mensCarousel = document.getElementById('mensCarousel');
-      const mensLeft = document.querySelector('.mens-left');
-      const mensRight = document.querySelector('.mens-right');
-
-      if (mensLeft && mensCarousel) {
-        mensLeft.addEventListener('click', () => mensCarousel.scrollBy({ left: -300, behavior: 'smooth' }));
-      }
-      if (mensRight && mensCarousel) {
-        mensRight.addEventListener('click', () => mensCarousel.scrollBy({ left: 300, behavior: 'smooth' }));
-      }
-
-      // Women's Carousel Buttons
-      const womensCarousel = document.getElementById('womensCarousel');
-      const womensLeft = document.querySelector('.womens-left');
-      const womensRight = document.querySelector('.womens-right');
-
-      if (womensLeft && womensCarousel) {
-        womensLeft.addEventListener('click', () => womensCarousel.scrollBy({ left: -300, behavior: 'smooth' }));
-      }
-      if (womensRight && womensCarousel) {
-        womensRight.addEventListener('click', () => womensCarousel.scrollBy({ left: 300, behavior: 'smooth' }));
-      }
-
-      // Component Loaders
       fetch('header.html')
         .then(res => res.ok ? res.text() : '')
         .then(data => { if (data) document.getElementById('site-header').innerHTML = data; })
