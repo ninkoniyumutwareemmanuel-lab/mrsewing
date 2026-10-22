@@ -103,90 +103,144 @@
             margin: 40px 0 20px;
         }
 
-        /* Gallery Grid */
-        .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .collection-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
-        .collection-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
-
-        /* Horizontal Slider Image Box */
-        .collection-img-box {
-            width: 100%;
-            height: 380px;
-            background-color: #0f0f0f;
+        /* Horizontal Card Swiper Container */
+        .swiper-container {
             position: relative;
-            overflow: hidden;
+            margin-bottom: 2.5rem;
         }
-        .slider-track {
+
+        .collection-swiper {
             display: flex;
-            width: 100%;
-            height: 100%;
+            gap: 2rem;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
+            padding: 10px 5px 20px 5px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-gold) var(--border-color);
         }
-        .slider-track::-webkit-scrollbar {
-            display: none;
+
+        .collection-swiper::-webkit-scrollbar {
+            height: 8px;
         }
-        .slide-item {
-            flex: 0 0 100%;
-            width: 100%;
-            height: 100%;
+        .collection-swiper::-webkit-scrollbar-track {
+            background: var(--card-bg);
+            border-radius: 4px;
+        }
+        .collection-swiper::-webkit-scrollbar-thumb {
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+
+        /* Individual Card Item inside Swiper */
+        .collection-card {
+            flex: 0 0 320px;
+            width: 320px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
             scroll-snap-align: start;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
-        .slide-item img {
+
+        .collection-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .collection-img-box {
+            width: 100%;
+            height: 380px;
+            background-color: #0f0f0f;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collection-img-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
-        /* Slider Controls */
-        .slider-btn {
+        .collection-card:hover .collection-img-box img {
+            transform: scale(1.04);
+        }
+
+        .collection-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .collection-content h3 {
+            color: var(--text-main);
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .collection-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Swiper Navigation Buttons */
+        .swiper-btn {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
+            transform: translateY(-60%);
+            background-color: rgba(20, 20, 20, 0.9);
             color: var(--accent-gold);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            width: 36px;
-            height: 36px;
+            border: 1px solid var(--accent-gold);
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 5;
+            z-index: 10;
             transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
-        .slider-btn:hover {
-            background-color: var(--accent-gold);
-            color: #000;
-        }
-        .slider-prev { left: 10px; }
-        .slider-next { right: 10px; }
 
-        .slider-hint {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.75);
-            color: var(--text-muted);
-            font-size: 0.7rem;
-            padding: 3px 10px;
-            border-radius: 20px;
+        .swiper-btn:hover {
+            background-color: var(--accent-gold);
+            color: #000000;
+        }
+
+        .swiper-prev { left: -20px; }
+        .swiper-next { right: -20px; }
+
+        @media (max-width: 768px) {
+            .swiper-btn { display: none; /* Swipe with touch on mobile */ }
+            .collection-card { flex: 0 0 85vw; width: 85vw; }
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #000000;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            pointer-events: none;
-            border: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+            width: 100%;
         }
-
-        .collection-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .collection-content h3 { color: var(--text-main); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
-        .collection-content p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
-
-        .btn-gold { display: inline-block; background-color: var(--accent-gold); color: #000000; padding: 0.8rem 1.5rem; text-align: center; text-decoration: none; border-radius: 4px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: background-color 0.3s ease; width: 100%; }
         .btn-gold:hover { background-color: var(--accent-gold-hover); }
 
         .standalone-footer { background-color: #0b0b0b; border-top: 1px solid var(--border-color); padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
@@ -224,180 +278,132 @@
             </div>
         </div>
 
-        <!-- TWO-PIECE SECTION (4 Suits Above) -->
+        <!-- TWO-PIECE SECTION (4 Cards Horizontal Swiper Above) -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Two-Piece Classic Suits</h2>
-        <div class="collection-grid">
-            <!-- Suit 1 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuictwo1.jpeg" alt="Classic Two-Piece Suit 1 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo2.jpeg" alt="Classic Two-Piece Suit 1 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo3.jpeg" alt="Classic Two-Piece Suit 1 - Detail"></div>
+        <div class="swiper-container">
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="collection-swiper">
+                <!-- Card 1 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuictwo1.jpeg" alt="The Sovereign Executive Navy Suit">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Executive Classic Two-Piece I</h3>
-                        <p>Immaculate single-breasted two-piece suit tailored with supreme wool and refined structural precision.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Sovereign Executive Navy</h3>
+                            <p>Deep executive navy fabric featuring a pristine two-button stance and sharp tailored trousers for daily leadership.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
-            </div>
 
-            <!-- Suit 2 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuictwo2.jpeg" alt="Classic Two-Piece Suit 2 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo1.jpeg" alt="Classic Two-Piece Suit 2 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo3.jpeg" alt="Classic Two-Piece Suit 2 - Detail"></div>
+                <!-- Card 2 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuictwo2.jpeg" alt="The Diplomatic Charcoal Stripe Suit">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Executive Classic Two-Piece II</h3>
-                        <p>Sophisticated two-piece silhouette designed for high-level corporate environments and diplomatic engagements.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Diplomatic Charcoal Stripe</h3>
+                            <p>Subtle executive pinstripe pattern engineered for high-stakes boardrooms and state diplomatic meetings.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
-            </div>
 
-            <!-- Suit 3 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuictwo3.jpeg" alt="Classic Two-Piece Suit 3 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo1.jpeg" alt="Classic Two-Piece Suit 3 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo2.jpeg" alt="Classic Two-Piece Suit 3 - Detail"></div>
+                <!-- Card 3 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuictwo3.jpeg" alt="The Midnight State Function Suit">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Executive Classic Two-Piece III</h3>
-                        <p>Authoritative single-breasted jacket and tailored trousers engineered for all-day boardroom comfort.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Midnight State Function</h3>
+                            <p>Rich midnight tone crafted with structured canvas and breathable wool for evening ceremonies and gala events.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
-            </div>
 
-            <!-- Suit 4 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuictwo4.jpeg" alt="Classic Two-Piece Suit 4 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo1.jpeg" alt="Classic Two-Piece Suit 4 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuictwo2.jpeg" alt="Classic Two-Piece Suit 4 - Detail"></div>
+                <!-- Card 4 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuictwo4.jpeg" alt="The Modern Obsidian Business Suit">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Executive Classic Two-Piece IV</h3>
-                        <p>Master bespoke craftsmanship featuring clean lines and unmatched elegance for the modern leader.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Modern Obsidian Business Suit</h3>
+                            <p>Sleek single-breasted silhouette with sharp lapels and immaculate hand-finished detailing for an authoritative profile.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
             </div>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
         </div>
 
-        <!-- THREE-PIECE SECTION (4 Suits Below) -->
+        <!-- THREE-PIECE SECTION (4 Cards Horizontal Swiper Below) -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Three-Piece Classic Suits</h2>
-        <div class="collection-grid">
-            <!-- Suit 1 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuitthree1.jpeg" alt="Classic Three-Piece Suit 1 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree2.jpeg" alt="Classic Three-Piece Suit 1 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree3.jpeg" alt="Classic Three-Piece Suit 1 - Detail"></div>
+        <div class="swiper-container">
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="collection-swiper">
+                <!-- Card 1 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuitthree1.jpeg" alt="The Presidential Three-Piece Heritage">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Presidential Classic Three-Piece I</h3>
-                        <p>Complete 3-piece bespoke ensemble including single-breasted jacket, matching waistcoat/vest, and trousers.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Presidential Heritage 3-Piece</h3>
+                            <p>Complete three-piece masterpiece featuring a structured matching waistcoat, jacket, and tailored trousers.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
-            </div>
 
-            <!-- Suit 2 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuitthree2.jpeg" alt="Classic Three-Piece Suit 2 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree1.jpeg" alt="Classic Three-Piece Suit 2 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree3.jpeg" alt="Classic Three-Piece Suit 2 - Detail"></div>
+                <!-- Card 2 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuitthree2.jpeg" alt="The Royal Ambassador Three-Piece">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Presidential Classic Three-Piece II</h3>
-                        <p>Exquisite three-piece tailoring combining architectural chest canvassing with superior warmth and posture structure.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Royal Ambassador Set</h3>
+                            <p>Exquisite tailoring designed for ambassadors and senior delegates seeking unmatched elegance and warmth.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
-            </div>
 
-            <!-- Suit 3 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuitthree3.jpeg" alt="Classic Three-Piece Suit 3 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree1.jpeg" alt="Classic Three-Piece Suit 3 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree2.jpeg" alt="Classic Three-Piece Suit 3 - Detail"></div>
+                <!-- Card 3 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuitthree3.jpeg" alt="The Statesman Charcoal Three-Piece">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Presidential Classic Three-Piece III</h3>
-                        <p>Distinguished three-piece suit designed for high-profile state functions, galas, and executive boardrooms.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Statesman Charcoal 3-Piece</h3>
+                            <p>Classic charcoal grey composition with tailored vest, offering superior posture support and timeless prestige.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
-            </div>
 
-            <!-- Suit 4 -->
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-track">
-                        <div class="slide-item"><img src="m-classicsuitthree4.jpeg" alt="Classic Three-Piece Suit 4 - Front"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree1.jpeg" alt="Classic Three-Piece Suit 4 - Angle"></div>
-                        <div class="slide-item"><img src="m-classicsuitthree2.jpeg" alt="Classic Three-Piece Suit 4 - Detail"></div>
+                <!-- Card 4 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-classicsuitthree4.jpeg" alt="The Supreme Executive Three-Piece">
                     </div>
-                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
-                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Presidential Classic Three-Piece IV</h3>
-                        <p>The ultimate expression of executive power, featuring matching vest and flawless hand-finished details.</p>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Supreme Executive 3-Piece</h3>
+                            <p>Commanding three-piece ensemble built with premium imported wool and refined hand-stitching details.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                     </div>
-                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
             </div>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
 
@@ -419,11 +425,11 @@
             }
         })();
 
-        // Horizontal Slider Navigation Function
-        function slideCard(button, direction) {
-            const track = button.parentElement.querySelector('.slider-track');
-            const cardWidth = track.clientWidth;
-            track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        // Horizontal Card Swiper Scroll Function
+        function scrollSwiper(button, direction) {
+            const container = button.parentElement.querySelector('.collection-swiper');
+            const scrollAmount = 340 * direction; // Card width + gap
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     </script>
 </body>
