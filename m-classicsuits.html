@@ -222,7 +222,7 @@
         .swiper-next { right: -20px; }
 
         @media (max-width: 768px) {
-            .swiper-btn { display: none; /* Swipe with touch on mobile */ }
+            .swiper-btn { display: none; }
             .collection-card { flex: 0 0 85vw; width: 85vw; }
         }
 
@@ -286,7 +286,7 @@
                 <!-- Card 1 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuictwo1.jpeg" alt="The Sovereign Executive Navy Suit">
+                        <img src="m-classicsuittwo1.jpeg" alt="The Sovereign Executive Navy Suit">
                     </div>
                     <div class="collection-content">
                         <div>
@@ -300,7 +300,7 @@
                 <!-- Card 2 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuictwo2.jpeg" alt="The Diplomatic Charcoal Stripe Suit">
+                        <img src="m-classicsuittwo2.jpeg" alt="The Diplomatic Charcoal Stripe Suit">
                     </div>
                     <div class="collection-content">
                         <div>
@@ -314,7 +314,7 @@
                 <!-- Card 3 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuictwo3.jpeg" alt="The Midnight State Function Suit">
+                        <img src="m-classicsuittwo3.jpeg" alt="The Midnight State Function Suit">
                     </div>
                     <div class="collection-content">
                         <div>
@@ -328,7 +328,7 @@
                 <!-- Card 4 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuictwo4.jpeg" alt="The Modern Obsidian Business Suit">
+                        <img src="m-classicsuittwo4.jpeg" alt="The Modern Obsidian Business Suit">
                     </div>
                     <div class="collection-content">
                         <div>
@@ -428,7 +428,7 @@
         // Horizontal Card Swiper Scroll Function
         function scrollSwiper(button, direction) {
             const container = button.parentElement.querySelector('.collection-swiper');
-            const scrollAmount = 340 * direction; // Card width + gap
+            const scrollAmount = 340 * direction;
             container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     </script>
