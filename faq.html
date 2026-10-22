@@ -13,6 +13,8 @@
 <meta name="geo.region" content="RW-01">
 <meta name="geo.placename" content="Kigali, Rwanda">
 <meta name="theme-color" content="#0b0b0b">
+
+<!-- Primary Self-Referencing Canonical Tag -->
 <link rel="canonical" href="https://mrsewingfashion.com/faq.html">
 
 <!-- Favicon / Logo for Browser and Google Search Bar -->
@@ -162,6 +164,9 @@ details[open] summary::after{transform:rotate(45deg)}
   .container{padding:1.6rem 1rem}
 }
 </style>
+
+<!-- Fallback Canonical Tag for Crawler Parsers -->
+<link rel="canonical" href="https://mrsewingfashion.com/faq.html">
 </head>
 <body id="top">
 
@@ -508,7 +513,7 @@ details[open] summary::after{transform:rotate(45deg)}
 
   var closeBtn = document.getElementById('orderClose');
   if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  modal.addEventListener('click', function (e) { if (event.target === modal) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
   if (location.hash === '#orderModal') { openModal(); }
