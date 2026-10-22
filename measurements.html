@@ -36,7 +36,7 @@
     <meta name="twitter:description" content="Expert measurement protocols, sizing references, and 12-point bespoke fitting guides for executive suiting in Kigali, Rwanda.">
     <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
-    <!-- Google Structured Data (WebPage + SiteNavigationElement Sitelinks Schema) -->
+    <!-- Google Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,32 +53,6 @@
             "name": "Mr. Sewing",
             "url": "https://mrsewingfashion.com/"
           }
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "@id": "https://mrsewingfashion.com/#navigation",
-          "name": [
-            "Home",
-            "About Us",
-            "Suits",
-            "Men's Suits",
-            "Women's Suits",
-            "Measurements Guide",
-            "FAQs",
-            "Contact Us",
-            "Consultation Booking"
-          ],
-          "url": [
-            "https://mrsewingfashion.com/index.html",
-            "https://mrsewingfashion.com/about.html",
-            "https://mrsewingfashion.com/suits.html",
-            "https://mrsewingfashion.com/mensuits.html",
-            "https://mrsewingfashion.com/womensuits.html",
-            "https://mrsewingfashion.com/measurements.html",
-            "https://mrsewingfashion.com/faq.html",
-            "https://mrsewingfashion.com/contact.html",
-            "https://mrsewingfashion.com/booking.html"
-          ]
         }
       ]
     }
@@ -117,7 +91,6 @@
         .site-component { width: 100%; min-width: 0; }
         main.container { flex: 1; }
 
-        /* Main Content Styles */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -155,7 +128,7 @@
             font-size: clamp(0.85rem, 1.8vw, 1.05rem);
         }
 
-        /* Professional Protocol Box (Tiered Recommendations) */
+        /* Professional Protocol Box */
         .protocol-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -217,6 +190,7 @@
             line-height: 1.5;
         }
 
+        /* Measurements Grid & Full Image Display */
         .measurements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -240,10 +214,28 @@
 
         .measurement-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 220px;
+            object-fit: contain; /* Ensures the entire image shows without cropping */
+            background-color: #050505; /* Clean dark frame */
             border-radius: 6px;
             margin-bottom: 1rem;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .measurement-card img:hover {
+            opacity: 0.85;
+        }
+
+        .measurement-card .zoom-hint {
+            display: block;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .measurement-number {
@@ -260,6 +252,7 @@
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
+            z-index: 2;
         }
 
         .measurement-card h3 {
@@ -276,6 +269,47 @@
             line-height: 1.5;
         }
 
+        /* Lightbox Modal for Full-Size Image Viewing */
+        #image-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #modal-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: var(--accent-gold);
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        #modal-close:hover {
+            color: var(--text-main);
+        }
+
+        #modal-img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            background-color: #000;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        /* FAQ & Footer */
         .faq-section {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -327,7 +361,6 @@
             background-color: var(--accent-gold-hover);
         }
 
-        /* Standalone Footer Styling */
         .standalone-footer {
             background-color: #0b0b0b;
             border-top: 1px solid var(--border-color);
@@ -392,6 +425,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">1</div>
                 <img src="neck.jpeg" alt="Measuring Neck">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Neck</h3>
                 <p>Measure around your neck at the height where your collar, if buttoned, would naturally sit.</p>
             </div>
@@ -399,6 +433,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">2</div>
                 <img src="shoulder.jpeg" alt="Measuring Shoulder">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Shoulder</h3>
                 <p>Measure straight across the back from the end of the right shoulder seam to the end of the left shoulder.</p>
             </div>
@@ -406,6 +441,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">3</div>
                 <img src="sleeve_length.jpeg" alt="Measuring Sleeve Length">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Sleeve Length</h3>
                 <p>Measure from the top of your shoulder down along the arm to the knuckle of your thumb.</p>
             </div>
@@ -413,6 +449,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">4</div>
                 <img src="bicep.jpeg" alt="Measuring Bicep">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Bicep</h3>
                 <p>Measure around the fullest part of your bicep with your arm relaxed.</p>
             </div>
@@ -420,6 +457,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">5</div>
                 <img src="wrist.jpeg" alt="Measuring Wrist">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Wrist</h3>
                 <p>Measure snugly around the fullest part of your wrist.</p>
             </div>
@@ -427,6 +465,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">6</div>
                 <img src="chest.jpeg" alt="Measuring Chest">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Chest</h3>
                 <p>Measure around the fullest part of your chest. Ensure the tape is level and firm around the body.</p>
             </div>
@@ -434,6 +473,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">7</div>
                 <img src="belly.jpeg" alt="Measuring Belly">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Belly</h3>
                 <p>Measure around the widest part of your stomach, typically right across or just above the belly button area.</p>
             </div>
@@ -441,6 +481,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">8</div>
                 <img src="waist.jpeg" alt="Measuring Waist">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Waist</h3>
                 <p>Measure around your natural waistline at the exact level where you normally wear your trousers' belt.</p>
             </div>
@@ -448,6 +489,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">9</div>
                 <img src="hip.jpeg" alt="Measuring Hip">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Hip</h3>
                 <p>Measure around your hips and the largest part of your buttocks.</p>
             </div>
@@ -455,6 +497,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">10</div>
                 <img src="jacket_length.jpeg" alt="Measuring Jacket Length">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Jacket Length</h3>
                 <p>Measure vertically from the base of the back of your neck down to the point where your thumb knuckle rests.</p>
             </div>
@@ -462,6 +505,7 @@
             <div class="measurement-card">
                 <div class="measurement-number">11</div>
                 <img src="trouser_length.jpeg" alt="Measuring Trousers Length">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Trousers Length</h3>
                 <p>Measure from the top of your waistband down your outer leg to your desired ankle length.</p>
             </div>
@@ -469,9 +513,16 @@
             <div class="measurement-card">
                 <div class="measurement-number">12</div>
                 <img src="thigh.jpeg" alt="Measuring Thigh">
+                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
                 <h3>Thigh</h3>
                 <p>Measure around your upper thigh at its widest point just below the crotch.</p>
             </div>
+        </div>
+
+        <!-- Lightbox Modal Overlay -->
+        <div id="image-modal">
+            <span id="modal-close">&times;</span>
+            <img id="modal-img" alt="Enlarged Measurement View">
         </div>
 
         <div class="faq-section">
@@ -503,13 +554,13 @@
         </div>
     </main>
 
-    <!-- Standalone Footer (Footer Component Disconnected) -->
+    <!-- Standalone Footer -->
     <footer class="standalone-footer">
         <p>&copy; 2026 Mr. Sewing Fashion. All Rights Reserved.</p>
         <p>KN 2 Ave, Nyarugenge, Kigali, Rwanda | Tel: +250 787 411 501</p>
     </footer>
 
-    <!-- Component Loader Script -->
+    <!-- Component Loader & Lightbox Script -->
     <script>
         (async function loadComponents() {
           const mount = document.getElementById('site-header');
@@ -524,6 +575,31 @@
             mount.dataset.loaded = 'false';
           }
         })();
+
+        // Lightbox Image Viewer Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const closeBtn = document.getElementById('modal-close');
+
+            document.querySelectorAll('.measurement-card img').forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+                    modalImg.alt = img.alt;
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
     </script>
 
 </body>
