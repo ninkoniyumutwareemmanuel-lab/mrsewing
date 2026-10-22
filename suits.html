@@ -13,6 +13,8 @@
   <meta name="geo.region" content="RW-01">
   <meta name="geo.placename" content="Kigali, Rwanda">
   <meta name="theme-color" content="#0b0b0b">
+  
+  <!-- Primary Canonical Tag -->
   <link rel="canonical" href="https://mrsewingfashion.com/suits.html">
 
   <!-- Logo shown in browser tabs and Google search results -->
@@ -301,6 +303,9 @@
       .action-btn { font-size: 0.58rem; padding: 5px 2px; }
     }
   </style>
+
+  <!-- Fallback Canonical Tag for Crawler Parsers -->
+  <link rel="canonical" href="https://mrsewingfashion.com/suits.html">
 </head>
 
 <body id="top">
@@ -471,7 +476,7 @@
         const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
         const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
 
-        const card = document.createElement('article');
+        const card = document.article || document.createElement('article');
         card.className = 'gallery-card';
 
         // Check if image exists before rendering
