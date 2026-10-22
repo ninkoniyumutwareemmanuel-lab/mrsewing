@@ -29,7 +29,7 @@
     <meta property="og:url" content="https://mrsewingfashion.com/m-classicsuits.html">
     <meta property="og:locale" content="en_US">
 
-    <!-- Google Structured Data (Product / TailoredGarment Schema) -->
+    <!-- Google Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -107,9 +107,81 @@
         .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
         .collection-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
         .collection-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
-        .collection-img-box { width: 100%; height: 380px; background-color: #0f0f0f; overflow: hidden; position: relative; }
-        .collection-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .collection-card:hover .collection-img-box img { transform: scale(1.04); }
+
+        /* Horizontal Slider Image Box */
+        .collection-img-box {
+            width: 100%;
+            height: 380px;
+            background-color: #0f0f0f;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+        .slider-track::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+        .slide-item {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+        }
+        .slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Slider Controls (Arrows) */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: var(--accent-gold);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 5;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .slider-btn:hover {
+            background-color: var(--accent-gold);
+            color: #000;
+        }
+        .slider-prev { left: 10px; }
+        .slider-next { right: 10px; }
+
+        .slider-hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.75);
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            border: 1px solid var(--border-color);
+        }
+
         .collection-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .collection-content h3 { color: var(--text-main); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
         .collection-content p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
@@ -155,29 +227,45 @@
         <!-- TWO-PIECE SECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Two-Piece Classic Suits</h2>
         <div class="collection-grid">
+            <!-- Suit 1 -->
             <div class="collection-card">
                 <div class="collection-img-box">
-                    <img src="mensuit1.jpeg" alt="Executive Navy Single-Breasted Classic Suit Kigali">
+                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-track">
+                        <div class="slide-item"><img src="mensuit1.jpeg" alt="Executive Navy Classic - Front"></div>
+                        <div class="slide-item"><img src="mensuit2.jpeg" alt="Executive Navy Classic - Angle"></div>
+                        <div class="slide-item"><img src="mensuit3.jpeg" alt="Executive Navy Classic - Detail"></div>
+                    </div>
+                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
                 </div>
                 <div class="collection-content">
                     <div>
                         <h3>The Presidential Navy Classic (2-Piece)</h3>
                         <p>Deep executive navy wool featuring a 2-button front, double back vents, and tailored trousers.</p>
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
             </div>
 
+            <!-- Suit 2 -->
             <div class="collection-card">
                 <div class="collection-img-box">
-                    <img src="mensuit2.jpeg" alt="Diplomatic Charcoal Grey Classic Suit Kigali">
+                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-track">
+                        <div class="slide-item"><img src="mensuit2.jpeg" alt="Diplomatic Charcoal Suit - Front"></div>
+                        <div class="slide-item"><img src="mensuit1.jpeg" alt="Diplomatic Charcoal Suit - Angle"></div>
+                        <div class="slide-item"><img src="mensuit3.jpeg" alt="Diplomatic Charcoal Suit - Detail"></div>
+                    </div>
+                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
                 </div>
                 <div class="collection-content">
                     <div>
                         <h3>The Diplomatic Charcoal Suit (2-Piece)</h3>
                         <p>Immaculate charcoal grey fabric tailored for high-stakes boardrooms and state functions with clean lines.</p>
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
             </div>
         </div>
@@ -185,16 +273,24 @@
         <!-- THREE-PIECE SECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Three-Piece Classic Suits</h2>
         <div class="collection-grid">
+            <!-- Suit 3 -->
             <div class="collection-card">
                 <div class="collection-img-box">
-                    <img src="mensuit3.jpeg" alt="Executive Jet Black Classic Suit Kigali">
+                    <button class="slider-btn slider-prev" onclick="slideCard(this, -1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-track">
+                        <div class="slide-item"><img src="mensuit3.jpeg" alt="Executive Jet Black 3-Piece - Front"></div>
+                        <div class="slide-item"><img src="mensuit1.jpeg" alt="Executive Jet Black 3-Piece - Angle"></div>
+                        <div class="slide-item"><img src="mensuit2.jpeg" alt="Executive Jet Black 3-Piece - Detail"></div>
+                    </div>
+                    <button class="slider-btn slider-next" onclick="slideCard(this, 1)"><i class="fas fa-chevron-right"></i></button>
+                    <span class="slider-hint"><i class="fas fa-arrows-alt-h"></i> Slide to view more</span>
                 </div>
                 <div class="collection-content">
                     <div>
                         <h3>The Executive Jet Black Classic (3-Piece)</h3>
                         <p>Authoritative jet black single-breasted jacket, matching waistcoat/vest, and trousers with hand-finished detailing.</p>
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
                 </div>
             </div>
         </div>
@@ -217,6 +313,13 @@
                 console.error('Header load error:', err);
             }
         })();
+
+        // Horizontal Slider Navigation Function
+        function slideCard(button, direction) {
+            const track = button.parentElement.querySelector('.slider-track');
+            const cardWidth = track.clientWidth;
+            track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
