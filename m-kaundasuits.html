@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Men's Kaunda Suits &amp; Statesman Tailoring | Mr. Sewing Kigali</title>
+    <title>Men's Kaunda & Safari Suits | Mr. Sewing Kigali</title>
     
     <!-- SEO Meta Tags & Keywords for Google Ranking -->
-    <meta name="description" content="Discover executive men's Kaunda suits in Kigali, Rwanda. Inspired by iconic statesman presidential style, bespoke tailoring by Mr. Sewing.">
-    <meta name="keywords" content="Kaunda suit Kigali, statesman suit Rwanda, presidential suit style Kigali, African statesman tailoring Nyarugenge, Mr Sewing Kaunda collection">
+    <meta name="description" content="Discover executive men's Kaunda and Safari suits in Kigali, Rwanda. Inspired by iconic statesman presidential style, bespoke short-sleeve and long-sleeve tailoring by Mr. Sewing.">
+    <meta name="keywords" content="Kaunda suit Kigali, Safari suit Rwanda, short sleeve Kaunda suit, long sleeve safari suit Kigali, statesman suit Rwanda, presidential suit style Kigali, African statesman tailoring Nyarugenge, Mr Sewing Kaunda collection">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="geo.region" content="RW-01">
@@ -22,8 +22,8 @@
 
     <!-- Open Graph / Link Preview Tags -->
     <meta property="og:site_name" content="Mr. Sewing">
-    <meta property="og:title" content="Men's Kaunda Suits &amp; Statesman Tailoring | Mr. Sewing Kigali">
-    <meta property="og:description" content="Iconic African statesman presidential Kaunda suits custom-tailored in Kigali, Rwanda.">
+    <meta property="og:title" content="Men's Kaunda & Safari Suits | Mr. Sewing Kigali">
+    <meta property="og:description" content="Iconic African statesman presidential Kaunda & Safari suits custom-tailored in Kigali, Rwanda.">
     <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mrsewingfashion.com/m-kaundasuits.html">
@@ -38,14 +38,14 @@
           "@type": "WebPage",
           "@id": "https://mrsewingfashion.com/m-kaundasuits.html#webpage",
           "url": "https://mrsewingfashion.com/m-kaundasuits.html",
-          "name": "Men's Kaunda Suits & Statesman Tailoring | Mr. Sewing",
-          "description": "Executive men's Kaunda suits in Kigali, Rwanda."
+          "name": "Men's Kaunda & Safari Suits | Mr. Sewing",
+          "description": "Executive men's Kaunda and Safari suits in Kigali, Rwanda."
         },
         {
           "@type": "Product",
-          "name": "Men's Presidential Kaunda Suit",
+          "name": "Men's Presidential Kaunda & Safari Suit",
           "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
-          "description": "Traditional African statesman Kaunda suit featuring signature structured mandarin collar, four front pockets, and dignified presidential tailoring.",
+          "description": "Traditional African statesman Kaunda and Safari suit featuring signature structured collar, four front patch pockets, and dignified presidential tailoring.",
           "brand": {
             "@type": "Brand",
             "name": "Mr. Sewing"
@@ -92,18 +92,155 @@
         .craft-col ul { list-style-position: inside; padding-left: 0; }
         .craft-col li { margin-bottom: 0.4rem; }
 
-        /* Gallery Grid */
-        .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
-        .collection-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
-        .collection-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
-        .collection-img-box { width: 100%; height: 380px; background-color: #0f0f0f; overflow: hidden; position: relative; }
-        .collection-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .collection-card:hover .collection-img-box img { transform: scale(1.04); }
-        .collection-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .collection-content h3 { color: var(--text-main); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
-        .collection-content p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        /* Section Headings for Compositions */
+        .section-category-title {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+        }
 
-        .btn-gold { display: inline-block; background-color: var(--accent-gold); color: #000000; padding: 0.8rem 1.5rem; text-align: center; text-decoration: none; border-radius: 4px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: background-color 0.3s ease; width: 100%; }
+        /* Horizontal Card Swiper Container */
+        .swiper-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .collection-swiper {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 10px 5px 20px 5px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-gold) var(--border-color);
+        }
+
+        .collection-swiper::-webkit-scrollbar {
+            height: 8px;
+        }
+        .collection-swiper::-webkit-scrollbar-track {
+            background: var(--card-bg);
+            border-radius: 4px;
+        }
+        .collection-swiper::-webkit-scrollbar-thumb {
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+
+        /* Individual Card Item inside Swiper */
+        .collection-card {
+            flex: 0 0 320px;
+            width: 320px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            scroll-snap-align: start;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collection-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .collection-img-box {
+            width: 100%;
+            height: 380px;
+            background-color: #0f0f0f;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collection-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover .collection-img-box img {
+            transform: scale(1.04);
+        }
+
+        .collection-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .collection-content h3 {
+            color: var(--text-main);
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .collection-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Swiper Navigation Buttons */
+        .swiper-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            background-color: rgba(20, 20, 20, 0.9);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .swiper-btn:hover {
+            background-color: var(--accent-gold);
+            color: #000000;
+        }
+
+        .swiper-prev { left: -20px; }
+        .swiper-next { right: -20px; }
+
+        @media (max-width: 768px) {
+            .swiper-btn { display: none; }
+            .collection-card { flex: 0 0 85vw; width: 85vw; }
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #000000;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
         .btn-gold:hover { background-color: var(--accent-gold-hover); }
 
         .standalone-footer { background-color: #0b0b0b; border-top: 1px solid var(--border-color); padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
@@ -117,71 +254,157 @@
     <main class="container">
         <div class="page-title">
             <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo">
-            <h1>Men's Kaunda Suits</h1>
-            <p>The timeless symbol of African presidential prestige and statesman dignity. Masterfully tailored in Kigali.</p>
+            <h1>Men's Kaunda &amp; Safari Suits</h1>
+            <p>The timeless symbol of African presidential prestige and statesman dignity. Masterfully tailored in Short-Sleeve and Long-Sleeve options in Kigali.</p>
         </div>
 
         <!-- Design Breakdown -->
         <div class="craft-overview">
             <div class="craft-col">
                 <h3><i class="fas fa-landmark"></i> Statesman Heritage</h3>
-                <p>Inspired by the iconic presidential style worn by legendary African leaders like Kenneth Kaunda. This distinguished suit is the ultimate statement of African diplomatic leadership and authority.</p>
+                <p>Inspired by the iconic presidential style worn by legendary African leaders like Kenneth Kaunda. Also known internationally as the Safari suit, this attire represents high-level diplomatic leadership.</p>
             </div>
             <div class="craft-col">
                 <h3><i class="fas fa-sliders-h"></i> Signature Details</h3>
                 <ul>
-                    <li><strong>Collar:</strong> Structured mandarin/stand-up collar design.</li>
-                    <li><strong>Pockets:</strong> Signature four-pocket front configuration with flaps.</li>
-                    <li><strong>Closure:</strong> Clean buttoned front placket designed to be worn without a tie.</li>
-                    <li><strong>Dignity:</strong> Impeccable drape and commanding posture.</li>
+                    <li><strong>Collar:</strong> Structured open-collar or stand-up shirt collar design.</li>
+                    <li><strong>Pockets:</strong> Signature four-pocket front configuration with buttoned flaps.</li>
+                    <li><strong>Closure:</strong> Clean buttoned front placket designed to be worn comfortably without a tie.</li>
+                    <li><strong>Sleeve Cuts:</strong> Available in Short-Sleeve and Long-Sleeve tailored styles.</li>
                 </ul>
             </div>
             <div class="craft-col">
                 <h3><i class="fas fa-award"></i> Presidential Prestige</h3>
-                <p>Crafted for senior statesmen, government officials, and leaders who embrace classic African presidential elegance.</p>
+                <p>Crafted for senior statesmen, government officials, and business leaders who embrace classic African presidential elegance.</p>
             </div>
         </div>
 
-        <!-- Collection Gallery Grid -->
-        <div class="collection-grid">
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <img src="mensuit10.jpeg" alt="Presidential Kaunda Suit Kigali">
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Presidential Statesman Kaunda Suit</h3>
-                        <p>Traditional four-pocket design featuring a sharp mandarin collar and authoritative bespoke tailoring.</p>
+        <!-- SECTION 1: SHORT-SLEEVE KAUNDA / SAFARI SUITS -->
+        <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Short-Sleeve Kaunda &amp; Safari Suits</h2>
+        <div class="swiper-container">
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="collection-swiper">
+                <!-- Card 1 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundashort1.jpeg" alt="The Azure Presidential Short-Sleeve Kaunda Suit">
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Azure Presidential Kaunda</h3>
+                            <p>Classic sky-blue short-sleeve Kaunda tunic featuring silver metallic buttons and four signature front patch pockets.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <img src="mensuit11.jpeg" alt="Executive Diplomatic Kaunda Suit Kigali">
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Diplomatic Executive Kaunda</h3>
-                        <p>Refined executive fabric tailored with immaculate precision for high-profile official duties and gatherings.</p>
+                <!-- Card 2 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundashort2.jpeg" alt="The Diplomatic Olive Safari Suit">
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Diplomatic Olive Safari</h3>
+                            <p>Distinguished short-sleeve olive green safari suit with refined pocket pleats and structured shoulder line.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <img src="mensuit12.jpeg" alt="Classic Heritage Kaunda Suit Kigali">
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Heritage Statesman Classic</h3>
-                        <p>An enduring classic honoring African leadership heritage with supreme comfort and distinguished presence.</p>
+                <!-- Card 3 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundashort3.jpeg" alt="The Obsidian Heritage Kaunda Suit">
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Obsidian Heritage Kaunda</h3>
+                            <p>Authoritative black short-sleeve tunic tailored with immaculate precision for formal official engagements.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundashort4.jpeg" alt="The Ivory Executive Safari Suit">
+                    </div>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Ivory Executive Safari</h3>
+                            <p>Sleek tan and cream short-sleeve safari ensemble crafted from breathable wool for daytime warmth and comfort.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
                 </div>
             </div>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- SECTION 2: LONG-SLEEVE KAUNDA / SAFARI SUITS -->
+        <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Long-Sleeve Kaunda &amp; Safari Suits</h2>
+        <div class="swiper-container">
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <div class="collection-swiper">
+                <!-- Card 5 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundalong1.jpeg" alt="The Royal Blue Statesman Long-Sleeve Kaunda Suit">
+                    </div>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Royal Blue Statesman Kaunda</h3>
+                            <p>Full long-sleeve Kaunda jacket tailored with structured cuffs, open collar, and four matching flap pockets.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundalong2.jpeg" alt="The Charcoal Ambassador Long-Sleeve Safari Suit">
+                    </div>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Charcoal Ambassador Safari</h3>
+                            <p>Executive charcoal grey long-sleeve safari suit engineered for high-profile state functions and ceremonies.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundalong3.jpeg" alt="The Forest Green Presidential Kaunda Suit">
+                    </div>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Forest Green Presidential Kaunda</h3>
+                            <p>Commanding deep green long-sleeve presidential tunic built for timeless African statesman dignity.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="m-kaundalong4.jpeg" alt="The Imperial Midnight Safari Suit">
+                    </div>
+                    <div class="collection-content">
+                        <div>
+                            <h3>The Imperial Midnight Safari</h3>
+                            <p>Sophisticated dark navy long-sleeve safari suit with custom button detailing and clean tailored trousers.</p>
+                        </div>
+                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                    </div>
+                </div>
+            </div>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
 
@@ -202,6 +425,13 @@
                 console.error('Header load error:', err);
             }
         })();
+
+        // Horizontal Card Swiper Scroll Function
+        function scrollSwiper(button, direction) {
+            const container = button.parentElement.querySelector('.collection-swiper');
+            const scrollAmount = 340 * direction;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
