@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men's Modern &amp; Avant-Garde Suits | Mr. Sewing Kigali</title>
     
-    <!-- SEO Meta Tags & Keywords for Google Ranking -->
+    <!-- SEO Meta Tags & Keywords -->
     <meta name="description" content="Discover men's modern custom suits and avant-garde tailored designs in Kigali, Rwanda. Non-traditional bespoke tailoring crafted to your unique vision by Mr. Sewing.">
     <meta name="keywords" content="Men modern suit Kigali, avant garde tailoring Rwanda, creative custom suit Kigali, unique bespoke suit Nyarugenge, Mr Sewing modern collection">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
@@ -92,7 +92,7 @@
         .craft-col ul { list-style-position: inside; padding-left: 0; }
         .craft-col li { margin-bottom: 0.4rem; }
 
-        /* Section Headings for Compositions */
+        /* Section Headings */
         .section-category-title {
             font-size: clamp(1.2rem, 2.5vw, 1.6rem);
             color: #ffffff;
@@ -133,7 +133,7 @@
             border-radius: 4px;
         }
 
-        /* Individual Card Item inside Swiper */
+        /* Individual Card Item */
         .collection-card {
             flex: 0 0 320px;
             width: 320px;
@@ -362,4 +362,34 @@
                     </div>
                 </div>
             </div>
-            <button class
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer class="standalone-footer">
+        <p>&copy; 2026 Mr. Sewing Fashion. All Rights Reserved.</p>
+        <p>KN 2 Ave, Nyarugenge, Kigali, Rwanda | Tel: +250 787 411 501</p>
+    </footer>
+
+    <script>
+        (async function loadHeader() {
+            const mount = document.getElementById('site-header');
+            if (!mount) return;
+            try {
+                const response = await fetch('header.html', { cache: 'no-cache' });
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                mount.innerHTML = await response.text();
+            } catch (err) {
+                console.error('Header load error:', err);
+            }
+        })();
+
+        // Horizontal Card Swiper Scroll Function
+        function scrollSwiper(button, direction) {
+            const container = button.parentElement.querySelector('.collection-swiper');
+            const scrollAmount = 340 * direction;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
