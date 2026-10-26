@@ -176,7 +176,7 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .collection-content h3 {
@@ -190,7 +190,7 @@
         .collection-content p {
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0;
         }
 
         /* Swiper Navigation Buttons */
@@ -226,23 +226,6 @@
             .collection-card { flex: 0 0 85vw; width: 85vw; }
         }
 
-        .btn-gold {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: #000000;
-            padding: 0.8rem 1.5rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
-        .btn-gold:hover { background-color: var(--accent-gold-hover); }
-
         .standalone-footer { background-color: #0b0b0b; border-top: 1px solid var(--border-color); padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
     </style>
 </head>
@@ -253,7 +236,7 @@
 
     <main class="container">
         <div class="page-title">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo" width="90" height="90">
             <h1>Men's Double-Breasted Suits</h1>
             <p>The epitome of sartorial distinction. Structured with wide peak lapels, overlapping button stance, and authoritative elegance in Classic and Modern cuts.</p>
         </div>
@@ -281,193 +264,157 @@
         <!-- SECTION 1: EXECUTIVE TWO-PIECE DOUBLE-BREASTED COLLECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Executive Two-Piece Double-Breasted Suits</h2>
         <div class="swiper-container">
-            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
             <div class="collection-swiper">
-                <!-- Card 1: Black 6-on-2 with Silver Buttons -->
+                <!-- Card 1 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo1.jpeg" alt="The Obsidian Sovereign Double-Breasted Suit">
+                        <img src="m-doublebreastedsuittwo1.jpeg" alt="The Obsidian Sovereign Double-Breasted Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Obsidian Sovereign Double-Breasted</h3>
-                            <p>Commanding deep black tailored suit featuring a prominent 6-button stance with silver buttons and broad peak lapels.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Obsidian Sovereign Double-Breasted</h3>
+                        <p>Commanding deep black tailored suit featuring a prominent 6-button stance with silver buttons and broad peak lapels.</p>
                     </div>
                 </div>
 
-                <!-- Card 2: Peach / Off-White 6-on-2 -->
+                <!-- Card 2 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo2.jpeg" alt="The Ivory Boardroom Double-Breasted Suit">
+                        <img src="m-doublebreastedsuittwo2.jpeg" alt="The Ivory Boardroom Double-Breasted Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Ivory Boardroom Double-Breasted</h3>
-                            <p>Refined cream and peach tone composition engineered with broad peak lapels for high-stakes executive presence.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Ivory Boardroom Double-Breasted</h3>
+                        <p>Refined cream and peach tone composition engineered with broad peak lapels for high-stakes executive presence.</p>
                     </div>
                 </div>
 
-                <!-- Card 3: Light Grey Pinstripe / Micro-Pattern -->
+                <!-- Card 3 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo3.jpeg" alt="The Diplomatic Silver Stripe Suit">
+                        <img src="m-doublebreastedsuittwo3.jpeg" alt="The Diplomatic Silver Stripe Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Diplomatic Silver Stripe</h3>
-                            <p>Sophisticated light grey double-breasted suit featuring subtle pinstripes tailored for formal state ceremonies.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Diplomatic Silver Stripe</h3>
+                        <p>Sophisticated light grey double-breasted suit featuring subtle pinstripes tailored for formal state ceremonies.</p>
                     </div>
                 </div>
 
-                <!-- Card 4: Two-Tone Mint Green & Royal Blue Split -->
+                <!-- Card 4 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo4.jpeg" alt="The Modern Dual-Tone Sovereign Suit">
+                        <img src="m-doublebreastedsuittwo4.jpeg" alt="The Modern Dual-Tone Sovereign Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Modern Dual-Tone Sovereign</h3>
-                            <p>Distinctive half-mint and half-royal-blue double-breasted creation built for fashion-forward leaders.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Modern Dual-Tone Sovereign</h3>
+                        <p>Distinctive half-mint and half-royal-blue double-breasted creation built for fashion-forward leaders.</p>
                     </div>
                 </div>
             </div>
-            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
 
         <!-- SECTION 2: PRESIDENTIAL TWO-PIECE DOUBLE-BREASTED COLLECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Presidential Two-Piece Double-Breasted Suits</h2>
         <div class="swiper-container">
-            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
             <div class="collection-swiper">
-                <!-- Card 5: Deep Royal Blue 6-on-2 with Gold Buttons -->
+                <!-- Card 5 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo5.jpeg" alt="The Royal Ambassador Navy Double-Breasted Suit">
+                        <img src="m-doublebreastedsuittwo5.jpeg" alt="The Royal Ambassador Navy Double-Breasted Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Royal Ambassador Navy</h3>
-                            <p>Exquisite rich blue tailoring featuring bold metallic gold buttons designed for state delegates and VIP engagements.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Royal Ambassador Navy</h3>
+                        <p>Exquisite rich blue tailoring featuring bold metallic gold buttons designed for state delegates and VIP engagements.</p>
                     </div>
                 </div>
 
-                <!-- Card 6: Slate Grey Low 2-Button Stance -->
+                <!-- Card 6 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo6.jpeg" alt="The Imperial Slate Peak Lapel Suit">
+                        <img src="m-doublebreastedsuittwo6.jpeg" alt="The Imperial Slate Peak Lapel Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Imperial Slate Peak Lapel</h3>
-                            <p>Distinguished slate grey double-breasted cut with a low-button stance and clean structured canvas roll.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Imperial Slate Peak Lapel</h3>
+                        <p>Distinguished slate grey double-breasted cut with a low-button stance and clean structured canvas roll.</p>
                     </div>
                 </div>
 
-                <!-- Card 7: Sky Blue 4-on-2 Stance -->
+                <!-- Card 7 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo7.jpeg" alt="The Statesman Sky Blue Double-Breasted Suit">
+                        <img src="m-doublebreastedsuittwo7.jpeg" alt="The Statesman Sky Blue Double-Breasted Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Statesman Sky Blue</h3>
-                            <p>Bright sky blue double-breasted suit featuring soft texture wool engineered for prestige and daytime galas.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Statesman Sky Blue</h3>
+                        <p>Bright sky blue double-breasted suit featuring soft texture wool engineered for prestige and daytime galas.</p>
                     </div>
                 </div>
 
-                <!-- Card 8: Black Tuxedo with Silver Stud Detailing -->
+                <!-- Card 8 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo8.jpeg" alt="The Supreme Studded Gala Double-Breasted Suit">
+                        <img src="m-doublebreastedsuittwo8.jpeg" alt="The Supreme Studded Gala Double-Breasted Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Supreme Studded Gala</h3>
-                            <p>Impeccable black double-breasted evening tuxedo adorned with custom silver stud accents and silk lapels.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Supreme Studded Gala</h3>
+                        <p>Impeccable black double-breasted evening tuxedo adorned with custom silver stud accents and silk lapels.</p>
                     </div>
                 </div>
             </div>
-            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
 
         <!-- SECTION 3: MODERN DOUBLE-BREASTED COLLECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Modern Double-Breasted Suits</h2>
         <div class="swiper-container">
-            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
             <div class="collection-swiper">
-                <!-- Card 9: Light Grey Asymmetric Wrap Cut with Pants -->
+                <!-- Card 9 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo9.jpeg" alt="The Avant-Garde Asymmetric Grey Suit">
+                        <img src="m-doublebreastedsuittwo9.jpeg" alt="The Avant-Garde Asymmetric Grey Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Avant-Garde Asymmetric Grey</h3>
-                            <p>Innovative light grey double-breasted ensemble featuring an off-center wrap structure and modern waist tie.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Avant-Garde Asymmetric Grey</h3>
+                        <p>Innovative light grey double-breasted ensemble featuring an off-center wrap structure and modern waist tie.</p>
                     </div>
                 </div>
 
-                <!-- Card 10: Cobalt Blue Tied Wrap Double-Breasted -->
+                <!-- Card 10 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo10.jpeg" alt="The Contemporary Cobalt Sash Suit">
+                        <img src="m-doublebreastedsuittwo10.jpeg" alt="The Contemporary Cobalt Sash Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Contemporary Cobalt Sash</h3>
-                            <p>Vibrant blue double-breasted jacket designed with a fresh sash tie closure and sleek structured lapels.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Contemporary Cobalt Sash</h3>
+                        <p>Vibrant blue double-breasted jacket designed with a fresh sash tie closure and sleek structured lapels.</p>
                     </div>
                 </div>
 
-                <!-- Card 11: Electric Sky Blue Angled Pocket Cut -->
+                <!-- Card 11 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo11.jpeg" alt="The Signature Azure Angular Suit">
+                        <img src="m-doublebreastedsuittwo11.jpeg" alt="The Signature Azure Angular Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Signature Azure Angular</h3>
-                            <p>Commanding light azure blue double-breasted cut featuring wide sweeping lapels and asymmetric pocket design.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Signature Azure Angular</h3>
+                        <p>Commanding light azure blue double-breasted cut featuring wide sweeping lapels and asymmetric pocket design.</p>
                     </div>
                 </div>
 
-                <!-- Card 12: Midnight Navy Buckled Wrap Tuxedo -->
+                <!-- Card 12 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-doublebreastedsuittwo12.jpeg" alt="The Urban Buckled Executive Suit">
+                        <img src="m-doublebreastedsuittwo12.jpeg" alt="The Urban Buckled Executive Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Urban Buckled Executive</h3>
-                            <p>Striking dark navy double-breasted tuxedo featuring a silver buckle waist closure and contrasting trim.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Urban Buckled Executive</h3>
+                        <p>Striking dark navy double-breasted tuxedo featuring a silver buckle waist closure and contrasting trim.</p>
                     </div>
                 </div>
             </div>
-            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
 
