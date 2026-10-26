@@ -176,7 +176,7 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .collection-content h3 {
@@ -190,7 +190,7 @@
         .collection-content p {
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0;
         }
 
         /* Swiper Navigation Buttons */
@@ -226,23 +226,6 @@
             .collection-card { flex: 0 0 85vw; width: 85vw; }
         }
 
-        .btn-gold {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: #000000;
-            padding: 0.8rem 1.5rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
-        .btn-gold:hover { background-color: var(--accent-gold-hover); }
-
         .standalone-footer { background-color: #0b0b0b; border-top: 1px solid var(--border-color); padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
     </style>
 </head>
@@ -253,7 +236,7 @@
 
     <main class="container">
         <div class="page-title">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo" width="90" height="90">
             <h1>Men's Classic Single-Breasted Suits</h1>
             <p>The universal standard of presidential authority and diplomatic presence. Flawlessly tailored in Two-Piece and Three-Piece options for the modern executive in Kigali.</p>
         </div>
@@ -278,132 +261,108 @@
             </div>
         </div>
 
-        <!-- TWO-PIECE SECTION (4 Cards Horizontal Swiper Above) -->
+        <!-- TWO-PIECE SECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Two-Piece Classic Suits</h2>
         <div class="swiper-container">
-            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
             <div class="collection-swiper">
                 <!-- Card 1 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuittwo1.jpeg" alt="The Royal Olive Executive Suit">
+                        <img src="m-classicsuittwo1.jpeg" alt="The Royal Olive Executive Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Royal Olive Executive</h3>
-                            <p>Sophisticated green tailored suit featuring a sharp two-button stance and refined structure for distinguished leadership.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Royal Olive Executive</h3>
+                        <p>Sophisticated green tailored suit featuring a sharp two-button stance and refined structure for distinguished leadership.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuittwo2.jpeg" alt="The Ivory Diplomatic Suit">
+                        <img src="m-classicsuittwo2.jpeg" alt="The Ivory Diplomatic Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Ivory Diplomatic</h3>
-                            <p>Elegant tan and off-white composition engineered for high-stakes boardrooms and state diplomatic meetings.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Ivory Diplomatic</h3>
+                        <p>Elegant tan and off-white composition engineered for high-stakes boardrooms and state diplomatic meetings.</p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuittwo3.jpeg" alt="The Sovereign Royal Blue Suit">
+                        <img src="m-classicsuittwo3.jpeg" alt="The Sovereign Royal Blue Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Sovereign Royal Blue</h3>
-                            <p>Rich blue tone crafted with structured canvas and breathable wool for evening ceremonies and gala events.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Sovereign Royal Blue</h3>
+                        <p>Rich blue tone crafted with structured canvas and breathable wool for evening ceremonies and gala events.</p>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuittwo4.jpeg" alt="The Modern Blush Executive Suit">
+                        <img src="m-classicsuittwo4.jpeg" alt="The Modern Blush Executive Suit" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Modern Blush Executive</h3>
-                            <p>Sleek soft pink single-breasted silhouette with sharp lapels and immaculate hand-finished detailing for an authoritative profile.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Modern Blush Executive</h3>
+                        <p>Sleek soft pink single-breasted silhouette with sharp lapels and immaculate hand-finished detailing for an authoritative profile.</p>
                     </div>
                 </div>
             </div>
-            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
 
-        <!-- THREE-PIECE SECTION (4 Cards Horizontal Swiper Below) -->
+        <!-- THREE-PIECE SECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Three-Piece Classic Suits</h2>
         <div class="swiper-container">
-            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
             <div class="collection-swiper">
                 <!-- Card 1 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuitthree1.jpeg" alt="The Sky Presidential 3-Piece">
+                        <img src="m-classicsuitthree1.jpeg" alt="The Sky Presidential 3-Piece" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Sky Presidential 3-Piece</h3>
-                            <p>Complete light blue three-piece masterpiece featuring a structured matching waistcoat, jacket, and tailored trousers.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Sky Presidential 3-Piece</h3>
+                        <p>Complete light blue three-piece masterpiece featuring a structured matching waistcoat, jacket, and tailored trousers.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuitthree2.jpeg" alt="The Royal Ambassador Sage 3-Piece">
+                        <img src="m-classicsuitthree2.jpeg" alt="The Royal Ambassador Sage 3-Piece" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Royal Ambassador Sage 3-Piece</h3>
-                            <p>Exquisite light green tailoring designed for ambassadors and senior delegates seeking unmatched elegance and warmth.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Royal Ambassador Sage 3-Piece</h3>
+                        <p>Exquisite light green tailoring designed for ambassadors and senior delegates seeking unmatched elegance and warmth.</p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuitthree3.jpeg" alt="The Forest Statesman 3-Piece">
+                        <img src="m-classicsuitthree3.jpeg" alt="The Forest Statesman 3-Piece" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Forest Statesman 3-Piece</h3>
-                            <p>Deep forest green composition with tailored vest, offering superior posture support and timeless prestige.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Forest Statesman 3-Piece</h3>
+                        <p>Deep forest green composition with tailored vest, offering superior posture support and timeless prestige.</p>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="collection-card">
                     <div class="collection-img-box">
-                        <img src="m-classicsuitthree4.jpeg" alt="The Supreme Royal Blue 3-Piece">
+                        <img src="m-classicsuitthree4.jpeg" alt="The Supreme Royal Blue 3-Piece" loading="lazy">
                     </div>
                     <div class="collection-content">
-                        <div>
-                            <h3>The Supreme Royal Blue 3-Piece</h3>
-                            <p>Commanding royal blue three-piece ensemble built with premium imported wool and refined gold detail accents.</p>
-                        </div>
-                        <a href="m-classicsuits-details.html" class="btn-gold"><i class="fas fa-eye"></i> View Details</a>
+                        <h3>The Supreme Royal Blue 3-Piece</h3>
+                        <p>Commanding royal blue three-piece ensemble built with premium imported wool and refined gold detail accents.</p>
                     </div>
                 </div>
             </div>
-            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
 
