@@ -13,9 +13,9 @@
       "@type": "Product",
       "name": "Bespoke Women's Graduation Suit",
       "image": [
-        "https://mrsewingfashion.com/1000814423.jpg",
-        "https://mrsewingfashion.com/1000814424.jpg",
-        "https://mrsewingfashion.com/1000814425.jpg"
+        "https://mrsewingfashion.com/h1.jpeg",
+        "https://mrsewingfashion.com/h2.jpeg",
+        "https://mrsewingfashion.com/h3.jpeg"
       ],
       "description": "Custom-built women's graduation suit featuring structured shoulder lines, precision tailoring, and signature house seal finish.",
       "brand": {
@@ -47,14 +47,8 @@
 
       <div class="customers-interactive-container">
         <div class="client-spotlight-card">
-          <div class="spotlight-slider-wrapper">
-            <button class="spotlight-arrow prev" onclick="scrollSpotlight(-1)" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
-            <div class="spotlight-slider-track" id="spotlightTrack">
-              <img src="1000814423.jpg" alt="Graduation Client in Custom Off-White Suit - Full Front View" class="spotlight-image" loading="lazy">
-              <img src="1000814424.jpg" alt="Graduation Client in Custom Off-White Suit - Side Profile" class="spotlight-image" loading="lazy">
-              <img src="1000814425.jpg" alt="Graduation Client with Diploma Scroll - Front View" class="spotlight-image" loading="lazy">
-            </div>
-            <button class="spotlight-arrow next" onclick="scrollSpotlight(1)" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+          <div class="spotlight-image-wrapper">
+            <img src="h1.jpeg" alt="Graduation Client in Custom Off-White Suit - Main Feature" class="spotlight-image" loading="lazy">
           </div>
 
           <div class="spotlight-content">
@@ -77,6 +71,8 @@
       </div>
 
       <div class="customers-slider" id="customersSlider">
+        <div class="customer-card-slide"><img src="h2.jpeg" alt="Graduation Client Profile View" class="suit-image" loading="lazy"></div>
+        <div class="customer-card-slide"><img src="h3.jpeg" alt="Graduation Client with Diploma Scroll" class="suit-image" loading="lazy"></div>
         <div class="customer-card-slide"><img src="r2.jpeg" alt="Client review r2" class="suit-image" loading="lazy"></div>
         <div class="customer-card-slide"><img src="r3.jpeg" alt="Client review r3" class="suit-image" loading="lazy"></div>
         <div class="customer-card-slide"><img src="r4.jpeg" alt="Client review r4" class="suit-image" loading="lazy"></div>
@@ -84,8 +80,6 @@
         <div class="customer-card-slide"><img src="r6.jpeg" alt="Client review r6" class="suit-image" loading="lazy"></div>
         <div class="customer-card-slide"><img src="r7.jpeg" alt="Client review r7" class="suit-image" loading="lazy"></div>
         <div class="customer-card-slide"><img src="r8.jpeg" alt="Client review r8" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r9.jpeg" alt="Client review r9" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r10.jpeg" alt="Client review r10" class="suit-image" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -122,31 +116,8 @@
   
   .client-spotlight-card { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; width: 100%; }
   
-  .spotlight-slider-wrapper { position: relative; width: 100%; overflow: hidden; background-color: #0f0f0f; }
-  .spotlight-slider-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .spotlight-slider-track::-webkit-scrollbar { display: none; }
-  .spotlight-image { flex: 0 0 100%; width: 100%; height: auto; max-height: 520px; object-fit: contain; scroll-snap-align: start; display: block; }
-  
-  .spotlight-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(20, 20, 20, 0.85);
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 5;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .spotlight-arrow:hover { background-color: #d4af37; color: #000000; }
-  .spotlight-arrow.prev { left: 12px; }
-  .spotlight-arrow.next { right: 12px; }
+  .spotlight-image-wrapper { width: 100%; background-color: #0f0f0f; }
+  .spotlight-image { width: 100%; height: auto; max-height: 520px; object-fit: contain; display: block; }
 
   .spotlight-content { padding: 20px; text-align: left; }
   .spotlight-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #d4af37; font-weight: 600; display: block; margin-bottom: 6px; }
@@ -189,13 +160,6 @@
 </style>
 
 <script>
-  function scrollSpotlight(direction) {
-    const track = document.getElementById('spotlightTrack');
-    if (!track) return;
-    const scrollAmount = track.clientWidth * direction;
-    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  }
-
   function scrollGallery(direction) {
     const slider = document.getElementById('customersSlider');
     if (!slider) return;
