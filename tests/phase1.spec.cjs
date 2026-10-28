@@ -41,6 +41,25 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
       assert.deepEqual(missingAnchors, [], file + ' in-page anchors');
     }
     console.log(`PASS: ${fullPages.length} complete pages; ${references} rendered local references resolve.`);
+    const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+    assert.equal((sitemap.match(/<loc>https:\/\/mrsewingfashion\.com\/<\/loc>/g) || []).length, 1);
+    assert(!sitemap.includes('https://mrsewingfashion.com/index.html'));
+    for (const pathname of ['', 'index.html']) {
+      await page.goto(base + pathname);
+      const home = page.locator('header nav a[href="/"]');
+      await home.waitFor();
+      assert.equal(await home.getAttribute('aria-current'), 'page');
+      assert.equal(await page.locator('head link[rel="canonical"]').count(), 1);
+      assert.equal(await page.locator('head link[rel="canonical"]').getAttribute('href'), 'https://mrsewingfashion.com/');
+    }
+    await page.goto(base + 'mensuits.html');
+    await page.locator('header nav a[href="/"]').click();
+    await page.waitForURL(base);
+    await page.goto(base + 'mensuits.html');
+    await page.locator('header .order-btn').click();
+    await page.waitForURL(base + '#orderModal');
+    assert(await page.locator('#orderModal').evaluate(el => el.classList.contains('open')));
+    console.log('PASS: root-only sitemap homepage, root Home navigation, active states for / and /index.html, and order-modal fallback.');
     for (const file of ['suits.html','mensuits.html','womensuits.html','reviews.html']) {
       await page.goto(base + file);
       const trigger = page.locator('.design-preview').first(); await trigger.click();

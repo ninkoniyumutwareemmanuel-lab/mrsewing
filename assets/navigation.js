@@ -12,7 +12,8 @@
     queued = false;
     document.querySelectorAll('header nav a').forEach(link => {
       const current = location.pathname.split('/').pop() || 'index.html';
-      if (new URL(link.href).pathname.split('/').pop() === current) {
+      const target = new URL(link.href).pathname.split('/').pop() || 'index.html';
+      if (target === current) {
         link.setAttribute('aria-current', 'page'); link.classList.add('active');
       }
     });

@@ -238,7 +238,7 @@
 
   <!-- Header -->
   <div id="site-header"></div>
-  <script>fetch("header.html").then(response => { if (!response.ok) throw new Error("Header unavailable"); return response.text(); }).then(html => { document.getElementById("site-header").innerHTML = html; }).catch(() => { document.getElementById("site-header").innerHTML = '<nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="suits.html">Suits</a> · <a href="contact.html">Contact Us</a></nav>'; });</script>
+  <script>fetch("header.html").then(response => { if (!response.ok) throw new Error("Header unavailable"); return response.text(); }).then(html => { document.getElementById("site-header").innerHTML = html; }).catch(() => { document.getElementById("site-header").innerHTML = '<nav aria-label="Main navigation"><a href="/">Home</a> · <a href="suits.html">Suits</a> · <a href="contact.html">Contact Us</a></nav>'; });</script>
 
   <!-- Booking Form Wrapper -->
   <main class="booking-wrapper">
@@ -323,7 +323,7 @@
         <i class="fas fa-calendar-check"></i>
         <h3>Booking Request Received!</h3>
         <p>Thank you for booking with Mr. Sewing. Your consultation details have been submitted. You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us on this number, call or WhatsApp: +250 787 411 501.</p>
-        <a href="index.html" class="back-home-btn">Return to Homepage</a>
+        <a href="/" class="back-home-btn">Return to Homepage</a>
       </div>
     </div>
   </main>
