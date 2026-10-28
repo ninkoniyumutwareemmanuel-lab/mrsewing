@@ -103,19 +103,128 @@
             margin: 40px 0 20px;
         }
 
-        /* Gallery Grid */
-        .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .collection-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
-        .collection-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
-        .collection-img-box { width: 100%; height: 380px; background-color: #0f0f0f; overflow: hidden; position: relative; }
-        .collection-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .collection-card:hover .collection-img-box img { transform: scale(1.04); }
-        .collection-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .collection-content h3 { color: var(--text-main); font-size: 1.15rem; text-transform: uppercase; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
-        .collection-content p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        /* Horizontal Card Swiper Container */
+        .swiper-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
 
-        .btn-gold { display: inline-block; background-color: var(--accent-gold); color: #000000; padding: 0.8rem 1.5rem; text-align: center; text-decoration: none; border-radius: 4px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: background-color 0.3s ease; width: 100%; }
-        .btn-gold:hover { background-color: var(--accent-gold-hover); }
+        .collection-swiper {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 10px 5px 20px 5px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-gold) var(--border-color);
+        }
+
+        .collection-swiper::-webkit-scrollbar {
+            height: 8px;
+        }
+        .collection-swiper::-webkit-scrollbar-track {
+            background: var(--card-bg);
+            border-radius: 4px;
+        }
+        .collection-swiper::-webkit-scrollbar-thumb {
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+
+        /* Individual Card Item inside Swiper */
+        .collection-card {
+            flex: 0 0 320px;
+            width: 320px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            scroll-snap-align: start;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collection-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .collection-img-box {
+            width: 100%;
+            height: 380px;
+            background-color: #0f0f0f;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collection-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover .collection-img-box img {
+            transform: scale(1.04);
+        }
+
+        .collection-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .collection-content h3 {
+            color: var(--text-main);
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .collection-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Swiper Navigation Buttons */
+        .swiper-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            background-color: rgba(20, 20, 20, 0.9);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .swiper-btn:hover {
+            background-color: var(--accent-gold);
+            color: #000000;
+        }
+
+        .swiper-prev { left: -20px; }
+        .swiper-next { right: -20px; }
+
+        @media (max-width: 768px) {
+            .swiper-btn { display: none; }
+            .collection-card { flex: 0 0 85vw; width: 85vw; }
+        }
 
         .standalone-footer { background-color: #0b0b0b; border-top: 1px solid var(--border-color); padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
     </style>
@@ -127,7 +236,7 @@
 
     <main class="container">
         <div class="page-title">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="about-logo" width="90" height="90">
             <h1>Women's Classic Executive Suits</h1>
             <p>Authoritative power dressing and refined tailoring tailored in Two-Piece and Three-Piece options designed for female diplomats, executives, and leaders in Kigali.</p>
         </div>
@@ -154,49 +263,106 @@
 
         <!-- TWO-PIECE SECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Two-Piece Classic Suits</h2>
-        <div class="collection-grid">
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <img src="womensuit1.jpeg" alt="Women Executive Classic Pant Suit Kigali">
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Executive Classic Pant Suit (2-Piece)</h3>
-                        <p>Immaculate single-breasted blazer paired with expertly tailored trousers and a clean chest pocket.</p>
+        <div class="swiper-container">
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="collection-swiper">
+                <!-- Card 1 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuittwo1.jpeg" alt="The Executive Ivory Classic Pant Suit" loading="lazy">
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <div class="collection-content">
+                        <h3>The Executive Ivory Pant Suit</h3>
+                        <p>Immaculate single-breasted off-white blazer paired with expertly tailored trousers and sharp structured lapels.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <img src="womensuit2.jpeg" alt="Diplomatic Women Skirt Suit Kigali">
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Diplomatic Skirt Suit (2-Piece)</h3>
-                        <p>Sophisticated blazer and matching pencil skirt set designed for high-level diplomatic events and leadership roles.</p>
+                <!-- Card 2 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuittwo2.jpeg" alt="The Diplomatic Crimson Skirt Suit" loading="lazy">
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <div class="collection-content">
+                        <h3>The Diplomatic Crimson Suit</h3>
+                        <p>Sophisticated deep red blazer and matching trousers set designed for high-level state events and leadership roles.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuittwo3.jpeg" alt="The Sovereign Royal Blue Pant Suit" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>The Sovereign Royal Blue</h3>
+                        <p>Commanding royal blue tailored pant suit crafted with a clean single-button stance for high-impact presence.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuittwo4.jpeg" alt="The Obsidian Executive Pant Suit" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>The Obsidian Executive</h3>
+                        <p>Timeless black executive suit featuring precision-cut shoulder lines and all-day boardroom comfort.</p>
+                    </div>
                 </div>
             </div>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
 
         <!-- THREE-PIECE SECTION -->
         <h2 class="section-category-title"><i class="fas fa-layer-group"></i> Three-Piece Classic Suits</h2>
-        <div class="collection-grid">
-            <div class="collection-card">
-                <div class="collection-img-box">
-                    <img src="womensuit3.jpeg" alt="Modern Executive Blazer Kigali">
-                </div>
-                <div class="collection-content">
-                    <div>
-                        <h3>The Modern Boardroom 3-Piece Set</h3>
-                        <p>A versatile single-breasted classic blazer with matching waistcoat/vest and tailored trousers for ultimate professional elegance.</p>
+        <div class="swiper-container">
+            <button class="swiper-btn swiper-prev" onclick="scrollSwiper(this, -1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="collection-swiper">
+                <!-- Card 1 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuitthree1.jpeg" alt="The Sky Boardroom 3-Piece Suit" loading="lazy">
                     </div>
-                    <a href="measurement-submission.html" class="btn-gold"><i class="fas fa-ruler-combined"></i> Customize This Style</a>
+                    <div class="collection-content">
+                        <h3>The Sky Boardroom 3-Piece</h3>
+                        <p>Complete light blue three-piece ensemble with matching tailored waistcoat, blazer, and sleek trousers.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuitthree2.jpeg" alt="The Forest Ambassador 3-Piece Suit" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>The Forest Ambassador 3-Piece</h3>
+                        <p>Rich forest green custom suit featuring structured vest lines engineered for supreme comfort and distinction.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuitthree3.jpeg" alt="The Imperial Charcoal 3-Piece Suit" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>The Imperial Charcoal 3-Piece</h3>
+                        <p>Authoritative dark charcoal composition featuring a contoured vest cut and luxury wool finish.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="collection-card">
+                    <div class="collection-img-box">
+                        <img src="w-classicsuitthree4.jpeg" alt="The Monarch Burgundy 3-Piece Suit" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>The Monarch Burgundy 3-Piece</h3>
+                        <p>Deep burgundy three-piece tailored creation crafted for VIP delegate appearances and formal galas.</p>
+                    </div>
                 </div>
             </div>
+            <button class="swiper-btn swiper-next" onclick="scrollSwiper(this, 1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </main>
 
@@ -217,6 +383,13 @@
                 console.error('Header load error:', err);
             }
         })();
+
+        // Horizontal Card Swiper Scroll Function
+        function scrollSwiper(button, direction) {
+            const container = button.parentElement.querySelector('.collection-swiper');
+            const scrollAmount = 340 * direction;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
