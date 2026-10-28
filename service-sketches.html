@@ -29,51 +29,72 @@
   <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
   <meta property="og:locale" content="en_US">
 
-  <!-- Google Structured Data (JSON-LD LocalBusiness / Tailor Schema) -->
+  <!-- Google Structured Data (JSON-LD ClothingStore Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Tailor",
-        "name": "Mr. Sewing Fashion",
+        "@type": "ClothingStore",
+        "name": "Mr Sewing Fashion",
         "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
-        "@id": "https://mrsewingfashion.com/#tailor",
+        "@id": "https://mrsewingfashion.com/#organization",
         "url": "https://mrsewingfashion.com/",
-        "telephone": "+250 787 411 501",
+        "telephone": "+250787411501",
         "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "KN 2 Ave, Nyarugenge",
-          "addressLocality": "Kigali",
-          "addressRegion": "Kigali City",
-          "addressCountry": "RW"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -1.9441,
-          "longitude": 30.0619
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "08:00",
-          "closes": "20:00"
-        },
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "MIC Building, Downtown",
+            "addressLocality": "Nyarugenge, Kigali",
+            "addressCountry": "RW"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "KN 441 St, Norvège",
+            "addressLocality": "Nyarugenge, Kigali",
+            "addressCountry": "RW"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "https://schema.org/Monday",
+              "https://schema.org/Tuesday",
+              "https://schema.org/Wednesday",
+              "https://schema.org/Thursday",
+              "https://schema.org/Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "https://schema.org/Saturday",
+              "https://schema.org/Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "00:00"
+          }
+        ],
         "sameAs": [
-          "https://www.instagram.com/mr_sewing_fashion"
+          "https://www.instagram.com/mr_sewing_fashion",
+          "https://www.facebook.com/share/19tDCGATYj/",
+          "https://www.tiktok.com/@mrsewingfashion",
+          "https://youtube.com/@mr.sewingfashiondesigner"
+        ],
+        "email": "mrsewingfashiondesigner@gmail.com",
+        "logo": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+        "areaServed": [
+          "Kigali",
+          "Rwanda"
         ]
       }
     ]
   }
-  </script>
+</script>
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

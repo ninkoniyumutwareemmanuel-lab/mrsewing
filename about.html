@@ -48,12 +48,14 @@
         "@id": "https://mrsewingfashion.com/about.html#webpage",
         "url": "https://mrsewingfashion.com/about.html",
         "name": "About Us | Mr. Sewing",
-        "about": { "@id": "https://mrsewingfashion.com/#organization" }
+        "about": {
+          "@id": "https://mrsewingfashion.com/#organization"
+        }
       },
       {
         "@type": "ClothingStore",
         "@id": "https://mrsewingfashion.com/#organization",
-        "name": "Mr. Sewing",
+        "name": "Mr Sewing Fashion",
         "alternateName": [
           "Mr. Sewing Fashion",
           "Mr. Fashion",
@@ -67,19 +69,56 @@
           "@type": "Organization",
           "name": "NINKONIYUMUTWARE NEXUS LTD"
         },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "KN 441 St, Norvège, Karama",
-          "addressLocality": "Nyarugenge, Kigali",
-          "addressCountry": "RW"
-        },
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "MIC Building, Downtown",
+            "addressLocality": "Nyarugenge, Kigali",
+            "addressCountry": "RW"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "KN 441 St, Norvège",
+            "addressLocality": "Nyarugenge, Kigali",
+            "addressCountry": "RW"
+          }
+        ],
         "telephone": "+250787411501",
-        "email": "Mrsewingfashiondesgner@gmail.com",
+        "email": "mrsewingfashiondesigner@gmail.com",
         "sameAs": [
-          "https://www.facebook.com/share/19tDCGATYj/",
           "https://www.instagram.com/mr_sewing_fashion",
+          "https://www.facebook.com/share/19tDCGATYj/",
           "https://www.tiktok.com/@mrsewingfashion",
           "https://youtube.com/@mr.sewingfashiondesigner"
+        ],
+        "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+        "priceRange": "$$",
+        "areaServed": [
+          "Kigali",
+          "Rwanda"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "https://schema.org/Monday",
+              "https://schema.org/Tuesday",
+              "https://schema.org/Wednesday",
+              "https://schema.org/Thursday",
+              "https://schema.org/Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "https://schema.org/Saturday",
+              "https://schema.org/Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "00:00"
+          }
         ]
       },
       {
@@ -110,7 +149,7 @@
       }
     ]
   }
-  </script>
+</script>
 
   <style>
     :root { --black:#0b0b0b; --dark:#141414; --gold:#d4af37; --white:#f5f5f5; --grey:#aaaaaa; --border:#2a2a2a; }

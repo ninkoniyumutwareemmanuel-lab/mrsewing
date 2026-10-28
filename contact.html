@@ -7,7 +7,7 @@
     
     <!-- Comprehensive SEO Meta Tags & Master Keywords for Google Ranking -->
     <meta name="description" content="Contact Mr. Sewing Fashion (mr_sewing_fashion / Mr. Fashion) in Kigali, Rwanda. Visit our bespoke tailoring workshop in Nyarugenge or book an appointment at the MIC Building Downtown. Call/WhatsApp +250 787 411 501 for custom suits, alterations, and mobile fittings.">
-    <meta name="keywords" content="Mr. Sewing, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion, Mr Sewing Fashion Designer, tailor in Kigali, tailor in Rwanda, bespoke tailor in Kigali, custom suit in Kigali, best tailor in Kigali, tailor shop near me, tailor Nyarugenge, tailor MIC building Kigali, tailor Norvege Kigali, suit alterations Kigali, clothes adjustment Kigali, mobile tailor Kigali, WhatsApp +250787411501, Mrsewingfashiondesgner@gmail.com">
+    <meta name="keywords" content="Mr. Sewing, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion, Mr Sewing Fashion Designer, tailor in Kigali, tailor in Rwanda, bespoke tailor in Kigali, custom suit in Kigali, best tailor in Kigali, tailor shop near me, tailor Nyarugenge, tailor MIC building Kigali, tailor Norvege Kigali, suit alterations Kigali, clothes adjustment Kigali, mobile tailor Kigali, WhatsApp +250787411501, mrsewingfashiondesigner@gmail.com">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="geo.region" content="RW-01">
@@ -44,15 +44,18 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://mrsewingfashion.com/#localbusiness",
-          "name": "Mr. Sewing Fashion",
+          "@type": "ClothingStore",
+          "@id": "https://mrsewingfashion.com/#organization",
+          "name": "Mr Sewing Fashion",
           "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
           "url": "https://mrsewingfashion.com/",
           "telephone": "+250787411501",
-          "email": "Mrsewingfashiondesgner@gmail.com",
+          "email": "mrsewingfashiondesigner@gmail.com",
           "priceRange": "$$",
-          "areaServed": ["Kigali", "Rwanda"],
+          "areaServed": [
+            "Kigali",
+            "Rwanda"
+          ],
           "address": [
             {
               "@type": "PostalAddress",
@@ -71,22 +74,32 @@
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
+                "https://schema.org/Monday",
+                "https://schema.org/Tuesday",
+                "https://schema.org/Wednesday",
+                "https://schema.org/Thursday",
+                "https://schema.org/Friday"
               ],
               "opens": "09:00",
               "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "https://schema.org/Saturday",
+                "https://schema.org/Sunday"
+              ],
+              "opens": "00:00",
+              "closes": "00:00"
             }
           ],
           "sameAs": [
-            "https://www.facebook.com/share/19tDCGATYj/",
             "https://www.instagram.com/mr_sewing_fashion",
+            "https://www.facebook.com/share/19tDCGATYj/",
             "https://www.tiktok.com/@mrsewingfashion",
             "https://youtube.com/@mr.sewingfashiondesigner"
-          ]
+          ],
+          "logo": "https://mrsewingfashion.com/MR%20LOGO.jpeg"
         },
         {
           "@type": "SiteNavigationElement",
@@ -116,7 +129,7 @@
         }
       ]
     }
-    </script>
+</script>
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -296,8 +309,8 @@
             <div class="contact-card">
                 <h3>Email Us</h3>
                 <p>Send us your questions, measurement details, or custom design requests.</p>
-                <a href="mailto:Mrsewingfashiondesgner@gmail.com?subject=Inquiry%20Regarding%20Bespoke%20Tailoring&body=Hello%20Mr.%20Sewing,%0A%0AI%20would%20like%20to%20inquire%20about..." style="word-break: break-all; font-weight: bold; color: var(--accent-gold);">Mrsewingfashiondesgner@gmail.com</a>
-                <a href="mailto:Mrsewingfashiondesgner@gmail.com?subject=Inquiry%20Regarding%20Bespoke%20Tailoring&body=Hello%20Mr.%20Sewing,%0A%0AI%20would%20like%20to%20inquire%20about..." class="btn">Send Email</a>
+                <a href="mailto:mrsewingfashiondesigner@gmail.com?subject=Inquiry%20Regarding%20Bespoke%20Tailoring&body=Hello%20Mr.%20Sewing,%0A%0AI%20would%20like%20to%20inquire%20about..." style="word-break: break-all; font-weight: bold; color: var(--accent-gold);">mrsewingfashiondesigner@gmail.com</a>
+                <a href="mailto:mrsewingfashiondesigner@gmail.com?subject=Inquiry%20Regarding%20Bespoke%20Tailoring&body=Hello%20Mr.%20Sewing,%0A%0AI%20would%20like%20to%20inquire%20about..." class="btn">Send Email</a>
             </div>
 
             <!-- Workshop Location Card -->
@@ -319,8 +332,7 @@
             <div class="contact-card" style="grid-column: 1 / -1;">
                 <h3>Working Hours</h3>
                 <p><strong>Monday – Friday:</strong> 9:00 AM – 5:00 PM</p>
-                <p><strong>Saturday &amp; Sunday:</strong> Booking / Call Required</p>
-                <p style="font-size: 0.9rem; color: var(--accent-gold); margin-top: 0.5rem;"><em>Note: Closed on the last Saturday of the month for Umuganda.</em></p>
+                <p><strong>Saturday &amp; Sunday:</strong> Closed</p>
             </div>
         </div>
     </main>

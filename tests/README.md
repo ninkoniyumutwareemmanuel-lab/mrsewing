@@ -40,3 +40,32 @@ metadata isolation, hero preloading, deferred scripts, image sizing/lazy loading
 absence of runtime component requests, navigation without JavaScript, slider
 controls and WhatsApp consent. The WhatsApp destination is observed locally and
 its navigation is prevented; no messages are sent.
+
+## Business structured data
+
+`_data/business.json` is the shared business identity, contacts and confirmed
+working schedule. It reuses the existing contact-page branch addresses and phone;
+no coordinates, reviews or ratings are invented. Weekend `00:00`/`00:00` entries
+explicitly mean closed, not 24-hour opening. Legitimate about-page extra fields
+and nonbusiness product/FAQ/navigation data remain separate.
+
+After an authorized business-information change:
+
+```sh
+python3 scripts/sync_business_schema.py
+python3 scripts/build_homepage.py
+python3 tests/business_schema.py
+```
+
+The synchronizer updates static JSON-LD, not runtime scripts or form-service
+account settings. Public email addresses/mailto links and visible hours must
+also match the confirmed information. The static tests can additionally validate
+all declared types, properties and domains against an official Schema.org
+all-layer Turtle vocabulary downloaded separately:
+
+```sh
+python3 tests/business_schema.py --vocabulary /path/to/schemaorg-all-https.ttl
+```
+
+No network request or new package dependency is needed by either script. These
+checks do not promise Google rich-result eligibility or verify mailbox delivery.

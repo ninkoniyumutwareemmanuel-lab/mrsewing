@@ -1,0 +1,52 @@
+{
+  "@type": "ClothingStore",
+  "@id": "https://mrsewingfashion.com/#organization",
+  "name": "Mr Sewing Fashion",
+  "url": "https://mrsewingfashion.com/",
+  "telephone": "+250787411501",
+  "email": "mrsewingfashiondesigner@gmail.com",
+  "logo": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+  "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+  "priceRange": "$$",
+  "areaServed": ["Kigali", "Rwanda"],
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "MIC Building, Downtown",
+      "addressLocality": "Nyarugenge, Kigali",
+      "addressCountry": "RW"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "KN 441 St, Norvège",
+      "addressLocality": "Nyarugenge, Kigali",
+      "addressCountry": "RW"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["https://schema.org/Saturday", "https://schema.org/Sunday"],
+      "opens": "00:00",
+      "closes": "00:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/mr_sewing_fashion",
+    "https://www.facebook.com/share/19tDCGATYj/",
+    "https://www.tiktok.com/@mrsewingfashion",
+    "https://youtube.com/@mr.sewingfashiondesigner"
+  ]
+}
