@@ -14,9 +14,9 @@
   <!-- Primary Self-Referencing Canonical Tag -->
   <link rel="canonical" href="https://mrsewingfashion.com/womensuits.html">
 
-  <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
+  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/logo-icon.png">
 
   <!-- Open Graph & Social Cards -->
   <meta property="og:site_name" content="Mr. Sewing">
@@ -375,6 +375,8 @@
   </div>
 
   <script>
+    const imageDelivery = {"w-classicsuitthree1.jpeg":"width=\"572\" height=\"715\" decoding=\"async\" srcset=\"w-classicsuitthree1.jpeg 572w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuitthree2.jpeg":"width=\"575\" height=\"715\" decoding=\"async\" srcset=\"w-classicsuitthree2.jpeg 575w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuitthree3.jpeg":"width=\"800\" height=\"715\" decoding=\"async\" srcset=\"assets/images/w-classicsuitthree3-480.webp 480w, w-classicsuitthree3.jpeg 800w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuitthree4.jpeg":"width=\"380\" height=\"530\" decoding=\"async\" srcset=\"w-classicsuitthree4.jpeg 380w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuittwo1.jpeg":"width=\"412\" height=\"715\" decoding=\"async\" srcset=\"w-classicsuittwo1.jpeg 412w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuittwo2.jpeg":"width=\"402\" height=\"715\" decoding=\"async\" srcset=\"w-classicsuittwo2.jpeg 402w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuittwo3.jpeg":"width=\"536\" height=\"715\" decoding=\"async\" srcset=\"w-classicsuittwo3.jpeg 536w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","w-classicsuittwo4.jpeg":"width=\"477\" height=\"715\" decoding=\"async\" srcset=\"w-classicsuittwo4.jpeg 477w\" sizes=\"(max-width: 700px) 100vw, 50vw\""};
+
     // Verified photographs and descriptions from the existing classic collection.
     const twoPiecePhotos = [
       { file: "w-classicsuittwo1.jpeg", title: "The Executive Ivory Pant Suit", subtitle: "Immaculate single-breasted off-white blazer paired with expertly tailored trousers and sharp structured lapels." },
@@ -431,7 +433,7 @@
         card.innerHTML = `
           <div class="photo-img-wrapper">
             <button type="button" class="design-preview image-preview" data-design-image="${photo.file}">
-              <img src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
+              <img ${imageDelivery[photo.file] || ''} src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
             </button>
           </div>
           <div class="photo-info">

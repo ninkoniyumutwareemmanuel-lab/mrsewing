@@ -18,9 +18,9 @@
   <link rel="canonical" href="https://mrsewingfashion.com/mensuits.html">
 
   <!-- Logo shown in browser tabs and Google search results -->
-  <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
+  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/logo-icon.png">
 
   <!-- Link preview (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:site_name" content="Mr. Sewing">
@@ -316,6 +316,8 @@
   <div id="site-footer" class="site-component"></div>
 
   <script>
+    const imageDelivery = {"m1.jpeg":"width=\"715\" height=\"715\" decoding=\"async\" srcset=\"assets/images/m1-480.webp 480w, m1.jpeg 715w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","m2.jpeg":"width=\"628\" height=\"658\" decoding=\"async\" srcset=\"assets/images/m2-480.webp 480w, m2.jpeg 628w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","m3.jpeg":"width=\"572\" height=\"715\" decoding=\"async\" srcset=\"m3.jpeg 572w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","m4.jpeg":"width=\"657\" height=\"658\" decoding=\"async\" srcset=\"assets/images/m4-480.webp 480w, m4.jpeg 657w\" sizes=\"(max-width: 700px) 100vw, 50vw\"","m5.jpeg":"width=\"704\" height=\"938\" decoding=\"async\" srcset=\"assets/images/m5-480.webp 480w, m5.jpeg 704w\" sizes=\"(max-width: 700px) 100vw, 50vw\""};
+
     // Two-Piece Suits Registry
     const twoPiecePhotos = [
       { id: "2p-1", file: "m1.jpeg", title: "EXECUTIVE TWO-PIECE", subtitle: "Two-Piece Suit Line" },
@@ -370,7 +372,7 @@
         card.innerHTML = `
           <div class="photo-img-wrapper">
             <button type="button" class="design-preview image-preview" data-design-image="${photo.file}">
-              <img src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
+              <img ${imageDelivery[photo.file] || ''} src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
             </button>
           </div>
           <div class="photo-info">

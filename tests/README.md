@@ -94,3 +94,37 @@ The browser checks verify unique reviewed metadata, one H1 per standalone page,
 rendered content outlines (including dynamically generated portfolio headings),
 and all 32 pages at desktop/mobile widths. Run the existing homepage, business
 schema and full regression suites as well before a staging push.
+
+## Image delivery and performance
+
+Original photographs, logos, video files and gallery enquiry source URLs remain
+unchanged. Responsive WebP candidates are used only when smaller than their
+originals; existing JPEGs remain full-resolution fallbacks. The logo uses lossless
+WebP, and its favicon uses a small proportional PNG. No image service or visitor
+runtime dependency is added.
+
+Authoring requires Pillow (available in the development environment):
+
+```sh
+python3 scripts/optimize_images.py
+python3 scripts/apply_image_delivery.py
+python3 scripts/build_homepage.py
+python3 tests/image_assets.py
+node tests/image-delivery.spec.cjs
+```
+
+Review any newly added gallery files when regenerating: the four dynamic gallery
+attribute maps are generated at authoring time. No runtime manifest fetch or image
+observer is needed. Image dimensions reserve intrinsic space while existing CSS
+continues to control presentation. Existing autoplay videos remain autoplay;
+`preload="none"` alone does not suppress autoplay downloading. Only the below-fold
+consultation video defers its source until it approaches the viewport. Existing
+video bytes and playback settings are retained.
+
+Performance evidence uses local Chromium, external requests blocked, three cold
+runs per page/viewport with 100ms latency, 1.6Mbit/s download and 4x CPU slowdown.
+A fixed eight-second observation after DOMContentLoaded reports local LCP/CLS/FCP;
+resource byte totals include completed resources only, not in-flight video
+transfers. These are diagnostic synthetic samples, not Lighthouse scores,
+production Core Web Vitals, or real-user INP measurements. Shared host scheduling,
+blocked external icon CSS/fonts, video playback and cache state limit comparisons.

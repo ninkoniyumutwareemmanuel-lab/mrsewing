@@ -16,9 +16,9 @@
   <link rel="canonical" href="https://mrsewingfashion.com/service-sketches.html">
 
   <!-- Logo shown in browser tabs -->
-  <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="shortcut icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
+  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="shortcut icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/logo-icon.png">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:site_name" content="Mr. Sewing">
@@ -357,9 +357,9 @@
           </div>
           <div class="sketches-media-box">
               <!-- Video 1: sketching-process.mp4 -->
-              <video autoplay muted loop playsinline aria-label="Master designer sketching suit design animation">
+              <video preload="none" autoplay muted loop playsinline aria-label="Master designer sketching suit design animation">
                   <source src="sketching-process.mp4" type="video/mp4">
-                  <img src="s1.jpeg" alt="Mr. Sewing Custom Design &amp; Sketch Consultations Kigali">
+                  <img src="s1.jpeg" alt="Mr. Sewing Custom Design &amp; Sketch Consultations Kigali" width="977" height="1024" decoding="async" srcset="assets/images/s1-480.webp 480w, s1.jpeg 977w" sizes="(max-width: 700px) 100vw, 50vw">
               </video>
           </div>
       </section>
@@ -393,10 +393,16 @@
               </div>
               <div class="sketches-media-box">
                   <!-- Video 2: consultation-discussion.mp4 -->
-                  <video autoplay muted loop playsinline aria-label="Client and master tailor discussing custom suit design animation">
-                      <source src="consultation-discussion.mp4" type="video/mp4">
-                      <img src="s2.jpeg" alt="Mr. Sewing Design Consultation Discussion Kigali">
+                  <video id="consultation-video" preload="none" autoplay muted loop playsinline aria-label="Client and master tailor discussing custom suit design animation">
+                      <source data-src="consultation-discussion.mp4" type="video/mp4">
+                      <img src="s2.jpeg" alt="Mr. Sewing Design Consultation Discussion Kigali" loading="lazy" width="477" height="715" decoding="async" srcset="s2.jpeg 477w" sizes="(max-width: 700px) 100vw, 50vw">
                   </video>
+                  <noscript>
+                    <style>#consultation-video { display: none; }</style>
+                    <video preload="none" autoplay muted loop playsinline aria-label="Client and master tailor discussing custom suit design animation">
+                      <source src="consultation-discussion.mp4" type="video/mp4">
+                    </video>
+                  </noscript>
               </div>
           </div>
       </section>
@@ -510,5 +516,23 @@
     })();
   </script>
 
+  <script>
+    // Keep the off-screen consultation video out of the initial download.
+    (() => {
+      const source = document.querySelector('source[data-src]');
+      const video = source.closest('video');
+      const load = () => {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        video.load();
+        video.play().catch(() => {});
+      };
+      if (!('IntersectionObserver' in window)) { load(); return; }
+      const observer = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); load(); }
+      }, {rootMargin: '200px'});
+      observer.observe(video);
+    })();
+  </script>
 </body>
 </html>
