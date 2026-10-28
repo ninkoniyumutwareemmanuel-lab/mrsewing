@@ -302,18 +302,18 @@
     }
 
     /* Modal Overlay */
-    .modal-overlay { 
-      position: fixed; 
-      inset: 0; 
-      background: rgba(0, 0, 0, 0.85); 
-      display: none; 
-      align-items: center; 
-      justify-content: center; 
-      z-index: 99999; 
-      padding: 16px; 
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      padding: 16px;
     }
-    .modal-overlay.open { 
-      display: flex; 
+    .modal-overlay.open {
+      display: flex;
     }
     .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(24px, 4vw, 32px); padding-top: 48px; position: relative; box-sizing: border-box; text-align: left; }
     .modal-close { position: absolute; top: 8px; right: 10px; z-index: 5; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; background: #222222; border: 1px solid #444444; border-radius: 50%; color: #ffffff; font-size: 2rem; line-height: 1; cursor: pointer; }
@@ -484,9 +484,9 @@
 
       document.addEventListener('click', function (event) {
         const button = event.target.closest && event.target.closest('.order-btn');
-        if (button) { 
-          event.preventDefault(); 
-          openModal(); 
+        if (button) {
+          event.preventDefault();
+          openModal();
         }
       });
 
