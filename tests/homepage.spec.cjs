@@ -87,7 +87,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     await native.locator('h1').waitFor({state:'visible'});
     assert.equal(await native.locator('.service-card').count(), 6);
     assert.equal(await native.locator('.collection-item-card').count(), 7);
-    assert.equal(await native.locator('header nav a').count(), 9);
+    assert.equal(await native.locator('header nav a').count(), 8);
     await native.locator('.image-link').first().click();
     await native.waitForURL('**/m-classicsuits.html');
     await noJS.close();

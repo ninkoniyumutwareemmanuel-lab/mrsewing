@@ -128,3 +128,15 @@ resource byte totals include completed resources only, not in-flight video
 transfers. These are diagnostic synthetic samples, not Lighthouse scores,
 production Core Web Vitals, or real-user INP measurements. Shared host scheduling,
 blocked external icon CSS/fonts, video playback and cache state limit comparisons.
+
+The header regression suite verifies all 32 standalone pages at mobile/desktop
+widths, the original eight navigation destinations in order, absence of the
+header-only Book Consultation link, and preserved body/footer booking access:
+
+```sh
+node tests/header.spec.cjs
+```
+
+The image delivery suite covers the requested 320, 360, 390, 430, 768 and 1440px
+widths across ten representative pages. Neither suite submits live forms or
+opens external messaging destinations.
