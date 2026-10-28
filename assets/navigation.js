@@ -11,10 +11,13 @@
   function update() {
     queued = false;
     document.querySelectorAll('header nav a').forEach(link => {
-      const current = location.pathname.split('/').pop() || 'index.html';
-      const target = new URL(link.href).pathname.split('/').pop() || 'index.html';
+      const normalize = path => path.replace(/\/index\.html$/, '/').replace(/\.html$/, '/').replace(/\/?$/, '/');
+      const current = normalize(location.pathname);
+      const target = normalize(new URL(link.href).pathname);
       if (target === current) {
         link.setAttribute('aria-current', 'page'); link.classList.add('active');
+      } else {
+        link.removeAttribute('aria-current'); link.classList.remove('active');
       }
     });
   }

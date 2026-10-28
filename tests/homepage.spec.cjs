@@ -62,7 +62,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     await page.waitForFunction(() => document.getElementById('customersSlider').scrollLeft === 0);
     assert((await page.locator('.service-card').first().evaluate(card => getComputedStyle(card).transitionProperty)).includes('transform'));
     await page.locator('.hero-btn-secondary').click();
-    await page.waitForURL('**/booking.html');
+    await page.waitForURL('**/booking/');
     await page.goto(base);
     // Observe the intended WhatsApp action after the real handlers, then prevent navigation.
     await page.evaluate(() => document.getElementById('whatsappBtn').addEventListener('click', event => {
@@ -89,7 +89,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     assert.equal(await native.locator('.collection-item-card').count(), 7);
     assert.equal(await native.locator('header nav a').count(), 8);
     await native.locator('.image-link').first().click();
-    await native.waitForURL('**/m-classicsuits.html');
+    await native.waitForURL('**/m-classicsuits/');
     await noJS.close();
     assert.deepEqual(errors, []);
     console.log('PASS: homepage content, navigation and category links work without JavaScript; no page errors.');

@@ -8,7 +8,10 @@
   "logo": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
   "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
   "priceRange": "$$",
-  "areaServed": ["Kigali", "Rwanda"],
+  "areaServed": [
+    "Kigali",
+    "Rwanda"
+  ],
   "address": [
     {
       "@type": "PostalAddress",
@@ -35,12 +38,6 @@
       ],
       "opens": "09:00",
       "closes": "17:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["https://schema.org/Saturday", "https://schema.org/Sunday"],
-      "opens": "00:00",
-      "closes": "00:00"
     }
   ],
   "sameAs": [
@@ -48,5 +45,6 @@
     "https://www.facebook.com/share/19tDCGATYj/",
     "https://www.tiktok.com/@mrsewingfashion",
     "https://youtube.com/@mr.sewingfashiondesigner"
-  ]
+  ],
+  "disambiguatingDescription": "Saturday and Sunday consultations and visits to customer locations are available by advance appointment. Please arrange weekend appointments in advance; no fixed weekend opening hours are published."
 }

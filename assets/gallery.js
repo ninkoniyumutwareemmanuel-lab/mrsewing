@@ -7,7 +7,7 @@
   dialog.innerHTML = `<button type="button" class="design-close" aria-label="Close design preview">×</button>
     <h2 id="design-title"></h2><img class="design-photo" alt=""><p class="design-description" id="design-description"></p>
     <div class="design-actions"><a class="design-enquiry" target="_blank" rel="noopener">Enquire About This Design on WhatsApp</a>
-    <a class="design-booking" href="booking.html">Book Consultation</a><a href="contact.html">Contact Mr Sewing Fashion</a></div>`;
+    <a class="design-booking" href="/booking/">Book Consultation</a><a href="/contact/">Contact Mr Sewing Fashion</a></div>`;
   document.body.append(dialog);
   let opener;
   dialog.querySelector('.design-close').addEventListener('click', () => dialog.close());
@@ -36,12 +36,12 @@
     const description = card?.querySelector('.work-desc, .photo-subtitle-text, .collection-content p')?.textContent.trim() || '';
     const photo = dialog.querySelector('.design-photo');
     // Encode spaces, including the existing leading space in the r24 filename.
-    photo.src = new URL(encodeURI(file), location.href).href;
+    photo.src = new URL(encodeURI(file), document.baseURI).href;
     photo.alt = title;
     dialog.querySelector('h2').textContent = title;
     dialog.querySelector('.design-description').textContent = description;
     const message = `Hello Mr. Sewing, I would like to enquire about ${title}: ${photo.src}`;
-    dialog.querySelector('.design-booking').href = 'booking.html?design=' + encodeURIComponent(title) + '&photo=' + encodeURIComponent(file);
+    dialog.querySelector('.design-booking').href = '/booking/?design=' + encodeURIComponent(title) + '&photo=' + encodeURIComponent(file);
     dialog.querySelector('.design-enquiry').href = 'https://wa.me/250787411501?text=' + encodeURIComponent(message);
     dialog.showModal();
     dialog.querySelector('.design-close').focus();

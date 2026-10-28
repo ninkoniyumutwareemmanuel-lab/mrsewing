@@ -140,3 +140,60 @@ node tests/header.spec.cjs
 The image delivery suite covers the requested 320, 360, 390, 430, 768 and 1440px
 widths across ten representative pages. Neither suite submits live forms or
 opens external messaging destinations.
+
+## Phase 2: appointments and clean URLs
+
+The preferred URL format is `/page-name/` (trailing slash), with `/` for home.
+All 31 non-homepage standalone source documents generate a matching
+`page-name/index.html`; this uses ordinary GitHub Pages directory serving and
+needs no hosting configuration or runtime framework. Root `.html` documents
+remain authoring sources and full-content, canonicalized compatibility pages.
+Their early, exact-path browser redirect preserves the entire query string and
+fragment. It uses `location.replace`, so Back does not create redirect loops.
+The browser compatibility code provides **no HTTP 301 redirect**: locally, a
+legacy HTML request returns its content with HTTP 200. Cloudflare may add its own
+platform URL normalization; deployed HTTP behavior remains to be verified. Without JavaScript, that original content and its
+preferred canonical remain available. Canonicals and a single-route sitemap
+consolidate indexing signals; search-engine recrawling is still required.
+
+Generated directory pages contain `<base href="/">` so existing images, responsive
+candidates, inline CSS backgrounds, videos and shared header/footer fetches remain
+root-relative. Customer links and same-page fragment links are explicitly
+qualified to their clean route; do not introduce bare `href="#section"` into a
+directory page or resolve gallery images against `location.href`. The shared
+gallery uses `document.baseURI`. Root legacy files never redirect clean paths.
+
+Edit the original root HTML or homepage section/template, not generated directory
+copies. The metadata registry still uses the original source filenames as keys.
+For approved changes, run in this order and commit both sources and generated HTML:
+
+```sh
+python3 scripts/sync_business_schema.py
+python3 scripts/sync_page_seo.py
+python3 scripts/build_homepage.py
+python3 scripts/build_clean_urls.py
+python3 scripts/build_clean_urls.py --check
+python3 tests/clean_urls.py
+python3 tests/business_schema.py
+node tests/phase2.spec.cjs
+```
+
+Also run every existing browser suite and `tests/image_assets.py`. The Phase 2
+suite tests all 32 preferred/legacy routes, query/hash preservation, local
+normalization of directory paths without a slash, all 192 page/viewport
+combinations at 320/360/390/430/768/1440px, same-page anchors, no-JavaScript content,
+and eight intercepted Saturday/Sunday booking requests. The local directory
+normalization tests demonstrate expected static-server behavior; actual GitHub
+Pages/Cloudflare HTTP behavior must be verified after authorized deployment.
+
+Business schema lists fixed weekday hours only. Its
+`disambiguatingDescription` explicitly describes weekend consultations and
+customer-location visits by advance appointment, without inventing fixed weekend
+opening hours. Visible hours show Saturday/Sunday “By appointment”; no booking
+validation excludes weekends. This does not imply unrestricted weekend walk-ins.
+
+Staging deployment: push `phase2/website-corrections` for review. If Cloudflare
+continues to use `phase1/customer-journey-repairs`, first fetch/recheck that branch
+and only fast-forward it from Phase 2 without force-pushing. A new branch alone
+does not update the existing staging URL. Never change `main` or hosting/domain
+settings as part of a staging push.

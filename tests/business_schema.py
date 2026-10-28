@@ -94,8 +94,9 @@ def main():
                         assert day not in days, (path.name, 'duplicate day', day)
                         days[day] = (hours['opens'], hours['closes'])
                 expected = {day:('09:00','17:00') for day in ['Monday','Tuesday','Wednesday','Thursday','Friday']}
-                expected.update({day:('00:00','00:00') for day in ['Saturday','Sunday']})
                 assert days == expected, path.name
+                assert 'Saturday and Sunday' in node['disambiguatingDescription']
+                assert 'advance appointment' in node['disambiguatingDescription']
             assert count <= 1, (path.name, 'duplicate business entity')
             if count:
                 business_pages.append(path.name)
@@ -105,7 +106,7 @@ def main():
     assert all('Kigali' in address['addressLocality'] and address['addressCountry'] == 'RW' for address in common['address'])
     subprocess.run(['python3','scripts/sync_business_schema.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_homepage.py','--check'], cwd=ROOT, check=True)
-    print(f'PASS: {len(documents)} JSON-LD blocks parse; all 14 public business entities match the shared identity, email, addresses and seven-day schedule.')
+    print(f'PASS: {len(documents)} JSON-LD blocks parse; all 14 public business entities match the shared identity, email, addresses and weekday hours and weekend appointment availability.')
     if options.vocabulary:
         vocabulary_check(documents, options.vocabulary)
 

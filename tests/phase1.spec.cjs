@@ -25,7 +25,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
         const attr = node.tagName === 'A' ? 'href' : node.tagName === 'VIDEO' ? 'poster' : node.tagName === 'LINK' ? 'href' : 'src';
         const raw = node.getAttribute(attr);
         if (!raw || raw.startsWith('#')) return [];
-        return [new URL(raw, location.href).href];
+        return [new URL(raw, document.baseURI).href];
       }));
       for (const url of urls) {
         if (new URL(url).origin !== new URL(base).origin) continue;
