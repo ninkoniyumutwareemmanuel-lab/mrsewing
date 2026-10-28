@@ -32,7 +32,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
         const response = await context.request.get(url);
         assert(response.ok(), `${file}: ${url}: ${response.status()}`); references++;
       }
-      assert.equal(await page.locator('.customer-actions').count(), 1, file + ' customer navigation');
+      assert.equal(await page.locator('.customer-actions').count(), 0, file + ' has no extra navigation row');
       const missingAnchors = await page.locator('a[href]').evaluateAll(links => links.flatMap(a => {
         const url = new URL(a.href);
         if (url.origin !== location.origin || url.pathname !== location.pathname || !url.hash || url.hash === '#') return [];
