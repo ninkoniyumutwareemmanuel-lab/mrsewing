@@ -69,3 +69,28 @@ python3 tests/business_schema.py --vocabulary /path/to/schemaorg-all-https.ttl
 
 No network request or new package dependency is needed by either script. These
 checks do not promise Google rich-result eligibility or verify mailbox delivery.
+
+## Reviewed page metadata and outlines
+
+`_data/page-seo.json` contains reviewed, page-specific titles and descriptions for
+all 32 standalone documents (including forms that remain outside the sitemap).
+Character lengths are editorial guidance, not Google indexing limits. No separate
+wedding landing page or unsupported service claim is introduced.
+
+```sh
+python3 scripts/sync_page_seo.py
+python3 scripts/build_homepage.py
+node tests/page-seo.spec.cjs
+```
+
+The sync script changes only title/description and existing matching social
+metadata fields. It does not alter canonicals, JSON-LD, robots or sitemap policy.
+Heading tags are authored in the source pages; the homepage builder adapts reused
+services/collections to its own H2/H3/H4 hierarchy. Existing heading typography is
+retained through compatible selectors. Visually hidden section labels group
+existing content for assistive technology without redesigning the pages.
+
+The browser checks verify unique reviewed metadata, one H1 per standalone page,
+rendered content outlines (including dynamically generated portfolio headings),
+and all 32 pages at desktop/mobile widths. Run the existing homepage, business
+schema and full regression suites as well before a staging push.

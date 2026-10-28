@@ -108,17 +108,27 @@ def render():
         markup = parser.markup
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
+        if key == 'services':
+            markup = markup.replace('<h2>', '<h3>').replace('</h2>', '</h3>')
+            markup = re.sub(r'<h1>(.*?)</h1>', r'<h2>\1</h2>', markup, count=1, flags=re.S)
         if key == 'collections':
             # A section inside the homepage's existing main, not a nested main/H1.
             markup = markup.replace('<main ', '<section ', 1).replace('</main>', '</section>')
-            markup = markup.replace('<h1>Collections</h1>', '<h2>Collections</h2>', 1)
+            # Establish H2 > H3 > H4 for collection section/category/card names.
+            markup = markup.replace('<h3>', '<h4>').replace('</h3>', '</h4>')
+            markup = markup.replace('<h2 class="block-title">', '<h3 class="block-title">')
+            markup = re.sub(r'(<h3 class="block-title">.*?)</h2>', r'\1</h3>', markup, flags=re.S)
+            markup = re.sub(r'<h1>(.*?)</h1>', r'<h2>\1</h2>', markup, count=1, flags=re.S)
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
             raise ValueError(f'Unexpected document metadata/script in section: {filename}')
         markup = re.sub(r'<img\b[^>]*>', reserve_image_space, markup)
         if key != 'header':
             markup = re.sub(r'<img\b(?![^>]*\bloading=)', '<img loading="lazy"', markup)
         template = template.replace('{{' + key + '}}', markup)
-        styles.extend(re.findall(r'<style[^>]*>(.*?)</style>', source, re.S))
+        section_styles = re.findall(r'<style[^>]*>(.*?)</style>', source, re.S)
+        if key == 'collections':
+            section_styles = [style.replace('.collection-item-info h3 {', '.collection-item-info h3, .collection-item-info h4 {') for style in section_styles]
+        styles.extend(section_styles)
     navigation = (ROOT / 'assets/navigation.js').read_text()
     nav_style = re.search(r'style\.textContent = `([^`]+)`', navigation)
     if not nav_style or '${' in nav_style[1]:

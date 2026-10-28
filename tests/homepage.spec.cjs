@@ -27,7 +27,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     assert.equal(await page.locator('title').count(), 1);
     assert.equal(await page.locator('main').count(), 1);
     assert.equal(await page.locator('h1').count(), 1);
-    assert.equal(await page.locator('h1').textContent(), 'Elegance & Precision Craftsmanship');
+    assert.equal(await page.locator('h1').textContent(), 'Bespoke Tailoring & Fashion Design in Kigali');
     assert.equal(await page.locator('link[rel="canonical"]').count(), 1);
     assert.equal(await page.locator('head link[rel="canonical"]').getAttribute('href'), 'https://mrsewingfashion.com/');
     assert.equal(await page.locator('meta[name="description"]').count(), 1);
