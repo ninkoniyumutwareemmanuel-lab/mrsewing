@@ -98,7 +98,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -268,6 +267,9 @@
 
   <!-- Fallback Canonical Tag for Crawler Parsers -->
   <link rel="canonical" href="https://mrsewingfashion.com/mensuits.html">
+  <link rel="stylesheet" href="assets/gallery.css">
+  <script src="assets/gallery.js" defer></script>
+  <script src="assets/navigation.js" defer></script>
 </head>
 <body id="top">
 
@@ -297,15 +299,15 @@
   <script>
     // Two-Piece Suits Registry
     const twoPiecePhotos = [
-      { id: "2p-1", file: "m1.jpeg", title: "EXECUTIVE TWO-PIECE", subtitle: "Two-Piece Suit Line", target: "detail-m1.html" },
-      { id: "2p-2", file: "m2.jpeg", title: "DIPLOMATIC TWO-PIECE", subtitle: "Two-Piece Suit Line", target: "detail-m2.html" },
-      { id: "2p-3", file: "m3.jpeg", title: "CLASSIC SINGLE-BREASTED", subtitle: "Two-Piece Suit Line", target: "detail-m3.html" }
+      { id: "2p-1", file: "m1.jpeg", title: "EXECUTIVE TWO-PIECE", subtitle: "Two-Piece Suit Line" },
+      { id: "2p-2", file: "m2.jpeg", title: "DIPLOMATIC TWO-PIECE", subtitle: "Two-Piece Suit Line" },
+      { id: "2p-3", file: "m3.jpeg", title: "CLASSIC SINGLE-BREASTED", subtitle: "Two-Piece Suit Line" }
     ];
 
     // Three-Piece Suits Registry
     const threePiecePhotos = [
-      { id: "3p-1", file: "m4.jpeg", title: "ROYAL THREE-PIECE SUIT", subtitle: "Three-Piece Set (Jacket, Vest, Trousers)", target: "detail-m4.html" },
-      { id: "3p-2", file: "m5.jpeg", title: "STATESMAN THREE-PIECE", subtitle: "Three-Piece Set (Jacket, Vest, Trousers)", target: "detail-m5.html" }
+      { id: "3p-1", file: "m4.jpeg", title: "ROYAL THREE-PIECE SUIT", subtitle: "Three-Piece Set (Jacket, Vest, Trousers)" },
+      { id: "3p-2", file: "m5.jpeg", title: "STATESMAN THREE-PIECE", subtitle: "Three-Piece Set (Jacket, Vest, Trousers)" }
     ];
 
     /* Dynamic Component Loader Script */
@@ -348,16 +350,16 @@
         card.className = 'photo-card';
         card.innerHTML = `
           <div class="photo-img-wrapper">
-            <a href="${photo.target}">
+            <button type="button" class="design-preview image-preview" data-design-image="${photo.file}">
               <img src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
-            </a>
+            </button>
           </div>
           <div class="photo-info">
             <div>
               <div class="photo-title-text">${photo.title}</div>
               <div class="photo-subtitle-text">${photo.subtitle}</div>
             </div>
-            <a href="${photo.target}" class="view-details-btn">VIEW DETAILS</a>
+            <button type="button" class="view-details-btn design-preview" data-design-image="${photo.file}">View Design &amp; Enquire</button>
           </div>
         `;
         grid.appendChild(card);

@@ -200,6 +200,9 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/gallery.css">
+  <script src="assets/gallery.js" defer></script>
+  <script src="assets/navigation.js" defer></script>
 </head>
 <body>
 
@@ -261,7 +264,7 @@
         { file: 'r21.jpeg', title: 'Client Milestone Moment', desc: 'Celebrating success and special milestones in custom Mr. Sewing attire.' },
         { file: 'r22.jpeg', title: 'Refined Tailoring Project', desc: 'Custom garment crafted to highlight individual style and posture.' },
         { file: 'r23.jpeg', title: 'Signature Suit Design', desc: 'Exclusive fabric pairing and hand-finished detailing.' },
-        { file: 'r24.jpeg', title: 'Elite Custom Suiting', desc: 'Crafted for leaders, achievers, and connoisseurs of fine fashion.' },
+        { file: ' r24.jpeg', title: 'Elite Custom Suiting', desc: 'Crafted for leaders, achievers, and connoisseurs of fine fashion.' },
         { file: 'r25.jpeg', title: 'Contemporary Bespoke', desc: 'Where modern aesthetics meet traditional master tailoring.' },
         { file: 'r26.jpeg', title: 'Ceremony & Gala Wear', desc: 'Standing out with distinction at high-profile gatherings.' },
         { file: 'r27.jpeg', title: 'Immaculate Posture & Fit', desc: 'Designed to make you look and feel your absolute best.' },
@@ -287,19 +290,18 @@
       if (gridContainer) {
         let htmlContent = '';
         galleryItems.forEach(item => {
-          const detailFile = item.file.replace('.jpeg', '-details.html');
           htmlContent += `
             <div class="work-card">
-              <div class="work-image-wrapper" onclick="openLightbox('${item.file}', '${item.title}')">
-                <img src="${item.file}" alt="${item.title} - Mr. Sewing" class="work-img" loading="lazy">
-              </div>
+              <button type="button" class="work-image-wrapper image-preview design-preview" data-design-image="${item.file}">
+                <img src="${encodeURI(item.file)}" alt="${item.title} - Mr. Sewing" class="work-img" loading="lazy">
+              </button>
               <div class="work-content">
                 <div>
                   <span class="work-tag">Client Moment</span>
                   <h3 class="work-title">${item.title}</h3>
                   <p class="work-desc">${item.desc}</p>
                 </div>
-                <a href="${detailFile}" class="detail-btn">View Full Story &amp; Details</a>
+                <button type="button" class="detail-btn design-preview" data-design-image="${item.file}">View Design &amp; Enquire</button>
               </div>
             </div>
           `;

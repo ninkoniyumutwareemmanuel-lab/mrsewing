@@ -65,8 +65,8 @@
       <div class="slider-header-row">
         <span class="slider-title">More Client Moments &amp; Reviews</span>
         <div class="slider-nav-btns">
-          <button class="slider-arrow" id="slideLeft" onclick="scrollGallery(-1)" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-arrow" id="slideRight" onclick="scrollGallery(1)" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+          <button class="slider-arrow" id="slideLeft" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-arrow" id="slideRight" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
 
@@ -160,6 +160,10 @@
 </style>
 
 <script>
+  // This initializer runs on the standalone fragment page. The homepage uses event delegation.
+  document.getElementById('slideLeft')?.addEventListener('click', () => scrollGallery(-1));
+  document.getElementById('slideRight')?.addEventListener('click', () => scrollGallery(1));
+
   function scrollGallery(direction) {
     const slider = document.getElementById('customersSlider');
     if (!slider) return;

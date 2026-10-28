@@ -306,6 +306,9 @@
 
   <!-- Fallback Canonical Tag for Crawler Parsers -->
   <link rel="canonical" href="https://mrsewingfashion.com/suits.html">
+  <link rel="stylesheet" href="assets/gallery.css">
+  <script src="assets/gallery.js" defer></script>
+  <script src="assets/navigation.js" defer></script>
 </head>
 
 <body id="top">
@@ -391,14 +394,15 @@
       .catch(err => console.error('Header fetch failed:', err));
 
     // Base raw file lists
-    const rawFeaturedFiles = ['s1.jpeg', 's2.jpeg', 's3.jpeg', 's4.jpeg', 's5.jpeg', 's6.jpeg', 's7.jpeg', 's8.jpeg', 's9.jpeg', 's10.jpeg'];
-    const rawTwoPiecesFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg', 'w6.jpeg', 'w7.jpeg', 'w8.jpeg', 'w9.jpeg', 'w10.jpeg'];
-    const rawThreePiecesFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg', 'm7.jpeg', 'm8.jpeg', 'm9.jpeg', 'm10.jpeg'];
+    const rawFeaturedFiles = ['s1.jpeg', 's2.jpeg', 's3.jpeg', 's4.jpeg', 's5.jpeg'];
+    const rawTwoPiecesFiles = ['w1.jpeg', 'w2.jpeg', 'w3.jpeg', 'w4.jpeg', 'w5.jpeg'];
+    const rawThreePiecesFiles = ['m1.jpeg', 'm2.jpeg', 'm3.jpeg', 'm4.jpeg', 'm5.jpeg', 'm6.jpeg'];
     const rawMadeByUsFiles = ['r1.jpeg', 'r1.2.jpeg', 'r1.3.jpeg', 'r2.jpeg', 'r3.jpeg', 'r3.4.jpeg', 'r3.5.jpeg', 'r4.jpeg', 'r5.jpeg', 'r6.jpeg', 'r7.jpeg', 'r8.jpeg', 'r9.jpeg', 'r10.jpeg'];
 
     // 2. 24-Hour Midnight Shuffling Logic based on Rwanda Time (Africa/Kigali)
     function getDailyShuffledFiles(storageKey, array) {
       const todayKigali = new Date().toLocaleDateString('en-CA', { timeZone: 'Africa/Kigali' });
+      try {
       let storedDate = localStorage.getItem(storageKey + '_date');
       let storedArr = localStorage.getItem(storageKey + '_arr');
 
@@ -413,8 +417,10 @@
         localStorage.setItem(storageKey + '_arr', JSON.stringify(arr));
         return arr;
       } else {
-        return JSON.parse(storedArr);
+        const parsed = JSON.parse(storedArr);
+        return Array.isArray(parsed) && parsed.length === array.length && new Set(parsed).size === array.length && parsed.every(file => array.includes(file)) ? parsed : [...array];
       }
+      } catch (error) { return [...array]; }
     }
 
     const featuredSuitsFiles = getDailyShuffledFiles('featuredSuits', rawFeaturedFiles);
@@ -471,22 +477,18 @@
 
       fileList.forEach(imgFile => {
         const fullPhotoUrl = window.location.origin + '/' + imgFile;
-        const baseName = imgFile.substring(0, imgFile.lastIndexOf('.')).replace('.', '-');
-        const detailPageUrl = `detail-${baseName}.html`;
         const shareText = encodeURIComponent(`Hey Mr. Sewing, I am interested in this exact style from your gallery: ${fullPhotoUrl}`);
         const whatsappUrl = `https://wa.me/250787411501?text=${shareText}`;
 
-        const card = document.article || document.createElement('article');
+        const card = document.createElement('article');
         card.className = 'gallery-card';
 
         // Check if image exists before rendering
-        const imgTest = new Image();
-        imgTest.src = imgFile;
-        imgTest.onload = function() {
+
           card.innerHTML = `
-            <div class="card-img-wrapper" onclick="openLightbox('${imgFile}')">
+            <button type="button" class="card-img-wrapper image-preview design-preview" data-design-image="${imgFile}">
               <img src="${imgFile}" alt="Bespoke tailoring style - Mr. Sewing Kigali" loading="lazy">
-            </div>
+            </button>
             <div class="card-actions">
               <a href="${whatsappUrl}" target="_blank" rel="noopener" class="action-btn whatsapp" title="Share exact photo">
                 <i class="fab fa-whatsapp"></i> Share
@@ -494,13 +496,12 @@
               <button class="action-btn" onclick="copyLinkWithFeedback(this, '${fullPhotoUrl}')" title="Copy photo link">
                 <i class="fas fa-link"></i> Copy
               </button>
-              <a href="${detailPageUrl}" class="action-btn details" title="View pricing and details">
-                <i class="fas fa-info-circle"></i> Details
-              </a>
+              <button type="button" class="action-btn details design-preview" data-design-image="${imgFile}">
+                <i class="fas fa-info-circle"></i> View &amp; Enquire
+              </button>
             </div>
           `;
           container.appendChild(card);
-        };
       });
     }
 

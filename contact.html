@@ -270,6 +270,7 @@
 
     <!-- Fallback Canonical Tag for Crawler Parsers -->
     <link rel="canonical" href="https://mrsewingfashion.com/contact.html">
+  <script src="assets/navigation.js" defer></script>
 </head>
 <body id="top">
 
@@ -408,8 +409,8 @@
 
             var closeBtn = document.getElementById('orderClose');
             if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-            modal.addEventListener('click', function (e) { if (event.target === modal) closeModal(); });
-            document.addEventListener('keydown', function (e) { if (event.key === 'Escape') closeModal(); });
+            modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
             if (location.hash === '#orderModal') { openModal(); }
         })();

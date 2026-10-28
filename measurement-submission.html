@@ -334,6 +334,8 @@
         .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
         .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
     </style>
+  <script src="assets/navigation.js" defer></script>
+  <script src="assets/forms.js" defer></script>
 </head>
 <body id="top">
 
@@ -352,7 +354,7 @@
             <form action="https://api.web3forms.com/submit" method="POST" id="submissionForm">
                 
                 <!-- Web3Forms Access Key -->
-                <input type="hidden" name="apikey" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
+                <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
                 <input type="hidden" name="subject" value="New Suit Order & Sizing Submission - Mr. Sewing">
                 <input type="hidden" name="from_name" value="Mr. Sewing Website">
                 <input type="checkbox" name="botcheck" style="display: none;">
@@ -557,91 +559,6 @@
           document.documentElement.dataset.componentsLoaded = 'true';
           document.dispatchEvent(new CustomEvent('sitecomponentsloaded'));
         })();
-
-        // Form Terms & Conditions toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            var formTerms = document.getElementById('formTermsAgree');
-            var submitBtn = document.getElementById('formSubmitBtn');
-
-            if (formTerms && submitBtn) {
-                formTerms.addEventListener('change', function () {
-                    submitBtn.disabled = !formTerms.checked;
-                });
-            }
-        });
-
-        // AJAX Submission Handling with Sizing Validation Rule
-        const submissionForm = document.getElementById('submissionForm');
-        const successBox = document.getElementById('successBox');
-        const sizingErrorMsg = document.getElementById('sizingErrorMsg');
-        const debugMode = location.search.indexOf('debug=1') !== -1;
-
-        function showError(message, reason) {
-            alert(message + (debugMode ? '\n\nReason: ' + reason : ''));
-        }
-
-        if (submissionForm) {
-            submissionForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Validate Sizing Requirement: At least Standard Size OR one measurement must be provided
-                const standardSizeVal = document.getElementById('standardSize').value.trim();
-                let hasMeasurement = false;
-                for (let i = 1; i <= 12; i++) {
-                    const val = document.getElementById('m' + i).value.trim();
-                    if (val !== '') {
-                        hasMeasurement = true;
-                        break;
-                    }
-                }
-
-                if (!standardSizeVal && !hasMeasurement) {
-                    sizingErrorMsg.style.display = 'block';
-                    sizingErrorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    return;
-                } else {
-                    sizingErrorMsg.style.display = 'none';
-                }
-
-                const data = Object.fromEntries(new FormData(submissionForm));
-                if (!data['Email'] || !data['Email'].trim()) {
-                    data['Email'] = 'Not provided';
-                } else {
-                    data['replyto'] = data['Email'].trim();
-                }
-
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(function(response) {
-                    return response.json().catch(function() { return {}; }).then(function(result) {
-                        return { response: response, result: result };
-                    });
-                })
-                .then(function(output) {
-                    const response = output.response;
-                    const result = output.result;
-
-                    if (response.ok && result.success !== false) {
-                        submissionForm.style.display = 'none';
-                        successBox.style.display = 'block';
-                    } else {
-                        const reason = (result && result.message) ? result.message : ('HTTP ' + response.status + ' ' + response.statusText);
-                        console.error('Submission form was refused by Web3Forms:', reason);
-                        showError('Something went wrong. Please try submitting again or contact us directly on WhatsApp.', reason);
-                    }
-                })
-                .catch(function(error) {
-                    console.error('Submission form could not reach Web3Forms:', error);
-                    showError('Form submission error. Please try again.', error && error.message ? error.message : String(error));
-                });
-            });
-        }
 
         (function () {
             var modal = document.getElementById('orderModal');

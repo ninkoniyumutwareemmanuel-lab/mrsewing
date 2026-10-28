@@ -10,7 +10,7 @@
   <meta name="keywords" content="women suit Kigali, mr_sewing_fashion, Mr Sewing Kigali, Mr Sewing Fashion Designer, white power pantsuit Kigali, double breasted blazer set Rwanda, custom women suits Rwanda, female bespoke suits Kigali, tailored ladies blazer Kigali, women power suits Rwanda, female tailor in Kigali, suit alterations Kigali, two piece women suit Kigali, three piece women suit Rwanda">
   <meta name="author" content="Mr. Sewing">
   <meta name="theme-color" content="#0b0b0b">
-  
+
   <!-- Primary Self-Referencing Canonical Tag -->
   <link rel="canonical" href="https://mrsewingfashion.com/womensuits.html">
 
@@ -24,20 +24,19 @@
   <meta property="og:description" content="Luxury tailored women's two-piece and three-piece suits, corporate power blazers, and custom evening wear in Kigali, Rwanda. Book your fitting today.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mrsewingfashion.com/womensuits.html">
-  <meta property="og:image" content="https://mrsewingfashion.com/1.jpeg">
+  <meta property="og:image" content="https://mrsewingfashion.com/w-classicsuittwo1.jpeg">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Women's Custom Suits &amp; Tailored Fashion Kigali | Mr. Sewing">
   <meta name="twitter:description" content="Luxury tailored women's two-piece and three-piece suits, corporate power blazers, and custom evening wear in Kigali, Rwanda.">
-  <meta name="twitter:image" content="https://mrsewingfashion.com/1.jpeg">
+  <meta name="twitter:image" content="https://mrsewingfashion.com/w-classicsuittwo1.jpeg">
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
 
   <!-- Google Structured Data (ProductCollection + SiteNavigationElement Sitelinks Schema) -->
   <script type="application/ld+json">
@@ -283,6 +282,9 @@
 
   <!-- Fallback Canonical Tag for Crawler Parsers -->
   <link rel="canonical" href="https://mrsewingfashion.com/womensuits.html">
+  <link rel="stylesheet" href="assets/gallery.css">
+  <script src="assets/gallery.js" defer></script>
+  <script src="assets/navigation.js" defer></script>
 </head>
 <body id="top">
 
@@ -304,7 +306,13 @@
     <!-- THREE-PIECE SUITS SECTION -->
     <h2 class="section-category-title">Three-Piece Suits</h2>
     <div class="photo-grid" id="threePieceGrid"></div>
-  </main>
+
+    <section class="existing-design-notes" aria-label="Additional design information">
+      <h2>Additional Design Information</h2>
+      <p>White Power Pantsuit — Two-Piece Set; Double-Breasted Blazer Set — Two-Piece Set; Bespoke Female Executive — Two-Piece Set; Classic 3-Piece Executive — Three-Piece Set (Jacket, Vest, Trousers).</p>
+      <a href="booking.html">Book Consultation</a>
+    </section>
+</main>
 
   <!-- Shared Footer Component -->
   <div id="site-footer" class="site-component"></div>
@@ -325,16 +333,18 @@
   </div>
 
   <script>
-    // Two-Piece Women's Suits Registry
+    // Verified photographs and descriptions from the existing classic collection.
     const twoPiecePhotos = [
-      { id: "w-2p-1", file: "1.jpeg", title: "WHITE POWER PANTSUIT", subtitle: "Two-Piece Set", target: "photo-1.html" },
-      { id: "w-2p-2", file: "2.jpeg", title: "DOUBLE-BREASTED BLAZER SET", subtitle: "Two-Piece Set", target: "photo-2.html" },
-      { id: "w-2p-4", file: "4.jpeg", title: "BESPOKE FEMALE EXECUTIVE", subtitle: "Two-Piece Set", target: "photo-4.html" }
+      { file: "w-classicsuittwo1.jpeg", title: "The Executive Ivory Pant Suit", subtitle: "Immaculate single-breasted off-white blazer paired with expertly tailored trousers and sharp structured lapels." },
+      { file: "w-classicsuittwo2.jpeg", title: "The Diplomatic Crimson Suit", subtitle: "Sophisticated deep red blazer and matching trousers set designed for high-level state events and leadership roles." },
+      { file: "w-classicsuittwo3.jpeg", title: "The Sovereign Royal Blue", subtitle: "Commanding royal blue tailored pant suit crafted with a clean single-button stance for high-impact presence." },
+      { file: "w-classicsuittwo4.jpeg", title: "The Obsidian Executive", subtitle: "Timeless black executive suit featuring precision-cut shoulder lines and all-day boardroom comfort." }
     ];
-
-    // Three-Piece Women's Suits Registry
     const threePiecePhotos = [
-      { id: "w-3p-1", file: "3.jpeg", title: "CLASSIC 3-PIECE EXECUTIVE", subtitle: "Three-Piece Set (Jacket, Vest, Trousers)", target: "photo-3.html" }
+      { file: "w-classicsuitthree1.jpeg", title: "The Sky Boardroom 3-Piece", subtitle: "Complete light blue three-piece ensemble with matching tailored waistcoat, blazer, and sleek trousers." },
+      { file: "w-classicsuitthree2.jpeg", title: "The Forest Ambassador 3-Piece", subtitle: "Rich forest green custom suit featuring structured vest lines engineered for supreme comfort and distinction." },
+      { file: "w-classicsuitthree3.jpeg", title: "The Imperial Charcoal 3-Piece", subtitle: "Authoritative dark charcoal composition featuring a contoured vest cut and luxury wool finish." },
+      { file: "w-classicsuitthree4.jpeg", title: "The Monarch Burgundy 3-Piece", subtitle: "Deep burgundy three-piece tailored creation crafted for VIP delegate appearances and formal galas." }
     ];
 
     /* Dynamic Component Loader Script */
@@ -378,16 +388,16 @@
         card.className = 'photo-card';
         card.innerHTML = `
           <div class="photo-img-wrapper">
-            <a href="${photo.target}">
+            <button type="button" class="design-preview image-preview" data-design-image="${photo.file}">
               <img src="${photo.file}" alt="${photo.title} - ${photo.subtitle} by Mr. Sewing Kigali" class="photo-img" loading="lazy">
-            </a>
+            </button>
           </div>
           <div class="photo-info">
             <div>
               <div class="photo-title-text">${photo.title}</div>
               <div class="photo-subtitle-text">${photo.subtitle}</div>
             </div>
-            <a href="${photo.target}" class="view-details-btn">VIEW DETAILS</a>
+            <button type="button" class="view-details-btn design-preview" data-design-image="${photo.file}">View Design &amp; Enquire</button>
           </div>
         `;
         grid.appendChild(card);
@@ -435,7 +445,7 @@
       });
 
       if (closeBtn) closeBtn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); });
-      modal.addEventListener('click', function (e) { if (event.target === modal) closeModal(); });
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
       if (location.hash === '#orderModal') { openModal(); }
