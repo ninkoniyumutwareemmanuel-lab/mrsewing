@@ -17,3 +17,26 @@ Optional environment variables: `REVIEW_BASE_URL` (default `http://127.0.0.1:800
 The suite blocks all external requests. Form requests are intercepted and fulfilled with controlled responses; no live submission or customer message is sent. It checks all complete pages and rendered local links/assets, gallery keyboard interaction, responsive overflow, corrupted/unavailable storage, explicit form success, rejection, malformed/failed responses, duplicate submissions, consent toggling, measurement requirements, invalid phone numbers, and timeout recovery.
 
 External icon styles/fonts are intentionally blocked. These checks do not establish live delivery, external account configuration, real appointment availability, Safari/Firefox compatibility, or full accessibility compliance.
+
+## Static homepage generation and checks
+
+The homepage reuses sections from the existing source pages at build time, so it
+needs no runtime HTML fetches. After changing a shared header/footer, source
+section, or `_templates/homepage.html`, regenerate and commit `index.html`:
+
+```sh
+python3 scripts/build_homepage.py
+python3 scripts/build_homepage.py --check
+node tests/homepage.spec.cjs
+```
+
+The script uses Python's standard library only and never edits standalone source
+pages or image bytes. It copies section markup/styles, excludes document metadata
+and component scripts, and adds intrinsic image dimensions. The generated HTML is
+committed, so GitHub Pages and Cloudflare require no new build settings.
+
+The homepage tests additionally check source synchronization, one H1/canonical,
+metadata isolation, hero preloading, deferred scripts, image sizing/lazy loading,
+absence of runtime component requests, navigation without JavaScript, slider
+controls and WhatsApp consent. The WhatsApp destination is observed locally and
+its navigation is prevented; no messages are sent.
