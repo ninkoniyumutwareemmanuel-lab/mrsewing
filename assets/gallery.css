@@ -1,0 +1,16 @@
+/* Scoped additions retain the existing black-and-gold presentation. */
+button.image-preview { display:block; width:100%; padding:0; border:0; background:transparent; cursor:pointer; color:inherit; }
+button.design-preview { font-family:inherit; cursor:pointer; }
+.design-preview:focus-visible, .design-dialog :focus-visible { outline:3px solid #d4af37; outline-offset:4px; }
+.design-dialog { margin:auto; color:#f5f5f5; background:#141414; border:1px solid #d4af37; border-radius:8px; width:min(720px, calc(100% - 32px)); max-height:90vh; padding:24px; box-sizing:border-box; overflow:auto; }
+.design-dialog::backdrop { background:rgba(0,0,0,.85); }
+.design-dialog h2 { color:#d4af37; padding-right:42px; font-size:1.3rem; }
+.design-dialog .design-photo { display:block; width:100%; height:auto; max-height:55vh; object-fit:contain; margin:16px 0; }
+.design-close { position:absolute; top:8px; right:8px; width:44px; height:44px; background:#222; color:#fff; border:1px solid #666; border-radius:50%; font-size:1.8rem; cursor:pointer; }
+.design-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+.design-actions a { display:inline-flex; align-items:center; min-height:44px; padding:8px 14px; border:1px solid #d4af37; color:#d4af37; border-radius:4px; text-decoration:none; }
+.design-actions .design-enquiry { background:#d4af37; color:#000; }
+.existing-design-notes { margin-top:32px; padding:20px; border:1px solid #2a2a2a; }
+.existing-design-notes a { color:#d4af37; }
+
+.gallery-card .card-actions { flex-wrap:wrap; }

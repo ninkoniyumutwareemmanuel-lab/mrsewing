@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Your Measurements &amp; Order - Mr. Sewing Fashion</title>
+    <title>Submit Suit Measurements | Mr Sewing Fashion, Kigali</title>
     
     <!-- SEO Meta Tags & Keywords -->
-    <meta name="description" content="Submit your custom measurements, standard suit size, contact details, and suit design preferences to Mr. Sewing Fashion in Kigali, Rwanda. Fast bespoke tailoring.">
+    <meta name="description" content="Send your suit size or measurements to Mr Sewing Fashion in Kigali, Rwanda. Add garment preferences and contact details so we can review your tailoring request.">
     <meta name="keywords" content="submit measurements Kigali, custom suit order Rwanda, bespoke tailoring form, mr_sewing_fashion, Mr Sewing Fashion Designer, suit size chart Kigali, tailor in Kigali">
     <meta name="author" content="NINKONIYUMUTWARE NEXUS LTD">
     <meta name="robots" content="index, follow">
@@ -22,8 +22,8 @@
 
     <!-- Open Graph / Link Preview Tags -->
     <meta property="og:site_name" content="Mr. Sewing">
-    <meta property="og:title" content="Submit Your Measurements &amp; Order - Mr. Sewing Fashion">
-    <meta property="og:description" content="Submit your measurements or standard suit size directly to Mr. Sewing in Kigali, Rwanda.">
+    <meta property="og:title" content="Submit Suit Measurements | Mr Sewing Fashion, Kigali">
+    <meta property="og:description" content="Send your suit size or measurements to Mr Sewing Fashion in Kigali, Rwanda. Add garment preferences and contact details so we can review your tailoring request.">
     <meta property="og:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
     <meta property="og:image:alt" content="Mr. Sewing logo - bespoke suits in Kigali, Rwanda">
     <meta property="og:type" content="website">
@@ -32,8 +32,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Submit Your Measurements &amp; Order - Mr. Sewing Fashion">
-    <meta name="twitter:description" content="Submit your measurements or standard suit size directly to Mr. Sewing in Kigali, Rwanda.">
+    <meta name="twitter:title" content="Submit Suit Measurements | Mr Sewing Fashion, Kigali">
+    <meta name="twitter:description" content="Send your suit size or measurements to Mr Sewing Fashion in Kigali, Rwanda. Add garment preferences and contact details so we can review your tailoring request.">
     <meta name="twitter:image" content="https://mrsewingfashion.com/MR%20LOGO.jpeg">
 
     <!-- Google Structured Data -->
@@ -50,13 +50,13 @@
           "isPartOf": {
             "@type": "WebSite",
             "@id": "https://mrsewingfashion.com/#website",
-            "name": "Mr. Sewing",
+            "name": "Mr Sewing Fashion",
             "url": "https://mrsewingfashion.com/"
           }
         }
       ]
     }
-    </script>
+</script>
 
     <!-- Font Awesome CDN for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -334,6 +334,8 @@
         .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
         .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
     </style>
+  <script src="assets/navigation.js" defer></script>
+  <script src="assets/forms.js" defer></script>
 </head>
 <body id="top">
 
@@ -343,7 +345,7 @@
     <!-- Main Submission Form Content -->
     <main class="container">
         <div class="page-title">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo">
+            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo" width="1244" height="802" decoding="async" srcset="assets/images/mr-logo-480.webp 480w, assets/images/mr-logo-960.webp 960w, assets/images/mr-logo-1244.webp 1244w" sizes="180px">
             <h1>Measurement &amp; Size Submission</h1>
             <p>Provide either your standard suit size or your 12-point body measurements to begin your bespoke tailoring order.</p>
         </div>
@@ -352,7 +354,7 @@
             <form action="https://api.web3forms.com/submit" method="POST" id="submissionForm">
                 
                 <!-- Web3Forms Access Key -->
-                <input type="hidden" name="apikey" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
+                <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
                 <input type="hidden" name="subject" value="New Suit Order & Sizing Submission - Mr. Sewing">
                 <input type="hidden" name="from_name" value="Mr. Sewing Website">
                 <input type="checkbox" name="botcheck" style="display: none;">
@@ -509,7 +511,7 @@
                 <i class="fas fa-clipboard-check"></i>
                 <h3>Measurements &amp; Order Received!</h3>
                 <p>Thank you for submitting with Mr. Sewing. Your details have been submitted. You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us on this number, call or WhatsApp: +250 787 411 501.</p>
-                <a href="index.html" class="back-home-btn">Return to Homepage</a>
+                <a href="/" class="back-home-btn">Return to Homepage</a>
             </div>
         </div>
     </main>
@@ -557,91 +559,6 @@
           document.documentElement.dataset.componentsLoaded = 'true';
           document.dispatchEvent(new CustomEvent('sitecomponentsloaded'));
         })();
-
-        // Form Terms & Conditions toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            var formTerms = document.getElementById('formTermsAgree');
-            var submitBtn = document.getElementById('formSubmitBtn');
-
-            if (formTerms && submitBtn) {
-                formTerms.addEventListener('change', function () {
-                    submitBtn.disabled = !formTerms.checked;
-                });
-            }
-        });
-
-        // AJAX Submission Handling with Sizing Validation Rule
-        const submissionForm = document.getElementById('submissionForm');
-        const successBox = document.getElementById('successBox');
-        const sizingErrorMsg = document.getElementById('sizingErrorMsg');
-        const debugMode = location.search.indexOf('debug=1') !== -1;
-
-        function showError(message, reason) {
-            alert(message + (debugMode ? '\n\nReason: ' + reason : ''));
-        }
-
-        if (submissionForm) {
-            submissionForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Validate Sizing Requirement: At least Standard Size OR one measurement must be provided
-                const standardSizeVal = document.getElementById('standardSize').value.trim();
-                let hasMeasurement = false;
-                for (let i = 1; i <= 12; i++) {
-                    const val = document.getElementById('m' + i).value.trim();
-                    if (val !== '') {
-                        hasMeasurement = true;
-                        break;
-                    }
-                }
-
-                if (!standardSizeVal && !hasMeasurement) {
-                    sizingErrorMsg.style.display = 'block';
-                    sizingErrorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    return;
-                } else {
-                    sizingErrorMsg.style.display = 'none';
-                }
-
-                const data = Object.fromEntries(new FormData(submissionForm));
-                if (!data['Email'] || !data['Email'].trim()) {
-                    data['Email'] = 'Not provided';
-                } else {
-                    data['replyto'] = data['Email'].trim();
-                }
-
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(function(response) {
-                    return response.json().catch(function() { return {}; }).then(function(result) {
-                        return { response: response, result: result };
-                    });
-                })
-                .then(function(output) {
-                    const response = output.response;
-                    const result = output.result;
-
-                    if (response.ok && result.success !== false) {
-                        submissionForm.style.display = 'none';
-                        successBox.style.display = 'block';
-                    } else {
-                        const reason = (result && result.message) ? result.message : ('HTTP ' + response.status + ' ' + response.statusText);
-                        console.error('Submission form was refused by Web3Forms:', reason);
-                        showError('Something went wrong. Please try submitting again or contact us directly on WhatsApp.', reason);
-                    }
-                })
-                .catch(function(error) {
-                    console.error('Submission form could not reach Web3Forms:', error);
-                    showError('Form submission error. Please try again.', error && error.message ? error.message : String(error));
-                });
-            });
-        }
 
         (function () {
             var modal = document.getElementById('orderModal');

@@ -1,0 +1,1388 @@
+{
+  " r24.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 28534,
+    "variants": [
+      {
+        "src": "assets/images/r24-480.webp",
+        "width": 480,
+        "bytes": 20450
+      }
+    ]
+  },
+  "3.2.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 32992,
+    "variants": [
+      {
+        "src": "assets/images/3.2-480.webp",
+        "width": 480,
+        "bytes": 24028
+      }
+    ]
+  },
+  "MR LOGO.jpeg": {
+    "width": 1244,
+    "height": 802,
+    "originalBytes": 859641,
+    "variants": [
+      {
+        "src": "assets/images/mr-logo-480.webp",
+        "width": 480,
+        "bytes": 48336
+      },
+      {
+        "src": "assets/images/mr-logo-960.webp",
+        "width": 960,
+        "bytes": 169778
+      },
+      {
+        "src": "assets/images/mr-logo-1244.webp",
+        "width": 1244,
+        "bytes": 276794
+      }
+    ]
+  },
+  "MR LOGO1.jpeg": {
+    "width": 1018,
+    "height": 658,
+    "originalBytes": 15983,
+    "variants": [
+      {
+        "src": "assets/images/mr-logo1-480.webp",
+        "width": 480,
+        "bytes": 12646
+      }
+    ]
+  },
+  "The Elegance Series.jpeg": {
+    "width": 1536,
+    "height": 2752,
+    "originalBytes": 92123,
+    "variants": [
+      {
+        "src": "assets/images/the-elegance-series-480.webp",
+        "width": 480,
+        "bytes": 22536
+      },
+      {
+        "src": "assets/images/the-elegance-series-960.webp",
+        "width": 960,
+        "bytes": 55736
+      }
+    ]
+  },
+  "The Executive Line.jpeg": {
+    "width": 1536,
+    "height": 2752,
+    "originalBytes": 166612,
+    "variants": [
+      {
+        "src": "assets/images/the-executive-line-480.webp",
+        "width": 480,
+        "bytes": 39592
+      },
+      {
+        "src": "assets/images/the-executive-line-960.webp",
+        "width": 960,
+        "bytes": 101346
+      }
+    ]
+  },
+  "belly.jpeg": {
+    "width": 376,
+    "height": 259,
+    "originalBytes": 11399,
+    "variants": []
+  },
+  "bicep.jpeg": {
+    "width": 376,
+    "height": 467,
+    "originalBytes": 13542,
+    "variants": []
+  },
+  "chest.jpeg": {
+    "width": 376,
+    "height": 282,
+    "originalBytes": 10483,
+    "variants": []
+  },
+  "fabric.jpeg": {
+    "width": 2400,
+    "height": 1792,
+    "originalBytes": 305874,
+    "variants": [
+      {
+        "src": "assets/images/fabric-480.webp",
+        "width": 480,
+        "bytes": 41572
+      },
+      {
+        "src": "assets/images/fabric-960.webp",
+        "width": 960,
+        "bytes": 105024
+      }
+    ]
+  },
+  "h1.jpeg": {
+    "width": 797,
+    "height": 995,
+    "originalBytes": 25078,
+    "variants": [
+      {
+        "src": "assets/images/h1-480.webp",
+        "width": 480,
+        "bytes": 14864
+      }
+    ]
+  },
+  "h2.jpeg": {
+    "width": 750,
+    "height": 938,
+    "originalBytes": 60169,
+    "variants": [
+      {
+        "src": "assets/images/h2-480.webp",
+        "width": 480,
+        "bytes": 44152
+      }
+    ]
+  },
+  "h3.jpeg": {
+    "width": 750,
+    "height": 938,
+    "originalBytes": 62602,
+    "variants": [
+      {
+        "src": "assets/images/h3-480.webp",
+        "width": 480,
+        "bytes": 44406
+      }
+    ]
+  },
+  "happy3.jpeg": {
+    "width": 1022,
+    "height": 1024,
+    "originalBytes": 49838,
+    "variants": [
+      {
+        "src": "assets/images/happy3-480.webp",
+        "width": 480,
+        "bytes": 21050
+      }
+    ]
+  },
+  "hip.jpeg": {
+    "width": 376,
+    "height": 376,
+    "originalBytes": 12593,
+    "variants": []
+  },
+  "jacket_length.jpeg": {
+    "width": 376,
+    "height": 608,
+    "originalBytes": 16802,
+    "variants": []
+  },
+  "m-classicsuitthree1.jpeg": {
+    "width": 572,
+    "height": 715,
+    "originalBytes": 30063,
+    "variants": []
+  },
+  "m-classicsuitthree2.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 47829,
+    "variants": []
+  },
+  "m-classicsuitthree3.jpeg": {
+    "width": 478,
+    "height": 658,
+    "originalBytes": 25335,
+    "variants": []
+  },
+  "m-classicsuitthree4.jpeg": {
+    "width": 498,
+    "height": 658,
+    "originalBytes": 36881,
+    "variants": []
+  },
+  "m-classicsuittwo1.jpeg": {
+    "width": 715,
+    "height": 715,
+    "originalBytes": 27933,
+    "variants": [
+      {
+        "src": "assets/images/m-classicsuittwo1-480.webp",
+        "width": 480,
+        "bytes": 18836
+      }
+    ]
+  },
+  "m-classicsuittwo2.jpeg": {
+    "width": 451,
+    "height": 715,
+    "originalBytes": 51345,
+    "variants": []
+  },
+  "m-classicsuittwo3.jpeg": {
+    "width": 477,
+    "height": 715,
+    "originalBytes": 27026,
+    "variants": []
+  },
+  "m-classicsuittwo4.jpeg": {
+    "width": 669,
+    "height": 658,
+    "originalBytes": 41187,
+    "variants": [
+      {
+        "src": "assets/images/m-classicsuittwo4-480.webp",
+        "width": 480,
+        "bytes": 29504
+      }
+    ]
+  },
+  "m-doublebreastedsuittwo1.jpeg": {
+    "width": 439,
+    "height": 658,
+    "originalBytes": 13254,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo10.jpeg": {
+    "width": 561,
+    "height": 658,
+    "originalBytes": 10324,
+    "variants": [
+      {
+        "src": "assets/images/m-doublebreastedsuittwo10-480.webp",
+        "width": 480,
+        "bytes": 8290
+      }
+    ]
+  },
+  "m-doublebreastedsuittwo11.jpeg": {
+    "width": 508,
+    "height": 658,
+    "originalBytes": 32568,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo12.jpeg": {
+    "width": 654,
+    "height": 658,
+    "originalBytes": 65460,
+    "variants": [
+      {
+        "src": "assets/images/m-doublebreastedsuittwo12-480.webp",
+        "width": 480,
+        "bytes": 58742
+      }
+    ]
+  },
+  "m-doublebreastedsuittwo2.jpeg": {
+    "width": 439,
+    "height": 658,
+    "originalBytes": 19562,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo3.jpeg": {
+    "width": 584,
+    "height": 715,
+    "originalBytes": 37330,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo4.jpeg": {
+    "width": 485,
+    "height": 658,
+    "originalBytes": 22201,
+    "variants": [
+      {
+        "src": "assets/images/m-doublebreastedsuittwo4-480.webp",
+        "width": 480,
+        "bytes": 18540
+      },
+      {
+        "src": "assets/images/m-doublebreastedsuittwo4-485.webp",
+        "width": 485,
+        "bytes": 18202
+      }
+    ]
+  },
+  "m-doublebreastedsuittwo5.jpeg": {
+    "width": 460,
+    "height": 715,
+    "originalBytes": 21821,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo6.jpeg": {
+    "width": 566,
+    "height": 658,
+    "originalBytes": 18871,
+    "variants": [
+      {
+        "src": "assets/images/m-doublebreastedsuittwo6-480.webp",
+        "width": 480,
+        "bytes": 17242
+      }
+    ]
+  },
+  "m-doublebreastedsuittwo7.jpeg": {
+    "width": 507,
+    "height": 658,
+    "originalBytes": 25154,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo8.jpeg": {
+    "width": 515,
+    "height": 658,
+    "originalBytes": 21015,
+    "variants": []
+  },
+  "m-doublebreastedsuittwo9.jpeg": {
+    "width": 685,
+    "height": 715,
+    "originalBytes": 26045,
+    "variants": [
+      {
+        "src": "assets/images/m-doublebreastedsuittwo9-480.webp",
+        "width": 480,
+        "bytes": 16346
+      },
+      {
+        "src": "assets/images/m-doublebreastedsuittwo9-685.webp",
+        "width": 685,
+        "bytes": 24268
+      }
+    ]
+  },
+  "m-kaundasuits1.jpeg": {
+    "width": 716,
+    "height": 715,
+    "originalBytes": 47203,
+    "variants": [
+      {
+        "src": "assets/images/m-kaundasuits1-480.webp",
+        "width": 480,
+        "bytes": 30508
+      }
+    ]
+  },
+  "m-kaundasuits2.jpeg": {
+    "width": 542,
+    "height": 658,
+    "originalBytes": 24181,
+    "variants": []
+  },
+  "m-kaundasuits3.jpeg": {
+    "width": 657,
+    "height": 658,
+    "originalBytes": 16518,
+    "variants": [
+      {
+        "src": "assets/images/m-kaundasuits3-480.webp",
+        "width": 480,
+        "bytes": 11180
+      }
+    ]
+  },
+  "m-kaundasuits4.jpeg": {
+    "width": 528,
+    "height": 658,
+    "originalBytes": 15490,
+    "variants": []
+  },
+  "m-kaundasuits5.jpeg": {
+    "width": 476,
+    "height": 658,
+    "originalBytes": 32205,
+    "variants": []
+  },
+  "m-kaundasuits6.jpeg": {
+    "width": 461,
+    "height": 658,
+    "originalBytes": 20547,
+    "variants": []
+  },
+  "m-kaundasuits7.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 16769,
+    "variants": [
+      {
+        "src": "assets/images/m-kaundasuits7-480.webp",
+        "width": 480,
+        "bytes": 11874
+      }
+    ]
+  },
+  "m-kaundasuits8.jpeg": {
+    "width": 566,
+    "height": 658,
+    "originalBytes": 31324,
+    "variants": []
+  },
+  "m-modernsuits1.jpeg": {
+    "width": 523,
+    "height": 715,
+    "originalBytes": 38783,
+    "variants": []
+  },
+  "m-modernsuits2.jpeg": {
+    "width": 536,
+    "height": 715,
+    "originalBytes": 43441,
+    "variants": []
+  },
+  "m-modernsuits3.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 30281,
+    "variants": []
+  },
+  "m-modernsuits4.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 34487,
+    "variants": []
+  },
+  "m-modernsuits5.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 33577,
+    "variants": [
+      {
+        "src": "assets/images/m-modernsuits5-480.webp",
+        "width": 480,
+        "bytes": 24372
+      }
+    ]
+  },
+  "m-modernsuits6.jpeg": {
+    "width": 516,
+    "height": 658,
+    "originalBytes": 15886,
+    "variants": []
+  },
+  "m-modernsuits7.jpeg": {
+    "width": 370,
+    "height": 658,
+    "originalBytes": 16619,
+    "variants": []
+  },
+  "m-modernsuits8.jpeg": {
+    "width": 370,
+    "height": 658,
+    "originalBytes": 9799,
+    "variants": [
+      {
+        "src": "assets/images/m-modernsuits8-370.webp",
+        "width": 370,
+        "bytes": 8600
+      }
+    ]
+  },
+  "m1.jpeg": {
+    "width": 715,
+    "height": 715,
+    "originalBytes": 18243,
+    "variants": [
+      {
+        "src": "assets/images/m1-480.webp",
+        "width": 480,
+        "bytes": 12198
+      }
+    ]
+  },
+  "m2.jpeg": {
+    "width": 628,
+    "height": 658,
+    "originalBytes": 26632,
+    "variants": [
+      {
+        "src": "assets/images/m2-480.webp",
+        "width": 480,
+        "bytes": 23176
+      }
+    ]
+  },
+  "m3.jpeg": {
+    "width": 572,
+    "height": 715,
+    "originalBytes": 25298,
+    "variants": []
+  },
+  "m4.jpeg": {
+    "width": 657,
+    "height": 658,
+    "originalBytes": 39168,
+    "variants": [
+      {
+        "src": "assets/images/m4-480.webp",
+        "width": 480,
+        "bytes": 32828
+      }
+    ]
+  },
+  "m5.jpeg": {
+    "width": 704,
+    "height": 938,
+    "originalBytes": 59743,
+    "variants": [
+      {
+        "src": "assets/images/m5-480.webp",
+        "width": 480,
+        "bytes": 46676
+      }
+    ]
+  },
+  "m6.jpeg": {
+    "width": 800,
+    "height": 995,
+    "originalBytes": 79119,
+    "variants": [
+      {
+        "src": "assets/images/m6-480.webp",
+        "width": 480,
+        "bytes": 55428
+      }
+    ]
+  },
+  "measurements.jpeg": {
+    "width": 1856,
+    "height": 2304,
+    "originalBytes": 241910,
+    "variants": [
+      {
+        "src": "assets/images/measurements-480.webp",
+        "width": 480,
+        "bytes": 36450
+      },
+      {
+        "src": "assets/images/measurements-960.webp",
+        "width": 960,
+        "bytes": 113844
+      }
+    ]
+  },
+  "neck.jpeg": {
+    "width": 376,
+    "height": 259,
+    "originalBytes": 11616,
+    "variants": []
+  },
+  "r1.2.jpeg": {
+    "width": 488,
+    "height": 658,
+    "originalBytes": 30163,
+    "variants": []
+  },
+  "r1.3.jpeg": {
+    "width": 439,
+    "height": 658,
+    "originalBytes": 44242,
+    "variants": []
+  },
+  "r1.jpeg": {
+    "width": 987,
+    "height": 658,
+    "originalBytes": 70757,
+    "variants": [
+      {
+        "src": "assets/images/r1-480.webp",
+        "width": 480,
+        "bytes": 38668
+      }
+    ]
+  },
+  "r10.jpeg": {
+    "width": 550,
+    "height": 715,
+    "originalBytes": 55198,
+    "variants": []
+  },
+  "r11.1.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 50399,
+    "variants": []
+  },
+  "r11.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 39944,
+    "variants": []
+  },
+  "r12.1.jpeg": {
+    "width": 584,
+    "height": 658,
+    "originalBytes": 72863,
+    "variants": []
+  },
+  "r12.jpeg": {
+    "width": 1019,
+    "height": 715,
+    "originalBytes": 87290,
+    "variants": [
+      {
+        "src": "assets/images/r12-480.webp",
+        "width": 480,
+        "bytes": 43036
+      }
+    ]
+  },
+  "r13.jpeg": {
+    "width": 547,
+    "height": 658,
+    "originalBytes": 35400,
+    "variants": []
+  },
+  "r14.1.jpeg": {
+    "width": 538,
+    "height": 658,
+    "originalBytes": 29796,
+    "variants": []
+  },
+  "r14.2.jpeg": {
+    "width": 537,
+    "height": 658,
+    "originalBytes": 31987,
+    "variants": []
+  },
+  "r14.jpeg": {
+    "width": 544,
+    "height": 658,
+    "originalBytes": 32783,
+    "variants": []
+  },
+  "r15.jpeg": {
+    "width": 532,
+    "height": 658,
+    "originalBytes": 76514,
+    "variants": []
+  },
+  "r16.jpeg": {
+    "width": 602,
+    "height": 658,
+    "originalBytes": 51668,
+    "variants": []
+  },
+  "r17.1.jpeg": {
+    "width": 452,
+    "height": 658,
+    "originalBytes": 23890,
+    "variants": []
+  },
+  "r17.jpeg": {
+    "width": 532,
+    "height": 658,
+    "originalBytes": 38576,
+    "variants": []
+  },
+  "r18.jpeg": {
+    "width": 675,
+    "height": 658,
+    "originalBytes": 66830,
+    "variants": [
+      {
+        "src": "assets/images/r18-480.webp",
+        "width": 480,
+        "bytes": 59190
+      }
+    ]
+  },
+  "r19.jpeg": {
+    "width": 526,
+    "height": 658,
+    "originalBytes": 49228,
+    "variants": []
+  },
+  "r2.jpeg": {
+    "width": 451,
+    "height": 658,
+    "originalBytes": 21469,
+    "variants": []
+  },
+  "r20.1.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 58847,
+    "variants": []
+  },
+  "r20.jpeg": {
+    "width": 370,
+    "height": 658,
+    "originalBytes": 24566,
+    "variants": []
+  },
+  "r21.jpeg": {
+    "width": 370,
+    "height": 658,
+    "originalBytes": 14112,
+    "variants": []
+  },
+  "r22.1.jpeg": {
+    "width": 355,
+    "height": 658,
+    "originalBytes": 35799,
+    "variants": []
+  },
+  "r22.jpeg": {
+    "width": 411,
+    "height": 658,
+    "originalBytes": 40402,
+    "variants": []
+  },
+  "r23.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 40357,
+    "variants": [
+      {
+        "src": "assets/images/r23-480.webp",
+        "width": 480,
+        "bytes": 32986
+      }
+    ]
+  },
+  "r25.jpeg": {
+    "width": 542,
+    "height": 658,
+    "originalBytes": 38648,
+    "variants": []
+  },
+  "r26.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 45814,
+    "variants": [
+      {
+        "src": "assets/images/r26-480.webp",
+        "width": 480,
+        "bytes": 38592
+      }
+    ]
+  },
+  "r27.jpeg": {
+    "width": 413,
+    "height": 658,
+    "originalBytes": 31687,
+    "variants": []
+  },
+  "r28.jpeg": {
+    "width": 439,
+    "height": 658,
+    "originalBytes": 51157,
+    "variants": []
+  },
+  "r29.jpeg": {
+    "width": 466,
+    "height": 658,
+    "originalBytes": 35211,
+    "variants": []
+  },
+  "r3.4.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 25289,
+    "variants": [
+      {
+        "src": "assets/images/r3.4-480.webp",
+        "width": 480,
+        "bytes": 17964
+      }
+    ]
+  },
+  "r3.5.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 45846,
+    "variants": [
+      {
+        "src": "assets/images/r3.5-480.webp",
+        "width": 480,
+        "bytes": 36652
+      }
+    ]
+  },
+  "r3.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 29405,
+    "variants": [
+      {
+        "src": "assets/images/r3-480.webp",
+        "width": 480,
+        "bytes": 21810
+      }
+    ]
+  },
+  "r30.jpeg": {
+    "width": 464,
+    "height": 658,
+    "originalBytes": 29766,
+    "variants": []
+  },
+  "r31.1.jpeg": {
+    "width": 938,
+    "height": 615,
+    "originalBytes": 88061,
+    "variants": [
+      {
+        "src": "assets/images/r31.1-480.webp",
+        "width": 480,
+        "bytes": 52136
+      }
+    ]
+  },
+  "r31.jpeg": {
+    "width": 1080,
+    "height": 600,
+    "originalBytes": 89394,
+    "variants": [
+      {
+        "src": "assets/images/r31-480.webp",
+        "width": 480,
+        "bytes": 39746
+      }
+    ]
+  },
+  "r32.jpeg": {
+    "width": 990,
+    "height": 658,
+    "originalBytes": 103398,
+    "variants": [
+      {
+        "src": "assets/images/r32-480.webp",
+        "width": 480,
+        "bytes": 56322
+      }
+    ]
+  },
+  "r33.jpeg": {
+    "width": 905,
+    "height": 658,
+    "originalBytes": 98179,
+    "variants": [
+      {
+        "src": "assets/images/r33-480.webp",
+        "width": 480,
+        "bytes": 59246
+      }
+    ]
+  },
+  "r34.jpeg": {
+    "width": 360,
+    "height": 658,
+    "originalBytes": 34934,
+    "variants": []
+  },
+  "r35.jpeg": {
+    "width": 480,
+    "height": 658,
+    "originalBytes": 43508,
+    "variants": []
+  },
+  "r36.1.jpeg": {
+    "width": 594,
+    "height": 658,
+    "originalBytes": 35104,
+    "variants": []
+  },
+  "r36.jpeg": {
+    "width": 654,
+    "height": 658,
+    "originalBytes": 48232,
+    "variants": [
+      {
+        "src": "assets/images/r36-480.webp",
+        "width": 480,
+        "bytes": 42892
+      }
+    ]
+  },
+  "r37.jpeg": {
+    "width": 527,
+    "height": 658,
+    "originalBytes": 36287,
+    "variants": []
+  },
+  "r38.jpeg": {
+    "width": 527,
+    "height": 658,
+    "originalBytes": 36287,
+    "variants": []
+  },
+  "r39.jpeg": {
+    "width": 527,
+    "height": 658,
+    "originalBytes": 36287,
+    "variants": []
+  },
+  "r4.jpeg": {
+    "width": 1792,
+    "height": 2400,
+    "originalBytes": 125948,
+    "variants": [
+      {
+        "src": "assets/images/r4-480.webp",
+        "width": 480,
+        "bytes": 21576
+      },
+      {
+        "src": "assets/images/r4-960.webp",
+        "width": 960,
+        "bytes": 59626
+      }
+    ]
+  },
+  "r40.1.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 60236,
+    "variants": [
+      {
+        "src": "assets/images/r40.1-480.webp",
+        "width": 480,
+        "bytes": 55290
+      }
+    ]
+  },
+  "r40.2.jpeg": {
+    "width": 492,
+    "height": 658,
+    "originalBytes": 39813,
+    "variants": []
+  },
+  "r40.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 52338,
+    "variants": [
+      {
+        "src": "assets/images/r40-480.webp",
+        "width": 480,
+        "bytes": 47400
+      }
+    ]
+  },
+  "r41.1.jpeg": {
+    "width": 532,
+    "height": 658,
+    "originalBytes": 27533,
+    "variants": []
+  },
+  "r41.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 37448,
+    "variants": [
+      {
+        "src": "assets/images/r41-480.webp",
+        "width": 480,
+        "bytes": 30556
+      }
+    ]
+  },
+  "r42.jpeg": {
+    "width": 370,
+    "height": 658,
+    "originalBytes": 25662,
+    "variants": []
+  },
+  "r43.jpeg": {
+    "width": 641,
+    "height": 715,
+    "originalBytes": 53824,
+    "variants": [
+      {
+        "src": "assets/images/r43-480.webp",
+        "width": 480,
+        "bytes": 48524
+      }
+    ]
+  },
+  "r5.jpeg": {
+    "width": 1076,
+    "height": 715,
+    "originalBytes": 48800,
+    "variants": [
+      {
+        "src": "assets/images/r5-480.webp",
+        "width": 480,
+        "bytes": 20666
+      }
+    ]
+  },
+  "r6.jpeg": {
+    "width": 1792,
+    "height": 2400,
+    "originalBytes": 257089,
+    "variants": [
+      {
+        "src": "assets/images/r6-480.webp",
+        "width": 480,
+        "bytes": 53102
+      },
+      {
+        "src": "assets/images/r6-960.webp",
+        "width": 960,
+        "bytes": 123208
+      }
+    ]
+  },
+  "r7.1.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 16558,
+    "variants": [
+      {
+        "src": "assets/images/r7.1-480.webp",
+        "width": 480,
+        "bytes": 12948
+      }
+    ]
+  },
+  "r7.10.jpeg": {
+    "width": 715,
+    "height": 715,
+    "originalBytes": 36921,
+    "variants": [
+      {
+        "src": "assets/images/r7.10-480.webp",
+        "width": 480,
+        "bytes": 26208
+      }
+    ]
+  },
+  "r7.11.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 37895,
+    "variants": [
+      {
+        "src": "assets/images/r7.11-480.webp",
+        "width": 480,
+        "bytes": 32290
+      }
+    ]
+  },
+  "r7.2.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 21205,
+    "variants": [
+      {
+        "src": "assets/images/r7.2-480.webp",
+        "width": 480,
+        "bytes": 16610
+      }
+    ]
+  },
+  "r7.3.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 25971,
+    "variants": [
+      {
+        "src": "assets/images/r7.3-480.webp",
+        "width": 480,
+        "bytes": 20590
+      }
+    ]
+  },
+  "r7.4.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 20167,
+    "variants": [
+      {
+        "src": "assets/images/r7.4-480.webp",
+        "width": 480,
+        "bytes": 15872
+      }
+    ]
+  },
+  "r7.5.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 24290,
+    "variants": [
+      {
+        "src": "assets/images/r7.5-480.webp",
+        "width": 480,
+        "bytes": 18674
+      }
+    ]
+  },
+  "r7.6.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 18738,
+    "variants": [
+      {
+        "src": "assets/images/r7.6-480.webp",
+        "width": 480,
+        "bytes": 14632
+      }
+    ]
+  },
+  "r7.7.jpeg": {
+    "width": 658,
+    "height": 658,
+    "originalBytes": 26944,
+    "variants": [
+      {
+        "src": "assets/images/r7.7-480.webp",
+        "width": 480,
+        "bytes": 21052
+      }
+    ]
+  },
+  "r7.8.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 21841,
+    "variants": []
+  },
+  "r7.9.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 16664,
+    "variants": []
+  },
+  "r7.jpeg": {
+    "width": 2048,
+    "height": 2056,
+    "originalBytes": 324535,
+    "variants": [
+      {
+        "src": "assets/images/r7-480.webp",
+        "width": 480,
+        "bytes": 60630
+      },
+      {
+        "src": "assets/images/r7-960.webp",
+        "width": 960,
+        "bytes": 153502
+      }
+    ]
+  },
+  "r8.jpeg": {
+    "width": 477,
+    "height": 715,
+    "originalBytes": 31030,
+    "variants": []
+  },
+  "r9.jpeg": {
+    "width": 494,
+    "height": 658,
+    "originalBytes": 54629,
+    "variants": []
+  },
+  "s1.jpeg": {
+    "width": 977,
+    "height": 1024,
+    "originalBytes": 65180,
+    "variants": [
+      {
+        "src": "assets/images/s1-480.webp",
+        "width": 480,
+        "bytes": 26678
+      }
+    ]
+  },
+  "s2.jpeg": {
+    "width": 477,
+    "height": 715,
+    "originalBytes": 28681,
+    "variants": []
+  },
+  "s3.jpeg": {
+    "width": 795,
+    "height": 1024,
+    "originalBytes": 59830,
+    "variants": [
+      {
+        "src": "assets/images/s3-480.webp",
+        "width": 480,
+        "bytes": 39026
+      }
+    ]
+  },
+  "s4.jpeg": {
+    "width": 526,
+    "height": 658,
+    "originalBytes": 49228,
+    "variants": []
+  },
+  "s5.jpeg": {
+    "width": 370,
+    "height": 658,
+    "originalBytes": 11913,
+    "variants": []
+  },
+  "shoulder.jpeg": {
+    "width": 376,
+    "height": 217,
+    "originalBytes": 7879,
+    "variants": []
+  },
+  "sleeve_length.jpeg": {
+    "width": 376,
+    "height": 282,
+    "originalBytes": 11413,
+    "variants": []
+  },
+  "standard.jpeg": {
+    "width": 1374,
+    "height": 1145,
+    "originalBytes": 170207,
+    "variants": [
+      {
+        "src": "assets/images/standard-480.webp",
+        "width": 480,
+        "bytes": 50086
+      },
+      {
+        "src": "assets/images/standard-960.webp",
+        "width": 960,
+        "bytes": 141528
+      }
+    ]
+  },
+  "suitssize.jpeg": {
+    "width": 900,
+    "height": 483,
+    "originalBytes": 103270,
+    "variants": [
+      {
+        "src": "assets/images/suitssize-480.webp",
+        "width": 480,
+        "bytes": 48380
+      }
+    ]
+  },
+  "thigh.jpeg": {
+    "width": 376,
+    "height": 366,
+    "originalBytes": 13722,
+    "variants": []
+  },
+  "trouser_length.jpeg": {
+    "width": 376,
+    "height": 565,
+    "originalBytes": 13801,
+    "variants": []
+  },
+  "w-classicsuitthree1.jpeg": {
+    "width": 572,
+    "height": 715,
+    "originalBytes": 57453,
+    "variants": []
+  },
+  "w-classicsuitthree2.jpeg": {
+    "width": 575,
+    "height": 715,
+    "originalBytes": 55519,
+    "variants": []
+  },
+  "w-classicsuitthree3.jpeg": {
+    "width": 800,
+    "height": 715,
+    "originalBytes": 24052,
+    "variants": [
+      {
+        "src": "assets/images/w-classicsuitthree3-480.webp",
+        "width": 480,
+        "bytes": 11872
+      }
+    ]
+  },
+  "w-classicsuitthree4.jpeg": {
+    "width": 380,
+    "height": 530,
+    "originalBytes": 13637,
+    "variants": []
+  },
+  "w-classicsuittwo1.jpeg": {
+    "width": 412,
+    "height": 715,
+    "originalBytes": 15059,
+    "variants": []
+  },
+  "w-classicsuittwo2.jpeg": {
+    "width": 402,
+    "height": 715,
+    "originalBytes": 21411,
+    "variants": []
+  },
+  "w-classicsuittwo3.jpeg": {
+    "width": 536,
+    "height": 715,
+    "originalBytes": 59922,
+    "variants": []
+  },
+  "w-classicsuittwo4.jpeg": {
+    "width": 477,
+    "height": 715,
+    "originalBytes": 14728,
+    "variants": []
+  },
+  "w1.jpeg": {
+    "width": 439,
+    "height": 658,
+    "originalBytes": 25868,
+    "variants": []
+  },
+  "w2.jpeg": {
+    "width": 526,
+    "height": 658,
+    "originalBytes": 28656,
+    "variants": []
+  },
+  "w3.jpeg": {
+    "width": 742,
+    "height": 801,
+    "originalBytes": 36092,
+    "variants": [
+      {
+        "src": "assets/images/w3-480.webp",
+        "width": 480,
+        "bytes": 26628
+      }
+    ]
+  },
+  "w4.jpeg": {
+    "width": 913,
+    "height": 1024,
+    "originalBytes": 58574,
+    "variants": [
+      {
+        "src": "assets/images/w4-480.webp",
+        "width": 480,
+        "bytes": 26884
+      }
+    ]
+  },
+  "w5.jpeg": {
+    "width": 566,
+    "height": 639,
+    "originalBytes": 23094,
+    "variants": []
+  },
+  "waist.jpeg": {
+    "width": 376,
+    "height": 282,
+    "originalBytes": 13467,
+    "variants": []
+  },
+  "wrist.jpeg": {
+    "width": 376,
+    "height": 387,
+    "originalBytes": 13138,
+    "variants": []
+  }
+}

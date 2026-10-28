@@ -48,7 +48,7 @@
       <div class="customers-interactive-container">
         <div class="client-spotlight-card">
           <div class="spotlight-image-wrapper">
-            <img src="h1.jpeg" alt="Graduation Client in Custom Off-White Suit - Main Feature" class="spotlight-image" loading="lazy">
+            <img src="h1.jpeg" alt="Graduation Client in Custom Off-White Suit - Main Feature" class="spotlight-image" loading="lazy" width="797" height="995" decoding="async" srcset="assets/images/h1-480.webp 480w, h1.jpeg 797w" sizes="(max-width: 700px) 100vw, 50vw">
           </div>
 
           <div class="spotlight-content">
@@ -65,21 +65,21 @@
       <div class="slider-header-row">
         <span class="slider-title">More Client Moments &amp; Reviews</span>
         <div class="slider-nav-btns">
-          <button class="slider-arrow" id="slideLeft" onclick="scrollGallery(-1)" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-arrow" id="slideRight" onclick="scrollGallery(1)" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+          <button class="slider-arrow" id="slideLeft" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-arrow" id="slideRight" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
 
       <div class="customers-slider" id="customersSlider">
-        <div class="customer-card-slide"><img src="h2.jpeg" alt="Graduation Client Profile View" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="h3.jpeg" alt="Graduation Client with Diploma Scroll" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r2.jpeg" alt="Client review r2" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r3.jpeg" alt="Client review r3" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r4.jpeg" alt="Client review r4" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r5.jpeg" alt="Client review r5" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r6.jpeg" alt="Client review r6" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r7.jpeg" alt="Client review r7" class="suit-image" loading="lazy"></div>
-        <div class="customer-card-slide"><img src="r8.jpeg" alt="Client review r8" class="suit-image" loading="lazy"></div>
+        <div class="customer-card-slide"><img src="h2.jpeg" alt="Graduation Client Profile View" class="suit-image" loading="lazy" width="750" height="938" decoding="async" srcset="assets/images/h2-480.webp 480w, h2.jpeg 750w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="h3.jpeg" alt="Graduation Client with Diploma Scroll" class="suit-image" loading="lazy" width="750" height="938" decoding="async" srcset="assets/images/h3-480.webp 480w, h3.jpeg 750w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r2.jpeg" alt="Client review r2" class="suit-image" loading="lazy" width="451" height="658" decoding="async" srcset="r2.jpeg 451w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r3.jpeg" alt="Client review r3" class="suit-image" loading="lazy" width="658" height="658" decoding="async" srcset="assets/images/r3-480.webp 480w, r3.jpeg 658w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r4.jpeg" alt="Client review r4" class="suit-image" loading="lazy" width="1792" height="2400" decoding="async" srcset="assets/images/r4-480.webp 480w, assets/images/r4-960.webp 960w, r4.jpeg 1792w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r5.jpeg" alt="Client review r5" class="suit-image" loading="lazy" width="1076" height="715" decoding="async" srcset="assets/images/r5-480.webp 480w, r5.jpeg 1076w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r6.jpeg" alt="Client review r6" class="suit-image" loading="lazy" width="1792" height="2400" decoding="async" srcset="assets/images/r6-480.webp 480w, assets/images/r6-960.webp 960w, r6.jpeg 1792w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r7.jpeg" alt="Client review r7" class="suit-image" loading="lazy" width="2048" height="2056" decoding="async" srcset="assets/images/r7-480.webp 480w, assets/images/r7-960.webp 960w, r7.jpeg 2048w" sizes="(max-width: 700px) 100vw, 50vw"></div>
+        <div class="customer-card-slide"><img src="r8.jpeg" alt="Client review r8" class="suit-image" loading="lazy" width="477" height="715" decoding="async" srcset="r8.jpeg 477w" sizes="(max-width: 700px) 100vw, 50vw"></div>
       </div>
     </div>
   </div>
@@ -160,6 +160,10 @@
 </style>
 
 <script>
+  // This initializer runs on the standalone fragment page. The homepage uses event delegation.
+  document.getElementById('slideLeft')?.addEventListener('click', () => scrollGallery(-1));
+  document.getElementById('slideRight')?.addEventListener('click', () => scrollGallery(1));
+
   function scrollGallery(direction) {
     const slider = document.getElementById('customersSlider');
     if (!slider) return;

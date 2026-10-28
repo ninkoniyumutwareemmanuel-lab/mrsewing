@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Consultation | Mr. Sewing Bespoke Tailoring Kigali</title>
+  <title>Book a Kigali Tailoring Consultation | Mr Sewing Fashion</title>
 
-  <meta name="description" content="Book a private tailoring consultation or VIP house call with Mr. Sewing at our workplace in Norvège or across Kigali, Rwanda.">
+  <meta name="description" content="Request a tailoring consultation with Mr Sewing Fashion in Kigali, Rwanda. Choose a visit type, preferred date and time, then share your needs for confirmation.">
   <meta name="author" content="Mr. Sewing">
   <meta name="theme-color" content="#0b0b0b">
 
-  <link rel="icon" href="/MR%20LOGO.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="/MR%20LOGO.jpeg">
+  <link rel="icon" href="/assets/images/logo-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/logo-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -231,22 +231,14 @@
       .form-group.full-width { grid-column: span 1; }
     }
   </style>
+  <script src="assets/navigation.js" defer></script>
+  <script src="assets/forms.js" defer></script>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <a href="index.html">
-      <img src="MR LOGO.jpeg" alt="Mr. Sewing Logo" class="header-logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="suits.html">Suits</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="site-header"></div>
+  <script>fetch("header.html").then(response => { if (!response.ok) throw new Error("Header unavailable"); return response.text(); }).then(html => { document.getElementById("site-header").innerHTML = html; }).catch(() => { document.getElementById("site-header").innerHTML = '<nav aria-label="Main navigation"><a href="/">Home</a> · <a href="suits.html">Suits</a> · <a href="contact.html">Contact Us</a></nav>'; });</script>
 
   <!-- Booking Form Wrapper -->
   <main class="booking-wrapper">
@@ -255,7 +247,7 @@
 
       <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- Web3Forms Access Key -->
-        <input type="hidden" name="apikey" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
+        <input type="hidden" name="access_key" value="5238f372-cea9-4bf8-abbc-a6c7d2d28a35">
         <input type="hidden" name="subject" value="New Consultation Booking - Mr. Sewing">
         <input type="hidden" name="from_name" value="Mr. Sewing Website">
 
@@ -331,7 +323,7 @@
         <i class="fas fa-calendar-check"></i>
         <h3>Booking Request Received!</h3>
         <p>Thank you for booking with Mr. Sewing. Your consultation details have been submitted. You will receive a confirmation message within 24 hours. Please, if you don't get it in 24 hours, contact us on this number, call or WhatsApp: +250 787 411 501.</p>
-        <a href="index.html" class="back-home-btn">Return to Homepage</a>
+        <a href="/" class="back-home-btn">Return to Homepage</a>
       </div>
     </div>
   </main>
@@ -339,7 +331,7 @@
   <script>
     const dateInput = document.getElementById('preferredDate');
     if (dateInput) {
-      const today = new Date().toISOString().split('T')[0];
+      const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Africa/Kigali', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
       dateInput.setAttribute('min', today);
 
       dateInput.addEventListener('click', function() {
@@ -367,62 +359,6 @@
       });
     }
 
-    const form = document.getElementById('bookingForm');
-    const successBox = document.getElementById('successBox');
-    const debugMode = location.search.indexOf('debug=1') !== -1;
-
-    function showError(message, reason) {
-      alert(message + (debugMode ? '\n\nReason: ' + reason : ''));
-    }
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const data = Object.fromEntries(new FormData(form));
-      if (!data['Email Address'] || !data['Email Address'].trim()) {
-        data['Email Address'] = 'Not provided';
-      } else {
-        data['replyto'] = data['Email Address'].trim();
-      }
-      if (!data['Customer Message'] || !data['Customer Message'].trim()) {
-        data['Customer Message'] = 'No message provided';
-      }
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-      .then(function(response) {
-        return response.json().catch(function() { return {}; }).then(function(result) {
-          return { response: response, result: result };
-        });
-      })
-      .then(function(output) {
-        const response = output.response;
-        const result = output.result;
-
-        if (response.ok && result.success !== false) {
-          form.style.display = 'none';
-          successBox.style.display = 'block';
-        } else {
-          const reason = (result && result.message) ? result.message : ('HTTP ' + response.status + ' ' + response.statusText);
-          console.error('Booking form was refused by Web3Forms:', {
-            status: response.status,
-            statusText: response.statusText,
-            reply: result
-          });
-          showError('Something went wrong. Please try submitting again or contact us directly on WhatsApp.', reason);
-        }
-      })
-      .catch(function(error) {
-        console.error('Booking form could not reach Web3Forms:', error);
-        showError('Form submission error. Please try again.', error && error.message ? error.message : String(error));
-      });
-    });
   </script>
 
 </body>
