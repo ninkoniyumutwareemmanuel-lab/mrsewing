@@ -96,9 +96,24 @@
     if (restoreFocus) button.focus();
   }
   button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
-  menu.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false); });
+  menu.addEventListener('click', event => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    setOpen(false);
+    // In-page navigation must not leave focus inside the now-hidden dropdown.
+    const url = new URL(link.href, location.href);
+    if (url.pathname === location.pathname && url.hash) {
+      const section = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+      const target = section && (section.querySelector('h1,h2') || section);
+      if (target) {
+        target.tabIndex = -1;
+        // Let the native fragment navigation finish before placing focus.
+        requestAnimationFrame(() => target.focus({ preventScroll:true }));
+      }
+    }
+  });
   document.addEventListener('click', event => {
-    if (!event.target.closest('.homepage-header')) setOpen(false);
+    if (!menu.contains(event.target) && !button.contains(event.target)) setOpen(false);
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false, true);

@@ -10,6 +10,15 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     const p=await c.newPage();const errors=[],broken=[];p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)broken.push(r.url())});
     await p.goto(base);
     assert.deepEqual(await p.locator('main section').evaluateAll(es=>es.map(e=>e.querySelector('h1,h2').textContent)),titles);
+    assert.equal(await p.locator('.brand-name').textContent(),'MR SEWING');
+    assert((await p.locator('.hero-description').textContent()).includes('inspiration photo or describe'));
+    assert((await p.locator('.hero-description').textContent()).includes('Mr Sewing creates'));
+    assert(!/Mr Sewing Fashion Designer|FASHION DESIGNER/.test(await p.content()));
+    assert((await p.locator('footer .footer-bottom-copy').textContent()).includes('Mr Sewing Fashion'));
+    assert.equal(await p.locator('meta[property="og:site_name"]').getAttribute('content'),'Mr Sewing Fashion');
+    assert.equal(await p.locator('meta[property="og:image:width"]').getAttribute('content'),'1536');
+    assert.equal(await p.locator('meta[property="og:image:height"]').getAttribute('content'),'2752');
+    if(width<768){assert(await p.locator('h1').evaluate(e=>parseFloat(getComputedStyle(e).fontSize)>=38));}
     assert.equal(await p.locator('h1').count(),1);assert.equal(await p.locator('header nav').count(),1);
     assert.equal(await p.locator('header').getByText('Book Consultation',{exact:true}).count(),0);
     const toggle=p.locator('.home-menu-toggle'),nav=p.locator('#home-navigation');
@@ -17,9 +26,15 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
       assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert(!await nav.isVisible());
       const before=await p.locator('.hero-section').boundingBox();await toggle.focus();await p.keyboard.press('Enter');assert(await nav.isVisible());assert.equal(await toggle.getAttribute('aria-expanded'),'true');
       assert.equal((await p.locator('.hero-section').boundingBox()).y,before.y,'menu overlays without shifting content');
+      const rows=await nav.locator('a').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,height:r.height}}));
+      assert(rows.every((r,i)=>Math.abs(r.x-rows[0].x)<1&&r.height>=44&&(!i||r.y>=rows[i-1].y+rows[i-1].height)),'one left-aligned vertical column with comfortable targets');
+      const panel=await nav.boundingBox(),headerBox=await p.locator('header').boundingBox();
+      assert(Math.abs(panel.y-headerBox.y-headerBox.height)<1);assert(panel.width<=280&&panel.height<=242,'compact panel beneath header');
       await p.keyboard.press('Tab');assert.equal(await p.evaluate(()=>document.activeElement.textContent),'Home');
       await p.keyboard.press('Escape');assert(!await nav.isVisible());assert(await toggle.evaluate(e=>e===document.activeElement));
       await toggle.click();await p.mouse.click(width-8,700);assert(!await nav.isVisible());
+      await toggle.click();await p.mouse.click(10,30);assert(!await nav.isVisible(),'tapping elsewhere in the header closes the panel');
+      await toggle.click();await nav.getByRole('link',{name:'Our Work',exact:true}).click();await p.waitForURL('**/#customers-section');assert(!await nav.isVisible());await p.waitForFunction(()=>document.activeElement.id==='customers-title');await p.goto(base);
       await toggle.click();await nav.getByRole('link',{name:'Contact Us',exact:true}).click();await p.waitForURL('**/contact/');await p.goto(base);
       const header=await p.locator('header').boundingBox();assert(header.height<=80,'single-row mobile header');
     }else{assert(await nav.isVisible());assert(!await toggle.isVisible());}
