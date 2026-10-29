@@ -21,11 +21,13 @@ External icon styles/fonts are intentionally blocked. These checks do not establ
 ## Static homepage generation and checks
 
 The homepage assembles `_templates/homepage-sections.html`,
-`_templates/homepage.css`, `_templates/homepage.html` and
-`_templates/homepage-footer.html` at build
+`_templates/shared/site.css`, `_templates/homepage.html` and
+`_templates/shared/footer.html` at build
 time, so it needs no runtime HTML fetches. Standalone service/collection pages
 keep their own content and styles. After changing these homepage sources or the
-homepage footer, regenerate and commit `index.html`:
+shared component, rebuild both V2 pages with `python3 scripts/build_site.py`
+and commit their generated outputs. See [shared component architecture](../docs/shared-components.md).
+For homepage-only content changes:
 
 ```sh
 python3 scripts/build_homepage.py
@@ -369,5 +371,6 @@ python3 scripts/build_contact.py --check
 node tests/contact-v2.spec.cjs
 ```
 
-Rebuild Contact after changing an approved shared homepage component. Browser
+Run `python3 scripts/build_site.py` after changing a shared component, then
+`python3 scripts/build_site.py --check` and `python3 tests/shared_components.py`. Browser
 checks block external requests and never send messages or real bookings.

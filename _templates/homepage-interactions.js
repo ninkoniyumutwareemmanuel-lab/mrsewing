@@ -1,0 +1,93 @@
+/* Homepage interactions only; content is rendered in the initial HTML. */
+/* Universal Event Delegation for Order Buttons & Slider Arrows */
+    (function setupGlobalDelegation() {
+      const modal = document.getElementById('orderModal');
+      const agree = document.getElementById('termsAgree');
+      const whatsapp = document.getElementById('whatsappBtn');
+      const hint = document.getElementById('termsHint');
+      const closeButton = document.getElementById('orderClose');
+      const termsLink = document.getElementById('termsLink');
+      let returnFocus = null;
+
+      function openModal() {
+        if (!modal) return;
+        returnFocus = document.activeElement;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        if (closeButton) closeButton.focus();
+      }
+      function closeModal() {
+        if (!modal) return;
+        if (!modal.classList.contains('open')) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        if (agree) agree.checked = false;
+        if (whatsapp) whatsapp.setAttribute('aria-disabled', 'true');
+        if (hint) hint.textContent = '';
+        if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
+        if (returnFocus && returnFocus.isConnected) returnFocus.focus();
+      }
+
+      document.addEventListener('click', function (event) {
+        // 1. Order modal button handler
+        const button = event.target.closest && event.target.closest('.order-btn');
+        if (button) {
+          event.preventDefault();
+          openModal();
+          return;
+        }
+
+        // 2. Universal slider arrows handler
+        const leftClick = event.target.closest('#slideLeft, .slide-left');
+        const rightClick = event.target.closest('#slideRight, .slide-right');
+        if (leftClick || rightClick) {
+          event.preventDefault();
+          const slider = document.getElementById('customersSlider') || document.querySelector('.customers-slider');
+          if (slider) {
+            const step = (slider.querySelector('.customer-card-slide')?.getBoundingClientRect().width || 280) + 18;
+            slider.scrollBy({ left: leftClick ? -step : step, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+          }
+        }
+      });
+
+      if (agree) {
+        agree.addEventListener('change', function () {
+          if (whatsapp) whatsapp.setAttribute('aria-disabled', agree.checked ? 'false' : 'true');
+          if (hint) hint.textContent = '';
+        });
+      }
+      if (whatsapp) {
+        whatsapp.addEventListener('click', function (event) {
+          if (agree && !agree.checked) {
+            event.preventDefault();
+            if (hint) hint.textContent = 'Please agree to the Terms & Conditions to continue.';
+          } else {
+            closeModal();
+          }
+        });
+      }
+      if (termsLink) termsLink.addEventListener('click', closeModal);
+      if (closeButton) closeButton.addEventListener('click', function (event) { event.preventDefault(); closeModal(); });
+      if (modal) {
+        modal.addEventListener('click', function (event) { if (event.target === modal) closeModal(); });
+      }
+      document.addEventListener('keydown', function (event) {
+        if (!modal || !modal.classList.contains('open')) return;
+        if (event.key === 'Escape') closeModal();
+        if (event.key === 'Tab') {
+          const focusable = [...modal.querySelectorAll('a[href],button,input')].filter(e => e.getClientRects().length);
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      });
+      if (location.hash === '#orderModal') {
+        openModal();
+        // Native fragment navigation can otherwise move focus after setup.
+        requestAnimationFrame(() => {
+          if (modal && modal.classList.contains('open') && closeButton) closeButton.focus();
+        });
+      }
+    })();
+
+/* A disclosure menu: normal links and tab order, with a usable no-JS fallback. */

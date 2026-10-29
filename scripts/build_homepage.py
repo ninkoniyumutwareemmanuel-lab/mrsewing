@@ -12,11 +12,12 @@ import re
 import struct
 from homepage_resources import delivery, hero_preloads, CSS as RESOURCE_CSS
 from build_clean_urls import DISCOVERY_LINKS
+import shared_components as shared
 
 ROOT = Path(__file__).resolve().parents[1]
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
-    'header': ('_templates/homepage-sections.html', 'header', None),
+    'header': ('_templates/shared/header.html', 'header', None),
     'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
     'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
     'collections': ('_templates/homepage-sections.html', 'section', ('class', 'home-collections home-section')),
@@ -25,7 +26,7 @@ SECTIONS = {
     'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
     'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
-    'footer': ('_templates/homepage-footer.html', 'footer', None),
+    'footer': ('_templates/shared/footer.html', 'footer', None),
 }
 
 
@@ -109,7 +110,7 @@ def render():
         parser.feed(source)
         if parser.markup is None:
             raise ValueError(f'Missing homepage section: {filename}')
-        markup = parser.markup
+        markup = shared.header('/') if key == 'header' else shared.footer() if key == 'footer' else parser.markup
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
@@ -122,7 +123,7 @@ def render():
         section_styles = re.findall(r'<style[^>]*>(.*?)</style>', source, re.S)
         styles.extend(section_styles)
     styles.append(RESOURCE_CSS)
-    styles.append((ROOT / '_templates/homepage.css').read_text())
+    styles.append(shared.site_css())
     template = template.replace('{{hero_preloads}}', hero_preloads())
     template = template.replace('{{section_styles}}', '\n'.join(styles))
     if re.search(r'{{\w+}}', template):
@@ -137,6 +138,13 @@ def main():
     args = parser.parse_args()
     output = render()
     destination = ROOT / 'index.html'
+    navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script()
+    navigation_path = ROOT / 'assets/homepage.js'
+    if args.check:
+        if navigation_path.read_text() != navigation:
+            raise SystemExit('Homepage navigation out of date; run build_homepage.py')
+    else:
+        navigation_path.write_text(navigation)
     if args.check:
         if destination.read_text() != output:
             raise SystemExit('Homepage is out of date. Run python3 scripts/build_homepage.py')
