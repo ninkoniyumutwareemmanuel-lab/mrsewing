@@ -345,97 +345,14 @@
   }
 </script>
 
-  <!-- Homepage icons are inlined at build time; no render-blocking icon stylesheet. -->
-
-  <style>
-    /* Reset & Page Setup */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; }
-    img { max-width: 100%; }
-
-    /* Header Bar */
-    header {
-      background-color: #141414;
-      border-bottom: 1px solid #2a2a2a;
-      padding: 12px 4%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: clamp(6px, 2vw, 15px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; display: block; mix-blend-mode: screen; flex-shrink: 0; }
-    nav { flex-shrink: 1; overflow: hidden; }
-    nav ul { display: flex; list-style: none; gap: clamp(8px, 2.5vw, 25px); align-items: center; justify-content: center; white-space: nowrap; }
-    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.68rem, 1.5vw, 0.95rem); font-weight: 500; transition: color 0.3s ease; }
-    nav a:hover { color: #d4af37; }
-
-    .order-btn {
-      background-color: #d4af37;
-      color: #000000;
-      padding: clamp(6px, 1.2vw, 9px) clamp(10px, 2vw, 20px);
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: clamp(0.68rem, 1.3vw, 0.85rem);
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .order-btn:hover { background-color: #f3e5ab; }
-
-    /* Intro Heading Strip */
-    .search-strip { background-color: #0f0f0f; border-bottom: 1px solid #2a2a2a; padding: clamp(12px, 2vw, 22px) 4%; text-align: center; }
-    .search-strip h1 { font-size: clamp(0.8rem, 1.8vw, 1.1rem); color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 0; }
-
-    /* Fixed Modal Overlay */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 99999;
-      padding: 16px;
-    }
-    .modal-overlay.open {
-      display: flex;
-    }
-    .modal-box { background-color: #141414; border: 1px solid #2a2a2a; border-top: 3px solid #d4af37; border-radius: 8px; max-width: 440px; width: 100%; padding: clamp(24px, 4vw, 32px); padding-top: 48px; position: relative; box-sizing: border-box; }
-    .modal-close { position: absolute; top: 8px; right: 10px; z-index: 5; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; background: #222222; border: 1px solid #444444; border-radius: 50%; color: #ffffff; font-size: 2rem; line-height: 1; cursor: pointer; }
-    .modal-close:hover, .modal-close:focus-visible { color: #d4af37; border-color: #d4af37; outline: 2px solid #d4af37; outline-offset: 2px; }
-    .modal-box h3 { color: #d4af37; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-size: 1.1rem; }
-    .modal-box p { color: #aaaaaa; font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
-    .terms-check { display: flex; gap: 10px; align-items: flex-start; color: #cccccc; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px; cursor: pointer; }
-    .terms-check input { margin-top: 3px; width: 18px; height: 18px; accent-color: #d4af37; flex-shrink: 0; }
-    .terms-check a { color: #d4af37; }
-    .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: #000000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; padding: 12px; border-radius: 4px; text-decoration: none; transition: opacity 0.3s ease; }
-    .whatsapp-btn[aria-disabled="true"] { background-color: #2a2a2a; color: #777777; cursor: not-allowed; }
-    .terms-hint { color: #d4af37; font-size: 0.8rem; margin-top: 10px; text-align: center; min-height: 1em; }
-
-    /* Component mounts span the full viewport width without adding layout constraints. */
-    .site-component { width: 100%; min-width: 0; }
-    #main-content { display: block; width: 100%; }
-    :focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
-  </style>
-
-  <!-- Section styles are assembled in the same order as the original page. -->
+  <!-- One homepage visual system; local icons, no runtime style injection. -->
   <style>
 {{section_styles}}
-
   </style>
   <script src="assets/homepage.js" defer></script>
 </head>
 <body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <!-- Homepage navigation included at build time. -->
   <div id="site-header" class="site-component" aria-label="Website header">
 {{header}}
@@ -466,7 +383,7 @@
     </div>
   </main>
 
-  <!-- Shared footer included at build time. -->
+  <!-- Homepage-specific footer; standalone pages retain their shared footer. -->
   <div id="site-footer" class="site-component">
 {{footer}}
     </div>

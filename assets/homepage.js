@@ -7,20 +7,25 @@
       const hint = document.getElementById('termsHint');
       const closeButton = document.getElementById('orderClose');
       const termsLink = document.getElementById('termsLink');
+      let returnFocus = null;
 
       function openModal() {
         if (!modal) return;
+        returnFocus = document.activeElement;
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
+        if (closeButton) closeButton.focus();
       }
       function closeModal() {
         if (!modal) return;
+        if (!modal.classList.contains('open')) return;
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
         if (agree) agree.checked = false;
         if (whatsapp) whatsapp.setAttribute('aria-disabled', 'true');
         if (hint) hint.textContent = '';
         if (location.hash === '#orderModal') history.replaceState(null, '', location.pathname + location.search);
+        if (returnFocus && returnFocus.isConnected) returnFocus.focus();
       }
 
       document.addEventListener('click', function (event) {
@@ -39,7 +44,8 @@
           event.preventDefault();
           const slider = document.getElementById('customersSlider') || document.querySelector('.customers-slider');
           if (slider) {
-            slider.scrollBy({ left: leftClick ? -280 : 280, behavior: 'smooth' });
+            const step = (slider.querySelector('.customer-card-slide')?.getBoundingClientRect().width || 280) + 18;
+            slider.scrollBy({ left: leftClick ? -step : step, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
           }
         }
       });
@@ -65,7 +71,16 @@
       if (modal) {
         modal.addEventListener('click', function (event) { if (event.target === modal) closeModal(); });
       }
-      document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeModal(); });
+      document.addEventListener('keydown', function (event) {
+        if (!modal || !modal.classList.contains('open')) return;
+        if (event.key === 'Escape') closeModal();
+        if (event.key === 'Tab') {
+          const focusable = [...modal.querySelectorAll('a[href],button,input')].filter(e => e.getClientRects().length);
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      });
       if (location.hash === '#orderModal') openModal();
     })();
 
@@ -76,6 +91,7 @@
   if (!button || !menu) return;
   function setOpen(open, restoreFocus = false) {
     button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     menu.dataset.open = String(open);
     if (restoreFocus) button.focus();
   }
@@ -88,5 +104,5 @@
     if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false, true);
   });
   // Reset on the layout breakpoint only, not while mobile browser chrome resizes.
-  matchMedia('(max-width: 1100px)').addEventListener('change', () => setOpen(false));
+  matchMedia('(max-width: 1099px)').addEventListener('change', () => setOpen(false));
 })();

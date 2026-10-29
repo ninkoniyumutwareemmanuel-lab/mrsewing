@@ -2,7 +2,7 @@
 """Assemble index.html from reusable section markup, without runtime HTML fetches.
 
 No third-party dependencies. Standalone source pages are never modified.
-Run after editing _templates/homepage*, shared footer, or resource helpers.
+Run after editing the dedicated _templates/homepage* files or resource helpers.
 """
 import argparse
 from html import unescape
@@ -24,7 +24,7 @@ SECTIONS = {
     'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
     'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
-    'footer': ('footer.html', 'footer', None),
+    'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
 
 

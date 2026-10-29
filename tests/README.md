@@ -21,10 +21,11 @@ External icon styles/fonts are intentionally blocked. These checks do not establ
 ## Static homepage generation and checks
 
 The homepage assembles `_templates/homepage-sections.html`,
-`_templates/homepage.css`, `_templates/homepage.html` and the shared footer at build
+`_templates/homepage.css`, `_templates/homepage.html` and
+`_templates/homepage-footer.html` at build
 time, so it needs no runtime HTML fetches. Standalone service/collection pages
 keep their own content and styles. After changing these homepage sources or the
-shared footer, regenerate and commit `index.html`:
+homepage footer, regenerate and commit `index.html`:
 
 ```sh
 python3 scripts/build_homepage.py
@@ -206,7 +207,7 @@ settings as part of a staging push.
 
 Homepage resource substitutions live in `scripts/homepage_resources.py` and run
 inside `build_homepage.py`. They affect the generated homepage only: standalone
-collections/services retain their original image/icon delivery. Fourteen Font
+collections/services retain their original image/icon delivery. Seven Font
 Awesome Free 6.4.0 glyphs use the exact licensed SVG paths (CC BY4.0; see
 `assets/fontawesome-LICENSE.txt`); no icon stylesheet or font is requested by home.
 All existing accessible parent labels remain; decorative SVGs are hidden from
@@ -219,10 +220,14 @@ with content hashes; original files and the existing shared image inventory stay
 untouched. Photos use quality82 AVIF (4:4:4 chroma for client images); logos use
 lossless WebP. The recorded photo PSNR threshold is35dB against the same-size
 reference; logo visible pixels/alpha compare exactly. Responsive slot sizes
-match 158/218px card interiors and account for the existing4:5 crop of landscape
-images. Logo slot sizes match its actual CSS display size. Mobile hero uses a
-responsive picture with an exactly matching conditional preload; desktop keeps
-the original JPEG. Hero is eager/high-priority; other homepage photos remain lazy.
+match the three large 3:4 editorial portraits, including source pixels needed for
+safe centered crops. Logo slot sizes match its actual CSS display size. Stage A
+uses the existing `h1.jpeg` graduation portrait and its 480px WebP variant as the
+hero; the eager/high-priority preload is derived directly from the source image's
+srcset and sizes. Other homepage photographs remain lazy. Earlier background-hero
+variants stay in the inventory for rollback; Stage A does not request them or
+re-encode any originals. The original authoring script is retained, but no image
+regeneration is needed to build Stage A.
 
 The new filenames avoid stale image replacements. They do **not** change server
 cache lifetimes: GitHub Pages does not expose general per-file Cache-Control
@@ -322,10 +327,29 @@ blocked. Preserve all existing performance/SEO/customer regression suites.
 ## Homepage design-sharing journey
 
 `tests/homepage-journey.spec.cjs` checks the seven-section order, real existing
-collection/service destinations and FAQ fragments, three prefilled WhatsApp
+collection/service destinations and FAQ fragments, two prefilled WhatsApp
 intents with navigation prevented, all homepage image decoding, compact header,
 menu keyboard activation/Escape/focus return/outside dismissal, and the visible
-no-JavaScript navigation fallback. It covers 320, 360, 390, 430, 768 and 1440px.
-The responsive disclosure is homepage-only; other pages retain their headers.
+no-JavaScript navigation fallback. It covers 320, 360, 390, 430, 768, 1024 and 1440px.
+The responsive disclosure and footer are homepage-only; other pages retain their
+shared headers and footers.
 Premium garment-care eligibility is linked to Contact because the current FAQ
 does not publish those conditions. No tiers or additional entitlements are invented.
+
+
+## V2 Stage A visual system
+
+The homepage imports none of the shared header/footer CSS. Its portrait hero,
+ivory editorial gallery, inspiration index, service rows and compact footer are
+maintained in the dedicated homepage templates and stylesheet. Normal hours and
+Sunday availability are visible in the footer; the native Umuganda disclosure
+reveals the full last-Saturday exception and confirms ordinary Saturday walk-ins.
+Desktop navigation exposes five essential links; comments reserve insertion
+points for future Shop/Rewards after launch, without advertising inactive pages.
+The original shared components and all other standalone pages are unchanged.
+
+`tests/homepage-journey.spec.cjs` also verifies the icon-only mobile menu, absence
+of the mobile header order action, seven named services with explanations, three
+large editorial portraits, five desktop footer columns, footer disclosure and
+compactness, and the retained order-popup focus trap. Passing these checks is
+technical verification; the owner must still approve the Stage A visual design.
