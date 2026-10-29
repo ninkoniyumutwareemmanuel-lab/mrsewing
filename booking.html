@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script data-legacy-url>if (location.pathname === "/booking.html") location.replace("/booking/" + location.search + location.hash);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Kigali Tailoring Consultation | Mr Sewing Fashion</title>
@@ -232,13 +233,15 @@
     }
   </style>
   <script src="assets/navigation.js" defer></script>
-  <script src="assets/forms.js" defer></script>
+  <script src="assets/business-hours.js?v=42389240ec" defer></script>
+  <script src="assets/forms.js?v=2e7b291cba" defer></script>
+  <link rel="canonical" href="https://mrsewingfashion.com/booking/">
 </head>
 <body>
 
   <!-- Header -->
   <div id="site-header"></div>
-  <script>fetch("header.html").then(response => { if (!response.ok) throw new Error("Header unavailable"); return response.text(); }).then(html => { document.getElementById("site-header").innerHTML = html; }).catch(() => { document.getElementById("site-header").innerHTML = '<nav aria-label="Main navigation"><a href="/">Home</a> · <a href="suits.html">Suits</a> · <a href="contact.html">Contact Us</a></nav>'; });</script>
+  <script>fetch("header.html").then(response => { if (!response.ok) throw new Error("Header unavailable"); return response.text(); }).then(html => { document.getElementById("site-header").innerHTML = html; }).catch(() => { document.getElementById("site-header").innerHTML = '<nav aria-label="Main navigation"><a href="/">Home</a> · <a href="/suits/">Suits</a> · <a href="/contact/">Contact Us</a></nav>'; });</script>
 
   <!-- Booking Form Wrapper -->
   <main class="booking-wrapper">
@@ -283,13 +286,14 @@
           <!-- Date -->
           <div class="form-group">
             <label for="preferredDate">Preferred Date *</label>
-            <input type="date" id="preferredDate" name="Preferred Date" required>
+            <input type="date" id="preferredDate" name="Preferred Date" required aria-describedby="business-hours-note">
+            <p id="business-hours-note" role="status" style="color:#cccccc;font-size:.85rem;line-height:1.5;margin-top:8px">Ordinary Saturdays: 9 AM–5 PM, no appointment needed. Umuganda: noon–5 PM by advance appointment. Sunday: by appointment only.</p>
           </div>
 
           <!-- Time Slot -->
           <div class="form-group">
             <label for="preferredTime">Preferred Time *</label>
-            <select id="preferredTime" name="Preferred Time" required>
+            <select id="preferredTime" name="Preferred Time" required aria-describedby="business-hours-note">
               <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
               <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
               <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
@@ -311,7 +315,7 @@
         <!-- Agreement -->
         <div class="terms-box">
           <input type="checkbox" id="agreeTerms" required>
-          <label for="agreeTerms">I have read and agree to the <a href="terms-and-conditions.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</label>
+          <label for="agreeTerms">I have read and agree to the <a href="/terms-and-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</label>
         </div>
 
         <button type="submit" class="submit-btn" id="submitBtn" disabled>Confirm Consultation Booking</button>

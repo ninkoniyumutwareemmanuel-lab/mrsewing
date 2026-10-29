@@ -45,8 +45,9 @@ its navigation is prevented; no messages are sent.
 
 `_data/business.json` is the shared business identity, contacts and confirmed
 working schedule. It reuses the existing contact-page branch addresses and phone;
-no coordinates, reviews or ratings are invented. Weekend `00:00`/`00:00` entries
-explicitly mean closed, not 24-hour opening. Legitimate about-page extra fields
+no coordinates, reviews or ratings are invented. Regular Monday–Saturday hours are 09:00–17:00. Dated Umuganda
+exceptions override the last Saturday to 12:00–17:00 by advance appointment;
+Sunday has no invented fixed opening hours. Legitimate about-page extra fields
 and nonbusiness product/FAQ/navigation data remain separate.
 
 After an authorized business-information change:
@@ -140,3 +141,176 @@ node tests/header.spec.cjs
 The image delivery suite covers the requested 320, 360, 390, 430, 768 and 1440px
 widths across ten representative pages. Neither suite submits live forms or
 opens external messaging destinations.
+
+## Phase 2: appointments and clean URLs
+
+The preferred URL format is `/page-name/` (trailing slash), with `/` for home.
+All 31 non-homepage standalone source documents generate a matching
+`page-name/index.html`; this uses ordinary GitHub Pages directory serving and
+needs no hosting configuration or runtime framework. Root `.html` documents
+remain authoring sources and full-content, canonicalized compatibility pages.
+Their early, exact-path browser redirect preserves the entire query string and
+fragment. It uses `location.replace`, so Back does not create redirect loops.
+The browser compatibility code provides **no HTTP 301 redirect**: locally, a
+legacy HTML request returns its content with HTTP 200. Cloudflare may add its own
+platform URL normalization; deployed HTTP behavior remains to be verified. Without JavaScript, that original content and its
+preferred canonical remain available. Canonicals and a single-route sitemap
+consolidate indexing signals; search-engine recrawling is still required.
+
+Generated directory pages contain `<base href="/">` so existing images, responsive
+candidates, inline CSS backgrounds, videos and shared header/footer fetches remain
+root-relative. Customer links and same-page fragment links are explicitly
+qualified to their clean route; do not introduce bare `href="#section"` into a
+directory page or resolve gallery images against `location.href`. The shared
+gallery uses `document.baseURI`. Root legacy files never redirect clean paths.
+
+Edit the original root HTML or homepage section/template, not generated directory
+copies. The metadata registry still uses the original source filenames as keys.
+For approved changes, run in this order and commit both sources and generated HTML:
+
+```sh
+python3 scripts/sync_business_schema.py
+python3 scripts/sync_page_seo.py
+python3 scripts/build_homepage.py
+python3 scripts/build_clean_urls.py
+python3 scripts/build_clean_urls.py --check
+python3 tests/clean_urls.py
+python3 tests/business_schema.py
+node tests/phase2.spec.cjs
+```
+
+Also run every existing browser suite and `tests/image_assets.py`. The Phase 2
+suite tests all 32 preferred/legacy routes, query/hash preservation, local
+normalization of directory paths without a slash, all 192 page/viewport
+combinations at 320/360/390/430/768/1440px, same-page anchors, no-JavaScript content,
+and eight intercepted Saturday/Sunday booking requests. The local directory
+normalization tests demonstrate expected static-server behavior; actual GitHub
+Pages/Cloudflare HTTP behavior must be verified after authorized deployment.
+
+Business hours are now derived from `_data/business-hours.json`. Normal Saturday
+visits are 09:00–17:00 without an appointment. The last Saturday (Umuganda) is
+12:00–17:00 strictly by advance appointment; Sunday is by appointment only.
+The calendar and form rules are documented below; no entire weekend day is
+disabled in the booking forms.
+
+Staging deployment: push `phase2/website-corrections` for review. If Cloudflare
+continues to use `phase1/customer-journey-repairs`, first fetch/recheck that branch
+and only fast-forward it from Phase 2 without force-pushing. A new branch alone
+does not update the existing staging URL. Never change `main` or hosting/domain
+settings as part of a staging push.
+
+## Homepage performance specialization and current hours
+
+Homepage resource substitutions live in `scripts/homepage_resources.py` and run
+inside `build_homepage.py`. They affect the generated homepage only: standalone
+collections/services retain their original image/icon delivery. Fourteen Font
+Awesome Free 6.4.0 glyphs use the exact licensed SVG paths (CC BY4.0; see
+`assets/fontawesome-LICENSE.txt`); no icon stylesheet or font is requested by home.
+All existing accessible parent labels remain; decorative SVGs are hidden from
+assistive technology. The footer copyright contrast correction is also homepage
+only. No new visitor framework/runtime manifest fetch is introduced.
+
+`optimize_homepage_images.py` requires authoring-time Pillow with AVIF support.
+It generates only the hero/logo/client-strip derivatives under `assets/homepage/`
+with content hashes; original files and the existing shared image inventory stay
+untouched. Photos use quality82 AVIF (4:4:4 chroma for client images); logos use
+lossless WebP. The recorded photo PSNR threshold is35dB against the same-size
+reference; logo visible pixels/alpha compare exactly. Responsive slot sizes
+match 158/218px card interiors and account for the existing4:5 crop of landscape
+images. Logo slot sizes match its actual CSS display size. Mobile hero uses a
+responsive picture with an exactly matching conditional preload; desktop keeps
+the original JPEG. Hero is eager/high-priority; other homepage photos remain lazy.
+
+The new filenames avoid stale image replacements. They do **not** change server
+cache lifetimes: GitHub Pages does not expose general per-file Cache-Control
+settings in this repository. No fake `_headers` or HTML meta-cache solution is
+added. Reduced transfer/icon requests are the immediate gain; future longer
+caching would require separately authorized hosting/CDN configuration.
+
+```sh
+python3 scripts/optimize_homepage_images.py  # only when regenerating media
+python3 scripts/sync_business_hours.py
+python3 scripts/sync_business_schema.py
+python3 scripts/build_homepage.py
+python3 scripts/build_clean_urls.py
+python3 tests/homepage_media.py
+node tests/business-hours.cjs
+node tests/homepage-optimization.spec.cjs
+```
+
+`_data/business-hours.json` is the shared schedule source.
+`_templates/business-hours.js` generates `assets/business-hours.js`, whose pure
+UTC calendar-date calculation finds the actual last Saturday for any month,
+including months with five Saturdays. It never interprets a picked Kigali date
+through the customer's local time zone. Ordinary Saturdays remain bookable from
+09:00; Umuganda morning choices are disabled, noon choices remain available,
+and custom requests must be confirmed within12:00–17:00. Sunday requests have no
+published fixed opening hours and require confirmation. The four booking pages
+include static schedule guidance so script loading does not insert an unexpected
+new layout block. Existing validation, submission/consent protection and recovery
+remain in the shared controller. No form is an automatic appointment guarantee.
+
+Schema.org cannot express a recurring “last Saturday” OpeningHoursSpecification.
+The synchronizer publishes24 explicit, correctly calculated dated exceptions for
+the current and following Kigali calendar year, plus the perpetual written rule.
+**Regenerate these static dates at least annually** and commit the synchronized
+JSON-LD/homepage/clean copies. The calendar and booking logic itself is perpetual;
+its tests cover1,212 months/36,890 dates from2000 through2100. `--check` detects
+stale dated schema rather than silently claiming future exceptions are current.
+
+Local Lighthouse evidence uses version12.8.2, three cold mobile and three desktop
+runs before/after, identical presets, gzip and a600-second cache model. Because
+the live site/CDN are blocked here, the baseline used the unchanged commit with
+exact6.4.0 icon CSS/fonts mirrored locally. DNS/TLS/CDN behavior and real-user
+performance therefore remain unverified. The results are controlled comparisons,
+not production PageSpeed scores or field INP; Lighthouse TBT is reported as TBT.
+Existing regression suites and the new homepage/calendar/media suites must pass
+before staging pushes. Never change production hosting/DNS to pursue these scores.
+
+## Agentic Browsing discovery files
+
+`llms.txt` is Markdown guidance for the bespoke, made-to-order tailoring business.
+It has one H1, a summary, and categorized links to existing customer pages. Links
+are origin-relative clean URLs so they resolve on staging now and on production
+when the tested branch is approved and published. Current hours/prices are not
+duplicated; readers are directed to the existing contact/services/policy pages.
+This file does not change robots permissions, privacy terms, or training policy.
+
+`ai-catalog.json` uses the ARD manifest format (Agentic Resource Discovery,
+current v0.91): https://agenticresourcediscovery.org/spec/ section5.1 and
+https://github.com/ards-project/ard-spec/blob/f073b1ea9b01a5f068d0b0986426f2ea49fa30b2/spec/schemas/ard-entry.schema.json
+(`$defs/ArdManifest`). `entries` is intentionally empty: no public agent tools,
+MCP/A2A interfaces or automated booking API are advertised by this website.
+Physical tailoring services are not fabricated agent resources or stock products.
+The name/description are permitted transport metadata; ARD ignores those extra
+root members. A valid empty manifest is explicitly allowed by the official
+schema and conformance test; it does not imply new AI functionality.
+
+Both current `rel="ard"` and predecessor `rel="ai-catalog"` links advertise the
+root JSON on all32 preferred pages. The shared tags are maintained in
+`build_clean_urls.py`; the homepage template/builder and directory-page builder
+reuse them. This is a supported ARD discovery mechanism, avoids reliance on
+hidden `.well-known` directories/Jekyll deployment changes, and works with both
+current and legacy relation-aware readers. No robots `Agentmap` directive is
+added: current Lighthouse's SEO robots validator does not safelist it. No global
+404/SPA routing, HTTP header, domain/DNS or hosting configuration is changed.
+
+```sh
+python3 scripts/build_homepage.py
+python3 scripts/build_clean_urls.py
+node tests/agentic-discovery.spec.cjs
+```
+
+The test checks HTTP200, actual JSON/text MIME types, strict JSON parsing,
+Markdown H1/links, all linked local pages, discovery metadata on every preferred
+page, and no extra ordinary-visitor requests. Official validation was also run
+with ARD's conformance tool/JSON Schema and Lighthouse13.6.0 audits `llms-txt` and
+`ard-schema`. Audit tooling is installed outside the website repository; it is
+not a visitor dependency. Future catalog entries require real authorized agent
+resources and full schema/conformance validation, not invented capabilities.
+
+Live staging responses can differ while a deployment is pending or protected.
+After a confirmed build, verify `/llms.txt` returns Markdown text and
+`/ai-catalog.json` returns application/json rather than an HTML fallback. A local
+passing audit is not proof of Cloudflare's served version when network access is
+blocked. Preserve all existing performance/SEO/customer regression suites.

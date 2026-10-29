@@ -1,0 +1,45 @@
+# Mr Sewing Fashion
+
+> Mr Sewing Fashion is a bespoke, made-to-order tailoring and fashion design business in Kigali, Rwanda. It creates custom clothing for customers rather than offering a ready-made retail inventory.
+
+Collection and portfolio photographs show designs and tailoring work to discuss with the business. Consultations, quotations, production timing, fittings, and visits should be confirmed directly with Mr Sewing Fashion. Booking forms send requests for confirmation; this guide does not advertise automated booking or AI agent tools.
+
+The links below are relative to the origin serving this file, so they work on the testing website and on the production website when these pages are published there. Consult the linked pages for current business details, working hours, services, and policies.
+
+## Business information
+
+- [Homepage](/): Overview of bespoke tailoring and fashion design.
+- [About Mr Sewing Fashion](/about/): The business and its design approach in Kigali.
+- [Contact and working hours](/contact/): Current contact information, locations, and availability.
+- [Frequently asked questions](/faq/): Tailoring questions and customer guidance.
+
+## Designs and tailoring work
+
+- [Suit collections](/collections/): Men's and women's suit design collections.
+- [Men's bespoke suits](/mensuits/): Men's two-piece and three-piece suit designs.
+- [Women's bespoke suits](/womensuits/): Women's custom suit designs.
+- [Suit design gallery](/suits/): Photographs and design enquiry options.
+- [Tailoring portfolio](/reviews/): Photographs of existing tailoring work.
+
+## Services
+
+- [Tailoring services](/services/): Overview of the services described on the website.
+- [Standard tailoring](/service-standard/): The standard tailoring process.
+- [Express tailoring](/service-express/): Express service information and enquiries.
+- [Own-fabric tailoring (CMT)](/service-cmt/): Tailoring using fabric supplied by the customer.
+- [Design and sketch consultations](/service-sketches/): Discussion and development of custom designs.
+- [Home fitting visits](/service-housecall/): Information about arranging fittings at a customer's location.
+- [Workplace consultations](/service-workplace/): Information about workplace fittings and consultations.
+
+## Customer requests
+
+- [Book a consultation](/booking/): Request a consultation for staff confirmation.
+- [Request garment adjustments](/booking-adjustment/): Describe adjustments or refinements to discuss with the business.
+- [Measurement guide](/measurements/): Guidance for providing measurements.
+- [Submit measurements](/measurement-submission/): Send sizing information for review.
+
+## Optional
+
+- [Terms and conditions](/terms-and-conditions/): Business terms and customer responsibilities.
+- [Refund policy](/refund-policy/): Published fit, return, and refund policies.
+- [Privacy policy](/privacy-policy/): Information about customer data handling.

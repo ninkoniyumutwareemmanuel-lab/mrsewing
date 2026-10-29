@@ -1,0 +1,445 @@
+{
+  "The Executive Line.jpeg": {
+    "width": 1536,
+    "height": 2752,
+    "variants": [
+      {
+        "width": 480,
+        "src": "assets/homepage/the-executive-line-480.8f01cd002f.avif",
+        "bytes": 38934,
+        "psnr": 43.25271736857835
+      },
+      {
+        "width": 768,
+        "src": "assets/homepage/the-executive-line-768.925dc903ea.avif",
+        "bytes": 76337,
+        "psnr": 44.784070172249024
+      },
+      {
+        "width": 1024,
+        "src": "assets/homepage/the-executive-line-1024.e70a473cda.avif",
+        "bytes": 110252,
+        "psnr": 45.47179390842261
+      },
+      {
+        "width": 1536,
+        "src": "assets/homepage/the-executive-line-1536.330185d8a1.avif",
+        "bytes": 167536,
+        "psnr": 47.01495060590014
+      }
+    ],
+    "originalBytes": 166612
+  },
+  "MR LOGO.jpeg": {
+    "width": 1244,
+    "height": 802,
+    "variants": [
+      {
+        "width": 96,
+        "src": "assets/homepage/mr-logo-96.3598d62e35.webp",
+        "bytes": 5268,
+        "psnr": null
+      },
+      {
+        "width": 192,
+        "src": "assets/homepage/mr-logo-192.2f306066cd.webp",
+        "bytes": 12736,
+        "psnr": null
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/mr-logo-320.b753282e38.webp",
+        "bytes": 25852,
+        "psnr": null
+      }
+    ],
+    "originalBytes": 859641
+  },
+  "h2.jpeg": {
+    "width": 750,
+    "height": 938,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/h2-160.c85a73eeb6.avif",
+        "bytes": 9776,
+        "psnr": 38.542672120835306
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/h2-240.e47501913d.avif",
+        "bytes": 16708,
+        "psnr": 40.05333047910965
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/h2-320.3e9dc1a814.avif",
+        "bytes": 23781,
+        "psnr": 41.0718303231473
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/h2-480.7162642206.avif",
+        "bytes": 41206,
+        "psnr": 42.53430817109657
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/h2-640.6172b129db.avif",
+        "bytes": 58690,
+        "psnr": 43.416336459893785
+      },
+      {
+        "width": 750,
+        "src": "assets/homepage/h2-750.8df32fdf5c.avif",
+        "bytes": 63612,
+        "psnr": 46.24840947357444
+      }
+    ],
+    "originalBytes": 60169
+  },
+  "h3.jpeg": {
+    "width": 750,
+    "height": 938,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/h3-160.9afd80ecce.avif",
+        "bytes": 9846,
+        "psnr": 38.06551924468452
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/h3-240.5f718ed3aa.avif",
+        "bytes": 16962,
+        "psnr": 39.51984525830141
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/h3-320.4847906bac.avif",
+        "bytes": 24928,
+        "psnr": 40.682544144291306
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/h3-480.37de0fb9b6.avif",
+        "bytes": 42232,
+        "psnr": 42.13296694641442
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/h3-640.9cf60f3dca.avif",
+        "bytes": 61161,
+        "psnr": 43.132433425475384
+      },
+      {
+        "width": 750,
+        "src": "assets/homepage/h3-750.29a504945d.avif",
+        "bytes": 65480,
+        "psnr": 45.97997800665176
+      }
+    ],
+    "originalBytes": 62602
+  },
+  "r2.jpeg": {
+    "width": 451,
+    "height": 658,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r2-160.a291ad9c26.avif",
+        "bytes": 6337,
+        "psnr": 39.391368184144405
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r2-240.d6dc119cbb.avif",
+        "bytes": 11658,
+        "psnr": 40.85090737386126
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r2-320.02aceb730e.avif",
+        "bytes": 16916,
+        "psnr": 41.94025035353796
+      },
+      {
+        "width": 451,
+        "src": "assets/homepage/r2-451.c2de620e54.avif",
+        "bytes": 24211,
+        "psnr": 45.02222086581103
+      }
+    ],
+    "originalBytes": 21469
+  },
+  "r3.jpeg": {
+    "width": 658,
+    "height": 658,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r3-160.265834f560.avif",
+        "bytes": 5418,
+        "psnr": 39.34292359155813
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r3-240.1b39e02b13.avif",
+        "bytes": 9215,
+        "psnr": 40.78658381615974
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r3-320.f687ff8d98.avif",
+        "bytes": 13245,
+        "psnr": 41.98152606832616
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/r3-480.fc288ed486.avif",
+        "bytes": 22189,
+        "psnr": 43.39364088308084
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/r3-640.6c398fe20a.avif",
+        "bytes": 32020,
+        "psnr": 44.22633433502657
+      },
+      {
+        "width": 658,
+        "src": "assets/homepage/r3-658.daa1848d2a.avif",
+        "bytes": 30428,
+        "psnr": 46.251175316745474
+      }
+    ],
+    "originalBytes": 29405
+  },
+  "r4.jpeg": {
+    "width": 1792,
+    "height": 2400,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r4-160.0cae3c9b09.avif",
+        "bytes": 4966,
+        "psnr": 41.774404430667545
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r4-240.efd023a3b5.avif",
+        "bytes": 8464,
+        "psnr": 42.65312895080653
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r4-320.e4e5bc379c.avif",
+        "bytes": 12031,
+        "psnr": 43.2071666692547
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/r4-480.36207ff2d4.avif",
+        "bytes": 20829,
+        "psnr": 44.02680710237647
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/r4-640.858cf3df94.avif",
+        "bytes": 31442,
+        "psnr": 44.527124417370665
+      },
+      {
+        "width": 960,
+        "src": "assets/homepage/r4-960.d307a12917.avif",
+        "bytes": 59465,
+        "psnr": 45.12030959064384
+      },
+      {
+        "width": 1280,
+        "src": "assets/homepage/r4-1280.4661d2e5fe.avif",
+        "bytes": 94844,
+        "psnr": 45.5554816512894
+      }
+    ],
+    "originalBytes": 125948
+  },
+  "r5.jpeg": {
+    "width": 1076,
+    "height": 715,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r5-160.fb3ae68c73.avif",
+        "bytes": 4870,
+        "psnr": 38.99573692741703
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r5-240.a140bd8d6c.avif",
+        "bytes": 7809,
+        "psnr": 39.741356152751976
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r5-320.facfe4513f.avif",
+        "bytes": 11670,
+        "psnr": 40.686370089031385
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/r5-480.95053379ae.avif",
+        "bytes": 19705,
+        "psnr": 42.12856733611842
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/r5-640.248967d093.avif",
+        "bytes": 29144,
+        "psnr": 43.33565033633214
+      },
+      {
+        "width": 960,
+        "src": "assets/homepage/r5-960.deaacd2961.avif",
+        "bytes": 48502,
+        "psnr": 44.69312522203248
+      },
+      {
+        "width": 1076,
+        "src": "assets/homepage/r5-1076.e871d94a78.avif",
+        "bytes": 49256,
+        "psnr": 47.13025215443044
+      }
+    ],
+    "originalBytes": 48800
+  },
+  "r6.jpeg": {
+    "width": 1792,
+    "height": 2400,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r6-160.8e7a00f08a.avif",
+        "bytes": 9900,
+        "psnr": 37.46941013225049
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r6-240.759fdfe9d0.avif",
+        "bytes": 18134,
+        "psnr": 38.65418536218779
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r6-320.71d6c00d42.avif",
+        "bytes": 27745,
+        "psnr": 39.656853291950675
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/r6-480.7f4d7e508a.avif",
+        "bytes": 47804,
+        "psnr": 41.15987946932873
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/r6-640.349b8299d2.avif",
+        "bytes": 69848,
+        "psnr": 42.037994703242106
+      },
+      {
+        "width": 960,
+        "src": "assets/homepage/r6-960.e6b3e49625.avif",
+        "bytes": 123962,
+        "psnr": 43.165404306676685
+      },
+      {
+        "width": 1280,
+        "src": "assets/homepage/r6-1280.e91cb74554.avif",
+        "bytes": 189189,
+        "psnr": 44.008812419830704
+      }
+    ],
+    "originalBytes": 257089
+  },
+  "r7.jpeg": {
+    "width": 2048,
+    "height": 2056,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r7-160.d81f6ee75a.avif",
+        "bytes": 10599,
+        "psnr": 35.64773212726407
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r7-240.729f55e87a.avif",
+        "bytes": 19217,
+        "psnr": 36.89933853632367
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r7-320.9c23fe4070.avif",
+        "bytes": 29706,
+        "psnr": 37.85933662435682
+      },
+      {
+        "width": 480,
+        "src": "assets/homepage/r7-480.d41cc625c9.avif",
+        "bytes": 53233,
+        "psnr": 39.48720058225714
+      },
+      {
+        "width": 640,
+        "src": "assets/homepage/r7-640.f0aaef6045.avif",
+        "bytes": 78075,
+        "psnr": 40.47090006893187
+      },
+      {
+        "width": 960,
+        "src": "assets/homepage/r7-960.7cfcf845f4.avif",
+        "bytes": 136864,
+        "psnr": 41.800977224814574
+      },
+      {
+        "width": 1280,
+        "src": "assets/homepage/r7-1280.2ba08a742e.avif",
+        "bytes": 203665,
+        "psnr": 42.59135089934895
+      }
+    ],
+    "originalBytes": 324535
+  },
+  "r8.jpeg": {
+    "width": 477,
+    "height": 715,
+    "variants": [
+      {
+        "width": 160,
+        "src": "assets/homepage/r8-160.fbb0fab9ec.avif",
+        "bytes": 8383,
+        "psnr": 38.75701359838443
+      },
+      {
+        "width": 240,
+        "src": "assets/homepage/r8-240.fc040334b3.avif",
+        "bytes": 14714,
+        "psnr": 40.387183026551476
+      },
+      {
+        "width": 320,
+        "src": "assets/homepage/r8-320.b8e70f5a6f.avif",
+        "bytes": 21189,
+        "psnr": 41.23878290650892
+      },
+      {
+        "width": 477,
+        "src": "assets/homepage/r8-477.5ae34196d6.avif",
+        "bytes": 32800,
+        "psnr": 44.57673415264999
+      }
+    ],
+    "originalBytes": 31030
+  }
+}
