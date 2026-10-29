@@ -266,3 +266,51 @@ performance therefore remain unverified. The results are controlled comparisons,
 not production PageSpeed scores or field INP; Lighthouse TBT is reported as TBT.
 Existing regression suites and the new homepage/calendar/media suites must pass
 before staging pushes. Never change production hosting/DNS to pursue these scores.
+
+## Agentic Browsing discovery files
+
+`llms.txt` is Markdown guidance for the bespoke, made-to-order tailoring business.
+It has one H1, a summary, and categorized links to existing customer pages. Links
+are origin-relative clean URLs so they resolve on staging now and on production
+when the tested branch is approved and published. Current hours/prices are not
+duplicated; readers are directed to the existing contact/services/policy pages.
+This file does not change robots permissions, privacy terms, or training policy.
+
+`ai-catalog.json` uses the ARD manifest format (Agentic Resource Discovery,
+current v0.91): https://agenticresourcediscovery.org/spec/ section5.1 and
+https://github.com/ards-project/ard-spec/blob/f073b1ea9b01a5f068d0b0986426f2ea49fa30b2/spec/schemas/ard-entry.schema.json
+(`$defs/ArdManifest`). `entries` is intentionally empty: no public agent tools,
+MCP/A2A interfaces or automated booking API are advertised by this website.
+Physical tailoring services are not fabricated agent resources or stock products.
+The name/description are permitted transport metadata; ARD ignores those extra
+root members. A valid empty manifest is explicitly allowed by the official
+schema and conformance test; it does not imply new AI functionality.
+
+Both current `rel="ard"` and predecessor `rel="ai-catalog"` links advertise the
+root JSON on all32 preferred pages. The shared tags are maintained in
+`build_clean_urls.py`; the homepage template/builder and directory-page builder
+reuse them. This is a supported ARD discovery mechanism, avoids reliance on
+hidden `.well-known` directories/Jekyll deployment changes, and works with both
+current and legacy relation-aware readers. No robots `Agentmap` directive is
+added: current Lighthouse's SEO robots validator does not safelist it. No global
+404/SPA routing, HTTP header, domain/DNS or hosting configuration is changed.
+
+```sh
+python3 scripts/build_homepage.py
+python3 scripts/build_clean_urls.py
+node tests/agentic-discovery.spec.cjs
+```
+
+The test checks HTTP200, actual JSON/text MIME types, strict JSON parsing,
+Markdown H1/links, all linked local pages, discovery metadata on every preferred
+page, and no extra ordinary-visitor requests. Official validation was also run
+with ARD's conformance tool/JSON Schema and Lighthouse13.6.0 audits `llms-txt` and
+`ard-schema`. Audit tooling is installed outside the website repository; it is
+not a visitor dependency. Future catalog entries require real authorized agent
+resources and full schema/conformance validation, not invented capabilities.
+
+Live staging responses can differ while a deployment is pending or protected.
+After a confirmed build, verify `/llms.txt` returns Markdown text and
+`/ai-catalog.json` returns application/json rather than an HTML fallback. A local
+passing audit is not proof of Cloudflare's served version when network access is
+blocked. Preserve all existing performance/SEO/customer regression suites.

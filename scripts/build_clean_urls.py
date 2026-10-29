@@ -12,6 +12,10 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = 'https://mrsewingfashion.com'
+# ARD permits any linked entry source. Root JSON works on both static hosts
+# without changing hidden-directory/Jekyll rules or robots.txt SEO directives.
+DISCOVERY_LINKS = ('<link rel="ard" type="application/json" href="/ai-catalog.json">\n  '
+                   '<link rel="ai-catalog" type="application/json" href="/ai-catalog.json">')
 LEGACY = re.compile(r'\s*<script data-legacy-url>.*?</script>', re.S)
 
 
@@ -32,7 +36,7 @@ def clean_document(name):
     # Root base keeps inline CSS backgrounds, srcset, video, scripts and dynamic
     # component fetches at their existing origin-root locations. All fragment
     # links are explicitly page-qualified during URL migration.
-    source, count = re.subn(r'<head\b[^>]*>', lambda m: m[0] + '\n  <base href="/">', source, count=1, flags=re.I)
+    source, count = re.subn(r'<head\b[^>]*>', lambda m: m[0] + '\n  <base href="/">\n  ' + DISCOVERY_LINKS, source, count=1, flags=re.I)
     if count != 1:
         raise ValueError(f'Expected one head: {name}')
     source = '\n'.join(line.rstrip() for line in source.splitlines()) + '\n'

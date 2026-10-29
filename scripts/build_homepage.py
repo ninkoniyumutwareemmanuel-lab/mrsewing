@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import struct
 from homepage_resources import delivery, hero_preloads, CSS as RESOURCE_CSS
+from build_clean_urls import DISCOVERY_LINKS
 
 ROOT = Path(__file__).resolve().parents[1]
 # Source document, selected element, identifying attribute (if needed).
@@ -98,7 +99,7 @@ def reserve_image_space(match):
 
 
 def render():
-    template = (ROOT / '_templates/homepage.html').read_text()
+    template = (ROOT / '_templates/homepage.html').read_text().replace('{{agent_discovery}}', DISCOVERY_LINKS)
     styles = []
     for key, (filename, tag, identifier) in SECTIONS.items():
         source = (ROOT / filename).read_text()
