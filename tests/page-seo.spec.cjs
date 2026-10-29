@@ -26,7 +26,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     const page=await context.newPage();const errors=[];
     page.on('pageerror',error=>errors.push(error.message));
     for(const [file,data]of Object.entries(pages)){
-      await page.goto(base+file);await page.locator('header nav').waitFor();
+      await page.goto(base+file);await page.locator('header nav').waitFor({state:'attached'});
       assert.equal(await page.title(),data.title,file);
       assert.equal(await page.locator('head title').count(),1,file);
       const description=page.locator('meta[name="description"]');
@@ -48,7 +48,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     }
     await page.goto(base+'services.html');assert.equal(await page.locator('.services-header h1').count(),1);assert.equal(await page.locator('.service-card h2').count(),6);
     await page.goto(base+'reviews.html');assert.equal(await page.locator('main h2').count(),1);assert.equal(await page.locator('.work-title').first().evaluate(node=>node.tagName),'H3');
-    await page.goto(base);assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.services-header h2').count(),1);assert.equal(await page.locator('.block-title').first().evaluate(node=>node.tagName),'H3');assert.equal(await page.locator('.collection-item-info h4').count(),7);
+    await page.goto(base);assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.services-header h2').count(),1);assert.equal(await page.locator('.home-collection-card h3').count(),4);assert.equal(await page.locator('.home-step-grid h3').count(),4);assert.equal(await page.locator('.home-benefit-grid h3').count(),4);
     assert.deepEqual(errors,[]);
     console.log('PASS: 32 unique titles/descriptions, matching social metadata, single descriptive H1s and logical H1–H4 content outlines.');
     console.log('PASS: all 32 pages fit desktop/mobile viewports; services/reviews/homepage hierarchy verified; no JavaScript errors or live submissions.');

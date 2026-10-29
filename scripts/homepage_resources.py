@@ -25,12 +25,14 @@ def delivery(markup, key):
         name=unescape(m[1])
         if name=='MR LOGO.jpeg':
             tag=re.sub(r'\bsrcset="[^"]*"',lambda _:f'srcset="{source_set(media[name])}"',tag)
-            return re.sub(r'\bsizes="[^"]*"','sizes="(max-width: 600px) 47px, (max-width: 900px) 7.76vw, 70px"',tag)
-        if key!='customers' or name=='h1.jpeg' or name not in media:return tag
-        # Cards are 180/240px including 2px border +20px padding. Account for
-        # landscape/square source pixels cropped by the existing 4:5 object-fit.
-        entry=media[name];cover=max(1,1.25*entry['width']/entry['height'])
-        sizes=f'(max-width: 900px) {158*cover:.1f}px, {218*cover:.1f}px'
+            return re.sub(r'\bsizes="[^"]*"','sizes="(max-width: 600px) 64px, 70px"',tag)
+        if key not in ('customers','collections') or name=='h1.jpeg' or name not in media:return tag
+        # Slider cards retain the existing 4:5 crop; collection cards contain
+        # the full garment and need no extra source pixels for cover cropping.
+        entry=media[name]
+        cover=max(1,1.25*entry['width']/entry['height'])
+        sizes=(f'(max-width: 900px) {158*cover:.1f}px, {218*cover:.1f}px' if key=='customers'
+               else '(max-width: 600px) calc(46vw - 6px), (max-width: 1000px) calc(46vw - 9px), (max-width: 1217px) calc(23vw - 13.5px), 266.5px')
         tag=re.sub(r'\bsizes="[^"]*"',lambda _:f'sizes="{sizes}"',tag)
         return f'<picture class="homepage-picture"><source type="image/avif" srcset="{source_set(entry)}" sizes="{sizes}">{tag}</picture>'
     markup=re.sub(r'<img\b[^>]*>',image,markup)

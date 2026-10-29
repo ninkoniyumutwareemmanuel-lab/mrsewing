@@ -20,14 +20,17 @@ External icon styles/fonts are intentionally blocked. These checks do not establ
 
 ## Static homepage generation and checks
 
-The homepage reuses sections from the existing source pages at build time, so it
-needs no runtime HTML fetches. After changing a shared header/footer, source
-section, or `_templates/homepage.html`, regenerate and commit `index.html`:
+The homepage assembles `_templates/homepage-sections.html`,
+`_templates/homepage.css`, `_templates/homepage.html` and the shared footer at build
+time, so it needs no runtime HTML fetches. Standalone service/collection pages
+keep their own content and styles. After changing these homepage sources or the
+shared footer, regenerate and commit `index.html`:
 
 ```sh
 python3 scripts/build_homepage.py
 python3 scripts/build_homepage.py --check
 node tests/homepage.spec.cjs
+node tests/homepage-journey.spec.cjs
 ```
 
 The script uses Python's standard library only and never edits standalone source
@@ -314,3 +317,15 @@ After a confirmed build, verify `/llms.txt` returns Markdown text and
 `/ai-catalog.json` returns application/json rather than an HTML fallback. A local
 passing audit is not proof of Cloudflare's served version when network access is
 blocked. Preserve all existing performance/SEO/customer regression suites.
+
+
+## Homepage design-sharing journey
+
+`tests/homepage-journey.spec.cjs` checks the seven-section order, real existing
+collection/service destinations and FAQ fragments, three prefilled WhatsApp
+intents with navigation prevented, all homepage image decoding, compact header,
+menu keyboard activation/Escape/focus return/outside dismissal, and the visible
+no-JavaScript navigation fallback. It covers 320, 360, 390, 430, 768 and 1440px.
+The responsive disclosure is homepage-only; other pages retain their headers.
+Premium garment-care eligibility is linked to Contact because the current FAQ
+does not publish those conditions. No tiers or additional entitlements are invented.

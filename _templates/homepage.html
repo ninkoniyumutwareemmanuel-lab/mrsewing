@@ -4,6 +4,7 @@
   <script data-legacy-url>if (location.pathname === "/index.html") location.replace("/" + location.search + location.hash);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add("js");</script>
   {{hero_preloads}}
   <title>Bespoke Tailoring &amp; Design in Kigali | Mr Sewing Fashion</title>
 
@@ -430,36 +431,38 @@
   <!-- Section styles are assembled in the same order as the original page. -->
   <style>
 {{section_styles}}
-    /* Preserve existing aspect-ratio crops when intrinsic dimensions are present. */
-    .customer-card-slide img, .collection-item-img { height: auto; }
+
   </style>
   <script src="assets/homepage.js" defer></script>
 </head>
 <body id="top">
-  <!-- Shared header included at build time. -->
+  <!-- Homepage navigation included at build time. -->
   <div id="site-header" class="site-component" aria-label="Website header">
 {{header}}
     </div>
 
   <main id="main-content">
-    <!-- Essential homepage content is available without JavaScript. -->
+    <!-- Homepage content is rendered at build time; no document fetches. -->
     <div id="hero-section" class="site-component">
 {{hero}}
     </div>
     <div id="customers-section" class="site-component">
 {{customers}}
     </div>
-    <div id="services-section" class="site-component">
-{{services}}
-    </div>
     <div id="collections-section" class="site-component">
 {{collections}}
     </div>
-    <div id="why-mtm-section" class="site-component">
-{{why_mtm}}
+    <div id="process-section" class="site-component">
+{{process}}
     </div>
-    <div id="why-choose-section" class="site-component">
-{{why_choose}}
+    <div id="benefits-section" class="site-component">
+{{benefits}}
+    </div>
+    <div id="services-section" class="site-component">
+{{services}}
+    </div>
+    <div id="final-section" class="site-component">
+{{final}}
     </div>
   </main>
 

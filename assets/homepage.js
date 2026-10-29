@@ -68,3 +68,25 @@
       document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeModal(); });
       if (location.hash === '#orderModal') openModal();
     })();
+
+/* A disclosure menu: normal links and tab order, with a usable no-JS fallback. */
+(function setupHomepageMenu() {
+  const button = document.querySelector('.home-menu-toggle');
+  const menu = document.getElementById('home-navigation');
+  if (!button || !menu) return;
+  function setOpen(open, restoreFocus = false) {
+    button.setAttribute('aria-expanded', String(open));
+    menu.dataset.open = String(open);
+    if (restoreFocus) button.focus();
+  }
+  button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+  menu.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.homepage-header')) setOpen(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false, true);
+  });
+  // Reset on the layout breakpoint only, not while mobile browser chrome resizes.
+  matchMedia('(max-width: 1100px)').addEventListener('change', () => setOpen(false));
+})();

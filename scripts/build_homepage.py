@@ -2,7 +2,7 @@
 """Assemble index.html from reusable section markup, without runtime HTML fetches.
 
 No third-party dependencies. Standalone source pages are never modified.
-Run after editing a source section, header/footer, or _templates/homepage.html.
+Run after editing _templates/homepage*, shared footer, or resource helpers.
 """
 import argparse
 from html import unescape
@@ -16,13 +16,14 @@ from build_clean_urls import DISCOVERY_LINKS
 ROOT = Path(__file__).resolve().parents[1]
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
-    'header': ('header.html', 'header', None),
-    'hero': ('hero.html', 'section', ('class', 'hero-section')),
-    'customers': ('happy-customers.html', 'section', ('class', 'customers-section')),
-    'services': ('services.html', 'section', ('id', 'services')),
-    'collections': ('collections.html', 'main', ('id', 'suits')),
-    'why_mtm': ('why-mtm.html', 'section', ('class', 'why-mtm-section')),
-    'why_choose': ('why-choose.html', 'section', ('class', 'why-choose-section')),
+    'header': ('_templates/homepage-sections.html', 'header', None),
+    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
+    'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
+    'collections': ('_templates/homepage-sections.html', 'section', ('class', 'home-collections home-section')),
+    'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
+    'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
+    'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
+    'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
     'footer': ('footer.html', 'footer', None),
 }
 
@@ -110,17 +111,6 @@ def render():
         markup = parser.markup
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
-        if key == 'services':
-            markup = markup.replace('<h2>', '<h3>').replace('</h2>', '</h3>')
-            markup = re.sub(r'<h1>(.*?)</h1>', r'<h2>\1</h2>', markup, count=1, flags=re.S)
-        if key == 'collections':
-            # A section inside the homepage's existing main, not a nested main/H1.
-            markup = markup.replace('<main ', '<section ', 1).replace('</main>', '</section>')
-            # Establish H2 > H3 > H4 for collection section/category/card names.
-            markup = markup.replace('<h3>', '<h4>').replace('</h3>', '</h4>')
-            markup = markup.replace('<h2 class="block-title">', '<h3 class="block-title">')
-            markup = re.sub(r'(<h3 class="block-title">.*?)</h2>', r'\1</h3>', markup, flags=re.S)
-            markup = re.sub(r'<h1>(.*?)</h1>', r'<h2>\1</h2>', markup, count=1, flags=re.S)
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
             raise ValueError(f'Unexpected document metadata/script in section: {filename}')
         markup = re.sub(r'<img\b[^>]*>', reserve_image_space, markup)
@@ -129,15 +119,9 @@ def render():
         markup = delivery(markup, key)
         template = template.replace('{{' + key + '}}', markup)
         section_styles = re.findall(r'<style[^>]*>(.*?)</style>', source, re.S)
-        if key == 'collections':
-            section_styles = [style.replace('.collection-item-info h3 {', '.collection-item-info h3, .collection-item-info h4 {') for style in section_styles]
         styles.extend(section_styles)
-    navigation = (ROOT / 'assets/navigation.js').read_text()
-    nav_style = re.search(r'style\.textContent = `([^`]+)`', navigation)
-    if not nav_style or '${' in nav_style[1]:
-        raise ValueError('Navigation styles must be static for homepage generation')
-    styles.append(nav_style[1])
     styles.append(RESOURCE_CSS)
+    styles.append((ROOT / '_templates/homepage.css').read_text())
     template = template.replace('{{hero_preloads}}', hero_preloads())
     template = template.replace('{{section_styles}}', '\n'.join(styles))
     if re.search(r'{{\w+}}', template):
