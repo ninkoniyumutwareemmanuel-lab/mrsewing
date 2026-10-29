@@ -478,6 +478,11 @@ p { color:var(--muted); }
 .program-status { color:var(--gold); font-size:10px; letter-spacing:.035em; white-space:nowrap; }
 .home-program h2 { font-size:28px; line-height:1.15; }
 .home-program > p { margin-top:14px; font-size:14px; line-height:1.7; max-width:520px; }
+/* A separate future photography experience; no new service or booking action. */
+.home-photoshoot { grid-column:1/-1; border-top:1px solid var(--line); padding-top:28px; }
+.photoshoot-copy { margin-top:14px; }
+.photoshoot-copy p { font-size:14px; line-height:1.7; max-width:520px; }
+.photoshoot-copy p + p { margin-top:14px; }
 /* One decisive final invitation. */
 .home-final { background:var(--gold); color:var(--ink); }
 .home-final .home-eyebrow { color:#3f350f; }
@@ -550,6 +555,8 @@ p { color:var(--muted); }
   .home-programs { padding-block:64px; }
   .program-grid { grid-template-columns:1fr 1fr; gap:48px; }
   .home-program h2 { font-size:34px; }
+  .photoshoot-content { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+  .photoshoot-copy { margin-top:0; }
   .hero-section { padding:40px 0 64px; }
   .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
   h1 { font-size:clamp(40px,4.7vw,64px); }
@@ -686,6 +693,17 @@ p { color:var(--muted); }
       <div class="program-meta"><p class="home-eyebrow">Referral Program</p><span class="program-status">Coming Soon</span></div>
       <h2 id="referral-title">Great Style Is Worth Sharing</h2>
       <p>Know someone preparing for a graduation, wedding, or special occasion? We're developing a referral program to recognize customers who introduce others to the Mr Sewing experience.</p>
+    </section>
+    <section class="home-program home-photoshoot" id="photoshoot-preview" aria-labelledby="photoshoot-title">
+      <div class="program-meta"><p class="home-eyebrow">Complimentary Photoshoot</p><span class="program-status">Coming Soon</span></div>
+      <div class="photoshoot-content">
+        <h2 id="photoshoot-title">Your Look. Your Moment. Beautifully Captured.</h2>
+        <div class="photoshoot-copy">
+          <p>Your special outfit deserves a moment worth remembering.</p>
+          <p>We're developing an exclusive photography experience for eligible Mr Sewing customers, designed to celebrate their style and capture the occasions that matter most.</p>
+          <p>More details will be announced when the service launches.</p>
+        </div>
+      </div>
     </section>
   </div>
 </div>

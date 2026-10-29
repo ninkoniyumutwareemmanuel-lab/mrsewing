@@ -2,7 +2,7 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8000/';
-const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real People. Worn for Special Moments.','Find Inspiration for Your Next Outfit.','From Your Idea to Your Perfect Fit.','More Than Tailoring. A Personalized Experience.','Tailoring Services for Every Occasion.','A Little More for Every Return','Great Style Is Worth Sharing','Your Next Special Outfit Starts Here.'];
+const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real People. Worn for Special Moments.','Find Inspiration for Your Next Outfit.','From Your Idea to Your Perfect Fit.','More Than Tailoring. A Personalized Experience.','Tailoring Services for Every Occasion.','A Little More for Every Return','Great Style Is Worth Sharing','Your Look. Your Moment. Beautifully Captured.','Your Next Special Outfit Starts Here.'];
 (async()=>{const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
   for(const width of [320,360,390,430,768,1024,1440]){
     const c=await b.newContext({viewport:{width,height:900}});
@@ -49,8 +49,10 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     for(const id of ['loyalty-program','referral-program']){
       const program=p.locator('#'+id);await program.scrollIntoViewIfNeeded();assert(await program.isVisible());assert.equal(await program.locator('.program-status').textContent(),'Coming Soon');assert((await program.textContent()).includes("We're developing"));assert.equal(await program.locator('a,button,form,input').count(),0);assert(!/\d|%|commission|cash|discount|tier|eligib|redeem|tracking|launch date/i.test(await program.textContent()));
     }
+    const photoshoot=p.locator('#photoshoot-preview');assert.equal(await photoshoot.locator('.program-status').textContent(),'Coming Soon');assert.equal(await photoshoot.locator('.home-eyebrow').textContent(),'Complimentary Photoshoot');assert.deepEqual(await photoshoot.locator('.photoshoot-copy p').allTextContents(),['Your special outfit deserves a moment worth remembering.',"We're developing an exclusive photography experience for eligible Mr Sewing customers, designed to celebrate their style and capture the occasions that matter most.",'More details will be announced when the service launches.']);assert.equal(await photoshoot.locator('a,button,form,input,img').count(),0);
     const programs=await p.locator('.home-program').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width}}));
     if(width>=768)assert(Math.abs(programs[0].y-programs[1].y)<1&&programs[1].x>programs[0].x);else assert(Math.abs(programs[0].x-programs[1].x)<1&&programs[1].y>programs[0].y);
+    assert(programs[2].y>programs[0].y&&programs[2].y>programs[1].y,'photography follows the program pair');
     assert.equal(await p.locator('main .home-button[href^="https://wa.me/"]').count(),1,'one prominent WhatsApp CTA');
     assert.equal(await p.locator('.home-final .home-button').getAttribute('href'),'/contact/');assert.equal(await p.locator('.home-final .home-button').textContent(),'Contact Us ↗');
     assert.equal(await p.locator('footer .footer-contact').getAttribute('href'),'/contact/');
@@ -85,5 +87,5 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     await c.close();
   }
   const nojs=await b.newContext({viewport:{width:320,height:900},javaScriptEnabled:false});await nojs.route('https://**/*',r=>r.abort());const p=await nojs.newPage();await p.goto(base);for(const link of await p.locator('header nav a').all())assert(await link.isVisible());assert(!await p.locator('.home-menu-toggle').isVisible());assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await nojs.close();
-  console.log('PASS: nine ordered sections, unavailable Shop and future programs, two safe WhatsApp design intents, working existing destinations, decoded photographs, single-row disclosure menu with keyboard/Escape/outside close and no-JS fallback, no overflow/errors/missing assets at seven widths.');
+  console.log('PASS: ten ordered sections, unavailable Shop and future programs, two safe WhatsApp design intents, working existing destinations, decoded photographs, single-row disclosure menu with keyboard/Escape/outside close and no-JS fallback, no overflow/errors/missing assets at seven widths.');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});
