@@ -1,6 +1,6 @@
 # V2 shared header and footer
 
-Only the homepage and Contact Us use this build-time architecture. Legacy pages
+The homepage, Contact Us and About Us use this build-time architecture. Legacy pages
 remain available with their current layouts; migrate them individually when their
 V2 redesign is approved. No browser HTML fetching, framework or new dependency.
 
@@ -31,8 +31,8 @@ python3 scripts/build_site.py --check
 python3 tests/shared_components.py
 ```
 
-This runs homepage, Contact, then clean-URL generation in dependency order. A
-shared source change propagates to **both V2 pages** when this command is run and
+This runs homepage, Contact, About, then clean-URL generation in dependency order. A
+shared source change propagates to **all three V2 pages** when this command is run and
 the generated outputs are committed. `--check` rejects stale outputs. Static
 GitHub Pages does not run Python for visitors; run the build before pushing.
 Legacy page layouts are not automatically migrated.

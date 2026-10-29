@@ -84,6 +84,14 @@ def main():
                 if node.get('@id') != BUSINESS_ID or '@type' not in node:
                     continue
                 count += 1
+                if path.name == 'about.html':
+                    assert node['@type'] == 'Organization'
+                    for key in ['name', 'url', 'telephone', 'email', 'logo']:
+                        assert node[key] == common[key], key
+                    assert node['foundingDate'] == '2019'
+                    assert node['parentOrganization']['name'] == 'NINKONIYUMUTWARE NEXUS LTD'
+                    assert node['alternateName'] == 'Mr Sewing'
+                    continue
                 if path.name == 'contact.html':
                     assert node['@type'] == 'Organization'
                     for key in ['name', 'url', 'telephone', 'email', 'logo']:

@@ -374,3 +374,24 @@ node tests/contact-v2.spec.cjs
 Run `python3 scripts/build_site.py` after changing a shared component, then
 `python3 scripts/build_site.py --check` and `python3 tests/shared_components.py`. Browser
 checks block external requests and never send messages or real bookings.
+
+
+### About Us V2
+
+About-only editorial content is maintained in `_templates/about.html` and
+`_templates/about.css`; metadata remains in `_data/page-seo.json`. The registered
+`scripts/build_about.py` imports the existing shared components without changing
+the homepage or Contact. The portrait uses existing, uncropped customer-image
+variants from `_data/homepage-media.json`; no new photo asset is generated.
+
+```sh
+python3 scripts/build_site.py
+python3 scripts/build_site.py --check
+python3 tests/shared_components.py
+node tests/about-v2.spec.cjs
+```
+
+The browser check blocks external services and checks the approved brand story,
+founding year, parent company, mission/vision, values, services, metadata,
+responsive image delivery, menu behavior, both CTA routes and legacy URL. It
+saves review screenshots outside the repository under the review workspace.
