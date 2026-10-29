@@ -2,7 +2,7 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8000/';
-const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real People. Worn for Special Moments.','Find Inspiration for Your Next Outfit.','From Your Idea to Your Perfect Fit.','More Than Tailoring. A Personalized Experience.','Tailoring Services for Every Occasion.','Your Next Special Outfit Starts Here.'];
+const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real People. Worn for Special Moments.','Find Inspiration for Your Next Outfit.','From Your Idea to Your Perfect Fit.','More Than Tailoring. A Personalized Experience.','Tailoring Services for Every Occasion.','A Little More for Every Return','Great Style Is Worth Sharing','Your Next Special Outfit Starts Here.'];
 (async()=>{const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
   for(const width of [320,360,390,430,768,1024,1440]){
     const c=await b.newContext({viewport:{width,height:900}});
@@ -26,10 +26,10 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
       assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert(!await nav.isVisible());
       const before=await p.locator('.hero-section').boundingBox();await toggle.focus();await p.keyboard.press('Enter');assert(await nav.isVisible());assert.equal(await toggle.getAttribute('aria-expanded'),'true');
       assert.equal((await p.locator('.hero-section').boundingBox()).y,before.y,'menu overlays without shifting content');
-      const rows=await nav.locator('a').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,height:r.height}}));
+      const rows=await nav.locator('a,button').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,height:r.height}}));
       assert(rows.every((r,i)=>Math.abs(r.x-rows[0].x)<1&&r.height>=44&&(!i||r.y>=rows[i-1].y+rows[i-1].height)),'one left-aligned vertical column with comfortable targets');
       const panel=await nav.boundingBox(),headerBox=await p.locator('header').boundingBox();
-      assert(Math.abs(panel.y-headerBox.y-headerBox.height)<1);assert(panel.width<=280&&panel.height<=242,'compact panel beneath header');
+      assert(Math.abs(panel.y-headerBox.y-headerBox.height)<1);assert(panel.width<=280&&panel.height<=286,'compact panel beneath header');
       await p.keyboard.press('Tab');assert.equal(await p.evaluate(()=>document.activeElement.textContent),'Home');
       await p.keyboard.press('Escape');assert(!await nav.isVisible());assert(await toggle.evaluate(e=>e===document.activeElement));
       await toggle.click();await p.mouse.click(width-8,700);assert(!await nav.isVisible());
@@ -40,7 +40,20 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     }else{assert(await nav.isVisible());assert(!await toggle.isVisible());}
     assert.equal((await toggle.textContent()).trim(),'','icon-only menu, with no visible Menu word');
     assert.equal(await toggle.getAttribute('aria-label'),'Open navigation');
-    assert.equal(await p.locator('header .header-order').isVisible(),width>=1100);
+    assert.equal(await p.locator('header .header-shop').isVisible(),width>=1100);
+    const shop=width>=1100?p.locator('.header-shop'):p.locator('.shop-nav-coming-soon');
+    if(width<1100)await toggle.click();
+    assert.equal(await shop.getAttribute('aria-disabled'),'true');assert.equal(await shop.getAttribute('type'),'button');assert.equal(await shop.getAttribute('href'),null);assert((await shop.textContent()).includes('Coming Soon'));
+    const oldURL=p.url();await shop.focus();await p.keyboard.press('Enter');await p.keyboard.press('Space');assert.equal(p.url(),oldURL);assert(await shop.evaluate(e=>e===document.activeElement));assert(!await p.locator('#orderModal').evaluate(e=>e.classList.contains('open')));
+    if(width<1100){await p.keyboard.press('Escape');assert(!await nav.isVisible());assert(await toggle.evaluate(e=>e===document.activeElement));}
+    for(const id of ['loyalty-program','referral-program']){
+      const program=p.locator('#'+id);await program.scrollIntoViewIfNeeded();assert(await program.isVisible());assert.equal(await program.locator('.program-status').textContent(),'Coming Soon');assert((await program.textContent()).includes("We're developing"));assert.equal(await program.locator('a,button,form,input').count(),0);assert(!/\d|%|commission|cash|discount|tier|eligib|redeem|tracking|launch date/i.test(await program.textContent()));
+    }
+    const programs=await p.locator('.home-program').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width}}));
+    if(width>=768)assert(Math.abs(programs[0].y-programs[1].y)<1&&programs[1].x>programs[0].x);else assert(Math.abs(programs[0].x-programs[1].x)<1&&programs[1].y>programs[0].y);
+    assert.equal(await p.locator('main .home-button[href^="https://wa.me/"]').count(),1,'one prominent WhatsApp CTA');
+    assert.equal(await p.locator('.home-final .home-button').getAttribute('href'),'/contact/');assert.equal(await p.locator('.home-final .home-button').textContent(),'Contact Us ↗');
+    assert.equal(await p.locator('footer .footer-contact').getAttribute('href'),'/contact/');
     const serviceNames=await p.locator('.service-card h3').allTextContents();
     assert.deepEqual(serviceNames,['Custom Men’s Tailoring','Custom Women’s Tailoring','Graduation Outfits','Wedding & Civil Wedding Outfits','Professional Alterations','VIP Mobile Fitting','Premium Garment Care']);
     assert(await p.locator('.service-card p').evaluateAll(es=>es.every(e=>e.textContent.length>20&&parseFloat(getComputedStyle(e).fontSize)>=14)));
@@ -49,8 +62,8 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     const footer=p.locator('footer');const footerHeight=(await footer.boundingBox()).height;assert(footerHeight<(width>=1100?420:800),'compact footer');
     if(width>=1100)assert.equal(await p.locator('.footer-top').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),5);
     const hours=p.locator('.footer-hours-details');assert(!await hours.evaluate(e=>e.open));await hours.locator('summary').click();assert(await hours.evaluate(e=>e.open));assert((await hours.textContent()).includes('12:00 PM–5:00 PM, strictly by advance appointment'));assert((await hours.textContent()).includes('Ordinary Saturday visits do not require an appointment'));await hours.locator('summary').click();
-    // Retained order consent has keyboard focus containment and returns focus.
-    const order=p.locator('footer .order-btn');await order.click();await p.keyboard.press('Shift+Tab');assert(await p.locator('#orderModal').evaluate(e=>e.contains(document.activeElement)));await p.keyboard.press('Escape');assert(await order.evaluate(e=>e===document.activeElement));
+    // Legacy order links from other pages still open a consent-protected dialog.
+    await p.goto(base+'?legacy-order-test=1#orderModal');await p.locator('#orderClose').waitFor({state:'visible'});await p.waitForFunction(()=>document.activeElement.id==='orderClose');await p.keyboard.press('Shift+Tab');assert(await p.locator('#orderModal').evaluate(e=>e.contains(document.activeElement)));await p.keyboard.press('Escape');assert(!await p.locator('#orderModal').evaluate(e=>e.classList.contains('open')));await p.goto(base);
     await p.locator('.hero-btn-secondary').click();await p.waitForURL('**/#customers-section');
     // Observe real anchors while preventing both navigation and external requests.
     await p.evaluate(()=>{window.designIntents=[];document.addEventListener('click',e=>{const a=e.target.closest('a[href^="https://wa.me/"]');if(a){e.preventDefault();window.designIntents.push(a.href)}},true)});
@@ -60,7 +73,7 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     assert.equal(await p.locator('.home-collection-card').count(),4);assert.equal(await p.locator('.service-card').count(),7);
     assert((await p.locator('.home-benefits').textContent()).includes('subject to capacity'));
     assert((await p.locator('.home-benefits').textContent()).includes('Selected premium orders'));
-    assert(!/loyalty|referral commission/i.test(await p.locator('main').textContent()));
+    assert(await actions.evaluateAll(es=>es.every(e=>e.textContent.trim()==='Send Us Your Design ↗')));
     // Scroll all photographs into view and verify actual image decoding and reserved space.
     for(const img of await p.locator('main img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());assert(await img.evaluate(i=>i.naturalWidth>0&&i.width>0&&i.height>0));}
     assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
@@ -72,5 +85,5 @@ const titles=["Have a Design in Mind? Let's Bring It to Life.",'Made for Real Pe
     await c.close();
   }
   const nojs=await b.newContext({viewport:{width:320,height:900},javaScriptEnabled:false});await nojs.route('https://**/*',r=>r.abort());const p=await nojs.newPage();await p.goto(base);for(const link of await p.locator('header nav a').all())assert(await link.isVisible());assert(!await p.locator('.home-menu-toggle').isVisible());assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await nojs.close();
-  console.log('PASS: seven ordered sections, two safe WhatsApp design intents, working existing destinations, decoded photographs, single-row disclosure menu with keyboard/Escape/outside close and no-JS fallback, no overflow/errors/missing assets at seven widths.');
+  console.log('PASS: nine ordered sections, unavailable Shop and future programs, two safe WhatsApp design intents, working existing destinations, decoded photographs, single-row disclosure menu with keyboard/Escape/outside close and no-JS fallback, no overflow/errors/missing assets at seven widths.');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});

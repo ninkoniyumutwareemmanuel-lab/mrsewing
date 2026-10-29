@@ -23,6 +23,7 @@ SECTIONS = {
     'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
     'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
     'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
+    'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }

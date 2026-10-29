@@ -81,7 +81,13 @@
           else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
         }
       });
-      if (location.hash === '#orderModal') openModal();
+      if (location.hash === '#orderModal') {
+        openModal();
+        // Native fragment navigation can otherwise move focus after setup.
+        requestAnimationFrame(() => {
+          if (modal && modal.classList.contains('open') && closeButton) closeButton.focus();
+        });
+      }
     })();
 
 /* A disclosure menu: normal links and tab order, with a usable no-JS fallback. */
