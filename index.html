@@ -601,6 +601,13 @@ p { color:var(--muted); }
   .footer-order-col { display:flex; flex-direction:column; align-items:flex-start; }
   .footer-bottom { flex-direction:row; align-items:center; justify-content:space-between; margin-top:28px; padding-top:16px; }
 }
+/* Wide desktops can show all three future announcements without narrow text. */
+@media(min-width:1280px) {
+  .program-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
+  .home-photoshoot { grid-column:auto; border-top:0; padding-top:0; }
+  .photoshoot-content { display:block; }
+  .photoshoot-copy { margin-top:14px; }
+}
 @media(prefers-reduced-motion:reduce) {
   html, * { scroll-behavior:auto!important; }
   * { transition:none!important; }
@@ -699,9 +706,7 @@ p { color:var(--muted); }
       <div class="photoshoot-content">
         <h2 id="photoshoot-title">Your Look. Your Moment. Beautifully Captured.</h2>
         <div class="photoshoot-copy">
-          <p>Your special outfit deserves a moment worth remembering.</p>
-          <p>We're developing an exclusive photography experience for eligible Mr Sewing customers, designed to celebrate their style and capture the occasions that matter most.</p>
-          <p>More details will be announced when the service launches.</p>
+          <p>We're developing a special photography experience for eligible Mr Sewing customers, designed to celebrate their style and capture memorable moments in their custom-made outfits.</p>
         </div>
       </div>
     </section>
