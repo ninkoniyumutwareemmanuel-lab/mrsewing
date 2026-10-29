@@ -84,6 +84,20 @@ def main():
                 if node.get('@id') != BUSINESS_ID or '@type' not in node:
                     continue
                 count += 1
+                if path.name == 'contact.html':
+                    assert node['@type'] == 'Organization'
+                    for key in ['name', 'url', 'telephone', 'email', 'logo']:
+                        assert node[key] == common[key], key
+                    places = [n for n in walk(document) if n.get('@type') == 'Place']
+                    assert len(places) == 2
+                    main, mic = places
+                    assert main['openingHoursSpecification'] == common['openingHoursSpecification']
+                    assert main['specialOpeningHoursSpecification'] == common['specialOpeningHoursSpecification']
+                    assert main['hasMap'] == 'https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac'
+                    assert 'appointment only' in mic['description']
+                    assert 'openingHoursSpecification' not in mic and 'hasMap' not in mic
+                    assert 'https://youtube.com/@mr.sewingfashion' in node['sameAs']
+                    continue
                 assert node['@type'] == 'ClothingStore', path.name
                 assert all(node.get(key) == value for key, value in common.items()), path.name
                 assert 'geo' not in node and 'review' not in node and 'aggregateRating' not in node, path.name
@@ -115,7 +129,8 @@ def main():
     subprocess.run(['python3','scripts/sync_business_hours.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/sync_business_schema.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_homepage.py','--check'], cwd=ROOT, check=True)
-    print(f'PASS: {len(documents)} JSON-LD blocks parse; all 14 public business entities match the shared identity, email, addresses and weekday hours and weekend appointment availability.')
+    subprocess.run(['python3','scripts/build_contact.py','--check'], cwd=ROOT, check=True)
+    print(f'PASS: {len(documents)} JSON-LD blocks parse; 14 public business entities preserve confirmed identity and hours; Contact separately qualifies workshop and appointment-only consultation locations.')
     if options.vocabulary:
         vocabulary_check(documents, options.vocabulary)
 

@@ -353,3 +353,21 @@ of the mobile header order action, seven named services with explanations, three
 large editorial portraits, five desktop footer columns, footer disclosure and
 compactness, and the retained order-popup focus trap. Passing these checks is
 technical verification; the owner must still approve the Stage A visual design.
+
+### Contact Us V2
+
+Contact-only content lives in `_templates/contact.html`, `_templates/contact.css`
+and `_data/contact-v2.json`. The generator reuses the approved homepage header,
+footer, common CSS and menu controller at build time; it never writes homepage
+sources. Contact metadata comes from the existing page SEO data. Keep MIC's
+`verifiedMapsUrl` null until a real destination is verified.
+
+```sh
+python3 scripts/build_contact.py
+python3 scripts/build_clean_urls.py
+python3 scripts/build_contact.py --check
+node tests/contact-v2.spec.cjs
+```
+
+Rebuild Contact after changing an approved shared homepage component. Browser
+checks block external requests and never send messages or real bookings.
