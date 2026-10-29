@@ -1,0 +1,4563 @@
+{
+  "schemaVersion": 1,
+  "nextId": 139,
+  "retiredIds": [],
+  "designs": [
+    {
+      "id": "MS-001",
+      "slug": "ms-001",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/ r24.jpeg",
+          "alt": "Tailoring design — MS-001",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": " r24.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": " r24.jpeg"
+    },
+    {
+      "id": "MS-002",
+      "slug": "ms-002",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/3.2.jpeg",
+          "alt": "Tailoring design — MS-002",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "3.2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "3.2.jpeg"
+    },
+    {
+      "id": "MS-003",
+      "slug": "ms-003",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/The Elegance Series.jpeg",
+          "alt": "Tailoring design — MS-003",
+          "position": "center",
+          "width": 1536,
+          "height": 2752,
+          "originalPath": "The Elegance Series.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "The Elegance Series.jpeg"
+    },
+    {
+      "id": "MS-004",
+      "slug": "ms-004",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/The Executive Line.jpeg",
+          "alt": "Tailoring design — MS-004",
+          "position": "center",
+          "width": 1536,
+          "height": 2752,
+          "originalPath": "The Executive Line.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "The Executive Line.jpeg"
+    },
+    {
+      "id": "MS-005",
+      "slug": "ms-005",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [
+        "graduation"
+      ],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/h1.jpeg",
+          "alt": "Tailoring design — MS-005",
+          "position": "center",
+          "width": 797,
+          "height": 995,
+          "originalPath": "h1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "happy-customers.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "occasion",
+          "source": "_templates/homepage-sections.html: approved graduation captions"
+        }
+      ],
+      "sourceAnchor": "h1.jpeg"
+    },
+    {
+      "id": "MS-006",
+      "slug": "ms-006",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [
+        "graduation"
+      ],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/h2.jpeg",
+          "alt": "Tailoring design — MS-006",
+          "position": "center",
+          "width": 750,
+          "height": 938,
+          "originalPath": "h2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "happy-customers.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "occasion",
+          "source": "_templates/homepage-sections.html: approved graduation captions"
+        }
+      ],
+      "sourceAnchor": "h2.jpeg"
+    },
+    {
+      "id": "MS-007",
+      "slug": "ms-007",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [
+        "graduation"
+      ],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/h3.jpeg",
+          "alt": "Tailoring design — MS-007",
+          "position": "center",
+          "width": 750,
+          "height": 938,
+          "originalPath": "h3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "happy-customers.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "occasion",
+          "source": "_templates/homepage-sections.html: approved graduation captions"
+        }
+      ],
+      "sourceAnchor": "h3.jpeg"
+    },
+    {
+      "id": "MS-008",
+      "slug": "ms-008",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/happy3.jpeg",
+          "alt": "Tailoring design — MS-008",
+          "position": "center",
+          "width": 1022,
+          "height": 1024,
+          "originalPath": "happy3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "happy3.jpeg"
+    },
+    {
+      "id": "MS-009",
+      "slug": "ms-009",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuitthree1.jpeg",
+          "alt": "Men’s Classic suit — MS-009",
+          "position": "center",
+          "width": 572,
+          "height": 715,
+          "originalPath": "m-classicsuitthree1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuitthree1.jpeg"
+    },
+    {
+      "id": "MS-010",
+      "slug": "ms-010",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuitthree2.jpeg",
+          "alt": "Men’s Classic suit — MS-010",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "m-classicsuitthree2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuitthree2.jpeg"
+    },
+    {
+      "id": "MS-011",
+      "slug": "ms-011",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuitthree3.jpeg",
+          "alt": "Men’s Classic suit — MS-011",
+          "position": "center",
+          "width": 478,
+          "height": 658,
+          "originalPath": "m-classicsuitthree3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuitthree3.jpeg"
+    },
+    {
+      "id": "MS-012",
+      "slug": "ms-012",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuitthree4.jpeg",
+          "alt": "Men’s Classic suit — MS-012",
+          "position": "center",
+          "width": 498,
+          "height": 658,
+          "originalPath": "m-classicsuitthree4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuitthree4.jpeg"
+    },
+    {
+      "id": "MS-013",
+      "slug": "ms-013",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuittwo1.jpeg",
+          "alt": "Men’s Classic suit — MS-013",
+          "position": "center",
+          "width": 715,
+          "height": 715,
+          "originalPath": "m-classicsuittwo1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuittwo1.jpeg"
+    },
+    {
+      "id": "MS-014",
+      "slug": "ms-014",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuittwo2.jpeg",
+          "alt": "Men’s Classic suit — MS-014",
+          "position": "center",
+          "width": 451,
+          "height": 715,
+          "originalPath": "m-classicsuittwo2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuittwo2.jpeg"
+    },
+    {
+      "id": "MS-015",
+      "slug": "ms-015",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuittwo3.jpeg",
+          "alt": "Men’s Classic suit — MS-015",
+          "position": "center",
+          "width": 477,
+          "height": 715,
+          "originalPath": "m-classicsuittwo3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuittwo3.jpeg"
+    },
+    {
+      "id": "MS-016",
+      "slug": "ms-016",
+      "name": "Men’s Classic suit",
+      "gender": "men",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-classicsuittwo4.jpeg",
+          "alt": "Men’s Classic suit — MS-016",
+          "position": "center",
+          "width": 669,
+          "height": 658,
+          "originalPath": "m-classicsuittwo4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-classicsuittwo4.jpeg"
+    },
+    {
+      "id": "MS-017",
+      "slug": "ms-017",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo1.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-017",
+          "position": "center",
+          "width": 439,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo1.jpeg"
+    },
+    {
+      "id": "MS-018",
+      "slug": "ms-018",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo10.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-018",
+          "position": "center",
+          "width": 561,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo10.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo10.jpeg"
+    },
+    {
+      "id": "MS-019",
+      "slug": "ms-019",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo11.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-019",
+          "position": "center",
+          "width": 508,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo11.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo11.jpeg"
+    },
+    {
+      "id": "MS-020",
+      "slug": "ms-020",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo12.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-020",
+          "position": "center",
+          "width": 654,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo12.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo12.jpeg"
+    },
+    {
+      "id": "MS-021",
+      "slug": "ms-021",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo2.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-021",
+          "position": "center",
+          "width": 439,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo2.jpeg"
+    },
+    {
+      "id": "MS-022",
+      "slug": "ms-022",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo3.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-022",
+          "position": "center",
+          "width": 584,
+          "height": 715,
+          "originalPath": "m-doublebreastedsuittwo3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo3.jpeg"
+    },
+    {
+      "id": "MS-023",
+      "slug": "ms-023",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo4.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-023",
+          "position": "center",
+          "width": 485,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo4.jpeg"
+    },
+    {
+      "id": "MS-024",
+      "slug": "ms-024",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo5.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-024",
+          "position": "center",
+          "width": 460,
+          "height": 715,
+          "originalPath": "m-doublebreastedsuittwo5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo5.jpeg"
+    },
+    {
+      "id": "MS-025",
+      "slug": "ms-025",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo6.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-025",
+          "position": "center",
+          "width": 566,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo6.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo6.jpeg"
+    },
+    {
+      "id": "MS-026",
+      "slug": "ms-026",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo7.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-026",
+          "position": "center",
+          "width": 507,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo7.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo7.jpeg"
+    },
+    {
+      "id": "MS-027",
+      "slug": "ms-027",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo8.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-027",
+          "position": "center",
+          "width": 515,
+          "height": 658,
+          "originalPath": "m-doublebreastedsuittwo8.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo8.jpeg"
+    },
+    {
+      "id": "MS-028",
+      "slug": "ms-028",
+      "name": "Men’s Double Breasted suit",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-doublebreastedsuittwo9.jpeg",
+          "alt": "Men’s Double Breasted suit — MS-028",
+          "position": "center",
+          "width": 685,
+          "height": 715,
+          "originalPath": "m-doublebreastedsuittwo9.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-doublebreasted.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-doublebreasted.html"
+        }
+      ],
+      "sourceAnchor": "m-doublebreastedsuittwo9.jpeg"
+    },
+    {
+      "id": "MS-029",
+      "slug": "ms-029",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits1.jpeg",
+          "alt": "Men’s Kaunda suit — MS-029",
+          "position": "center",
+          "width": 716,
+          "height": 715,
+          "originalPath": "m-kaundasuits1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits1.jpeg"
+    },
+    {
+      "id": "MS-030",
+      "slug": "ms-030",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits2.jpeg",
+          "alt": "Men’s Kaunda suit — MS-030",
+          "position": "center",
+          "width": 542,
+          "height": 658,
+          "originalPath": "m-kaundasuits2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits2.jpeg"
+    },
+    {
+      "id": "MS-031",
+      "slug": "ms-031",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits3.jpeg",
+          "alt": "Men’s Kaunda suit — MS-031",
+          "position": "center",
+          "width": 657,
+          "height": 658,
+          "originalPath": "m-kaundasuits3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits3.jpeg"
+    },
+    {
+      "id": "MS-032",
+      "slug": "ms-032",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits4.jpeg",
+          "alt": "Men’s Kaunda suit — MS-032",
+          "position": "center",
+          "width": 528,
+          "height": 658,
+          "originalPath": "m-kaundasuits4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits4.jpeg"
+    },
+    {
+      "id": "MS-033",
+      "slug": "ms-033",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits5.jpeg",
+          "alt": "Men’s Kaunda suit — MS-033",
+          "position": "center",
+          "width": 476,
+          "height": 658,
+          "originalPath": "m-kaundasuits5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits5.jpeg"
+    },
+    {
+      "id": "MS-034",
+      "slug": "ms-034",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits6.jpeg",
+          "alt": "Men’s Kaunda suit — MS-034",
+          "position": "center",
+          "width": 461,
+          "height": 658,
+          "originalPath": "m-kaundasuits6.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits6.jpeg"
+    },
+    {
+      "id": "MS-035",
+      "slug": "ms-035",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits7.jpeg",
+          "alt": "Men’s Kaunda suit — MS-035",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "m-kaundasuits7.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits7.jpeg"
+    },
+    {
+      "id": "MS-036",
+      "slug": "ms-036",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "styles": [
+        "kaunda"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-kaundasuits8.jpeg",
+          "alt": "Men’s Kaunda suit — MS-036",
+          "position": "center",
+          "width": 566,
+          "height": 658,
+          "originalPath": "m-kaundasuits8.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-kaundasuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        }
+      ],
+      "sourceAnchor": "m-kaundasuits8.jpeg"
+    },
+    {
+      "id": "MS-037",
+      "slug": "ms-037",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits1.jpeg",
+          "alt": "Men’s Modern suit — MS-037",
+          "position": "center",
+          "width": 523,
+          "height": 715,
+          "originalPath": "m-modernsuits1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits1.jpeg"
+    },
+    {
+      "id": "MS-038",
+      "slug": "ms-038",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits2.jpeg",
+          "alt": "Men’s Modern suit — MS-038",
+          "position": "center",
+          "width": 536,
+          "height": 715,
+          "originalPath": "m-modernsuits2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits2.jpeg"
+    },
+    {
+      "id": "MS-039",
+      "slug": "ms-039",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits3.jpeg",
+          "alt": "Men’s Modern suit — MS-039",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "m-modernsuits3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits3.jpeg"
+    },
+    {
+      "id": "MS-040",
+      "slug": "ms-040",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits4.jpeg",
+          "alt": "Men’s Modern suit — MS-040",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "m-modernsuits4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits4.jpeg"
+    },
+    {
+      "id": "MS-041",
+      "slug": "ms-041",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits5.jpeg",
+          "alt": "Men’s Modern suit — MS-041",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "m-modernsuits5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits5.jpeg"
+    },
+    {
+      "id": "MS-042",
+      "slug": "ms-042",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits6.jpeg",
+          "alt": "Men’s Modern suit — MS-042",
+          "position": "center",
+          "width": 516,
+          "height": 658,
+          "originalPath": "m-modernsuits6.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits6.jpeg"
+    },
+    {
+      "id": "MS-043",
+      "slug": "ms-043",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits7.jpeg",
+          "alt": "Men’s Modern suit — MS-043",
+          "position": "center",
+          "width": 370,
+          "height": 658,
+          "originalPath": "m-modernsuits7.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits7.jpeg"
+    },
+    {
+      "id": "MS-044",
+      "slug": "ms-044",
+      "name": "Men’s Modern suit",
+      "gender": "men",
+      "styles": [
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m-modernsuits8.jpeg",
+          "alt": "Men’s Modern suit — MS-044",
+          "position": "center",
+          "width": 370,
+          "height": 658,
+          "originalPath": "m-modernsuits8.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "m-modernsuits8.jpeg"
+    },
+    {
+      "id": "MS-045",
+      "slug": "ms-045",
+      "name": "Men’s Suit Design",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m1.jpeg",
+          "alt": "Men’s suit design — MS-045",
+          "position": "center",
+          "width": 715,
+          "height": 715,
+          "originalPath": "m1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "mensuits.html",
+        "suits.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "garmentType",
+          "source": "mensuits.html"
+        }
+      ],
+      "sourceAnchor": "m1.jpeg"
+    },
+    {
+      "id": "MS-046",
+      "slug": "ms-046",
+      "name": "Men’s Suit Design",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m2.jpeg",
+          "alt": "Men’s suit design — MS-046",
+          "position": "center",
+          "width": 628,
+          "height": 658,
+          "originalPath": "m2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "mensuits.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "garmentType",
+          "source": "mensuits.html"
+        }
+      ],
+      "sourceAnchor": "m2.jpeg"
+    },
+    {
+      "id": "MS-047",
+      "slug": "ms-047",
+      "name": "Men’s Suit Design",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m3.jpeg",
+          "alt": "Men’s suit design — MS-047",
+          "position": "center",
+          "width": 572,
+          "height": 715,
+          "originalPath": "m3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "mensuits.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "garmentType",
+          "source": "mensuits.html"
+        }
+      ],
+      "sourceAnchor": "m3.jpeg"
+    },
+    {
+      "id": "MS-048",
+      "slug": "ms-048",
+      "name": "Men’s Suit Design",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m4.jpeg",
+          "alt": "Men’s suit design — MS-048",
+          "position": "center",
+          "width": 657,
+          "height": 658,
+          "originalPath": "m4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "mensuits.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "garmentType",
+          "source": "mensuits.html"
+        }
+      ],
+      "sourceAnchor": "m4.jpeg"
+    },
+    {
+      "id": "MS-049",
+      "slug": "ms-049",
+      "name": "Men’s Suit Design",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/m5.jpeg",
+          "alt": "Men’s suit design — MS-049",
+          "position": "center",
+          "width": 704,
+          "height": 938,
+          "originalPath": "m5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "mensuits.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "garmentType",
+          "source": "mensuits.html"
+        }
+      ],
+      "sourceAnchor": "m5.jpeg"
+    },
+    {
+      "id": "MS-050",
+      "slug": "ms-050",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/m6.jpeg",
+          "alt": "Tailoring design — MS-050",
+          "position": "center",
+          "width": 800,
+          "height": 995,
+          "originalPath": "m6.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "m6.jpeg"
+    },
+    {
+      "id": "MS-051",
+      "slug": "ms-051",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r1.2.jpeg",
+          "alt": "Tailoring design — MS-051",
+          "position": "center",
+          "width": 488,
+          "height": 658,
+          "originalPath": "r1.2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r1.2.jpeg"
+    },
+    {
+      "id": "MS-052",
+      "slug": "ms-052",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r1.3.jpeg",
+          "alt": "Tailoring design — MS-052",
+          "position": "center",
+          "width": 439,
+          "height": 658,
+          "originalPath": "r1.3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r1.3.jpeg"
+    },
+    {
+      "id": "MS-053",
+      "slug": "ms-053",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r1.jpeg",
+          "alt": "Tailoring design — MS-053",
+          "position": "center",
+          "width": 987,
+          "height": 658,
+          "originalPath": "r1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r1.jpeg"
+    },
+    {
+      "id": "MS-054",
+      "slug": "ms-054",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r10.jpeg",
+          "alt": "Tailoring design — MS-054",
+          "position": "center",
+          "width": 550,
+          "height": 715,
+          "originalPath": "r10.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r10.jpeg"
+    },
+    {
+      "id": "MS-055",
+      "slug": "ms-055",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r11.1.jpeg",
+          "alt": "Tailoring design — MS-055",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "r11.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r11.1.jpeg"
+    },
+    {
+      "id": "MS-056",
+      "slug": "ms-056",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r11.jpeg",
+          "alt": "Tailoring design — MS-056",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "r11.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r11.jpeg"
+    },
+    {
+      "id": "MS-057",
+      "slug": "ms-057",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r12.1.jpeg",
+          "alt": "Tailoring design — MS-057",
+          "position": "center",
+          "width": 584,
+          "height": 658,
+          "originalPath": "r12.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r12.1.jpeg"
+    },
+    {
+      "id": "MS-058",
+      "slug": "ms-058",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r12.jpeg",
+          "alt": "Tailoring design — MS-058",
+          "position": "center",
+          "width": 1019,
+          "height": 715,
+          "originalPath": "r12.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r12.jpeg"
+    },
+    {
+      "id": "MS-059",
+      "slug": "ms-059",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r13.jpeg",
+          "alt": "Tailoring design — MS-059",
+          "position": "center",
+          "width": 547,
+          "height": 658,
+          "originalPath": "r13.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r13.jpeg"
+    },
+    {
+      "id": "MS-060",
+      "slug": "ms-060",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r14.1.jpeg",
+          "alt": "Tailoring design — MS-060",
+          "position": "center",
+          "width": 538,
+          "height": 658,
+          "originalPath": "r14.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r14.1.jpeg"
+    },
+    {
+      "id": "MS-061",
+      "slug": "ms-061",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r14.2.jpeg",
+          "alt": "Tailoring design — MS-061",
+          "position": "center",
+          "width": 537,
+          "height": 658,
+          "originalPath": "r14.2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r14.2.jpeg"
+    },
+    {
+      "id": "MS-062",
+      "slug": "ms-062",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r14.jpeg",
+          "alt": "Tailoring design — MS-062",
+          "position": "center",
+          "width": 544,
+          "height": 658,
+          "originalPath": "r14.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r14.jpeg"
+    },
+    {
+      "id": "MS-063",
+      "slug": "ms-063",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r15.jpeg",
+          "alt": "Tailoring design — MS-063",
+          "position": "center",
+          "width": 532,
+          "height": 658,
+          "originalPath": "r15.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r15.jpeg"
+    },
+    {
+      "id": "MS-064",
+      "slug": "ms-064",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r16.jpeg",
+          "alt": "Tailoring design — MS-064",
+          "position": "center",
+          "width": 602,
+          "height": 658,
+          "originalPath": "r16.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r16.jpeg"
+    },
+    {
+      "id": "MS-065",
+      "slug": "ms-065",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r17.1.jpeg",
+          "alt": "Tailoring design — MS-065",
+          "position": "center",
+          "width": 452,
+          "height": 658,
+          "originalPath": "r17.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r17.1.jpeg"
+    },
+    {
+      "id": "MS-066",
+      "slug": "ms-066",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r17.jpeg",
+          "alt": "Tailoring design — MS-066",
+          "position": "center",
+          "width": 532,
+          "height": 658,
+          "originalPath": "r17.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r17.jpeg"
+    },
+    {
+      "id": "MS-067",
+      "slug": "ms-067",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r18.jpeg",
+          "alt": "Tailoring design — MS-067",
+          "position": "center",
+          "width": 675,
+          "height": 658,
+          "originalPath": "r18.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r18.jpeg"
+    },
+    {
+      "id": "MS-068",
+      "slug": "ms-068",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r19.jpeg",
+          "alt": "Tailoring design — MS-068",
+          "position": "center",
+          "width": 526,
+          "height": 658,
+          "originalPath": "r19.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r19.jpeg"
+    },
+    {
+      "id": "MS-069",
+      "slug": "ms-069",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r2.jpeg",
+          "alt": "Tailoring design — MS-069",
+          "position": "center",
+          "width": 451,
+          "height": 658,
+          "originalPath": "r2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r2.jpeg"
+    },
+    {
+      "id": "MS-070",
+      "slug": "ms-070",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r20.1.jpeg",
+          "alt": "Tailoring design — MS-070",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "r20.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r20.1.jpeg"
+    },
+    {
+      "id": "MS-071",
+      "slug": "ms-071",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r20.jpeg",
+          "alt": "Tailoring design — MS-071",
+          "position": "center",
+          "width": 370,
+          "height": 658,
+          "originalPath": "r20.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r20.jpeg"
+    },
+    {
+      "id": "MS-072",
+      "slug": "ms-072",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r21.jpeg",
+          "alt": "Tailoring design — MS-072",
+          "position": "center",
+          "width": 370,
+          "height": 658,
+          "originalPath": "r21.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r21.jpeg"
+    },
+    {
+      "id": "MS-073",
+      "slug": "ms-073",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r22.1.jpeg",
+          "alt": "Tailoring design — MS-073",
+          "position": "center",
+          "width": 355,
+          "height": 658,
+          "originalPath": "r22.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r22.1.jpeg"
+    },
+    {
+      "id": "MS-074",
+      "slug": "ms-074",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r22.jpeg",
+          "alt": "Tailoring design — MS-074",
+          "position": "center",
+          "width": 411,
+          "height": 658,
+          "originalPath": "r22.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r22.jpeg"
+    },
+    {
+      "id": "MS-075",
+      "slug": "ms-075",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r23.jpeg",
+          "alt": "Tailoring design — MS-075",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r23.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r23.jpeg"
+    },
+    {
+      "id": "MS-076",
+      "slug": "ms-076",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r25.jpeg",
+          "alt": "Tailoring design — MS-076",
+          "position": "center",
+          "width": 542,
+          "height": 658,
+          "originalPath": "r25.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r25.jpeg"
+    },
+    {
+      "id": "MS-077",
+      "slug": "ms-077",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r26.jpeg",
+          "alt": "Tailoring design — MS-077",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r26.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r26.jpeg"
+    },
+    {
+      "id": "MS-078",
+      "slug": "ms-078",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r27.jpeg",
+          "alt": "Tailoring design — MS-078",
+          "position": "center",
+          "width": 413,
+          "height": 658,
+          "originalPath": "r27.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r27.jpeg"
+    },
+    {
+      "id": "MS-079",
+      "slug": "ms-079",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r28.jpeg",
+          "alt": "Tailoring design — MS-079",
+          "position": "center",
+          "width": 439,
+          "height": 658,
+          "originalPath": "r28.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r28.jpeg"
+    },
+    {
+      "id": "MS-080",
+      "slug": "ms-080",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r29.jpeg",
+          "alt": "Tailoring design — MS-080",
+          "position": "center",
+          "width": 466,
+          "height": 658,
+          "originalPath": "r29.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r29.jpeg"
+    },
+    {
+      "id": "MS-081",
+      "slug": "ms-081",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r3.4.jpeg",
+          "alt": "Tailoring design — MS-081",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r3.4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r3.4.jpeg"
+    },
+    {
+      "id": "MS-082",
+      "slug": "ms-082",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r3.5.jpeg",
+          "alt": "Tailoring design — MS-082",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r3.5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r3.5.jpeg"
+    },
+    {
+      "id": "MS-083",
+      "slug": "ms-083",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r3.jpeg",
+          "alt": "Tailoring design — MS-083",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r3.jpeg"
+    },
+    {
+      "id": "MS-084",
+      "slug": "ms-084",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r30.jpeg",
+          "alt": "Tailoring design — MS-084",
+          "position": "center",
+          "width": 464,
+          "height": 658,
+          "originalPath": "r30.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r30.jpeg"
+    },
+    {
+      "id": "MS-085",
+      "slug": "ms-085",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r31.1.jpeg",
+          "alt": "Tailoring design — MS-085",
+          "position": "center",
+          "width": 938,
+          "height": 615,
+          "originalPath": "r31.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r31.1.jpeg"
+    },
+    {
+      "id": "MS-086",
+      "slug": "ms-086",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r31.jpeg",
+          "alt": "Tailoring design — MS-086",
+          "position": "center",
+          "width": 1080,
+          "height": 600,
+          "originalPath": "r31.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r31.jpeg"
+    },
+    {
+      "id": "MS-087",
+      "slug": "ms-087",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r32.jpeg",
+          "alt": "Tailoring design — MS-087",
+          "position": "center",
+          "width": 990,
+          "height": 658,
+          "originalPath": "r32.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r32.jpeg"
+    },
+    {
+      "id": "MS-088",
+      "slug": "ms-088",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r33.jpeg",
+          "alt": "Tailoring design — MS-088",
+          "position": "center",
+          "width": 905,
+          "height": 658,
+          "originalPath": "r33.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r33.jpeg"
+    },
+    {
+      "id": "MS-089",
+      "slug": "ms-089",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r34.jpeg",
+          "alt": "Tailoring design — MS-089",
+          "position": "center",
+          "width": 360,
+          "height": 658,
+          "originalPath": "r34.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r34.jpeg"
+    },
+    {
+      "id": "MS-090",
+      "slug": "ms-090",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r35.jpeg",
+          "alt": "Tailoring design — MS-090",
+          "position": "center",
+          "width": 480,
+          "height": 658,
+          "originalPath": "r35.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r35.jpeg"
+    },
+    {
+      "id": "MS-091",
+      "slug": "ms-091",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r36.1.jpeg",
+          "alt": "Tailoring design — MS-091",
+          "position": "center",
+          "width": 594,
+          "height": 658,
+          "originalPath": "r36.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r36.1.jpeg"
+    },
+    {
+      "id": "MS-092",
+      "slug": "ms-092",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r36.jpeg",
+          "alt": "Tailoring design — MS-092",
+          "position": "center",
+          "width": 654,
+          "height": 658,
+          "originalPath": "r36.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r36.jpeg"
+    },
+    {
+      "id": "MS-093",
+      "slug": "ms-093",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r37.jpeg",
+          "alt": "Tailoring design — MS-093",
+          "position": "center",
+          "width": 527,
+          "height": 658,
+          "originalPath": "r37.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r37.jpeg"
+    },
+    {
+      "id": "MS-094",
+      "slug": "ms-094",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r38.jpeg",
+          "alt": "Tailoring design — MS-094",
+          "position": "center",
+          "width": 527,
+          "height": 658,
+          "originalPath": "r38.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r38.jpeg"
+    },
+    {
+      "id": "MS-095",
+      "slug": "ms-095",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r39.jpeg",
+          "alt": "Tailoring design — MS-095",
+          "position": "center",
+          "width": 527,
+          "height": 658,
+          "originalPath": "r39.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r39.jpeg"
+    },
+    {
+      "id": "MS-096",
+      "slug": "ms-096",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r4.jpeg",
+          "alt": "Tailoring design — MS-096",
+          "position": "center",
+          "width": 1792,
+          "height": 2400,
+          "originalPath": "r4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r4.jpeg"
+    },
+    {
+      "id": "MS-097",
+      "slug": "ms-097",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r40.1.jpeg",
+          "alt": "Tailoring design — MS-097",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r40.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r40.1.jpeg"
+    },
+    {
+      "id": "MS-098",
+      "slug": "ms-098",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r40.2.jpeg",
+          "alt": "Tailoring design — MS-098",
+          "position": "center",
+          "width": 492,
+          "height": 658,
+          "originalPath": "r40.2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r40.2.jpeg"
+    },
+    {
+      "id": "MS-099",
+      "slug": "ms-099",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r40.jpeg",
+          "alt": "Tailoring design — MS-099",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r40.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r40.jpeg"
+    },
+    {
+      "id": "MS-100",
+      "slug": "ms-100",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r41.1.jpeg",
+          "alt": "Tailoring design — MS-100",
+          "position": "center",
+          "width": 532,
+          "height": 658,
+          "originalPath": "r41.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r41.1.jpeg"
+    },
+    {
+      "id": "MS-101",
+      "slug": "ms-101",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r41.jpeg",
+          "alt": "Tailoring design — MS-101",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r41.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r41.jpeg"
+    },
+    {
+      "id": "MS-102",
+      "slug": "ms-102",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r42.jpeg",
+          "alt": "Tailoring design — MS-102",
+          "position": "center",
+          "width": 370,
+          "height": 658,
+          "originalPath": "r42.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r42.jpeg"
+    },
+    {
+      "id": "MS-103",
+      "slug": "ms-103",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r43.jpeg",
+          "alt": "Tailoring design — MS-103",
+          "position": "center",
+          "width": 641,
+          "height": 715,
+          "originalPath": "r43.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r43.jpeg"
+    },
+    {
+      "id": "MS-104",
+      "slug": "ms-104",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r5.jpeg",
+          "alt": "Tailoring design — MS-104",
+          "position": "center",
+          "width": 1076,
+          "height": 715,
+          "originalPath": "r5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r5.jpeg"
+    },
+    {
+      "id": "MS-105",
+      "slug": "ms-105",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r6.jpeg",
+          "alt": "Tailoring design — MS-105",
+          "position": "center",
+          "width": 1792,
+          "height": 2400,
+          "originalPath": "r6.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r6.jpeg"
+    },
+    {
+      "id": "MS-106",
+      "slug": "ms-106",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.1.jpeg",
+          "alt": "Tailoring design — MS-106",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.1.jpeg"
+    },
+    {
+      "id": "MS-107",
+      "slug": "ms-107",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.10.jpeg",
+          "alt": "Tailoring design — MS-107",
+          "position": "center",
+          "width": 715,
+          "height": 715,
+          "originalPath": "r7.10.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.10.jpeg"
+    },
+    {
+      "id": "MS-108",
+      "slug": "ms-108",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.11.jpeg",
+          "alt": "Tailoring design — MS-108",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.11.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.11.jpeg"
+    },
+    {
+      "id": "MS-109",
+      "slug": "ms-109",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.2.jpeg",
+          "alt": "Tailoring design — MS-109",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.2.jpeg"
+    },
+    {
+      "id": "MS-110",
+      "slug": "ms-110",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.3.jpeg",
+          "alt": "Tailoring design — MS-110",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.3.jpeg"
+    },
+    {
+      "id": "MS-111",
+      "slug": "ms-111",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.4.jpeg",
+          "alt": "Tailoring design — MS-111",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.4.jpeg"
+    },
+    {
+      "id": "MS-112",
+      "slug": "ms-112",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.5.jpeg",
+          "alt": "Tailoring design — MS-112",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.5.jpeg"
+    },
+    {
+      "id": "MS-113",
+      "slug": "ms-113",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.6.jpeg",
+          "alt": "Tailoring design — MS-113",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.6.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.6.jpeg"
+    },
+    {
+      "id": "MS-114",
+      "slug": "ms-114",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.7.jpeg",
+          "alt": "Tailoring design — MS-114",
+          "position": "center",
+          "width": 658,
+          "height": 658,
+          "originalPath": "r7.7.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.7.jpeg"
+    },
+    {
+      "id": "MS-115",
+      "slug": "ms-115",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.8.jpeg",
+          "alt": "Tailoring design — MS-115",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "r7.8.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.8.jpeg"
+    },
+    {
+      "id": "MS-116",
+      "slug": "ms-116",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.9.jpeg",
+          "alt": "Tailoring design — MS-116",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "r7.9.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "not_previously_in_gallery",
+      "sources": [],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.9.jpeg"
+    },
+    {
+      "id": "MS-117",
+      "slug": "ms-117",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r7.jpeg",
+          "alt": "Tailoring design — MS-117",
+          "position": "center",
+          "width": 2048,
+          "height": 2056,
+          "originalPath": "r7.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r7.jpeg"
+    },
+    {
+      "id": "MS-118",
+      "slug": "ms-118",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r8.jpeg",
+          "alt": "Tailoring design — MS-118",
+          "position": "center",
+          "width": 477,
+          "height": 715,
+          "originalPath": "r8.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html",
+        "happy-customers.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r8.jpeg"
+    },
+    {
+      "id": "MS-119",
+      "slug": "ms-119",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/r9.jpeg",
+          "alt": "Tailoring design — MS-119",
+          "position": "center",
+          "width": 494,
+          "height": 658,
+          "originalPath": "r9.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "reviews.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "r9.jpeg"
+    },
+    {
+      "id": "MS-120",
+      "slug": "ms-120",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "styles": [
+        "kaunda",
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/s1.jpeg",
+          "alt": "Men’s Kaunda Modern suit — MS-120",
+          "position": "center",
+          "width": 977,
+          "height": 1024,
+          "originalPath": "s1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "s1.jpeg"
+    },
+    {
+      "id": "MS-121",
+      "slug": "ms-121",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "styles": [
+        "kaunda",
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/s2.jpeg",
+          "alt": "Men’s Kaunda Modern suit — MS-121",
+          "position": "center",
+          "width": 477,
+          "height": 715,
+          "originalPath": "s2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "s2.jpeg"
+    },
+    {
+      "id": "MS-122",
+      "slug": "ms-122",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "styles": [
+        "kaunda",
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/s3.jpeg",
+          "alt": "Men’s Kaunda Modern suit — MS-122",
+          "position": "center",
+          "width": 795,
+          "height": 1024,
+          "originalPath": "s3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "s3.jpeg"
+    },
+    {
+      "id": "MS-123",
+      "slug": "ms-123",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "styles": [
+        "kaunda",
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/s4.jpeg",
+          "alt": "Men’s Kaunda Modern suit — MS-123",
+          "position": "center",
+          "width": 526,
+          "height": 658,
+          "originalPath": "s4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "s4.jpeg"
+    },
+    {
+      "id": "MS-124",
+      "slug": "ms-124",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "styles": [
+        "kaunda",
+        "modern"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/s5.jpeg",
+          "alt": "Men’s Kaunda Modern suit — MS-124",
+          "position": "center",
+          "width": 370,
+          "height": 658,
+          "originalPath": "s5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "style",
+          "source": "m-modernsuits.html"
+        }
+      ],
+      "sourceAnchor": "s5.jpeg"
+    },
+    {
+      "id": "MS-125",
+      "slug": "ms-125",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuitthree1.jpeg",
+          "alt": "Women’s Classic suit — MS-125",
+          "position": "center",
+          "width": 572,
+          "height": 715,
+          "originalPath": "w-classicsuitthree1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuitthree1.jpeg"
+    },
+    {
+      "id": "MS-126",
+      "slug": "ms-126",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuitthree2.jpeg",
+          "alt": "Women’s Classic suit — MS-126",
+          "position": "center",
+          "width": 575,
+          "height": 715,
+          "originalPath": "w-classicsuitthree2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuitthree2.jpeg"
+    },
+    {
+      "id": "MS-127",
+      "slug": "ms-127",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuitthree3.jpeg",
+          "alt": "Women’s Classic suit — MS-127",
+          "position": "center",
+          "width": 800,
+          "height": 715,
+          "originalPath": "w-classicsuitthree3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuitthree3.jpeg"
+    },
+    {
+      "id": "MS-128",
+      "slug": "ms-128",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuitthree4.jpeg",
+          "alt": "Women’s Classic suit — MS-128",
+          "position": "center",
+          "width": 380,
+          "height": 530,
+          "originalPath": "w-classicsuitthree4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuitthree4.jpeg"
+    },
+    {
+      "id": "MS-129",
+      "slug": "ms-129",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuittwo1.jpeg",
+          "alt": "Women’s Classic suit — MS-129",
+          "position": "center",
+          "width": 412,
+          "height": 715,
+          "originalPath": "w-classicsuittwo1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html",
+        "_templates/homepage-sections.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuittwo1.jpeg"
+    },
+    {
+      "id": "MS-130",
+      "slug": "ms-130",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuittwo2.jpeg",
+          "alt": "Women’s Classic suit — MS-130",
+          "position": "center",
+          "width": 402,
+          "height": 715,
+          "originalPath": "w-classicsuittwo2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuittwo2.jpeg"
+    },
+    {
+      "id": "MS-131",
+      "slug": "ms-131",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuittwo3.jpeg",
+          "alt": "Women’s Classic suit — MS-131",
+          "position": "center",
+          "width": 536,
+          "height": 715,
+          "originalPath": "w-classicsuittwo3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuittwo3.jpeg"
+    },
+    {
+      "id": "MS-132",
+      "slug": "ms-132",
+      "name": "Women’s Classic suit",
+      "gender": "women",
+      "styles": [
+        "classic"
+      ],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "",
+      "images": [
+        {
+          "src": "/w-classicsuittwo4.jpeg",
+          "alt": "Women’s Classic suit — MS-132",
+          "position": "center",
+          "width": 477,
+          "height": 715,
+          "originalPath": "w-classicsuittwo4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "womensuits.html",
+        "w-classicsuits.html"
+      ],
+      "metadataEvidence": [
+        {
+          "field": "style",
+          "source": "w-classicsuits.html"
+        }
+      ],
+      "sourceAnchor": "w-classicsuittwo4.jpeg"
+    },
+    {
+      "id": "MS-133",
+      "slug": "ms-133",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/w1.jpeg",
+          "alt": "Tailoring design — MS-133",
+          "position": "center",
+          "width": 439,
+          "height": 658,
+          "originalPath": "w1.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "w1.jpeg"
+    },
+    {
+      "id": "MS-134",
+      "slug": "ms-134",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/w2.jpeg",
+          "alt": "Tailoring design — MS-134",
+          "position": "center",
+          "width": 526,
+          "height": 658,
+          "originalPath": "w2.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "w2.jpeg"
+    },
+    {
+      "id": "MS-135",
+      "slug": "ms-135",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/w3.jpeg",
+          "alt": "Tailoring design — MS-135",
+          "position": "center",
+          "width": 742,
+          "height": 801,
+          "originalPath": "w3.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "w3.jpeg"
+    },
+    {
+      "id": "MS-136",
+      "slug": "ms-136",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/w4.jpeg",
+          "alt": "Tailoring design — MS-136",
+          "position": "center",
+          "width": 913,
+          "height": 1024,
+          "originalPath": "w4.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "w4.jpeg"
+    },
+    {
+      "id": "MS-137",
+      "slug": "ms-137",
+      "name": "Tailoring design",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/w5.jpeg",
+          "alt": "Tailoring design — MS-137",
+          "position": "center",
+          "width": 566,
+          "height": 639,
+          "originalPath": "w5.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": true,
+      "publicationBasis": "existing_public_display",
+      "sources": [
+        "collections.html",
+        "suits.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "w5.jpeg"
+    },
+    {
+      "id": "MS-138",
+      "slug": "ms-138",
+      "name": "Service editorial image",
+      "gender": "unclassified",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "",
+      "description": "",
+      "images": [
+        {
+          "src": "/standard.jpeg",
+          "alt": "Existing tailoring service illustration",
+          "position": "center",
+          "width": 1374,
+          "height": 1145,
+          "originalPath": "standard.jpeg"
+        }
+      ],
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "published": false,
+      "publicationBasis": "service_editorial_only",
+      "sources": [
+        "service-standard.html"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "standard.jpeg"
+    }
+  ]
+}

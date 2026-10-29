@@ -8,5 +8,5 @@ ROOT = Path(__file__).resolve().parents[1]
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--check', action='store_true')
 args = p.parse_args()
-for script in ['build_homepage.py', 'build_contact.py', 'build_about.py', 'build_clean_urls.py']:
+for script in ['build_homepage.py', 'build_contact.py', 'build_about.py', 'build_collections.py', 'build_clean_urls.py']:
     subprocess.run([sys.executable, str(ROOT/'scripts'/script), *(['--check'] if args.check else [])], cwd=ROOT, check=True)

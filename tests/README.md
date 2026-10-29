@@ -395,3 +395,24 @@ The browser check blocks external services and checks the approved brand story,
 founding year, parent company, mission/vision, values, services, metadata,
 responsive image delivery, menu behavior, both CTA routes and legacy URL. It
 saves review screenshots outside the repository under the review workspace.
+
+
+### Collections V2
+
+Source records: `_data/collection-designs.json`. Stable ID/source anchors and all
+original/derivative image mappings are maintained alongside it. See
+[Collections maintenance and route mapping](../docs/collections-v2.md).
+
+```sh
+python3 scripts/build_site.py
+python3 scripts/build_site.py --check
+python3 tests/collections_data.py
+python3 tests/shared_components.py
+node tests/collections-v2.spec.cjs
+```
+
+The browser suite tests three routes at seven widths, combined filters/search,
+pagination, accessible viewer/history/swipes, multi-photo fixtures, share mocks,
+favourites/storage and bounded shortlist messages, no-JS fallback and legacy
+routes. No external requests or real messages are sent. System Chromium is used;
+Firefox and WebKit binaries were not available in this environment.

@@ -130,7 +130,7 @@ def main():
             assert count <= 1, (path.name, 'duplicate business entity')
             if count:
                 business_pages.append(path.name)
-    assert len(business_pages) == len(set(business_pages)) == 14, business_pages
+    assert len(business_pages) == len(set(business_pages)) == 11, business_pages
     assert common['telephone'] == '+250787411501'
     assert common['email'] == 'mrsewingfashiondesigner@gmail.com'
     assert all('Kigali' in address['addressLocality'] and address['addressCountry'] == 'RW' for address in common['address'])
@@ -138,7 +138,7 @@ def main():
     subprocess.run(['python3','scripts/sync_business_schema.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_homepage.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_contact.py','--check'], cwd=ROOT, check=True)
-    print(f'PASS: {len(documents)} JSON-LD blocks parse; 14 public business entities preserve confirmed identity and hours; Contact separately qualifies workshop and appointment-only consultation locations.')
+    print(f'PASS: {len(documents)} JSON-LD blocks parse; 11 public business entities preserve confirmed identity and hours; Contact separately qualifies workshop and appointment-only consultation locations.')
     if options.vocabulary:
         vocabulary_check(documents, options.vocabulary)
 
