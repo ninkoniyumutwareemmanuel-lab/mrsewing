@@ -45,8 +45,9 @@ its navigation is prevented; no messages are sent.
 
 `_data/business.json` is the shared business identity, contacts and confirmed
 working schedule. It reuses the existing contact-page branch addresses and phone;
-no coordinates, reviews or ratings are invented. Weekend `00:00`/`00:00` entries
-explicitly mean closed, not 24-hour opening. Legitimate about-page extra fields
+no coordinates, reviews or ratings are invented. Regular Monday–Saturday hours are 09:00–17:00. Dated Umuganda
+exceptions override the last Saturday to 12:00–17:00 by advance appointment;
+Sunday has no invented fixed opening hours. Legitimate about-page extra fields
 and nonbusiness product/FAQ/navigation data remain separate.
 
 After an authorized business-information change:
@@ -186,14 +187,82 @@ and eight intercepted Saturday/Sunday booking requests. The local directory
 normalization tests demonstrate expected static-server behavior; actual GitHub
 Pages/Cloudflare HTTP behavior must be verified after authorized deployment.
 
-Business schema lists fixed weekday hours only. Its
-`disambiguatingDescription` explicitly describes weekend consultations and
-customer-location visits by advance appointment, without inventing fixed weekend
-opening hours. Visible hours show Saturday/Sunday “By appointment”; no booking
-validation excludes weekends. This does not imply unrestricted weekend walk-ins.
+Business hours are now derived from `_data/business-hours.json`. Normal Saturday
+visits are 09:00–17:00 without an appointment. The last Saturday (Umuganda) is
+12:00–17:00 strictly by advance appointment; Sunday is by appointment only.
+The calendar and form rules are documented below; no entire weekend day is
+disabled in the booking forms.
 
 Staging deployment: push `phase2/website-corrections` for review. If Cloudflare
 continues to use `phase1/customer-journey-repairs`, first fetch/recheck that branch
 and only fast-forward it from Phase 2 without force-pushing. A new branch alone
 does not update the existing staging URL. Never change `main` or hosting/domain
 settings as part of a staging push.
+
+## Homepage performance specialization and current hours
+
+Homepage resource substitutions live in `scripts/homepage_resources.py` and run
+inside `build_homepage.py`. They affect the generated homepage only: standalone
+collections/services retain their original image/icon delivery. Fourteen Font
+Awesome Free 6.4.0 glyphs use the exact licensed SVG paths (CC BY4.0; see
+`assets/fontawesome-LICENSE.txt`); no icon stylesheet or font is requested by home.
+All existing accessible parent labels remain; decorative SVGs are hidden from
+assistive technology. The footer copyright contrast correction is also homepage
+only. No new visitor framework/runtime manifest fetch is introduced.
+
+`optimize_homepage_images.py` requires authoring-time Pillow with AVIF support.
+It generates only the hero/logo/client-strip derivatives under `assets/homepage/`
+with content hashes; original files and the existing shared image inventory stay
+untouched. Photos use quality82 AVIF (4:4:4 chroma for client images); logos use
+lossless WebP. The recorded photo PSNR threshold is35dB against the same-size
+reference; logo visible pixels/alpha compare exactly. Responsive slot sizes
+match 158/218px card interiors and account for the existing4:5 crop of landscape
+images. Logo slot sizes match its actual CSS display size. Mobile hero uses a
+responsive picture with an exactly matching conditional preload; desktop keeps
+the original JPEG. Hero is eager/high-priority; other homepage photos remain lazy.
+
+The new filenames avoid stale image replacements. They do **not** change server
+cache lifetimes: GitHub Pages does not expose general per-file Cache-Control
+settings in this repository. No fake `_headers` or HTML meta-cache solution is
+added. Reduced transfer/icon requests are the immediate gain; future longer
+caching would require separately authorized hosting/CDN configuration.
+
+```sh
+python3 scripts/optimize_homepage_images.py  # only when regenerating media
+python3 scripts/sync_business_hours.py
+python3 scripts/sync_business_schema.py
+python3 scripts/build_homepage.py
+python3 scripts/build_clean_urls.py
+python3 tests/homepage_media.py
+node tests/business-hours.cjs
+node tests/homepage-optimization.spec.cjs
+```
+
+`_data/business-hours.json` is the shared schedule source.
+`_templates/business-hours.js` generates `assets/business-hours.js`, whose pure
+UTC calendar-date calculation finds the actual last Saturday for any month,
+including months with five Saturdays. It never interprets a picked Kigali date
+through the customer's local time zone. Ordinary Saturdays remain bookable from
+09:00; Umuganda morning choices are disabled, noon choices remain available,
+and custom requests must be confirmed within12:00–17:00. Sunday requests have no
+published fixed opening hours and require confirmation. The four booking pages
+include static schedule guidance so script loading does not insert an unexpected
+new layout block. Existing validation, submission/consent protection and recovery
+remain in the shared controller. No form is an automatic appointment guarantee.
+
+Schema.org cannot express a recurring “last Saturday” OpeningHoursSpecification.
+The synchronizer publishes24 explicit, correctly calculated dated exceptions for
+the current and following Kigali calendar year, plus the perpetual written rule.
+**Regenerate these static dates at least annually** and commit the synchronized
+JSON-LD/homepage/clean copies. The calendar and booking logic itself is perpetual;
+its tests cover1,212 months/36,890 dates from2000 through2100. `--check` detects
+stale dated schema rather than silently claiming future exceptions are current.
+
+Local Lighthouse evidence uses version12.8.2, three cold mobile and three desktop
+runs before/after, identical presets, gzip and a600-second cache model. Because
+the live site/CDN are blocked here, the baseline used the unchanged commit with
+exact6.4.0 icon CSS/fonts mirrored locally. DNS/TLS/CDN behavior and real-user
+performance therefore remain unverified. The results are controlled comparisons,
+not production PageSpeed scores or field INP; Lighthouse TBT is reported as TBT.
+Existing regression suites and the new homepage/calendar/media suites must pass
+before staging pushes. Never change production hosting/DNS to pursue these scores.

@@ -120,7 +120,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
         else if (!(await input.inputValue())) await input.fill(type === 'email' ? 'qa@example.invalid' : 'Mock validation');
       }
       for (const select of await forms.locator('select[required]').all()) {
-        const value = await select.locator('option').evaluateAll(options => options.find(option => option.value)?.value);
+        const value = await select.locator('option').evaluateAll(options => options.find(option => option.value && !option.disabled)?.value);
         if (value) await select.selectOption(value);
       }
       if (file === 'measurement-submission.html') await forms.locator('#standardSize').selectOption({index:1});

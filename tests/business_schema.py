@@ -93,9 +93,17 @@ def main():
                         day = day.removeprefix('https://schema.org/')
                         assert day not in days, (path.name, 'duplicate day', day)
                         days[day] = (hours['opens'], hours['closes'])
-                expected = {day:('09:00','17:00') for day in ['Monday','Tuesday','Wednesday','Thursday','Friday']}
+                expected = {day:('09:00','17:00') for day in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']}
                 assert days == expected, path.name
-                assert 'Saturday and Sunday' in node['disambiguatingDescription']
+                assert 'Ordinary Saturday visits do not require an appointment' in node['disambiguatingDescription']
+                assert 'Sunday: by appointment only' in node['disambiguatingDescription']
+                assert len(node['specialOpeningHoursSpecification']) == 24
+                from datetime import date, timedelta
+                for exception in node['specialOpeningHoursSpecification']:
+                    day = date.fromisoformat(exception['validFrom'])
+                    assert exception['validThrough'] == day.isoformat()
+                    assert day.weekday() == 5 and (day + timedelta(days=7)).month != day.month
+                    assert (exception['opens'],exception['closes']) == ('12:00','17:00')
                 assert 'advance appointment' in node['disambiguatingDescription']
             assert count <= 1, (path.name, 'duplicate business entity')
             if count:
@@ -104,6 +112,7 @@ def main():
     assert common['telephone'] == '+250787411501'
     assert common['email'] == 'mrsewingfashiondesigner@gmail.com'
     assert all('Kigali' in address['addressLocality'] and address['addressCountry'] == 'RW' for address in common['address'])
+    subprocess.run(['python3','scripts/sync_business_hours.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/sync_business_schema.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_homepage.py','--check'], cwd=ROOT, check=True)
     print(f'PASS: {len(documents)} JSON-LD blocks parse; all 14 public business entities match the shared identity, email, addresses and weekday hours and weekend appointment availability.')

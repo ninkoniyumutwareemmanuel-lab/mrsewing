@@ -31,10 +31,42 @@
     phone.addEventListener('input', validatePhone);
     validatePhone();
   }
+  // Kigali dates are calendar dates, not browser-local time-zone instants.
+  const dateInput = form.querySelector('#preferredDate');
+  const timeInput = form.querySelector('#preferredTime');
+  let validateHours = () => {};
+  if (dateInput && timeInput && window.MrSewingHours) {
+    const hours = window.MrSewingHours;
+    const note = document.getElementById('business-hours-note') || document.createElement('p');
+    note.id = 'business-hours-note'; note.setAttribute('role', 'status');
+    note.style.cssText = 'color:#cccccc;font-size:.85rem;line-height:1.5;margin-top:8px';
+    if (!note.isConnected) dateInput.insertAdjacentElement('afterend', note);
+    dateInput.setAttribute('aria-describedby', [...new Set((dateInput.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean).concat(note.id))].join(' '));
+    timeInput.setAttribute('aria-describedby', [...new Set((timeInput.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean).concat(note.id))].join(' '));
+    validateHours = () => {
+      timeInput.setCustomValidity(hours.timeAllowed(dateInput.value, timeInput.value) ? '' : 'On Umuganda, please choose a time between 12:00 PM and 5:00 PM; an advance appointment is required.');
+    };
+    const updateHours = () => {
+      const day = hours.availability(dateInput.value);
+      for (const option of timeInput.options) option.disabled = !hours.timeAllowed(dateInput.value, option.value);
+      if (timeInput.selectedOptions[0]?.disabled) timeInput.value = [...timeInput.options].find(option => !option.disabled)?.value || '';
+      note.textContent = !day ? 'Ordinary Saturdays: 9 AM–5 PM, no appointment needed. Umuganda: noon–5 PM by advance appointment. Sunday: by appointment only.'
+        : day.kind === 'umuganda' ? 'Umuganda (last Saturday): 12 PM–5 PM, strictly by advance appointment. Please obtain confirmation before visiting; custom requests must also be within these hours.'
+        : day.kind === 'sunday' ? 'Sunday is by appointment only, with no fixed opening hours. Your proposed time must be confirmed before visiting.'
+        : day.kind === 'saturday' ? 'Saturday: 9 AM–5 PM. Ordinary Saturday visits do not require an appointment; you may still request a consultation.'
+        : 'Monday–Friday: 9 AM–5 PM. Your booking request is subject to confirmation.';
+      validateHours();
+    };
+    dateInput.addEventListener('change', updateHours);
+    dateInput.addEventListener('input', updateHours);
+    timeInput.addEventListener('change', validateHours);
+    updateHours();
+  }
   let pending = false;
   const label = button.textContent;
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    validateHours();
     if (pending || !form.reportValidity() || (terms && !terms.checked)) return;
     if (form.id === 'submissionForm') {
       const hasSize = document.getElementById('standardSize').value.trim();

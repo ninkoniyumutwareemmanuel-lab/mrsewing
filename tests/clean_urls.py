@@ -48,8 +48,8 @@ business=json.loads((ROOT/'_data/business.json').read_text())
 assert len(business['openingHoursSpecification'])==1
 assert business['openingHoursSpecification'][0]['opens']=='09:00'
 assert business['openingHoursSpecification'][0]['closes']=='17:00'
-assert 'Saturday and Sunday' in business['disambiguatingDescription']
+assert 'Ordinary Saturday visits do not require an appointment' in business['disambiguatingDescription']
 assert 'advance appointment' in business['disambiguatingDescription']
-assert 'Weekend consultations and visits are available by advance appointment.' in (ROOT/'index.html').read_text()
+assert 'On Umuganda (the last Saturday)' in (ROOT/'index.html').read_text()
 subprocess.run(['python3','scripts/build_clean_urls.py','--check'],cwd=ROOT,check=True)
 print('PASS: 32 clean canonical pages, 27 unique indexable sitemap routes, clean JSON-LD references and weekday/weekend appointment representation.')

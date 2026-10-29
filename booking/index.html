@@ -234,7 +234,8 @@
     }
   </style>
   <script src="assets/navigation.js" defer></script>
-  <script src="assets/forms.js" defer></script>
+  <script src="assets/business-hours.js?v=42389240ec" defer></script>
+  <script src="assets/forms.js?v=2e7b291cba" defer></script>
   <link rel="canonical" href="https://mrsewingfashion.com/booking/">
 </head>
 <body>
@@ -286,13 +287,14 @@
           <!-- Date -->
           <div class="form-group">
             <label for="preferredDate">Preferred Date *</label>
-            <input type="date" id="preferredDate" name="Preferred Date" required>
+            <input type="date" id="preferredDate" name="Preferred Date" required aria-describedby="business-hours-note">
+            <p id="business-hours-note" role="status" style="color:#cccccc;font-size:.85rem;line-height:1.5;margin-top:8px">Ordinary Saturdays: 9 AM–5 PM, no appointment needed. Umuganda: noon–5 PM by advance appointment. Sunday: by appointment only.</p>
           </div>
 
           <!-- Time Slot -->
           <div class="form-group">
             <label for="preferredTime">Preferred Time *</label>
-            <select id="preferredTime" name="Preferred Time" required>
+            <select id="preferredTime" name="Preferred Time" required aria-describedby="business-hours-note">
               <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
               <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
               <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
