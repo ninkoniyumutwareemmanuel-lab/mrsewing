@@ -1,0 +1,267 @@
+[
+  {
+    "id": "custom-tailoring",
+    "title": "Custom Tailoring",
+    "route": "/services/custom-tailoring/",
+    "intro": "Personal tailoring for men and women, from suits and executive outfits to formalwear shaped around your preferences.",
+    "audience": "Men and women planning a custom suit, formal outfit or professional wardrobe.",
+    "options": "Discuss suits, jackets, trousers, skirts or other garment requirements, your design references and available fabric choices. The team confirms what is feasible before an order is agreed.",
+    "steps": [
+      "Share your references, garment category and intended occasion.",
+      "Discuss fabric selection, design details, measurements and a quote before ordering.",
+      "Agree production arrangements, attend fitting appointments and confirm collection or delivery with the team."
+    ],
+    "sources": [
+      "_templates/homepage-sections.html",
+      "about.html"
+    ],
+    "primary": true,
+    "visual": "m1.jpeg",
+    "sections": [
+      [
+        "Clothing for men and women",
+        "Discuss custom suits, jackets, trousers, skirts, formalwear and executive outfits. Start with a reference photograph or a conversation about the garment you need."
+      ],
+      [
+        "Designed around your preferences",
+        "Explore the design, proportions, colours and available fabric options with the team. Final details, materials and feasibility are agreed before an order."
+      ],
+      [
+        "Bring your ideas or your fabric",
+        "Bring sketches, reference photographs or cloth you already own. Discuss the design direction and ask the team to assess fabric quantity, suitability and any additional materials before agreeing the garment."
+      ],
+      [
+        "Measurements, fittings and finish",
+        "Arrange personal measurements, discuss fit and attend the agreed fitting appointments. Production timing and collection or delivery arrangements are confirmed for your order."
+      ]
+    ],
+    "requirements": [
+      "Garment category and design references",
+      "Occasion and any event date",
+      "Fabric preferences or fabric you already own",
+      "Available measurements and preferred fitting arrangements"
+    ],
+    "visualAlt": "Black suit design shown as tailoring inspiration"
+  },
+  {
+    "id": "wedding-tailoring",
+    "title": "Wedding & Civil Wedding Tailoring",
+    "route": "/services/wedding-tailoring/",
+    "intro": "A personal tailoring conversation for your ceremony, civil wedding or wedding celebrations.",
+    "audience": "Customers preparing a wedding or civil-wedding outfit.",
+    "options": "Discuss your ceremony, preferred silhouette, colours and coordination needs. Specific details and fabric availability are confirmed with the team.",
+    "steps": [
+      "Share your occasion and event date.",
+      "Discuss your reference, garment requirements and available options.",
+      "Agree measurements, fitting arrangements and a feasible schedule."
+    ],
+    "sources": [
+      "_templates/homepage-sections.html",
+      "faq.html"
+    ],
+    "primary": true,
+    "visual": "m-doublebreastedsuittwo1.jpeg",
+    "sections": [
+      [
+        "For your ceremony",
+        "Discuss a custom suit, tuxedo request or women’s formalwear for a wedding or civil ceremony. Your reference guides the conversation; the team confirms which design details can be made."
+      ],
+      [
+        "A look that belongs to you",
+        "Discuss silhouette, colour, available fabrics and any coordination requirements. No package or fixed price is implied by a reference photograph."
+      ],
+      [
+        "Plan the fittings",
+        "Tell us the ceremony date early. Measurements, fitting appointments and a feasible production schedule are agreed individually; submitting an enquiry does not guarantee a deadline."
+      ]
+    ],
+    "requirements": [
+      "Wedding or civil ceremony and event date",
+      "Garment needs and design references",
+      "Preferred colours and fabric options",
+      "Measurements and fitting availability"
+    ],
+    "visualAlt": "Black formalwear on a mannequin, shown as design inspiration"
+  },
+  {
+    "id": "graduation-tailoring",
+    "title": "Graduation Tailoring",
+    "route": "/services/graduation-tailoring/",
+    "intro": "Made-to-order outfit enquiries for a milestone worth remembering.",
+    "audience": "Graduates planning an outfit for their ceremony or celebration.",
+    "options": "Discuss suit or outfit styling, your preferred colours and the practical needs of your ceremony.",
+    "steps": [
+      "Tell us your graduation date and preferred outfit.",
+      "Share a reference and discuss the details.",
+      "Confirm measurements, fittings and timing before ordering."
+    ],
+    "sources": [
+      "_templates/homepage-sections.html",
+      "about.html"
+    ],
+    "primary": true,
+    "visual": "m-classicsuittwo1.jpeg",
+    "sections": [
+      [
+        "An outfit for your milestone",
+        "Discuss graduation clothing for men or women, including a suit or another outfit developed from your references."
+      ],
+      [
+        "Your design, considered",
+        "Talk through the silhouette, colours and available fabric choices. Confirm the final garment details with the team before ordering."
+      ],
+      [
+        "Ready for the fitting conversation",
+        "Share your graduation date, arrange measurements and agree fitting appointments. Timing and collection arrangements depend on the garment and confirmed capacity."
+      ]
+    ],
+    "requirements": [
+      "Graduation date",
+      "Garment category and inspiration",
+      "Fabric and colour preferences",
+      "Measurements and fitting availability"
+    ],
+    "visualAlt": "Classic suit design shown as garment inspiration"
+  },
+  {
+    "id": "mobile-fitting",
+    "title": "Mobile Fitting",
+    "route": "/services/mobile-fitting/",
+    "intro": "A measurement or fitting appointment at your location in Kigali, arranged directly with the Mr Sewing team.",
+    "audience": "Customers who would like to request measurements or a fitting at home, at an office or at a hotel in Kigali.",
+    "options": "Share your address, garment needs, any existing measurements and your preferred dates. Coverage, visit charges and availability must be confirmed; a message is a request, not a booked appointment.",
+    "steps": [
+      "Request a visit with your Kigali location, garment details and preferred dates.",
+      "The team confirms whether a visit is possible and agrees the appointment and any charges.",
+      "Prepare your reference images and garments for fitting. Discuss measurements, fit requirements and any follow-up appointment during the visit."
+    ],
+    "sources": [
+      "measurements.html",
+      "service-housecall.html",
+      "service-workplace.html"
+    ],
+    "primary": true,
+    "visual": "measurements.jpeg",
+    "sections": [
+      [
+        "The appointment comes to you",
+        "Request measurements or fitting support at a home, office or hotel in Kigali. This is an appointment request, not a promise of coverage or an available slot."
+      ],
+      [
+        "Before the visit",
+        "Share your address and access details, garment needs, reference images and preferred dates. Have the relevant garment available if you are requesting a fitting."
+      ],
+      [
+        "During and after a fitting",
+        "Discuss your measurements and fit requirements with the team. Any follow-up fitting, travel charge and scheduling details must be confirmed directly."
+      ]
+    ],
+    "requirements": [
+      "Your location in Kigali and contact number",
+      "Garment and measurement or fitting needs",
+      "Preferred dates and suitable appointment times",
+      "Existing garments, references or measurements to discuss"
+    ],
+    "visualAlt": "Measurement tape alongside a suit jacket, shown as a fitting illustration"
+  },
+  {
+    "id": "garment-care",
+    "title": "Premium Garment Care",
+    "route": "/services/garment-care/",
+    "intro": "A dedicated care conversation for your garments. Confirm available services, suitability and conditions with Mr Sewing.",
+    "audience": "Customers seeking care guidance for an eligible Mr Sewing order.",
+    "options": "Care options and eligibility depend on the garment and order. Complimentary cleaning or gifts are not universal benefits; confirm the applicable conditions.",
+    "steps": [
+      "Share the order or garment details.",
+      "Ask which care options and conditions apply.",
+      "Agree the next step with the team."
+    ],
+    "sources": [
+      "_templates/homepage-sections.html"
+    ],
+    "primary": true,
+    "visual": "assets/journey/garment-care-480.webp",
+    "requirements": [],
+    "sections": [],
+    "visualAlt": "AI-generated still life of a jacket, folded shirt and garment brush"
+  },
+  {
+    "id": "alterations",
+    "title": "Alterations & Refinements",
+    "route": "/services/alterations/",
+    "intro": "Garment adjustments assessed around the fit and changes you need.",
+    "audience": "Customers seeking adjustments to an existing suit, jacket, trousers, dress or skirt.",
+    "options": "Possible requests include resizing, sleeve or hem adjustments, zipper or button repairs and lining work. Suitability is assessed before a quote.",
+    "steps": [
+      "Describe the garment and the changes you would like.",
+      "Arrange an assessment of fit, condition and construction.",
+      "Confirm the work, quote and fitting arrangements."
+    ],
+    "sources": [
+      "booking-adjustment.html"
+    ],
+    "primary": true,
+    "visual": "chest.jpeg",
+    "sections": [
+      [
+        "Refine the fit you have",
+        "Request an assessment of a suit, jacket, trousers, dress or skirt. The garment’s condition and construction determine which adjustments are possible."
+      ],
+      [
+        "Changes to discuss",
+        "Existing booking options include resizing and tapering, sleeve or hem adjustments, zipper or button repairs and lining work. Each request is assessed; not every change is suitable for every garment."
+      ],
+      [
+        "Assessment before a quote",
+        "Describe the fit concern and arrange an assessment. The team confirms the work, price, fitting needs and estimated timing before you agree."
+      ]
+    ],
+    "requirements": [
+      "Garment type and current fit concern",
+      "Photographs or a clear description of the requested change",
+      "Any repairs or previous alterations",
+      "Preferred timing for assessment"
+    ],
+    "visualAlt": "Tape measuring a shirt at chest level, shown as a fit illustration"
+  },
+  {
+    "id": "express",
+    "title": "Express Tailoring",
+    "route": "/services/express-tailoring/",
+    "intro": "Discuss an urgent tailoring request and confirm whether the team can meet your deadline.",
+    "audience": "Customers with an approaching event or urgent garment requirement.",
+    "options": "Share the garment, exact date, measurements and fabric preferences. Availability, charges and timing require explicit confirmation; an enquiry does not reserve production.",
+    "steps": [
+      "Contact the team with your exact deadline.",
+      "Discuss the garment and whether express capacity is available.",
+      "Proceed only after the team confirms the requirements and arrangements."
+    ],
+    "sources": [
+      "service-express.html",
+      "_templates/homepage-sections.html"
+    ],
+    "primary": true,
+    "visual": "m-modernsuits1.jpeg",
+    "sections": [
+      [
+        "An urgent request, carefully assessed",
+        "Express tailoring is considered against the garment, materials, measurements and current capacity. Eligibility is confirmed individually; there is no published blanket deadline."
+      ],
+      [
+        "Tell us the exact deadline",
+        "Send the date and time you need the garment, the garment type and a design reference. Explain whether fabric and measurements are already available."
+      ],
+      [
+        "Confirmation before production",
+        "The team must confirm feasibility, any express fees, payment requirements and the agreed schedule. Opening an enquiry does not reserve production capacity or confirm an order."
+      ]
+    ],
+    "requirements": [
+      "Exact required date and time",
+      "Garment type and design reference",
+      "Fabric availability and measurement status",
+      "Your contact details for direct confirmation"
+    ],
+    "visualAlt": "Modern suit design shown as garment inspiration"
+  }
+]

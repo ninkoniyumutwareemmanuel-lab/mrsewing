@@ -5,7 +5,7 @@ const assert=require('assert/strict'),fs=require('fs');
 const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8000/';
 const origin=new URL(base).origin;
 const files=Object.keys(JSON.parse(fs.readFileSync('_data/page-seo.json')));
-const route=f=>f==='index.html'?'/':'/'+f.replace(/\.html$/,'')+'/';
+const aliases=JSON.parse(fs.readFileSync('_data/route-aliases.json'));const route=f=>aliases[f]||(f==='index.html'?'/':'/'+f.replace(/\.html$/,'')+'/');
 const saturday=new Date();saturday.setUTCDate(saturday.getUTCDate()+14+(6-saturday.getUTCDay()+7)%7);
 const sunday=new Date(saturday);sunday.setUTCDate(sunday.getUTCDate()+1);
 const weekendDates=[saturday,sunday].map(d=>d.toISOString().slice(0,10));

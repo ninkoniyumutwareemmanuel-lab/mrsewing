@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate the centralized design registry and build three V3 showrooms and eligible static garment pages."""
+from site_seo import finalize
 import argparse,csv,io,json,re
 from html import escape
 from pathlib import Path
@@ -45,7 +46,7 @@ def load():
             candidates.append({'src':image['src'],'width':image['width']})
             avifs=[{'src':'/'+v['src'],'width':v['width']} for v in avif.get(original,{}).get('variants',[]) if v['width']<=960]
             for v in candidates+avifs:assert (ROOT/v['src'].lstrip('/')).is_file(),v
-            images.append({**{k:image[k] for k in ['position','width','height']},'alt':re.sub(r'\s*[—·-]\s*MS-\d+\s*$','',image['alt']),'src':quote(image['src'],safe='/'),'thumb':quote(candidates[0]['src'],safe='/'),'srcset':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in candidates),'avif':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in avifs)})
+            images.append({**{k:image[k] for k in ['position','width','height']},'alt':({'r4.jpeg':'Person wearing a light jacket and matching trousers','r7.jpeg':'Person wearing a light jacket with navy trousers','h1.jpeg':'Person wearing an off-white suit','h2.jpeg':'Side view of a person in an off-white suit','h3.jpeg':'Person holding a diploma scroll'}.get(image['originalPath']) or ('Garment photograph shown for design inspiration' if image['alt'].lower().startswith('tailoring design') else re.sub(r'\s*[—·-]\s*MS-\d+\s*$','',image['alt']))),'src':quote(image['src'],safe='/'),'thumb':quote(candidates[0]['src'],safe='/'),'srcset':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in candidates),'avif':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in avifs)})
         if record['published']:published.append({k:record[k] for k in ['id','slug','name','gender','styles','occasions','colors','garmentType','description','provenance']}|{'images':images})
     assert not ids.intersection(content['retiredIds'])
     assert set(registry)==ids|set(content['retiredIds']),'Registry entries must remain present or explicitly retired'
@@ -114,7 +115,7 @@ def render(name,gender,title,designs):
     seo=json.loads((ROOT/'_data/page-seo.json').read_text())[name];route='/'+name[:-5]+'/'
     selected=[d for d in designs if gender=='all' or d['gender']==gender]
     header,footer=chrome(route)
-    options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in designs for v in d[key]}))
+    options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in designs for v in d[key]} | ({'graduation','wedding','civil-wedding'} if key=='occasions' else set())))
     nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/collections/','All Designs'),('/mensuits/','Men'),('/womensuits/','Women')])
     values={'header':header,'footer':footer,'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'cards':''.join(card(d,i<4) for i,d in enumerate(selected[:12])),'styles_options':options('styles'),'occasions_options':options('occasions'),'data':json_script({'designs':[public_data(d) for d in designs],'defaultGender':gender}),'fallback':''.join('<li><a href="'+design_route(d)+'">'+escape(design_name(d))+'</a></li>' for d in selected),'count':str(len(selected)),'collection_nav':nav}
     schema={'@context':'https://schema.org','@type':'CollectionPage','@id':'https://mrsewingfashion.com'+route+'#webpage','url':'https://mrsewingfashion.com'+route,'name':seo['title'],'description':seo['description'],'about':{'@id':'https://mrsewingfashion.com/#organization'},'mainEntity':{'@type':'ItemList','numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'name':design_name(d),'url':'https://mrsewingfashion.com'+design_route(d)} for i,d in enumerate(selected)]}}
@@ -138,7 +139,7 @@ def render_design(d,designs):
     image=d['images'][0]
     # No unsupported Product/offers/ownership claims.
     schema={'@context':'https://schema.org','@type':'WebPage','name':name+' | Mr Sewing','url':url,'description':design_description(d),'primaryImageOfPage':{'@type':'ImageObject','contentUrl':'https://mrsewingfashion.com'+image['src']}}
-    values={'header':header,'footer':footer,'route':route,'name':escape(name),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'https://wa.me/250787411501?'+urlencode({'text':msg}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
+    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'https://wa.me/250787411501?'+urlencode({'text':msg}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
     return fill('collection-design.html',values)
 
 def main():
@@ -156,6 +157,7 @@ def main():
     records=json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']
     outputs[ROOT/'docs/collection-rights-review.md']='# Collection image rights review\n\nNo publication licence or provenance proof is inferred from repository presence.\nExisting-public photographs are carried into staging pending owner rights review.\nUnreferenced originals are inventoried but excluded from showroom publication.\nNo different photographs have been grouped by visual similarity.\n\n'+f'{len(designs)} existing-public designs; {len(records)} original garment records; {len(inventory["images"])} total image assets inventoried.\n\n| ID | Original | Showroom | Provenance | Rights |\n| --- | --- | --- | --- | --- |\n'+'\n'.join('| '+r['id']+' | `'+r['sourceAnchor']+'` | '+('existing public display preserved' if r['published'] else 'excluded pending review')+' | '+r['provenance']+' | '+r['rightsStatus']+' |' for r in records)+'\n'
     for path,output in outputs.items():
+        if path.suffix=='.html':output=finalize(output,path)
         if args.check:
             if not path.exists() or path.read_text()!=output:raise SystemExit('Stale collection output: '+str(path.relative_to(ROOT)))
         else:

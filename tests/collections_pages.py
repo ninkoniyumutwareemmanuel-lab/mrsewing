@@ -28,13 +28,16 @@ for d in public:
 for d in records:
     if not d['published']:assert not (build.ROOT/build.design_route(d).strip('/')).exists()
 # Confirm the approved pages, shared chrome, original assets and registry stay byte-identical.
-baseline='cf3d68b2cb1c04728c926ffccfe6a3acdd9d5df2'
-protected=['index.html','about.html','about/index.html','contact.html','contact/index.html','_data/collection-designs.json','_data/collection-id-registry.json','_data/collection-image-inventory.json']
-protected += [str(p.relative_to(build.ROOT)) for p in (build.ROOT/'_templates/shared').iterdir() if p.is_file()]
+baseline='08191fde2c1e984206ca40d53fbe99f69ce218da'
+protected=['_data/collection-designs.json','_data/collection-id-registry.json','_templates/collections.css','_templates/about.html','_templates/about.css','_templates/contact.html','_templates/contact.css','_data/contact-v2.json']
 required=set(protected)
 protected += subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=build.ROOT,text=True).splitlines()
-protected={p for p in protected if p in required or p.startswith('_templates/shared/') or re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',p,re.I)}
+protected={p for p in protected if p in required or re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',p,re.I)}
 for file in protected:
     original=subprocess.check_output(['git','show',baseline+':'+file],cwd=build.ROOT)
     assert hashlib.sha256(original).digest()==hashlib.sha256((build.ROOT/file).read_bytes()).digest(),file
-print(f'PASS: {len(public)} eligible static garment pages; {len(records)-len(public)} excluded records stay excluded; stable links, metadata-backed distinct recommendations and protected originals/pages/registry unchanged.')
+print(f'PASS: {len(public)} eligible static garment pages; {len(records)-len(public)} excluded records stay excluded; stable links, metadata-backed distinct recommendations and protected original media, V3 gallery styling, About/Contact templates and registry unchanged.')
+
+original_inventory=json.loads(subprocess.check_output(['git','show','08191fde2c1e984206ca40d53fbe99f69ce218da:_data/collection-image-inventory.json'],cwd=build.ROOT,text=True))
+current_inventory=json.loads((build.ROOT/'_data/collection-image-inventory.json').read_text())
+assert current_inventory['images'][:len(original_inventory['images'])]==original_inventory['images']

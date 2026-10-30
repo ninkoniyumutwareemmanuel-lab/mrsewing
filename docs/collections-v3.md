@@ -1,5 +1,10 @@
 # Collections V3 — Luxury Minimalist Showroom
 
+V3 release record. [Customer Journey V1](customer-journey-v1.md) subsequently
+updates shared navigation, SEO/alternative text and occasion links, and appends
+three non-collection care illustration assets. The V3 gallery design, images and
+design registry remain protected.
+
 Implemented for `phase1/customer-journey-repairs`, based on
 `cf3d68b2cb1c04728c926ffccfe6a3acdd9d5df2`. This is a staging change;
 production, DNS and hosting configuration are outside this implementation.

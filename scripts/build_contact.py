@@ -4,6 +4,7 @@
 Homepage/unrelated pages are never written. Run this before build_clean_urls.py.
 Contact-specific locations/social data stay scoped to this page during the V2 rollout.
 """
+from site_seo import finalize
 import argparse
 from copy import deepcopy
 from html import escape
@@ -79,6 +80,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--check',action='store_true');args=p.parse_args()
     outputs={ROOT/'contact.html':render(),ROOT/'assets/contact-navigation.js':navigation()}
     for path,output in outputs.items():
+        if path.suffix=='.html':output=finalize(output,path)
         if args.check:
             if not path.exists() or path.read_text()!=output:raise SystemExit('Contact V2 out of date: '+str(path.relative_to(ROOT)))
         else:path.write_text(output)

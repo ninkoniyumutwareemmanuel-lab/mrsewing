@@ -424,3 +424,38 @@ repository. Expose that package and the existing Playwright through NODE_PATH,
 then run `node tests/collections-accessibility.cjs`. Tests block external requests
 and never send actual enquiries. Automated scans complement manual keyboard and
 responsive checks; they do not establish complete accessibility conformance.
+
+
+## Customer Journey V1 — current integration
+
+The final consolidated implementation and owner approval requirements are in
+[Customer Journey V1](../docs/customer-journey-v1.md). This section supersedes older
+hero-button, Shop and service-route assertions described above. Collections V3
+remains the garment experience. Services has seven canonical details; old service
+URLs are aliases, not separate indexable offerings. Our Work has no published
+customer stories until completion/permission evidence is supplied. Care has no
+published subservices or price tables until availability, content and rates are
+approved. Candidate care categories in JSON are not customer-facing services.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py --check
+PYTHONDONTWRITEBYTECODE=1 python3 tests/customer_journey.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/garment_care.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/prepare_journey_media.py --check
+node tests/customer-journey.spec.cjs
+node tests/project_template.spec.cjs
+```
+
+Use the standard local static server on port 8000 for browser suites. For exact
+redirect/header simulation, separately start `python3 tests/preview_server.py
+--port 8001`, then run `node tests/routing.spec.cjs`. This simulation verifies the
+generated rules; it does not prove Cloudflare deployed or enforced them. Existing
+homepage, header, About/Contact, phase1/phase2, metadata, image-delivery, discovery,
+business-hours and Collections V3 suites remain relevant and were run.
+
+Optional axe scans use the externally installed @axe-core/playwright package:
+`node tests/journey_accessibility.cjs` with that module directory on NODE_PATH.
+Screenshots/logs default to `/workspace/artifacts/customer-journey-v1/`.
+No live enquiries are sent. Project and price fixtures are in-memory/intercepted
+only; no invented story or sample rate is generated into the website.

@@ -4958,6 +4958,51 @@
         "measurements.html",
         "_data/image-delivery.json"
       ]
+    },
+    {
+      "originalImagePath": "assets/journey/garment-care-illustration.png",
+      "sourceOriginal": "assets/journey/garment-care-illustration.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Conceptual garment-care illustration; not an actual Mr Sewing facility, person, garment or completed project. Never a collection design.",
+      "legacyReferences": [
+        "/services/garment-care/",
+        "/services/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/journey/garment-care-480.webp",
+      "sourceOriginal": "assets/journey/garment-care-illustration.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Conceptual garment-care illustration; not an actual Mr Sewing facility, person, garment or completed project. Never a collection design.",
+      "legacyReferences": [
+        "/services/garment-care/",
+        "/services/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/journey/garment-care-960.webp",
+      "sourceOriginal": "assets/journey/garment-care-illustration.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Conceptual garment-care illustration; not an actual Mr Sewing facility, person, garment or completed project. Never a collection design.",
+      "legacyReferences": [
+        "/services/garment-care/",
+        "/services/"
+      ]
     }
   ],
   "missingLegacyReferences": [],

@@ -4,6 +4,7 @@
 No third-party dependencies. Standalone source pages are never modified.
 Run after editing the dedicated _templates/homepage* files or resource helpers.
 """
+from site_seo import finalize
 import argparse
 from html import unescape
 from html.parser import HTMLParser
@@ -124,6 +125,7 @@ def render():
         styles.extend(section_styles)
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
+    styles.append((ROOT/'_templates/homepage-motion.css').read_text())
     template = template.replace('{{hero_preloads}}', hero_preloads())
     template = template.replace('{{section_styles}}', '\n'.join(styles))
     if re.search(r'{{\w+}}', template):
@@ -136,7 +138,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Fail if the generated homepage is out of date')
     args = parser.parse_args()
-    output = render()
+    output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
     navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script()
     navigation_path = ROOT / 'assets/homepage.js'

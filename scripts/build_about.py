@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build About Us V2 with the existing shared V2 components and verified assets."""
+from site_seo import finalize
 import argparse
 from html import escape
 import json
@@ -54,6 +55,7 @@ def main():
         '/* Generated from _templates/shared/navigation.js. */\n'+shared.menu_script()+
         '\n/* Preserve legacy order bookmarks using the existing homepage flow. */\nif (location.hash === "#orderModal") location.replace("/#orderModal");\n'}
     for path,value in outputs.items():
+        if path.suffix=='.html':value=finalize(value,path)
         if args.check:
             if not path.exists() or path.read_text()!=value:raise SystemExit('About V2 out of date: '+str(path.relative_to(ROOT)))
         else:path.write_text(value)

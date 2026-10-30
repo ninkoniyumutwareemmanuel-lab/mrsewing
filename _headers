@@ -1,0 +1,5 @@
+# Staging only: never apply these noindex rules to the production hostname.
+https://mrsewing-staging.pages.dev/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+https://:preview.mrsewing-staging.pages.dev/*
+  X-Robots-Tag: noindex, nofollow, noarchive

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "projects": [],
+  "pendingPhotos": [
+    {
+      "source": "h2.jpeg",
+      "publicationPermission": "not_documented",
+      "completedWorkEvidence": null,
+      "projectAssociation": null
+    },
+    {
+      "source": "r7.jpeg",
+      "publicationPermission": "not_documented",
+      "completedWorkEvidence": null,
+      "projectAssociation": null
+    },
+    {
+      "source": "r4.jpeg",
+      "publicationPermission": "not_documented",
+      "completedWorkEvidence": null,
+      "projectAssociation": null
+    }
+  ]
+}

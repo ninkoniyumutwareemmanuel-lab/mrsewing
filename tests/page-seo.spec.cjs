@@ -9,6 +9,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
 (async () => {
   execFileSync('python3',['scripts/sync_page_seo.py','--check'],{cwd:root,stdio:'inherit'});
   execFileSync('python3',['scripts/build_homepage.py','--check'],{cwd:root,stdio:'inherit'});
+  const aliases=JSON.parse(fs.readFileSync(path.join(root,'_data/route-aliases.json'),'utf8'));
   const pages=JSON.parse(fs.readFileSync(path.join(root,'_data/page-seo.json'),'utf8'));
   const full=fs.readdirSync(root).filter(file=>file.endsWith('.html')&&/<html\b/i.test(fs.readFileSync(path.join(root,file),'utf8')));
   assert.deepEqual(Object.keys(pages).sort(),full.sort());
@@ -26,6 +27,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     const page=await context.newPage();const errors=[];
     page.on('pageerror',error=>errors.push(error.message));
     for(const [file,data]of Object.entries(pages)){
+      if(aliases[file])continue;
       await page.goto(base+file);await page.locator('header nav').waitFor({state:'attached'});
       assert.equal(await page.title(),data.title,file);
       assert.equal(await page.locator('head title').count(),1,file);
@@ -46,7 +48,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${file} overflow at ${width}`);
       }
     }
-    await page.goto(base+'services.html');assert.equal(await page.locator('.services-header h1').count(),1);assert.equal(await page.locator('.service-card h2').count(),6);
+    await page.goto(base+'services.html');assert.equal(await page.locator('.journey-intro h1').count(),1);assert.equal(await page.locator('.journey-card h2').count(),7);
     await page.goto(base+'reviews.html');assert.equal(await page.locator('main h2').count(),1);assert.equal(await page.locator('.work-title').first().evaluate(node=>node.tagName),'H3');
     await page.goto(base);assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.services-header h2').count(),1);assert.equal(await page.locator('.home-collection-card h3').count(),4);assert.equal(await page.locator('.home-step-grid h3').count(),4);assert.equal(await page.locator('.home-benefit-grid h3').count(),4);
     assert.deepEqual(errors,[]);

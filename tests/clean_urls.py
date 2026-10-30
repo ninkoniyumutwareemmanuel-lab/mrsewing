@@ -10,7 +10,8 @@ import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
 pages=json.loads((ROOT/'_data/page-seo.json').read_text())
-routes={name:'/' if name=='index.html' else '/'+name.removesuffix('.html')+'/' for name in pages}
+aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
+routes={name:aliases.get(name,'/' if name=='index.html' else '/'+name.removesuffix('.html')+'/') for name in pages}
 class Tags(HTMLParser):
     def __init__(self):super().__init__();self.tags=[]
     def handle_starttag(self,t,a):self.tags.append((t,dict(a)))
@@ -38,9 +39,13 @@ for name,route in routes.items():
     assert 'Saturday and Sunday are closed' not in source
     assert 'Saturday &amp; Sunday: Closed' not in source
 urls=[e.text for e in ET.parse(ROOT/'sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-assert len(urls)==len(set(urls))==27
+assert len(urls)==len(set(urls))
+import sys
+sys.path.insert(0,str(ROOT/'scripts'))
+from build_public_routes import public_routes
+assert set(urls)=={DOMAIN+r for r in public_routes()}
 assert DOMAIN+'/' in urls
-assert all(u in {DOMAIN+r for r in routes.values()} for u in urls)
+assert all((ROOT/urlparse(u).path.strip('/')/'index.html').is_file() if urlparse(u).path!='/' else (ROOT/'index.html').is_file() for u in urls)
 assert all('.html' not in u for u in urls)
 for name in ['booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html']:
     assert DOMAIN+routes[name] not in urls
@@ -52,4 +57,4 @@ assert 'Ordinary Saturday visits do not require an appointment' in business['dis
 assert 'advance appointment' in business['disambiguatingDescription']
 assert 'Last Saturday (Umuganda)' in (ROOT/'index.html').read_text()  # Hours remain in the shared footer, outside the hero.
 subprocess.run(['python3','scripts/build_clean_urls.py','--check'],cwd=ROOT,check=True)
-print('PASS: 32 clean canonical pages, 27 unique indexable sitemap routes, clean JSON-LD references and weekday/weekend appointment representation.')
+print('PASS: 32 mapped root-page aliases and the generated canonical indexable sitemap, clean JSON-LD references and weekday/weekend appointment representation.')

@@ -20,7 +20,8 @@ LEGACY = re.compile(r'\s*<script data-legacy-url>.*?</script>', re.S)
 
 
 def routes():
-    return {name: '/' if name == 'index.html' else '/' + name.removesuffix('.html') + '/'
+    aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
+    return {name: aliases.get(name,'/' if name == 'index.html' else '/' + name.removesuffix('.html') + '/')
             for name in json.loads((ROOT / '_data/page-seo.json').read_text())}
 
 
@@ -33,6 +34,9 @@ def legacy_script(name):
 def clean_document(name):
     source = (ROOT / name).read_text()
     source = LEGACY.sub('', source)
+    source = re.sub(r'<base\b[^>]*>', '', source, flags=re.I)
+    aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
+    if name in aliases:source=source.replace('<head>', '<head><script data-alias-route>location.replace('+json.dumps(aliases[name])+'+location.search+location.hash)</script>',1)
     # Root base keeps inline CSS backgrounds, srcset, video, scripts and dynamic
     # component fetches at their existing origin-root locations. All fragment
     # links are explicitly page-qualified during URL migration.
@@ -51,7 +55,7 @@ def main():
     for name, route in routes().items():
         if route == '/':
             continue
-        path = ROOT / route.strip('/') / 'index.html'
+        path = ROOT / name.removesuffix('.html') / 'index.html'
         output = clean_document(name)
         if not path.exists() or path.read_text() != output:
             stale.append(route)
