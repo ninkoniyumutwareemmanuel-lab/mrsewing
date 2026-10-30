@@ -22,23 +22,8 @@
     html { scroll-behavior: smooth; color-scheme: dark; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0b0b; color: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
 
-    /* Header Styling */
-    header {
-      background-color: #141414;
-      border-bottom: 1px solid #2a2a2a;
-      padding: 12px 4%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-logo { height: clamp(30px, 5vw, 45px); width: auto; object-fit: contain; mix-blend-mode: screen; }
-    nav ul { display: flex; list-style: none; gap: clamp(10px, 2vw, 20px); align-items: center; }
-    nav a { color: #cccccc; text-decoration: none; font-size: clamp(0.72rem, 1.4vw, 0.92rem); font-weight: 500; transition: color 0.3s ease; }
-    nav a:hover { color: #d4af37; }
+    .booking-back { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: 16px; color: #d4af37; font-size: .9rem; text-underline-offset: 4px; }
+    .booking-back:focus-visible { outline: 2px solid #d4af37; outline-offset: 4px; }
 
     /* Main Container */
     .booking-wrapper {
@@ -235,19 +220,15 @@
       .form-group.full-width { grid-column: span 1; }
     }
   .form-note a{color:#d4af37;text-underline-offset:3px}</style>
-  <script src="assets/navigation.js" defer></script>
   <script src="assets/business-hours.js?v=42389240ec" defer></script>
   <script src="assets/forms.js?v=2e7b291cba" defer></script>
   <link rel="canonical" href="https://mrsewingfashion.com/booking/">
 <meta property="og:type" content="website"><meta property="og:title" content="Book a Kigali Tailoring Consultation | Mr Sewing Fashion"><meta property="og:description" content="Request a tailoring consultation with Mr Sewing Fashion in Kigali, Rwanda. Choose a visit type, preferred date and time, then share your needs for confirmation."><meta property="og:url" content="https://mrsewingfashion.com/booking/"><meta property="og:image" content="https://mrsewingfashion.com/assets/images/mr-logo-480.webp"><meta name="robots" content="noindex, follow"><script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector('meta[name="robots"]');if(m)m.content="noindex, nofollow";}</script></head>
 <body>
 
-  <!-- Header -->
-  <div id="site-header"></div>
-  <script>fetch("header.html").then(response => { if (!response.ok) throw new Error("Header unavailable"); return response.text(); }).then(html => { document.getElementById("site-header").innerHTML = html; }).catch(() => { document.getElementById("site-header").innerHTML = '<nav aria-label="Main navigation"><a href="/">Home</a> · <a href="/suits/">Suits</a> · <a href="/contact/">Contact Us</a></nav>'; });</script>
-
   <!-- Booking Form Wrapper -->
   <main class="booking-wrapper">
+    <a class="booking-back" href="/">← Back to website</a>
     <div class="booking-card">
       <h1 class="booking-title">Book a Consultation</h1>
 
