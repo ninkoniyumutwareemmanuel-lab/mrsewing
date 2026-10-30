@@ -1,0 +1,5026 @@
+{
+  "baselineCommit": "4a8b61d9ec16d6d191b0d39af77234d0dd341454",
+  "images": [
+    {
+      "originalImagePath": " r24.jpeg",
+      "sourceOriginal": " r24.jpeg",
+      "designId": "MS-001",
+      "galleryLocation": "/collections/?design=MS-001",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "3.2.jpeg",
+      "sourceOriginal": "3.2.jpeg",
+      "designId": "MS-002",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "MR LOGO.jpeg",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "MR LOGO1.jpeg",
+      "sourceOriginal": "MR LOGO1.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "The Elegance Series.jpeg",
+      "sourceOriginal": "The Elegance Series.jpeg",
+      "designId": "MS-003",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "The Executive Line.jpeg",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h2-160.c85a73eeb6.avif",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h2-240.e47501913d.avif",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h2-320.3e9dc1a814.avif",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h2-480.7162642206.avif",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h2-640.6172b129db.avif",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h2-750.8df32fdf5c.avif",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h3-160.9afd80ecce.avif",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h3-240.5f718ed3aa.avif",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h3-320.4847906bac.avif",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h3-480.37de0fb9b6.avif",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h3-640.9cf60f3dca.avif",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/h3-750.29a504945d.avif",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/mr-logo-192.2f306066cd.webp",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/mr-logo-320.b753282e38.webp",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/mr-logo-96.3598d62e35.webp",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r2-160.a291ad9c26.avif",
+      "sourceOriginal": "r2.jpeg",
+      "designId": "MS-069",
+      "galleryLocation": "/collections/?design=MS-069",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r2-240.d6dc119cbb.avif",
+      "sourceOriginal": "r2.jpeg",
+      "designId": "MS-069",
+      "galleryLocation": "/collections/?design=MS-069",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r2-320.02aceb730e.avif",
+      "sourceOriginal": "r2.jpeg",
+      "designId": "MS-069",
+      "galleryLocation": "/collections/?design=MS-069",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r2-451.c2de620e54.avif",
+      "sourceOriginal": "r2.jpeg",
+      "designId": "MS-069",
+      "galleryLocation": "/collections/?design=MS-069",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r3-160.265834f560.avif",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r3-240.1b39e02b13.avif",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r3-320.f687ff8d98.avif",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r3-480.fc288ed486.avif",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r3-640.6c398fe20a.avif",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r3-658.daa1848d2a.avif",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-1280.4661d2e5fe.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-160.0cae3c9b09.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-240.efd023a3b5.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-320.e4e5bc379c.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-480.36207ff2d4.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-640.858cf3df94.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r4-960.d307a12917.avif",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-1076.e871d94a78.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-160.fb3ae68c73.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-240.a140bd8d6c.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-320.facfe4513f.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-480.95053379ae.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-640.248967d093.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r5-960.deaacd2961.avif",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-1280.e91cb74554.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-160.8e7a00f08a.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-240.759fdfe9d0.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-320.71d6c00d42.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-480.7f4d7e508a.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-640.349b8299d2.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r6-960.e6b3e49625.avif",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-1280.2ba08a742e.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-160.d81f6ee75a.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-240.729f55e87a.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-320.9c23fe4070.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-480.d41cc625c9.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-640.f0aaef6045.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r7-960.7cfcf845f4.avif",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r8-160.fbb0fab9ec.avif",
+      "sourceOriginal": "r8.jpeg",
+      "designId": "MS-118",
+      "galleryLocation": "/collections/?design=MS-118",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r8-240.fc040334b3.avif",
+      "sourceOriginal": "r8.jpeg",
+      "designId": "MS-118",
+      "galleryLocation": "/collections/?design=MS-118",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r8-320.b8e70f5a6f.avif",
+      "sourceOriginal": "r8.jpeg",
+      "designId": "MS-118",
+      "galleryLocation": "/collections/?design=MS-118",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/r8-477.5ae34196d6.avif",
+      "sourceOriginal": "r8.jpeg",
+      "designId": "MS-118",
+      "galleryLocation": "/collections/?design=MS-118",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/the-executive-line-1024.e70a473cda.avif",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/the-executive-line-1536.330185d8a1.avif",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/the-executive-line-480.8f01cd002f.avif",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage/the-executive-line-768.925dc903ea.avif",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/3.2-480.webp",
+      "sourceOriginal": "3.2.jpeg",
+      "designId": "MS-002",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/fabric-480.webp",
+      "sourceOriginal": "fabric.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Fabric-selection support photograph; no new showroom use.",
+      "legacyReferences": [
+        "why-choose.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/fabric-960.webp",
+      "sourceOriginal": "fabric.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Fabric-selection support photograph; no new showroom use.",
+      "legacyReferences": [
+        "why-choose.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/h1-480.webp",
+      "sourceOriginal": "h1.jpeg",
+      "designId": "MS-005",
+      "galleryLocation": "/collections/?design=MS-005",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/h2-480.webp",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/h3-480.webp",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/happy3-480.webp",
+      "sourceOriginal": "happy3.jpeg",
+      "designId": "MS-008",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/logo-icon.png",
+      "sourceOriginal": "assets/images/logo-icon.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/images/m-classicsuittwo1-480.webp",
+      "sourceOriginal": "m-classicsuittwo1.jpeg",
+      "designId": "MS-013",
+      "galleryLocation": "/collections/?design=MS-013",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-classicsuittwo4-480.webp",
+      "sourceOriginal": "m-classicsuittwo4.jpeg",
+      "designId": "MS-016",
+      "galleryLocation": "/collections/?design=MS-016",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo10-480.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo10.jpeg",
+      "designId": "MS-018",
+      "galleryLocation": "/collections/?design=MS-018",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo12-480.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo12.jpeg",
+      "designId": "MS-020",
+      "galleryLocation": "/collections/?design=MS-020",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo4-480.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo4.jpeg",
+      "designId": "MS-023",
+      "galleryLocation": "/collections/?design=MS-023",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo4-485.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo4.jpeg",
+      "designId": "MS-023",
+      "galleryLocation": "/collections/?design=MS-023",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo6-480.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo6.jpeg",
+      "designId": "MS-025",
+      "galleryLocation": "/collections/?design=MS-025",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo9-480.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo9.jpeg",
+      "designId": "MS-028",
+      "galleryLocation": "/collections/?design=MS-028",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-doublebreastedsuittwo9-685.webp",
+      "sourceOriginal": "m-doublebreastedsuittwo9.jpeg",
+      "designId": "MS-028",
+      "galleryLocation": "/collections/?design=MS-028",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-kaundasuits1-480.webp",
+      "sourceOriginal": "m-kaundasuits1.jpeg",
+      "designId": "MS-029",
+      "galleryLocation": "/collections/?design=MS-029",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-kaundasuits3-480.webp",
+      "sourceOriginal": "m-kaundasuits3.jpeg",
+      "designId": "MS-031",
+      "galleryLocation": "/collections/?design=MS-031",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-kaundasuits7-480.webp",
+      "sourceOriginal": "m-kaundasuits7.jpeg",
+      "designId": "MS-035",
+      "galleryLocation": "/collections/?design=MS-035",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-modernsuits5-480.webp",
+      "sourceOriginal": "m-modernsuits5.jpeg",
+      "designId": "MS-041",
+      "galleryLocation": "/collections/?design=MS-041",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m-modernsuits8-370.webp",
+      "sourceOriginal": "m-modernsuits8.jpeg",
+      "designId": "MS-044",
+      "galleryLocation": "/collections/?design=MS-044",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m1-480.webp",
+      "sourceOriginal": "m1.jpeg",
+      "designId": "MS-045",
+      "galleryLocation": "/collections/?design=MS-045",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "index.html",
+        "mensuits.html",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m2-480.webp",
+      "sourceOriginal": "m2.jpeg",
+      "designId": "MS-046",
+      "galleryLocation": "/collections/?design=MS-046",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m4-480.webp",
+      "sourceOriginal": "m4.jpeg",
+      "designId": "MS-048",
+      "galleryLocation": "/collections/?design=MS-048",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m5-480.webp",
+      "sourceOriginal": "m5.jpeg",
+      "designId": "MS-049",
+      "galleryLocation": "/collections/?design=MS-049",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/m6-480.webp",
+      "sourceOriginal": "m6.jpeg",
+      "designId": "MS-050",
+      "galleryLocation": "/collections/?design=MS-050",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/measurements-480.webp",
+      "sourceOriginal": "measurements.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "why-mtm.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/measurements-960.webp",
+      "sourceOriginal": "measurements.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "why-mtm.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/mr-logo-1244.webp",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/mr-logo-480.webp",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/mr-logo-960.webp",
+      "sourceOriginal": "MR LOGO.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "collections.html",
+        "privacy-policy.html",
+        "header.html",
+        "suits.html",
+        "services.html",
+        "index.html",
+        "measurements.html",
+        "terms-and-conditions.html",
+        "w-modernsuits.html",
+        "mensuits.html",
+        "refund-policy.html",
+        "faq.html",
+        "service-sketches.html",
+        "service-cmt.html",
+        "service-workplace.html",
+        "service-standard.html",
+        "service-housecall.html",
+        "m-classicsuits.html",
+        "m-doublebreasted.html",
+        "measurement-submission.html",
+        "contact.html",
+        "womensuits.html",
+        "m-kaundasuits.html",
+        "service-express.html",
+        "w-doublebreasted.html",
+        "m-modernsuits.html",
+        "about.html",
+        "_data/business.json",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html",
+        "_templates/shared/header.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/mr-logo1-480.webp",
+      "sourceOriginal": "MR LOGO1.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r1-480.webp",
+      "sourceOriginal": "r1.jpeg",
+      "designId": "MS-053",
+      "galleryLocation": "/collections/?design=MS-053",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r12-480.webp",
+      "sourceOriginal": "r12.jpeg",
+      "designId": "MS-058",
+      "galleryLocation": "/collections/?design=MS-058",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r18-480.webp",
+      "sourceOriginal": "r18.jpeg",
+      "designId": "MS-067",
+      "galleryLocation": "/collections/?design=MS-067",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r23-480.webp",
+      "sourceOriginal": "r23.jpeg",
+      "designId": "MS-075",
+      "galleryLocation": "/collections/?design=MS-075",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r24-480.webp",
+      "sourceOriginal": " r24.jpeg",
+      "designId": "MS-001",
+      "galleryLocation": "/collections/?design=MS-001",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r26-480.webp",
+      "sourceOriginal": "r26.jpeg",
+      "designId": "MS-077",
+      "galleryLocation": "/collections/?design=MS-077",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r3-480.webp",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r3.4-480.webp",
+      "sourceOriginal": "r3.4.jpeg",
+      "designId": "MS-081",
+      "galleryLocation": "/collections/?design=MS-081",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r3.5-480.webp",
+      "sourceOriginal": "r3.5.jpeg",
+      "designId": "MS-082",
+      "galleryLocation": "/collections/?design=MS-082",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r31-480.webp",
+      "sourceOriginal": "r31.jpeg",
+      "designId": "MS-086",
+      "galleryLocation": "/collections/?design=MS-086",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r31.1-480.webp",
+      "sourceOriginal": "r31.1.jpeg",
+      "designId": "MS-085",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r32-480.webp",
+      "sourceOriginal": "r32.jpeg",
+      "designId": "MS-087",
+      "galleryLocation": "/collections/?design=MS-087",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r33-480.webp",
+      "sourceOriginal": "r33.jpeg",
+      "designId": "MS-088",
+      "galleryLocation": "/collections/?design=MS-088",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r36-480.webp",
+      "sourceOriginal": "r36.jpeg",
+      "designId": "MS-092",
+      "galleryLocation": "/collections/?design=MS-092",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r4-480.webp",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r4-960.webp",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r40-480.webp",
+      "sourceOriginal": "r40.jpeg",
+      "designId": "MS-099",
+      "galleryLocation": "/collections/?design=MS-099",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r40.1-480.webp",
+      "sourceOriginal": "r40.1.jpeg",
+      "designId": "MS-097",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r41-480.webp",
+      "sourceOriginal": "r41.jpeg",
+      "designId": "MS-101",
+      "galleryLocation": "/collections/?design=MS-101",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r43-480.webp",
+      "sourceOriginal": "r43.jpeg",
+      "designId": "MS-103",
+      "galleryLocation": "/collections/?design=MS-103",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r5-480.webp",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r6-480.webp",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r6-960.webp",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7-480.webp",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7-960.webp",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.1-480.webp",
+      "sourceOriginal": "r7.1.jpeg",
+      "designId": "MS-106",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.10-480.webp",
+      "sourceOriginal": "r7.10.jpeg",
+      "designId": "MS-107",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.11-480.webp",
+      "sourceOriginal": "r7.11.jpeg",
+      "designId": "MS-108",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.2-480.webp",
+      "sourceOriginal": "r7.2.jpeg",
+      "designId": "MS-109",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.3-480.webp",
+      "sourceOriginal": "r7.3.jpeg",
+      "designId": "MS-110",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.4-480.webp",
+      "sourceOriginal": "r7.4.jpeg",
+      "designId": "MS-111",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.5-480.webp",
+      "sourceOriginal": "r7.5.jpeg",
+      "designId": "MS-112",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.6-480.webp",
+      "sourceOriginal": "r7.6.jpeg",
+      "designId": "MS-113",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/r7.7-480.webp",
+      "sourceOriginal": "r7.7.jpeg",
+      "designId": "MS-114",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/s1-480.webp",
+      "sourceOriginal": "s1.jpeg",
+      "designId": "MS-120",
+      "galleryLocation": "/collections/?design=MS-120",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "service-sketches.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/s3-480.webp",
+      "sourceOriginal": "s3.jpeg",
+      "designId": "MS-122",
+      "galleryLocation": "/collections/?design=MS-122",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/standard-480.webp",
+      "sourceOriginal": "standard.jpeg",
+      "designId": "MS-138",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "Service editorial image; not a verified individual garment photograph. No new showroom use pending owner review.",
+      "legacyReferences": [
+        "service-standard.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/standard-960.webp",
+      "sourceOriginal": "standard.jpeg",
+      "designId": "MS-138",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "Service editorial image; not a verified individual garment photograph. No new showroom use pending owner review.",
+      "legacyReferences": [
+        "service-standard.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/suitssize-480.webp",
+      "sourceOriginal": "suitssize.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/the-elegance-series-480.webp",
+      "sourceOriginal": "The Elegance Series.jpeg",
+      "designId": "MS-003",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/the-elegance-series-960.webp",
+      "sourceOriginal": "The Elegance Series.jpeg",
+      "designId": "MS-003",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/the-executive-line-480.webp",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/the-executive-line-960.webp",
+      "sourceOriginal": "The Executive Line.jpeg",
+      "designId": "MS-004",
+      "galleryLocation": "/collections/?design=MS-004",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "hero.html",
+        "service-express.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage.html"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/w-classicsuitthree3-480.webp",
+      "sourceOriginal": "w-classicsuitthree3.jpeg",
+      "designId": "MS-127",
+      "galleryLocation": "/collections/?design=MS-127",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/w3-480.webp",
+      "sourceOriginal": "w3.jpeg",
+      "designId": "MS-135",
+      "galleryLocation": "/collections/?design=MS-135",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/images/w4-480.webp",
+      "sourceOriginal": "w4.jpeg",
+      "designId": "MS-136",
+      "galleryLocation": "/collections/?design=MS-136",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "belly.jpeg",
+      "sourceOriginal": "belly.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "bicep.jpeg",
+      "sourceOriginal": "bicep.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "chest.jpeg",
+      "sourceOriginal": "chest.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "fabric.jpeg",
+      "sourceOriginal": "fabric.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Fabric-selection support photograph; no new showroom use.",
+      "legacyReferences": [
+        "why-choose.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "h1.jpeg",
+      "sourceOriginal": "h1.jpeg",
+      "designId": "MS-005",
+      "galleryLocation": "/collections/?design=MS-005",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "h2.jpeg",
+      "sourceOriginal": "h2.jpeg",
+      "designId": "MS-006",
+      "galleryLocation": "/collections/?design=MS-006",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "h3.jpeg",
+      "sourceOriginal": "h3.jpeg",
+      "designId": "MS-007",
+      "galleryLocation": "/collections/?design=MS-007",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "index.html",
+        "happy-customers.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "happy3.jpeg",
+      "sourceOriginal": "happy3.jpeg",
+      "designId": "MS-008",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "hip.jpeg",
+      "sourceOriginal": "hip.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "jacket_length.jpeg",
+      "sourceOriginal": "jacket_length.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuitthree1.jpeg",
+      "sourceOriginal": "m-classicsuitthree1.jpeg",
+      "designId": "MS-009",
+      "galleryLocation": "/collections/?design=MS-009",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuitthree2.jpeg",
+      "sourceOriginal": "m-classicsuitthree2.jpeg",
+      "designId": "MS-010",
+      "galleryLocation": "/collections/?design=MS-010",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuitthree3.jpeg",
+      "sourceOriginal": "m-classicsuitthree3.jpeg",
+      "designId": "MS-011",
+      "galleryLocation": "/collections/?design=MS-011",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuitthree4.jpeg",
+      "sourceOriginal": "m-classicsuitthree4.jpeg",
+      "designId": "MS-012",
+      "galleryLocation": "/collections/?design=MS-012",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuittwo1.jpeg",
+      "sourceOriginal": "m-classicsuittwo1.jpeg",
+      "designId": "MS-013",
+      "galleryLocation": "/collections/?design=MS-013",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuittwo2.jpeg",
+      "sourceOriginal": "m-classicsuittwo2.jpeg",
+      "designId": "MS-014",
+      "galleryLocation": "/collections/?design=MS-014",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuittwo3.jpeg",
+      "sourceOriginal": "m-classicsuittwo3.jpeg",
+      "designId": "MS-015",
+      "galleryLocation": "/collections/?design=MS-015",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-classicsuittwo4.jpeg",
+      "sourceOriginal": "m-classicsuittwo4.jpeg",
+      "designId": "MS-016",
+      "galleryLocation": "/collections/?design=MS-016",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-classicsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo1.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo1.jpeg",
+      "designId": "MS-017",
+      "galleryLocation": "/collections/?design=MS-017",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo10.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo10.jpeg",
+      "designId": "MS-018",
+      "galleryLocation": "/collections/?design=MS-018",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo11.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo11.jpeg",
+      "designId": "MS-019",
+      "galleryLocation": "/collections/?design=MS-019",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo12.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo12.jpeg",
+      "designId": "MS-020",
+      "galleryLocation": "/collections/?design=MS-020",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo2.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo2.jpeg",
+      "designId": "MS-021",
+      "galleryLocation": "/collections/?design=MS-021",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo3.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo3.jpeg",
+      "designId": "MS-022",
+      "galleryLocation": "/collections/?design=MS-022",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo4.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo4.jpeg",
+      "designId": "MS-023",
+      "galleryLocation": "/collections/?design=MS-023",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo5.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo5.jpeg",
+      "designId": "MS-024",
+      "galleryLocation": "/collections/?design=MS-024",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo6.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo6.jpeg",
+      "designId": "MS-025",
+      "galleryLocation": "/collections/?design=MS-025",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo7.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo7.jpeg",
+      "designId": "MS-026",
+      "galleryLocation": "/collections/?design=MS-026",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo8.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo8.jpeg",
+      "designId": "MS-027",
+      "galleryLocation": "/collections/?design=MS-027",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-doublebreastedsuittwo9.jpeg",
+      "sourceOriginal": "m-doublebreastedsuittwo9.jpeg",
+      "designId": "MS-028",
+      "galleryLocation": "/collections/?design=MS-028",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-doublebreasted.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits1.jpeg",
+      "sourceOriginal": "m-kaundasuits1.jpeg",
+      "designId": "MS-029",
+      "galleryLocation": "/collections/?design=MS-029",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits2.jpeg",
+      "sourceOriginal": "m-kaundasuits2.jpeg",
+      "designId": "MS-030",
+      "galleryLocation": "/collections/?design=MS-030",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits3.jpeg",
+      "sourceOriginal": "m-kaundasuits3.jpeg",
+      "designId": "MS-031",
+      "galleryLocation": "/collections/?design=MS-031",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits4.jpeg",
+      "sourceOriginal": "m-kaundasuits4.jpeg",
+      "designId": "MS-032",
+      "galleryLocation": "/collections/?design=MS-032",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits5.jpeg",
+      "sourceOriginal": "m-kaundasuits5.jpeg",
+      "designId": "MS-033",
+      "galleryLocation": "/collections/?design=MS-033",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits6.jpeg",
+      "sourceOriginal": "m-kaundasuits6.jpeg",
+      "designId": "MS-034",
+      "galleryLocation": "/collections/?design=MS-034",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits7.jpeg",
+      "sourceOriginal": "m-kaundasuits7.jpeg",
+      "designId": "MS-035",
+      "galleryLocation": "/collections/?design=MS-035",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-kaundasuits8.jpeg",
+      "sourceOriginal": "m-kaundasuits8.jpeg",
+      "designId": "MS-036",
+      "galleryLocation": "/collections/?design=MS-036",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-kaundasuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits1.jpeg",
+      "sourceOriginal": "m-modernsuits1.jpeg",
+      "designId": "MS-037",
+      "galleryLocation": "/collections/?design=MS-037",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits2.jpeg",
+      "sourceOriginal": "m-modernsuits2.jpeg",
+      "designId": "MS-038",
+      "galleryLocation": "/collections/?design=MS-038",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits3.jpeg",
+      "sourceOriginal": "m-modernsuits3.jpeg",
+      "designId": "MS-039",
+      "galleryLocation": "/collections/?design=MS-039",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits4.jpeg",
+      "sourceOriginal": "m-modernsuits4.jpeg",
+      "designId": "MS-040",
+      "galleryLocation": "/collections/?design=MS-040",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits5.jpeg",
+      "sourceOriginal": "m-modernsuits5.jpeg",
+      "designId": "MS-041",
+      "galleryLocation": "/collections/?design=MS-041",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits6.jpeg",
+      "sourceOriginal": "m-modernsuits6.jpeg",
+      "designId": "MS-042",
+      "galleryLocation": "/collections/?design=MS-042",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits7.jpeg",
+      "sourceOriginal": "m-modernsuits7.jpeg",
+      "designId": "MS-043",
+      "galleryLocation": "/collections/?design=MS-043",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m-modernsuits8.jpeg",
+      "sourceOriginal": "m-modernsuits8.jpeg",
+      "designId": "MS-044",
+      "galleryLocation": "/collections/?design=MS-044",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m1.jpeg",
+      "sourceOriginal": "m1.jpeg",
+      "designId": "MS-045",
+      "galleryLocation": "/collections/?design=MS-045",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "index.html",
+        "mensuits.html",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "m2.jpeg",
+      "sourceOriginal": "m2.jpeg",
+      "designId": "MS-046",
+      "galleryLocation": "/collections/?design=MS-046",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m3.jpeg",
+      "sourceOriginal": "m3.jpeg",
+      "designId": "MS-047",
+      "galleryLocation": "/collections/?design=MS-047",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m4.jpeg",
+      "sourceOriginal": "m4.jpeg",
+      "designId": "MS-048",
+      "galleryLocation": "/collections/?design=MS-048",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m5.jpeg",
+      "sourceOriginal": "m5.jpeg",
+      "designId": "MS-049",
+      "galleryLocation": "/collections/?design=MS-049",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "mensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "m6.jpeg",
+      "sourceOriginal": "m6.jpeg",
+      "designId": "MS-050",
+      "galleryLocation": "/collections/?design=MS-050",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "measurements.jpeg",
+      "sourceOriginal": "measurements.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "why-mtm.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "neck.jpeg",
+      "sourceOriginal": "neck.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r1.2.jpeg",
+      "sourceOriginal": "r1.2.jpeg",
+      "designId": "MS-051",
+      "galleryLocation": "/collections/?design=MS-051",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r1.3.jpeg",
+      "sourceOriginal": "r1.3.jpeg",
+      "designId": "MS-052",
+      "galleryLocation": "/collections/?design=MS-052",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r1.jpeg",
+      "sourceOriginal": "r1.jpeg",
+      "designId": "MS-053",
+      "galleryLocation": "/collections/?design=MS-053",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r10.jpeg",
+      "sourceOriginal": "r10.jpeg",
+      "designId": "MS-054",
+      "galleryLocation": "/collections/?design=MS-054",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r11.1.jpeg",
+      "sourceOriginal": "r11.1.jpeg",
+      "designId": "MS-055",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r11.jpeg",
+      "sourceOriginal": "r11.jpeg",
+      "designId": "MS-056",
+      "galleryLocation": "/collections/?design=MS-056",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r12.1.jpeg",
+      "sourceOriginal": "r12.1.jpeg",
+      "designId": "MS-057",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r12.jpeg",
+      "sourceOriginal": "r12.jpeg",
+      "designId": "MS-058",
+      "galleryLocation": "/collections/?design=MS-058",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r13.jpeg",
+      "sourceOriginal": "r13.jpeg",
+      "designId": "MS-059",
+      "galleryLocation": "/collections/?design=MS-059",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r14.1.jpeg",
+      "sourceOriginal": "r14.1.jpeg",
+      "designId": "MS-060",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r14.2.jpeg",
+      "sourceOriginal": "r14.2.jpeg",
+      "designId": "MS-061",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r14.jpeg",
+      "sourceOriginal": "r14.jpeg",
+      "designId": "MS-062",
+      "galleryLocation": "/collections/?design=MS-062",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r15.jpeg",
+      "sourceOriginal": "r15.jpeg",
+      "designId": "MS-063",
+      "galleryLocation": "/collections/?design=MS-063",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r16.jpeg",
+      "sourceOriginal": "r16.jpeg",
+      "designId": "MS-064",
+      "galleryLocation": "/collections/?design=MS-064",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r17.1.jpeg",
+      "sourceOriginal": "r17.1.jpeg",
+      "designId": "MS-065",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r17.jpeg",
+      "sourceOriginal": "r17.jpeg",
+      "designId": "MS-066",
+      "galleryLocation": "/collections/?design=MS-066",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r18.jpeg",
+      "sourceOriginal": "r18.jpeg",
+      "designId": "MS-067",
+      "galleryLocation": "/collections/?design=MS-067",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r19.jpeg",
+      "sourceOriginal": "r19.jpeg",
+      "designId": "MS-068",
+      "galleryLocation": "/collections/?design=MS-068",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r2.jpeg",
+      "sourceOriginal": "r2.jpeg",
+      "designId": "MS-069",
+      "galleryLocation": "/collections/?design=MS-069",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r20.1.jpeg",
+      "sourceOriginal": "r20.1.jpeg",
+      "designId": "MS-070",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r20.jpeg",
+      "sourceOriginal": "r20.jpeg",
+      "designId": "MS-071",
+      "galleryLocation": "/collections/?design=MS-071",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r21.jpeg",
+      "sourceOriginal": "r21.jpeg",
+      "designId": "MS-072",
+      "galleryLocation": "/collections/?design=MS-072",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r22.1.jpeg",
+      "sourceOriginal": "r22.1.jpeg",
+      "designId": "MS-073",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r22.jpeg",
+      "sourceOriginal": "r22.jpeg",
+      "designId": "MS-074",
+      "galleryLocation": "/collections/?design=MS-074",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r23.jpeg",
+      "sourceOriginal": "r23.jpeg",
+      "designId": "MS-075",
+      "galleryLocation": "/collections/?design=MS-075",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r25.jpeg",
+      "sourceOriginal": "r25.jpeg",
+      "designId": "MS-076",
+      "galleryLocation": "/collections/?design=MS-076",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r26.jpeg",
+      "sourceOriginal": "r26.jpeg",
+      "designId": "MS-077",
+      "galleryLocation": "/collections/?design=MS-077",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r27.jpeg",
+      "sourceOriginal": "r27.jpeg",
+      "designId": "MS-078",
+      "galleryLocation": "/collections/?design=MS-078",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r28.jpeg",
+      "sourceOriginal": "r28.jpeg",
+      "designId": "MS-079",
+      "galleryLocation": "/collections/?design=MS-079",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r29.jpeg",
+      "sourceOriginal": "r29.jpeg",
+      "designId": "MS-080",
+      "galleryLocation": "/collections/?design=MS-080",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r3.4.jpeg",
+      "sourceOriginal": "r3.4.jpeg",
+      "designId": "MS-081",
+      "galleryLocation": "/collections/?design=MS-081",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r3.5.jpeg",
+      "sourceOriginal": "r3.5.jpeg",
+      "designId": "MS-082",
+      "galleryLocation": "/collections/?design=MS-082",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r3.jpeg",
+      "sourceOriginal": "r3.jpeg",
+      "designId": "MS-083",
+      "galleryLocation": "/collections/?design=MS-083",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r30.jpeg",
+      "sourceOriginal": "r30.jpeg",
+      "designId": "MS-084",
+      "galleryLocation": "/collections/?design=MS-084",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r31.1.jpeg",
+      "sourceOriginal": "r31.1.jpeg",
+      "designId": "MS-085",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r31.jpeg",
+      "sourceOriginal": "r31.jpeg",
+      "designId": "MS-086",
+      "galleryLocation": "/collections/?design=MS-086",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r32.jpeg",
+      "sourceOriginal": "r32.jpeg",
+      "designId": "MS-087",
+      "galleryLocation": "/collections/?design=MS-087",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r33.jpeg",
+      "sourceOriginal": "r33.jpeg",
+      "designId": "MS-088",
+      "galleryLocation": "/collections/?design=MS-088",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r34.jpeg",
+      "sourceOriginal": "r34.jpeg",
+      "designId": "MS-089",
+      "galleryLocation": "/collections/?design=MS-089",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r35.jpeg",
+      "sourceOriginal": "r35.jpeg",
+      "designId": "MS-090",
+      "galleryLocation": "/collections/?design=MS-090",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r36.1.jpeg",
+      "sourceOriginal": "r36.1.jpeg",
+      "designId": "MS-091",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r36.jpeg",
+      "sourceOriginal": "r36.jpeg",
+      "designId": "MS-092",
+      "galleryLocation": "/collections/?design=MS-092",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r37.jpeg",
+      "sourceOriginal": "r37.jpeg",
+      "designId": "MS-093",
+      "galleryLocation": "/collections/?design=MS-093",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r38.jpeg",
+      "sourceOriginal": "r38.jpeg",
+      "designId": "MS-094",
+      "galleryLocation": "/collections/?design=MS-094",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r39.jpeg",
+      "sourceOriginal": "r39.jpeg",
+      "designId": "MS-095",
+      "galleryLocation": "/collections/?design=MS-095",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r4.jpeg",
+      "sourceOriginal": "r4.jpeg",
+      "designId": "MS-096",
+      "galleryLocation": "/collections/?design=MS-096",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "about.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "r40.1.jpeg",
+      "sourceOriginal": "r40.1.jpeg",
+      "designId": "MS-097",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r40.2.jpeg",
+      "sourceOriginal": "r40.2.jpeg",
+      "designId": "MS-098",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r40.jpeg",
+      "sourceOriginal": "r40.jpeg",
+      "designId": "MS-099",
+      "galleryLocation": "/collections/?design=MS-099",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r41.1.jpeg",
+      "sourceOriginal": "r41.1.jpeg",
+      "designId": "MS-100",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r41.jpeg",
+      "sourceOriginal": "r41.jpeg",
+      "designId": "MS-101",
+      "galleryLocation": "/collections/?design=MS-101",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r42.jpeg",
+      "sourceOriginal": "r42.jpeg",
+      "designId": "MS-102",
+      "galleryLocation": "/collections/?design=MS-102",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r43.jpeg",
+      "sourceOriginal": "r43.jpeg",
+      "designId": "MS-103",
+      "galleryLocation": "/collections/?design=MS-103",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r5.jpeg",
+      "sourceOriginal": "r5.jpeg",
+      "designId": "MS-104",
+      "galleryLocation": "/collections/?design=MS-104",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r6.jpeg",
+      "sourceOriginal": "r6.jpeg",
+      "designId": "MS-105",
+      "galleryLocation": "/collections/?design=MS-105",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.1.jpeg",
+      "sourceOriginal": "r7.1.jpeg",
+      "designId": "MS-106",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.10.jpeg",
+      "sourceOriginal": "r7.10.jpeg",
+      "designId": "MS-107",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.11.jpeg",
+      "sourceOriginal": "r7.11.jpeg",
+      "designId": "MS-108",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.2.jpeg",
+      "sourceOriginal": "r7.2.jpeg",
+      "designId": "MS-109",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.3.jpeg",
+      "sourceOriginal": "r7.3.jpeg",
+      "designId": "MS-110",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.4.jpeg",
+      "sourceOriginal": "r7.4.jpeg",
+      "designId": "MS-111",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.5.jpeg",
+      "sourceOriginal": "r7.5.jpeg",
+      "designId": "MS-112",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.6.jpeg",
+      "sourceOriginal": "r7.6.jpeg",
+      "designId": "MS-113",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.7.jpeg",
+      "sourceOriginal": "r7.7.jpeg",
+      "designId": "MS-114",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.8.jpeg",
+      "sourceOriginal": "r7.8.jpeg",
+      "designId": "MS-115",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.9.jpeg",
+      "sourceOriginal": "r7.9.jpeg",
+      "designId": "MS-116",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "No verified prior gallery publication; owner review required",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r7.jpeg",
+      "sourceOriginal": "r7.jpeg",
+      "designId": "MS-117",
+      "galleryLocation": "/collections/?design=MS-117",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "index.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "r8.jpeg",
+      "sourceOriginal": "r8.jpeg",
+      "designId": "MS-118",
+      "galleryLocation": "/collections/?design=MS-118",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "happy-customers.html",
+        "reviews.html",
+        "_data/homepage-media.json",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "r9.jpeg",
+      "sourceOriginal": "r9.jpeg",
+      "designId": "MS-119",
+      "galleryLocation": "/collections/?design=MS-119",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "reviews.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "s1.jpeg",
+      "sourceOriginal": "s1.jpeg",
+      "designId": "MS-120",
+      "galleryLocation": "/collections/?design=MS-120",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "service-sketches.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "s2.jpeg",
+      "sourceOriginal": "s2.jpeg",
+      "designId": "MS-121",
+      "galleryLocation": "/collections/?design=MS-121",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "service-sketches.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "s3.jpeg",
+      "sourceOriginal": "s3.jpeg",
+      "designId": "MS-122",
+      "galleryLocation": "/collections/?design=MS-122",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "s4.jpeg",
+      "sourceOriginal": "s4.jpeg",
+      "designId": "MS-123",
+      "galleryLocation": "/collections/?design=MS-123",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "s5.jpeg",
+      "sourceOriginal": "s5.jpeg",
+      "designId": "MS-124",
+      "galleryLocation": "/collections/?design=MS-124",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "shoulder.jpeg",
+      "sourceOriginal": "shoulder.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "sleeve_length.jpeg",
+      "sourceOriginal": "sleeve_length.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "standard.jpeg",
+      "sourceOriginal": "standard.jpeg",
+      "designId": "MS-138",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": "Service editorial image; not a verified individual garment photograph. No new showroom use pending owner review.",
+      "legacyReferences": [
+        "service-standard.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "suitssize.jpeg",
+      "sourceOriginal": "suitssize.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "thigh.jpeg",
+      "sourceOriginal": "thigh.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "trouser_length.jpeg",
+      "sourceOriginal": "trouser_length.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuitthree1.jpeg",
+      "sourceOriginal": "w-classicsuitthree1.jpeg",
+      "designId": "MS-125",
+      "galleryLocation": "/collections/?design=MS-125",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuitthree2.jpeg",
+      "sourceOriginal": "w-classicsuitthree2.jpeg",
+      "designId": "MS-126",
+      "galleryLocation": "/collections/?design=MS-126",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuitthree3.jpeg",
+      "sourceOriginal": "w-classicsuitthree3.jpeg",
+      "designId": "MS-127",
+      "galleryLocation": "/collections/?design=MS-127",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuitthree4.jpeg",
+      "sourceOriginal": "w-classicsuitthree4.jpeg",
+      "designId": "MS-128",
+      "galleryLocation": "/collections/?design=MS-128",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuittwo1.jpeg",
+      "sourceOriginal": "w-classicsuittwo1.jpeg",
+      "designId": "MS-129",
+      "galleryLocation": "/collections/?design=MS-129",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "index.html",
+        "womensuits.html",
+        "_data/image-delivery.json",
+        "_templates/homepage-sections.html"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuittwo2.jpeg",
+      "sourceOriginal": "w-classicsuittwo2.jpeg",
+      "designId": "MS-130",
+      "galleryLocation": "/collections/?design=MS-130",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuittwo3.jpeg",
+      "sourceOriginal": "w-classicsuittwo3.jpeg",
+      "designId": "MS-131",
+      "galleryLocation": "/collections/?design=MS-131",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w-classicsuittwo4.jpeg",
+      "sourceOriginal": "w-classicsuittwo4.jpeg",
+      "designId": "MS-132",
+      "galleryLocation": "/collections/?design=MS-132",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "w-classicsuits.html",
+        "womensuits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w1.jpeg",
+      "sourceOriginal": "w1.jpeg",
+      "designId": "MS-133",
+      "galleryLocation": "/collections/?design=MS-133",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w2.jpeg",
+      "sourceOriginal": "w2.jpeg",
+      "designId": "MS-134",
+      "galleryLocation": "/collections/?design=MS-134",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w3.jpeg",
+      "sourceOriginal": "w3.jpeg",
+      "designId": "MS-135",
+      "galleryLocation": "/collections/?design=MS-135",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w4.jpeg",
+      "sourceOriginal": "w4.jpeg",
+      "designId": "MS-136",
+      "galleryLocation": "/collections/?design=MS-136",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "w5.jpeg",
+      "sourceOriginal": "w5.jpeg",
+      "designId": "MS-137",
+      "galleryLocation": "/collections/?design=MS-137",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "review_required",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "collections.html",
+        "suits.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "waist.jpeg",
+      "sourceOriginal": "waist.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "wrist.jpeg",
+      "sourceOriginal": "wrist.jpeg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Logo, measurement/support asset, or non-garment derivative",
+      "legacyReferences": [
+        "measurements.html",
+        "_data/image-delivery.json"
+      ]
+    },
+    {
+      "originalImagePath": "assets/journey/garment-care-illustration.png",
+      "sourceOriginal": "assets/journey/garment-care-illustration.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Conceptual garment-care illustration; not an actual Mr Sewing facility, person, garment or completed project. Never a collection design.",
+      "legacyReferences": [
+        "/services/garment-care/",
+        "/services/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/journey/garment-care-480.webp",
+      "sourceOriginal": "assets/journey/garment-care-illustration.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Conceptual garment-care illustration; not an actual Mr Sewing facility, person, garment or completed project. Never a collection design.",
+      "legacyReferences": [
+        "/services/garment-care/",
+        "/services/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/journey/garment-care-960.webp",
+      "sourceOriginal": "assets/journey/garment-care-illustration.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Conceptual garment-care illustration; not an actual Mr Sewing facility, person, garment or completed project. Never a collection design.",
+      "legacyReferences": [
+        "/services/garment-care/",
+        "/services/"
+      ]
+    }
+  ],
+  "missingLegacyReferences": [],
+  "sourceHashes": {
+    "collections.html": "eb80eb3e87e6cfdcf2ed65bda403f8e6efdb1d9046b39141f3a2108b312e7cec",
+    "mensuits.html": "0e7b0df27c33f23bb4cf45a24b6bc918eedddddb5f0d3d147a77a04f149544ec",
+    "womensuits.html": "5a4c807e99b837a1953a6dd108cd48088eb22997c38913e08ac84e5acdb7a154",
+    "suits.html": "3a250509b0c9e382fbdc0e132c63b7f8061e4dc1556818319bfe7075c2610e04",
+    "reviews.html": "c7b8940615d5ba39495d61405d54e484e9607352e42ea7ac3ca266708876dd62",
+    "happy-customers.html": "112c2c06203cb37f960c35cb010a00c2ac999a2dac40708895b94222b546435b",
+    "m-classicsuits.html": "c59b1eef9c1622e1722ff52c785b59a10270e1d66c4f1a54e030dcfe28a3e647",
+    "m-doublebreasted.html": "2ddf9737302a3361165fdbe20bbb75a4a44db3a5a3c35afa20be53e7ab6e654b",
+    "m-kaundasuits.html": "95f7862d7e9a5b5fbce7d1218ca5250eeaa0833284a09b61c2c2b9f346176af2",
+    "m-modernsuits.html": "bf1a1d82b9c458ce284fb29178d1c3e13765cbaf6d20c72a07d0fae7998fbbe8",
+    "w-classicsuits.html": "4f348087bc5846409eef4618469cbf7691f7a7923c92cb92cee3203fde859016",
+    "w-doublebreasted.html": "7c43fefab09013e7a2dc639e2a649252c1b8bbc023560f68a237a05acdde0c54",
+    "w-modernsuits.html": "c72082f07080d10f5445b931395995f2c09682acd986cdfe8ee43aecb001a510",
+    "_templates/homepage-sections.html": "e3ad6b9b33443418ede04c82aa7c9956107741d5f04f73429d450285650c5e94",
+    "service-standard.html": "c21e7ced9ca2978a3dcd2bd75a160f153654356a05e3e8f72f6c8448a09fc81a"
+  }
+}

@@ -20,14 +20,20 @@ External icon styles/fonts are intentionally blocked. These checks do not establ
 
 ## Static homepage generation and checks
 
-The homepage reuses sections from the existing source pages at build time, so it
-needs no runtime HTML fetches. After changing a shared header/footer, source
-section, or `_templates/homepage.html`, regenerate and commit `index.html`:
+The homepage assembles `_templates/homepage-sections.html`,
+`_templates/shared/site.css`, `_templates/homepage.html` and
+`_templates/shared/footer.html` at build
+time, so it needs no runtime HTML fetches. Standalone service/collection pages
+keep their own content and styles. After changing these homepage sources or the
+shared component, rebuild both V2 pages with `python3 scripts/build_site.py`
+and commit their generated outputs. See [shared component architecture](../docs/shared-components.md).
+For homepage-only content changes:
 
 ```sh
 python3 scripts/build_homepage.py
 python3 scripts/build_homepage.py --check
 node tests/homepage.spec.cjs
+node tests/homepage-journey.spec.cjs
 ```
 
 The script uses Python's standard library only and never edits standalone source
@@ -203,7 +209,7 @@ settings as part of a staging push.
 
 Homepage resource substitutions live in `scripts/homepage_resources.py` and run
 inside `build_homepage.py`. They affect the generated homepage only: standalone
-collections/services retain their original image/icon delivery. Fourteen Font
+collections/services retain their original image/icon delivery. Seven Font
 Awesome Free 6.4.0 glyphs use the exact licensed SVG paths (CC BY4.0; see
 `assets/fontawesome-LICENSE.txt`); no icon stylesheet or font is requested by home.
 All existing accessible parent labels remain; decorative SVGs are hidden from
@@ -216,10 +222,14 @@ with content hashes; original files and the existing shared image inventory stay
 untouched. Photos use quality82 AVIF (4:4:4 chroma for client images); logos use
 lossless WebP. The recorded photo PSNR threshold is35dB against the same-size
 reference; logo visible pixels/alpha compare exactly. Responsive slot sizes
-match 158/218px card interiors and account for the existing4:5 crop of landscape
-images. Logo slot sizes match its actual CSS display size. Mobile hero uses a
-responsive picture with an exactly matching conditional preload; desktop keeps
-the original JPEG. Hero is eager/high-priority; other homepage photos remain lazy.
+match the three large 3:4 editorial portraits, including source pixels needed for
+safe centered crops. Logo slot sizes match its actual CSS display size. Stage A
+uses the existing `h1.jpeg` graduation portrait and its 480px WebP variant as the
+hero; the eager/high-priority preload is derived directly from the source image's
+srcset and sizes. Other homepage photographs remain lazy. Earlier background-hero
+variants stay in the inventory for rollback; Stage A does not request them or
+re-encode any originals. The original authoring script is retained, but no image
+regeneration is needed to build Stage A.
 
 The new filenames avoid stale image replacements. They do **not** change server
 cache lifetimes: GitHub Pages does not expose general per-file Cache-Control
@@ -314,3 +324,161 @@ After a confirmed build, verify `/llms.txt` returns Markdown text and
 `/ai-catalog.json` returns application/json rather than an HTML fallback. A local
 passing audit is not proof of Cloudflare's served version when network access is
 blocked. Preserve all existing performance/SEO/customer regression suites.
+
+
+## Homepage design-sharing journey
+
+`tests/homepage-journey.spec.cjs` checks the seven-section order, real existing
+collection/service destinations and FAQ fragments, two prefilled WhatsApp
+intents with navigation prevented, all homepage image decoding, compact header,
+menu keyboard activation/Escape/focus return/outside dismissal, and the visible
+no-JavaScript navigation fallback. It covers 320, 360, 390, 430, 768, 1024 and 1440px.
+The responsive disclosure and footer are homepage-only; other pages retain their
+shared headers and footers.
+Premium garment-care eligibility is linked to Contact because the current FAQ
+does not publish those conditions. No tiers or additional entitlements are invented.
+
+
+## V2 Stage A visual system
+
+The homepage imports none of the shared header/footer CSS. Its portrait hero,
+ivory editorial gallery, inspiration index, service rows and compact footer are
+maintained in the dedicated homepage templates and stylesheet. Normal hours and
+Sunday availability are visible in the footer; the native Umuganda disclosure
+reveals the full last-Saturday exception and confirms ordinary Saturday walk-ins.
+Desktop navigation exposes five essential links; comments reserve insertion
+points for future Shop/Rewards after launch, without advertising inactive pages.
+The original shared components and all other standalone pages are unchanged.
+
+`tests/homepage-journey.spec.cjs` also verifies the icon-only mobile menu, absence
+of the mobile header order action, seven named services with explanations, three
+large editorial portraits, five desktop footer columns, footer disclosure and
+compactness, and the retained order-popup focus trap. Passing these checks is
+technical verification; the owner must still approve the Stage A visual design.
+
+### Contact Us V2
+
+Contact-only content lives in `_templates/contact.html`, `_templates/contact.css`
+and `_data/contact-v2.json`. The generator reuses the approved homepage header,
+footer, common CSS and menu controller at build time; it never writes homepage
+sources. Contact metadata comes from the existing page SEO data. Keep MIC's
+`verifiedMapsUrl` null until a real destination is verified.
+
+```sh
+python3 scripts/build_contact.py
+python3 scripts/build_clean_urls.py
+python3 scripts/build_contact.py --check
+node tests/contact-v2.spec.cjs
+```
+
+Run `python3 scripts/build_site.py` after changing a shared component, then
+`python3 scripts/build_site.py --check` and `python3 tests/shared_components.py`. Browser
+checks block external requests and never send messages or real bookings.
+
+
+### About Us V2
+
+About-only editorial content is maintained in `_templates/about.html` and
+`_templates/about.css`; metadata remains in `_data/page-seo.json`. The registered
+`scripts/build_about.py` imports the existing shared components without changing
+the homepage or Contact. The portrait uses existing, uncropped customer-image
+variants from `_data/homepage-media.json`; no new photo asset is generated.
+
+```sh
+python3 scripts/build_site.py
+python3 scripts/build_site.py --check
+python3 tests/shared_components.py
+node tests/about-v2.spec.cjs
+```
+
+The browser check blocks external services and checks the approved brand story,
+founding year, parent company, mission/vision, values, services, metadata,
+responsive image delivery, menu behavior, both CTA routes and legacy URL. It
+saves review screenshots outside the repository under the review workspace.
+
+
+### Collections V3 — Luxury Minimalist Showroom
+
+Three galleries and eligible static garment pages are generated from the existing
+registry. See [Collections V3 maintenance and verification](../docs/collections-v3.md).
+No original images, registry IDs, rights rules or approved shared pages changed.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py --check
+PYTHONDONTWRITEBYTECODE=1 python3 tests/collections_data.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/collections_pages.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/shared_components.py
+node tests/collections-v3.spec.cjs
+```
+
+Start the static server on port 8000 first. The V2 test filename remains an alias
+for V3; favourites and shortlists are retired. Browser tests cover all 111 eligible
+URLs, seven gallery widths, filters/Load More, legacy links, related designs,
+WhatsApp encoding, full-screen focus/keyboard/swipe, share mocks and no-JS access.
+Screenshots default to `/workspace/artifacts/collections-v3` outside the checkout;
+set `REVIEW_ARTIFACTS` to choose another artifact directory.
+
+Optional automated WCAG scans use @axe-core/playwright 4.14.0 installed outside the
+repository. Expose that package and the existing Playwright through NODE_PATH,
+then run `node tests/collections-accessibility.cjs`. Tests block external requests
+and never send actual enquiries. Automated scans complement manual keyboard and
+responsive checks; they do not establish complete accessibility conformance.
+
+
+## Customer Journey V1 — current integration
+
+The final consolidated implementation and owner approval requirements are in
+[Customer Journey V1](../docs/customer-journey-v1.md). This section supersedes older
+hero-button, Shop and service-route assertions described above. Collections V3
+remains the garment experience. Services has seven canonical details; old service
+URLs are aliases, not separate indexable offerings. V1 initially withheld customer projects pending permission; the owner supplied
+that permission in V2, which now publishes five garment-focused projects. Care has no
+published subservices or price tables until availability, content and rates are
+approved. Candidate care categories in JSON are not customer-facing services.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py --check
+PYTHONDONTWRITEBYTECODE=1 python3 tests/customer_journey.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/garment_care.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/prepare_journey_media.py --check
+node tests/customer-journey.spec.cjs
+node tests/project_template.spec.cjs
+```
+
+Use the standard local static server on port 8000 for browser suites. For exact
+redirect/header simulation, separately start `python3 tests/preview_server.py
+--port 8001`, then run `node tests/routing.spec.cjs`. This simulation verifies the
+generated rules; it does not prove Cloudflare deployed or enforced them. Existing
+homepage, header, About/Contact, phase1/phase2, metadata, image-delivery, discovery,
+business-hours and Collections V3 suites remain relevant and were run.
+
+Optional axe scans use the externally installed @axe-core/playwright package:
+`node tests/journey_accessibility.cjs` with that module directory on NODE_PATH.
+Screenshots/logs default to `/workspace/artifacts/customer-journey-v1/`.
+No live enquiries are sent. Project and price fixtures are in-memory/intercepted
+only; no invented story or sample rate is generated into the website.
+
+
+## Final Website Completion V2
+
+FAQ updates and new legal documents are deferred by the owner. The draft FAQ
+work is outside the repository and is not published.
+
+Current report: [Final Website V2](../docs/final-website-v2.md). Existing project
+photographs are owner-authorized; care treatment/rate approval gates remain.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 tests/final_v2.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/site_inventory.py
+node tests/final-v2.spec.cjs
+node tests/final_accessibility.cjs
+```
+
+Use the existing port-8000 preview. Browser and axe dependencies are external to
+the repository. V2 tests cover an accelerated exact 25-second clock, synchronized
+slides, hidden-page suspension, reduced motion, five project viewers, nine navigation destinations, care planning/status pages,
+Shop coming soon, About logo and preserved Collections media/registry/controllers.
+Artifacts default to `/workspace/artifacts/final-v2/`; browser tests send no
+messages. The existing 15 browser suites and 14 static checks remain relevant.

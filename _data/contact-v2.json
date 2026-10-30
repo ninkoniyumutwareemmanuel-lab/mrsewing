@@ -1,0 +1,23 @@
+{
+  "mainWorkshop": {
+    "name": "Mr Sewing Main Workshop",
+    "streetAddress": "Karama, Norvege, KN 441 St",
+    "addressLocality": "Nyarugenge, Kigali",
+    "addressCountry": "RW",
+    "mapsUrl": "https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac"
+  },
+  "consultationLocation": {
+    "name": "Downtown Consultation Location",
+    "streetAddress": "MIC Building, Downtown Kigali",
+    "addressLocality": "Kigali",
+    "addressCountry": "RW",
+    "appointmentOnly": true,
+    "verifiedMapsUrl": null
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/mr_sewing_fashion",
+    "facebook": "https://www.facebook.com/share/19tDCGATYj/",
+    "tiktok": "https://www.tiktok.com/@mrsewingfashion",
+    "youtube": "https://youtube.com/@mr.sewingfashion"
+  }
+}

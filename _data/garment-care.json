@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "currency": "RWF",
+  "businessConfirmation": null,
+  "services": [
+    {
+      "slug": "dry-cleaning",
+      "title": "Dry Cleaning",
+      "published": false,
+      "availabilityConfirmed": false,
+      "confirmationEvidenceRef": null,
+      "publicationApproved": false,
+      "description": null,
+      "suitableGarments": [],
+      "treatmentOptions": [],
+      "process": [],
+      "customerPreparation": [],
+      "limitations": [],
+      "pickupDelivery": null,
+      "pricing": {
+        "currency": "RWF",
+        "rows": [],
+        "standardTurnaround": {
+          "minimum": null,
+          "maximum": null,
+          "unit": "business_days",
+          "approved": false,
+          "approvalEvidenceRef": null
+        },
+        "express": {
+          "available": null,
+          "additionalChargeRwf": null,
+          "approved": false,
+          "approvalEvidenceRef": null
+        }
+      },
+      "notes": null
+    },
+    {
+      "slug": "laundry",
+      "title": "Laundry and Garment Washing",
+      "published": false,
+      "availabilityConfirmed": false,
+      "confirmationEvidenceRef": null,
+      "publicationApproved": false,
+      "description": null,
+      "suitableGarments": [],
+      "treatmentOptions": [],
+      "process": [],
+      "customerPreparation": [],
+      "limitations": [],
+      "pickupDelivery": null,
+      "pricing": {
+        "currency": "RWF",
+        "rows": [],
+        "standardTurnaround": {
+          "minimum": null,
+          "maximum": null,
+          "unit": "business_days",
+          "approved": false,
+          "approvalEvidenceRef": null
+        },
+        "express": {
+          "available": null,
+          "additionalChargeRwf": null,
+          "approved": false,
+          "approvalEvidenceRef": null
+        }
+      },
+      "notes": null
+    },
+    {
+      "slug": "pressing",
+      "title": "Professional Pressing and Ironing",
+      "published": false,
+      "availabilityConfirmed": false,
+      "confirmationEvidenceRef": null,
+      "publicationApproved": false,
+      "description": null,
+      "suitableGarments": [],
+      "treatmentOptions": [],
+      "process": [],
+      "customerPreparation": [],
+      "limitations": [],
+      "pickupDelivery": null,
+      "pricing": {
+        "currency": "RWF",
+        "rows": [],
+        "standardTurnaround": {
+          "minimum": null,
+          "maximum": null,
+          "unit": "business_days",
+          "approved": false,
+          "approvalEvidenceRef": null
+        },
+        "express": {
+          "available": null,
+          "additionalChargeRwf": null,
+          "approved": false,
+          "approvalEvidenceRef": null
+        }
+      },
+      "notes": null
+    },
+    {
+      "slug": "formalwear",
+      "title": "Suit and Formalwear Care",
+      "published": false,
+      "availabilityConfirmed": false,
+      "confirmationEvidenceRef": null,
+      "publicationApproved": false,
+      "description": null,
+      "suitableGarments": [],
+      "treatmentOptions": [],
+      "process": [],
+      "customerPreparation": [],
+      "limitations": [],
+      "pickupDelivery": null,
+      "pricing": {
+        "currency": "RWF",
+        "rows": [],
+        "standardTurnaround": {
+          "minimum": null,
+          "maximum": null,
+          "unit": "business_days",
+          "approved": false,
+          "approvalEvidenceRef": null
+        },
+        "express": {
+          "available": null,
+          "additionalChargeRwf": null,
+          "approved": false,
+          "approvalEvidenceRef": null
+        }
+      },
+      "notes": null
+    },
+    {
+      "slug": "delicate-care",
+      "title": "Delicate Garment Care",
+      "published": false,
+      "availabilityConfirmed": false,
+      "confirmationEvidenceRef": null,
+      "publicationApproved": false,
+      "description": null,
+      "suitableGarments": [],
+      "treatmentOptions": [],
+      "process": [],
+      "customerPreparation": [],
+      "limitations": [],
+      "pickupDelivery": null,
+      "pricing": {
+        "currency": "RWF",
+        "rows": [],
+        "standardTurnaround": {
+          "minimum": null,
+          "maximum": null,
+          "unit": "business_days",
+          "approved": false,
+          "approvalEvidenceRef": null
+        },
+        "express": {
+          "available": null,
+          "additionalChargeRwf": null,
+          "approved": false,
+          "approvalEvidenceRef": null
+        }
+      },
+      "notes": null
+    },
+    {
+      "slug": "pickup-delivery",
+      "title": "Garment Care Pickup and Delivery",
+      "published": false,
+      "availabilityConfirmed": false,
+      "confirmationEvidenceRef": null,
+      "publicationApproved": false,
+      "description": null,
+      "suitableGarments": [],
+      "treatmentOptions": [],
+      "process": [],
+      "customerPreparation": [],
+      "limitations": [],
+      "pickupDelivery": null,
+      "pricing": {
+        "currency": "RWF",
+        "rows": [],
+        "standardTurnaround": {
+          "minimum": null,
+          "maximum": null,
+          "unit": "business_days",
+          "approved": false,
+          "approvalEvidenceRef": null
+        },
+        "express": {
+          "available": null,
+          "additionalChargeRwf": null,
+          "approved": false,
+          "approvalEvidenceRef": null
+        }
+      },
+      "notes": null
+    }
+  ]
+}

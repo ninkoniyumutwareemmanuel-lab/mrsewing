@@ -56,11 +56,11 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     await page.locator('header nav a[href="/"]').click();
     await page.waitForURL(base);
     await page.goto(base + 'mensuits.html');
-    await page.locator('header .order-btn').click();
+    await page.goto(base + 'mensuits/#orderModal');
     await page.waitForURL(base + '#orderModal');
     assert(await page.locator('#orderModal').evaluate(el => el.classList.contains('open')));
     console.log('PASS: root-only sitemap homepage, root Home navigation, active states for / and /index.html, and order-modal fallback.');
-    for (const file of ['suits.html','mensuits.html','womensuits.html','reviews.html']) {
+    for (const file of ['suits.html','reviews.html']) {
       await page.goto(base + file);
       const trigger = page.locator('.design-preview').first(); await trigger.click();
       const dialog = page.locator('.design-dialog');
@@ -77,14 +77,15 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     await page.locator('[data-design-image=" r24.jpeg"]').first().click();
     await page.locator('.design-photo').evaluate(img => img.decode());
     assert(await page.locator('.design-photo').evaluate(img => img.complete && img.naturalWidth > 0));
-    console.log('PASS: four galleries, modal focus, Escape, return focus, and leading-space photograph.');
+    console.log('PASS: preserved legacy galleries, modal focus, Escape, return focus, and leading-space photograph.');
     await page.keyboard.press('Escape');
     await page.goto(base + 'mensuits.html');
     await page.locator('.view-details-btn').first().click();
-    await page.locator('.design-booking').click();
-    assert.equal(await page.locator('input[name="Selected Design"]').inputValue(),'EXECUTIVE TWO-PIECE');
-    assert.equal(await page.locator('input[name="Selected Photograph"]').inputValue(),'m1.jpeg');
-    console.log('PASS: selected design is retained when booking a consultation.');
+    await page.waitForURL('**/collections/designs/*/');
+    const enquiry=new URL(await page.locator('.design-enquiry').getAttribute('href'));
+    assert.equal(enquiry.pathname,'/250787411501');
+    assert(enquiry.searchParams.get('text').includes('Reference: MS-'));
+    console.log('PASS: garment selection opens a static design page with an identified WhatsApp enquiry.');
     await page.setViewportSize({width:390,height:844});
     for (const file of ['index.html','happy-customers.html']) {
       await page.goto(base + file);

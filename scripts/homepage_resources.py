@@ -25,39 +25,38 @@ def delivery(markup, key):
         name=unescape(m[1])
         if name=='MR LOGO.jpeg':
             tag=re.sub(r'\bsrcset="[^"]*"',lambda _:f'srcset="{source_set(media[name])}"',tag)
-            return re.sub(r'\bsizes="[^"]*"','sizes="(max-width: 600px) 47px, (max-width: 900px) 7.76vw, 70px"',tag)
-        if key!='customers' or name=='h1.jpeg' or name not in media:return tag
-        # Cards are 180/240px including 2px border +20px padding. Account for
-        # landscape/square source pixels cropped by the existing 4:5 object-fit.
-        entry=media[name];cover=max(1,1.25*entry['width']/entry['height'])
-        sizes=f'(max-width: 900px) {158*cover:.1f}px, {218*cover:.1f}px'
+            return re.sub(r'\bsizes="[^"]*"','sizes="(min-width: 1100px) 66px, 72px"',tag)
+        if key not in ('customers','collections') or name=='h1.jpeg' or name not in media:return tag
+        entry=media[name]
+        # The editorial portraits are 3:4 crops; responsive candidates include
+        # source pixels needed to preserve the centered garment at each width.
+        cover=max(1,(4/3)*entry['width']/entry['height'])
+        sizes=(f'(min-width: 1264px) {384*cover:.1f}px, (min-width: 1100px) calc((100vw - 112px) / 3 * {cover:.4f}), (min-width: 600px) calc((100vw - 64px) * {0.6*cover:.4f}), calc((100vw - 40px) * {0.86*cover:.4f})' if key=='customers'
+               else '(min-width: 1264px) 258px, (min-width: 1100px) calc((100vw - 120px) * .225), (min-width: 600px) calc((100vw - 64px) * .45), calc((100vw - 40px) * .45)')
         tag=re.sub(r'\bsizes="[^"]*"',lambda _:f'sizes="{sizes}"',tag)
         return f'<picture class="homepage-picture"><source type="image/avif" srcset="{source_set(entry)}" sizes="{sizes}">{tag}</picture>'
     markup=re.sub(r'<img\b[^>]*>',image,markup)
-    if key=='hero':
-        entry=media['The Executive Line.jpeg']
-        picture=f'<picture class="homepage-hero-media"><source media="(max-width: 1024px)" type="image/avif" srcset="{source_set(entry)}" sizes="100vw"><img class="hero-lcp" src="The Executive Line.jpeg" alt="" width="1536" height="2752" loading="eager" fetchpriority="high" decoding="async"></picture>'
-        markup=markup.replace('<section class="hero-section">','<section class="hero-section">\n'+picture,1)
+
     return markup
 
 
 def hero_preloads():
-    media=json.loads((ROOT/'_data/homepage-media.json').read_text())['The Executive Line.jpeg']
-    # Match the picture's candidates exactly. Omit href on the responsive hint:
-    # browsers without imagesrcset-preload support must not preload the largest
-    # AVIF and then download a second, smaller picture candidate.
-    return (f'<link rel="preload" as="image" imagesrcset="{source_set(media)}" imagesizes="100vw" media="(max-width: 1024px)" type="image/avif" fetchpriority="high">\n'
-            '  <link rel="preload" as="image" href="The%20Executive%20Line.jpeg" media="(min-width: 1025px)" fetchpriority="high">')
+    # Derive the hint from the source portrait so photo/layout edits have one
+    # source of truth. Omit href to avoid unsupported responsive double-fetches.
+    source=(ROOT/'_templates/homepage-sections.html').read_text()
+    match=re.search(r'<img\b(?=[^>]*\bclass="[^"]*\bhero-lcp\b)[^>]*>',source)
+    if not match:raise ValueError('Homepage needs an explicit hero portrait')
+    attrs=dict(re.findall(r'([\w-]+)="([^"]*)"',match[0]))
+    if not all(attrs.get(key) for key in ('srcset','sizes')):
+        raise ValueError('Hero portrait needs srcset and sizes for matched preloading')
+    candidates=escape(unescape(attrs['srcset']),quote=True)
+    sizes=escape(unescape(attrs['sizes']),quote=True)
+    return f'<link rel="preload" as="image" imagesrcset="{candidates}" imagesizes="{sizes}" fetchpriority="high">'
 
 
 CSS='''
-/* Homepage-only SVGs use the same Font Awesome 6.4.0 paths; no icon font request. */
-.homepage-icon { display:inline-block; font-style:normal; font-variant:normal; line-height:1; }
+/* Original licensed SVG paths; no icon font or third-party stylesheet requests. */
+.homepage-icon { display:inline-block; font-style:normal; line-height:1; }
 .homepage-icon svg { height:1em; fill:currentColor; vertical-align:-.125em; overflow:visible; }
 picture.homepage-picture { display:contents; }
-.hero-section { background:#0b0b0b; isolation:isolate; }
-.homepage-hero-media { position:absolute; inset:0; z-index:-2; pointer-events:none; }
-.homepage-hero-media img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
-.hero-section::before { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(rgba(11,11,11,.75),rgba(11,11,11,.85)); }
-footer .footer-bottom-copy p { color:#888888; }
 '''

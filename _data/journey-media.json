@@ -1,0 +1,20 @@
+{
+  "assets/journey/garment-care-480.webp": {
+    "width": 480,
+    "height": 270,
+    "provenance": "ai_generated_illustration",
+    "bytes": 13084
+  },
+  "assets/journey/garment-care-960.webp": {
+    "width": 960,
+    "height": 540,
+    "provenance": "ai_generated_illustration",
+    "bytes": 41330
+  },
+  "assets/journey/garment-care-illustration.png": {
+    "width": 1672,
+    "height": 941,
+    "provenance": "ai_generated_illustration",
+    "bytes": 2073318
+  }
+}

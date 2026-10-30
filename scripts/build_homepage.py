@@ -2,8 +2,9 @@
 """Assemble index.html from reusable section markup, without runtime HTML fetches.
 
 No third-party dependencies. Standalone source pages are never modified.
-Run after editing a source section, header/footer, or _templates/homepage.html.
+Run after editing the dedicated _templates/homepage* files or resource helpers.
 """
+from site_seo import finalize
 import argparse
 from html import unescape
 from html.parser import HTMLParser
@@ -12,18 +13,21 @@ import re
 import struct
 from homepage_resources import delivery, hero_preloads, CSS as RESOURCE_CSS
 from build_clean_urls import DISCOVERY_LINKS
+import shared_components as shared
 
 ROOT = Path(__file__).resolve().parents[1]
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
-    'header': ('header.html', 'header', None),
-    'hero': ('hero.html', 'section', ('class', 'hero-section')),
-    'customers': ('happy-customers.html', 'section', ('class', 'customers-section')),
-    'services': ('services.html', 'section', ('id', 'services')),
-    'collections': ('collections.html', 'main', ('id', 'suits')),
-    'why_mtm': ('why-mtm.html', 'section', ('class', 'why-mtm-section')),
-    'why_choose': ('why-choose.html', 'section', ('class', 'why-choose-section')),
-    'footer': ('footer.html', 'footer', None),
+    'header': ('_templates/shared/header.html', 'header', None),
+    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
+    'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
+    'collections': ('_templates/homepage-sections.html', 'section', ('class', 'home-collections home-section')),
+    'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
+    'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
+    'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
+    'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
+    'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
+    'footer': ('_templates/shared/footer.html', 'footer', None),
 }
 
 
@@ -107,20 +111,9 @@ def render():
         parser.feed(source)
         if parser.markup is None:
             raise ValueError(f'Missing homepage section: {filename}')
-        markup = parser.markup
+        markup = shared.header('/') if key == 'header' else shared.footer() if key == 'footer' else parser.markup
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
-        if key == 'services':
-            markup = markup.replace('<h2>', '<h3>').replace('</h2>', '</h3>')
-            markup = re.sub(r'<h1>(.*?)</h1>', r'<h2>\1</h2>', markup, count=1, flags=re.S)
-        if key == 'collections':
-            # A section inside the homepage's existing main, not a nested main/H1.
-            markup = markup.replace('<main ', '<section ', 1).replace('</main>', '</section>')
-            # Establish H2 > H3 > H4 for collection section/category/card names.
-            markup = markup.replace('<h3>', '<h4>').replace('</h3>', '</h4>')
-            markup = markup.replace('<h2 class="block-title">', '<h3 class="block-title">')
-            markup = re.sub(r'(<h3 class="block-title">.*?)</h2>', r'\1</h3>', markup, flags=re.S)
-            markup = re.sub(r'<h1>(.*?)</h1>', r'<h2>\1</h2>', markup, count=1, flags=re.S)
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
             raise ValueError(f'Unexpected document metadata/script in section: {filename}')
         markup = re.sub(r'<img\b[^>]*>', reserve_image_space, markup)
@@ -129,15 +122,10 @@ def render():
         markup = delivery(markup, key)
         template = template.replace('{{' + key + '}}', markup)
         section_styles = re.findall(r'<style[^>]*>(.*?)</style>', source, re.S)
-        if key == 'collections':
-            section_styles = [style.replace('.collection-item-info h3 {', '.collection-item-info h3, .collection-item-info h4 {') for style in section_styles]
         styles.extend(section_styles)
-    navigation = (ROOT / 'assets/navigation.js').read_text()
-    nav_style = re.search(r'style\.textContent = `([^`]+)`', navigation)
-    if not nav_style or '${' in nav_style[1]:
-        raise ValueError('Navigation styles must be static for homepage generation')
-    styles.append(nav_style[1])
     styles.append(RESOURCE_CSS)
+    styles.append(shared.site_css())
+    styles.append((ROOT/'_templates/homepage-motion.css').read_text())
     template = template.replace('{{hero_preloads}}', hero_preloads())
     template = template.replace('{{section_styles}}', '\n'.join(styles))
     if re.search(r'{{\w+}}', template):
@@ -150,8 +138,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Fail if the generated homepage is out of date')
     args = parser.parse_args()
-    output = render()
+    output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
+    navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/hero-slideshow.js').read_text()
+    navigation_path = ROOT / 'assets/homepage.js'
+    if args.check:
+        if navigation_path.read_text() != navigation:
+            raise SystemExit('Homepage navigation out of date; run build_homepage.py')
+    else:
+        navigation_path.write_text(navigation)
     if args.check:
         if destination.read_text() != output:
             raise SystemExit('Homepage is out of date. Run python3 scripts/build_homepage.py')

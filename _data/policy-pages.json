@@ -1,0 +1,306 @@
+{
+  "terms-and-conditions": {
+    "title": "Terms & Conditions",
+    "intro": "Read this customer information alongside your quotation and order confirmation before paying or proceeding with a service.",
+    "sections": [
+      {
+        "id": "about",
+        "title": "About Mr Sewing",
+        "paragraphs": [
+          "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda."
+        ]
+      },
+      {
+        "id": "orders",
+        "title": "Orders and payments",
+        "paragraphs": [
+          "{{suitPayment}}",
+          "{{standalonePayment}}",
+          "{{balance}}",
+          "Agree the design, fabric, measurements, price and arrangements before production. Production does not begin before the advance is confirmed. Your production start and schedule are confirmed directly with the team."
+        ]
+      },
+      {
+        "id": "services",
+        "title": "Suit contents and included package",
+        "paragraphs": [
+          "{{contents}}",
+          "{{package}}"
+        ]
+      },
+      {
+        "id": "pricing",
+        "title": "Prices and quotations",
+        "paragraphs": [
+          "{{cotton_table}}",
+          "{{extras}}",
+          "{{higherCollections}}",
+          "Confirm the quotation and available payment method with the team before paying."
+        ]
+      },
+      {
+        "id": "bookings",
+        "title": "Appointments and enquiries",
+        "paragraphs": [
+          "A website submission or WhatsApp message is a request, not a confirmed appointment or accepted production order. Wait for direct confirmation of the date, time, location and scope before relying on arrangements.",
+          "If you cannot attend, contact the team as early as possible to discuss rescheduling.",
+          "Mobile fitting visits are separately arranged. Confirm the location, availability and any charges before a visit."
+        ]
+      },
+      {
+        "id": "timelines",
+        "title": "Planning production",
+        "paragraphs": [
+          "{{timing}}",
+          "{{alterationTiming}}",
+          "{{careTiming}}"
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Changes to an order",
+        "paragraphs": [
+          "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed."
+        ]
+      },
+      {
+        "id": "responsibilities",
+        "title": "Measurements and fittings",
+        "paragraphs": [
+          "Share your design references, garment needs and measurement information. Discuss fit preferences and the fitting appointments needed for your order.",
+          "If you believe a garment does not match the agreed order or has a fit problem, contact us promptly with the order details, a description and photographs if useful. Arrange an assessment with the team. Describe any measurements supplied remotely, wear, damage or previous alterations so the concern can be assessed."
+        ]
+      },
+      {
+        "id": "delivery",
+        "title": "Completion, collection and delivery",
+        "paragraphs": [
+          "{{delivery}}",
+          "Full payment is required before release. Wait for readiness confirmation, agree handover arrangements and inspect the garment on receipt. Contact the team if you cannot receive or collect it as arranged."
+        ]
+      },
+      {
+        "id": "returns",
+        "title": "Cancellation, refunds and concerns",
+        "paragraphs": [
+          "If you want to cancel before production has officially started, contact us as soon as possible with your order details and reason. The team reviews the order status and any costs already incurred, and explains the proposed outcome. A refund or deduction is considered case by case; neither an automatic refund nor automatic advance forfeiture is promised.",
+          "For a request after production starts, contact the team with your order details and concern. We review the circumstances and discuss the available next steps. A request does not itself confirm a cancellation, refund or deduction.",
+          "If Mr Sewing cannot complete an order for a reason on our side, we will discuss a solution, which may include a refund for work not delivered.",
+          "Nothing on this page limits rights or remedies that apply under law.",
+          "Read the <a href=\"/refund-policy/\">Refund &amp; Cancellation Policy</a> for the request process."
+        ]
+      },
+      {
+        "id": "photos",
+        "title": "Personal information and photographs",
+        "paragraphs": [
+          "Ordering or requesting a service does not by itself authorize advertising use of your photograph. Contact us about photograph permissions or removal requests.",
+          "Read the <a href=\"/privacy-policy/\">Privacy Policy</a> for information about website forms and personal information."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "paragraphs": [
+          "Contact Mr Sewing on WhatsApp or phone +250 787 411 501, or email mrsewingfashiondesigner@gmail.com. Include your order or request details so the team can respond in context."
+        ]
+      }
+    ],
+    "legacyAnchors": {
+      "acceptance": "orders",
+      "storage": "delivery",
+      "contacting": "contact",
+      "liability": "returns",
+      "disputes": "returns",
+      "general": "about",
+      "ip": "photos"
+    }
+  },
+  "refund-policy": {
+    "title": "Refund & Cancellation Policy",
+    "intro": "This page explains how to raise a cancellation, refund or garment concern. Read it with the Terms & Conditions and your quotation.",
+    "sections": [
+      {
+        "id": "scope",
+        "title": "Orders and services",
+        "paragraphs": [
+          "This customer information covers tailoring, alterations, cleaning enquiries and related appointments with Mr Sewing Fashion Designer, operating under NINKONIYUMUTWARE NEXUS LTD."
+        ]
+      },
+      {
+        "id": "before",
+        "title": "Before production starts",
+        "paragraphs": [
+          "If you want to cancel before production has officially started, contact us as soon as possible with your order details and reason. The team reviews the order status and any costs already incurred, and explains the proposed outcome. A refund or deduction is considered case by case; neither an automatic refund nor automatic advance forfeiture is promised."
+        ]
+      },
+      {
+        "id": "after",
+        "title": "After production starts",
+        "paragraphs": [
+          "For a request after production starts, contact the team with your order details and concern. We review the circumstances and discuss the available next steps. A request does not itself confirm a cancellation, refund or deduction.",
+          "Nothing on this page limits rights or remedies that apply under law."
+        ]
+      },
+      {
+        "id": "deposit",
+        "title": "Payments and unpaid balances",
+        "paragraphs": [
+          "{{suitPayment}}",
+          "{{standalonePayment}}",
+          "{{balance}}"
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Changes to an order",
+        "paragraphs": [
+          "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed."
+        ]
+      },
+      {
+        "id": "fit",
+        "title": "Fit, garment concerns and alterations",
+        "paragraphs": [
+          "If you believe a garment does not match the agreed order or has a fit problem, contact us promptly with the order details, a description and photographs if useful. Arrange an assessment with the team. Describe any measurements supplied remotely, wear, damage or previous alterations so the concern can be assessed.",
+          "Alterations to clothes you already own are assessed before the work and quote are agreed.",
+          "{{alterationTiming}}",
+          "Nothing on this page limits rights or remedies that apply under law."
+        ]
+      },
+      {
+        "id": "ours",
+        "title": "If we cannot complete an order",
+        "paragraphs": [
+          "If we are unable to complete your order for a reason on our side, we will tell you and discuss a solution. This may include a refund of amounts paid for work not delivered.",
+          "Nothing on this page limits rights or remedies that apply under law."
+        ]
+      },
+      {
+        "id": "visits",
+        "title": "Appointments and transport",
+        "paragraphs": [
+          "If you need to cancel or move a visit, contact the team as early as possible. Ask the team to review any payment already made and explain the proposed next step.",
+          "{{delivery}}"
+        ]
+      },
+      {
+        "id": "collection",
+        "title": "Collection and handover",
+        "paragraphs": [
+          "Full payment is required before release or delivery. Agree handover arrangements with the team and contact us if you cannot collect or receive the garment as arranged."
+        ]
+      },
+      {
+        "id": "review",
+        "title": "Requesting a review",
+        "paragraphs": [
+          "Send your order or payment reference if available, the reason for your request, relevant dates and supporting quotation, payment record or photographs. We may ask for more information to understand the concern.",
+          "The team explains the proposed outcome. If a refund is agreed, confirm its amount, payment method and expected processing time directly. No fixed refund-processing time is promised here.",
+          "Nothing on this page limits rights or remedies that apply under law."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "paragraphs": [
+          "Contact Mr Sewing on WhatsApp or phone +250 787 411 501, or email mrsewingfashiondesigner@gmail.com. Include your order or request details so the team can respond in context.",
+          "See also the <a href=\"/terms-and-conditions/\">Terms &amp; Conditions</a> and <a href=\"/privacy-policy/\">Privacy Policy</a>."
+        ]
+      }
+    ],
+    "legacyAnchors": {
+      "custom": "scope",
+      "exceptions": "after",
+      "disputes": "review",
+      "law": "review"
+    }
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "intro": "This page describes the information used when you visit this website, submit a request or contact Mr Sewing.",
+    "sections": [
+      {
+        "id": "who",
+        "title": "Who to contact",
+        "paragraphs": [
+          "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact us with questions about information provided to the business.",
+          "Contact Mr Sewing on WhatsApp or phone +250 787 411 501, or email mrsewingfashiondesigner@gmail.com. Include your order or request details so the team can respond in context."
+        ]
+      },
+      {
+        "id": "collect",
+        "title": "Information you provide",
+        "paragraphs": [
+          "Website forms ask for your name and phone number, an optional email address, and details relevant to the request. Booking forms include preferred dates and times; mobile visit requests include a location.",
+          "The measurement form accepts a standard suit-size reference or body measurements, garment and service preferences, an optional delivery location and notes. A linked design enquiry may include its design reference and photograph link.",
+          "When you contact the team directly, you may provide design references, garment photographs, measurement details, quotations and payment references. Do not send a card PIN or mobile-money PIN."
+        ]
+      },
+      {
+        "id": "how",
+        "title": "Website forms and direct contact",
+        "paragraphs": [
+          "Website booking and measurement forms are submitted through Web3Forms to forward the request to Mr Sewing. They are not sent directly from your browser to a Mr Sewing-owned form server.",
+          "Opening a WhatsApp or email link uses the service you select. Information you send there is handled through that service as well as by the business.",
+          "Submitting a request does not confirm an appointment or accepted production order."
+        ]
+      },
+      {
+        "id": "why",
+        "title": "How request information is used",
+        "paragraphs": [
+          "The team uses the information you provide to respond to your enquiry, discuss designs and measurements, prepare a quotation, coordinate appointments and services, and communicate about payments and handover.",
+          "Ask the team about information held for your order or repeat-service needs."
+        ]
+      },
+      {
+        "id": "share",
+        "title": "Services involved in processing",
+        "paragraphs": [
+          "Web3Forms processes information entered in website forms so it can be forwarded by email. Email and WhatsApp are also involved when you use those channels. Website hosting and network services process requests needed to load the site.",
+          "Where delivery is arranged, relevant recipient and address details are needed for that arrangement. Confirm the delivery provider with the team.",
+          "These services have their own privacy information. Review the privacy information of the service you use and contact us with questions about your request."
+        ]
+      },
+      {
+        "id": "photos",
+        "title": "Photographs and marketing",
+        "paragraphs": [
+          "Placing an order, paying or requesting a service does not by itself authorize advertising use of your photograph. Discuss any proposed photograph or marketing use separately with the team.",
+          "Contact us about permission, an existing photograph or a removal request. Include the page or image link so we can identify the photograph."
+        ]
+      },
+      {
+        "id": "website",
+        "title": "Website links and technical information",
+        "paragraphs": [
+          "Loading the website involves technical requests to hosting and network services. External links, including Google Maps, WhatsApp and social media, take you to services with their own privacy practices.",
+          "Website forms send the fields you complete through Web3Forms. You can instead use the listed phone, WhatsApp or email contact options."
+        ]
+      },
+      {
+        "id": "rights",
+        "title": "Questions about your records",
+        "paragraphs": [
+          "Contact us to ask about information held by the business, a correction, deletion or a photograph permission. Describe your request and the relevant booking or order. Do not send unnecessary sensitive documents.",
+          "Ask the team about retention, providers or other processing details relevant to your request."
+        ]
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "paragraphs": [
+          "Contact Mr Sewing on WhatsApp or phone +250 787 411 501, or email mrsewingfashiondesigner@gmail.com. Include your order or request details so the team can respond in context."
+        ]
+      }
+    ],
+    "legacyAnchors": {
+      "abroad": "share",
+      "keep": "rights",
+      "protect": "rights",
+      "children": "contact",
+      "changes": "who"
+    }
+  }
+}
