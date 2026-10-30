@@ -2,6 +2,7 @@
 """Evidence-led Services / Our Work pages. No project is published without permission."""
 from site_seo import finalize
 import argparse,json,re
+from customer_information import expand as customer_text
 from html import escape
 from pathlib import Path
 from urllib.parse import urlencode
@@ -79,6 +80,10 @@ def service_page(service):
     route=service['route'];kind=service['id']
     content='<div class="service-kind-'+kind+'"><section class="journey-intro"><p class="home-eyebrow">A personal service · Kigali</p><h1>'+escape(service['title'])+'</h1><p>'+escape(service['intro'])+'</p></section><section class="service-feature" aria-label="Service introduction">'+service_picture(service,True)+'<div><h2>'+{'custom-tailoring':'Your wardrobe. Your expression.','wedding-tailoring':'For a moment that matters.','graduation-tailoring':'Mark your milestone.','mobile-fitting':'A fitting around your day.','alterations':'A considered refinement.','express':'Tell us your exact deadline.'}.get(kind,'Made personal.')+'</h2><p>'+escape(service['audience'])+'</p><p class="journey-image-note">'+('Measurement illustration; not a customer appointment photograph.' if kind in ['mobile-fitting','alterations'] else 'Garment design inspiration; not a documented customer project.')+'</p></div></section><div class="service-layout"><div class="service-copy">'
     for title,text in service['sections']:content+='<section><h2>'+escape(title)+'</h2><p>'+escape(text)+'</p></section>'
+    if kind in ['custom-tailoring','wedding-tailoring','graduation-tailoring','express']:
+        content+='<section><h2>Payment and the standard suit package</h2><p>'+customer_text('{{suitPayment}} {{balance}}')+'</p><p>'+customer_text('{{contents}} {{package}}')+'</p><p>'+customer_text('{{extras}}')+'</p><p>'+customer_text('{{timing}}')+'</p><a class="home-text-link" href="/faq/#cat-pricing">Cotton prices and quotation guidance</a></section>'
+    elif kind=='alterations':
+        content+='<section><h2>Payment and planning</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>'+customer_text('{{alterationTiming}}')+'</p></section>'
     content+='<section><h2>What to share with us</h2><ul class="service-requirements">'+''.join('<li>'+escape(item)+'</li>' for item in service['requirements'])+'</ul></section><section><h2>How to begin</h2><ol class="service-steps">'+''.join('<li>'+escape(step)+'</li>' for step in service['steps'])+'</ol></section>'
     related={'custom-tailoring':[('/mensuits/','Men’s collection'),('/womensuits/','Women’s collection')],'wedding-tailoring':[('/collections/?occasion=wedding','Wedding inspiration'),('/collections/?occasion=civil-wedding','Civil wedding inspiration')],'graduation-tailoring':[('/collections/?occasion=graduation','Graduation inspiration')],'mobile-fitting':[('/measurements/','Measurement guide')],'alterations':[('/booking-adjustment/','Request an assessment')]}.get(kind,[])
     if related:content+='<nav class="service-related" aria-label="Related guidance">'+''.join('<a class="home-text-link" href="'+url+'">'+escape(title)+'</a>' for url,title in related)+'</nav>'
@@ -99,7 +104,7 @@ def care_page(service,category=None):
         if category.get('pickupDelivery'):content+='<section><h3>Collection arrangements</h3><p>'+escape(category['pickupDelivery'])+'</p></section>'
         content+='</div>'
     elif published:content+='<div class="care-options">'+''.join('<a class="care-option" href="/services/garment-care/'+v['slug']+'/"><h3>'+escape(v['title'])+'</h3><p>'+escape(v['description'])+'</p><span class="home-text-link">Explore care service</span></a>' for v in published)+'</div>'
-    else:content+='<p>Tell us about your garment and its care label. We will confirm which care options are available and suitable before accepting a request. Specific treatments are not listed until their availability and conditions are confirmed.</p><div class="care-details"><section><h3>The garment</h3><p>Share the garment type, care label and any condition concerns. A photograph can help begin the conversation.</p></section><section><h3>The conversation</h3><p>Ask which options and conditions apply. Care benefits associated with premium orders depend on eligibility; they are not universal.</p></section><section><h3>The agreement</h3><p>Confirm suitability, any charges and the estimated timing directly with the team before proceeding.</p></section></div>'
+    else:content+='<p>Tell us about your garment and its care label. We will confirm which care options are available and suitable before accepting a request.</p><div class="care-details"><section><h3>The garment</h3><p>Share the garment type, care label and any condition concerns. A photograph can help begin the conversation.</p></section><section><h3>The conversation</h3><p>Ask which options and conditions apply. The standard suit package includes one initial standard professional cleaning. Separately requested care needs its own quotation and confirmation.</p></section><section><h3>The agreement</h3><p>Confirm suitability, any charges and the estimated timing directly with the team before proceeding.</p></section></div>'
     content+='</section><section id="care-pricing" class="care-section"><p class="home-eyebrow">Clear details, before you proceed</p><h2>Quotes &amp; timing</h2>'
     rows=[r for r in category['pricing']['rows'] if r.get('approved')] if category else []
     if rows:
@@ -108,12 +113,13 @@ def care_page(service,category=None):
             for charge in row.get('additionalCharges',[]):
                 if charge.get('approved'):content+='<p class="care-rate-notes">'+escape(charge['label'])+': RWF '+format(charge['amountRwf'],',')+'</p>'
             if row.get('notes'):content+='<p class="care-rate-notes">'+escape(row['notes'])+'</p>'
-    else:content+='<p>Request an assessment and quote for your garment. We will confirm the applicable care options, charges and estimated turnaround before you agree. No prices or completion times are implied by this page.</p>'
+    else:content+='<p>Request an assessment and quote for your garment. We will confirm the applicable care options, charges and estimated turnaround before you agree. Confirm your quote and estimated completion date directly before agreeing the service.</p>'
     if category:
         timing=category['pricing']['standardTurnaround'];express=category['pricing']['express']
         if timing['approved']:content+='<p class="care-rate-notes">Standard turnaround estimate: '+str(timing['minimum'])+'–'+str(timing['maximum'])+' '+escape(timing['unit'].replace('_',' '))+'. Confirm the timing for your garment before proceeding.</p>'
         if express['approved'] and express['available']:content+='<p class="care-rate-notes">Express service may be requested, subject to confirmation.'+(' Additional charge: RWF '+format(express['additionalChargeRwf'],',')+'.' if express.get('additionalChargeRwf') else '')+'</p>'
-    content+='</section><section class="care-section"><h2>Before you enquire</h2><p>Have your garment details, care-label information, any condition concerns and preferred completion date ready. The team must confirm what is possible. Do not assume that a particular treatment, collection visit or delivery arrangement is available.</p></section><section id="care-request" class="care-request"><h2>A considered next step.</h2><p>Ask about '+escape(category['title'] if category else 'care for your garment')+'. Opening a conversation does not confirm a service, order or appointment.</p>'+enquiry(title,route)+'</section></div>'
+    content+='</section><section class="care-section"><h2>Payment and included suit care</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>'+customer_text('{{suitPayment}} {{package}}')+'</p></section>'
+    content+='<section class="care-section"><h2>Before you enquire</h2><p>Have your garment details, care-label information, any condition concerns and preferred completion date ready. The team must confirm what is possible. Do not assume that a particular treatment, collection visit or delivery arrangement is available.</p></section><section id="care-request" class="care-request"><h2>A considered next step.</h2><p>Ask about '+escape(category['title'] if category else 'care for your garment')+'. Opening a conversation does not confirm a service, order or appointment.</p>'+enquiry(title,route)+'</section></div>'
     out=page(route,title+' | Mr Sewing Fashion, Kigali',description,content)
     return out.replace('class="journey-main home-shell"','class="care-main"').replace('</style>','\n'+(ROOT/'_templates/garment-care.css').read_text()+'\n'+(ROOT/'_templates/completion.css').read_text()+'</style>',1)
 

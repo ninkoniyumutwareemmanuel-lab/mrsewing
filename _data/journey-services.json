@@ -169,8 +169,8 @@
     "title": "Premium Garment Care",
     "route": "/services/garment-care/",
     "intro": "A dedicated care conversation for your garments. Confirm available services, suitability and conditions with Mr Sewing.",
-    "audience": "Customers seeking care guidance for an eligible Mr Sewing order.",
-    "options": "Care options and eligibility depend on the garment and order. Complimentary cleaning or gifts are not universal benefits; confirm the applicable conditions.",
+    "audience": "Customers asking about initial suit care or a separately requested garment-care service.",
+    "options": "The standard suit package includes one initial standard professional cleaning. Separately requested care requires a quotation and confirmation.",
     "steps": [
       "Share the order or garment details.",
       "Ask which care options and conditions apply.",
@@ -245,7 +245,7 @@
     "sections": [
       [
         "An urgent request, carefully assessed",
-        "Express tailoring is considered against the garment, materials, measurements and current capacity. Eligibility is confirmed individually; there is no published blanket deadline."
+        "Express tailoring is considered against the garment, materials, measurements and current capacity. Eligibility is confirmed individually; tailoring-stage estimates do not guarantee a delivered-suit deadline."
       ],
       [
         "Tell us the exact deadline",

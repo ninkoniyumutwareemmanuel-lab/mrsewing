@@ -1,0 +1,158 @@
+[
+  {
+    "id": "cat-visit",
+    "title": "Location & Visiting",
+    "questions": [
+      {
+        "question": "Where is Mr Sewing based?",
+        "answer": "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact the team for directions and to confirm the appropriate workshop or appointment location."
+      },
+      {
+        "question": "Do I need an appointment?",
+        "answer": "Confirm appointments directly with the team before relying on a preferred time. Ordinary Saturday visits do not require an appointment; Sunday and Umuganda visits require advance arrangements. Check the current hours in the website footer."
+      }
+    ]
+  },
+  {
+    "id": "cat-booking",
+    "title": "Booking & Appointments",
+    "questions": [
+      {
+        "question": "How do I request an appointment?",
+        "answer": "Use the <a href=\"/booking/\">booking form</a> or contact the team. A submission is a request, not a confirmed appointment or accepted production order. Wait for direct confirmation of the arrangements."
+      },
+      {
+        "question": "What if I need to reschedule a visit?",
+        "answer": "Contact the team as early as possible with the appointment details. Ask about the next available arrangements and any payment already made."
+      },
+      {
+        "question": "How do mobile fittings work?",
+        "answer": "Request a visit with your location and garment needs. Confirm coverage, scheduling and any charges directly before the visit. The included initial Kigali suit delivery does not automatically include mobile fittings or follow-up transport. See <a href=\"/services/mobile-fitting/\">Mobile Fitting</a>."
+      }
+    ]
+  },
+  {
+    "id": "cat-ordering",
+    "title": "Ordering, Payments & Timing",
+    "questions": [
+      {
+        "question": "How do I place a suit order?",
+        "answer": "Share your design and garment needs, agree the details and quotation, and confirm measurements and fittings. {{suitPayment}} {{balance}}"
+      },
+      {
+        "question": "When is the suit balance due?",
+        "answer": "{{suitPayment}} {{balance}}"
+      },
+      {
+        "question": "How are standalone alterations and cleaning paid?",
+        "answer": "{{standalonePayment}} {{balance}}"
+      },
+      {
+        "question": "When does production start?",
+        "answer": "Production does not begin before the 70% advance is confirmed. The team confirms the production start and a realistic schedule directly; a website form or WhatsApp message alone does not start production."
+      },
+      {
+        "question": "How long does tailoring take?",
+        "answer": "{{timing}}"
+      },
+      {
+        "question": "How do I request express tailoring?",
+        "answer": "Share your exact deadline, garment, fabric and measurement needs. {{timing}} Confirm capacity, scope and the quotation before paying. See <a href=\"/services/express-tailoring/\">Express Tailoring</a>."
+      },
+      {
+        "question": "Can I change an order after it starts?",
+        "answer": "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed."
+      },
+      {
+        "question": "What is included in a two-piece or three-piece suit?",
+        "answer": "{{contents}}"
+      },
+      {
+        "question": "What does the standard suit package include?",
+        "answer": "{{package}}"
+      },
+      {
+        "question": "How do delivery and collection work?",
+        "answer": "{{delivery}} Full payment is required before release. Confirm readiness and handover arrangements with the team."
+      }
+    ]
+  },
+  {
+    "id": "cat-pricing",
+    "title": "Cotton Prices & Quotations",
+    "questions": [
+      {
+        "question": "What are the Cotton suit base prices?",
+        "answer": "{{cotton_table}} {{contents}} {{extras}}"
+      },
+      {
+        "question": "How much are higher collections?",
+        "answer": "{{higherCollections}} {{extras}}"
+      },
+      {
+        "question": "Is a shirt or skirt included at the standard price?",
+        "answer": "{{contents}}"
+      },
+      {
+        "question": "What payment methods can I use?",
+        "answer": "Confirm the available payment method with the team when agreeing your quotation. Do not send a card or mobile-money PIN."
+      }
+    ]
+  },
+  {
+    "id": "cat-alterations",
+    "title": "Fittings, Alterations & Garment Care",
+    "questions": [
+      {
+        "question": "Can you alter clothes I already own?",
+        "answer": "Describe the garment and requested adjustment so the team can assess suitability, quote the work and agree arrangements. See <a href=\"/services/alterations/\">Alterations &amp; Refinements</a>."
+      },
+      {
+        "question": "How long do alterations take?",
+        "answer": "{{alterationTiming}}"
+      },
+      {
+        "question": "What if there is a fit concern?",
+        "answer": "If you believe a garment does not match the agreed order or has a fit problem, contact us promptly with the order details, a description and photographs if useful. Arrange an assessment with the team. Describe any measurements supplied remotely, wear, damage or previous alterations so the concern can be assessed. See the <a href=\"/refund-policy/#fit\">Refund &amp; Cancellation Policy</a>."
+      },
+      {
+        "question": "How do I enquire about cleaning?",
+        "answer": "Describe the garment and care label, and confirm available options, suitability, the quote and handover arrangements with <a href=\"/services/garment-care/\">Mr Sewing Garment Care</a>. {{careTiming}}"
+      },
+      {
+        "question": "Is cleaning included with a suit?",
+        "answer": "{{package}} Separately requested cleaning is discussed and quoted as its own service."
+      }
+    ]
+  },
+  {
+    "id": "cat-policies",
+    "title": "Cancellations, Privacy & Customer Information",
+    "questions": [
+      {
+        "question": "Can I cancel before production starts?",
+        "answer": "If you want to cancel before production has officially started, contact us as soon as possible with your order details and reason. The team reviews the order status and any costs already incurred, and explains the proposed outcome. A refund or deduction is considered case by case; neither an automatic refund nor automatic advance forfeiture is promised. See the <a href=\"/refund-policy/#before\">Refund &amp; Cancellation Policy</a>."
+      },
+      {
+        "question": "What about a cancellation or refund after work starts?",
+        "answer": "For a request after production starts, contact the team with your order details and concern. We review the circumstances and discuss the available next steps. A request does not itself confirm a cancellation, refund or deduction. If we cannot complete an order for a reason on our side, we discuss a solution that may include a refund for work not delivered. Nothing on this page limits rights or remedies that apply under law."
+      },
+      {
+        "question": "How do I ask for a refund review?",
+        "answer": "Send your order details, reason and relevant payment or garment evidence. The team reviews the request and explains the proposed outcome. If a refund is agreed, confirm the amount, method and expected processing time directly."
+      },
+      {
+        "question": "What if I cannot collect or receive my garment?",
+        "answer": "Contact the team with your order details to discuss handover arrangements. Full payment is required before release or delivery."
+      },
+      {
+        "question": "Does placing an order authorize use of my photograph?",
+        "answer": "No. Ordering or paying does not by itself authorize advertising use of your photograph. Discuss permissions separately and contact us about an existing image or removal request. See the <a href=\"/privacy-policy/#photos\">Privacy Policy</a>."
+      },
+      {
+        "question": "How are website form details processed?",
+        "answer": "Booking and measurement forms use Web3Forms to forward your request to Mr Sewing by email. Read the <a href=\"/privacy-policy/\">Privacy Policy</a> before submitting information."
+      }
+    ]
+  }
+]

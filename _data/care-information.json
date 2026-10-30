@@ -2,8 +2,8 @@
   "brand": "Mr Sewing Garment Care",
   "supportingDescription": "Premium Clothing Care — Kigali, Rwanda",
   "dryCleaningConfirmed": false,
-  "servicesStatus": "Ask which garment-care options are currently available and suitable for your garment. Specific treatments are not advertised until their availability and conditions are confirmed.",
-  "pricingStatus": "Request a garment-specific quote. No garment-care price list has been approved for publication.",
-  "turnaroundStatus": "The team must confirm an estimated turnaround for your garment before you proceed. No standard or express care deadline is published.",
-  "arrangementsStatus": "Pickup and delivery availability, coverage and charges have not been confirmed for publication. Please agree any handover arrangements directly with the team."
+  "servicesStatus": "Describe your garment and care label. Confirm which care options are currently available and suitable before arranging a service.",
+  "pricingStatus": "Request a garment-specific quotation. Confirm the available service and price with the team before paying.",
+  "turnaroundStatus": "Confirm the cleaning service, suitability and estimated completion date directly. Cleaning timing depends on the garment, treatment and current capacity.",
+  "arrangementsStatus": "For standalone garment care, confirm any pickup or delivery arrangements and charges directly. The standard suit package separately includes initial door-to-door Kigali delivery; outside-Kigali courier or agency charges are customer-paid and confirmed before dispatch."
 }

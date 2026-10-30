@@ -1,0 +1,36 @@
+{
+  "business": "Mr Sewing Fashion Designer",
+  "company": "NINKONIYUMUTWARE NEXUS LTD",
+  "location": "Kigali, Rwanda",
+  "website": "https://mrsewingfashion.com",
+  "advancePercent": 70,
+  "suitPayment": "Pay a 70% advance before production. For a suit order, the balance is due when tailoring is complete, before final cleaning and delivery. Full payment is required before garment release.",
+  "standalonePayment": "Standalone alterations and cleaning require a 70% advance. With that advance, the remaining 30% is payable when the service is complete, before release or delivery. For standalone cleaning, this means after cleaning is complete.",
+  "balance": "With a 70% advance, the balance is 30%. Your actual balance is the agreed total less payments already received.",
+  "contents": "A standard two-piece suit includes a jacket and trousers. A standard three-piece includes a jacket, trousers and waistcoat. A shirt is not automatically included. Skirt-suit options require a separate quotation and confirmation; the standard trouser-package price must not be assumed.",
+  "package": "The standard suit package includes the agreed suit and standard tailoring, a branded hanger and protective cover, one initial standard professional cleaning, and initial door-to-door delivery within Kigali. These included items are not charged separately again.",
+  "extras": "Extra fabric, decorations, embroidery, attachments and special requirements need a quotation and confirmation before payment.",
+  "higherCollections": "For Polyester, Wool/Star and Super/Americano collection enquiries, request a quotation. No prices for these collections are listed here. Collection names alone do not establish verified fabric composition.",
+  "delivery": "Initial door-to-door Kigali delivery is included with the standard suit package. Outside-Kigali courier or agency charges are customer-paid and confirmed before dispatch. A courier deadline must be confirmed individually. Mobile fittings, collection visits and follow-up transport are separate arrangements; confirm their scope and any charges directly.",
+  "timing": "Standard tailoring usually takes 2–4 days; express tailoring usually takes 12–15 hours. These are tailoring-stage estimates, not delivered-suit deadlines. Sourcing, scheduling, fittings, changes, final cleaning and delivery affect the full order timeline. Confirm a realistic completion date individually.",
+  "alterationTiming": "Alterations are usually completed within one maker day. This is a work-stage estimate, not a guaranteed handover time; confirm assessment, scheduling, fitting and delivery arrangements individually.",
+  "careTiming": "Confirm the cleaning service, suitability and estimated completion date with the team before proceeding. The full schedule depends on the garment, treatment and current capacity.",
+  "cotton": [
+    {
+      "garment": "Men two-piece",
+      "priceRwf": 200000
+    },
+    {
+      "garment": "Men three-piece",
+      "priceRwf": 250000
+    },
+    {
+      "garment": "Women two-piece",
+      "priceRwf": 150000
+    },
+    {
+      "garment": "Women three-piece",
+      "priceRwf": 200000
+    }
+  ]
+}
