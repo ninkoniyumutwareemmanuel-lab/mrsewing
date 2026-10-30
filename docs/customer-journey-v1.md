@@ -1,5 +1,8 @@
 # Mr Sewing — Customer Journey V1
 
+Historical V1 report. See [Final Website Completion V2](final-website-v2.md) for
+current navigation, slideshow, owner-authorized projects and FAQ deferral.
+
 Implementation baseline: `08191fde2c1e984206ca40d53fbe99f69ce218da`.
 Authorized branch: `phase1/customer-journey-repairs`. No production merge,
 production deployment, DNS change or production account-setting change is part

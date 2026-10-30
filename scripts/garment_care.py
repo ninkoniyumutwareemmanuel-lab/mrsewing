@@ -22,3 +22,18 @@ def catalog():
         assert s.get('description') and s['suitableGarments'] and s['process'] and s['customerPreparation'] and s['limitations'],'Care page needs complete approved information'
         published.append(s)
     return data,published
+
+from html import escape
+
+def care_information():
+    return json.loads((ROOT/'_data/care-information.json').read_text())
+def care_navigation():
+    return '<nav class="care-subnav" aria-label="Garment care"><a href="/services/garment-care/">Care home</a><a href="/services/garment-care/services/">Services</a><a href="/services/garment-care/planning/#prices">Prices</a><a href="/services/garment-care/planning/#turnaround">Turnaround</a><a href="/services/garment-care/planning/#pickup-delivery">Pickup &amp; delivery</a></nav>'
+def care_summary(category=None):
+    info=care_information();pricing=info['pricingStatus'];timing=info['turnaroundStatus'];handover=info['arrangementsStatus']
+    if category:
+        if any(r.get('approved') for r in category['pricing']['rows']):pricing='Approved RWF rates for this service are listed below. Confirm the quote for your garment.'
+        t=category['pricing']['standardTurnaround']
+        if t['approved']:timing='Estimated '+str(t['minimum'])+'–'+str(t['maximum'])+' '+t['unit'].replace('_',' ')+'. Confirm for your garment.'
+        handover=category.get('pickupDelivery') or handover
+    return '<dl class="care-basic-summary">'+''.join('<div><dt>'+label+'</dt><dd>'+escape(text)+'</dd></div>' for label,text in [('Pricing',pricing),('Turnaround',timing),('Pickup & delivery',handover)])+'</dl>'

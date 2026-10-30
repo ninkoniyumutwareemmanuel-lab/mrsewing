@@ -25,7 +25,8 @@ for route in routes:
    assert target.exists(),(route,a['href'])
  assert DOMAIN in source and 'data-staging-indexing' in source
 assert '/our-work/' in routes and len(journey.services())==7
-assert not journey.projects();assert not list((ROOT/'our-work').glob('*/index.html'))
+assert len(journey.projects())==5
+assert len(list((ROOT/'our-work').glob('*/index.html')))==5
 # Existing photo use is not publication permission; reject progressively incomplete evidence.
 read=Path.read_text
 base={'slug':'test-project','published':True,'title':'Test only','context':'Test only','images':[{'src':'/h2.jpeg','alt':'Test only','width':750,'height':938}]}

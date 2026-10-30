@@ -30,12 +30,11 @@ def render():
         {'@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':'Home','item':'https://mrsewingfashion.com/'},
             {'@type':'ListItem','position':2,'name':'About Mr Sewing','item':PAGE}]}]}
-    media = json.loads((ROOT/'_data/homepage-media.json').read_text())['r4.jpeg']
-    # Reuse existing derivatives; show the complete source frame, with no new crop.
-    sizes = '(min-width: 1244px) 440px, (min-width: 1100px) calc((100vw - 144px) * .4), (min-width: 768px) calc((100vw - 112px) * .4), (min-width: 480px) 440px, calc(100vw - 40px)'
-    image = ('<picture><source type="image/avif" srcset="'+escape(source_set(media),quote=True)+'" sizes="'+sizes+'">'
-        '<img class="about-hero-image" src="assets/images/r4-480.webp" srcset="assets/images/r4-480.webp 480w, assets/images/r4-960.webp 960w, r4.jpeg 1792w" sizes="'+sizes+'" '
-        'width="1792" height="2400" loading="eager" fetchpriority="high" decoding="async" alt="Mr Sewing customer wearing a light tailored jacket and matching trousers"></picture>')
+    # Official existing logo, using its established responsive WebP derivatives.
+    image = ('<img class="about-hero-image about-logo" src="assets/images/mr-logo-480.webp" '
+        'srcset="assets/images/mr-logo-480.webp 480w, assets/images/mr-logo-960.webp 960w" '
+        'sizes="(min-width: 768px) 360px, 80vw" width="1244" height="802" loading="eager" '
+        'fetchpriority="high" decoding="async" alt="Official Mr Sewing MS logo">')
     header = delivery(re.sub(r'<img\b[^>]*>', reserve_image_space, shared.header('/about/')), 'header')
     values = {'header':header,'footer':delivery(shared.footer(),'footer'),
         'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/about.css').read_text(),

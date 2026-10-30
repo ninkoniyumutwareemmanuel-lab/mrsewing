@@ -432,8 +432,8 @@ The final consolidated implementation and owner approval requirements are in
 [Customer Journey V1](../docs/customer-journey-v1.md). This section supersedes older
 hero-button, Shop and service-route assertions described above. Collections V3
 remains the garment experience. Services has seven canonical details; old service
-URLs are aliases, not separate indexable offerings. Our Work has no published
-customer stories until completion/permission evidence is supplied. Care has no
+URLs are aliases, not separate indexable offerings. V1 initially withheld customer projects pending permission; the owner supplied
+that permission in V2, which now publishes five garment-focused projects. Care has no
 published subservices or price tables until availability, content and rates are
 approved. Candidate care categories in JSON are not customer-facing services.
 
@@ -459,3 +459,26 @@ Optional axe scans use the externally installed @axe-core/playwright package:
 Screenshots/logs default to `/workspace/artifacts/customer-journey-v1/`.
 No live enquiries are sent. Project and price fixtures are in-memory/intercepted
 only; no invented story or sample rate is generated into the website.
+
+
+## Final Website Completion V2
+
+FAQ updates and new legal documents are deferred by the owner. The draft FAQ
+work is outside the repository and is not published.
+
+Current report: [Final Website V2](../docs/final-website-v2.md). Existing project
+photographs are owner-authorized; care treatment/rate approval gates remain.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 tests/final_v2.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/site_inventory.py
+node tests/final-v2.spec.cjs
+node tests/final_accessibility.cjs
+```
+
+Use the existing port-8000 preview. Browser and axe dependencies are external to
+the repository. V2 tests cover an accelerated exact 25-second clock, synchronized
+slides, hidden-page suspension, reduced motion, five project viewers, nine navigation destinations, care planning/status pages,
+Shop coming soon, About logo and preserved Collections media/registry/controllers.
+Artifacts default to `/workspace/artifacts/final-v2/`; browser tests send no
+messages. The existing 15 browser suites and 14 static checks remain relevant.

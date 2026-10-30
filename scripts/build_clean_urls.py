@@ -34,6 +34,7 @@ def legacy_script(name):
 def clean_document(name):
     source = (ROOT / name).read_text()
     source = LEGACY.sub('', source)
+    source = re.sub(r'<link\s+rel="(?:ard|ai-catalog)"[^>]*>','',source)
     source = re.sub(r'<base\b[^>]*>', '', source, flags=re.I)
     aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
     if name in aliases:source=source.replace('<head>', '<head><script data-alias-route>location.replace('+json.dumps(aliases[name])+'+location.search+location.hash)</script>',1)

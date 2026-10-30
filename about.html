@@ -15,12 +15,12 @@
 <meta property="og:title" content="About Mr Sewing Fashion | Bespoke Tailoring in Kigali">
 <meta property="og:description" content="Discover Mr Sewing Fashion&#x27;s story: established in 2019, a Kigali brand dedicated to personalized tailoring, craftsmanship, and Made in Rwanda style.">
 <meta property="og:url" content="https://mrsewingfashion.com/about/">
-<meta property="og:image" content="https://mrsewingfashion.com/assets/images/r4-960.webp">
-<meta property="og:image:alt" content="Mr Sewing customer wearing a light tailored jacket and matching trousers">
+<meta property="og:image" content="https://mrsewingfashion.com/assets/images/mr-logo-960.webp">
+<meta property="og:image:alt" content="Official Mr Sewing MS logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Mr Sewing Fashion | Bespoke Tailoring in Kigali">
 <meta name="twitter:description" content="Discover Mr Sewing Fashion&#x27;s story: established in 2019, a Kigali brand dedicated to personalized tailoring, craftsmanship, and Made in Rwanda style.">
-<meta name="twitter:image" content="https://mrsewingfashion.com/assets/images/r4-960.webp">
+<meta name="twitter:image" content="https://mrsewingfashion.com/assets/images/mr-logo-960.webp">
 <link rel="icon" href="/assets/images/logo-icon.png">
 <script>document.documentElement.classList.add('js');</script>
 <style>:root { --ink:#0b0b0b; --paper:#f1eee6; --gold:#d4af37; --muted:#b9b9b1; --line:#34352f; }
@@ -152,6 +152,16 @@ h2 { font-size:clamp(36px,3.5vw,48px); }
 html, * { scroll-behavior:auto!important; }
 * { transition:none!important; }
 }
+.homepage-header .nav-shop {gap:5px}
+.footer-quick ul {display:grid;grid-template-columns:1fr 1fr;column-gap:12px}
+.footer-quick li a {min-height:44px}
+.footer-quick .nav-shop {flex-wrap:wrap;column-gap:4px}
+.footer-quick .coming-soon {font-size:9px}
+@media(min-width:1100px) {
+.homepage-header nav ul, .js #home-navigation ul {gap:15px}
+.homepage-header nav a {font-size:13px}
+.brand-name {font-size:11px}
+}
 
 /* Original licensed SVG paths; no icon font or third-party stylesheet requests. */
 .homepage-icon { display:inline-block; font-style:normal; line-height:1; }
@@ -167,6 +177,8 @@ picture.homepage-picture { display:contents; }
 @media(min-width:768px){.about-hero{grid-template-columns:1.2fr .8fr;align-items:center;gap:48px;padding-block:54px 58px}.about-hero h1{font-size:clamp(3rem,5.4vw,5rem)}.about-hero-copy{padding-block:24px}.about-section{padding-block:48px}.about-story,.about-approach,.about-services-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}.about-section-heading{margin-bottom:0}.about-purpose{grid-template-columns:1fr 1fr;gap:24px}.about-purpose article{padding:32px}.about-timeline{grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}.about-timeline li{grid-template-columns:80px 1fr}.about-values{grid-template-columns:1fr 1fr;margin-top:30px;gap:26px}.about-services{grid-template-columns:1fr 1fr;gap:0 26px}.about-final{padding-block:50px 56px}}
 @media(min-width:1100px){.about-hero{gap:80px}.about-section{padding-block:56px}.about-values{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}.about-values li{display:block}.about-values li>span{display:block;margin-bottom:24px}.about-values h3{font-size:1.45rem;min-height:3.1em}.about-values p{font-size:.9rem}.about-purpose article{padding:36px 40px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.about-portrait{padding:38px 26px 24px;background:#10110e;border-top:1px solid #786332}.about-portrait .about-logo{background:transparent;object-fit:contain;height:auto;max-width:100%;margin:auto}.about-portrait figcaption{text-align:center;margin-top:24px}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -229,15 +241,13 @@ picture.homepage-picture { display:contents; }
   <div class="header-inner home-shell">
     <a class="home-brand" href="/" aria-label="Mr Sewing home"><img class="header-logo" src="MR LOGO.jpeg" width="1244" height="802" alt="Mr Sewing MS logo" decoding="async" srcset="assets/homepage/mr-logo-96.3598d62e35.webp 96w, assets/homepage/mr-logo-192.2f306066cd.webp 192w, assets/homepage/mr-logo-320.b753282e38.webp 320w" sizes="(min-width: 1100px) 66px, 72px"><span class="brand-name">MR SEWING</span></a>
     <button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" aria-hidden="true" focusable="false"><path d="M1 1h22M1 9h22M1 17h22" stroke="currentColor" stroke-width="1.5"/></svg></button>
-    <nav id="home-navigation" aria-label="Main navigation"><ul>
-      <li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/about/" aria-current="page">About Us</a></li><li><a href="/contact/">Contact Us</a></li>
-    </ul></nav>
+    <nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/about/" aria-current="page">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></nav>
   </div>
 </header>
 <main id="main-content" tabindex="-1">
 <section class="home-shell about-hero" aria-labelledby="about-title">
 <div class="about-hero-copy"><p class="home-eyebrow">Our story · Kigali, Rwanda · Since 2019</p><h1 id="about-title">More Than Tailoring.<br><em>A Reflection of You.</em></h1><p class="about-lead">Since 2019, Mr Sewing has been creating personalized clothing in Kigali, Rwanda—bringing together craftsmanship, thoughtful design, and individual style.</p><span class="about-signature">Made in Rwanda. Made around you.</span></div>
-<figure class="about-portrait"><picture><source type="image/avif" srcset="assets/homepage/r4-160.0cae3c9b09.avif 160w, assets/homepage/r4-240.efd023a3b5.avif 240w, assets/homepage/r4-320.e4e5bc379c.avif 320w, assets/homepage/r4-480.36207ff2d4.avif 480w, assets/homepage/r4-640.858cf3df94.avif 640w, assets/homepage/r4-960.d307a12917.avif 960w, assets/homepage/r4-1280.4661d2e5fe.avif 1280w" sizes="(min-width: 1244px) 440px, (min-width: 1100px) calc((100vw - 144px) * .4), (min-width: 768px) calc((100vw - 112px) * .4), (min-width: 480px) 440px, calc(100vw - 40px)"><img class="about-hero-image" src="assets/images/r4-480.webp" srcset="assets/images/r4-480.webp 480w, assets/images/r4-960.webp 960w, r4.jpeg 1792w" sizes="(min-width: 1244px) 440px, (min-width: 1100px) calc((100vw - 144px) * .4), (min-width: 768px) calc((100vw - 112px) * .4), (min-width: 480px) 440px, calc(100vw - 40px)" width="1792" height="2400" loading="eager" fetchpriority="high" decoding="async" alt="Mr Sewing customer wearing a light tailored jacket and matching trousers"></picture><figcaption>Individual style. Thoughtfully tailored.</figcaption></figure>
+<figure class="about-portrait"><img class="about-hero-image about-logo" src="assets/images/mr-logo-480.webp" srcset="assets/images/mr-logo-480.webp 480w, assets/images/mr-logo-960.webp 960w" sizes="(min-width: 768px) 360px, 80vw" width="1244" height="802" loading="eager" fetchpriority="high" decoding="async" alt="Official Mr Sewing MS logo"><figcaption>Individual style. Thoughtfully tailored.</figcaption></figure>
 </section>
 <section class="home-shell about-section about-story" aria-labelledby="story-title">
 <div class="about-section-heading"><p class="home-eyebrow">Our Story</p><h2 id="story-title">From a Small Workshop<br>to a Bigger Vision</h2></div>
@@ -255,7 +265,7 @@ picture.homepage-picture { display:contents; }
   <div class="home-shell">
     <h2 id="footer-title" class="visually-hidden">Mr Sewing Fashion information</h2>
     <div class="footer-top">
-      <div class="footer-col footer-quick"><h3>Quick Links</h3><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact Us</a></li></ul></div>
+      <div class="footer-col footer-quick"><h3>Quick Links</h3><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></div>
       <div class="footer-col footer-location"><h3>Location</h3><p><strong>MIC Building</strong><span class="visually-hidden"> — consultations by appointment only</span><br>Downtown, Nyarugenge, Kigali</p><p><strong>KN 441 St</strong><br>Norvège, Nyarugenge, Kigali</p><a class="home-text-link" href="https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac" target="_blank" rel="noopener">Find us on Google Maps <span class="home-arrow" aria-hidden="true">↗</span></a></div>
       <div class="footer-col footer-hours"><h3>Opening Hours</h3><span class="visually-hidden">Main workshop schedule</span><p>Usually Monday–Saturday<br>9:00 AM–5:00 PM</p><p class="footer-sunday">Sunday: By appointment only</p><details class="footer-hours-details"><summary>Last Saturday (Umuganda)</summary><p>12:00 PM–5:00 PM, strictly by advance appointment.</p><p>Ordinary Saturday visits do not require an appointment.</p></details></div>
       <div class="footer-col footer-policies"><h3>Policies</h3><ul><li><a href="/refund-policy/">Refund Policy</a></li><li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li></ul></div>

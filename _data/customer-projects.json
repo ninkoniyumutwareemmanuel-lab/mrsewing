@@ -1,24 +1,208 @@
 {
   "schemaVersion": 1,
-  "projects": [],
-  "pendingPhotos": [
+  "authorization": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+  "projects": [
     {
-      "source": "h2.jpeg",
-      "publicationPermission": "not_documented",
-      "completedWorkEvidence": null,
-      "projectAssociation": null
+      "slug": "off-white-graduation-suit",
+      "title": "Off-White Graduation Suit",
+      "context": "Off-white tailoring, photographed with a graduation cap, gown and diploma scroll. An asymmetric jacket and matching trousers create a composed silhouette.",
+      "published": true,
+      "completedWorkEvidence": "Owner authorization: Final Website Completion V2 request, 2026-10-30; existing genuine Mr Sewing project photographs confirmed by owner",
+      "publicationPermission": {
+        "approved": true,
+        "evidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30"
+      },
+      "images": [
+        {
+          "src": "/h1.jpeg",
+          "alt": "Off-white suit with an asymmetric jacket and matching trousers, shown with graduation regalia",
+          "width": 797,
+          "height": 995,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in h1.jpeg; matching jacket, trousers and graduation regalia across h1/h2/h3"
+        },
+        {
+          "src": "/h2.jpeg",
+          "alt": "Side view of the off-white graduation suit and fitted jacket",
+          "width": 750,
+          "height": 938,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in h2.jpeg; matching jacket, trousers and graduation regalia across h1/h2/h3"
+        },
+        {
+          "src": "/h3.jpeg",
+          "alt": "Front view of the off-white outfit beneath a graduation gown",
+          "width": 750,
+          "height": 938,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in h3.jpeg; matching jacket, trousers and graduation regalia across h1/h2/h3"
+        }
+      ],
+      "editorial": [
+        {
+          "heading": "The silhouette",
+          "text": "The shaped jacket defines the waist above a clean line of matching trousers. The off-white palette keeps the look cohesive beneath the dark academic gown."
+        },
+        {
+          "heading": "Details in focus",
+          "text": "The jacket’s asymmetric front, folded neckline and covered buttons add interest without competing with the graduation regalia."
+        },
+        {
+          "heading": "A garment-led story",
+          "text": "Against dark academic regalia, the pale tailoring remains the focus. The coordinated silhouette gives this graduation look a considered finish."
+        }
+      ],
+      "editorialBasis": "Visible garment details; no customer-specific history asserted",
+      "testimonial": null
     },
     {
-      "source": "r7.jpeg",
-      "publicationPermission": "not_documented",
-      "completedWorkEvidence": null,
-      "projectAssociation": null
+      "slug": "light-grey-and-navy",
+      "title": "Light Grey & Navy Contrast",
+      "context": "A light grey double-breasted jacket is paired with navy trousers, a dark tie and a coordinating pocket square.",
+      "published": true,
+      "completedWorkEvidence": "Owner authorization: Final Website Completion V2 request, 2026-10-30; existing genuine Mr Sewing project photographs confirmed by owner",
+      "publicationPermission": {
+        "approved": true,
+        "evidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30"
+      },
+      "images": [
+        {
+          "src": "/r7.jpeg",
+          "alt": "Finished light grey double-breasted jacket paired with navy trousers",
+          "width": 2048,
+          "height": 2056,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in r7.jpeg"
+        }
+      ],
+      "editorial": [
+        {
+          "heading": "The silhouette",
+          "text": "The overlapping jacket front and two rows of dark buttons establish a structured centre. Navy trousers give the lighter jacket a distinct visual anchor."
+        },
+        {
+          "heading": "Details in focus",
+          "text": "A dark tie and pocket square echo the trousers, while the lapel decoration adds a small accent to the finished ensemble."
+        },
+        {
+          "heading": "Styling perspective",
+          "text": "The lighter jacket and dark foundation offer a balanced direction for formal dressing, with the contrast carrying the overall look."
+        }
+      ],
+      "editorialBasis": "Visible garment details; no customer-specific history asserted",
+      "testimonial": null
     },
     {
-      "source": "r4.jpeg",
-      "publicationPermission": "not_documented",
-      "completedWorkEvidence": null,
-      "projectAssociation": null
+      "slug": "soft-ivory-tailoring",
+      "title": "Soft Ivory Tailoring",
+      "context": "A light jacket and matching trousers create a tonal look, layered over a simple pale top.",
+      "published": true,
+      "completedWorkEvidence": "Owner authorization: Final Website Completion V2 request, 2026-10-30; existing genuine Mr Sewing project photographs confirmed by owner",
+      "publicationPermission": {
+        "approved": true,
+        "evidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30"
+      },
+      "images": [
+        {
+          "src": "/r4.jpeg",
+          "alt": "Finished light ivory jacket and matching trousers with a pale top",
+          "width": 1792,
+          "height": 2400,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in r4.jpeg"
+        }
+      ],
+      "editorial": [
+        {
+          "heading": "The silhouette",
+          "text": "A longer jacket line sits over matching trousers, creating a relaxed but considered outline. The open front keeps the layering visible."
+        },
+        {
+          "heading": "Details in focus",
+          "text": "The coordinated pale tones allow the jacket’s lapels, pocket lines and trouser waist to stand out through shape rather than contrast."
+        },
+        {
+          "heading": "Styling perspective",
+          "text": "The tonal pairing works as a complete ensemble, with shape and layering providing the visual detail."
+        }
+      ],
+      "editorialBasis": "Visible garment details; no customer-specific history asserted",
+      "testimonial": null
+    },
+    {
+      "slug": "cobalt-blue-suit",
+      "title": "Cobalt Blue Suit",
+      "context": "A vivid blue jacket and matching trousers form a coordinated suit, finished with small lapel and pocket accents.",
+      "published": true,
+      "completedWorkEvidence": "Owner authorization: Final Website Completion V2 request, 2026-10-30; existing genuine Mr Sewing project photographs confirmed by owner",
+      "publicationPermission": {
+        "approved": true,
+        "evidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30"
+      },
+      "images": [
+        {
+          "src": "/r2.jpeg",
+          "alt": "Completed cobalt blue suit with a patterned tie and lapel accessories",
+          "width": 451,
+          "height": 658,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in r2.jpeg"
+        }
+      ],
+      "editorial": [
+        {
+          "heading": "The silhouette",
+          "text": "The coordinated jacket and trousers make colour the focal point, with a fitted jacket front and clean lapels."
+        },
+        {
+          "heading": "Details in focus",
+          "text": "A patterned tie, pocket square and small lapel details add contrast to the blue fabric visible in the photograph."
+        },
+        {
+          "heading": "Styling perspective",
+          "text": "The expressive colour draws attention to the coordinated jacket and trousers, with small accessories adding another layer of contrast."
+        }
+      ],
+      "editorialBasis": "Visible garment details; no customer-specific history asserted",
+      "testimonial": null
+    },
+    {
+      "slug": "blue-jacket-black-trousers",
+      "title": "Blue Jacket, Dark Foundation",
+      "context": "A bright blue jacket is worn over a black top and dark trousers, creating a clear contrast between colour and neutral layers.",
+      "published": true,
+      "completedWorkEvidence": "Owner authorization: Final Website Completion V2 request, 2026-10-30; existing genuine Mr Sewing project photographs confirmed by owner",
+      "publicationPermission": {
+        "approved": true,
+        "evidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30"
+      },
+      "images": [
+        {
+          "src": "/r3.jpeg",
+          "alt": "Completed bright blue jacket worn with a black top and dark trousers",
+          "width": 658,
+          "height": 658,
+          "permissionEvidenceRef": "Owner authorization: Final Website Completion V2 request, 2026-10-30",
+          "projectAssociationEvidenceRef": "Visual inspection of the finished garment in r3.jpeg"
+        }
+      ],
+      "editorial": [
+        {
+          "heading": "The silhouette",
+          "text": "The jacket brings a defined shoulder and lapel line to a simple dark base. The open styling keeps the overall outline light."
+        },
+        {
+          "heading": "Details in focus",
+          "text": "The blue jacket, black layers and visible front buttons give the outfit its contrast, without relying on additional ornament."
+        },
+        {
+          "heading": "Styling perspective",
+          "text": "Dark layers give the blue jacket room to stand out, making the tailoring piece the clear focus of the ensemble."
+        }
+      ],
+      "editorialBasis": "Visible garment details; no customer-specific history asserted",
+      "testimonial": null
     }
-  ]
+  ],
+  "pendingPhotos": []
 }

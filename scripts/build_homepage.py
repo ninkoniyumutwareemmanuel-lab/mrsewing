@@ -140,7 +140,7 @@ def main():
     args = parser.parse_args()
     output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
-    navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script()
+    navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/hero-slideshow.js').read_text()
     navigation_path = ROOT / 'assets/homepage.js'
     if args.check:
         if navigation_path.read_text() != navigation:
