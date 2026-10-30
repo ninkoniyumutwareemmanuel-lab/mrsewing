@@ -1,158 +1,808 @@
-[
-  {
-    "id": "cat-visit",
-    "title": "Location & Visiting",
-    "questions": [
-      {
-        "question": "Where is Mr Sewing based?",
-        "answer": "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact the team for directions and to confirm the appropriate workshop or appointment location."
-      },
-      {
-        "question": "Do I need an appointment?",
-        "answer": "Confirm appointments directly with the team before relying on a preferred time. Ordinary Saturday visits do not require an appointment; Sunday and Umuganda visits require advance arrangements. Check the current hours in the website footer."
-      }
-    ]
+{
+  "topics": [
+    {
+      "slug": "custom-tailoring",
+      "title": "Custom Tailoring",
+      "description": "From your first design idea to fabric choices, measurements and a considered order.",
+      "destination": "/services/custom-tailoring/",
+      "icon": "needle",
+      "questions": [
+        "start-order",
+        "garment-options",
+        "own-fabric",
+        "design-details",
+        "tailoring-preparation",
+        "tailoring-next"
+      ],
+      "related": [
+        "collections-designs",
+        "measurements-fittings",
+        "prices-packages-payments"
+      ],
+      "keywords": [
+        "bespoke",
+        "custom",
+        "fabric",
+        "cloth",
+        "design"
+      ]
+    },
+    {
+      "slug": "wedding-tailoring",
+      "title": "Wedding & Civil Wedding Tailoring",
+      "description": "Plan ceremony outfits, design references and fittings around your wedding needs.",
+      "destination": "/services/wedding-tailoring/",
+      "icon": "rings",
+      "questions": [
+        "wedding-options",
+        "wedding-enquiry",
+        "wedding-fittings",
+        "wedding-inspiration",
+        "wedding-quote"
+      ],
+      "related": [
+        "custom-tailoring",
+        "prices-packages-payments",
+        "production-delivery"
+      ],
+      "keywords": [
+        "wedding",
+        "civil wedding",
+        "ceremony"
+      ]
+    },
+    {
+      "slug": "graduation-tailoring",
+      "title": "Graduation Tailoring",
+      "description": "Prepare a graduation outfit enquiry, discuss your references and plan fittings.",
+      "destination": "/services/graduation-tailoring/",
+      "icon": "cap",
+      "questions": [
+        "graduation-options",
+        "graduation-reference",
+        "graduation-fitting",
+        "graduation-gallery",
+        "graduation-inclusions"
+      ],
+      "related": [
+        "collections-designs",
+        "measurements-fittings",
+        "production-delivery"
+      ],
+      "keywords": [
+        "graduation",
+        "graduate",
+        "ceremony"
+      ]
+    },
+    {
+      "slug": "mobile-fitting",
+      "title": "Mobile Fitting",
+      "description": "Request a fitting visit in Kigali and understand what to prepare and confirm.",
+      "destination": "/services/mobile-fitting/",
+      "icon": "pin",
+      "questions": [
+        "mobile-how",
+        "mobile-location",
+        "mobile-prepare",
+        "mobile-fees",
+        "mobile-confirm"
+      ],
+      "related": [
+        "booking-visiting",
+        "measurements-fittings",
+        "production-delivery"
+      ],
+      "keywords": [
+        "mobile fitting",
+        "house call",
+        "visit"
+      ]
+    },
+    {
+      "slug": "alterations",
+      "title": "Alterations & Refinements",
+      "description": "Ask about fit adjustments, garment assessment, quotations and timing.",
+      "destination": "/services/alterations/",
+      "icon": "scissors",
+      "questions": [
+        "alter-existing",
+        "alter-options",
+        "alter-quote",
+        "alter-timing",
+        "alter-payment",
+        "alter-concern"
+      ],
+      "related": [
+        "measurements-fittings",
+        "prices-packages-payments",
+        "cancellations-changes"
+      ],
+      "keywords": [
+        "alterations",
+        "adjustment",
+        "repair",
+        "hemming"
+      ]
+    },
+    {
+      "slug": "express-tailoring",
+      "title": "Express Tailoring",
+      "description": "Discuss an urgent garment request without confusing work estimates with delivery dates.",
+      "destination": "/services/express-tailoring/",
+      "icon": "clock",
+      "questions": [
+        "express-request",
+        "express-details",
+        "express-delivery",
+        "express-availability",
+        "express-charge"
+      ],
+      "related": [
+        "production-delivery",
+        "prices-packages-payments",
+        "custom-tailoring"
+      ],
+      "keywords": [
+        "urgent",
+        "express",
+        "deadline",
+        "timing",
+        "turnaround"
+      ]
+    },
+    {
+      "slug": "garment-care",
+      "title": "Mr Sewing Garment Care",
+      "description": "Discuss garment suitability, care enquiries, payment and handover arrangements.",
+      "destination": "/services/garment-care/",
+      "icon": "hanger",
+      "questions": [
+        "care-enquiry",
+        "care-preparation",
+        "care-included",
+        "care-payment",
+        "care-timing",
+        "care-handover"
+      ],
+      "related": [
+        "prices-packages-payments",
+        "production-delivery",
+        "cancellations-changes"
+      ],
+      "keywords": [
+        "cleaning",
+        "care",
+        "garment",
+        "timing",
+        "turnaround"
+      ]
+    },
+    {
+      "slug": "collections-designs",
+      "title": "Collections & Design Requests",
+      "description": "Find inspiration, share an individual design and distinguish it from completed work.",
+      "destination": "/collections/",
+      "icon": "grid",
+      "questions": [
+        "collections-purpose",
+        "collections-browse",
+        "collections-share",
+        "collections-occasion",
+        "collections-customise"
+      ],
+      "related": [
+        "custom-tailoring",
+        "wedding-tailoring",
+        "prices-packages-payments"
+      ],
+      "keywords": [
+        "inspiration",
+        "design",
+        "gallery",
+        "share",
+        "reference"
+      ]
+    },
+    {
+      "slug": "measurements-fittings",
+      "title": "Measurements & Fittings",
+      "description": "Prepare measurements, discuss fit preferences and understand assessment appointments.",
+      "destination": "/made-to-measure/",
+      "icon": "ruler",
+      "questions": [
+        "measure-prepare",
+        "measure-options",
+        "measure-send",
+        "measure-ease",
+        "measure-concern"
+      ],
+      "related": [
+        "mobile-fitting",
+        "alterations",
+        "custom-tailoring"
+      ],
+      "keywords": [
+        "measurement",
+        "fitting",
+        "size",
+        "units"
+      ]
+    },
+    {
+      "slug": "prices-packages-payments",
+      "title": "Prices, Suit Packages & Payments",
+      "description": "Cotton base prices, standard contents, included items, quotations and payment stages.",
+      "destination": "/services/custom-tailoring/",
+      "icon": "receipt",
+      "questions": [
+        "cotton-prices",
+        "suit-contents",
+        "suit-package",
+        "suit-balance",
+        "standalone-payment",
+        "higher-collections",
+        "shirt-skirt",
+        "payment-methods"
+      ],
+      "related": [
+        "custom-tailoring",
+        "garment-care",
+        "production-delivery"
+      ],
+      "keywords": [
+        "price",
+        "RWF",
+        "payment",
+        "balance",
+        "deposit",
+        "Cotton"
+      ]
+    },
+    {
+      "slug": "booking-visiting",
+      "title": "Booking, Locations & Visiting",
+      "description": "Request an appointment, find the right location and prepare for a visit.",
+      "destination": "/contact/",
+      "icon": "calendar",
+      "questions": [
+        "locations",
+        "appointment-needed",
+        "request-appointment",
+        "reschedule",
+        "directions"
+      ],
+      "related": [
+        "mobile-fitting",
+        "measurements-fittings",
+        "custom-tailoring"
+      ],
+      "keywords": [
+        "appointment",
+        "booking",
+        "location",
+        "visit",
+        "hours"
+      ]
+    },
+    {
+      "slug": "production-delivery",
+      "title": "Production, Delivery & Collection",
+      "description": "Understand stage estimates, readiness, included Kigali delivery and other handover arrangements.",
+      "destination": "/our-process/",
+      "icon": "truck",
+      "questions": [
+        "production-start",
+        "tailoring-timing",
+        "delivery-arrangements",
+        "ready-notice",
+        "late-collection",
+        "outside-kigali"
+      ],
+      "related": [
+        "express-tailoring",
+        "prices-packages-payments",
+        "garment-care"
+      ],
+      "keywords": [
+        "production",
+        "timing",
+        "turnaround",
+        "delivery",
+        "collection"
+      ]
+    },
+    {
+      "slug": "cancellations-changes",
+      "title": "Cancellations, Refunds & Order Changes",
+      "description": "Find the review process for cancellations, refund requests and proposed changes.",
+      "destination": "/refund-policy/",
+      "icon": "chat",
+      "questions": [
+        "cancel-before",
+        "cancel-after",
+        "refund-review",
+        "order-change",
+        "policy-documents"
+      ],
+      "related": [
+        "prices-packages-payments",
+        "alterations",
+        "production-delivery"
+      ],
+      "keywords": [
+        "cancel",
+        "cancellation",
+        "refund",
+        "change"
+      ]
+    },
+    {
+      "slug": "privacy-photographs",
+      "title": "Privacy & Customer Photographs",
+      "description": "Understand form processing and where to ask about your information or a photograph.",
+      "destination": "/privacy-policy/",
+      "icon": "shield",
+      "questions": [
+        "photo-permission",
+        "form-processing",
+        "photo-request",
+        "data-questions",
+        "privacy-payments"
+      ],
+      "related": [
+        "booking-visiting",
+        "cancellations-changes",
+        "prices-packages-payments"
+      ],
+      "keywords": [
+        "privacy",
+        "photo",
+        "photograph",
+        "personal information"
+      ]
+    }
+  ],
+  "questions": {
+    "start-order": {
+      "question": "How do I place a suit order?",
+      "answer": "Share your design and garment needs, agree the details and quotation, and confirm measurements and fittings. {{suitPayment}} {{balance}}",
+      "keywords": []
+    },
+    "garment-options": {
+      "question": "What clothing can I discuss with Mr Sewing?",
+      "answer": "Discuss custom suits, jackets, trousers, skirts, formalwear and executive outfits for men and women. Share the garment you need and a reference; the team confirms what is feasible before an order is agreed.",
+      "keywords": []
+    },
+    "own-fabric": {
+      "question": "Can I bring my own fabric or sketch?",
+      "answer": "Yes. Bring sketches, reference photographs or cloth you already own. Ask the team to assess fabric quantity, suitability and any additional materials before agreeing the garment and quotation.",
+      "keywords": [
+        "cloth",
+        "drawing"
+      ]
+    },
+    "design-details": {
+      "question": "How are design and fabric details agreed?",
+      "answer": "Discuss the silhouette, proportions, colours and available fabric options with the team. Confirm the garment details, materials and quotation before paying. {{extras}}",
+      "keywords": []
+    },
+    "tailoring-preparation": {
+      "question": "What should I prepare for a tailoring enquiry?",
+      "answer": "Share the garment category, design references, occasion or event date, fabric preferences and available measurements. Tell the team your preferred fitting arrangements. See <a href=\"/faq/measurements-fittings/\">Measurements &amp; Fittings</a>.",
+      "keywords": []
+    },
+    "tailoring-next": {
+      "question": "Where can I find payment and package information?",
+      "answer": "See <a href=\"/faq/prices-packages-payments/#suit-balance\">Prices, Suit Packages &amp; Payments</a> for the advance, balance before suit cleaning and delivery, standard contents and Cotton prices. Agree the quotation and arrangements directly before proceeding.",
+      "keywords": []
+    },
+    "wedding-options": {
+      "question": "What wedding or civil-wedding outfits can I discuss?",
+      "answer": "Discuss a custom suit, tuxedo request or women’s formalwear for a wedding or civil ceremony. Share a reference so the team can confirm the design details and garment requirements.",
+      "keywords": []
+    },
+    "wedding-enquiry": {
+      "question": "What should I include in a wedding enquiry?",
+      "answer": "Share the ceremony type and date, garment needs, design references, colours, fabric preferences and fitting availability. Mention coordination requirements when discussing the quotation.",
+      "keywords": []
+    },
+    "wedding-fittings": {
+      "question": "When should I discuss wedding measurements and fittings?",
+      "answer": "Tell the team the ceremony date early and agree measurements, fitting appointments and a realistic production schedule individually. An enquiry does not guarantee an event deadline.",
+      "keywords": []
+    },
+    "wedding-inspiration": {
+      "question": "Where can I browse wedding inspiration?",
+      "answer": "Explore <a href=\"/collections/?occasion=wedding\">Wedding</a> or <a href=\"/collections/?occasion=civil-wedding\">Civil Wedding</a> collection filters. Only verified occasion matches appear. If a filter has no matches, discuss your reference directly; inspiration photographs do not imply a wedding package.",
+      "keywords": []
+    },
+    "wedding-quote": {
+      "question": "Is there a fixed wedding package or group price?",
+      "answer": "Confirm the garment details and quotation with the team. Do not assume a wedding or group price from a reference photograph. For standard suit contents and included items, see <a href=\"/faq/prices-packages-payments/\">Prices, Suit Packages &amp; Payments</a>.",
+      "keywords": []
+    },
+    "graduation-options": {
+      "question": "What graduation outfits can I enquire about?",
+      "answer": "Discuss graduation clothing for men or women, including a suit or an outfit developed from your references. The team confirms which garment details and fabric options are feasible.",
+      "keywords": []
+    },
+    "graduation-reference": {
+      "question": "What information helps with a graduation quotation?",
+      "answer": "Share your graduation date, preferred garment, reference photographs, colours and fabric preferences. Mention any practical ceremony requirements when discussing the design.",
+      "keywords": []
+    },
+    "graduation-fitting": {
+      "question": "How do I plan graduation measurements and fittings?",
+      "answer": "Arrange measurements and discuss fitting availability with the team before ordering. Timing and collection arrangements depend on the garment and confirmed capacity; an enquiry is not a promised completion date.",
+      "keywords": []
+    },
+    "graduation-gallery": {
+      "question": "Where can I find graduation designs and completed work?",
+      "answer": "Browse <a href=\"/collections/?occasion=graduation\">Graduation inspiration</a> and <a href=\"/our-work/\">Our Work</a> for genuine finished Mr Sewing projects. The inspiration gallery and completed-project gallery have different purposes.",
+      "keywords": []
+    },
+    "graduation-inclusions": {
+      "question": "What should I check before paying for a graduation suit?",
+      "answer": "Confirm the garment, design, measurements, quotation and full schedule. See <a href=\"/faq/prices-packages-payments/\">Prices, Suit Packages &amp; Payments</a> for standard suit contents, included initial cleaning and Kigali delivery, and payment stages.",
+      "keywords": []
+    },
+    "mobile-how": {
+      "question": "How do mobile fittings work?",
+      "answer": "Request a visit with your location and garment needs. Confirm coverage, scheduling and any charges directly before the visit. The included initial Kigali suit delivery does not automatically include mobile fittings or follow-up transport. See <a href=\"/services/mobile-fitting/\">Mobile Fitting</a>.",
+      "keywords": []
+    },
+    "mobile-location": {
+      "question": "Where can I request a mobile fitting?",
+      "answer": "Request measurements or fitting support at a home, office or hotel in Kigali. Share the address and access details. The team must confirm coverage, availability and the appointment; a request is not a promise of a visit.",
+      "keywords": []
+    },
+    "mobile-prepare": {
+      "question": "What should I prepare for the visit?",
+      "answer": "Have your design references, any existing measurements and the relevant garment ready if requesting a fitting. Explain fit concerns and any follow-up needs when arranging the appointment.",
+      "keywords": []
+    },
+    "mobile-fees": {
+      "question": "Are mobile fittings included in suit delivery?",
+      "answer": "Initial door-to-door Kigali suit delivery is included with the standard suit package. Mobile fitting visits, collection visits and follow-up transport are separate arrangements. Confirm scope and any charges directly; no universal visit fee is listed here.",
+      "keywords": []
+    },
+    "mobile-confirm": {
+      "question": "When is my requested visit confirmed?",
+      "answer": "Wait for the team to confirm the location, date, time, scope and any charges. Submitting a form or opening WhatsApp does not confirm an appointment. If you need to reschedule, contact the team as early as possible.",
+      "keywords": []
+    },
+    "alter-existing": {
+      "question": "Can you alter clothes I already own?",
+      "answer": "Describe the garment and requested adjustment so the team can assess suitability, quote the work and agree arrangements. See <a href=\"/services/alterations/\">Alterations &amp; Refinements</a>.",
+      "keywords": []
+    },
+    "alter-options": {
+      "question": "Which adjustments can I ask the team to assess?",
+      "answer": "Existing booking options include resizing and tapering, sleeve or hem adjustments, zipper or button repairs and lining work. Garment condition and construction determine what is suitable; not every change is possible for every garment.",
+      "keywords": []
+    },
+    "alter-quote": {
+      "question": "How is an alteration quotation prepared?",
+      "answer": "Describe the garment, current fit concern, requested change and any previous repairs or alterations. Arrange an assessment so the team can confirm the work, price, fitting needs and estimated timing before you agree.",
+      "keywords": []
+    },
+    "alter-timing": {
+      "question": "How long do alterations take?",
+      "answer": "{{alterationTiming}}",
+      "keywords": []
+    },
+    "alter-payment": {
+      "question": "When do I pay for a standalone alteration?",
+      "answer": "{{standalonePayment}} {{balance}}",
+      "keywords": []
+    },
+    "alter-concern": {
+      "question": "What if there is a fit concern?",
+      "answer": "If you believe a garment does not match the agreed order or has a fit problem, contact us promptly with the order details, a description and photographs if useful. Arrange an assessment with the team. Describe any measurements supplied remotely, wear, damage or previous alterations so the concern can be assessed. See the <a href=\"/refund-policy/#fit\">Refund &amp; Cancellation Policy</a>.",
+      "keywords": []
+    },
+    "express-request": {
+      "question": "How do I request express tailoring?",
+      "answer": "Share your exact deadline, garment, fabric and measurement needs. {{timing}} Confirm capacity, scope and the quotation before paying. See <a href=\"/services/express-tailoring/\">Express Tailoring</a>.",
+      "keywords": []
+    },
+    "express-details": {
+      "question": "What details are needed to assess an urgent request?",
+      "answer": "Send the exact date and time you need the garment, its type and a design reference. Explain whether fabric and measurements are already available so the team can assess the request against current capacity.",
+      "keywords": []
+    },
+    "express-delivery": {
+      "question": "Does an express tailoring estimate include cleaning and delivery?",
+      "answer": "No. {{timing}}",
+      "keywords": []
+    },
+    "express-availability": {
+      "question": "Does contacting the team reserve express production?",
+      "answer": "No. The team must confirm feasibility, scope, quotation, payment requirements and the agreed schedule. A form or message does not reserve production capacity or confirm an accepted order.",
+      "keywords": []
+    },
+    "express-charge": {
+      "question": "How do I confirm express charges and payment?",
+      "answer": "Request the quotation directly; do not assume an automatic surcharge or percentage. For suit orders, {{suitPayment}} {{balance}}",
+      "keywords": []
+    },
+    "care-enquiry": {
+      "question": "How do I enquire about cleaning?",
+      "answer": "Describe the garment and care label, and confirm available options, suitability, the quote and handover arrangements with <a href=\"/services/garment-care/\">Mr Sewing Garment Care</a>. {{careTiming}}",
+      "keywords": []
+    },
+    "care-preparation": {
+      "question": "What should I prepare for a care enquiry?",
+      "answer": "Share the garment type, care-label information, condition concerns and preferred completion date. Photographs can help begin the conversation. Confirm a suitable available service before arranging handover.",
+      "keywords": []
+    },
+    "care-included": {
+      "question": "Is cleaning included with a suit?",
+      "answer": "{{package}} Separately requested cleaning is discussed and quoted as its own service.",
+      "keywords": []
+    },
+    "care-payment": {
+      "question": "When is a standalone cleaning balance due?",
+      "answer": "{{standalonePayment}} {{balance}}",
+      "keywords": []
+    },
+    "care-timing": {
+      "question": "How do I confirm a cleaning completion date?",
+      "answer": "{{careTiming}} Agree the service and full schedule directly before proceeding; no universal cleaning deadline is given here.",
+      "keywords": []
+    },
+    "care-handover": {
+      "question": "How do I arrange care pickup or delivery?",
+      "answer": "Confirm any standalone care pickup, handover or delivery arrangements and charges with the team. These are separate from the included initial Kigali suit delivery. See <a href=\"/services/garment-care/planning/\">Garment Care planning</a>.",
+      "keywords": []
+    },
+    "collections-purpose": {
+      "question": "Are Collections and Our Work the same gallery?",
+      "answer": "No. <a href=\"/collections/\">Collections</a> provides design inspiration. <a href=\"/our-work/\">Our Work</a> presents genuine completed Mr Sewing projects. Discuss which details can be made for your request rather than assuming an inspiration photograph is a completed project.",
+      "keywords": []
+    },
+    "collections-browse": {
+      "question": "How do I find a design?",
+      "answer": "Browse <a href=\"/collections/\">All Designs</a>, <a href=\"/mensuits/\">Men</a> or <a href=\"/womensuits/\">Women</a>. Use gallery search and filters, then open a design’s dedicated page for its complete photograph and enquiry options.",
+      "keywords": []
+    },
+    "collections-share": {
+      "question": "How can I share or enquire about one design?",
+      "answer": "Open the individual design page and use Share Design or Request This Design. The link and stable design reference help identify the garment in your enquiry. Sharing a reference does not confirm an order or quotation.",
+      "keywords": []
+    },
+    "collections-occasion": {
+      "question": "What if an occasion filter shows no designs?",
+      "answer": "The gallery uses verified classifications. An empty result means there are no verified matches for that filter, not that an unrelated garment should be treated as a match. Share your reference and occasion with the team.",
+      "keywords": []
+    },
+    "collections-customise": {
+      "question": "Can I request changes to an inspiration design?",
+      "answer": "Explain which details you like and the changes you want. The team assesses the design, materials and feasibility before preparing a quotation. {{extras}}",
+      "keywords": []
+    },
+    "measure-prepare": {
+      "question": "What should I share before measurements or a fitting?",
+      "answer": "Explain the garment you need, design references, fit preferences and any existing measurements. Have the relevant garment available if discussing an adjustment. Agree the appointments needed for your garment.",
+      "keywords": []
+    },
+    "measure-options": {
+      "question": "Can I visit for measurements or request a mobile fitting?",
+      "answer": "Discuss a workshop appointment or request customer-location fitting support in Kigali. Mobile coverage, timing and charges require direct confirmation. See the <a href=\"/measurements/\">Measurement Guide</a> and <a href=\"/services/mobile-fitting/\">Mobile Fitting</a>.",
+      "keywords": []
+    },
+    "measure-send": {
+      "question": "Can I send a standard size or my own measurements?",
+      "answer": "The <a href=\"/measurement-submission/\">measurement request form</a> accepts a standard suit-size reference or body measurements. Use the <a href=\"/measurements/\">Measurement Guide</a>, state units clearly and discuss the information with the team. Submitting details does not confirm an accepted production order.",
+      "keywords": []
+    },
+    "measure-ease": {
+      "question": "Should I add extra room to body measurements?",
+      "answer": "Provide direct body measurements without extra room added, following the <a href=\"/measurements/\">Measurement Guide</a>. Discuss fit preferences with the team rather than altering the measurements yourself.",
+      "keywords": []
+    },
+    "measure-concern": {
+      "question": "How should I raise a measurement or fitting concern?",
+      "answer": "Contact the team with the order details, fit concern and any measurements supplied remotely. Explain wear, damage or previous alterations so the garment can be assessed. See <a href=\"/refund-policy/#fit\">garment concerns</a>; no automatic free-correction window is stated here.",
+      "keywords": []
+    },
+    "cotton-prices": {
+      "question": "What are the Cotton suit base prices?",
+      "answer": "{{cotton_table}} {{contents}} {{extras}}",
+      "keywords": []
+    },
+    "suit-contents": {
+      "question": "What is included in a two-piece or three-piece suit?",
+      "answer": "{{contents}}",
+      "keywords": []
+    },
+    "suit-package": {
+      "question": "What does the standard suit package include?",
+      "answer": "{{package}}",
+      "keywords": []
+    },
+    "suit-balance": {
+      "question": "When is the suit balance due?",
+      "answer": "{{suitPayment}} {{balance}}",
+      "keywords": []
+    },
+    "standalone-payment": {
+      "question": "How are standalone alterations and cleaning paid?",
+      "answer": "{{standalonePayment}} {{balance}}",
+      "keywords": []
+    },
+    "higher-collections": {
+      "question": "How much are higher collections?",
+      "answer": "{{higherCollections}} {{extras}}",
+      "keywords": []
+    },
+    "shirt-skirt": {
+      "question": "Is a shirt or skirt included at the standard price?",
+      "answer": "A shirt is not automatically included. Skirt-suit options require a separate quotation and confirmation; do not assume the standard jacket-and-trousers package price.",
+      "keywords": []
+    },
+    "payment-methods": {
+      "question": "What payment methods can I use?",
+      "answer": "Confirm the available payment method with the team when agreeing your quotation. Do not send a card or mobile-money PIN.",
+      "keywords": []
+    },
+    "locations": {
+      "question": "Where is Mr Sewing based?",
+      "answer": "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact the team for directions and to confirm the appropriate workshop or appointment location.",
+      "keywords": []
+    },
+    "appointment-needed": {
+      "question": "Do I need an appointment?",
+      "answer": "Confirm appointments directly with the team before relying on a preferred time. Ordinary Saturday visits do not require an appointment; Sunday and Umuganda visits require advance arrangements. Check the current hours in the website footer.",
+      "keywords": []
+    },
+    "request-appointment": {
+      "question": "How do I request an appointment?",
+      "answer": "Use the <a href=\"/booking/\">booking form</a> or contact the team. A submission is a request, not a confirmed appointment or accepted production order. Wait for direct confirmation of the arrangements.",
+      "keywords": []
+    },
+    "reschedule": {
+      "question": "What if I need to reschedule a visit?",
+      "answer": "Contact the team as early as possible with the appointment details. Ask about the next available arrangements and any payment already made.",
+      "keywords": []
+    },
+    "directions": {
+      "question": "How can I get directions and check opening hours?",
+      "answer": "Use the <a href=\"/contact/\">Contact page</a> for the existing workshop directions, map link, contact details and location information. Check the shared footer for current hours and confirm the right location before travelling.",
+      "keywords": []
+    },
+    "production-start": {
+      "question": "When does production start?",
+      "answer": "Production does not begin before the 70% advance is confirmed. The team confirms the production start and a realistic schedule directly; a website form or WhatsApp message alone does not start production.",
+      "keywords": []
+    },
+    "tailoring-timing": {
+      "question": "How long does tailoring take?",
+      "answer": "{{timing}}",
+      "keywords": []
+    },
+    "delivery-arrangements": {
+      "question": "How do delivery and collection work?",
+      "answer": "{{delivery}} Full payment is required before release. Confirm readiness and handover arrangements with the team.",
+      "keywords": []
+    },
+    "ready-notice": {
+      "question": "When should I arrange to collect or receive my suit?",
+      "answer": "Wait for readiness confirmation and agree handover arrangements with the team. For suits, the balance is due when tailoring is complete, before final cleaning and delivery. Full payment is required before release.",
+      "keywords": []
+    },
+    "late-collection": {
+      "question": "What if I cannot collect or receive my garment?",
+      "answer": "Contact the team with your order details to discuss handover arrangements. Full payment is required before release or delivery.",
+      "keywords": []
+    },
+    "outside-kigali": {
+      "question": "Who pays for delivery outside Kigali?",
+      "answer": "Outside-Kigali courier or agency charges are customer-paid and confirmed before dispatch. Confirm the provider and arrangements directly; no universal courier deadline is promised. Initial door-to-door Kigali delivery is included with the standard suit package.",
+      "keywords": []
+    },
+    "cancel-before": {
+      "question": "Can I cancel before production starts?",
+      "answer": "If you want to cancel before production has officially started, contact us as soon as possible with your order details and reason. The team reviews the order status and any costs already incurred, and explains the proposed outcome. A refund or deduction is considered case by case; neither an automatic refund nor automatic advance forfeiture is promised. See the <a href=\"/refund-policy/#before\">Refund &amp; Cancellation Policy</a>.",
+      "keywords": []
+    },
+    "cancel-after": {
+      "question": "What about a cancellation or refund after work starts?",
+      "answer": "For a request after production starts, contact the team with your order details and concern. We review the circumstances and discuss the available next steps. A request does not itself confirm a cancellation, refund or deduction. If we cannot complete an order for a reason on our side, we discuss a solution that may include a refund for work not delivered. Nothing on this page limits rights or remedies that apply under law.",
+      "keywords": []
+    },
+    "refund-review": {
+      "question": "How do I ask for a refund review?",
+      "answer": "Send your order details, reason and relevant payment or garment evidence. The team reviews the request and explains the proposed outcome. If a refund is agreed, confirm the amount, method and expected processing time directly.",
+      "keywords": []
+    },
+    "order-change": {
+      "question": "Can I change an order after it starts?",
+      "answer": "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed.",
+      "keywords": []
+    },
+    "policy-documents": {
+      "question": "Where can I read the current policy information?",
+      "answer": "Read the <a href=\"/terms-and-conditions/\">Terms &amp; Conditions</a> and <a href=\"/refund-policy/\">Refund &amp; Cancellation Policy</a> alongside your quotation and order confirmation. Contact the team about your particular circumstances; FAQs do not replace those documents.",
+      "keywords": []
+    },
+    "photo-permission": {
+      "question": "Does placing an order authorize use of my photograph?",
+      "answer": "No. Ordering or paying does not by itself authorize advertising use of your photograph. Discuss permissions separately and contact us about an existing image or removal request. See the <a href=\"/privacy-policy/#photos\">Privacy Policy</a>.",
+      "keywords": []
+    },
+    "form-processing": {
+      "question": "How are website form details processed?",
+      "answer": "Booking and measurement forms use Web3Forms to forward your request to Mr Sewing by email. Read the <a href=\"/privacy-policy/\">Privacy Policy</a> before submitting information.",
+      "keywords": []
+    },
+    "photo-request": {
+      "question": "How can I ask about an existing photograph?",
+      "answer": "Contact Mr Sewing with the page or image link so the photograph can be identified. Discuss permission or a removal request with the team; no automatic processing deadline is promised here.",
+      "keywords": []
+    },
+    "data-questions": {
+      "question": "How do I ask about my records or a correction?",
+      "answer": "Contact the team with the relevant booking or order details and describe your request. For information held by the business, corrections, deletion or photograph permissions, read the <a href=\"/privacy-policy/\">Privacy Policy</a>. Do not send unnecessary sensitive documents.",
+      "keywords": []
+    },
+    "privacy-payments": {
+      "question": "Should I send my payment PIN with an enquiry?",
+      "answer": "No. Do not send your card PIN or mobile-money PIN. Confirm the payment method and share only the relevant payment reference when needed for your order.",
+      "keywords": []
+    }
   },
-  {
-    "id": "cat-booking",
-    "title": "Booking & Appointments",
-    "questions": [
-      {
-        "question": "How do I request an appointment?",
-        "answer": "Use the <a href=\"/booking/\">booking form</a> or contact the team. A submission is a request, not a confirmed appointment or accepted production order. Wait for direct confirmation of the arrangements."
-      },
-      {
-        "question": "What if I need to reschedule a visit?",
-        "answer": "Contact the team as early as possible with the appointment details. Ask about the next available arrangements and any payment already made."
-      },
-      {
-        "question": "How do mobile fittings work?",
-        "answer": "Request a visit with your location and garment needs. Confirm coverage, scheduling and any charges directly before the visit. The included initial Kigali suit delivery does not automatically include mobile fittings or follow-up transport. See <a href=\"/services/mobile-fitting/\">Mobile Fitting</a>."
-      }
+  "synonyms": [
+    [
+      "deposit",
+      "advance",
+      "down payment",
+      "prepayment"
+    ],
+    [
+      "house call",
+      "mobile fitting",
+      "home fitting"
+    ],
+    [
+      "photo",
+      "photograph",
+      "picture"
+    ],
+    [
+      "cancel",
+      "cancellation"
+    ],
+    [
+      "turnaround",
+      "timing"
+    ],
+    [
+      "quote",
+      "quotation"
+    ],
+    [
+      "alteration",
+      "alterations",
+      "adjustment"
+    ],
+    [
+      "graduation",
+      "graduate"
+    ],
+    [
+      "civil marriage",
+      "civil wedding"
     ]
-  },
-  {
-    "id": "cat-ordering",
-    "title": "Ordering, Payments & Timing",
-    "questions": [
-      {
-        "question": "How do I place a suit order?",
-        "answer": "Share your design and garment needs, agree the details and quotation, and confirm measurements and fittings. {{suitPayment}} {{balance}}"
-      },
-      {
-        "question": "When is the suit balance due?",
-        "answer": "{{suitPayment}} {{balance}}"
-      },
-      {
-        "question": "How are standalone alterations and cleaning paid?",
-        "answer": "{{standalonePayment}} {{balance}}"
-      },
-      {
-        "question": "When does production start?",
-        "answer": "Production does not begin before the 70% advance is confirmed. The team confirms the production start and a realistic schedule directly; a website form or WhatsApp message alone does not start production."
-      },
-      {
-        "question": "How long does tailoring take?",
-        "answer": "{{timing}}"
-      },
-      {
-        "question": "How do I request express tailoring?",
-        "answer": "Share your exact deadline, garment, fabric and measurement needs. {{timing}} Confirm capacity, scope and the quotation before paying. See <a href=\"/services/express-tailoring/\">Express Tailoring</a>."
-      },
-      {
-        "question": "Can I change an order after it starts?",
-        "answer": "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed."
-      },
-      {
-        "question": "What is included in a two-piece or three-piece suit?",
-        "answer": "{{contents}}"
-      },
-      {
-        "question": "What does the standard suit package include?",
-        "answer": "{{package}}"
-      },
-      {
-        "question": "How do delivery and collection work?",
-        "answer": "{{delivery}} Full payment is required before release. Confirm readiness and handover arrangements with the team."
-      }
-    ]
-  },
-  {
-    "id": "cat-pricing",
-    "title": "Cotton Prices & Quotations",
-    "questions": [
-      {
-        "question": "What are the Cotton suit base prices?",
-        "answer": "{{cotton_table}} {{contents}} {{extras}}"
-      },
-      {
-        "question": "How much are higher collections?",
-        "answer": "{{higherCollections}} {{extras}}"
-      },
-      {
-        "question": "Is a shirt or skirt included at the standard price?",
-        "answer": "{{contents}}"
-      },
-      {
-        "question": "What payment methods can I use?",
-        "answer": "Confirm the available payment method with the team when agreeing your quotation. Do not send a card or mobile-money PIN."
-      }
-    ]
-  },
-  {
-    "id": "cat-alterations",
-    "title": "Fittings, Alterations & Garment Care",
-    "questions": [
-      {
-        "question": "Can you alter clothes I already own?",
-        "answer": "Describe the garment and requested adjustment so the team can assess suitability, quote the work and agree arrangements. See <a href=\"/services/alterations/\">Alterations &amp; Refinements</a>."
-      },
-      {
-        "question": "How long do alterations take?",
-        "answer": "{{alterationTiming}}"
-      },
-      {
-        "question": "What if there is a fit concern?",
-        "answer": "If you believe a garment does not match the agreed order or has a fit problem, contact us promptly with the order details, a description and photographs if useful. Arrange an assessment with the team. Describe any measurements supplied remotely, wear, damage or previous alterations so the concern can be assessed. See the <a href=\"/refund-policy/#fit\">Refund &amp; Cancellation Policy</a>."
-      },
-      {
-        "question": "How do I enquire about cleaning?",
-        "answer": "Describe the garment and care label, and confirm available options, suitability, the quote and handover arrangements with <a href=\"/services/garment-care/\">Mr Sewing Garment Care</a>. {{careTiming}}"
-      },
-      {
-        "question": "Is cleaning included with a suit?",
-        "answer": "{{package}} Separately requested cleaning is discussed and quoted as its own service."
-      }
-    ]
-  },
-  {
-    "id": "cat-policies",
-    "title": "Cancellations, Privacy & Customer Information",
-    "questions": [
-      {
-        "question": "Can I cancel before production starts?",
-        "answer": "If you want to cancel before production has officially started, contact us as soon as possible with your order details and reason. The team reviews the order status and any costs already incurred, and explains the proposed outcome. A refund or deduction is considered case by case; neither an automatic refund nor automatic advance forfeiture is promised. See the <a href=\"/refund-policy/#before\">Refund &amp; Cancellation Policy</a>."
-      },
-      {
-        "question": "What about a cancellation or refund after work starts?",
-        "answer": "For a request after production starts, contact the team with your order details and concern. We review the circumstances and discuss the available next steps. A request does not itself confirm a cancellation, refund or deduction. If we cannot complete an order for a reason on our side, we discuss a solution that may include a refund for work not delivered. Nothing on this page limits rights or remedies that apply under law."
-      },
-      {
-        "question": "How do I ask for a refund review?",
-        "answer": "Send your order details, reason and relevant payment or garment evidence. The team reviews the request and explains the proposed outcome. If a refund is agreed, confirm the amount, method and expected processing time directly."
-      },
-      {
-        "question": "What if I cannot collect or receive my garment?",
-        "answer": "Contact the team with your order details to discuss handover arrangements. Full payment is required before release or delivery."
-      },
-      {
-        "question": "Does placing an order authorize use of my photograph?",
-        "answer": "No. Ordering or paying does not by itself authorize advertising use of your photograph. Discuss permissions separately and contact us about an existing image or removal request. See the <a href=\"/privacy-policy/#photos\">Privacy Policy</a>."
-      },
-      {
-        "question": "How are website form details processed?",
-        "answer": "Booking and measurement forms use Web3Forms to forward your request to Mr Sewing by email. Read the <a href=\"/privacy-policy/\">Privacy Policy</a> before submitting information."
-      }
-    ]
+  ],
+  "legacyFragments": {
+    "cat-visit": "booking-visiting",
+    "cat-booking": "booking-visiting",
+    "cat-ordering": "production-delivery",
+    "cat-pricing": "prices-packages-payments",
+    "cat-alterations": "alterations",
+    "cat-policies": "cancellations-changes",
+    "orderModal": "custom-tailoring#start-order"
   }
-]
+}

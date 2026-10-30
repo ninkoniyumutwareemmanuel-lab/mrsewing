@@ -9,7 +9,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
 (async () => {
   execFileSync('python3', ['scripts/build_homepage.py', '--check'], { cwd:root, stdio:'inherit' });
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-  for (const section of ['hero-section','customers-section','services-section','collections-section','process-section','benefits-section','final-section']) assert(html.includes(`id="${section}"`));
+  for (const section of ['hero-section','customers-section','services-section','collections-section','process-section','benefits-section','programs-section','final-section']) assert(html.includes(`id="${section}"`));
   assert(!html.includes('loadComponents'));
   assert(!/\bfetch\s*\(/.test(fs.readFileSync(path.join(root, 'assets/homepage.js'), 'utf8')));
   const browser = await chromium.launch({ executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium', args:['--no-sandbox'] });

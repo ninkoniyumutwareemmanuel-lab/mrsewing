@@ -9,14 +9,19 @@ from customer_information import information,expand
 from build_public_routes import public_routes
 info=information();assert info['advancePercent']==70
 assert [(x['garment'],x['priceRwf']) for x in info['cotton']]==[('Men two-piece',200000),('Men three-piece',250000),('Women two-piece',150000),('Women three-piece',200000)]
+from faq_help import catalogue, routes as faq_routes
 for path,output in outputs().items():
  assert path.read_text()==output,path.name
- assert output.count('<header id="home">')==1
- assert "fetch('header.html')" not in output and "file: 'header.html'" not in output
-faq=(ROOT/'faq.html').read_text();schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',faq,re.S)[1])
-qs=[q for c in json.loads((ROOT/'_data/customer-faqs.json').read_text()) for q in c['questions']]
-assert len(qs)==30
-assert [(q['name'],q['acceptedAnswer']['text']) for q in schema['mainEntity']]==[(q['question'],plain(expand(q['answer']))) for q in qs]
+ if path.suffix=='.html':
+  assert output.count('<header ')==1
+  assert "fetch('header.html')" not in output and "file: 'header.html'" not in output
+hub_schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',(ROOT/'faq.html').read_text(),re.S)[1])
+assert hub_schema['@type']=='CollectionPage'
+data,topics,questions,_=catalogue()
+for topic in topics:
+ html=(ROOT/'faq'/topic['slug']/'index.html').read_text()
+ schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',html,re.S)[1])
+ assert [(q['name'],q['acceptedAnswer']['text']) for q in schema['mainEntity']]==[(questions[id]['question'],plain(expand(questions[id]['answer']))) for id in topic['questions']]
 # Inspect metadata/JSON-LD as well as visible HTML in affected public output.
 paths=[ROOT/n for n in ['index.html','faq.html','terms-and-conditions.html','refund-policy.html','privacy-policy.html','measurement-submission.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','why-choose.html']]+list((ROOT/'services').rglob('index.html'))
 for p in paths:
@@ -35,7 +40,7 @@ for file in ['booking.html','booking-housecall.html','booking-workplace.html','b
 source=(ROOT/'_templates/homepage-sections.html').read_text();hero=source.split('</section>',1)[0]
 assert 'data-hero-step' in hero and 'data-hero-select' not in hero
 assert 'Pause slideshow' not in hero and '>01<' not in hero and '>02<' not in hero
-assert 'id="programs"' not in source
+assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==3
 assert 'const interval=10000' in (ROOT/'_templates/hero-slideshow.js').read_text()
 assert len(list((ROOT/'collections/designs').glob('*/index.html')))==111
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.
@@ -45,5 +50,5 @@ protected=['assets/forms.js','assets/collections-v3.js','assets/collection-desig
 for file in files:
  if file in protected or file.startswith('collections/') or file.startswith('our-work/') or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==146
-print('PASS: four policy/FAQ outputs, 30 exact schema/visible answer pairs, Cotton rates and payment phases, stale-claim boundaries, unchanged forms/integrations/111 garment pages/projects/media and 146 routes.')
+assert len(public_routes())==146+len(faq_routes())
+print('PASS: policy/FAQ output and schema parity, Cotton prices/payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')
