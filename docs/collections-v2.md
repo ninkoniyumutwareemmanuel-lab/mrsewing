@@ -1,5 +1,9 @@
 # Collections V2 — architecture, migration and review
 
+Historical V2 reference. [Collections V3](collections-v3.md) supersedes the gallery,
+viewer, favourites and design-link behavior described below. Original registry,
+rights/provenance and image preservation requirements still apply.
+
 Working branch: `phase1/customer-journey-repairs`.
 Audit baseline: `4a8b61d9ec16d6d191b0d39af77234d0dd341454`.
 No production branch, DNS, hosting configuration or approved page design changed.

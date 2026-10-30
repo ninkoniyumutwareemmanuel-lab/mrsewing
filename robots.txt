@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://mrsewingfashion.com/sitemap.xml
+
+Sitemap: https://mrsewingfashion.com/collections/designs/sitemap.xml

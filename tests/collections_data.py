@@ -27,5 +27,6 @@ rejected(lambda d:d['designs'][0]['images'][0].update(src='/missing-collection-p
 rejected(lambda d:d['designs'][0].update(provenance='made_by_mr_sewing',provenanceEvidence=None))
 rejected(lambda d:d['designs'][0].update(rightsStatus='restricted',published=True))
 rejected(lambda d:d['designs'][0].update(publicationBasis='new_unreviewed_photo',published=True))
+rejected(lambda d:d['designs'][0]['images'].append(deepcopy(d['designs'][0]['images'][0])))
 rejected(lambda d:d['retiredIds'].append(d['designs'][0]['id']))
 print(f'PASS: {len(public)} existing-public records, {len(inventory["images"])} inventoried assets; stable IDs, source ownership-review gates, missing assets, invalid provenance and retirement guards.')

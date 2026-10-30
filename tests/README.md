@@ -397,22 +397,30 @@ responsive image delivery, menu behavior, both CTA routes and legacy URL. It
 saves review screenshots outside the repository under the review workspace.
 
 
-### Collections V2
+### Collections V3 — Luxury Minimalist Showroom
 
-Source records: `_data/collection-designs.json`. Stable ID/source anchors and all
-original/derivative image mappings are maintained alongside it. See
-[Collections maintenance and route mapping](../docs/collections-v2.md).
+Three galleries and eligible static garment pages are generated from the existing
+registry. See [Collections V3 maintenance and verification](../docs/collections-v3.md).
+No original images, registry IDs, rights rules or approved shared pages changed.
 
 ```sh
-python3 scripts/build_site.py
-python3 scripts/build_site.py --check
-python3 tests/collections_data.py
-python3 tests/shared_components.py
-node tests/collections-v2.spec.cjs
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_site.py --check
+PYTHONDONTWRITEBYTECODE=1 python3 tests/collections_data.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/collections_pages.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/shared_components.py
+node tests/collections-v3.spec.cjs
 ```
 
-The browser suite tests three routes at seven widths, combined filters/search,
-pagination, accessible viewer/history/swipes, multi-photo fixtures, share mocks,
-favourites/storage and bounded shortlist messages, no-JS fallback and legacy
-routes. No external requests or real messages are sent. System Chromium is used;
-Firefox and WebKit binaries were not available in this environment.
+Start the static server on port 8000 first. The V2 test filename remains an alias
+for V3; favourites and shortlists are retired. Browser tests cover all 111 eligible
+URLs, seven gallery widths, filters/Load More, legacy links, related designs,
+WhatsApp encoding, full-screen focus/keyboard/swipe, share mocks and no-JS access.
+Screenshots default to `/workspace/artifacts/collections-v3` outside the checkout;
+set `REVIEW_ARTIFACTS` to choose another artifact directory.
+
+Optional automated WCAG scans use @axe-core/playwright 4.14.0 installed outside the
+repository. Expose that package and the existing Playwright through NODE_PATH,
+then run `node tests/collections-accessibility.cjs`. Tests block external requests
+and never send actual enquiries. Automated scans complement manual keyboard and
+responsive checks; they do not establish complete accessibility conformance.

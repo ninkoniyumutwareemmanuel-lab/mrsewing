@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Validate the centralized design registry and build three static V2 showrooms."""
+"""Validate the centralized design registry and build three V3 showrooms and eligible static garment pages."""
 import argparse,csv,io,json,re
 from html import escape
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 import shared_components as shared
 from build_homepage import reserve_image_space
 from build_clean_urls import legacy_script
 from homepage_resources import delivery,CSS as ICON_CSS
 ROOT=Path(__file__).resolve().parents[1]
-PAGES={'collections.html':('all','Discover Your Signature Style.'),'mensuits.html':('men','Tailoring with Your Signature.'),'womensuits.html':('women','An Expression of Your Style.')}
+PAGES={'collections.html':('all','The Collections'),'mensuits.html':('men','Men’s Collection'),'womensuits.html':('women','Women’s Collection')}
 SIZES='(min-width: 1100px) 280px, (min-width: 600px) 30vw, calc((100vw - 52px) / 2)'
 
 def load():
@@ -45,7 +45,7 @@ def load():
             candidates.append({'src':image['src'],'width':image['width']})
             avifs=[{'src':'/'+v['src'],'width':v['width']} for v in avif.get(original,{}).get('variants',[]) if v['width']<=960]
             for v in candidates+avifs:assert (ROOT/v['src'].lstrip('/')).is_file(),v
-            images.append({**{k:image[k] for k in ['alt','position','width','height']},'src':quote(image['src'],safe='/'),'thumb':quote(candidates[0]['src'],safe='/'),'srcset':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in candidates),'avif':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in avifs)})
+            images.append({**{k:image[k] for k in ['position','width','height']},'alt':re.sub(r'\s*[—·-]\s*MS-\d+\s*$','',image['alt']),'src':quote(image['src'],safe='/'),'thumb':quote(candidates[0]['src'],safe='/'),'srcset':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in candidates),'avif':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in avifs)})
         if record['published']:published.append({k:record[k] for k in ['id','slug','name','gender','styles','occasions','colors','garmentType','description','provenance']}|{'images':images})
     assert not ids.intersection(content['retiredIds'])
     assert set(registry)==ids|set(content['retiredIds']),'Registry entries must remain present or explicitly retired'
@@ -56,7 +56,7 @@ def load():
         record=source_records.get(row['designId'])
         if record:
             row['provenance']=record['provenance'];row['rightsStatus']=record['rightsStatus']
-            row['galleryLocation']='/collections/?design='+record['id'] if record['published'] else None
+            row['galleryLocation']=design_route(record) if record['published'] else None
             row['groupedWithOtherPhotographs']=len(record['images'])>1
         elif row['designId'] in content['retiredIds']:
             row['galleryLocation']=None;row['excludedReason']='Design retired; source asset retained.'
@@ -73,32 +73,82 @@ def load():
 
 def picture(image,eager=False):
     attrs=f'width="{image["width"]}" height="{image["height"]}" alt="{escape(image["alt"],quote=True)}" decoding="async" loading="'+('eager" fetchpriority="high"' if eager else 'lazy"')
-    src=f'<img src="{image["thumb"]}" srcset="{image["srcset"]}" sizes="{SIZES if not eager else "(min-width: 768px) 340px, 50vw"}" {attrs} style="object-position:{image["position"]}">'
-    return ('<picture><source type="image/avif" srcset="'+image['avif']+'" sizes="'+(SIZES if not eager else '(min-width: 768px) 340px, 50vw')+'">'+src+'</picture>') if image['avif'] else src
+    src=f'<img src="{image["thumb"]}" srcset="{image["srcset"]}" sizes="{SIZES if not eager else "(min-width: 768px) 680px, 100vw"}" {attrs} style="object-position:{image["position"]}">'
+    return ('<picture><source type="image/avif" srcset="'+image['avif']+'" sizes="'+(SIZES if not eager else '(min-width: 768px) 680px, 100vw')+'">'+src+'</picture>') if image['avif'] else src
 
-def card(design):
-    return f'<article class="show-card" data-id="{design["id"]}"><a class="design-preview view-details-btn" href="/collections/?design={design["id"]}#design-{design["id"]}" data-open="{design["id"]}">{picture(design["images"][0])}<span class="show-card-copy"><span>{escape(design["name"])}</span><small>{design["id"]}</small></span></a><button class="save-design" data-save="{design["id"]}" aria-label="Save {design["id"]} to favourites" aria-pressed="false">♡</button></article>'
+def design_name(d):
+    # These terms come only from the reviewed V2 category metadata.
+    style = ' & '.join(s.replace('-', ' ').title().replace('Double Breasted', 'Double-Breasted') for s in d['styles'])
+    if d['gender'] == 'women':return (style+' Women’s Suit').strip()
+    if d['gender'] == 'men':return (style+' Tailored Suit').strip()
+    return 'Tailoring Design'
+
+def design_route(d):
+    return '/collections/designs/'+d['slug']+'/'
+
+def design_description(d):
+    return d['description'] or 'A starting point for your personal tailoring consultation. Share the photograph with us to discuss your preferences and what is possible.'
+
+def card(design,eager=False):
+    photo=picture(design["images"][0])
+    if eager:photo=photo.replace('loading="lazy"','loading="eager"')
+    return f'<article class="show-card" data-id="{design["id"]}"><a class="design-preview view-details-btn" href="{design_route(design)}">{photo}<span class="show-card-copy">{escape(design_name(design))}</span></a></article>'
+
+def chrome(route):
+    header=delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header(route)),'header')
+    return header,delivery(shared.footer(),'footer')
+
+def fill(template,values):
+    source=(ROOT/'_templates'/template).read_text()
+    for key,value in values.items():source=source.replace('{{'+key+'}}',value)
+    assert not re.search(r'{{\w+}}',source),'Unexpanded showroom placeholder'
+    return '<!-- Generated by scripts/build_collections.py; edit collection templates. -->\n'+source
+
+def public_data(d):
+    return dict(d,name=design_name(d),url=design_route(d))
+
+def json_script(data):
+    return json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
 
 def render(name,gender,title,designs):
     seo=json.loads((ROOT/'_data/page-seo.json').read_text())[name];route='/'+name[:-5]+'/'
     selected=[d for d in designs if gender=='all' or d['gender']==gender]
-    hero=next(d for d in designs if d['images'][0]['src']=='/r4.jpeg') if gender=='all' else next(d for d in designs if d['gender']==gender)
-    men=[d for d in designs if d['gender']=='men'][1];women=[d for d in designs if d['gender']=='women'][1]
-    data=json.dumps({'designs':designs,'defaultGender':gender},ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
-    styles=sorted({s for d in designs for s in d['styles']});occasions=sorted({s for d in designs for s in d['occasions']})
-    opts=lambda values:''.join('<option value="'+escape(s,quote=True)+'">'+escape(s.replace('-',' ').title())+'</option>' for s in values)
-    header=delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header(route)),'header')
-    values={'header':header,'footer':delivery(shared.footer(),'footer'),'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'men_card':picture(men['images'][0]),'women_card':picture(women['images'][0]),'hero':picture(hero['images'][0],True),'cards':''.join(card(d) for d in selected[:12]),'styles_options':opts(styles),'occasions_options':opts(occasions),'occasion_links':''.join('<button type="button" data-occasion="'+s+'">'+escape(s.title())+' <span aria-hidden="true">↗</span></button>' for s in occasions),'data':data,'fallback':''.join('<li id="design-'+d['id']+'"><a href="'+d['images'][0]['src']+'">'+escape(d['name'])+' · '+d['id']+'</a></li>' for d in designs),'count':str(len(selected))}
-    schema={'@context':'https://schema.org','@type':'CollectionPage','@id':'https://mrsewingfashion.com'+route+'#webpage','url':'https://mrsewingfashion.com'+route,'name':seo['title'],'description':seo['description'],'about':{'@id':'https://mrsewingfashion.com/#organization'},'mainEntity':{'@type':'ItemList','numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'name':d['name']+' '+d['id'],'url':'https://mrsewingfashion.com'+route+'?design='+d['id']+'#design-'+d['id']} for i,d in enumerate(selected[:12])]}}
-    values['schema']=json.dumps(schema,ensure_ascii=False)
-    source=(ROOT/'_templates/collections.html').read_text()
-    for key,value in values.items():source=source.replace('{{'+key+'}}',value)
-    assert not re.search(r'{{\w+}}',source),'Unexpanded showroom placeholder'
-    return '<!-- Generated by scripts/build_collections.py; edit centralized collection data/templates. -->\n'+source
+    header,footer=chrome(route)
+    options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in designs for v in d[key]}))
+    nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/collections/','All Designs'),('/mensuits/','Men'),('/womensuits/','Women')])
+    values={'header':header,'footer':footer,'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'cards':''.join(card(d,i<4) for i,d in enumerate(selected[:12])),'styles_options':options('styles'),'occasions_options':options('occasions'),'data':json_script({'designs':[public_data(d) for d in designs],'defaultGender':gender}),'fallback':''.join('<li><a href="'+design_route(d)+'">'+escape(design_name(d))+'</a></li>' for d in selected),'count':str(len(selected)),'collection_nav':nav}
+    schema={'@context':'https://schema.org','@type':'CollectionPage','@id':'https://mrsewingfashion.com'+route+'#webpage','url':'https://mrsewingfashion.com'+route,'name':seo['title'],'description':seo['description'],'about':{'@id':'https://mrsewingfashion.com/#organization'},'mainEntity':{'@type':'ItemList','numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'name':design_name(d),'url':'https://mrsewingfashion.com'+design_route(d)} for i,d in enumerate(selected)]}}
+    values['schema']=json_script(schema)
+    return fill('collections.html',values)
+
+def recommendations(d,designs):
+    def score(other):
+        # Empty/unclassified metadata is never evidence of similarity.
+        return (3*len(set(d['styles'])&set(other['styles']))+2*len(set(d['occasions'])&set(other['occasions']))+int(d['gender']!='unclassified' and d['gender']==other['gender']))
+    candidates=[other for other in designs if other['id']!=d['id']]
+    similar=sorted([other for other in candidates if score(other)>0],key=lambda other:-score(other))[:4]
+    used={d['id'],*(other['id'] for other in similar)}
+    more=[other for other in candidates if other['id'] not in used][:4]
+    return similar,more
+
+def render_design(d,designs):
+    route=design_route(d);header,footer=chrome(route);name=design_name(d);similar,more=recommendations(d,designs)
+    url='https://mrsewingfashion.com'+route
+    msg='Hello Mr Sewing! I would like to discuss this design.\nDesign: '+name+'\nReference: '+d['id']+'\nLink: '+url
+    image=d['images'][0]
+    # No unsupported Product/offers/ownership claims.
+    schema={'@context':'https://schema.org','@type':'WebPage','name':name+' | Mr Sewing','url':url,'description':design_description(d),'primaryImageOfPage':{'@type':'ImageObject','contentUrl':'https://mrsewingfashion.com'+image['src']}}
+    values={'header':header,'footer':footer,'route':route,'name':escape(name),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'https://wa.me/250787411501?'+urlencode({'text':msg}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
+    return fill('collection-design.html',values)
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
     designs,inventory=load();outputs={ROOT/name:render(name,*config,designs) for name,config in PAGES.items()}
+    outputs.update({ROOT/design_route(d).strip('/')/'index.html':render_design(d,designs) for d in designs})
+    outputs[ROOT/'collections/designs/sitemap.xml']='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('<url><loc>https://mrsewingfashion.com'+design_route(d)+'</loc></url>\n' for d in designs)+'</urlset>\n'
+    expected={ROOT/design_route(d).strip('/')/'index.html' for d in designs}
+    stale=set((ROOT/'collections/designs').glob('*/index.html'))-expected
+    if stale:raise SystemExit('Review obsolete garment pages before publication: '+', '.join(str(p.relative_to(ROOT)) for p in sorted(stale)))
     outputs[ROOT/'assets/collections-navigation.js']='/* Generated from the approved shared menu controller. */\n'+shared.menu_script()+'\nfunction legacyOrderBookmark(){if(location.hash===\"#orderModal\")location.replace(\"/#orderModal\");}\naddEventListener(\"hashchange\",legacyOrderBookmark);legacyOrderBookmark();\n'
     out=io.StringIO();fields=['originalImagePath','sourceOriginal','designId','galleryLocation','groupedWithOtherPhotographs','provenance','rightsStatus','missing','excludedReason','legacyReferences'];writer=csv.DictWriter(out,fields,lineterminator="\n");writer.writeheader()
     for r in inventory['images']:writer.writerow({**r,'legacyReferences':'; '.join(r['legacyReferences'])})
@@ -108,6 +158,8 @@ def main():
     for path,output in outputs.items():
         if args.check:
             if not path.exists() or path.read_text()!=output:raise SystemExit('Stale collection output: '+str(path.relative_to(ROOT)))
-        else:path.write_text(output)
-    print(f'PASS: {len(designs)} published designs validated; 3 showroom sources and migration/rights reports '+('synchronized.' if args.check else 'generated.'))
+        else:
+            path.parent.mkdir(parents=True,exist_ok=True)
+            path.write_text(output)
+    print(f'PASS: {len(designs)} published designs validated; 3 showroom sources, static garment pages and migration/rights reports '+('synchronized.' if args.check else 'generated.'))
 if __name__=='__main__':main()
