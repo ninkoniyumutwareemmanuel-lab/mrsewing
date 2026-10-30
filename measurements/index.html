@@ -5,6 +5,7 @@
   <base href="/">
   <link rel="ard" type="application/json" href="/ai-catalog.json">
   <link rel="ai-catalog" type="application/json" href="/ai-catalog.json">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suit Measurement Guide, Kigali | Mr Sewing Fashion</title>
@@ -64,553 +65,183 @@
     }
 </script>
 
-    <!-- Font Awesome CDN for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>document.documentElement.classList.add("js");</script>
+<style>:root { --ink:#0b0b0b; --paper:#f1eee6; --gold:#d4af37; --muted:#b9b9b1; --line:#34352f; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:90px; }
+body { margin:0; background:var(--ink); color:var(--paper); font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+img { max-width:100%; display:block; }
+a { color:inherit; }
+button { font:inherit; }
+figure, h1, h2, h3, p, ul, ol, dl, dd { margin:0; }
+:focus-visible { outline:2px solid var(--gold); outline-offset:5px; }
+.home-shell { width:min(1200px,calc(100% - 40px)); margin-inline:auto; }
+.home-section { padding-block:56px; }
+h1, h2 { font-family:Georgia,'Times New Roman',serif; font-weight:400; letter-spacing:-.035em; }
+h1 { font-size:clamp(38px,10.2vw,48px); line-height:1.08; text-wrap:balance; }
+h1 em { color:var(--gold); font-weight:400; }
+h2 { font-size:clamp(32px,8.4vw,40px); line-height:1.14; text-wrap:balance; }
+h3 { font-size:19px; line-height:1.3; font-weight:500; letter-spacing:-.01em; }
+p { color:var(--muted); }
+.home-eyebrow { margin-bottom:18px; color:var(--gold); font-size:10px; line-height:1.5; letter-spacing:.18em; text-transform:uppercase; font-weight:600; }
+.section-heading { margin-bottom:30px; }
+.section-heading > p:not(.home-eyebrow) { margin-top:20px; max-width:450px; }
+.home-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:52px; padding:14px 22px; font-size:14px; line-height:1.5; font-weight:600; text-decoration:none; border:0; border-radius:2px; transition:background .2s,color .2s; }
+.home-button-gold { background:var(--gold); color:var(--ink); }
+.home-button-gold:hover { background:#ebce6f; }
+.home-button-dark { background:var(--ink); color:var(--paper); }
+.home-button-dark:hover { background:#292a23; }
+.home-text-link { display:inline-flex; align-items:center; gap:10px; min-height:44px; padding-block:9px; text-decoration:underline; text-underline-offset:5px; font-size:14px; line-height:1.6; }
+.home-text-link:hover { text-decoration-thickness:2px; }
+.home-arrow { font-size:0; width:12px; height:12px; display:inline-block; position:relative; flex-shrink:0; }
+.home-arrow-down { transform:rotate(135deg); }
+.home-arrow::before { content:''; position:absolute; border-top:1.5px solid currentColor; width:13px; left:-1px; top:6px; transform:rotate(-45deg); }
+.home-arrow::after { content:''; position:absolute; width:8px; height:8px; border-top:1.5px solid currentColor; border-right:1.5px solid currentColor; right:0; top:0; }
+.visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip-link { position:fixed; top:-100px; left:20px; z-index:10000; padding:12px 20px; background:var(--gold); color:var(--ink); }
+.skip-link:focus { top:10px; }
+#site-header { position:sticky; top:0; z-index:1000; background:var(--ink); }
+.homepage-header { position:relative; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; min-height:72px; gap:24px; }
+.home-brand { display:flex; align-items:center; flex-shrink:0; gap:12px; text-decoration:none; min-height:48px; }
+.header-logo { width:72px; height:auto; aspect-ratio:1244/802; mix-blend-mode:screen; }
+.brand-name { display:none; font-size:12px; letter-spacing:.14em; line-height:1.7; }
+.home-menu-toggle { display:none; color:var(--paper); background:none; border:0; padding:10px; width:44px; height:44px; cursor:pointer; }
+.js .home-menu-toggle { display:grid; place-items:center; }
+.header-order { display:none; border:0; border-radius:2px; font-family:inherit; cursor:default; }
+.coming-soon { font-size:10px; font-weight:400; letter-spacing:.025em; white-space:nowrap; }
+.shop-nav-coming-soon { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:44px; padding:0; border:0; background:none; color:var(--muted); text-align:left; font-size:14px; cursor:default; }
+.shop-nav-coming-soon .coming-soon { color:var(--gold); }
+.homepage-header nav { width:100%; }
+.homepage-header nav ul { display:flex; flex-direction:column; flex-wrap:wrap; list-style:none; padding:0; gap:4px 24px; }
+.homepage-header nav a { display:inline-flex; align-items:center; min-height:44px; font-size:14px; text-decoration:none; }
+.homepage-header nav a:hover, .homepage-header nav a[aria-current] { color:var(--gold); }
+.header-inner { flex-wrap:wrap; }
+.homepage-header nav { padding-bottom:12px; }
+.js .header-inner { flex-wrap:nowrap; }
+.js #home-navigation { display:none; position:absolute; top:100%; left:auto; right:20px; width:min(280px,calc(100% - 40px)); padding:8px 18px; background:#11120f; border:1px solid #292a22; border-radius:2px; box-shadow:0 8px 16px #0003; max-height:calc(100dvh - 88px); overflow:auto; }
+.js #home-navigation[data-open="true"] { display:block; }
+.js #home-navigation ul { display:flex; flex-direction:column; gap:0; }
+.js #home-navigation a { position:relative; width:100%; }
+.js #home-navigation a[aria-current]::before { content:""; position:absolute; left:-10px; width:2px; height:12px; background:var(--gold); }
+.home-final { background:var(--gold); color:var(--ink); }
+.home-final .home-eyebrow { color:#3f350f; }
+.home-final p:not(.home-eyebrow) { color:#39331c; margin-top:20px; max-width:500px; font-size:15px; }
+.final-actions { display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-top:26px; }
+.final-actions .home-button { width:100%; font-size:13px; gap:12px; }
+.home-final :focus-visible { outline-color:var(--ink); }
+.homepage-footer { padding:28px 0 20px; background:var(--ink); }
+.footer-top { display:grid; grid-template-columns:1fr 1fr; grid-template-areas:'quick policies' 'location location' 'hours hours' 'order order'; gap:18px 22px; }
+.footer-col { min-width:0; }
+.footer-col h3 { font-family:Arial,Helvetica,sans-serif; font-size:10px; line-height:1.5; color:var(--gold); text-transform:uppercase; letter-spacing:.12em; font-weight:600; margin-bottom:10px; }
+.footer-col p, .footer-col a, .footer-col dl { font-size:13px; line-height:1.5; color:var(--muted); }
+.footer-col a { text-decoration:none; }
+.footer-col a:hover { color:var(--paper); text-decoration:underline; text-underline-offset:3px; }
+.footer-col ul { padding:0; list-style:none; }
+.footer-col li a { display:inline-flex; align-items:center; min-height:32px; }
+.footer-quick { grid-area:quick; }
+.footer-policies { grid-area:policies; }
+.footer-location { grid-area:location; display:grid; grid-template-columns:1fr 1fr; gap:0 20px; }
+.footer-location h3, .footer-location > a { grid-column:1/-1; }
+.footer-location p strong { color:var(--paper); font-weight:400; }
+.footer-location > a { margin-top:6px; min-height:36px; color:var(--gold); }
+.footer-hours { grid-area:hours; }
+.footer-sunday { margin-top:8px; }
+.footer-hours-details { margin-top:8px; font-size:12px; color:var(--muted); }
+.footer-hours-details summary { cursor:pointer; min-height:32px; display:list-item; color:var(--paper); }
+.footer-hours-details p { margin-top:8px; }
+.footer-order-col { grid-area:order; display:grid; grid-template-columns:1fr 1fr; gap:0 16px; }
+.footer-order-col h3, .footer-email { grid-column:1/-1; }
+.footer-order-col > a { min-height:34px; display:inline-flex; align-items:center; gap:10px; }
+.footer-order-col .order-btn, .footer-order-col .footer-contact { color:var(--paper); background:none; padding:0; text-decoration:underline; text-underline-offset:4px; font-weight:400; }
+.footer-email { display:block!important; padding-top:7px; overflow-wrap:anywhere; }
+.footer-bottom { display:flex; flex-direction:column-reverse; align-items:flex-start; gap:10px; padding-top:16px; margin-top:18px; border-top:1px solid #272822; }
+.social-icons { display:flex; gap:8px; }
+.social-icons a { display:grid; place-items:center; width:36px; height:36px; color:var(--muted); text-decoration:none; }
+.social-icons a:hover { color:var(--gold); }
+.footer-bottom-copy p { color:#a1a199; font-size:10px; }
+@media(min-width:600px) {
+.home-shell { width:min(1200px,calc(100% - 64px)); }
+.home-section { padding-block:72px; }
+.js #home-navigation { right:32px; }
+.footer-top { grid-template-areas:'quick policies' 'location hours' 'order order'; }
+.footer-location { display:block; }
+.footer-location p + p { margin-top:12px; }
+.footer-order-col { max-width:500px; }
+}
+@media(min-width:768px) {
+h1 { font-size:clamp(40px,4.7vw,64px); }
+h2 { font-size:clamp(36px,3.5vw,48px); }
+.final-layout { display:grid; grid-template-columns:1.25fr 1fr; align-items:center; gap:60px; }
+.final-actions { align-items:flex-start; margin-top:0; }
+.final-actions .home-button { width:auto; }
+}
+@media(min-width:1100px) {
+.header-inner { min-height:88px; flex-wrap:nowrap; }
+.brand-name { display:block; }
+.header-logo { width:66px; }
+.js .home-menu-toggle { display:none; }
+.homepage-header nav, .js #home-navigation { display:block; position:static; width:auto; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; max-height:none; overflow:visible; }
+.homepage-header nav ul, .js #home-navigation ul { display:flex; flex-direction:row; flex-wrap:nowrap; gap:26px; }
+.js #home-navigation a[aria-current]::before { content:none; }
+.mobile-shop { display:none; }
+.header-order { display:inline-flex; align-items:center; gap:10px; min-height:44px; background:var(--gold); color:var(--ink); padding:10px 18px; text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; }
+.footer-top { grid-template-areas:'quick location hours policies order'; grid-template-columns:.85fr 1.15fr 1.45fr .95fr 1.3fr; gap:28px; }
+.homepage-footer { padding:44px 0 20px; }
+.footer-order-col { display:flex; flex-direction:column; align-items:flex-start; }
+.footer-bottom { flex-direction:row; align-items:center; justify-content:space-between; margin-top:28px; padding-top:16px; }
+}
+@media(prefers-reduced-motion:reduce) {
+html, * { scroll-behavior:auto!important; }
+* { transition:none!important; }
+}
+.homepage-header .nav-shop {gap:5px}
+.footer-quick ul {display:grid;grid-template-columns:1fr 1fr;column-gap:12px}
+.footer-quick li a {min-height:44px}
+.footer-quick .nav-shop {flex-wrap:wrap;column-gap:4px}
+.footer-quick .coming-soon {font-size:9px}
+@media(min-width:1100px) {
+.homepage-header nav ul, .js #home-navigation ul {gap:15px}
+.homepage-header nav a {font-size:13px}
+.brand-name {font-size:11px}
+}
+.homepage-header nav a {white-space:nowrap}
+@media(min-width:1100px) and (max-width:1279px) {
+.brand-name {display:none}
+.homepage-header nav ul, .js #home-navigation ul {gap:12px}
+.homepage-header nav a {font-size:12px}
+}
 
-    <style>
-        :root {
-            --bg-color: #0b0b0b;
-            --card-bg: #141414;
-            --accent-gold: #d4af37;
-            --accent-gold-hover: #f3e5ab;
-            --text-main: #f5f5f5;
-            --text-muted: #aaaaaa;
-            --border-color: #2a2a2a;
-        }
+/* Original licensed SVG paths; no icon font or third-party stylesheet requests. */
+.homepage-icon { display:inline-block; font-style:normal; line-height:1; }
+.homepage-icon svg { height:1em; fill:currentColor; vertical-align:-.125em; overflow:visible; }
+picture.homepage-picture { display:contents; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .site-component { width: 100%; min-width: 0; }
-        main.container { flex: 1; }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: clamp(2rem, 5vw, 4rem) 1.5rem;
-            width: 100%;
-        }
-
-        .page-title {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .about-logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 1.2rem;
-            border-radius: 50%;
-            border: 2px solid var(--accent-gold);
-            padding: 10px;
-            background-color: var(--card-bg);
-        }
-
-        .page-title h1 {
-            font-size: clamp(1.5rem, 3.5vw, 2.3rem);
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .page-title p {
-            color: var(--text-muted);
-            font-size: clamp(0.85rem, 1.8vw, 1.05rem);
-        }
-
-        /* Professional Protocol Box */
-        .protocol-box {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-top: 4px solid var(--accent-gold);
-            border-radius: 8px;
-            padding: clamp(1.5rem, 3vw, 2.5rem);
-            margin-bottom: 3rem;
-        }
-
-        .protocol-box h2 {
-            color: var(--accent-gold);
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-            text-transform: uppercase;
-            margin-bottom: 1.2rem;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-
-        .protocol-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .protocol-card {
-            background-color: #0f0f0f;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1.2rem;
-            text-align: left;
-        }
-
-        .protocol-card .tier-badge {
-            display: inline-block;
-            background-color: rgba(212, 175, 55, 0.15);
-            color: var(--accent-gold);
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 3px;
-            margin-bottom: 8px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .protocol-card h3, .protocol-card h4 {
-            color: var(--text-main);
-            font-size: 0.98rem;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
-        }
-
-        .protocol-card p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            line-height: 1.5;
-        }
-
-        /* Measurements Grid & Full Image Display */
-        .measurements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .measurement-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.2rem;
-            position: relative;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .measurement-card:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-4px);
-        }
-
-        .measurement-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: contain; /* Ensures the entire image shows without cropping */
-            background-color: #050505; /* Clean dark frame */
-            border-radius: 6px;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .measurement-card img:hover {
-            opacity: 0.85;
-        }
-
-        .measurement-card .zoom-hint {
-            display: block;
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--accent-gold);
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .measurement-number {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background-color: var(--accent-gold);
-            color: #000;
-            font-weight: bold;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            z-index: 2;
-        }
-
-        .measurement-card h3 {
-            color: var(--text-main);
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
-            padding-right: 2rem;
-            text-transform: uppercase;
-        }
-
-        .measurement-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* Lightbox Modal for Full-Size Image Viewing */
-        #image-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.92);
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        #modal-close {
-            position: absolute;
-            top: 25px;
-            right: 35px;
-            color: var(--accent-gold);
-            font-size: 45px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        #modal-close:hover {
-            color: var(--text-main);
-        }
-
-        #modal-img {
-            max-width: 90%;
-            max-height: 85vh;
-            object-fit: contain;
-            border: 2px solid var(--accent-gold);
-            border-radius: 8px;
-            background-color: #000;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-        }
-
-        /* FAQ & Footer */
-        .faq-section {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: clamp(1.5rem, 4vw, 2.5rem);
-            margin-bottom: 2rem;
-        }
-
-        .faq-section h2 {
-            color: var(--accent-gold);
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .faq-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .faq-item h3, .faq-item h4 {
-            color: var(--text-main);
-            margin-bottom: 0.4rem;
-            font-size: 1.05rem;
-        }
-
-        .faq-item p {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: #000000;
-            padding: 0.8rem 1.8rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background-color 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-gold-hover);
-        }
-
-        .standalone-footer {
-            background-color: #0b0b0b;
-            border-top: 1px solid var(--border-color);
-            padding: 2rem 1.5rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        .standalone-footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 700px) {
-            .measurements-grid { grid-template-columns: 1fr; }
-        }
-      .seo-outline-heading { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.measurement-page{padding-bottom:64px}.measure-intro{padding-block:44px 36px;max-width:820px}.measure-intro h1{font-size:clamp(36px,6.5vw,64px);line-height:1.08}.measure-intro>p:last-of-type{margin-top:24px;max-width:620px;font-size:17px;line-height:1.8}.measure-actions{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px}.measure-actions .home-text-link{color:var(--gold)}.measure-methods{padding-block:30px 42px;border-block:1px solid var(--line)}.measure-methods>h2,.measure-guide>h2,.measure-faq>h2{font-size:clamp(28px,4vw,38px);margin-bottom:24px}.measure-method-grid{display:grid;gap:24px}.measure-method-grid h3{font-size:18px;color:var(--paper);margin-bottom:10px}.measure-method-grid p{font-size:14px;line-height:1.8}.measure-guide{padding-block:42px}.measure-guide>p{max-width:700px;margin-bottom:28px}.measurement-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px 24px}.measurement-card{min-width:0}.measure-image-link{position:relative;display:block;background:#fff;color:#171813;text-decoration:none;overflow:hidden}.measure-image-link img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;padding:18px}.measure-image-link span{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px solid #d4d4cd;font-size:12px}.measure-image-link:hover span{text-decoration:underline;text-underline-offset:3px}.measurement-card h3{margin:18px 0 10px;font-size:20px}.measurement-card>p{font-size:15px;line-height:1.8}.measurement-number{color:var(--gold);font-size:12px;letter-spacing:.08em;margin-right:10px}.measure-faq{border-top:1px solid var(--line);padding-top:36px;max-width:850px}.measure-faq details{border-bottom:1px solid var(--line);padding:16px 0}.measure-faq summary{cursor:pointer;min-height:44px;display:list-item;padding:10px 8px;font-size:16px;color:var(--paper)}.measure-faq details p{padding:6px 8px 14px;font-size:15px;line-height:1.8}.measure-next{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:32px}.measure-next .home-text-link{color:var(--gold)}.measure-viewer{padding:16px;background:#11120f;color:var(--paper);border:1px solid #64624f;width:min(92vw,820px);max-height:92dvh;overflow:auto}.measure-viewer::backdrop{background:#000c}.measure-viewer button{display:block;margin:0 0 16px auto;min-width:44px;min-height:44px;padding:10px 16px;background:var(--paper);color:var(--ink);border:0;cursor:pointer}.measure-viewer img{display:block;max-width:100%;max-height:72dvh;width:auto;height:auto;margin:auto;background:white}.measure-viewer p{margin-top:16px;color:var(--paper);text-align:center}
+@media(min-width:600px){.measure-method-grid,.measurement-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.measure-intro{padding-block:64px 48px}.measure-method-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}.measurement-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px}}
 </style>
-
-  <script src="assets/navigation.js" defer></script>
-<meta name="robots" content="index, follow"><script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector('meta[name="robots"]');if(m)m.content="noindex, nofollow";}</script></head>
-<body id="top">
-
-    <!-- Shared Header Component -->
-    <div id="site-header" class="site-component" aria-label="Website header"></div>
-
-    <!-- Main Measurements Content -->
-    <main class="container">
-        <div class="page-title">
-            <img src="MR LOGO.jpeg" alt="Mr. Sewing Fashion Logo" class="about-logo" width="1244" height="802" decoding="async" srcset="assets/images/mr-logo-480.webp 480w, assets/images/mr-logo-960.webp 960w, assets/images/mr-logo-1244.webp 1244w" sizes="180px">
-            <h1>Suit Measurement &amp; Sizing Guide</h1>
-            <p>Uncompromising precision for executive bespoke suiting in Kigali, Rwanda.</p>
-        </div>
-
-        <!-- Professional Recommendation Protocol -->
-        <div class="protocol-box">
-            <h2>Our Professional Fitting Protocols</h2>
-            <p style="color: #cccccc; text-align: center; font-size: 0.95rem; max-width: 850px; margin: 0 auto;">
-                To achieve the flawless silhouette expected of an elite bespoke garment, we recommend the following measurement hierarchy:
-            </p>
-            <div class="protocol-grid">
-                <div class="protocol-card">
-                    <span class="tier-badge">Gold Standard</span>
-                    <h3>Atelier or Mobile Fitting</h3>
-                    <p>Visit our master tailors at the MIC Building / Norvège or schedule a VIP workplace/house call for precision in-person measurement.</p>
-                </div>
-                <div class="protocol-card">
-                    <span class="tier-badge">Alternative 1</span>
-                    <h3>Professional Tailor</h3>
-                    <p>Have an experienced local tailor measure you using our 12-point guide if you cannot visit our atelier directly.</p>
-                </div>
-                <div class="protocol-card">
-                    <span class="tier-badge">Alternative 2</span>
-                    <h3>Assisted DIY Method</h3>
-                    <p>If taking measurements at home, <strong>never do it alone</strong>. Always enlist a trusted family member or friend to hold the tape.</p>
-                </div>
-                <div class="protocol-card">
-                    <span class="tier-badge">Alternative 3</span>
-                    <h3>Standard Sizing Reference</h3>
-                    <p>Provide your tried-and-true standard suit size (e.g., EU/US sizes or S/M/L/XL) from an unadjusted garment that fits you perfectly.</p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="seo-outline-heading">Measurement Guide</h2>
-        <div class="measurements-grid">
-            <div class="measurement-card">
-                <div class="measurement-number">1</div>
-                <img src="neck.jpeg" alt="Measuring Neck" width="376" height="259" decoding="async" srcset="neck.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Neck</h3>
-                <p>Measure around your neck at the height where your collar, if buttoned, would naturally sit.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">2</div>
-                <img src="shoulder.jpeg" alt="Measuring Shoulder" loading="lazy" width="376" height="217" decoding="async" srcset="shoulder.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Shoulder</h3>
-                <p>Measure straight across the back from the end of the right shoulder seam to the end of the left shoulder.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">3</div>
-                <img src="sleeve_length.jpeg" alt="Measuring Sleeve Length" loading="lazy" width="376" height="282" decoding="async" srcset="sleeve_length.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Sleeve Length</h3>
-                <p>Measure from the top of your shoulder down along the arm to the knuckle of your thumb.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">4</div>
-                <img src="bicep.jpeg" alt="Measuring Bicep" loading="lazy" width="376" height="467" decoding="async" srcset="bicep.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Bicep</h3>
-                <p>Measure around the fullest part of your bicep with your arm relaxed.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">5</div>
-                <img src="wrist.jpeg" alt="Measuring Wrist" loading="lazy" width="376" height="387" decoding="async" srcset="wrist.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Wrist</h3>
-                <p>Measure snugly around the fullest part of your wrist.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">6</div>
-                <img src="chest.jpeg" alt="Measuring Chest" loading="lazy" width="376" height="282" decoding="async" srcset="chest.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Chest</h3>
-                <p>Measure around the fullest part of your chest. Ensure the tape is level and firm around the body.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">7</div>
-                <img src="belly.jpeg" alt="Measuring Belly" loading="lazy" width="376" height="259" decoding="async" srcset="belly.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Belly</h3>
-                <p>Measure around the widest part of your stomach, typically right across or just above the belly button area.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">8</div>
-                <img src="waist.jpeg" alt="Measuring Waist" loading="lazy" width="376" height="282" decoding="async" srcset="waist.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Waist</h3>
-                <p>Measure around your natural waistline at the exact level where you normally wear your trousers' belt.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">9</div>
-                <img src="hip.jpeg" alt="Measuring Hip" loading="lazy" width="376" height="376" decoding="async" srcset="hip.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Hip</h3>
-                <p>Measure around your hips and the largest part of your buttocks.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">10</div>
-                <img src="jacket_length.jpeg" alt="Measuring Jacket Length" loading="lazy" width="376" height="608" decoding="async" srcset="jacket_length.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Jacket Length</h3>
-                <p>Measure vertically from the base of the back of your neck down to the point where your thumb knuckle rests.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">11</div>
-                <img src="trouser_length.jpeg" alt="Measuring Trousers Length" loading="lazy" width="376" height="565" decoding="async" srcset="trouser_length.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Trousers Length</h3>
-                <p>Measure from the top of your waistband down your outer leg to your desired ankle length.</p>
-            </div>
-
-            <div class="measurement-card">
-                <div class="measurement-number">12</div>
-                <img src="thigh.jpeg" alt="Measuring Thigh" loading="lazy" width="376" height="366" decoding="async" srcset="thigh.jpeg 376w" sizes="(max-width: 700px) 100vw, 50vw">
-                <span class="zoom-hint"><i class="fas fa-search-plus"></i> Click image to enlarge</span>
-                <h3>Thigh</h3>
-                <p>Measure around your upper thigh at its widest point just below the crotch.</p>
-            </div>
-        </div>
-
-        <!-- Lightbox Modal Overlay -->
-        <div id="image-modal">
-            <span id="modal-close">&times;</span>
-            <img id="modal-img" alt="Enlarged Measurement View">
-        </div>
-
-        <div class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <h3>Should I add extra wearing ease to my measurements?</h3>
-                <p>No. Please provide your exact anatomical body measurements. Our master tailoring team calculates all necessary structural ease and posture adjustments for you.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What if I prefer using my standard suit size?</h3>
-                <p>If you already wear a standard ready-to-wear suit size (e.g., EU/US 40, 42, 44 or S/M/L/XL) from unadjusted garments, you can simply share that size with us during your consultation.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Can I have another professional tailor measure me?</h3>
-                <p>Yes. If you cannot visit our Kigali atelier, you may have an experienced local tailor take your measurements using this 12-point guide and submit the numbers to us.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Can I take my measurements at home?</h3>
-                <p>Yes, but we strictly recommend having a trusted family member or friend assist you to ensure absolute tape accuracy.</p>
-            </div>
-
-            <div style="text-align: center;">
-                <a href="/measurement-submission/" class="btn">Submit Your Measurements</a>
-            </div>
-        </div>
-    </main>
-
-    <!-- Standalone Footer -->
-    <footer class="standalone-footer">
-        <p>&copy; 2026 Mr. Sewing Fashion. All Rights Reserved.</p>
-        <p>KN 2 Ave, Nyarugenge, Kigali, Rwanda | Tel: +250 787 411 501</p>
-    </footer>
-
-    <!-- Component Loader & Lightbox Script -->
-    <script>
-        (async function loadComponents() {
-          const mount = document.getElementById('site-header');
-          if (!mount) return;
-          try {
-            const response = await fetch('header.html', { cache: 'no-cache' });
-            if (!response.ok) throw new Error('HTTP ' + response.status);
-            mount.innerHTML = await response.text();
-            mount.dataset.loaded = 'true';
-          } catch (error) {
-            console.error('Could not load header.html:', error);
-            mount.dataset.loaded = 'false';
-          }
-        })();
-
-        // Lightbox Image Viewer Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.getElementById('image-modal');
-            const modalImg = document.getElementById('modal-img');
-            const closeBtn = document.getElementById('modal-close');
-
-            document.querySelectorAll('.measurement-card img').forEach(img => {
-                img.addEventListener('click', () => {
-                    modal.style.display = 'flex';
-                    modalImg.src = img.src;
-                    modalImg.alt = img.alt;
-                });
-            });
-
-            closeBtn.addEventListener('click', () => {
-                modal.style.display = 'none';
-            });
-
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-    </script>
-
-</body>
-</html>
+<script src="/assets/journey-navigation.js" defer></script>
+<script src="/assets/measurements.js" defer></script>
+<meta name="robots" content="index, follow"><script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector('meta[name="robots"]');if(m)m.content="noindex, nofollow";}</script></head><body id="top"><a class="skip-link" href="/measurements/#main-content">Skip to content</a><header id="home" class="homepage-header">
+  <div class="header-inner home-shell">
+    <a class="home-brand" href="/" aria-label="Mr Sewing home"><img class="header-logo" src="MR LOGO.jpeg" width="1244" height="802" alt="Mr Sewing MS logo" decoding="async" srcset="assets/homepage/mr-logo-96.3598d62e35.webp 96w, assets/homepage/mr-logo-192.2f306066cd.webp 192w, assets/homepage/mr-logo-320.b753282e38.webp 320w" sizes="(min-width: 1100px) 66px, 72px"><span class="brand-name">MR SEWING</span></a>
+    <button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" aria-hidden="true" focusable="false"><path d="M1 1h22M1 9h22M1 17h22" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/measurements/" aria-current="page">Measurements Guide</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></nav>
+  </div>
+</header><main id="main-content" class="measurement-page home-shell" tabindex="-1"><section class="measure-intro"><p class="home-eyebrow">Made to your measurements</p><h1>Suit Measurement &amp; Sizing Guide</h1><p>Prepare for your fitting or share your measurements with the team. Explore the twelve-point guide below.</p><nav class="measure-actions" aria-label="Measurement options"><a class="home-button home-button-gold" href="/measurement-submission/">Submit your measurements <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/booking/">Request a fitting</a></nav></section><section class="measure-methods"><h2>Choose how to get measured.</h2><div class="measure-method-grid"><section><h3>Workshop or mobile fitting</h3><p>Arrange professional measurements at the workshop or discuss a mobile fitting with the team.</p></section><section><h3>Professional tailor</h3><p>Have an experienced local tailor measure you using this twelve-point guide if you cannot visit.</p></section><section><h3>Assisted home measurements</h3><p>Ask a trusted family member or friend to help hold the tape. Do not take your measurements alone.</p></section><section><h3>Standard size reference</h3><p>Share a size from an unadjusted garment that fits you, and discuss it with the team.</p></section></div></section><section class="measure-guide" id="measurement-guide"><h2>The twelve-point guide.</h2><p>Use the illustrations and instructions below. Provide direct body measurements without adding extra room, and state whether you used centimetres or inches.</p><div class="measurement-grid"><article class="measurement-card"><a class="measure-image-link" data-measure-image="Neck" href="/neck.jpeg" aria-label="Enlarge Neck measurement illustration"><img src="/neck.jpeg" width="376" height="259" alt="Measuring Neck" loading="eager" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">01</span>Neck</h3><p>Measure around your neck at the height where your collar, if buttoned, would naturally sit.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Shoulder" href="/shoulder.jpeg" aria-label="Enlarge Shoulder measurement illustration"><img src="/shoulder.jpeg" width="376" height="217" alt="Measuring Shoulder" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">02</span>Shoulder</h3><p>Measure straight across the back from the end of the right shoulder seam to the end of the left shoulder.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Sleeve Length" href="/sleeve_length.jpeg" aria-label="Enlarge Sleeve Length measurement illustration"><img src="/sleeve_length.jpeg" width="376" height="282" alt="Measuring Sleeve Length" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">03</span>Sleeve Length</h3><p>Measure from the top of your shoulder down along the arm to the knuckle of your thumb.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Bicep" href="/bicep.jpeg" aria-label="Enlarge Bicep measurement illustration"><img src="/bicep.jpeg" width="376" height="467" alt="Measuring Bicep" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">04</span>Bicep</h3><p>Measure around the fullest part of your bicep with your arm relaxed.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Wrist" href="/wrist.jpeg" aria-label="Enlarge Wrist measurement illustration"><img src="/wrist.jpeg" width="376" height="387" alt="Measuring Wrist" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">05</span>Wrist</h3><p>Measure snugly around the fullest part of your wrist.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Chest" href="/chest.jpeg" aria-label="Enlarge Chest measurement illustration"><img src="/chest.jpeg" width="376" height="282" alt="Measuring Chest" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">06</span>Chest</h3><p>Measure around the fullest part of your chest. Ensure the tape is level and firm around the body.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Belly" href="/belly.jpeg" aria-label="Enlarge Belly measurement illustration"><img src="/belly.jpeg" width="376" height="259" alt="Measuring Belly" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">07</span>Belly</h3><p>Measure around the widest part of your stomach, typically right across or just above the belly button area.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Waist" href="/waist.jpeg" aria-label="Enlarge Waist measurement illustration"><img src="/waist.jpeg" width="376" height="282" alt="Measuring Waist" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">08</span>Waist</h3><p>Measure around your natural waistline at the exact level where you normally wear your trousers&#x27; belt.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Hip" href="/hip.jpeg" aria-label="Enlarge Hip measurement illustration"><img src="/hip.jpeg" width="376" height="376" alt="Measuring Hip" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">09</span>Hip</h3><p>Measure around your hips and the largest part of your buttocks.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Jacket Length" href="/jacket_length.jpeg" aria-label="Enlarge Jacket Length measurement illustration"><img src="/jacket_length.jpeg" width="376" height="608" alt="Measuring Jacket Length" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">10</span>Jacket Length</h3><p>Measure vertically from the base of the back of your neck down to the point where your thumb knuckle rests.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Trousers Length" href="/trouser_length.jpeg" aria-label="Enlarge Trousers Length measurement illustration"><img src="/trouser_length.jpeg" width="376" height="565" alt="Measuring Trousers Length" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">11</span>Trousers Length</h3><p>Measure from the top of your waistband down your outer leg to your desired ankle length.</p></article><article class="measurement-card"><a class="measure-image-link" data-measure-image="Thigh" href="/thigh.jpeg" aria-label="Enlarge Thigh measurement illustration"><img src="/thigh.jpeg" width="376" height="366" alt="Measuring Thigh" loading="lazy" decoding="async"><span>View illustration <span aria-hidden="true">↗</span></span></a><h3><span class="measurement-number">12</span>Thigh</h3><p>Measure around your upper thigh at its widest point just below the crotch.</p></article></div></section><section class="measure-faq"><h2>Before you send your measurements.</h2><details><summary>Should I add extra wearing ease to my measurements?</summary><p>No. Please provide your exact anatomical body measurements. Our master tailoring team calculates all necessary structural ease and posture adjustments for you.</p></details><details><summary>What if I prefer using my standard suit size?</summary><p>If you already wear a standard ready-to-wear suit size (e.g., EU/US 40, 42, 44 or S/M/L/XL) from unadjusted garments, you can simply share that size with us during your consultation.</p></details><details><summary>Can I have another professional tailor measure me?</summary><p>Yes. If you cannot visit our Kigali atelier, you may have an experienced local tailor take your measurements using this 12-point guide and submit the numbers to us.</p></details><details><summary>Can I take my measurements at home?</summary><p>Yes, but we strictly recommend having a trusted family member or friend assist you to ensure absolute tape accuracy.</p></details></section><nav class="measure-next" aria-label="Continue with your measurements"><a class="home-button home-button-gold" href="/measurement-submission/">Submit your measurements <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/faq/measurements-fittings/">Measurements &amp; fittings FAQs</a><a class="home-text-link" href="/services/mobile-fitting/">Mobile fitting</a></nav><dialog class="measure-viewer" id="measurement-viewer" aria-label="Measurement illustration"><button type="button">Close illustration</button><img alt=""><p></p></dialog></main><footer class="homepage-footer" aria-labelledby="footer-title">
+  <div class="home-shell">
+    <h2 id="footer-title" class="visually-hidden">Mr Sewing Fashion information</h2>
+    <div class="footer-top">
+      <div class="footer-col footer-quick"><h3>Quick Links</h3><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></div>
+      <div class="footer-col footer-location"><h3>Location</h3><p><strong>MIC Building</strong><span class="visually-hidden"> — consultations by appointment only</span><br>Downtown, Nyarugenge, Kigali</p><p><strong>KN 441 St</strong><br>Norvège, Nyarugenge, Kigali</p><a class="home-text-link" href="https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac" target="_blank" rel="noopener">Find us on Google Maps <span class="home-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="footer-col footer-hours"><h3>Opening Hours</h3><span class="visually-hidden">Main workshop schedule</span><p>Usually Monday–Saturday<br>9:00 AM–5:00 PM</p><p class="footer-sunday">Sunday: By appointment only</p><details class="footer-hours-details"><summary>Last Saturday (Umuganda)</summary><p>12:00 PM–5:00 PM, strictly by advance appointment.</p><p>Ordinary Saturday visits do not require an appointment.</p></details></div>
+      <div class="footer-col footer-policies"><h3>Policies</h3><ul><li><a href="/refund-policy/">Refund Policy</a></li><li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li></ul></div>
+      <div class="footer-col footer-order-col"><h3>Start Your Order</h3><a href="/contact/" class="footer-contact">Contact Us <span class="home-arrow" aria-hidden="true">↗</span></a><a class="footer-booking" href="/booking/">Book a Consultation</a><a class="footer-phone" href="tel:+250787411501">+250 787 411 501</a><a class="footer-email" href="mailto:mrsewingfashiondesigner@gmail.com">mrsewingfashiondesigner<wbr>@gmail.com</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-copy"><p>&copy; 2026 Mr Sewing Fashion. All Rights Reserved.</p></div><div class="social-icons" aria-label="Social media"><a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.625em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></i></a>
+            <a href="https://www.instagram.com/mr_sewing_fashion" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.875em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></i></a>
+            <a href="https://www.tiktok.com/@mrsewingfashion" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.875em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></i></a>
+            <a href="https://youtube.com/@mr.sewingfashion" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:1.125em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></i></a></div></div>
+  </div>
+</footer></body></html>

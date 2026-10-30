@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import sys,re,json,subprocess,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
+from preservation_helpers import without_shared_shell
 from build_customer_information import outputs,plain
 from customer_information import information,expand
 from build_public_routes import public_routes
@@ -49,6 +50,9 @@ files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,
 protected=['assets/forms.js','assets/collections-v3.js','assets/collection-design.js','_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','_templates/collections.css']
 for file in files:
  if file in protected or file.startswith('collections/') or file.startswith('our-work/') or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
-  assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
+  current=(ROOT/file).read_bytes();previous=subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)
+  if file.endswith('.html') and file.startswith(('collections/','our-work/')):
+   assert without_shared_shell(current.decode())==without_shared_shell(previous.decode()),file
+  else:assert current==previous,file
 assert len(public_routes())==146+len(faq_routes())
 print('PASS: policy/FAQ output and schema parity, Cotton prices/payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')

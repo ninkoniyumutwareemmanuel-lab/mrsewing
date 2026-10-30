@@ -6,6 +6,7 @@ from html import escape
 from html.parser import HTMLParser
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
+from preservation_helpers import without_shared_shell
 from faq_help import catalogue,outputs,search_data,routes,plain
 from customer_information import expand
 from build_homepage import Section,render
@@ -42,13 +43,16 @@ for key,value in before_meta.items():assert after_meta.get(key)==value,(key,valu
 protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_data/page-seo.json','assets/homepage.js','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True).splitlines()
 for f in files:
- if f in protected or f.startswith(('_templates/shared/','collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or any(f.startswith(x) for x in ['terms-and-conditions','refund-policy','privacy-policy']) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
-  assert hashlib.sha256((ROOT/f).read_bytes()).digest()==hashlib.sha256(old(f,True)).digest(),f
-# Homepage outside the restored block must be literally unchanged.
+ if f in protected or f.startswith(('collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or any(f.startswith(x) for x in ['terms-and-conditions','refund-policy','privacy-policy']) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
+  if f.endswith('.html') and f.startswith(('collections/','our-work/')):
+   assert without_shared_shell((ROOT/f).read_text())==without_shared_shell(old(f)),f
+  else:assert (ROOT/f).read_bytes()==old(f,True),f
+# Homepage content outside the restored block is unchanged; shared shell now includes the guide.
 new=(ROOT/'index.html').read_text();parser=Section(new,'div',('id','programs-section'));parser.feed(new);assert parser.markup
-assert new.replace('    '+parser.markup+'\n','',1)==old('index.html')
+assert without_shared_shell(new.replace('    '+parser.markup+'\n','',1))==without_shared_shell(old('index.html'))
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
-assert block.count('Coming Soon')==3 and not re.search(r'<(?:a|button|input|form)\b',block)
+assert block.count('Coming Soon')==3 and not re.search(r'<(?:button|input|form)\b',block)
+assert re.findall(r'<a[^>]+href="([^"]+)"',block)==['/loyalty-program/','/referral-program/']
 assert all(name in block for name in ['Loyalty Program','Referral Program','Complimentary Photoshoot'])
 assert not re.search(r'%|\bRWF\b|\b(?:discount|commission|gift|cleaning|enrol|redeem|guaranteed)\b',block,re.I)
 assert new.index('id="services-section"')<new.index('id="programs-section"')<new.index('id="final-section"')
@@ -56,4 +60,4 @@ ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc',ns)};newurls={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)}
 assert newurls==oldurls|{'https://mrsewingfashion.com'+r for r in routes()}
 assert len(public_routes())==len(oldurls)+len(topics)
-print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, exact homepage/policy/hero/shared/asset/config preservation, safe Coming Soon previews and FAQ-only sitemap additions.')
+print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, homepage content/policy/hero/asset/config preservation with authorized shared navigation, safe Coming Soon previews and FAQ-only sitemap additions.')

@@ -41,12 +41,19 @@ def enquiry(name,route):
     text='Hello Mr Sewing! I would like to enquire about '+name+'.\n'+DOMAIN+route
     return '<a class="journey-enquiry" target="_blank" rel="noopener" href="https://wa.me/250787411501?'+escape(urlencode({'text':text}),quote=True)+'">Enquire with Mr Sewing <span class="home-arrow" aria-hidden="true"></span></a>'
 
+def navigation_route(route):
+    if route.startswith('/services/garment-care/'):return '/services/garment-care/'
+    if route.startswith('/services/') or route.startswith('/service-') or route in ['/our-process/','/made-to-measure/']:return '/services/'
+    if route.startswith('/shop/'):return '/shop/'
+    if route.startswith('/our-work/'):return '/our-work/'
+    return route
+
 def page(route,title,description,content,schema_type='WebPage',schema_extra=None):
     schema={'@context':'https://schema.org','@type':schema_type,'name':title,'description':description,'url':DOMAIN+route,**(schema_extra or {})}
     if route.startswith('/services/') and route!='/services/':
         schema['breadcrumb']={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':DOMAIN+'/'},{'@type':'ListItem','position':2,'name':'Services','item':DOMAIN+'/services/'},{'@type':'ListItem','position':3,'name':title.split(' | ')[0],'item':DOMAIN+route}]}
         content='<nav class="journey-back" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/services/">Services</a><span aria-hidden="true"> / </span><span>'+escape(title.split(' | ')[0])+'</span></nav>'+content
-    vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':content,'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/journey.css').read_text(),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header('/services/garment-care/' if route.startswith('/services/garment-care/') else '/services/' if route.startswith('/services/') or route.startswith('/service-') or route in ['/our-process/','/made-to-measure/'] else '/shop/' if route=='/shop/' else '/our-work/')),'header'),'footer':delivery(shared.footer(),'footer')}
+    vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':content,'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/journey.css').read_text(),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header(navigation_route(route))),'header'),'footer':delivery(shared.footer(),'footer')}
     out=(ROOT/'_templates/journey-page.html').read_text().replace('</head>',DISCOVERY_LINKS+'</head>',1)
     for key,value in vals.items():out=out.replace('{{'+key+'}}',value)
     assert not re.search(r'{{\w+}}',out)
@@ -105,6 +112,9 @@ def care_page(service,category=None):
         content+='</div>'
     elif published:content+='<div class="care-options">'+''.join('<a class="care-option" href="/services/garment-care/'+v['slug']+'/"><h3>'+escape(v['title'])+'</h3><p>'+escape(v['description'])+'</p><span class="home-text-link">Explore care service</span></a>' for v in published)+'</div>'
     else:content+='<p>Tell us about your garment and its care label. We will confirm which care options are available and suitable before accepting a request.</p><div class="care-details"><section><h3>The garment</h3><p>Share the garment type, care label and any condition concerns. A photograph can help begin the conversation.</p></section><section><h3>The conversation</h3><p>Ask which options and conditions apply. The standard suit package includes one initial standard professional cleaning. Separately requested care needs its own quotation and confirmation.</p></section><section><h3>The agreement</h3><p>Confirm suitability, any charges and the estimated timing directly with the team before proceeding.</p></section></div>'
+    if category is None:
+        from preparation_pages import care_cards
+        content+=care_cards()
     content+='</section><section id="care-pricing" class="care-section"><p class="home-eyebrow">Clear details, before you proceed</p><h2>Quotes &amp; timing</h2>'
     rows=[r for r in category['pricing']['rows'] if r.get('approved')] if category else []
     if rows:
@@ -121,7 +131,7 @@ def care_page(service,category=None):
     content+='</section><section class="care-section"><h2>Payment and included suit care</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>'+customer_text('{{suitPayment}} {{package}}')+'</p></section>'
     content+='<section class="care-section"><h2>Before you enquire</h2><p>Have your garment details, care-label information, any condition concerns and preferred completion date ready. The team must confirm what is possible. Do not assume that a particular treatment, collection visit or delivery arrangement is available.</p></section><section id="care-request" class="care-request"><h2>A considered next step.</h2><p>Ask about '+escape(category['title'] if category else 'care for your garment')+'. Opening a conversation does not confirm a service, order or appointment.</p>'+enquiry(title,route)+'</section></div>'
     out=page(route,title+' | Mr Sewing Fashion, Kigali',description,content)
-    return out.replace('class="journey-main home-shell"','class="care-main"').replace('</style>','\n'+(ROOT/'_templates/garment-care.css').read_text()+'\n'+(ROOT/'_templates/completion.css').read_text()+'</style>',1)
+    return out.replace('class="journey-main home-shell"','class="care-main"').replace('</style>','\n'+(ROOT/'_templates/garment-care.css').read_text()+'\n'+(ROOT/'_templates/completion.css').read_text()+'\n'+(ROOT/'_templates/preparation.css').read_text()+'</style>',1)
 
 def project_picture(image,eager=False,sizes='(min-width: 1000px) 900px, 90vw'):
     src=image['src'];name=src.lstrip('/');optim=json.loads((ROOT/'_data/image-delivery.json').read_text()).get(name,{})

@@ -7,10 +7,11 @@ from pathlib import Path
 from site_seo import ROOT,DOMAIN,finalize
 from build_journey import page,enquiry,services
 from garment_care import catalog as care_catalog,care_information,care_navigation,care_summary
+from preparation_pages import outputs as preparation_outputs,routes as preparation_routes,shop_cards
 
 def intro(eyebrow,title,text):return '<section class="help-intro"><p class="home-eyebrow">'+escape(eyebrow)+'</p><h1>'+escape(title)+'</h1><p>'+escape(text)+'</p></section>'
 def complete_page(route,title,description,content,kind='WebPage',extra=None):
-    return page(route,title+' | Mr Sewing',description,content,kind,extra).replace('</style>','\n'+(ROOT/'_templates/completion.css').read_text()+'</style>',1)
+    return page(route,title+' | Mr Sewing',description,content,kind,extra).replace('</style>','\n'+(ROOT/'_templates/completion.css').read_text()+'\n'+(ROOT/'_templates/preparation.css').read_text()+'</style>',1)
 def related(links):return '<nav class="help-related" aria-label="Related information">'+''.join('<a href="'+url+'">'+escape(title)+'</a>' for url,title in links)+'</nav>'
 def care_info_page(kind):
     info=care_information();route='/services/garment-care/'+kind+'/'
@@ -32,7 +33,7 @@ def care_info_page(kind):
 def information_page(kind):
     if kind=='shop':
         route='/shop/';title='Shop — Coming Soon';desc='Mr Sewing’s online shop is not available yet. Explore tailoring inspiration and services while online shopping is being prepared; no launch date is announced.'
-        content=intro('Mr Sewing',title,'Online shopping is not available yet. Our website currently helps you explore designs, discover completed work and discuss tailoring services.')+'<section class="shop-status"><h2>A considered next chapter.</h2><p>There are no online products, checkout or payment facilities on this page, and no launch date has been announced. For current tailoring enquiries, explore the service you need and contact the team directly.</p></section>'+related([('/collections/','Explore Collections'),('/services/','Find a tailoring service')])
+        content=intro('Mr Sewing',title,'Online shopping is not available yet. Our website currently helps you explore designs, discover completed work and discuss tailoring services.')+'<section class="shop-status"><h2>A considered next chapter.</h2><p>There are no online products, checkout or payment facilities on this page, and no launch date has been announced. For current tailoring enquiries, explore the service you need and contact the team directly.</p></section>'+shop_cards()+related([('/collections/','Explore Collections'),('/services/','Find a tailoring service')])
     elif kind=='our-process':
         route='/our-process/';title='Our Tailoring Process';desc='Understand Mr Sewing’s tailoring process in Kigali: references, design and fabric choices, measurements, production planning, fittings and agreed handover.'
         content=intro('From idea to garment','A timeline, thoughtfully agreed.','Each garment starts with a conversation. Your design, available materials, measurements and fitting needs inform the plan; an enquiry is not a guaranteed completion date.')+'<div class="info-prose">'
@@ -50,9 +51,10 @@ def outputs():
     out={}
     for kind in ['services','planning']:out[ROOT/'services/garment-care'/kind/'index.html']=care_info_page(kind)
     for kind in ['shop','our-process','made-to-measure']:out[ROOT/kind/'index.html']=information_page(kind)
+    out.update(preparation_outputs())
     return out
 
-def routes():return ['/services/garment-care/services/','/services/garment-care/planning/','/shop/','/our-process/','/made-to-measure/']
+def routes():return ['/services/garment-care/services/','/services/garment-care/planning/','/shop/','/our-process/','/made-to-measure/']+preparation_routes()
 def main():
     p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args()
     for path,source in outputs().items():

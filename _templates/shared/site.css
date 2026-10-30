@@ -258,3 +258,8 @@ p { color:var(--muted); }
 /* Final V2 destinations retain a compact header and readable footer. */
 .homepage-header .nav-shop{gap:5px}.footer-quick ul{display:grid;grid-template-columns:1fr 1fr;column-gap:12px}.footer-quick li a{min-height:44px}.footer-quick .nav-shop{flex-wrap:wrap;column-gap:4px}.footer-quick .coming-soon{font-size:9px}
 @media(min-width:1100px){.homepage-header nav ul,.js #home-navigation ul{gap:15px}.homepage-header nav a{font-size:13px}.brand-name{font-size:11px}}
+
+/* Keep the restored guide link comfortable in the shared desktop navigation. */
+.homepage-header nav a{white-space:nowrap}
+@media(min-width:1100px) and (max-width:1279px){.brand-name{display:none}.homepage-header nav ul,.js #home-navigation ul{gap:12px}.homepage-header nav a{font-size:12px}}
+.home-program .home-text-link{color:var(--gold);margin-top:12px}

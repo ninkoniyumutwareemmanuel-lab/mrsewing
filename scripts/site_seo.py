@@ -4,7 +4,7 @@ from pathlib import Path
 from html import escape
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
-NOINDEX={'booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html'}
+NOINDEX={'booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html','shop/collections.html','shop/ordering.html','loyalty-program.html','referral-program.html'}
 STAGING='<script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector(\'meta[name="robots"]\');if(m)m.content="noindex, nofollow";}</script>'
 def route_for(path):
     rel=Path(path).relative_to(ROOT)

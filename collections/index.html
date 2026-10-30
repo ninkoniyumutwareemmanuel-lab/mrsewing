@@ -144,6 +144,12 @@ html, * { scroll-behavior:auto!important; }
 .homepage-header nav a {font-size:13px}
 .brand-name {font-size:11px}
 }
+.homepage-header nav a {white-space:nowrap}
+@media(min-width:1100px) and (max-width:1279px) {
+.brand-name {display:none}
+.homepage-header nav ul, .js #home-navigation ul {gap:12px}
+.homepage-header nav a {font-size:12px}
+}
 
 /* Original licensed SVG paths; no icon font or third-party stylesheet requests. */
 .homepage-icon { display:inline-block; font-style:normal; line-height:1; }
@@ -164,7 +170,7 @@ picture.homepage-picture { display:contents; }
   <div class="header-inner home-shell">
     <a class="home-brand" href="/" aria-label="Mr Sewing home"><img class="header-logo" src="MR LOGO.jpeg" width="1244" height="802" alt="Mr Sewing MS logo" decoding="async" srcset="assets/homepage/mr-logo-96.3598d62e35.webp 96w, assets/homepage/mr-logo-192.2f306066cd.webp 192w, assets/homepage/mr-logo-320.b753282e38.webp 320w" sizes="(min-width: 1100px) 66px, 72px"><span class="brand-name">MR SEWING</span></a>
     <button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" aria-hidden="true" focusable="false"><path d="M1 1h22M1 9h22M1 17h22" stroke="currentColor" stroke-width="1.5"/></svg></button>
-    <nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/collections/" aria-current="page">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></nav>
+    <nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/collections/" aria-current="page">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></nav>
   </div>
 </header>
 <main id="main-content" tabindex="-1" class="showroom-v3"><section class="home-shell show-introduction" aria-labelledby="show-title"><p class="home-eyebrow">Mr Sewing · Kigali</p><h1 id="show-title">The Collections</h1><p>Find your inspiration. Make it personal.</p><nav class="show-collection-links" aria-label="Collections"><a href="/collections/" aria-current="page">All Designs</a><a href="/mensuits/">Men</a><a href="/womensuits/">Women</a></nav></section>
@@ -174,7 +180,7 @@ picture.homepage-picture { display:contents; }
   <div class="home-shell">
     <h2 id="footer-title" class="visually-hidden">Mr Sewing Fashion information</h2>
     <div class="footer-top">
-      <div class="footer-col footer-quick"><h3>Quick Links</h3><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></div>
+      <div class="footer-col footer-quick"><h3>Quick Links</h3><ul><li><a href="/">Home</a></li><li><a href="/collections/">Collections</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/services/">Services</a></li><li><a href="/services/garment-care/">Garment Care</a></li><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/about/">About Us</a></li><li><a href="/faq/">FAQs</a></li><li><a href="/shop/" class="nav-shop">Shop <span class="coming-soon">Coming Soon</span></a></li><li><a href="/contact/">Contact Us</a></li></ul></div>
       <div class="footer-col footer-location"><h3>Location</h3><p><strong>MIC Building</strong><span class="visually-hidden"> — consultations by appointment only</span><br>Downtown, Nyarugenge, Kigali</p><p><strong>KN 441 St</strong><br>Norvège, Nyarugenge, Kigali</p><a class="home-text-link" href="https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac" target="_blank" rel="noopener">Find us on Google Maps <span class="home-arrow" aria-hidden="true">↗</span></a></div>
       <div class="footer-col footer-hours"><h3>Opening Hours</h3><span class="visually-hidden">Main workshop schedule</span><p>Usually Monday–Saturday<br>9:00 AM–5:00 PM</p><p class="footer-sunday">Sunday: By appointment only</p><details class="footer-hours-details"><summary>Last Saturday (Umuganda)</summary><p>12:00 PM–5:00 PM, strictly by advance appointment.</p><p>Ordinary Saturday visits do not require an appointment.</p></details></div>
       <div class="footer-col footer-policies"><h3>Policies</h3><ul><li><a href="/refund-policy/">Refund Policy</a></li><li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li></ul></div>

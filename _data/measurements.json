@@ -1,0 +1,118 @@
+{
+  "measurements": [
+    {
+      "title": "Neck",
+      "description": "Measure around your neck at the height where your collar, if buttoned, would naturally sit.",
+      "image": "/neck.jpeg",
+      "alt": "Measuring Neck",
+      "width": 376,
+      "height": 259
+    },
+    {
+      "title": "Shoulder",
+      "description": "Measure straight across the back from the end of the right shoulder seam to the end of the left shoulder.",
+      "image": "/shoulder.jpeg",
+      "alt": "Measuring Shoulder",
+      "width": 376,
+      "height": 217
+    },
+    {
+      "title": "Sleeve Length",
+      "description": "Measure from the top of your shoulder down along the arm to the knuckle of your thumb.",
+      "image": "/sleeve_length.jpeg",
+      "alt": "Measuring Sleeve Length",
+      "width": 376,
+      "height": 282
+    },
+    {
+      "title": "Bicep",
+      "description": "Measure around the fullest part of your bicep with your arm relaxed.",
+      "image": "/bicep.jpeg",
+      "alt": "Measuring Bicep",
+      "width": 376,
+      "height": 467
+    },
+    {
+      "title": "Wrist",
+      "description": "Measure snugly around the fullest part of your wrist.",
+      "image": "/wrist.jpeg",
+      "alt": "Measuring Wrist",
+      "width": 376,
+      "height": 387
+    },
+    {
+      "title": "Chest",
+      "description": "Measure around the fullest part of your chest. Ensure the tape is level and firm around the body.",
+      "image": "/chest.jpeg",
+      "alt": "Measuring Chest",
+      "width": 376,
+      "height": 282
+    },
+    {
+      "title": "Belly",
+      "description": "Measure around the widest part of your stomach, typically right across or just above the belly button area.",
+      "image": "/belly.jpeg",
+      "alt": "Measuring Belly",
+      "width": 376,
+      "height": 259
+    },
+    {
+      "title": "Waist",
+      "description": "Measure around your natural waistline at the exact level where you normally wear your trousers' belt.",
+      "image": "/waist.jpeg",
+      "alt": "Measuring Waist",
+      "width": 376,
+      "height": 282
+    },
+    {
+      "title": "Hip",
+      "description": "Measure around your hips and the largest part of your buttocks.",
+      "image": "/hip.jpeg",
+      "alt": "Measuring Hip",
+      "width": 376,
+      "height": 376
+    },
+    {
+      "title": "Jacket Length",
+      "description": "Measure vertically from the base of the back of your neck down to the point where your thumb knuckle rests.",
+      "image": "/jacket_length.jpeg",
+      "alt": "Measuring Jacket Length",
+      "width": 376,
+      "height": 608
+    },
+    {
+      "title": "Trousers Length",
+      "description": "Measure from the top of your waistband down your outer leg to your desired ankle length.",
+      "image": "/trouser_length.jpeg",
+      "alt": "Measuring Trousers Length",
+      "width": 376,
+      "height": 565
+    },
+    {
+      "title": "Thigh",
+      "description": "Measure around your upper thigh at its widest point just below the crotch.",
+      "image": "/thigh.jpeg",
+      "alt": "Measuring Thigh",
+      "width": 376,
+      "height": 366
+    }
+  ],
+  "questions": [
+    {
+      "question": "Should I add extra wearing ease to my measurements?",
+      "answer": "No. Please provide your exact anatomical body measurements. Our master tailoring team calculates all necessary structural ease and posture adjustments for you."
+    },
+    {
+      "question": "What if I prefer using my standard suit size?",
+      "answer": "If you already wear a standard ready-to-wear suit size (e.g., EU/US 40, 42, 44 or S/M/L/XL) from unadjusted garments, you can simply share that size with us during your consultation."
+    },
+    {
+      "question": "Can I have another professional tailor measure me?",
+      "answer": "Yes. If you cannot visit our Kigali atelier, you may have an experienced local tailor take your measurements using this 12-point guide and submit the numbers to us."
+    },
+    {
+      "question": "Can I take my measurements at home?",
+      "answer": "Yes, but we strictly recommend having a trusted family member or friend assist you to ensure absolute tape accuracy."
+    }
+  ]
+}
