@@ -121,5 +121,39 @@
       "expressPriceRwf": 67500
     }
   ],
-  "customerDecisionSource": "Owner customer-information handoff, 30 October 2026; staging implementation approved 31 October 2026. Program launch and production publication remain separate approvals."
+  "customerDecisionSource": "Owner consolidated customer-information handoff, 31 October 2026; defined program publication approved and combined staging implementation approved. Undefined policies and operational details remain subject to owner review.",
+  "loyaltyDiscountPercent": 3,
+  "referralDiscountPercent": 2,
+  "referralCommissionRwf": 6000,
+  "loyaltySummary": "Receive 3% off suits from your third separate qualifying purchase, including that third purchase and future qualifying suit purchases. Several suits bought together count as one purchase toward the milestone. The benefit applies to suits only, not alterations, garment care, standalone items, separately priced accessories or optional-service charges.",
+  "loyaltyVerification": "Discuss your order history with the team so qualifying purchases can be verified before your quotation. Historical purchase verification, refunds and changed orders require individual review; no additional qualification or refund rule is stated here.",
+  "discountRules": "An eligible 2% referral discount or 3% loyalty discount applies only to the original standard suit price. The two discounts do not combine; the referral discount cannot combine with another discount. Express 35% and mobile 50% charges still use that same original standard suit price. Transport, separately priced accessories and other extras are not discounted by these suit-only benefits.",
+  "discountExample": "Example for an eligible loyal customer with two agreed Kigali visits: 200,000 RWF standard suit − 6,000 RWF loyalty discount + 70,000 RWF express + 100,000 RWF mobile + 20,000 RWF transport = 384,000 RWF.",
+  "giftTerms": "One gift package applies on the second separate qualifying suit purchase, even when that order contains several suits. Gifts do not repeat on every later purchase. The ongoing 3% suit loyalty discount begins with the third qualifying purchase. A women’s inner top is a top worn under the suit jacket. Confirm mixed-collection second orders and historical qualification with the team. No cash alternative or exact reference-photo match is promised.",
+  "giftSchedule": [
+    {
+      "collection": "Cotton / Polyester",
+      "men": "No included gift",
+      "women": "No included gift"
+    },
+    {
+      "collection": "Wool / Star",
+      "men": "One necktie OR bow tie",
+      "women": "One inner top worn under the suit jacket"
+    },
+    {
+      "collection": "Super / Americano",
+      "men": "One shirt AND necktie",
+      "women": "One inner top worn under the suit jacket"
+    }
+  ],
+  "cleaningBenefit": "Cotton and Polyester include the initial suit cleaning only, with no complimentary follow-up cleaning. Wool / Star and Super / Americano include three shared standard cleaning occasions in total. Initial cleaning before handover uses occasion one; two follow-up occasions remain within three months starting at initial handover. A shirt bought with, or eligible gifted alongside, the qualifying suit shares the same counter.",
+  "cleaningCounter": "One shared counter applies to the eligible outfit, not separate credits for individual garments. Bringing the complete outfit, only the jacket, only the trousers or only the covered accompanying shirt each uses one whole occasion. Pieces left at home do not keep separate credits. For example: initial cleaning uses occasion one; bringing only the shirt uses occasion two; bringing the suit later uses occasion three. No occasions remain after that.",
+  "cleaningBenefitScope": "The benefit covers the eligible Mr Sewing outfit and its covered accompanying shirt. Unrelated garments cannot replace them. Garments not made by Mr Sewing need paid cleaning. Customers may bring and collect garments themselves; requested collection/return transport is separately payable. Suitable existing packaging is reused. A requested replacement branded hanger-and-cover set costs 20,000 RWF. Express use of these standard entitlements must be discussed separately; an included express upgrade is not promised.",
+  "referralBuyer": "A first-time customer is someone who has never purchased from Mr Sewing. Eligible first-time buyers receive 2% off the qualifying standard suit price when their chosen salesperson’s code is recorded before the advance payment. The discount cannot combine with another discount. Qualifying suit packages may include accessories, but standalone items, existing-customer purchases, alterations, garment care and other services are excluded.",
+  "referralCommission": "Salespeople earn 6,000 RWF per qualifying suit, not per customer. Two qualifying suits earn 12,000 RWF. Accessories do not earn additional commission. Each salesperson has one unique code; record the buyer’s chosen code before the advance payment. Only one salesperson commission applies per qualifying suit, and no commission applies to the salesperson’s own purchase.",
+  "referralEligibility": "Commission becomes payable only after full customer payment and completed garment handover. Cancelled or refunded orders do not qualify. Partial refunds, changed orders and exact reconciliation procedures require individual review; this program rule does not define the customer’s cancellation or refund rights.",
+  "referralWindows": "The first referred order’s advance starts a 14-day payment window. Only completed qualifying purchases create payable commission. After payout, the next referred advance starts another window. Unfinished orders carry forward. If a carried order completes after its window and no new window opens, earned commission is paid within 14 days of full payment and handover; another sale is not required.",
+  "referralPayment": "Referral/salesperson payouts use the currently accepted payment methods, subject to verified payout instructions. Confirm reconciliation details with the team. No payment credentials, cryptocurrency networks or exchange-rate rules are provided on this page.",
+  "programDecisionSource": "Owner consolidated customer-information handoff, 31 October 2026; defined program publication approved and combined staging implementation approved. Undefined operational details remain subject to owner review."
 }

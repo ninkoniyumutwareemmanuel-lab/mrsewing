@@ -80,14 +80,23 @@
         "paragraphs": [
           "{{care_price_table}}",
           "{{careIncluded}}",
-          "{{careArrangements}}"
+          "{{careArrangements}}",
+          "{{cleaningBenefit}}",
+          "{{cleaningCounter}}",
+          "{{cleaningBenefitScope}}"
         ]
       },
       {
         "id": "program-status",
-        "title": "Programs in preparation",
+        "title": "Loyalty, gifts and referrals",
         "paragraphs": [
-          "Loyalty and referral previews remain Coming Soon. Program participation, rewards and second-purchase gifts have not launched. A preview does not establish an active benefit for an order."
+          "{{loyaltySummary}}",
+          "{{gift_table}}",
+          "{{giftTerms}}",
+          "{{discountRules}}",
+          "{{discountExample}}",
+          "{{referralBuyer}}",
+          "See the <a href=\"/loyalty-program/\">Loyalty Program</a> and <a href=\"/referral-program/\">Salesperson Referral Program</a> for purchase counting and participant guidance."
         ]
       },
       {

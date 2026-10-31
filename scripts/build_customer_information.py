@@ -13,7 +13,7 @@ def policy_main(data):
  out+='<nav class="box" aria-label="On this page"><h2>On this page</h2><ul>'+''.join('<li><a href="/'+data['route']+'/#'+s['id']+'">'+escape(s['title'])+'</a></li>' for s in data['sections'])+'</ul></nav>'
  for s in data['sections']:
   anchors=''.join('<span id="'+old+'"></span>' for old,new in data.get('legacyAnchors',{}).items() if new==s['id'])
-  out+='<section class="sec" id="'+s['id']+'">'+anchors+'<h2>'+escape(s['title'])+'</h2>'+''.join('<p>'+expand(p)+'</p>' if p not in ['{{cotton_table}}','{{suit_price_table}}','{{alteration_table}}','{{care_price_table}}'] else expand(p) for p in s['paragraphs'])+'</section>'
+  out+='<section class="sec" id="'+s['id']+'">'+anchors+'<h2>'+escape(s['title'])+'</h2>'+''.join('<p>'+expand(p)+'</p>' if p not in ['{{cotton_table}}','{{suit_price_table}}','{{alteration_table}}','{{care_price_table}}','{{gift_table}}'] else expand(p) for p in s['paragraphs'])+'</section>'
  return out
 
 def static_header(source):

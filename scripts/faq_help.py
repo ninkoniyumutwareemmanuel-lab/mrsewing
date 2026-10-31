@@ -27,7 +27,7 @@ def catalogue():
    assert qs[id]['question'] and expand(qs[id]['answer'])
  for t in topics:assert all(s in slugs and s!=t['slug'] for s in t['related'])
  return data,topics,qs,owners
-def route(topic):return '/faq/'+topic['slug']+'/'
+def route(topic):return topic.get('route','/faq/'+topic['slug']+'/')
 def routes():return [route(t) for t in catalogue()[1]]
 def icon(name):
  paths={
@@ -86,6 +86,7 @@ def outputs():
  schema={'@context':'https://schema.org','@type':'CollectionPage','name':seo['title'],'description':seo['description'],'url':DOMAIN+'/faq/','isPartOf':{'@id':DOMAIN+'/#website'},'mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':n+1,'name':t['title'],'url':DOMAIN+route(t)} for n,t in enumerate(topics)]}}
  out[ROOT/'faq.html']=render('/faq/',seo['title'],seo['description'],hub(topics,data),schema,True)
  for t in topics:
+  if t.get('externalPage'):continue
   path=route(t);title=t['title']+' FAQs | Mr Sewing Fashion, Kigali';desc=t['description']+' Find practical answers from Mr Sewing and the next step for your enquiry.'
   schema={'@context':'https://schema.org','@type':'FAQPage','@id':DOMAIN+path+'#faq','name':title,'description':desc,'url':DOMAIN+path,'isPartOf':{'@id':DOMAIN+'/faq/'},'mainEntity':[{'@type':'Question','name':qs[id]['question'],'acceptedAnswer':{'@type':'Answer','text':plain(expand(qs[id]['answer']))}} for id in t['questions']],'breadcrumb':{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':DOMAIN+'/'},{'@type':'ListItem','position':2,'name':'FAQs','item':DOMAIN+'/faq/'},{'@type':'ListItem','position':3,'name':t['title'],'item':DOMAIN+path}]}}
   out[ROOT/path.strip('/')/'index.html']=render(path,title,desc,topic_content(t,topics,qs),schema)

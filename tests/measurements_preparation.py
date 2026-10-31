@@ -37,7 +37,7 @@ css=(ROOT/'_templates/shared/site.css').read_text();assert css.startswith(old('_
 for name in ['navigation.js','motion.js']:
  path=ROOT/'_templates/shared'/name
  if path.exists():assert path.read_text()==old('_templates/shared/'+name)
-for route in routes():
+for route in [r for r in routes() if r.startswith('/shop/')]:
  html=(ROOT/route.strip('/')/'index.html').read_text()
  assert '<meta name="robots" content="noindex, follow">' in html,route
  assert 'https://mrsewingfashion.com'+route not in (ROOT/'sitemap.xml').read_text(),route
@@ -45,10 +45,13 @@ for route in routes():
  assert not re.search(r'<(?:form|input|select|textarea)\b',html)
  assert not re.search(r'\b(?:RWF|discount|commission|enrol|redeem)\b',html,re.I)
  assert 'href="/measurements/"' in html
-assert (ROOT/'sitemap.xml').read_text()==old('sitemap.xml')
+import xml.etree.ElementTree as ET
+ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+urls=lambda text:{e.text for e in ET.fromstring(text).findall('s:url/s:loc',ns)}
+assert urls((ROOT/'sitemap.xml').read_text())==urls(old('sitemap.xml'))|{'https://mrsewingfashion.com/loyalty-program/','https://mrsewingfashion.com/referral-program/'}
 for file in ['_headers','_redirects','robots.txt','_data/page-seo.json','assets/forms.js','assets/homepage.js','_templates/hero-slideshow.js']:
  assert (ROOT/file).read_text()==old(file),file
 care=(ROOT/'services/garment-care/index.html').read_text()
 for route in ['/services/garment-care/services/','/services/garment-care/planning/']:
  assert 'href="'+route+'"' in care
-print('PASS: original 12 guide instructions/images, 4 answers, metadata/schema, shared guide-only links, four noindex drafts, unchanged sitemap/hero/policies/forms and connected existing care pages.')
+print('PASS: original 12 guide instructions/images, 4 answers, metadata/schema, shared guide-only links, two Shop drafts and two approved program routes, protected hero/forms and connected existing care pages.')

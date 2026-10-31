@@ -88,7 +88,8 @@
         "mobile-fees",
         "mobile-confirm",
         "mobile-visit-scope",
-        "combined-mobile-express"
+        "combined-mobile-express",
+        "mobile-discount-base"
       ],
       "related": [
         "booking-visiting",
@@ -140,7 +141,8 @@
         "express-delivery",
         "express-availability",
         "express-charge",
-        "express-mobile"
+        "express-mobile",
+        "express-discount-base"
       ],
       "related": [
         "production-delivery",
@@ -169,7 +171,8 @@
         "care-timing",
         "care-handover",
         "paid-care-prices",
-        "care-express-price"
+        "care-express-price",
+        "cleaning-shared-counter"
       ],
       "related": [
         "prices-packages-payments",
@@ -252,7 +255,8 @@
         "payment-methods",
         "suit-accessories",
         "replacement-packaging",
-        "program-status"
+        "program-status",
+        "suit-discount-calculation"
       ],
       "related": [
         "custom-tailoring",
@@ -369,6 +373,59 @@
         "photo",
         "photograph",
         "personal information"
+      ]
+    },
+    {
+      "slug": "loyalty-program",
+      "title": "Loyalty & Second-Purchase Gifts",
+      "description": "Returning purchases, the suit-only loyalty discount and second-purchase gift packages.",
+      "destination": "/loyalty-program/",
+      "route": "/loyalty-program/",
+      "externalPage": true,
+      "icon": "receipt",
+      "questions": [
+        "loyalty-start",
+        "loyalty-counting",
+        "second-purchase-gifts",
+        "loyalty-verification",
+        "loyalty-calculation"
+      ],
+      "related": [
+        "prices-packages-payments",
+        "garment-care"
+      ],
+      "keywords": [
+        "loyalty",
+        "returning",
+        "third purchase",
+        "gifts"
+      ]
+    },
+    {
+      "slug": "referral-program",
+      "title": "Salesperson Referrals",
+      "description": "First-time buyer benefits, code timing, qualifying suits and salesperson payment windows.",
+      "destination": "/referral-program/",
+      "route": "/referral-program/",
+      "externalPage": true,
+      "icon": "chat",
+      "questions": [
+        "referral-first-time",
+        "referral-code",
+        "referral-commission",
+        "referral-qualifying",
+        "referral-payment-window",
+        "referral-discount-calculation"
+      ],
+      "related": [
+        "prices-packages-payments",
+        "loyalty-program"
+      ],
+      "keywords": [
+        "referral",
+        "salesperson",
+        "code",
+        "commission"
       ]
     }
   ],
@@ -548,7 +605,7 @@
     },
     "care-included": {
       "question": "What cleaning is included with a suit?",
-      "answer": "{{package}} Follow-up arrangements are separate from this initial cleaning. Discuss any applicable care arrangement directly; separately requested paid cleaning has its own quotation.",
+      "answer": "{{package}} {{cleaningBenefit}} See <a href=\"/services/garment-care/#included-cleaning-benefits\">included cleaning benefits</a> for the shared counter and follow-up arrangements.",
       "keywords": []
     },
     "care-payment": {
@@ -816,13 +873,92 @@
       ]
     },
     "program-status": {
-      "question": "Are loyalty, referral and second-purchase gift offers active?",
-      "answer": "The Loyalty Program and Referral Program remain Coming Soon. Their benefits and participation conditions have not launched. Do not assume a discount, gift or reward applies to your quotation. See the <a href=\"/loyalty-program/\">Loyalty preview</a> and <a href=\"/referral-program/\">Referral preview</a>.",
+      "question": "How do loyalty, referrals and second-purchase gifts work?",
+      "answer": "{{loyaltySummary}} {{giftTerms}} Read the <a href=\"/loyalty-program/\">Loyalty Program</a> and <a href=\"/referral-program/\">Salesperson Referral Program</a> for the defined benefits and guidance.",
       "keywords": [
         "loyalty",
         "referral",
         "gifts"
       ]
+    },
+    "loyalty-start": {
+      "question": "When does the 3% loyalty discount begin?",
+      "answer": "{{loyaltySummary}}",
+      "keywords": []
+    },
+    "loyalty-counting": {
+      "question": "Do several suits in one order count as several purchases?",
+      "answer": "No. Several suits bought together count as one purchase toward the loyalty milestone. Loyalty reflects returning to purchase on separate occasions.",
+      "keywords": []
+    },
+    "second-purchase-gifts": {
+      "question": "What gift applies on the second separate suit purchase?",
+      "answer": "{{gift_table}} {{giftTerms}}",
+      "keywords": []
+    },
+    "loyalty-verification": {
+      "question": "How is my purchase history checked?",
+      "answer": "{{loyaltyVerification}}",
+      "keywords": []
+    },
+    "loyalty-calculation": {
+      "question": "How does loyalty apply with express or mobile tailoring?",
+      "answer": "{{discountRules}} {{discountExample}}",
+      "keywords": []
+    },
+    "referral-first-time": {
+      "question": "Who can receive the referral buyer discount?",
+      "answer": "{{referralBuyer}}",
+      "keywords": []
+    },
+    "referral-code": {
+      "question": "When must the referral code be recorded?",
+      "answer": "Record the buyer’s chosen salesperson code before the advance payment. Each salesperson has one unique code. Contact the team about participation and your assigned code; there is no automated signup on this website.",
+      "keywords": []
+    },
+    "referral-commission": {
+      "question": "How much does a salesperson earn?",
+      "answer": "{{referralCommission}}",
+      "keywords": []
+    },
+    "referral-qualifying": {
+      "question": "When does commission qualify for payment?",
+      "answer": "{{referralEligibility}}",
+      "keywords": []
+    },
+    "referral-payment-window": {
+      "question": "How do the 14-day payment windows work?",
+      "answer": "{{referralWindows}} {{referralPayment}}",
+      "keywords": []
+    },
+    "referral-discount-calculation": {
+      "question": "Can the referral discount combine with loyalty or reduce express fees?",
+      "answer": "{{discountRules}}",
+      "keywords": []
+    },
+    "cleaning-shared-counter": {
+      "question": "Does each garment keep separate cleaning credits?",
+      "answer": "{{cleaningCounter}} {{cleaningBenefitScope}}",
+      "keywords": [
+        "shirt only",
+        "shared counter",
+        "three months"
+      ]
+    },
+    "suit-discount-calculation": {
+      "question": "How are eligible suit discounts calculated?",
+      "answer": "{{discountRules}} {{discountExample}}",
+      "keywords": []
+    },
+    "express-discount-base": {
+      "question": "Does a loyalty or referral discount reduce the express calculation base?",
+      "answer": "{{discountRules}} {{discountExample}}",
+      "keywords": []
+    },
+    "mobile-discount-base": {
+      "question": "How are suit discounts handled with mobile and express charges?",
+      "answer": "{{discountRules}} {{discountExample}}",
+      "keywords": []
     }
   },
   "synonyms": [

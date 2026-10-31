@@ -3,3 +3,6 @@
 @media(prefers-reduced-motion:reduce){.hero-slide-title>[data-hero-text],.hero-frame img{transition:none}}
 
 .hero-description{font-size:clamp(18px,1.65vw,22px)!important;line-height:1.65!important}.hero-controls svg{display:block}.hero-controls [hidden]{display:none!important}
+
+/* Approved homepage enquiry and visit guidance. */
+.hero-enquiry-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:24px}.hero-enquiry-actions .home-text-link{color:var(--gold)}.hero-enquiry-actions .home-button{white-space:normal;line-height:1.6;max-width:100%;text-align:left}.hero-enquiry-actions .home-arrow{flex:none}.home-final .home-visit-guidance{font-size:14px;line-height:1.8;margin:0 0 18px}.home-visit-guidance a{display:inline-flex;min-height:44px;align-items:center;text-underline-offset:4px}

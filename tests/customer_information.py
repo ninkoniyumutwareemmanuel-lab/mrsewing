@@ -10,7 +10,7 @@ from customer_information import information,expand
 from build_public_routes import public_routes
 info=information();assert info['advancePercent']==70
 assert [(x['garment'],x['priceRwf']) for x in info['cotton']]==[('Men two-piece',200000),('Men three-piece',250000),('Women two-piece',150000),('Women three-piece',200000)]
-from faq_help import catalogue, routes as faq_routes
+from faq_help import catalogue, routes as faq_routes, route as faq_route
 for path,output in outputs().items():
  assert path.read_text()==output,path.name
  if path.suffix=='.html':
@@ -20,7 +20,7 @@ hub_schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</scr
 assert hub_schema['@type']=='CollectionPage'
 data,topics,questions,_=catalogue()
 for topic in topics:
- html=(ROOT/'faq'/topic['slug']/'index.html').read_text()
+ html=(ROOT/faq_route(topic).strip('/')/'index.html').read_text()
  schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',html,re.S)[1])
  assert [(q['name'],q['acceptedAnswer']['text']) for q in schema['mainEntity']]==[(questions[id]['question'],plain(expand(questions[id]['answer']))) for id in topic['questions']]
 # Inspect metadata/JSON-LD as well as visible HTML in affected public output.
@@ -41,7 +41,7 @@ for file in ['booking.html','booking-housecall.html','booking-workplace.html','b
 source=(ROOT/'_templates/homepage-sections.html').read_text();hero=source.split('</section>',1)[0]
 assert 'data-hero-step' in hero and 'data-hero-select' not in hero
 assert 'Pause slideshow' not in hero and '>01<' not in hero and '>02<' not in hero
-assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==3
+assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==1
 assert 'const interval=10000' in (ROOT/'_templates/hero-slideshow.js').read_text()
 assert len(list((ROOT/'collections/designs').glob('*/index.html')))==111
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.

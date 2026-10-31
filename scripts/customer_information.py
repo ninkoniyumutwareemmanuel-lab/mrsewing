@@ -14,8 +14,10 @@ def alteration_table():
  return table('Alterations — starting prices in RWF',['Garment / assessed service','Starting price'],[[r['service'],'From '+format(r['startingPriceRwf'],',')] for r in information()['alterations']])
 def care_price_table():
  return table('Paid suit cleaning — RWF',['Suit','Standard','Express (+35%)'],[[r['garment'],format(r['standardPriceRwf'],','),format(r['expressPriceRwf'],',')] for r in information()['paidSuitCleaning']])
+def gift_table():
+ return table('Second separate qualifying suit purchase — gift package',['Collection','Men','Women'],[[r['collection'],r['men'],r['women']] for r in information()['giftSchedule']])
 def expand(text):
- data=information();data['cotton_table']=cotton_table();data['suit_price_table']=suit_price_table();data['alteration_table']=alteration_table();data['care_price_table']=care_price_table()
+ data=information();data['cotton_table']=cotton_table();data['suit_price_table']=suit_price_table();data['alteration_table']=alteration_table();data['care_price_table']=care_price_table();data['gift_table']=gift_table()
  for key,value in data.items():
   if isinstance(value,str):text=text.replace('{{'+key+'}}',value)
  assert not re.search(r'{{\w+}}',text),text

@@ -44,22 +44,23 @@ for page in ['refund-policy','privacy-policy']:
 for ident in ['design','responsibilities','returns','photos','delivery']:
  find=lambda obj:next(s for s in obj['terms-and-conditions']['sections'] if s['id']==ident)
  assert find(now)==find(previous),ident
-# Existing public previews do not become active programs.
+# Defined program publication is now approved; untested forms/automation remain absent.
 for route in ['loyalty-program','referral-program']:
- text=(ROOT/route/'index.html').read_text();assert 'Coming Soon' in text
- assert not re.search(r'3%|2%|6,000|14-day|<form\b',text)
+ text=(ROOT/route/'index.html').read_text()
+ assert '<meta name="robots" content="index, follow">' in text
+ assert not re.search(r'<form\b',text)
 assert not json.loads((ROOT/'_data/garment-care.json').read_text())['businessConfirmation']
 assert all(not s['published'] for s in json.loads((ROOT/'_data/garment-care.json').read_text())['services'])
 # Preserve all working media, registry, site routing, Maps/business data and integrations.
-for p in ['_data/business.json','_data/contact-v2.json','_data/page-seo.json','_data/collection-designs.json','_data/customer-projects.json','_data/collection-id-registry.json','_headers','_redirects','robots.txt','sitemap.xml','assets/forms.js','assets/homepage.js','_templates/hero-slideshow.js','_templates/shared/header.html','_templates/shared/footer.html']:
+for p in ['_data/business.json','_data/contact-v2.json','_data/page-seo.json','_data/collection-designs.json','_data/customer-projects.json','_data/collection-id-registry.json','_headers','_redirects','robots.txt','assets/forms.js','assets/homepage.js','_templates/hero-slideshow.js','_templates/shared/header.html','_templates/shared/footer.html']:
  assert (ROOT/p).read_text()==old(p),p
 for name in ['_data/customer-information.json','_data/customer-faqs.json','_data/policy-pages.json','_data/care-information.json']:
  text=(ROOT/name).read_text()
  assert not re.search(r'supplier costs|maker fees|profit margin|owner pay|sales targets|financial.manager costs|internal budgets',text,re.I),name
  assert not re.search(r'Mr Sewing Fashion Designer|12–15|2–4 days|one maker day',text),name
-_,topics,questions,owners=catalogue();assert len(topics)==14 and len(owners)==86
-assert len(search_data()['entries'])==86
+_,topics,questions,owners=catalogue();assert len(topics)==16 and len(owners)==101
+assert len(search_data()['entries'])==101
 for route in ['services/custom-tailoring','services/express-tailoring','services/mobile-fitting','services/alterations','services/garment-care','services/garment-care/services','services/garment-care/planning','faq/prices-packages-payments']:
  text=(ROOT/route/'index.html').read_text();assert '{{' not in text
 assert 'Paid suit cleaning — RWF' in (ROOT/'services/garment-care/index.html').read_text()
-print('PASS: 16 suit prices, approved surcharge arithmetic, cleaning/alteration rates and timing, exact form integrations, booking layout, held legal/program rules, confidentiality, preserved SEO/media and 86 FAQ answers.')
+print('PASS: 16 suit prices, approved surcharge arithmetic, cleaning/alteration rates and timing, exact form integrations, booking layout, held legal rules and defined program publication, confidentiality, preserved SEO/media and 101 FAQ answers.')
