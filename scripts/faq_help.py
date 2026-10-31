@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlencode
 from site_seo import ROOT,DOMAIN,finalize
 from sync_page_seo import apply
+from service_information import styles as offer_styles
 from customer_information import expand
 from build_homepage import reserve_image_space
 from homepage_resources import delivery,CSS as ICON_CSS
@@ -76,7 +77,7 @@ def topic_content(t,topics,qs):
  return out
 
 def render(path,title,description,content,schema,legacy=False):
- source=(ROOT/'_templates/faq.html').read_text();vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':path,'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/faq.css').read_text(),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header('/faq/')),'header'),'footer':delivery(shared.footer(),'footer'),'content':content.replace('<span aria-hidden="true">↗</span>',icon('arrow')),'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'discovery':DISCOVERY_LINKS,'legacy':legacy_script('faq.html') if legacy else ''}
+ source=(ROOT/'_templates/faq.html').read_text();vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':path,'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/faq.css').read_text()+'\n'+offer_styles(),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header('/faq/')),'header'),'footer':delivery(shared.footer(),'footer'),'content':content.replace('<span aria-hidden="true">↗</span>',icon('arrow')),'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'discovery':DISCOVERY_LINKS,'legacy':legacy_script('faq.html') if legacy else ''}
  for k,v in vals.items():source=source.replace('{{'+k+'}}',v)
  assert not re.search(r'{{\w+}}',source)
  return finalize(source,ROOT/'faq.html' if legacy else ROOT/path.strip('/')/'index.html')

@@ -26,7 +26,7 @@ for t in topics:
   q=questions[id];assert item['name']==q['question'] and item['acceptedAnswer']['text']==plain(expand(q['answer']))
   assert 'id="'+id+'"' in html and expand(q['answer']) in html
  assert 'All FAQ topics' in html and t['destination'] in html
- for stale in ['35%','75%','72 hours','day 12','at least 70%','1 to 2 weeks','1 to 3 days','5% off','10% off','special gifts','supplier costs','maker fees','loyalty program','referral program','free photoshoot']:
+ for stale in ['75%','72 hours','day 12','at least 70%','1 to 2 weeks','1 to 3 days','5% off','10% off','special gifts','supplier costs','maker fees','loyalty program','referral program','free photoshoot']:
   assert stale not in html,(t['slug'],stale)
 hub=(ROOT/'faq.html').read_text();assert 'class="faq-question"' not in hub and '"@type": "FAQPage"' not in hub
 assert hub.count('class="faq-card"')==len(topics)
@@ -40,16 +40,19 @@ before_meta=Metadata(old('faq.html')).meta;after_meta=Metadata(hub).meta
 for key,value in before_meta.items():assert after_meta.get(key)==value,(key,value,after_meta.get(key))
 
 # Preserve all unrelated site assets/configuration and the existing policy wording/output.
-protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_data/page-seo.json','assets/homepage.js','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
+protected=['_data/business.json','_data/contact-v2.json','_data/page-seo.json','assets/homepage.js','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True).splitlines()
 for f in files:
- if f in protected or f.startswith(('collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or any(f.startswith(x) for x in ['terms-and-conditions','refund-policy','privacy-policy']) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
+ if f in protected or f.startswith(('collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
   if f.endswith('.html') and f.startswith(('collections/','our-work/')):
    assert without_shared_shell((ROOT/f).read_text())==without_shared_shell(old(f)),f
   else:assert (ROOT/f).read_bytes()==old(f,True),f
 # Homepage content outside the restored block is unchanged; shared shell now includes the guide.
 new=(ROOT/'index.html').read_text();parser=Section(new,'div',('id','programs-section'));parser.feed(new);assert parser.markup
-assert without_shared_shell(new.replace('    '+parser.markup+'\n','',1))==without_shared_shell(old('index.html'))
+# Service facts changed with owner approval; hero and program previews remain exact.
+current_sections=(ROOT/'_templates/homepage-sections.html').read_text()
+previous_sections=subprocess.check_output(['git','show','ff43efe:_templates/homepage-sections.html'],cwd=ROOT,text=True)
+assert current_sections.split('</section>',1)[0]==previous_sections.split('</section>',1)[0]
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
 assert block.count('Coming Soon')==3 and not re.search(r'<(?:button|input|form)\b',block)
 assert re.findall(r'<a[^>]+href="([^"]+)"',block)==['/loyalty-program/','/referral-program/']

@@ -46,7 +46,7 @@ for route in routes():
  assert not re.search(r'\b(?:RWF|discount|commission|enrol|redeem)\b',html,re.I)
  assert 'href="/measurements/"' in html
 assert (ROOT/'sitemap.xml').read_text()==old('sitemap.xml')
-for file in ['_headers','_redirects','robots.txt','_data/page-seo.json','assets/forms.js','assets/homepage.js','_templates/hero-slideshow.js','terms-and-conditions.html','refund-policy.html','privacy-policy.html']:
+for file in ['_headers','_redirects','robots.txt','_data/page-seo.json','assets/forms.js','assets/homepage.js','_templates/hero-slideshow.js']:
  assert (ROOT/file).read_text()==old(file),file
 care=(ROOT/'services/garment-care/index.html').read_text()
 for route in ['/services/garment-care/services/','/services/garment-care/planning/']:

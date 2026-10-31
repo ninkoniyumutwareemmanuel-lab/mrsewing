@@ -3,9 +3,9 @@
     "id": "custom-tailoring",
     "title": "Custom Tailoring",
     "route": "/services/custom-tailoring/",
-    "intro": "Personal tailoring for men and women, from suits and executive outfits to formalwear shaped around your preferences.",
+    "intro": "Custom suits and suit packages for men and women, shaped around your preferences.",
     "audience": "Men and women planning a custom suit, formal outfit or professional wardrobe.",
-    "options": "Discuss suits, jackets, trousers, skirts or other garment requirements, your design references and available fabric choices. The team confirms what is feasible before an order is agreed.",
+    "options": "Our usual new-garment offers focus on suits and suit packages. Standalone shirts, trousers and coats may be available by arrangement for existing customers, subject to assessment and quotation.",
     "steps": [
       "Share your references, garment category and intended occasion.",
       "Discuss fabric selection, design details, measurements and a quote before ordering.",
@@ -19,8 +19,8 @@
     "visual": "m1.jpeg",
     "sections": [
       [
-        "Clothing for men and women",
-        "Discuss custom suits, jackets, trousers, skirts, formalwear and executive outfits. Start with a reference photograph or a conversation about the garment you need."
+        "Suits and suit packages",
+        "Our usual new-garment offers focus on suits and suit packages. Standalone shirts, trousers and coats may be available by arrangement for existing customers, subject to assessment and quotation. A two-piece suit includes a jacket/coat and trousers. A three-piece suit includes a jacket/coat, trousers and waistcoat. A full-set package may add a shirt and necktie; neither is automatically included in the standard suit price. Skirt-suit requests require a separate quotation and confirmation."
       ],
       [
         "Designed around your preferences",
@@ -166,9 +166,9 @@
   },
   {
     "id": "garment-care",
-    "title": "Premium Garment Care",
+    "title": "Mr Sewing Garment Care",
     "route": "/services/garment-care/",
-    "intro": "A dedicated care conversation for your garments. Confirm available services, suitability and conditions with Mr Sewing.",
+    "intro": "Suit cleaning and garment care, with standard and express packages confirmed around your garment.",
     "audience": "Customers asking about initial suit care or a separately requested garment-care service.",
     "options": "The standard suit package includes one initial standard professional cleaning. Separately requested care requires a quotation and confirmation.",
     "steps": [
@@ -244,16 +244,16 @@
     "visual": "m-modernsuits1.jpeg",
     "sections": [
       [
-        "An urgent request, carefully assessed",
-        "Express tailoring is considered against the garment, materials, measurements and current capacity. Eligibility is confirmed individually; tailoring-stage estimates do not guarantee a delivered-suit deadline."
+        "Plan the complete order",
+        "Usual custom-tailoring planning windows are 7–10 working days for standard orders and 3–4 working days for express orders, subject to availability. These windows allow for purchasing, tailoring, agreed fittings, cleaning, packaging and delivery. Special designs have an individually agreed timeline. Confirm the actual completion date after the order is assessed and fittings are scheduled."
       ],
       [
-        "Tell us the exact deadline",
-        "Send the date and time you need the garment, the garment type and a design reference. Explain whether fabric and measurements are already available."
+        "Express charges",
+        "Express custom tailoring adds 35% of the original standard suit price: express total = standard suit price × 1.35. This applies across all four suit collections. Separately priced shirts, accessories, transport, mobile visits and other extras are outside that calculation base. Special or nonstandard work receives an individually agreed quotation."
       ],
       [
-        "Confirmation before production",
-        "The team must confirm feasibility, any express fees, payment requirements and the agreed schedule. Opening an enquiry does not reserve production capacity or confirm an order."
+        "Confirm before you proceed",
+        "The team confirms feasibility, the full quotation, fitting appointments and the actual completion date before accepting an urgent order. An enquiry does not reserve production capacity."
       ]
     ],
     "requirements": [

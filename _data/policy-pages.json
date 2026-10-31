@@ -7,7 +7,7 @@
         "id": "about",
         "title": "About Mr Sewing",
         "paragraphs": [
-          "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda."
+          "Mr Sewing operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda."
         ]
       },
       {
@@ -25,17 +25,21 @@
         "title": "Suit contents and included package",
         "paragraphs": [
           "{{contents}}",
-          "{{package}}"
+          "{{package}}",
+          "{{scope}}",
+          "{{accessoryTerms}}",
+          "{{packagingTerms}}"
         ]
       },
       {
         "id": "pricing",
         "title": "Prices and quotations",
         "paragraphs": [
-          "{{cotton_table}}",
+          "{{suit_price_table}}",
           "{{extras}}",
           "{{higherCollections}}",
-          "Confirm the quotation and available payment method with the team before paying."
+          "{{paymentMethods}}",
+          "{{paymentComingSoon}}"
         ]
       },
       {
@@ -44,7 +48,7 @@
         "paragraphs": [
           "A website submission or WhatsApp message is a request, not a confirmed appointment or accepted production order. Wait for direct confirmation of the date, time, location and scope before relying on arrangements.",
           "If you cannot attend, contact the team as early as possible to discuss rescheduling.",
-          "Mobile fitting visits are separately arranged. Confirm the location, availability and any charges before a visit."
+          "{{mobilePricing}}"
         ]
       },
       {
@@ -53,7 +57,37 @@
         "paragraphs": [
           "{{timing}}",
           "{{alterationTiming}}",
-          "{{careTiming}}"
+          "{{alterationExpress}}",
+          "{{careTiming}}",
+          "{{careExpress}}"
+        ]
+      },
+      {
+        "id": "optional-services",
+        "title": "Express, mobile and additional work",
+        "paragraphs": [
+          "{{expressPricing}}",
+          "{{mobileExample}}",
+          "{{combinedPricing}}",
+          "{{mobileScope}}",
+          "{{alteration_table}}",
+          "{{alterationExtras}}"
+        ]
+      },
+      {
+        "id": "paid-care",
+        "title": "Paid suit cleaning",
+        "paragraphs": [
+          "{{care_price_table}}",
+          "{{careIncluded}}",
+          "{{careArrangements}}"
+        ]
+      },
+      {
+        "id": "program-status",
+        "title": "Programs in preparation",
+        "paragraphs": [
+          "Loyalty and referral previews remain Coming Soon. Program participation, rewards and second-purchase gifts have not launched. A preview does not establish an active benefit for an order."
         ]
       },
       {
@@ -124,7 +158,7 @@
         "id": "scope",
         "title": "Orders and services",
         "paragraphs": [
-          "This customer information covers tailoring, alterations, cleaning enquiries and related appointments with Mr Sewing Fashion Designer, operating under NINKONIYUMUTWARE NEXUS LTD."
+          "This customer information covers tailoring, alterations, cleaning enquiries and related appointments with Mr Sewing, operating under NINKONIYUMUTWARE NEXUS LTD."
         ]
       },
       {
@@ -224,7 +258,7 @@
         "id": "who",
         "title": "Who to contact",
         "paragraphs": [
-          "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact us with questions about information provided to the business.",
+          "Mr Sewing operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact us with questions about information provided to the business.",
           "Contact Mr Sewing on WhatsApp or phone +250 787 411 501, or email mrsewingfashiondesigner@gmail.com. Include your order or request details so the team can respond in context."
         ]
       },

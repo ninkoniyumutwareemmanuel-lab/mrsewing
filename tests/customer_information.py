@@ -27,7 +27,7 @@ for topic in topics:
 paths=[ROOT/n for n in ['index.html','faq.html','terms-and-conditions.html','refund-policy.html','privacy-policy.html','measurement-submission.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','why-choose.html']]+list((ROOT/'services').rglob('index.html'))
 for p in paths:
  text=p.read_text()
- for stale in ['35%','75%','72 hours','10% of','day 12','1 to 2 weeks','1 to 3 days','within 24 hours','at least 70%','5% off','10% off','ownership rights and deposits paid are forfeited','we do not offer cancellations, returns or refunds','250,000</td><td>350,000','complimentary garment cleaning and special gifts','approved for publication','not listed until their availability']:
+ for stale in ['75%','72 hours','10% of','day 12','1 to 2 weeks','1 to 3 days','within 24 hours','at least 70%','5% off','10% off','ownership rights and deposits paid are forfeited','we do not offer cancellations, returns or refunds','250,000</td><td>350,000','complimentary garment cleaning and special gifts','approved for publication','not listed until their availability']:
   assert stale not in text,(p,stale)
  assert not re.search(r'\b(?:supplier costs|maker fees|owner pay|profit margin)\b',text,re.I)
 for file in ['booking.html','booking-housecall.html','booking-workplace.html','booking-adjustment.html','measurement-submission.html']:

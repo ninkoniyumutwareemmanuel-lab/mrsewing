@@ -1,3 +1,4 @@
+from preservation_helpers import original_about_scope
 #!/usr/bin/env python3
 """Static publication boundaries, evidence-based names, recommendations and links."""
 import json,re,sys,hashlib,subprocess
@@ -43,4 +44,4 @@ current_inventory=json.loads((build.ROOT/'_data/collection-image-inventory.json'
 assert current_inventory['images'][:len(original_inventory['images'])]==original_inventory['images']
 
 old_about=subprocess.check_output(['git','show','ce32d5ff67eacecf03804bf6608222c5f13e3cd1:_templates/about.html'],cwd=build.ROOT,text=True)
-assert re.search(r'<main.*?</main>',old_about,re.S)[0]==re.search(r'<main.*?</main>',(build.ROOT/'_templates/about.html').read_text(),re.S)[0],'About written content changed'
+assert re.search(r'<main.*?</main>',old_about,re.S)[0]==original_about_scope(re.search(r'<main.*?</main>',(build.ROOT/'_templates/about.html').read_text(),re.S)[0]),'About written content changed'

@@ -1,5 +1,5 @@
 {
-  "business": "Mr Sewing Fashion Designer",
+  "business": "Mr Sewing",
   "company": "NINKONIYUMUTWARE NEXUS LTD",
   "location": "Kigali, Rwanda",
   "website": "https://mrsewingfashion.com",
@@ -7,14 +7,14 @@
   "suitPayment": "Pay a 70% advance before production. For a suit order, the balance is due when tailoring is complete, before final cleaning and delivery. Full payment is required before garment release.",
   "standalonePayment": "Standalone alterations and cleaning require a 70% advance. With that advance, the remaining 30% is payable when the service is complete, before release or delivery. For standalone cleaning, this means after cleaning is complete.",
   "balance": "With a 70% advance, the balance is 30%. Your actual balance is the agreed total less payments already received.",
-  "contents": "A standard two-piece suit includes a jacket and trousers. A standard three-piece includes a jacket, trousers and waistcoat. A shirt is not automatically included. Skirt-suit options require a separate quotation and confirmation; the standard trouser-package price must not be assumed.",
+  "contents": "A two-piece suit includes a jacket/coat and trousers. A three-piece suit includes a jacket/coat, trousers and waistcoat. A full-set package may add a shirt and necktie; neither is automatically included in the standard suit price. Skirt-suit requests require a separate quotation and confirmation.",
   "package": "The standard suit package includes the agreed suit and standard tailoring, a branded hanger and protective cover, one initial standard professional cleaning, and initial door-to-door delivery within Kigali. These included items are not charged separately again.",
-  "extras": "Extra fabric, decorations, embroidery, attachments and special requirements need a quotation and confirmation before payment.",
-  "higherCollections": "For Polyester, Wool/Star and Super/Americano collection enquiries, request a quotation. No prices for these collections are listed here. Collection names alone do not establish verified fabric composition.",
+  "extras": "Standard prices apply to standard designs, sizes and production. Extra fabric, embroidery, decorations, special construction and other special requirements receive an agreed quotation. Confirm the complete applicable price and extras before payment. Reference-photo details depend on fabric availability and design feasibility.",
+  "higherCollections": "Standard suit prices are available for Cotton, Polyester, Wool / Star and Super / Americano. Star is the usual women’s option in the Wool collection; Americano is the usual women’s option in the Super collection. Alternative fabrics and special work require a quotation. Collection names do not establish exact fabric composition; Super is a supplied fabric name, not proof of composition.",
   "delivery": "Initial door-to-door Kigali delivery is included with the standard suit package. Outside-Kigali courier or agency charges are customer-paid and confirmed before dispatch. A courier deadline must be confirmed individually. Mobile fittings, collection visits and follow-up transport are separate arrangements; confirm their scope and any charges directly.",
-  "timing": "Standard tailoring usually takes 2–4 days; express tailoring usually takes 12–15 hours. These are tailoring-stage estimates, not delivered-suit deadlines. Sourcing, scheduling, fittings, changes, final cleaning and delivery affect the full order timeline. Confirm a realistic completion date individually.",
-  "alterationTiming": "Alterations are usually completed within one maker day. This is a work-stage estimate, not a guaranteed handover time; confirm assessment, scheduling, fitting and delivery arrangements individually.",
-  "careTiming": "Confirm the cleaning service, suitability and estimated completion date with the team before proceeding. The full schedule depends on the garment, treatment and current capacity.",
+  "timing": "Usual custom-tailoring planning windows are 7–10 working days for standard orders and 3–4 working days for express orders, subject to availability. These windows allow for purchasing, tailoring, agreed fittings, cleaning, packaging and delivery. Special designs have an individually agreed timeline. Confirm the actual completion date after the order is assessed and fittings are scheduled.",
+  "alterationTiming": "Straightforward standard alterations usually take 2–3 working days, excluding optional cleaning. Complex work has an individually agreed completion date. Inspect the garment and confirm the complete quotation and date before payment or work.",
+  "careTiming": "Standard paid suit cleaning usually takes 4–5 working days from collection to return delivery. Confirm the actual return date when accepting the order.",
   "cotton": [
     {
       "garment": "Men two-piece",
@@ -32,5 +32,94 @@
       "garment": "Women three-piece",
       "priceRwf": 200000
     }
-  ]
+  ],
+  "scope": "Our usual new-garment offers focus on suits and suit packages. Standalone shirts, trousers and coats may be available by arrangement for existing customers, subject to assessment and quotation.",
+  "alterationExpress": "Express alterations add 35% to the agreed standard alteration service price. One working day is available only for suitable straightforward jobs, subject to inspection and maker availability. Confirm the actual completion date and time before accepting express work. For example, a 25,000 RWF service becomes 33,750 RWF; 35,000 becomes 47,250; 45,000 becomes 60,750.",
+  "alterationExtras": "Optional cleaning, new branded packaging, customer collection/delivery, additional materials and work outside the assessed scope are separately quoted. Confirm the appropriate combined quotation before adding cleaning; the full paid suit-cleaning package is not automatically added. Separately payable transport is 10,000 RWF per visit, subject to confirmed service area and quotation.",
+  "careExpress": "Express paid suit cleaning adds 35% to the standard customer cleaning price: two-piece 40,000 + 14,000 = 54,000 RWF; three-piece 50,000 + 17,500 = 67,500 RWF. Return delivery is within two working days of collection, subject to availability. Agree the exact return date before payment. The same paid-cleaning package inclusions apply.",
+  "careIncluded": "Paid suit cleaning includes cleaning/washing, drying, pressing, a new branded hanger and garment cover, and collection and return delivery under the agreed quotation. Included packaging is not charged again.",
+  "careArrangements": "Confirm collection and return locations, the transport service area and the complete quotation before payment. Do not assume nationwide included transport or a fixed outside-Kigali fee. Other garment types, including separate shirts and dresses, require an individually confirmed service and quotation.",
+  "expressPricing": "Express custom tailoring adds 35% of the original standard suit price: express total = standard suit price × 1.35. This applies across all four suit collections. Separately priced shirts, accessories, transport, mobile visits and other extras are outside that calculation base. Special or nonstandard work receives an individually agreed quotation.",
+  "expressExamples": "Women’s two-piece Cotton: 150,000 + 52,500 = 202,500 RWF. Men’s two-piece Cotton: 200,000 + 70,000 = 270,000 RWF. Men’s two-piece Super: 600,000 + 210,000 = 810,000 RWF.",
+  "mobilePricing": "For a standard suit-only order in Kigali, the mobile-service fee is 50% of the original standard suit price, plus separately payable visit transport. The service fee is charged once per order and covers all measurement/fitting visits agreed for that order; it does not mean unlimited visits. Kigali visit transport is 10,000 RWF per visit, or 20,000 RWF for two visits. Initial Kigali suit delivery remains included in the suit package.",
+  "mobileExample": "Example for two agreed Kigali visits: 200,000 RWF suit + 100,000 RWF mobile-service fee + 20,000 RWF visit transport = 320,000 RWF.",
+  "mobileScope": "Outside Kigali, confirm the service price, transport and timing individually before payment. Multi-suit orders, mixed services, extra visits outside the agreed scope and mobile services other than this standard suit order need an individually confirmed scope and quotation.",
+  "combinedPricing": "For combined express and mobile tailoring on a standard suit-only order, calculate both charges from the same original standard suit price: standard price + 35% express + 50% mobile + transport. The combined surcharge is 85%; the percentages are not compounded. Example with two agreed Kigali visits: 200,000 + 70,000 + 100,000 + 20,000 = 390,000 RWF. Accessories and separately quoted extras remain separate.",
+  "accessoryTerms": "Suit-order shirts cost 30,000 RWF including initial standard shirt cleaning; neckties and bow ties cost 15,000 RWF each. A purchased shirt and necktie add 45,000 RWF. Accessories share the suit’s packaging. Do not pay again for an accessory already included in your agreed package.",
+  "packagingTerms": "A separately requested replacement branded hanger and garment-cover set costs 20,000 RWF. Standard suit packages and paid suit-cleaning packages already include their stated packaging. Separate hanger-only or cover-only prices and a standalone women’s inner-top price are not listed; confirm any request directly.",
+  "paymentMethods": "Current payment methods are bank transfer, MTN Mobile Money, Airtel Money, cash and cryptocurrency. Confirm the payment instructions for your quotation directly with the team. Do not send card details, a card PIN or a mobile-money PIN through an enquiry form.",
+  "paymentComingSoon": "PayPal and Visa online payments are Coming Soon and are not active checkout methods. Accepted manual payment methods do not mean an online checkout integration is available.",
+  "collections": [
+    {
+      "name": "Cotton",
+      "pricesRwf": [
+        200000,
+        250000,
+        150000,
+        200000
+      ]
+    },
+    {
+      "name": "Polyester",
+      "pricesRwf": [
+        270000,
+        320000,
+        220000,
+        270000
+      ]
+    },
+    {
+      "name": "Wool / Star",
+      "pricesRwf": [
+        400000,
+        450000,
+        350000,
+        400000
+      ]
+    },
+    {
+      "name": "Super / Americano",
+      "pricesRwf": [
+        600000,
+        650000,
+        500000,
+        550000
+      ]
+    }
+  ],
+  "alterations": [
+    {
+      "service": "Trousers",
+      "startingPriceRwf": 25000
+    },
+    {
+      "service": "Shirt",
+      "startingPriceRwf": 25000
+    },
+    {
+      "service": "Jacket and trousers",
+      "startingPriceRwf": 35000
+    },
+    {
+      "service": "Jacket, trousers and shirt",
+      "startingPriceRwf": 45000
+    },
+    {
+      "service": "Women’s dress",
+      "startingPriceRwf": 35000
+    }
+  ],
+  "paidSuitCleaning": [
+    {
+      "garment": "Two-piece suit",
+      "standardPriceRwf": 40000,
+      "expressPriceRwf": 54000
+    },
+    {
+      "garment": "Three-piece suit",
+      "standardPriceRwf": 50000,
+      "expressPriceRwf": 67500
+    }
+  ],
+  "customerDecisionSource": "Owner customer-information handoff, 30 October 2026; staging implementation approved 31 October 2026. Program launch and production publication remain separate approvals."
 }

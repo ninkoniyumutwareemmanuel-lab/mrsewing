@@ -9,7 +9,7 @@ import build_journey as journey
 from build_public_routes import public_routes
 source,published=care.catalog();assert not published and len(source['services'])==6
 root=care.ROOT;page=(root/'services/garment-care/index.html').read_text()
-assert 'AI-generated' in page and '<table' not in page
+assert 'AI-generated' in page and 'Paid suit cleaning — RWF' in page and '40,000' in page and '67,500' in page
 for category in source['services']:
  assert category['title'] not in page
  assert '/services/garment-care/'+category['slug']+'/' not in public_routes()

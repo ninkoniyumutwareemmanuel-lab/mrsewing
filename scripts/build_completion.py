@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Extend existing Journey builders with care information, process and Shop status."""
 import argparse,json,re
+import service_information as offers
 from customer_information import expand as customer_text
 from html import escape
 from pathlib import Path
@@ -25,6 +26,7 @@ def care_info_page(kind):
         title='Garment Care Quotes & Planning';desc='Understand the pricing, turnaround and handover status for Mr Sewing Garment Care in Kigali. Request confirmed arrangements for your garment.'
         content=intro(info['brand'],'Plan care with clarity.','Confirm the practical details before you hand over a garment. Prices, timing and collection arrangements must relate to the actual service agreed.')+care_summary()
         for ident,heading,text in [('prices','Prices in RWF',info['pricingStatus']),('turnaround','Turnaround times',info['turnaroundStatus']),('pickup-delivery','Pickup & delivery arrangements',info['arrangementsStatus'])]:content+='<section class="care-section" id="'+ident+'"><h2>'+heading+'</h2><p>'+escape(text)+'</p><p>Share your garment details and preferred date. Ask the team to confirm the applicable options and conditions before you agree.</p></section>'
+    content+=offers.paid_care()
     content+='<section class="care-section"><h2>Standalone care payments</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>The standard suit package includes one initial standard professional cleaning; separately requested care is quoted as its own service.</p></section>'
     content+='<section class="care-request"><h2>Ask about your garment.</h2><p>Opening WhatsApp starts a conversation; it does not confirm an order, service availability or an appointment.</p>'+enquiry(info['brand']+' — '+title,route)+'</section>'+related([('/services/garment-care/','Garment Care home')])
     out=complete_page(route,title+' — Mr Sewing Garment Care',desc,'<div class="home-shell care-info">'+care_navigation()+content+'</div>')
@@ -44,7 +46,7 @@ def information_page(kind):
         content=intro('Made to your measurements','The fit begins with you.','Measurements and fitting conversations help translate a design into a garment shaped around your requirements. This guide connects the practical steps without replacing an individual assessment.')+'<div class="info-prose">'
         for h,t in [('Prepare for measurements','Share your garment needs, design references and any existing measurements. If you are discussing an adjustment, have the relevant garment available.'),('Discuss the fit','Talk about your preferred silhouette and fit concerns. Measurements and a fitting review serve different purposes; agree the appointments needed for your garment.'),('Workshop or mobile fitting','Arrange a workshop appointment or request customer-location fitting support in Kigali. Mobile coverage, timing and any charges must be confirmed directly.'),('Connect the details','Design options, fabric selection and fitting arrangements belong to the same tailoring conversation. Confirm what is feasible before ordering.')]:content+='<section><h2>'+h+'</h2><p>'+t+'</p></section>'
         content+='</div>'+related([('/services/custom-tailoring/','Custom Tailoring'),('/services/mobile-fitting/','Mobile Fitting'),('/measurements/','Measurement guide')])
-    if kind=='our-process':content+='<section class="info-prose"><h2>Payment, cleaning and handover</h2><p>'+customer_text('{{suitPayment}} {{balance}} {{package}}')+'</p><p>'+customer_text('{{timing}}')+'</p><p>'+customer_text('{{delivery}}')+'</p></section>'
+    if kind=='our-process':content+=offers.payment()+'<section class="info-prose"><h2>Payment, cleaning and handover</h2><p>'+customer_text('{{suitPayment}} {{balance}} {{package}}')+'</p><p>'+customer_text('{{timing}}')+'</p><p>'+customer_text('{{delivery}}')+'</p></section>'
     return complete_page(route,title,desc,content)
 
 def outputs():

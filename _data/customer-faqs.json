@@ -86,7 +86,9 @@
         "mobile-location",
         "mobile-prepare",
         "mobile-fees",
-        "mobile-confirm"
+        "mobile-confirm",
+        "mobile-visit-scope",
+        "combined-mobile-express"
       ],
       "related": [
         "booking-visiting",
@@ -111,7 +113,8 @@
         "alter-quote",
         "alter-timing",
         "alter-payment",
-        "alter-concern"
+        "alter-concern",
+        "alteration-extras"
       ],
       "related": [
         "measurements-fittings",
@@ -136,7 +139,8 @@
         "express-details",
         "express-delivery",
         "express-availability",
-        "express-charge"
+        "express-charge",
+        "express-mobile"
       ],
       "related": [
         "production-delivery",
@@ -163,7 +167,9 @@
         "care-included",
         "care-payment",
         "care-timing",
-        "care-handover"
+        "care-handover",
+        "paid-care-prices",
+        "care-express-price"
       ],
       "related": [
         "prices-packages-payments",
@@ -243,7 +249,10 @@
         "standalone-payment",
         "higher-collections",
         "shirt-skirt",
-        "payment-methods"
+        "payment-methods",
+        "suit-accessories",
+        "replacement-packaging",
+        "program-status"
       ],
       "related": [
         "custom-tailoring",
@@ -371,7 +380,7 @@
     },
     "garment-options": {
       "question": "What clothing can I discuss with Mr Sewing?",
-      "answer": "Discuss custom suits, jackets, trousers, skirts, formalwear and executive outfits for men and women. Share the garment you need and a reference; the team confirms what is feasible before an order is agreed.",
+      "answer": "{{scope}} {{contents}}",
       "keywords": []
     },
     "own-fabric": {
@@ -453,8 +462,8 @@
       "keywords": []
     },
     "mobile-location": {
-      "question": "Where can I request a mobile fitting?",
-      "answer": "Request measurements or fitting support at a home, office or hotel in Kigali. Share the address and access details. The team must confirm coverage, availability and the appointment; a request is not a promise of a visit.",
+      "question": "Can I request a mobile visit outside Kigali?",
+      "answer": "The standard mobile suit illustration applies within Kigali. {{mobileScope}}",
       "keywords": []
     },
     "mobile-prepare": {
@@ -463,8 +472,8 @@
       "keywords": []
     },
     "mobile-fees": {
-      "question": "Are mobile fittings included in suit delivery?",
-      "answer": "Initial door-to-door Kigali suit delivery is included with the standard suit package. Mobile fitting visits, collection visits and follow-up transport are separate arrangements. Confirm scope and any charges directly; no universal visit fee is listed here.",
+      "question": "How are mobile suit fittings and visit transport charged?",
+      "answer": "{{mobilePricing}} {{mobileExample}}",
       "keywords": []
     },
     "mobile-confirm": {
@@ -484,12 +493,12 @@
     },
     "alter-quote": {
       "question": "How is an alteration quotation prepared?",
-      "answer": "Describe the garment, current fit concern, requested change and any previous repairs or alterations. Arrange an assessment so the team can confirm the work, price, fitting needs and estimated timing before you agree.",
+      "answer": "{{alteration_table}} These are starting prices only. Inspect the garment, construction and requested work to confirm the complete final quotation before payment or work. A jacket, trousers and shirt alteration is not a three-piece suit with a waistcoat.",
       "keywords": []
     },
     "alter-timing": {
       "question": "How long do alterations take?",
-      "answer": "{{alterationTiming}}",
+      "answer": "{{alterationTiming}} {{alterationExpress}}",
       "keywords": []
     },
     "alter-payment": {
@@ -513,8 +522,8 @@
       "keywords": []
     },
     "express-delivery": {
-      "question": "Does an express tailoring estimate include cleaning and delivery?",
-      "answer": "No. {{timing}}",
+      "question": "Does the express planning window allow for cleaning and delivery?",
+      "answer": "Yes. {{timing}}",
       "keywords": []
     },
     "express-availability": {
@@ -523,8 +532,8 @@
       "keywords": []
     },
     "express-charge": {
-      "question": "How do I confirm express charges and payment?",
-      "answer": "Request the quotation directly; do not assume an automatic surcharge or percentage. For suit orders, {{suitPayment}} {{balance}}",
+      "question": "How are express tailoring charges calculated?",
+      "answer": "{{expressPricing}} {{expressExamples}} {{suitPayment}} {{balance}}",
       "keywords": []
     },
     "care-enquiry": {
@@ -538,8 +547,8 @@
       "keywords": []
     },
     "care-included": {
-      "question": "Is cleaning included with a suit?",
-      "answer": "{{package}} Separately requested cleaning is discussed and quoted as its own service.",
+      "question": "What cleaning is included with a suit?",
+      "answer": "{{package}} Follow-up arrangements are separate from this initial cleaning. Discuss any applicable care arrangement directly; separately requested paid cleaning has its own quotation.",
       "keywords": []
     },
     "care-payment": {
@@ -548,13 +557,13 @@
       "keywords": []
     },
     "care-timing": {
-      "question": "How do I confirm a cleaning completion date?",
-      "answer": "{{careTiming}} Agree the service and full schedule directly before proceeding; no universal cleaning deadline is given here.",
+      "question": "How long does paid suit cleaning take?",
+      "answer": "{{careTiming}} {{careExpress}}",
       "keywords": []
     },
     "care-handover": {
-      "question": "How do I arrange care pickup or delivery?",
-      "answer": "Confirm any standalone care pickup, handover or delivery arrangements and charges with the team. These are separate from the included initial Kigali suit delivery. See <a href=\"/services/garment-care/planning/\">Garment Care planning</a>.",
+      "question": "What collection and return delivery are included?",
+      "answer": "{{careIncluded}} {{careArrangements}} These arrangements are separate from initial Kigali suit delivery and any follow-up care benefit. See <a href=\"/services/garment-care/planning/\">Garment Care planning</a>.",
       "keywords": []
     },
     "collections-purpose": {
@@ -608,8 +617,8 @@
       "keywords": []
     },
     "cotton-prices": {
-      "question": "What are the Cotton suit base prices?",
-      "answer": "{{cotton_table}} {{contents}} {{extras}}",
+      "question": "What are the standard suit prices?",
+      "answer": "{{suit_price_table}} {{higherCollections}} {{contents}} {{extras}}",
       "keywords": []
     },
     "suit-contents": {
@@ -633,8 +642,8 @@
       "keywords": []
     },
     "higher-collections": {
-      "question": "How much are higher collections?",
-      "answer": "{{higherCollections}} {{extras}}",
+      "question": "How do the suit collections differ?",
+      "answer": "{{higherCollections}} {{extras}} See the <a href=\"/faq/prices-packages-payments/#cotton-prices\">standard price table</a>.",
       "keywords": []
     },
     "shirt-skirt": {
@@ -644,12 +653,12 @@
     },
     "payment-methods": {
       "question": "What payment methods can I use?",
-      "answer": "Confirm the available payment method with the team when agreeing your quotation. Do not send a card or mobile-money PIN.",
+      "answer": "{{paymentMethods}} {{paymentComingSoon}}",
       "keywords": []
     },
     "locations": {
       "question": "Where is Mr Sewing based?",
-      "answer": "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact the team for directions and to confirm the appropriate workshop or appointment location.",
+      "answer": "Mr Sewing operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact the team for directions and to confirm the appropriate workshop or appointment location.",
       "keywords": []
     },
     "appointment-needed": {
@@ -751,6 +760,69 @@
       "question": "Should I send my payment PIN with an enquiry?",
       "answer": "No. Do not send your card PIN or mobile-money PIN. Confirm the payment method and share only the relevant payment reference when needed for your order.",
       "keywords": []
+    },
+    "mobile-visit-scope": {
+      "question": "Does the mobile fee cover unlimited visits?",
+      "answer": "No. It is charged once per order for the visits agreed for that order. {{mobileScope}}",
+      "keywords": []
+    },
+    "combined-mobile-express": {
+      "question": "How are express and mobile suit charges combined?",
+      "answer": "{{combinedPricing}} {{mobileScope}}",
+      "keywords": [
+        "85%",
+        "combined"
+      ]
+    },
+    "express-mobile": {
+      "question": "Can express tailoring and mobile fittings be combined?",
+      "answer": "{{combinedPricing}} {{mobileScope}}",
+      "keywords": []
+    },
+    "alteration-extras": {
+      "question": "Are cleaning, packaging and transport included with alterations?",
+      "answer": "{{alterationExtras}} {{packagingTerms}}",
+      "keywords": []
+    },
+    "paid-care-prices": {
+      "question": "What are paid suit-cleaning prices?",
+      "answer": "{{care_price_table}} {{careIncluded}} {{careArrangements}}",
+      "keywords": [
+        "washing",
+        "dry cleaning",
+        "pressing"
+      ]
+    },
+    "care-express-price": {
+      "question": "What does express suit cleaning cost?",
+      "answer": "{{careExpress}} {{careIncluded}}",
+      "keywords": []
+    },
+    "suit-accessories": {
+      "question": "What do suit-order accessories cost?",
+      "answer": "{{accessoryTerms}} The women’s inner-top standalone retail price is not listed; ask the team about any request.",
+      "keywords": [
+        "shirt",
+        "necktie",
+        "bow tie"
+      ]
+    },
+    "replacement-packaging": {
+      "question": "How much is replacement packaging?",
+      "answer": "{{packagingTerms}}",
+      "keywords": [
+        "hanger",
+        "garment cover"
+      ]
+    },
+    "program-status": {
+      "question": "Are loyalty, referral and second-purchase gift offers active?",
+      "answer": "The Loyalty Program and Referral Program remain Coming Soon. Their benefits and participation conditions have not launched. Do not assume a discount, gift or reward applies to your quotation. See the <a href=\"/loyalty-program/\">Loyalty preview</a> and <a href=\"/referral-program/\">Referral preview</a>.",
+      "keywords": [
+        "loyalty",
+        "referral",
+        "gifts"
+      ]
     }
   },
   "synonyms": [
@@ -794,6 +866,25 @@
     [
       "civil marriage",
       "civil wedding"
+    ],
+    [
+      "cleaning",
+      "washing",
+      "dry cleaning",
+      "garment care"
+    ],
+    [
+      "hanger",
+      "garment cover",
+      "packaging"
+    ],
+    [
+      "necktie",
+      "tie"
+    ],
+    [
+      "mobile",
+      "house call"
     ]
   ],
   "legacyFragments": {

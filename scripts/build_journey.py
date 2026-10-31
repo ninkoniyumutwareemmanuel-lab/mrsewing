@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Evidence-led Services / Our Work pages. No project is published without permission."""
+import service_information as offers
 from site_seo import finalize
 import argparse,json,re
 from customer_information import expand as customer_text
@@ -53,7 +54,7 @@ def page(route,title,description,content,schema_type='WebPage',schema_extra=None
     if route.startswith('/services/') and route!='/services/':
         schema['breadcrumb']={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':DOMAIN+'/'},{'@type':'ListItem','position':2,'name':'Services','item':DOMAIN+'/services/'},{'@type':'ListItem','position':3,'name':title.split(' | ')[0],'item':DOMAIN+route}]}
         content='<nav class="journey-back" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/services/">Services</a><span aria-hidden="true"> / </span><span>'+escape(title.split(' | ')[0])+'</span></nav>'+content
-    vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':content,'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/journey.css').read_text(),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header(navigation_route(route))),'header'),'footer':delivery(shared.footer(),'footer')}
+    vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':content,'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/journey.css').read_text()+('\n'+offers.styles() if route.startswith(('/services/','/service-')) or route=='/our-process/' else ''),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header(navigation_route(route))),'header'),'footer':delivery(shared.footer(),'footer')}
     out=(ROOT/'_templates/journey-page.html').read_text().replace('</head>',DISCOVERY_LINKS+'</head>',1)
     for key,value in vals.items():out=out.replace('{{'+key+'}}',value)
     assert not re.search(r'{{\w+}}',out)
@@ -76,7 +77,7 @@ def service_picture(service,eager=False):
     return '<img class="service-card-image" src="/'+src+'" srcset="'+srcset+'" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 90vw" alt="'+alt+'" width="'+str(width)+'" height="'+str(height)+'" loading="'+('eager' if eager else 'lazy')+'" decoding="async">'
 
 def overview(data):
-    content='<section class="journey-intro"><p class="home-eyebrow">Mr Sewing · Kigali</p><h1>Tailoring, made personal.</h1><p>From a first idea to a considered fit. Find the service that meets your needs, then talk with us about the details.</p></section><div class="journey-grid">'
+    content='<section class="journey-intro"><p class="home-eyebrow">Mr Sewing · Kigali</p><h1>Tailoring, made personal.</h1><p>Custom tailoring, alterations and refinements, dry cleaning and garment care, and mobile measurements and fittings by arrangement. Find the service you need and confirm the details with us.</p></section><div class="journey-grid">'
     for n,service in enumerate(data):content+='<a class="journey-card" href="'+service['route']+'">'+service_picture(service,n<3)+'<span class="journey-number">'+str(n+1).zfill(2)+'</span><h2>'+escape(service['title'])+'</h2><p>'+escape(service['intro'])+'</p><span class="home-text-link">Explore service <span class="home-arrow" aria-hidden="true"></span></span></a>'
     content+='</div><p class="journey-image-note">Garment photographs show design inspiration, not verified customer projects. Measurement illustrations explain fitting concepts. The garment-care still life is AI-generated and does not depict Mr Sewing premises, staff or customer work.</p>'
     title,desc=metadata('/services/','Tailoring Services','Explore custom tailoring, wedding and graduation outfits, mobile fittings, garment-care enquiries, alterations and express requests with Mr Sewing in Kigali.')
@@ -88,9 +89,10 @@ def service_page(service):
     content='<div class="service-kind-'+kind+'"><section class="journey-intro"><p class="home-eyebrow">A personal service · Kigali</p><h1>'+escape(service['title'])+'</h1><p>'+escape(service['intro'])+'</p></section><section class="service-feature" aria-label="Service introduction">'+service_picture(service,True)+'<div><h2>'+{'custom-tailoring':'Your wardrobe. Your expression.','wedding-tailoring':'For a moment that matters.','graduation-tailoring':'Mark your milestone.','mobile-fitting':'A fitting around your day.','alterations':'A considered refinement.','express':'Tell us your exact deadline.'}.get(kind,'Made personal.')+'</h2><p>'+escape(service['audience'])+'</p><p class="journey-image-note">'+('Measurement illustration; not a customer appointment photograph.' if kind in ['mobile-fitting','alterations'] else 'Garment design inspiration; not a documented customer project.')+'</p></div></section><div class="service-layout"><div class="service-copy">'
     for title,text in service['sections']:content+='<section><h2>'+escape(title)+'</h2><p>'+escape(text)+'</p></section>'
     if kind in ['custom-tailoring','wedding-tailoring','graduation-tailoring','express']:
-        content+='<section><h2>Payment and the standard suit package</h2><p>'+customer_text('{{suitPayment}} {{balance}}')+'</p><p>'+customer_text('{{contents}} {{package}}')+'</p><p>'+customer_text('{{extras}}')+'</p><p>'+customer_text('{{timing}}')+'</p><a class="home-text-link" href="/faq/#cat-pricing">Cotton prices and quotation guidance</a></section>'
-    elif kind=='alterations':
-        content+='<section><h2>Payment and planning</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>'+customer_text('{{alterationTiming}}')+'</p></section>'
+        content+=offers.tailoring()
+        if kind=='express':content+=offers.express()
+    elif kind=='alterations':content+=offers.alterations()
+    elif kind=='mobile-fitting':content+=offers.mobile()
     content+='<section><h2>What to share with us</h2><ul class="service-requirements">'+''.join('<li>'+escape(item)+'</li>' for item in service['requirements'])+'</ul></section><section><h2>How to begin</h2><ol class="service-steps">'+''.join('<li>'+escape(step)+'</li>' for step in service['steps'])+'</ol></section>'
     related={'custom-tailoring':[('/mensuits/','Men’s collection'),('/womensuits/','Women’s collection')],'wedding-tailoring':[('/collections/?occasion=wedding','Wedding inspiration'),('/collections/?occasion=civil-wedding','Civil wedding inspiration')],'graduation-tailoring':[('/collections/?occasion=graduation','Graduation inspiration')],'mobile-fitting':[('/measurements/','Measurement guide')],'alterations':[('/booking-adjustment/','Request an assessment')]}.get(kind,[])
     if related:content+='<nav class="service-related" aria-label="Related guidance">'+''.join('<a class="home-text-link" href="'+url+'">'+escape(title)+'</a>' for url,title in related)+'</nav>'
@@ -123,7 +125,8 @@ def care_page(service,category=None):
             for charge in row.get('additionalCharges',[]):
                 if charge.get('approved'):content+='<p class="care-rate-notes">'+escape(charge['label'])+': RWF '+format(charge['amountRwf'],',')+'</p>'
             if row.get('notes'):content+='<p class="care-rate-notes">'+escape(row['notes'])+'</p>'
-    else:content+='<p>Request an assessment and quote for your garment. We will confirm the applicable care options, charges and estimated turnaround before you agree. Confirm your quote and estimated completion date directly before agreeing the service.</p>'
+    elif category:content+='<p>Confirm the available service, individual quotation and completion date before proceeding.</p>'
+    else:content+=offers.paid_care()
     if category:
         timing=category['pricing']['standardTurnaround'];express=category['pricing']['express']
         if timing['approved']:content+='<p class="care-rate-notes">Standard turnaround estimate: '+str(timing['minimum'])+'–'+str(timing['maximum'])+' '+escape(timing['unit'].replace('_',' '))+'. Confirm the timing for your garment before proceeding.</p>'
