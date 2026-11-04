@@ -39,21 +39,35 @@ before_meta=Metadata(old('faq.html')).meta;after_meta=Metadata(hub).meta
 for key,value in before_meta.items():assert after_meta.get(key)==value,(key,value,after_meta.get(key))
 
 # Preserve all unrelated site assets/configuration and the existing policy wording/output.
-protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_data/page-seo.json','assets/homepage.js','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
+protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','assets/homepage.js','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True).splitlines()
 for f in files:
  if f in protected or f.startswith(('_templates/shared/','collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or any(f.startswith(x) for x in ['terms-and-conditions','refund-policy','privacy-policy']) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
   assert hashlib.sha256((ROOT/f).read_bytes()).digest()==hashlib.sha256(old(f,True)).digest(),f
-# Homepage outside the restored block must be literally unchanged.
+# Phase 1 may rebuild the homepage and its metadata; all other page SEO stays frozen.
+current_seo=json.loads((ROOT/'_data/page-seo.json').read_text());previous_seo=json.loads(old('_data/page-seo.json'))
+current_seo.pop('index.html');previous_seo.pop('index.html');assert current_seo==previous_seo
+# Keep the restored previews and their publication gates through homepage redesigns.
 new=(ROOT/'index.html').read_text();parser=Section(new,'div',('id','programs-section'));parser.feed(new);assert parser.markup
-assert new.replace('    '+parser.markup+'\n','',1)==old('index.html')
+from site_seo import finalize
+assert new==finalize(render(),ROOT/'index.html')
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
 assert block.count('Coming Soon')==3 and not re.search(r'<(?:a|button|input|form)\b',block)
 assert all(name in block for name in ['Loyalty Program','Referral Program','Complimentary Photoshoot'])
 assert not re.search(r'%|\bRWF\b|\b(?:discount|commission|gift|cleaning|enrol|redeem|guaranteed)\b',block,re.I)
 assert new.index('id="services-section"')<new.index('id="programs-section"')<new.index('id="final-section"')
+# Section J: retain every approved program word and keep both final sections adjacent.
+reference=subprocess.check_output(['git','show','ba27bab0425a9df1948fe8f45dd3b941cb322f4c:index.html'],cwd=ROOT,text=True)
+original=Section(reference,'div',('id','programs'));original.feed(reference)
+assert block==original.markup
+assert re.search(r'</div>\s*<div id="final-section"',new[new.index('id="programs-section"'):])
+final=Section(new,'section',('id','quotation'));final.feed(new)
+assert 'Let’s make it personal' in final.markup and 'Your Next Special<br>Outfit Starts Here.' in final.markup
+for href in re.findall(r'href="([^"]+)"',reference[reference.index('id="final-section"'):reference.index('</main>')]):
+ assert 'href="'+href+'"' in final.markup,href
+
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc',ns)};newurls={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)}
 assert newurls==oldurls|{'https://mrsewingfashion.com'+r for r in routes()}
 assert len(public_routes())==len(oldurls)+len(topics)
-print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, exact homepage/policy/hero/shared/asset/config preservation, safe Coming Soon previews and FAQ-only sitemap additions.')
+print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and FAQ-only sitemap additions.')

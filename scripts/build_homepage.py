@@ -18,13 +18,15 @@ import shared_components as shared
 ROOT = Path(__file__).resolve().parents[1]
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
-    'header': ('_templates/shared/header.html', 'header', None),
+    'header': ('_templates/homepage-header.html', 'header', None),
     'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
     'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
     'collections': ('_templates/homepage-sections.html', 'section', ('class', 'home-collections home-section')),
     'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
     'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
     'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
+    'information': ('_templates/homepage-sections.html', 'section', ('id', 'customer-information')),
+    'options': ('_templates/homepage-sections.html', 'section', ('id', 'order-options')),
     'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
     'footer': ('_templates/shared/footer.html', 'footer', None),
@@ -111,7 +113,7 @@ def render():
         parser.feed(source)
         if parser.markup is None:
             raise ValueError(f'Missing homepage section: {filename}')
-        markup = shared.header('/') if key == 'header' else shared.footer() if key == 'footer' else parser.markup
+        markup = shared.footer() if key == 'footer' else parser.markup
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
@@ -126,6 +128,7 @@ def render():
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
     styles.append((ROOT/'_templates/homepage-motion.css').read_text())
+    styles.append((ROOT/'_templates/homepage-phase1.css').read_text())
     template = template.replace('{{hero_preloads}}', hero_preloads())
     template = template.replace('{{section_styles}}', '\n'.join(styles))
     if re.search(r'{{\w+}}', template):

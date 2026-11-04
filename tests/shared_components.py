@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prove both V2 builds consume one header/footer/CSS source without changing files."""
+"""Prove shared footers/CSS and isolated homepage navigation without changing files."""
 from pathlib import Path
 from unittest.mock import patch
 import re
@@ -27,7 +27,7 @@ assert not re.search(r'<(?:a|button)\b', re.search(r'<section class="contact-her
 read = Path.read_text
 def injected(path,*args,**kwargs):
     value = read(path,*args,**kwargs)
-    if path == SHARED/'header.html':value=value.replace('<header ', '<header data-shared-probe="header" ',1)
+    if path == SHARED/'header.html' or path == ROOT/'_templates/homepage-header.html':value=value.replace('<header ', '<header data-shared-probe="header" ',1)
     if path == SHARED/'footer.html':value=value.replace('<footer ', '<footer data-shared-probe="footer" ',1)
     if path == SHARED/'site.css':value+='\n.social-icons a { outline-offset:7px; }\n'
     return value
@@ -36,4 +36,4 @@ with patch.object(Path,'read_text',injected):
         assert 'data-shared-probe="header"' in html
         assert 'data-shared-probe="footer"' in html
         assert '.social-icons a { outline-offset:7px; }' in html
-print('PASS: identical rendered V2 footers; header/footer/CSS changes propagate to all V2/FAQ builders; Contact hero actions absent and two main booking links retained.')
+print('PASS: identical rendered V2 footers; each header and shared footer/CSS propagate to the appropriate builders; Contact hero actions absent and two main booking links retained.')
