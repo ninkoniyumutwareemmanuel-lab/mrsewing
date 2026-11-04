@@ -39,7 +39,7 @@ before_meta=Metadata(old('faq.html')).meta;after_meta=Metadata(hub).meta
 for key,value in before_meta.items():assert after_meta.get(key)==value,(key,value,after_meta.get(key))
 
 # Preserve all unrelated site assets/configuration and the existing policy wording/output.
-protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','assets/homepage.js','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
+protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True).splitlines()
 for f in files:
  if f in protected or f.startswith(('_templates/shared/','collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or any(f.startswith(x) for x in ['terms-and-conditions','refund-policy','privacy-policy']) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
@@ -51,6 +51,8 @@ current_seo.pop('index.html');previous_seo.pop('index.html');assert current_seo=
 new=(ROOT/'index.html').read_text();parser=Section(new,'div',('id','programs-section'));parser.feed(new);assert parser.markup
 from site_seo import finalize
 assert new==finalize(render(),ROOT/'index.html')
+from shared_components import menu_script
+assert (ROOT/'assets/homepage.js').read_text()==(ROOT/'_templates/homepage-interactions.js').read_text()+menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
 assert block.count('Coming Soon')==3 and not re.search(r'<(?:a|button|input|form)\b',block)
 assert all(name in block for name in ['Loyalty Program','Referral Program','Complimentary Photoshoot'])
@@ -61,7 +63,7 @@ reference=subprocess.check_output(['git','show','ba27bab0425a9df1948fe8f45dd3b94
 original=Section(reference,'div',('id','programs'));original.feed(reference)
 assert block==original.markup
 assert re.search(r'</div>\s*<div id="final-section"',new[new.index('id="programs-section"'):])
-final=Section(new,'section',('id','quotation'));final.feed(new)
+final=Section(new,'section',('class','home-final home-section'));final.feed(new)
 assert 'Let’s make it personal' in final.markup and 'Your Next Special<br>Outfit Starts Here.' in final.markup
 for href in re.findall(r'href="([^"]+)"',reference[reference.index('id="final-section"'):reference.index('</main>')]):
  assert 'href="'+href+'"' in final.markup,href

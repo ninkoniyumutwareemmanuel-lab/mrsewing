@@ -38,7 +38,8 @@ for file in ['booking.html','booking-housecall.html','booking-workplace.html','b
  assert re.search(r'<p class="form-note">[^<]*Web3Forms.*?<a href="/privacy-policy/">',text)
  assert 'not a confirmed appointment or accepted production order' in text
 source=(ROOT/'_templates/homepage-sections.html').read_text();hero=source.split('</section>',1)[0]
-assert 'data-hero-step' in hero and 'data-hero-select' not in hero
+assert 'hero-lcp' in hero and 'hero-highlights' in hero and 'data-hero-step' not in hero
+assert 'fetchpriority="high"' in hero and 'Concept tailoring illustration' in hero
 assert 'Pause slideshow' not in hero and '>01<' not in hero and '>02<' not in hero
 assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==3
 assert 'const interval=10000' in (ROOT/'_templates/hero-slideshow.js').read_text()

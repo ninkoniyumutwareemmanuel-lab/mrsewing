@@ -29,6 +29,7 @@ SECTIONS = {
     'options': ('_templates/homepage-sections.html', 'section', ('id', 'order-options')),
     'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
+    'contact': ('_templates/homepage-sections.html', 'section', ('id', 'quotation')),
     'footer': ('_templates/shared/footer.html', 'footer', None),
 }
 
@@ -143,7 +144,7 @@ def main():
     args = parser.parse_args()
     output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
-    navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/hero-slideshow.js').read_text()
+    navigation = (ROOT / '_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text()
     navigation_path = ROOT / 'assets/homepage.js'
     if args.check:
         if navigation_path.read_text() != navigation:

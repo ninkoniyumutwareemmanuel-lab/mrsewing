@@ -5003,6 +5003,76 @@
         "/services/garment-care/",
         "/services/"
       ]
+    },
+    {
+      "originalImagePath": "assets/homepage-corrective/tailoring-hero-1440.webp",
+      "sourceOriginal": "assets/homepage-corrective/tailoring-hero.jpg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-authorized conceptual homepage hero illustration. Not actual premises, equipment or completed customer work. Never a collection design.",
+      "legacyReferences": [
+        "/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage-corrective/tailoring-hero-1672.webp",
+      "sourceOriginal": "assets/homepage-corrective/tailoring-hero.jpg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-authorized conceptual homepage hero illustration. Not actual premises, equipment or completed customer work. Never a collection design.",
+      "legacyReferences": [
+        "/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage-corrective/tailoring-hero-640.webp",
+      "sourceOriginal": "assets/homepage-corrective/tailoring-hero.jpg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-authorized conceptual homepage hero illustration. Not actual premises, equipment or completed customer work. Never a collection design.",
+      "legacyReferences": [
+        "/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage-corrective/tailoring-hero-960.webp",
+      "sourceOriginal": "assets/homepage-corrective/tailoring-hero.jpg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-authorized conceptual homepage hero illustration. Not actual premises, equipment or completed customer work. Never a collection design.",
+      "legacyReferences": [
+        "/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/homepage-corrective/tailoring-hero.jpg",
+      "sourceOriginal": "assets/homepage-corrective/tailoring-hero.jpg",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "ai_generated_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-authorized conceptual homepage hero illustration. Not actual premises, equipment or completed customer work. Never a collection design.",
+      "legacyReferences": [
+        "/"
+      ]
     }
   ],
   "missingLegacyReferences": [],
