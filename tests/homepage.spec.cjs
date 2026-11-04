@@ -42,7 +42,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     assert.equal(schema['@graph'][0]['@id'], 'https://mrsewingfashion.com/#website');
     assert.equal(await page.locator('.service-card').count(), 4);
     assert.equal(await page.locator('.home-collection-card').count(), 0);
-    assert.equal(await page.locator('.customer-card-slide').count(), 3);
+    assert.equal(await page.locator('.customer-card-slide').count(), 2);
     assert.equal(await page.locator('header').count(), 1);
     assert.equal(await page.locator('footer').count(), 1);
     assert(await page.evaluate(() => [...document.querySelectorAll('script[src]')].every(script => script.defer)));
@@ -59,16 +59,11 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     assert(!requests.some(request => /\/(?:services|collections|header|footer|hero|happy-customers|why-mtm|why-choose)\.html(?:$|\?)/.test(request.url)));
     console.log('PASS: one document/main/H1/canonical; homepage-only metadata; static content; hero preload; image dimensions; deferred scripts; zero runtime HTML fetches.');
 
-    // Test both scroll directions and retain normal visual hover transitions.
+    // The owner replaced the slider with a balanced two-photo gallery.
     await page.setViewportSize({width:390,height:844});
-    await page.locator('#slideRight').click();
-    await page.waitForFunction(() => document.getElementById('customersSlider').scrollLeft > 0);
-    await page.waitForTimeout(500);
-    await page.locator('#slideLeft').click();
-    await page.waitForFunction(() => document.getElementById('customersSlider').scrollLeft === 0);
-    assert((await page.locator('.service-card').first().evaluate(card => getComputedStyle(card).transitionProperty)).includes('transform'));
+    assert.equal(await page.locator('#slideLeft,#slideRight').count(),0);
+    assert.deepEqual(await page.locator('.customer-card-slide figcaption').allTextContents(),['Men’s Tailoring','Women’s Tailoring']);
     assert.equal(await page.locator('.hero-section a').count(),1);
-    assert.equal(await page.locator('[data-hero-text]').count(),0);
     await page.locator('.service-explore').last().click();
     await page.waitForURL('**/services/mobile-fitting/');
     await page.goto(base+'?legacy-order-test=1#orderModal');
@@ -86,7 +81,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     assert(!intent.blockedByConsent);
     assert(intent.url.startsWith('https://wa.me/250787411501?text='));
     assert(!await page.locator('#orderModal').evaluate(modal => modal.classList.contains('open')));
-    console.log('PASS: slider forward/back, hover transitions, booking navigation and WhatsApp consent/intent. No message was sent.');
+    console.log('PASS: two-photo gallery, service navigation and WhatsApp consent/intent. No message was sent.');
 
     const noJS = await browser.newContext({ javaScriptEnabled:false });
     await noJS.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
@@ -97,7 +92,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     assert.equal(await native.locator('.home-collection-card').count(), 0);
     assert.equal(await native.locator('header nav a').count(), 12);
     await native.locator('.customer-card-slide a').first().click();
-    await native.waitForURL('**/our-work/off-white-graduation-suit/');
+    await native.waitForURL('**/our-work/light-grey-and-navy/');
     await noJS.close();
     assert.deepEqual(errors, []);
     console.log('PASS: homepage content, navigation and category links work without JavaScript; no page errors.');

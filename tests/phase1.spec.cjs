@@ -89,10 +89,10 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     await page.setViewportSize({width:390,height:844});
     for (const file of ['index.html','happy-customers.html']) {
       await page.goto(base + file);
-      await page.locator('#slideRight').click();
-      await page.waitForFunction(() => document.getElementById('customersSlider').scrollLeft > 0);
+      if(file==='index.html'){assert.equal(await page.locator('.customer-card-slide').count(),2);assert.equal(await page.locator('#slideRight').count(),0);}
+      else{await page.locator('#slideRight').click();await page.waitForFunction(() => document.getElementById('customersSlider').scrollLeft > 0);}
     }
-    console.log('PASS: customer slider works on the homepage and standalone customer gallery.');
+    console.log('PASS: two-photo homepage gallery and standalone customer slider work.');
     const responsive = ['index.html','suits.html','mensuits.html','womensuits.html','reviews.html','collections.html','booking.html','measurement-submission.html'];
     for (const width of [320,375,390,768,1024,1440]) {
       await page.setViewportSize({width,height:900});

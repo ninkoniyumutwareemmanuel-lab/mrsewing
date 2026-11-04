@@ -23,9 +23,10 @@ for page in ['services/garment-care/index.html','services/garment-care/services/
  html=(ROOT/page).read_text();assert 'Mr Sewing Garment Care' in html and 'care-basic-summary' in html
  assert 'Dry Cleaning' not in html and '<table' not in html
 source=(ROOT/'_templates/homepage-sections.html').read_text()
-for photo,slug in [('h2.jpeg','off-white-graduation-suit'),('r7.jpeg','light-grey-and-navy'),('r4.jpeg','soft-ivory-tailoring')]:
+for photo,slug in [('h2.jpeg','off-white-graduation-suit'),('r7.jpeg','light-grey-and-navy')]:
  assert re.search('href="/our-work/'+slug+r'/"[^>]*><img src="'+re.escape(photo),source)
-for href in ['/our-process/','/made-to-measure/','/services/garment-care/']:assert href in source
+for href in ['/our-process/','/services/garment-care/']:assert href in source
+assert (ROOT/'made-to-measure/index.html').is_file()  # Preserved route; owner removed process-related information links.
 assert '18s infinite' not in (ROOT/'_templates/homepage-motion.css').read_text()
 # Preserve the approved Collections experience and every pre-existing media byte.
 ref='ce32d5ff67eacecf03804bf6608222c5f13e3cd1'

@@ -56,14 +56,15 @@ from build_homepage import HOMEPAGE_VISUAL_REVIEW
 expected_js=menu_script()+(ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text()+menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()
 assert (ROOT/'assets/homepage.js').read_text()==expected_js
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
-assert block.count('Coming Soon')==3 and not re.search(r'<(?:a|button|input|form)\b',block)
+assert block.count('Coming Soon')==1 and not re.search(r'<(?:a|button|input|form)\b',block)
 assert all(name in block for name in ['Loyalty Program','Referral Program','Complimentary Photoshoot'])
 assert not re.search(r'%|\bRWF\b|\b(?:discount|commission|gift|cleaning|enrol|redeem|guaranteed)\b',block,re.I)
 assert new.index('id="services-section"')<new.index('id="programs-section"')<new.index('id="final-section"')
 # Section J: retain every approved program word and keep both final sections adjacent.
 reference=subprocess.check_output(['git','show','ba27bab0425a9df1948fe8f45dd3b941cb322f4c:index.html'],cwd=ROOT,text=True)
 original=Section(reference,'div',('id','programs'));original.feed(reference)
-assert block==original.markup
+expected=original.markup.replace('<p class="home-eyebrow">Looking ahead</p>','<p class="home-eyebrow">Customer programme</p>',2).replace('<span class="program-status">Coming Soon</span>','',2).replace('We’re developing a loyalty program for Mr Sewing customers. Details and conditions will be announced when it is ready.','Explore our Loyalty &amp; Referral Programme for Mr Sewing Fashion customers. Contact us for current programme information.').replace('We’re developing a referral program for people who introduce others to Mr Sewing. Details and conditions will be announced when it is ready.','Share Mr Sewing Fashion with others through our referral programme. Ask us about participation and current conditions.')
+assert block==expected
 assert re.search(r'</div>\s*<div id="final-section"',new[new.index('id="programs-section"'):])
 final=Section(new,'section',('class','home-final home-section'));final.feed(new)
 assert 'Let’s make it personal' in final.markup and 'Your Next Special<br>Outfit Starts Here.' in final.markup

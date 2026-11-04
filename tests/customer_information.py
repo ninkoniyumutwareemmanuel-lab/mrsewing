@@ -41,7 +41,7 @@ source=(ROOT/'_templates/homepage-sections.html').read_text();hero=source.split(
 assert 'hero-lcp' in hero and 'hero-highlights' in hero and 'data-hero-step' not in hero
 assert 'fetchpriority="high"' in hero and 'Concept tailoring illustration' in hero
 assert 'Pause slideshow' not in hero and '>01<' not in hero and '>02<' not in hero
-assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==3
+assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==1
 assert 'const interval=10000' in (ROOT/'_templates/hero-slideshow.js').read_text()
 assert len(list((ROOT/'collections/designs').glob('*/index.html')))==111
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.
