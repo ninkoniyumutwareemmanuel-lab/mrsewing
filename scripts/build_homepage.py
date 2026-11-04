@@ -150,7 +150,7 @@ def main():
     args = parser.parse_args()
     output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
-    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text())
+    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text())
     navigation_path = ROOT / 'assets/homepage.js'
     if args.check:
         if navigation_path.read_text() != navigation:

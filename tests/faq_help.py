@@ -53,7 +53,7 @@ from site_seo import finalize
 assert new==finalize(render(),ROOT/'index.html')
 from shared_components import menu_script
 from build_homepage import HOMEPAGE_VISUAL_REVIEW
-expected_js=menu_script()+(ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text()+menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()
+expected_js=menu_script()+(ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text()+menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()+(ROOT/'_templates/order-carousel.js').read_text()
 assert (ROOT/'assets/homepage.js').read_text()==expected_js
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
 assert block.count('Coming Soon')==1 and not re.search(r'<(?:a|button|input|form)\b',block)
