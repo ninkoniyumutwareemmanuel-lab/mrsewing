@@ -76,6 +76,9 @@ def overview(data):
     return page('/services/',title,desc,content,'CollectionPage')
 
 def service_page(service):
+    if service['id']=='custom-tailoring':
+        from custom_tailoring import render
+        return render()
     if service['id']=='garment-care':return care_page(service)
     route=service['route'];kind=service['id']
     content='<div class="service-kind-'+kind+'"><section class="journey-intro"><p class="home-eyebrow">A personal service · Kigali</p><h1>'+escape(service['title'])+'</h1><p>'+escape(service['intro'])+'</p></section><section class="service-feature" aria-label="Service introduction">'+service_picture(service,True)+'<div><h2>'+{'custom-tailoring':'Your wardrobe. Your expression.','wedding-tailoring':'For a moment that matters.','graduation-tailoring':'Mark your milestone.','mobile-fitting':'A fitting around your day.','alterations':'A considered refinement.','express':'Tell us your exact deadline.'}.get(kind,'Made personal.')+'</h2><p>'+escape(service['audience'])+'</p><p class="journey-image-note">'+('Measurement illustration; not a customer appointment photograph.' if kind in ['mobile-fitting','alterations'] else 'Garment design inspiration; not a documented customer project.')+'</p></div></section><div class="service-layout"><div class="service-copy">'
@@ -155,6 +158,8 @@ def outputs():
 document.querySelectorAll('.journey-enquiry').forEach(a=>{const u=new URL(a.href),text=u.searchParams.get('text');if(text)u.searchParams.set('text',text.replace('https://mrsewingfashion.com',location.origin));a.href=u.href;});
 '''}
     for service in data:out[ROOT/service['route'].strip('/')/'index.html']=service_page(service)
+    from custom_tailoring import outputs as tailoring_outputs
+    out.update(tailoring_outputs())
     care=next(s for s in data if s['id']=='garment-care')
     for category in care_catalog()[1]:out[ROOT/'services/garment-care'/category['slug']/'index.html']=care_page(care,category)
     for project in approved:out[ROOT/'our-work'/project['slug']/'index.html']=project_page(project)
