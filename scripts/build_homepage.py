@@ -117,7 +117,7 @@ def render():
         if parser.markup is None:
             raise ValueError(f'Missing homepage section: {filename}')
         markup = parser.markup
-        if key == 'footer':
+        if key in ('header', 'footer'):
             from html import escape
             import json
             guides = json.loads((ROOT/'_data/homepage-guides.json').read_text())
@@ -128,7 +128,9 @@ def render():
                     assert (ROOT/guide['href'].strip('/')/'index.html').is_file(), 'Missing customer guide route'
                     items.append('<li><a href="'+escape(guide['href'], quote=True)+'">'+label+'</a></li>')
                 else:
-                    items.append('<li class="footer-guide-pending"><span>'+label+'</span><small>Planned guide</small></li>')
+                    pending_class = 'footer-guide-pending' if key == 'footer' else 'nav-guide-pending'
+                    span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
+                    items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
             markup = markup.replace('{{customer_guides}}', ''.join(items))
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')

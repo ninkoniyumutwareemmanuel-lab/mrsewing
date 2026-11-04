@@ -90,7 +90,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     await native.locator('h1').waitFor({state:'visible'});
     assert.equal(await native.locator('.service-card').count(), 4);
     assert.equal(await native.locator('.home-collection-card').count(), 0);
-    assert.equal(await native.locator('header nav a').count(), 12);
+    assert.equal(await native.locator('header nav a').count(), 9);
     assert.equal(await native.locator('.customer-card-slide a,.customer-card-slide button').count(),0);
     await native.locator('.customer-card-slide img').first().click();
     assert.equal(new URL(native.url()).pathname,'/');
