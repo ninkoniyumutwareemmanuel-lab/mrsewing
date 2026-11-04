@@ -1,11 +1,19 @@
 /* Corrective homepage: reference layouts, accessible interactions and real submission states. */
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8000/',origin=new URL(base).origin,out=process.env.REVIEW_ARTIFACTS||'/workspace/artifacts/corrective';
+const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8000/',origin=new URL(base).origin,out=process.env.REVIEW_ARTIFACTS||'/workspace/artifacts/mobile-refinement';
 const widths=[320,360,390,430,768,1024,1280,1440];
 (async()=>{fs.mkdirSync(out,{recursive:true});const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});try{
  const c=await b.newContext({reducedMotion:'reduce'});await c.route('**/*',r=>new URL(r.request().url()).origin===origin?r.continue():r.abort());const p=await c.newPage(),errors=[],missing=[];p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(new URL(r.url()).origin===origin&&r.status()>=400)missing.push(r.url())});
  for(const width of widths){await p.setViewportSize({width,height:1000});await p.goto(base);await p.locator('.hero-lcp').evaluate(i=>i.decode());assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`overflow ${width}`);
- assert.equal(await p.locator('h1').innerText(),'Mr Sewing Fashion');assert.equal(await p.locator('.hero-tagline').innerText(),'Your Clothing. Our Craft.');assert.equal(await p.locator('.service-card').count(),3);assert.equal(await p.locator('.information-card').count(),4);assert.equal(await p.locator('.home-step-grid li').count(),5);assert.equal(await p.locator('.home-benefit-grid article').count(),6);
+ assert.equal(await p.locator('h1').innerText(),'Mr Sewing Fashion');assert.equal(await p.locator('.hero-tagline').innerText(),'Your Clothing. Our Craft.');assert.equal(await p.locator('.service-card').count(),4);assert.equal(await p.locator('.information-card').count(),4);assert.equal(await p.locator('.home-step-grid li').count(),5);assert.equal(await p.locator('.home-benefit-grid article').count(),6);
+ assert.equal(await p.locator('.faq-search-link,.mobile-quote,.header-social,.top-quote').count(),0);
+ assert.equal(await p.locator('.header-quote').getAttribute('href'),'#quotation');
+ assert.equal(await p.locator('.hero-actions a').count(),1);assert.equal(await p.locator('.hero-actions a').getAttribute('href'),'#quotation');
+ assert.equal(await p.locator('#services img,.home-benefits img,.home-final img,.home-collections,.service-related').count(),0);
+ assert.equal(await p.locator('#services .service-explore').count(),4);
+ assert((await p.locator('footer .footer-bottom-copy').innerText()).includes('NINKONIYUMUTWARE NEXUS LTD'));
+ if(width<900){const hero=await p.locator('.hero-section').boundingBox(),backdrop=await p.locator('.hero-backdrop').boundingBox();assert(Math.abs(hero.y-backdrop.y)<1);assert(Math.abs(hero.height-backdrop.height)<1);assert(hero.height<800,'mobile hero avoids separate photograph area');}
+
  assert(await p.locator('#programs-section').evaluate(e=>e.nextElementSibling.id==='final-section'));for(const id of ['loyalty-program','referral-program','photoshoot-preview'])assert(await p.locator('#'+id).isVisible());assert.equal(await p.locator('#programs .program-status').filter({hasText:'Coming Soon'}).count(),3);assert.equal(await p.locator('#programs a,#programs button,#programs input').count(),0);
  const color=await p.locator('.home-benefits').evaluate(e=>getComputedStyle(e).backgroundColor);assert.equal(color,width<900?'rgb(245, 240, 232)':'rgb(17, 17, 18)');
  if(width<1100){const t=p.locator('.home-menu-toggle');await t.focus();await p.keyboard.press('Enter');assert(await p.locator('#home-navigation').isVisible());await p.keyboard.press('Escape');assert.equal(await t.getAttribute('aria-expanded'),'false');assert(await t.evaluate(e=>e===document.activeElement));await t.click();}

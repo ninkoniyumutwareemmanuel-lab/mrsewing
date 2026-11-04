@@ -68,6 +68,9 @@ assert re.search(r'</div>\s*<div id="final-section"',new[new.index('id="programs
 final=Section(new,'section',('class','home-final home-section'));final.feed(new)
 assert 'Let’s make it personal' in final.markup and 'Your Next Special<br>Outfit Starts Here.' in final.markup
 for href in re.findall(r'href="([^"]+)"',reference[reference.index('id="final-section"'):reference.index('</main>')]):
+ if href=='/contact/':
+  assert 'href="/contact/"' in (ROOT/'_templates/homepage-header.html').read_text()
+  continue
  assert 'href="'+href+'"' in ((ROOT/'_templates/homepage-sections.html').read_text() if HOMEPAGE_VISUAL_REVIEW else final.markup),href
 
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}

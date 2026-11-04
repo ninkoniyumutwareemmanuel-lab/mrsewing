@@ -17,13 +17,12 @@ import shared_components as shared
 
 ROOT = Path(__file__).resolve().parents[1]
 # Owner requested a disconnected homepage while each page is rebuilt in sequence.
-HOMEPAGE_VISUAL_REVIEW = True
+HOMEPAGE_VISUAL_REVIEW = False
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
     'header': ('_templates/homepage-header.html', 'header', None),
     'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
     'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
-    'collections': ('_templates/homepage-sections.html', 'section', ('class', 'home-collections home-section')),
     'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
     'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
     'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
@@ -117,6 +116,8 @@ def render():
         if parser.markup is None:
             raise ValueError(f'Missing homepage section: {filename}')
         markup = shared.footer() if key == 'footer' else parser.markup
+        if key == 'footer':
+            markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):

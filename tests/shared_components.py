@@ -19,7 +19,7 @@ def extract(html, tag):
     return re.search(r'<'+tag+r'\b.*?</'+tag+'>',html,re.S)[0]
 from homepage_preview import disconnect
 from build_homepage import HOMEPAGE_VISUAL_REVIEW
-assert extract(home,'footer') == (disconnect(extract(contact,'footer')) if HOMEPAGE_VISUAL_REVIEW else extract(contact,'footer'))
+assert extract(home,'footer') == (disconnect(extract(contact,'footer')) if HOMEPAGE_VISUAL_REVIEW else extract(contact,'footer')).replace('2026 Mr Sewing Fashion. All Rights Reserved.','2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
 assert extract(contact,'footer') == extract(build_about.render(),'footer') == extract(showroom(),'footer')
 for path,html in faq_help.outputs().items():
  if path.suffix=='.html':assert extract(html,'footer')==extract(contact,'footer')
