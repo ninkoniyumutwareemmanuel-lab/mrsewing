@@ -17,10 +17,14 @@ def showroom():
     return build_collections.render('collections.html','all','Discover Your Signature Style.',designs)
 def extract(html, tag):
     return re.search(r'<'+tag+r'\b.*?</'+tag+'>',html,re.S)[0]
-assert extract(home,'footer') == extract(contact,'footer') == extract(build_about.render(),'footer') == extract(showroom(),'footer')
+from homepage_preview import disconnect
+from build_homepage import HOMEPAGE_VISUAL_REVIEW
+assert extract(home,'footer') == (disconnect(extract(contact,'footer')) if HOMEPAGE_VISUAL_REVIEW else extract(contact,'footer'))
+assert extract(contact,'footer') == extract(build_about.render(),'footer') == extract(showroom(),'footer')
 for path,html in faq_help.outputs().items():
- if path.suffix=='.html':assert extract(html,'footer')==extract(home,'footer')
-assert home.count('href="https://youtube.com/@mr.sewingfashion"') == 1
+ if path.suffix=='.html':assert extract(html,'footer')==extract(contact,'footer')
+assert home.count('aria-label="YouTube"') == 1
+assert ('href="https://youtube.com/@mr.sewingfashion"' in home) == (not HOMEPAGE_VISUAL_REVIEW)
 assert contact.count('href="https://youtube.com/@mr.sewingfashion"') == 1
 assert len(re.findall(r'href="/booking/"',extract(contact,'main'))) == 2
 assert not re.search(r'<(?:a|button)\b', re.search(r'<section class="contact-hero.*?</section>',contact,re.S)[0])

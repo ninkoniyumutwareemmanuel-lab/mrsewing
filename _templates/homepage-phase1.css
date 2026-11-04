@@ -29,3 +29,7 @@ h1,h2{letter-spacing:-.025em}h2{font-size:clamp(32px,4vw,48px);line-height:1.15}
 .option-tabs{display:none}.js .option-tabs{display:grid}.js .option-panel{min-height:400px}
 @media(min-width:900px){.js .option-panel{min-height:340px}}
 #home-navigation>ul{background:transparent}
+
+/* Homepage-only review keeps visual styling without any destination actions. */
+.homepage-preview-note{padding:8px 20px;background:#252016;color:#e3cf9d;text-align:center;font-size:11px;border-bottom:1px solid #665027}
+[data-preview-link]{cursor:default}.quotation-surface button:disabled{opacity:1;cursor:default}.quote-fields :disabled{opacity:1;color:#504b41;-webkit-text-fill-color:#504b41}.quotation-surface [disabled]{cursor:default}

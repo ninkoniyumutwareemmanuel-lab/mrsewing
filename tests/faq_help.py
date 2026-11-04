@@ -52,7 +52,9 @@ new=(ROOT/'index.html').read_text();parser=Section(new,'div',('id','programs-sec
 from site_seo import finalize
 assert new==finalize(render(),ROOT/'index.html')
 from shared_components import menu_script
-assert (ROOT/'assets/homepage.js').read_text()==(ROOT/'_templates/homepage-interactions.js').read_text()+menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()
+from build_homepage import HOMEPAGE_VISUAL_REVIEW
+expected_js=menu_script()+(ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text()+menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()
+assert (ROOT/'assets/homepage.js').read_text()==expected_js
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
 assert block.count('Coming Soon')==3 and not re.search(r'<(?:a|button|input|form)\b',block)
 assert all(name in block for name in ['Loyalty Program','Referral Program','Complimentary Photoshoot'])
@@ -66,7 +68,7 @@ assert re.search(r'</div>\s*<div id="final-section"',new[new.index('id="programs
 final=Section(new,'section',('class','home-final home-section'));final.feed(new)
 assert 'Let’s make it personal' in final.markup and 'Your Next Special<br>Outfit Starts Here.' in final.markup
 for href in re.findall(r'href="([^"]+)"',reference[reference.index('id="final-section"'):reference.index('</main>')]):
- assert 'href="'+href+'"' in final.markup,href
+ assert 'href="'+href+'"' in ((ROOT/'_templates/homepage-sections.html').read_text() if HOMEPAGE_VISUAL_REVIEW else final.markup),href
 
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc',ns)};newurls={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)}
