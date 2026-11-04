@@ -55,6 +55,6 @@ assert business['openingHoursSpecification'][0]['opens']=='09:00'
 assert business['openingHoursSpecification'][0]['closes']=='17:00'
 assert 'Ordinary Saturday visits do not require an appointment' in business['disambiguatingDescription']
 assert 'advance appointment' in business['disambiguatingDescription']
-assert 'Last Saturday (Umuganda)' in (ROOT/'index.html').read_text()  # Hours remain in the shared footer, outside the hero.
+assert 'Umuganda: 12:00–17:00 by advance appointment' in (ROOT/'index.html').read_text()  # Header retains approved exceptions; simplified footer links to full hours.
 subprocess.run(['python3','scripts/build_clean_urls.py','--check'],cwd=ROOT,check=True)
 print('PASS: 32 mapped root-page aliases and the generated canonical indexable sitemap, clean JSON-LD references and weekday/weekend appointment representation.')

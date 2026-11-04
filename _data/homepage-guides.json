@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Garment Care Guide",
+    "href": null,
+    "planned_href": "/guides/garment-care/"
+  },
+  {
+    "label": "Measurements Guide",
+    "href": "/measurements/",
+    "planned_href": null
+  },
+  {
+    "label": "Fabric Guide",
+    "href": null,
+    "planned_href": "/guides/fabrics/"
+  }
+]

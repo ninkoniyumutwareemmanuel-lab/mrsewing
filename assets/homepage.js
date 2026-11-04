@@ -133,40 +133,55 @@ const dropdown=document.querySelector('.services-dropdown details');
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dropdown?.open){e.preventDefault();e.stopImmediatePropagation();dropdown.open=false;dropdown.querySelector('summary').focus();}},true);
 document.addEventListener('click',e=>{if(dropdown?.open&&!dropdown.contains(e.target))dropdown.open=false;});
 dropdown?.addEventListener('click',e=>{if(e.target.closest('a'))dropdown.open=false;});
-const options=[...document.querySelectorAll('[data-option]')],panels=[...document.querySelectorAll('[data-option-panel]')];let current=0;
-function show(index){current=(index+panels.length)%panels.length;options.forEach((e,i)=>e.setAttribute('aria-pressed',String(i===current)));panels.forEach((e,i)=>e.hidden=i!==current);const pos=document.querySelector('.option-position');if(pos)pos.textContent=`${current+1} / ${panels.length}`;}
-options.forEach((button,i)=>{button.addEventListener('click',()=>show(i));button.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();show(e.key==='Home'?0:e.key==='End'?panels.length-1:current+(e.key==='ArrowRight'?1:-1));options[current].focus();}});});
-document.querySelectorAll('[data-option-direction]').forEach(e=>e.addEventListener('click',()=>show(current+Number(e.dataset.optionDirection))));if(panels.length)show(0);
-const form=document.getElementById('quotationForm');if(!form)return;const button=form.querySelector('[type=submit]'),phone=document.getElementById('quotePhone'),message=document.getElementById('quoteMessage'),status=document.getElementById('quoteStatus'),success=document.getElementById('quoteSuccess');let pending=false;const label=button.innerHTML;
-function validate(){const value=phone.value.trim(),digits=value.replace(/\D/g,'').length;phone.setCustomValidity(/^[0-9+\-\s().]+$/.test(value)&&digits>=7&&digits<=15?'':'Enter a valid phone number including your country code.');message.setCustomValidity(message.value.trim()?'':'Please tell us what you need.');}
-phone.addEventListener('input',validate);message.addEventListener('input',validate);
-form.addEventListener('submit',async e=>{e.preventDefault();validate();if(pending||!form.reportValidity())return;if(form.elements.botcheck.value){status.textContent='We could not confirm your request. Please contact us directly.';return;}
-const data=Object.fromEntries(new FormData(form));delete data.botcheck;const email=data['Email Address'].trim();data['Email Address']=email||'Not provided';if(email)data.replyto=email;data['Terms Consent']='Agreed';data['Customer Message']=message.value.trim();pending=true;button.disabled=true;button.textContent='Sending…';form.setAttribute('aria-busy','true');status.textContent='Sending your request. Please wait.';const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
-try{const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data),signal:controller.signal});const result=await response.json();if(!response.ok||result.success!==true)throw new Error('Not confirmed');form.hidden=true;success.hidden=false;success.focus();}
-catch(error){status.textContent=error.name==='AbortError'?'We could not confirm delivery before the connection timed out. Your request may have arrived. Please contact us on WhatsApp before trying again.':'We could not confirm your request. Your entries are preserved. Please try again or contact us directly on WhatsApp.';}
-finally{clearTimeout(timer);pending=false;button.disabled=false;button.innerHTML=label;form.removeAttribute('aria-busy');}});
+// Keep the hero quotation journey distinct from the customer-support form.
+const dialog=document.getElementById('quotation');
+if(dialog&&typeof dialog.showModal==='function'){
+ let returnFocus=null;dialog.close();dialog.dataset.modalReady='true';dialog.dataset.ready='true';const close=dialog.querySelector('.quotation-close');close.hidden=false;
+ function openQuote(trigger){returnFocus=trigger||document.querySelector('.hero-actions a[href="#quotation"]');if(!dialog.open)dialog.showModal();document.getElementById('quotation-dialog-title').focus();}
+ document.querySelectorAll('a[href="#quotation"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openQuote(a);}));
+ close.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+ dialog.addEventListener('close',()=>{if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});});
+ if(location.hash==='#quotation')openQuote();
+}
+// Both enquiries reuse the existing approved provider, with independent pending and success state.
+function setupEnquiry(prefix,formId){
+ const form=document.getElementById(formId);if(!form)return;
+ const button=form.querySelector('[type=submit]'),phone=document.getElementById(prefix+'Phone'),message=document.getElementById(prefix+'Message'),status=document.getElementById(prefix+'Status'),success=document.getElementById(prefix+'Success');let pending=false;const label=button.innerHTML;
+ function validate(){const value=phone.value.trim(),digits=value.replace(/\D/g,'').length;phone.setCustomValidity(/^[0-9+\-\s().]+$/.test(value)&&digits>=7&&digits<=15?'':'Enter a valid phone number including your country code.');message.setCustomValidity(message.value.trim()?'':'Please tell us how we can help.');}
+ phone.addEventListener('input',validate);message.addEventListener('input',validate);
+ form.addEventListener('submit',async e=>{e.preventDefault();validate();if(pending||!form.reportValidity())return;if(form.elements.botcheck.value){status.textContent='We could not confirm your request. Please contact us directly.';return;}
+ const data=Object.fromEntries(new FormData(form));delete data.botcheck;const email=data['Email Address'].trim();data['Email Address']=email||'Not provided';if(email)data.replyto=email;data['Terms Consent']='Agreed';data['Customer Message']=message.value.trim();pending=true;button.disabled=true;button.textContent='Sending…';form.setAttribute('aria-busy','true');status.textContent='Sending your request. Please wait.';const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
+ try{const response=await fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data),signal:controller.signal});const result=await response.json();if(!response.ok||result.success!==true)throw new Error('Not confirmed');form.hidden=true;success.hidden=false;success.focus();}
+ catch(error){status.textContent=error.name==='AbortError'?'We could not confirm delivery before the connection timed out. Your request may have arrived. Please contact us on WhatsApp before trying again.':'We could not confirm your request. Your entries are preserved. Please try again or contact us directly on WhatsApp.';}
+ finally{clearTimeout(timer);pending=false;button.disabled=false;button.innerHTML=label;form.removeAttribute('aria-busy');}
+ });
+}
+setupEnquiry('quote','quotationForm');setupEnquiry('support','supportForm');
 })();
-/* Three original text slides; no clones, auto-advance at five visible seconds. */
+/* Three original text slides; four-second rotation with passive touch hold and transient focus/hover pause. */
 (()=>{'use strict';
 const root=document.querySelector('[data-order-carousel]');if(!root)return;
-const track=root.querySelector('.order-slides'),slides=[...track.querySelectorAll('[data-order-slide]')],dots=[...root.querySelectorAll('[data-order-select]')],toggle=root.querySelector('[data-carousel-toggle]'),position=root.querySelector('.carousel-position'),motion=matchMedia('(prefers-reduced-motion: reduce)');
-if(slides.length!==3)return;
-const interval=5000,duration=550;let current=0,userPaused=false,hovered=false,timer=null,started=0,remaining=interval,finishTimer=null,finishAnimation=null;
-function stop(){if(timer!==null){clearTimeout(timer);timer=null;remaining=Math.max(0,remaining-(performance.now()-started));}}
-function schedule(){if(timer!==null||userPaused||hovered||motion.matches||document.hidden)return;started=performance.now();timer=setTimeout(()=>{timer=null;show((current+1)%slides.length);},remaining);}
-function controls(){root.dataset.active=String(current);root.dataset.rotation=motion.matches?'reduced-motion':userPaused?'paused':hovered||document.hidden?'suspended':'playing';dots.forEach((d,i)=>d.setAttribute('aria-pressed',String(i===current)));slides.forEach((s,i)=>{s.setAttribute('aria-hidden',String(i!==current));s.inert=i!==current;});position.textContent=`${current+1} / ${slides.length}`;toggle.hidden=motion.matches;toggle.textContent=userPaused?'Play':'Pause';toggle.setAttribute('aria-label',userPaused?'Start automatic order carousel':'Pause automatic order carousel');}
+const track=root.querySelector('.order-slides'),slides=[...track.querySelectorAll('[data-order-slide]')],dots=[...root.querySelectorAll('[data-order-select]')],motion=matchMedia('(prefers-reduced-motion: reduce)');if(slides.length!==3)return;
+const interval=4000,duration=550,held=new Set();let current=0,hovered=false,focused=false,inputMode='keyboard',timer=null,finishTimer=null,finishAnimation=null;
+function stop(){if(timer!==null){clearTimeout(timer);timer=null;}}
+function suspended(){return hovered||focused||held.size>0||document.hidden||motion.matches;}
+function controls(){root.dataset.active=String(current);root.dataset.rotation=motion.matches?'reduced-motion':suspended()?'suspended':'playing';dots.forEach((d,i)=>d.setAttribute('aria-pressed',String(i===current)));slides.forEach((s,i)=>{s.setAttribute('aria-hidden',String(i!==current));s.inert=i!==current;});}
+function schedule(){if(timer!==null||suspended())return;timer=setTimeout(()=>{timer=null;show((current+1)%slides.length);},interval);}
+function reset(){stop();controls();schedule();}
 function reorder(){track.style.transition='none';track.style.transform='translateX(0)';track.replaceChildren(...slides.slice(current),...slides.slice(0,current));}
 function finish(){if(finishTimer!==null){clearTimeout(finishTimer);finishTimer=null;}if(finishAnimation){const f=finishAnimation;finishAnimation=null;f();}}
-function show(index){stop();finish();if(index===current){remaining=interval;controls();schedule();return;}const previous=current;track.style.transition='none';track.style.transform='translateX(0)';track.replaceChildren(slides[previous],slides[index],...slides.filter((_,i)=>i!==previous&&i!==index));void track.offsetWidth;current=index;remaining=interval;controls();if(motion.matches){reorder();}else{track.style.transition=`transform ${duration}ms cubic-bezier(.22,.61,.36,1)`;track.style.transform='translateX(-100%)';finishAnimation=reorder;finishTimer=setTimeout(finish,duration);}schedule();}
-function pauseInteraction(){stop();userPaused=true;controls();}
-dots.forEach((d,i)=>d.addEventListener('click',()=>{pauseInteraction();show(i);}));
-toggle.addEventListener('click',()=>{stop();userPaused=!userPaused;if(!userPaused)hovered=false;controls();schedule();});
-root.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch'){stop();hovered=true;controls();}});
-root.addEventListener('pointerleave',()=>{hovered=false;controls();schedule();});
-root.addEventListener('pointerdown',e=>{if(!e.target.closest('[data-carousel-toggle]'))pauseInteraction();});
-root.addEventListener('focusin',e=>{if(!e.target.closest('[data-carousel-toggle]'))pauseInteraction();});
-root.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();pauseInteraction();show(e.key==='Home'?0:e.key==='End'?slides.length-1:(current+(e.key==='ArrowRight'?1:-1)+slides.length)%slides.length);dots[current].focus();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();controls();schedule();});
-motion.addEventListener('change',()=>{stop();finish();controls();schedule();});
-reorder();root.dataset.enhanced='true';root.querySelector('.carousel-controls').hidden=false;controls();schedule();
+function show(index){stop();finish();if(index===current){reset();return;}const previous=current;track.style.transition='none';track.style.transform='translateX(0)';track.replaceChildren(slides[previous],slides[index],...slides.filter((_,i)=>i!==previous&&i!==index));void track.offsetWidth;current=index;controls();if(motion.matches)reorder();else{track.style.transition=`transform ${duration}ms cubic-bezier(.22,.61,.36,1)`;track.style.transform='translateX(-100%)';finishAnimation=reorder;finishTimer=setTimeout(finish,duration);}schedule();}
+document.addEventListener('keydown',()=>{inputMode='keyboard';},true);
+root.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen'){hovered=true;reset();}},{passive:true});
+root.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'||e.pointerType==='pen'){hovered=false;reset();}},{passive:true});
+root.addEventListener('pointerdown',e=>{inputMode='pointer';focused=false;if(e.pointerType==='touch')held.add(e.pointerId);reset();},{passive:true});
+function release(e){if(held.delete(e.pointerId)){focused=false;reset();}}
+window.addEventListener('pointerup',release,{passive:true});window.addEventListener('pointercancel',release,{passive:true});
+root.addEventListener('focusin',()=>{focused=inputMode==='keyboard';reset();});
+root.addEventListener('focusout',()=>{queueMicrotask(()=>{focused=inputMode==='keyboard'&&root.contains(document.activeElement);reset();});});
+dots.forEach((d,i)=>d.addEventListener('click',()=>show(i)));
+root.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();focused=true;show(e.key==='Home'?0:e.key==='End'?slides.length-1:(current+(e.key==='ArrowRight'?1:-1)+slides.length)%slides.length);dots[current].focus();});
+document.addEventListener('visibilitychange',reset);motion.addEventListener('change',()=>{stop();finish();reset();});
+window.addEventListener('pagehide',stop);window.addEventListener('pageshow',reset);
+reorder();root.dataset.enhanced='true';root.querySelector('.carousel-controls').hidden=false;reset();
 })();

@@ -62,7 +62,7 @@ const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8000/';
     // The owner replaced the slider with a balanced two-photo gallery.
     await page.setViewportSize({width:390,height:844});
     assert.equal(await page.locator('#slideLeft,#slideRight').count(),0);
-    assert.deepEqual(await page.locator('.customer-card-slide figcaption').allTextContents(),['Men’s Tailoring','Women’s Tailoring']);
+    assert.deepEqual(await page.locator('.customer-card-slide figcaption').allTextContents(),['Dress with Confidence.','Make Every Moment Yours.']);
     assert.equal(await page.locator('.hero-section a').count(),1);
     await page.locator('.service-explore').last().click();
     await page.waitForURL('**/services/mobile-fitting/');

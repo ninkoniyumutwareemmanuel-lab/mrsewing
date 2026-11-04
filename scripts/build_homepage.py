@@ -30,8 +30,9 @@ SECTIONS = {
     'options': ('_templates/homepage-sections.html', 'section', ('id', 'order-options')),
     'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
-    'contact': ('_templates/homepage-sections.html', 'section', ('id', 'quotation')),
-    'footer': ('_templates/shared/footer.html', 'footer', None),
+    'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
+    'quote_dialog': ('_templates/homepage-quotation.html', 'dialog', ('id', 'quotation')),
+    'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
 
 
@@ -115,7 +116,20 @@ def render():
         parser.feed(source)
         if parser.markup is None:
             raise ValueError(f'Missing homepage section: {filename}')
-        markup = shared.footer() if key == 'footer' else parser.markup
+        markup = parser.markup
+        if key == 'footer':
+            from html import escape
+            import json
+            guides = json.loads((ROOT/'_data/homepage-guides.json').read_text())
+            items = []
+            for guide in guides:
+                label = escape(guide['label'])
+                if guide['href']:
+                    assert (ROOT/guide['href'].strip('/')/'index.html').is_file(), 'Missing customer guide route'
+                    items.append('<li><a href="'+escape(guide['href'], quote=True)+'">'+label+'</a></li>')
+                else:
+                    items.append('<li class="footer-guide-pending"><span>'+label+'</span><small>Planned guide</small></li>')
+            markup = markup.replace('{{customer_guides}}', ''.join(items))
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
