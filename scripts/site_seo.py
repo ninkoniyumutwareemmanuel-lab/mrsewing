@@ -14,13 +14,18 @@ def route_for(path):
     if str(rel)=='index.html':return '/'
     return '/'+(str(rel.parent) if rel.name=='index.html' else str(rel.with_suffix(''))) .strip('/')+'/'
 def finalize(source,path):
-    route=route_for(path);name='index.html' if route=='/' else route.strip('/')+'.html'
+    route=route_for(path)
+    override=json.loads((ROOT/'_data/public-page-seo.json').read_text()).get(route)
+    if override:
+        from sync_page_seo import apply
+        source=apply(source,override)
+    name='index.html' if route=='/' else route.strip('/')+'.html'
     # These tags are regenerated, so repeated builds never duplicate them.
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
     key=rel.parent.name+'.html' if rel.name=='index.html' and rel.parent!=Path('.') else str(rel)
-    robots='noindex, follow' if name in NOINDEX or key in aliases or 'data-publication-hold' in source else 'index, follow'
+    robots='noindex, follow' if name in NOINDEX or route.startswith('/request/') or route.startswith('/staff/') or key in aliases or 'data-publication-hold' in source else 'index, follow'
     # Ensure basic Open Graph coverage on all canonical documents without new claims.
     title=re.search(r'<title>(.*?)</title>',source,re.S)[1]
     desc=re.search(r'<meta\b[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']\s*/?>',source,re.I)
@@ -31,4 +36,6 @@ def finalize(source,path):
     source=source.replace('</head>','<meta name="robots" content="'+robots+'">'+STAGING+'</head>',1)
     from whatsapp_consent import protect
     source=protect(source)
+    source=re.sub(r'<script src="/assets/customer-interactions.js" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
+    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'

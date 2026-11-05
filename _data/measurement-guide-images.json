@@ -4,36 +4,6 @@
   "instructions": "Existing six guide sections preserved. Pictures are illustrative, not calibrated measurements or a new method.",
   "measurements": [
     {
-      "id": "belly",
-      "title": "Belly",
-      "image": "measure-belly",
-      "caption": "Tape shown around the stomach area. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
-      "id": "bicep",
-      "title": "Bicep",
-      "image": "measure-bicep",
-      "caption": "Tape shown around the upper arm. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
-      "id": "chest",
-      "title": "Chest",
-      "image": "measure-chest",
-      "caption": "Tape shown around the chest. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
-      "id": "hip",
-      "title": "Hip",
-      "image": "measure-hip",
-      "caption": "Tape shown around the hips. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
-      "id": "jacket-length",
-      "title": "Jacket length",
-      "image": "measure-jacket-length",
-      "caption": "Front-view illustration of jacket length. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
       "id": "neck",
       "title": "Neck",
       "image": "measure-neck",
@@ -46,10 +16,46 @@
       "caption": "Tape shown across the back of the shoulders. Follow the garment-specific instructions confirmed with the team."
     },
     {
+      "id": "chest",
+      "title": "Chest",
+      "image": "measure-chest",
+      "caption": "Tape shown around the chest. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
+      "id": "bicep",
+      "title": "Bicep",
+      "image": "measure-bicep",
+      "caption": "Tape shown around the upper arm. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
       "id": "sleeve-length",
       "title": "Sleeve length",
       "image": "measure-sleeve-length",
       "caption": "Illustration of sleeve length along the arm. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
+      "id": "jacket-length",
+      "title": "Jacket length",
+      "image": "measure-jacket-length",
+      "caption": "Front-view illustration of jacket length. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
+      "id": "belly",
+      "title": "Belly",
+      "image": "measure-belly",
+      "caption": "Tape shown around the stomach area. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
+      "id": "waist",
+      "title": "Waist",
+      "image": "measure-waist",
+      "caption": "Tape shown around the trouser waistline. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
+      "id": "hip",
+      "title": "Hip",
+      "image": "measure-hip",
+      "caption": "Tape shown around the hips. Follow the garment-specific instructions confirmed with the team."
     },
     {
       "id": "thigh",
@@ -62,12 +68,6 @@
       "title": "Trouser length",
       "image": "measure-trouser-length",
       "caption": "Illustration of trouser length along the outer leg. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
-      "id": "waist",
-      "title": "Waist",
-      "image": "measure-waist",
-      "caption": "Tape shown around the trouser waistline. Follow the garment-specific instructions confirmed with the team."
     }
   ]
 }

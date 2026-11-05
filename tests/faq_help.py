@@ -29,14 +29,16 @@ for t in topics:
   assert stale not in html,(t['slug'],stale)
 hub=(ROOT/'faq.html').read_text();assert 'class="faq-question"' not in hub and '"@type": "FAQPage"' not in hub
 assert hub.count('class="faq-card"')==len(topics)
-assert json.loads((ROOT/'_data/page-seo.json').read_text())['faq.html']==json.loads(old('_data/page-seo.json'))['faq.html']
+assert 'Cotton suit base prices' not in json.loads((ROOT/'_data/page-seo.json').read_text())['faq.html']['description']
 class Metadata(HTMLParser):
  def __init__(self,text):super().__init__();self.meta={};self.feed(text)
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if tag=='meta' and ('name' in a or 'property' in a):self.meta[a.get('name',a.get('property'))]=a.get('content')
 before_meta=Metadata(old('faq.html')).meta;after_meta=Metadata(hub).meta
-for key,value in before_meta.items():assert after_meta.get(key)==value,(key,value,after_meta.get(key))
+for key,value in before_meta.items():
+ if key in ['description','og:description','twitter:description']:assert after_meta.get(key)==json.loads((ROOT/'_data/page-seo.json').read_text())['faq.html']['description']
+ else:assert after_meta.get(key)==value,(key,value,after_meta.get(key))
 
 # Preserve all unrelated site assets/configuration and the existing policy wording/output.
 protected=['_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
@@ -47,7 +49,7 @@ for f in files:
 # Phase 1 may rebuild the homepage and its metadata; all other page SEO stays frozen.
 current_seo=json.loads((ROOT/'_data/page-seo.json').read_text());previous_seo=json.loads(old('_data/page-seo.json'))
 
-for key in ['index.html','mensuits.html','womensuits.html']:
+for key in ['index.html','mensuits.html','womensuits.html','about.html','faq.html']:
  current_seo.pop(key);previous_seo.pop(key)
 assert current_seo==previous_seo
 # Keep the restored previews and their publication gates through homepage redesigns.

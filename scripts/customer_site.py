@@ -25,8 +25,8 @@ def hero(ident):
  image=json.loads((ROOT/'_data/service-hero-images.json').read_text())['images'][ident]
  assert (ROOT/image['src'].lstrip('/')).is_file(),image['src']
  photo='<img src="'+escape(image['src'],quote=True)+'" width="'+str(image['width'])+'" height="'+str(image['height'])+'" alt="'+escape(image['alt'],quote=True)+'" loading="eager" fetchpriority="high" decoding="async">'
- actions=[('/mensuits/','Explore Men’s Suits'),('/womensuits/','Explore Women’s Suits')] if ident=='custom-tailoring' else [(s['route']+'#request-title',{'alterations':'Request Alteration','garment-care':'Request Garment Care','mobile-fitting':'Request Mobile Service','vip':'Request VIP Service'}[ident])]
- return '<section class="service-hero" style="--hero-mobile-position:'+escape(image.get('mobilePosition','50% 50%'),quote=True)+'"><div class="service-hero-copy"><p class="service-breadcrumb">'+link('/','Home','')+' / '+link('/services/','Services','')+'</p><p class="home-eyebrow">Our Service</p><h1>'+escape(s['title'])+'</h1><p>'+escape(s['intro'])+'</p><div class="service-hero-actions">'+''.join(link(u,t,'home-button home-button-gold') for u,t in actions)+'</div><ul class="service-features"><li><span aria-hidden="true">◇</span> Personal guidance</li><li><span aria-hidden="true">✂</span> Individually assessed</li><li><span aria-hidden="true">✓</span> Agreed quotation</li></ul></div><div class="service-hero-photo">'+photo+'</div></section>'
+ actions=[('/mensuits/','Explore Men’s Suits'),('/womensuits/','Explore Women’s Suits')] if ident=='custom-tailoring' else [('/request/'+ident+'/',{'alterations':'Request Alteration','garment-care':'Request Garment Care','mobile-fitting':'Request Mobile Service','vip':'Request VIP Service'}[ident])]
+ return '<section class="service-hero" style="--hero-mobile-position:'+escape(image.get('mobilePosition','50% 50%'),quote=True)+'"><div class="service-hero-copy"><p class="service-breadcrumb" role="navigation" aria-label="Breadcrumb">'+link('/','Home','')+' / '+link('/services/','Services','')+'</p><p class="home-eyebrow">Our Service</p><h1>'+escape(s['title'])+'</h1><p>'+escape(s['intro'])+'</p><div class="service-hero-actions">'+''.join(link(u,t,'home-button home-button-gold') for u,t in actions)+'</div><ul class="service-features"><li><span aria-hidden="true">◇</span> Personal guidance</li><li><span aria-hidden="true">✂</span> Individually assessed</li><li><span aria-hidden="true">✓</span> Agreed quotation</li></ul></div><div class="service-hero-photo">'+photo+'</div></section>'
 def frame(route,title,description,content,kind='WebPage',service=None):
  from custom_tailoring import component
  import shared_components as shared
@@ -34,6 +34,7 @@ def frame(route,title,description,content,kind='WebPage',service=None):
  seo=json.loads((ROOT/'_data/page-seo.json').read_text()).get(route.strip('/')+'.html')
  if seo:title,description=seo['title'],seo['description']
  else:title=title+' | Mr Sewing Fashion, Kigali'
+ if 'aria-label="Breadcrumb"' not in content and 'service-hero' not in content:content=breadcrumb([('Home','/'),(title.split(' | ')[0],None)])+content
  graph=[{'@type':kind,'@id':DOMAIN+route+'#page','name':title,'url':DOMAIN+route,'description':description,'isPartOf':{'@id':DOMAIN+'/#website'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':DOMAIN+'/'},{'@type':'ListItem','position':2,'name':title.split(' | ')[0],'item':DOMAIN+route}]}]
  if route=='/about/':
   business=json.loads((ROOT/'_data/business.json').read_text());graph.append({'@type':'Organization','@id':business['@id'],**{k:business[k] for k in ['name','url','telephone','email','logo']},'alternateName':'Mr Sewing','parentOrganization':{'@type':'Organization','name':'NINKONIYUMUTWARE NEXUS LTD'}})
@@ -57,7 +58,7 @@ def service_page(ident):
   body+=section('How Long Does Custom Tailoring Take?','The time required to complete your garment depends on the selected design, fabric availability, measurements, fitting requirements and production schedule. Standard and Express requests are assessed according to the work involved and available capacity. We will confirm the applicable completion timeframe before your order is accepted.')
  else:
   if ident=='vip':body+=section('VIP Subscription','The combined VIP Garment Care & Alterations Membership is being developed. It is not available to purchase. Details are subject to further review.')+link('/services/vip/subscription/','VIP Subscription','home-text-link')
-  body+=request_form(service_id=ident)
+  body+='<p class="service-request-action">'+link('/request/'+ident+'/','Request Service','home-button home-button-gold')+'</p>'
  return frame(s['route'],s['title'],s['intro'],body,service=s)
 
 def overview():
@@ -68,10 +69,10 @@ def overview():
 def design_choice():return standard().replace(DOMAIN+BASE+'standard-order/',DOMAIN+BASE+'design-choice/')
 
 def standard():
- body=intro('Choose Your Suit Category','Explore approved website designs, or share your own inspiration using the Special Order alternative within either gallery.')+'<div class="release-cards">'
+ body=breadcrumb([('Home','/'),('Custom Tailoring & Suits',BASE),('Suit Categories',None)])+intro('Choose Your Suit Category','Explore approved website designs, or share your own inspiration using the Special Order alternative within either gallery.')+'<div class="release-cards">'
  for title,src,route,alt in [("Men’s Suits",'/r7.jpeg','/mensuits/','Approved Mr Sewing light-grey jacket and navy-trouser tailoring photograph'),("Women’s Suits",'/h2.jpeg','/womensuits/','Approved Mr Sewing off-white graduation tailoring photograph')]:
   body+='<article class="release-card"><img src="'+src+'" width="'+('2048' if 'r7' in src else '750')+'" height="'+('2056' if 'r7' in src else '938')+'" alt="'+alt+'" loading="lazy" decoding="async"><h2>'+title+'</h2>'+link(route,'Explore '+title,'home-button home-button-gold')+'</article>'
- return frame(BASE+'standard-order/','Men’s & Women’s Suit Design Selection','Browse the two approved suit design categories.',body+'</div>'+link(BASE,'Back'))
+ return frame(BASE+'standard-order/','Men’s & Women’s Suit Design Selection','Browse the two approved suit design categories.',body+'</div>')
 
 def fabric_page():
  body=intro('Choose Your Fabric','Choose a reference fabric or request advice. These illustrative pictures do not confirm stock, colours, composition or a final price.')+'<p data-design-line></p><form id="fabricChoiceForm"><fieldset><legend>Fabric preference</legend><label class="fabric-choice"><input type="radio" name="fabricChoice" value="now" required> Choose Fabric Now</label><label class="fabric-choice"><input type="radio" name="fabricChoice" value="advice" required> Help Me Choose Fabric</label><p>Advice is available without choosing a fabric. All fabric references, availability and the final quotation require business confirmation.</p></fieldset><section id="fabricSelection" hidden aria-labelledby="fabric-selection-title"><h2 id="fabric-selection-title">Choose a Fabric Reference</h2><p class="guide-notice">Illustrative fabric references. Confirm material, available colours and quotation with our team.</p><label for="fabricCategory">Suit category</label><select id="fabricCategory"><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select>'
@@ -82,7 +83,7 @@ def fabric_page():
  return frame(BASE+'fabric/','Choose Fabric or Request Advice','Choose an illustrative fabric reference or request advice before your suit quotation enquiry.',body)
 
 def subscription():
- return frame('/services/vip/subscription/','VIP Subscription — In Development','Information about the planned combined garment-care and alterations membership.',intro('VIP Subscription','Details are being finalised. This is not an available paid membership.')+section('VIP Garment Care & Alterations Membership','The planned combined membership concerns Clothing Alterations & Repairs and Garment Care & Cleaning. It does not cover subscriptions for Custom Tailoring or Mobile Tailoring. Allowances, visit definitions, pricing, coverage, billing, cancellation and refund conditions are not final. There is no checkout or subscription payment.')+link('/services/vip/','Back'))
+ return frame('/services/vip/subscription/','VIP Subscription — In Development','Information about the planned combined garment-care and alterations membership.',breadcrumb([('Home','/'),('VIP Services','/services/vip/'),('VIP Subscription',None)])+intro('VIP Subscription','Details are being finalised. This is not an available paid membership.')+section('VIP Garment Care & Alterations Membership','The planned combined membership concerns Clothing Alterations & Repairs and Garment Care & Cleaning. It does not cover subscriptions for Custom Tailoring or Mobile Tailoring. Allowances, visit definitions, pricing, coverage, billing, cancellation and refund conditions are not final. There is no checkout or subscription payment.'))
 
 def fields(kind,service_id=None):
  def input_(id,label,name=None,type='text',required=False,extra=''):
@@ -108,23 +109,24 @@ def request_form(kind='quotation',special=False,service_id=None):
    if special:body+='<div><label for="requestCategory">Garment category (optional)</label><select id="requestCategory" name="Originating Suit Category"><option value="">Not specified</option><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select></div>'
   body+='</fieldset>'
  if kind=='quotation':body+='<aside data-upload-notice><p>Online file uploads are not enabled. Describe your design now and arrange reference sharing with the team through official WhatsApp or email. No files are attached by this form.</p><label for="requestFiles">Reference pictures or sketches — not enabled</label><input type="file" id="requestFiles" disabled accept="image/jpeg,image/png,image/webp" multiple></aside>'
- body+=fields(kind,service_id)+'<label class="request-check"><input id="requestConsent" name="Consent" type="checkbox" value="Read and requested review" required><span>I have read the '+link('/privacy-policy/','Privacy Policy','')+(' and '+link('/terms-and-conditions/','Terms & Conditions','') if kind=='quotation' else '')+'. I am requesting human review, not automatic acceptance.</span></label><button type="button" id="reviewRequest" class="home-button home-button-gold" disabled>Continue</button></form><section id="requestReview" hidden aria-labelledby="review-title"><h2 id="review-title" tabindex="-1">Review Your Request</h2><dl id="reviewDetails"></dl><p>No order, appointment, payment or refund is confirmed by submitting.</p><div class="request-actions"><button id="editRequest" type="button" class="home-button">Back</button><button id="sendRequest" type="submit" form="customerRequestForm" class="home-button home-button-gold">Submit '+('Refund Request' if kind=='refund' else 'Quotation Request' if kind=='quotation' else 'Support Request')+'</button></div></section><p id="requestStatus" role="status" aria-live="polite"></p><section id="requestSuccess" hidden tabindex="-1" role="status"><h2>Request Submitted for Review</h2><p>The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details. No files were attached.</p></section></section>'
+ body+=fields(kind,service_id)+'<label class="request-check"><input id="requestConsent" name="Consent" type="checkbox" value="Read and requested review" required><span>'+('I agree to the '+link('/terms-and-conditions/','Terms & Conditions','')+' and have read the '+link('/privacy-policy/','Privacy Policy','') if kind=='quotation' else 'I have read the '+link('/privacy-policy/','Privacy Policy',''))+'. I am requesting human review, not automatic acceptance.</span></label><button type="button" id="reviewRequest" class="home-button home-button-gold" disabled>Continue</button></form><section id="requestReview" hidden aria-labelledby="review-title"><h2 id="review-title" tabindex="-1">Review Your Request</h2><dl id="reviewDetails"></dl><p>No order, appointment, payment or refund is confirmed by submitting.</p><div class="request-actions"><button id="editRequest" type="button" class="home-button">Back</button><button id="sendRequest" type="submit" disabled form="customerRequestForm" class="home-button home-button-gold">Submit '+('Refund Request' if kind=='refund' else 'Quotation Request' if kind=='quotation' else 'Support Request')+'</button></div></section><p id="requestStatus" role="status" aria-live="polite"></p><section id="requestSuccess" hidden tabindex="-1" role="status"><h2>Request Submitted for Review</h2><p>The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details. No files were attached.</p></section></section>'
  # Only publication-authorised references may be included in an enquiry.
  from build_collections import load,design_name
  designs=load()[0]
  from suit_references import assignment,model as suit_model
  body+='<script id="requestSuitCategories" type="application/json">'+json.dumps({d['id']:{'id':assignment(d['id'])['id'],'gender':assignment(d['id'])['gender']} for d in designs if assignment(d['id'])}).replace('<','\\u003c')+'</script>'
+ body+='<script id="requestBackendConfig" type="application/json">'+json.dumps(json.loads((ROOT/'_data/customer-request-backend.json').read_text())).replace('<','\\u003c')+'</script><script src="/assets/request-uploads.js" defer></script>'
  return body+'<script src="/assets/request-draft.js" defer></script><script id="requestDesigns" type="application/json">'+json.dumps({d['id']:suit_model()['references'].get(d['id'],{}).get('label') or design_name(d) for d in designs},ensure_ascii=False).replace('<','\\u003c')+'</script>'+guides.script()
 
 def request_page(special=False):
  route=BASE+'special-order/' if special else '/request/'
- body=intro('Tell Us About Your Design' if special else 'Your Quotation Request','Describe your requirements for assessment. Review the details before submitting; an enquiry does not confirm a production order.')+'<ol class="request-progress" aria-label="Request steps"><li>Design & fabric preference</li><li>Priority</li><li>Customer details</li><li>Review</li></ol>'+request_form(special=special)+link(BASE,'Back','home-text-link request-back')
+ body=breadcrumb([('Home','/'),('Custom Tailoring & Suits',BASE),('Special Order' if special else 'Quotation Request',None)])+intro('Tell Us About Your Design' if special else 'Your Quotation Request','Describe your requirements for assessment. Review the details before submitting; an enquiry does not confirm a production order.')+'<ol class="request-progress" aria-label="Request steps"><li>Design & fabric preference</li><li>Priority</li><li>Customer details</li><li>Review</li></ol>'+request_form(special=special)+(link(BASE,'Back','home-text-link request-back') if not special else '')
  return frame(route,'Special Order Design Enquiry' if special else 'Your Service Quotation Request','Review design, fabric preferences, priority and contact details before sending a quotation enquiry.',body)
 
 def information(route):
  d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],d['intro'])
  if route=='/guides/fabrics/':body+=guides.fabric_guide()
- if route=='/measurements/':body+=guides.measurements()
+ if route=='/measurements/':body+='<p>'+link('/measurement-submission/','Submit Your Measurements','home-button home-button-gold')+'</p>'+guides.measurements()
  old=json.loads((ROOT/'_data/policy-pages.json').read_text()).get(route.strip('/'),{});oldids=[s['id'] for s in old.get('sections',[])]+list(old.get('legacyAnchors',{}))
  used=set();nav=[]
  for i,s in enumerate(d['sections']):
@@ -153,6 +155,14 @@ def outputs():
  from whatsapp_consent import page as whatsapp_page
  out={ROOT/r.strip('/')/'index.html':information(r) for r in extra_routes() if r in data()['pages']}
  out[ROOT/'whatsapp/index.html']=whatsapp_page()
+ from build_collections import load
+ from suit_references import assignment,category_label,model
+ out[ROOT/'_data/request-reference-allowlist.json']=json.dumps({d['id']:{'name':model()['references'].get(d['id'],{}).get('label',d['name']),**({'category':category_label(assignment(d['id'])),'audience':assignment(d['id'])['gender']} if assignment(d['id']) else {})} for d in load()[0]},ensure_ascii=False,indent=2)+'\n'
+ out[ROOT/'staff/customer-requests/index.html']=frame('/staff/customer-requests/','Customer Requests','Authorised staff review of privately submitted enquiries.',intro('Customer Requests','Authorised Mr Sewing Fashion staff only.')+'<p id="staffStatus" role="status">Loading secure request service…</p><div id="staffRequests"></div><script src="/assets/staff-requests.js" defer></script>')
+ out[ROOT/'assets/staff-requests.js']=(ROOT/'_templates/staff-requests.js').read_text()
+ out[ROOT/'assets/request-uploads.js']=(ROOT/'_templates/request-uploads.js').read_text()
+ out[ROOT/'assets/customer-interactions.js']=(ROOT/'_templates/customer-interactions.js').read_text()
+ out[ROOT/'assets/customer-interactions.css']=(ROOT/'_templates/customer-interactions.css').read_text()
  out[ROOT/'assets/request-draft.js']=(ROOT/'_templates/request-draft.js').read_text()
  out[ROOT/'assets/whatsapp-consent.js']=(ROOT/'_templates/whatsapp-consent.js').read_text()
  # Legacy references are retained without unverified imagery.
@@ -162,6 +172,9 @@ def outputs():
   out[ROOT/(slug+'.html')]=frame(route,'Earlier Design Gallery','Browse approved references and evidenced Mr Sewing project photographs.',content).replace('<main ', '<main data-publication-hold ',1)
  out[ROOT/'why-choose.html']=frame('/why-choose/','Why Choose Mr Sewing','Personal attention, careful planning and clear communication for your garment needs.',intro('Why Choose Mr Sewing','Personal tailoring and garment assistance, planned around your requirements.')+section('Thoughtful details','Discuss your design, fit and finishing preferences with the team. Assessment, measurements and fittings help refine the agreed result.')+section('Clear arrangements','Your quotation identifies the scope, requirements and confirmed arrangements. Enquiries, official order confirmation and the separate production-start notice are distinct steps.')+section('Professional communication','Ask for clarification and confirmed updates. Customer Support operates Monday–Friday 09:00–17:00 Kigali time excluding Rwandan public holidays; the first-response target is within 24 support working hours.')+related())
  out[ROOT/'services/vip/index.html']=service_page('vip');out[ROOT/'services/vip/subscription/index.html']=subscription();out[ROOT/(BASE+'fabric/').strip('/')/'index.html']=fabric_page()
+ for ident in ['alterations','garment-care','mobile-fitting','vip']:
+  service=service_map()[ident];route='/request/'+ident+'/'
+  out[ROOT/route.strip('/')/'index.html']=frame(route,'Request '+service['title'],'Tell Mr Sewing Fashion about your '+service['title'].lower()+' requirements for assessment and quotation.',breadcrumb([('Home','/'),(service['title'],service['route']),('Request Service',None)])+intro('Request '+service['title'],'Review your details before submitting. A request does not confirm an order or appointment.')+request_form(service_id=ident))
  out[ROOT/'request/index.html']=request_page();out[ROOT/(BASE+'design-choice/').strip('/')/'index.html']=design_choice()
  out[ROOT/'assets/customer-site.css']=(ROOT/'_templates/customer-site.css').read_text()
  import shared_components as shared

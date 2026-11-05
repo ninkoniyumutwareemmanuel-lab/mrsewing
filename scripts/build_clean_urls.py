@@ -42,7 +42,7 @@ def clean_document(name):
         source=re.sub(r'<script[^>]*src="(?:/)?assets/navigation\.js"[^>]*></script>','',source)
         source=re.sub(r'<script>fetch\("header\.html"\).*?</script>','',source,flags=re.S)
         source=re.sub(r'\(async function loadComponents\(\) \{.*?\}\)\(\);',"document.documentElement.dataset.componentsLoaded='true';",source,flags=re.S)
-        source=source.replace('</head>','<style>'+shared.component_css()+'</style><script src="/assets/customer-site.js" defer></script></head>')
+        source=source.replace('</head>','<script>document.documentElement.classList.add("js");</script><style>'+shared.component_css()+'</style><script src="/assets/customer-site.js" defer></script></head>')
     source=source.replace('Express tailoring usually takes 12–15 hours for the tailoring stage. Confirm capacity and the full order schedule; this is not a delivered-suit deadline.','Express Priority is subject to capacity and an individually confirmed completion arrangement; order-confirmation targets are not garment completion promises.').replace('Standard tailoring usually takes 2–4 days for the tailoring stage. Sourcing, fittings, cleaning and delivery affect the complete order timeline.','Standard Priority follows the individually agreed scheduling, sourcing, fitting, cleaning and handover arrangements; no universal completion time is promised.')
     source=source.replace('Standard tailoring stage (usually 2–4 days)','Standard Priority — individually confirmed schedule').replace('Express tailoring stage (usually 12–15 hours; confirm schedule)','Express Priority — subject to availability and confirmation')
     source = re.sub(r'<link\s+rel="(?:ard|ai-catalog)"[^>]*>','',source)

@@ -26,3 +26,8 @@ Four categories for each gender; stable existing reference IDs and recorded visu
 
 ## 2026-11-05-06
 R5 owner correction request and actual upload70dfdd7; preserve dated R4, record backend/pricing source gaps and approved restoration scope.
+
+##2026-11-05-07
+R6 urgent owner changes, secure application code staging feature gate and deployment investigation. Previous snapshots preserved.
+
+R6 owner clarification also replaces the About Collections CTA with a header-derived five-service dropdown, superseding the intermediate Services-overview link. Old staging433107e success is owner-confirmed; new deployment remains independently unverified.

@@ -28,6 +28,12 @@ for gender in ['men','women']:
 from preservation_contract import append_only
 for file in ['_data/collection-designs.json','_data/collection-id-registry.json']:
  append_only(subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),(ROOT/file).read_bytes(),file)
-for file in ['_data/customer-projects.json','_templates/homepage-sections.html','_data/measurement-guide-images.json']:
+for file in ['_data/customer-projects.json']:
  assert (ROOT/file).read_bytes()==subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),file
 print('PASS: 8 populated categories/14 assigned references, append-only IDs and protected homepage/media.')
+
+original_home=subprocess.check_output(['git','show','433107e:_templates/homepage-sections.html'],cwd=ROOT,text=True)
+assert (ROOT/'_templates/homepage-sections.html').read_text().replace('href="/request/?general=1"','href="#quotation"')==original_home
+old=json.loads(subprocess.check_output(['git','show','433107e:_data/measurement-guide-images.json'],cwd=ROOT,text=True));now=json.loads((ROOT/'_data/measurement-guide-images.json').read_text())
+assert {m['id']:m for m in old['measurements']}=={m['id']:m for m in now['measurements']}
+assert now['measurements'][0]['id']=='neck' and now['measurements'][-1]['id']=='trouser-length'

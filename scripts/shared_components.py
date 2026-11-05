@@ -72,3 +72,16 @@ at-rules fail explicitly so a future design change cannot silently corrupt CSS.
             if selectors:output.append(', '.join(selectors) + ' {' + body + '}')
         pos = end
     return '\n'.join(output)
+
+
+def services_picker(label='Explore Our Services'):
+    """Reuse exactly the header's service links; there is no second navigation list."""
+    from html import escape
+    source=(ROOT/'_templates/homepage-header.html').read_text()
+    match=re.search(r'<li class="services-dropdown">\s*(<details(?:\s[^>]*)?>.*?</details>)\s*</li>',source,re.S)
+    if not match:raise ValueError('The approved header Services component was not found')
+    fragment=match[1]
+    if len(re.findall(r'<a\b',fragment))!=5:raise ValueError('Expected the five approved Services destinations')
+    fragment=fragment.replace('<details>','<details class="about-services-picker" data-service-picker>',1)
+    fragment=re.sub(r'<summary>.*?</summary>',lambda _: '<summary class="home-button home-button-gold" role="button" aria-expanded="false">'+escape(label)+' <span aria-hidden="true">⌄</span></summary>',fragment,count=1,flags=re.S)
+    return fragment

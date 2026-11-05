@@ -1,0 +1,75 @@
+{
+  "MS-096": {
+    "name": "Light single-breasted tailoring",
+    "category": "Women's Single-Breasted Suits",
+    "audience": "women"
+  },
+  "MS-117": {
+    "name": "Grey double-breasted tailoring",
+    "category": "Men's Double-Breasted Suits",
+    "audience": "men"
+  },
+  "MS-005": {
+    "name": "Off-white tailoring — front view",
+    "category": "Women's Single-Breasted Suits",
+    "audience": "women"
+  },
+  "MS-006": {
+    "name": "Off-white tailoring — side view",
+    "category": "Women's Single-Breasted Suits",
+    "audience": "women"
+  },
+  "MS-007": {
+    "name": "Off-White Graduation Suit"
+  },
+  "MS-069": {
+    "name": "Blue single-breasted tailoring",
+    "category": "Men's Single-Breasted Suits",
+    "audience": "men"
+  },
+  "MS-083": {
+    "name": "Blue single-breasted separates",
+    "category": "Women's Single-Breasted Suits",
+    "audience": "women"
+  },
+  "MS-139": {
+    "name": "Ivory Elegance One-Button Suit",
+    "category": "Men's Single-Breasted Suits",
+    "audience": "men"
+  },
+  "MS-140": {
+    "name": "Skyline Double-Breasted Suit",
+    "category": "Men's Double-Breasted Suits",
+    "audience": "men"
+  },
+  "MS-141": {
+    "name": "Royal Ivory Three-Piece Suit",
+    "category": "Men's Three-Piece Suits",
+    "audience": "men"
+  },
+  "MS-142": {
+    "name": "Royal Ivory Tuxedo",
+    "category": "Men's Tuxedos & Formalwear",
+    "audience": "men"
+  },
+  "MS-143": {
+    "name": "Burgundy Grace Women's Single-Breasted Suit",
+    "category": "Women's Single-Breasted Suits",
+    "audience": "women"
+  },
+  "MS-144": {
+    "name": "Midnight Elegance Women's Double-Breasted Suit",
+    "category": "Women's Double-Breasted Suits",
+    "audience": "women"
+  },
+  "MS-145": {
+    "name": "Burgundy Royale Women's Skirt Suit",
+    "category": "Women's Skirt Suits",
+    "audience": "women"
+  },
+  "MS-146": {
+    "name": "Camel Grace Women's Three-Piece Suit",
+    "category": "Women's Three-Piece Suits",
+    "audience": "women"
+  }
+}

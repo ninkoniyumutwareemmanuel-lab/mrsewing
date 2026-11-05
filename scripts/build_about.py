@@ -39,7 +39,7 @@ def legacy_render():
         'sizes="(min-width: 768px) 360px, 80vw" width="1244" height="802" loading="eager" '
         'fetchpriority="high" decoding="async" alt="Official Mr Sewing MS logo">')
     header = delivery(re.sub(r'<img\b[^>]*>', reserve_image_space, shared.header('/about/')), 'header')
-    values = {'header':header,'footer':delivery(shared.footer(),'footer'),
+    values = {'services_picker':shared.services_picker(),'header':header,'footer':delivery(shared.footer(),'footer'),
         'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/about.css').read_text(),
         'schema':json.dumps(schema,ensure_ascii=False,indent=2),'hero_image':image,
         'legacy_redirect':legacy_script('about.html'),
@@ -56,6 +56,7 @@ def main():
     outputs = {ROOT/'about.html':render(), ROOT/'assets/about-navigation.js':
         '/* Generated from _templates/shared/navigation.js. */\n'+shared.menu_script()+
         '\n/* Preserve legacy order bookmarks using the existing homepage flow. */\nif (location.hash === "#orderModal") location.replace("/#orderModal");\n'}
+    outputs[ROOT/'assets/about-navigation.js']+=(ROOT/'_templates/services-picker.js').read_text()
     for path,value in outputs.items():
         if path.suffix=='.html':value=finalize(value,path)
         if args.check:

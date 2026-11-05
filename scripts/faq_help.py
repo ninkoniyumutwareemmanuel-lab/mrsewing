@@ -50,7 +50,7 @@ def icon(name):
  assert name in paths,name
  return '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'+paths[name]+'</svg>'
 def contact(title,path):
- return '<a class="faq-primary" href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
+ return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
 def search_data():
  data,topics,qs,_=catalogue()
  return {'synonyms':data['synonyms'],'entries':[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]}

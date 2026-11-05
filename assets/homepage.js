@@ -137,7 +137,7 @@ dropdown?.addEventListener('click',e=>{if(e.target.closest('a'))dropdown.open=fa
 const dialog=document.getElementById('quotation');
 if(dialog&&typeof dialog.showModal==='function'){
  let returnFocus=null;dialog.close();dialog.dataset.modalReady='true';dialog.dataset.ready='true';const close=dialog.querySelector('.quotation-close');close.hidden=false;
- function openQuote(trigger){returnFocus=trigger||document.querySelector('.hero-actions a[href="#quotation"]');if(!dialog.open)dialog.showModal();document.getElementById('quotation-dialog-title').focus();}
+ function openQuote(){location.assign('/request/?general=1');}
  document.querySelectorAll('a[href="#quotation"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openQuote(a);}));
  close.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
  dialog.addEventListener('close',()=>{if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});});
