@@ -20,8 +20,11 @@ def related():
  return '<p class="release-back">'+link('/services/','Back')+'</p>'
 def hero(ident):
  s=service_map()[ident]
+ image=json.loads((ROOT/'_data/service-hero-images.json').read_text())['images'][ident]
+ assert (ROOT/image['src'].lstrip('/')).is_file(),image['src']
+ photo='<img src="'+escape(image['src'],quote=True)+'" width="'+str(image['width'])+'" height="'+str(image['height'])+'" alt="'+escape(image['alt'],quote=True)+'" loading="eager" fetchpriority="high" decoding="async">'
  actions=[('/mensuits/','Explore Men’s Suits'),('/womensuits/','Explore Women’s Suits')] if ident=='custom-tailoring' else [(s['route']+'#request-title',{'alterations':'Request Alteration','garment-care':'Request Garment Care','mobile-fitting':'Request Mobile Service','vip':'Request VIP Service'}[ident])]
- return '<section class="service-hero"><div class="service-hero-copy"><p class="service-breadcrumb">'+link('/','Home','')+' / '+link('/services/','Services','')+'</p><p class="home-eyebrow">Our Service</p><h1>'+escape(s['title'])+'</h1><p>'+escape(s['intro'])+'</p><div class="service-hero-actions">'+''.join(link(u,t,'home-button home-button-gold') for u,t in actions)+'</div><ul class="service-features"><li><span aria-hidden="true">◇</span> Personal guidance</li><li><span aria-hidden="true">✂</span> Individually assessed</li><li><span aria-hidden="true">✓</span> Agreed quotation</li></ul></div><div class="service-hero-photo" role="note"><p>Approved service photograph pending</p></div></section>'
+ return '<section class="service-hero"><div class="service-hero-copy"><p class="service-breadcrumb">'+link('/','Home','')+' / '+link('/services/','Services','')+'</p><p class="home-eyebrow">Our Service</p><h1>'+escape(s['title'])+'</h1><p>'+escape(s['intro'])+'</p><div class="service-hero-actions">'+''.join(link(u,t,'home-button home-button-gold') for u,t in actions)+'</div><ul class="service-features"><li><span aria-hidden="true">◇</span> Personal guidance</li><li><span aria-hidden="true">✂</span> Individually assessed</li><li><span aria-hidden="true">✓</span> Agreed quotation</li></ul></div><div class="service-hero-photo">'+photo+'</div></section>'
 def frame(route,title,description,content,kind='WebPage',service=None):
  from custom_tailoring import component
  import shared_components as shared

@@ -11,3 +11,7 @@ The subsequent 5 November explicit owner request authorises permanent version co
 ## 2026-11-05-02 — consolidated owner revision
 
 R1 supersedes mandatory experience/design selection screens; five website service entries preserve four underlying departments. Direct forms, gallery→fabric/advice→request and restrained Special alternatives authorised. Service and FAQ navigation changes authorised on home; hero/images/other home sections remain protected. Missing approved hero images and verified fabric catalogue recorded. No commercial policy changes. Earlier snapshot retained.
+
+## 2026-11-05-03 — R2 approved hero images
+
+Owner-upload commit a58aa96 verified and fast-forwarded without overwriting work. Five root WebP photographs now approved for named service heroes; missing-photo status resolved. Originals preserved byte-for-byte. Existing layouts, policies, forms, homepage and prior snapshots retained. Separate historical layout mockup not newly available; no exact comparison claim.

@@ -5073,6 +5073,76 @@
       "legacyReferences": [
         "/"
       ]
+    },
+    {
+      "originalImagePath": "hero-custom-tailoring.webp",
+      "sourceOriginal": "hero-custom-tailoring.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_service_visual",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved service hero visual, 5 November 2026. Not a catalogue product or evidence of actual staff, customer work or operational equipment.",
+      "legacyReferences": [
+        "/services/custom-tailoring/"
+      ]
+    },
+    {
+      "originalImagePath": "hero-alterations.webp",
+      "sourceOriginal": "hero-alterations.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_service_visual",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved service hero visual, 5 November 2026. Not a catalogue product or evidence of actual staff, customer work or operational equipment.",
+      "legacyReferences": [
+        "/services/alterations/"
+      ]
+    },
+    {
+      "originalImagePath": "hero-garment-care.webp",
+      "sourceOriginal": "hero-garment-care.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_service_visual",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved service hero visual, 5 November 2026. Not a catalogue product or evidence of actual staff, customer work or operational equipment.",
+      "legacyReferences": [
+        "/services/garment-care/"
+      ]
+    },
+    {
+      "originalImagePath": "hero-mobile-tailoring.webp",
+      "sourceOriginal": "hero-mobile-tailoring.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_service_visual",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved service hero visual, 5 November 2026. Not a catalogue product or evidence of actual staff, customer work or operational equipment.",
+      "legacyReferences": [
+        "/services/mobile-fitting/"
+      ]
+    },
+    {
+      "originalImagePath": "hero-vip-services.webp",
+      "sourceOriginal": "hero-vip-services.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_service_visual",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved service hero visual, 5 November 2026. Not a catalogue product or evidence of actual staff, customer work or operational equipment.",
+      "legacyReferences": [
+        "/services/vip/"
+      ]
     }
   ],
   "missingLegacyReferences": [],
