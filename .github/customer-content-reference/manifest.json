@@ -1,0 +1,13 @@
+{
+  "currentVersion": "2026-11-05",
+  "implementationBaseline": "6fcaca98530742dc4f1556c946432f27418b6774",
+  "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
+  "customerPolicyPublication": "OWNER REVIEW REQUIRED",
+  "files": {
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "a4b771090ba6a1375af4bf3f8594302df069f7f6e7165a1f083d97808e8d596b",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "5ed40fcb260079309ce5b0f267aea7eaebb0c3a58e5b9f6544ecbc9a3e3398c6",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "5e3588e1fbb037f8273586c136f5136404171c400a626b51966e85c15692eb80",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "323c9274cd5a23db75e9a43ed6c596e576fb32e232c5e72b489bcf4353c3be41",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "c7cc94aa30fe9e1be31ef274f712c1a1faddac72ccdbc208b4a069975ccc6c0d"
+  }
+}
