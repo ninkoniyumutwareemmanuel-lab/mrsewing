@@ -10,12 +10,20 @@ ROOT = Path(__file__).resolve().parents[1]
 SHARED = ROOT / '_templates/shared'
 
 def header(page='/'):
+    from custom_tailoring import component
+    return component('header',page)
+
+def legacy_header(page='/'):
     markup = (SHARED/'header.html').read_text().rstrip()
     if page != '/':
         markup = markup.replace('href="#customers-section"', 'href="/#customers-section"').replace('href="#services"', 'href="/#services"')
     return markup.replace(f'<a href="{page}">', f'<a href="{page}" aria-current="page">', 1)
 
 def footer():
+    from custom_tailoring import component
+    return component('footer')+'<script src="/assets/request-context.js" defer></script>'
+
+def legacy_footer():
     return (SHARED/'footer.html').read_text().rstrip()
 
 def site_css():
@@ -25,7 +33,7 @@ def menu_script():
     return (SHARED/'navigation.js').read_text()
 
 def component_css():
-    return shared_css(site_css())
+    return shared_css(site_css())+'\n'+(ROOT/'_templates/homepage-phase1.css').read_text()+'\n.request-context-note{background:#151514;color:#ead099;border:1px solid #8d6d2c;padding:14px;font-size:14px;line-height:1.6;margin:20px auto;max-width:1100px}'
 
 def shared_css(source):
     """Select common design rules without shipping homepage gallery/hero styles.

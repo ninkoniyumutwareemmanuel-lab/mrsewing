@@ -13,6 +13,11 @@ def complete_page(route,title,description,content,kind='WebPage',extra=None):
     return page(route,title+' | Mr Sewing',description,content,kind,extra).replace('</style>','\n'+(ROOT/'_templates/completion.css').read_text()+'</style>',1)
 def related(links):return '<nav class="help-related" aria-label="Related information">'+''.join('<a href="'+url+'">'+escape(title)+'</a>' for url,title in links)+'</nav>'
 def care_info_page(kind):
+    from customer_site import frame,intro,section,related
+    route='/services/garment-care/'+kind+'/'
+    return frame(route,'Garment Care '+('Services' if kind=='services' else 'Quotes & Planning'),('Understand suitable garment-care requests and assessment before an agreed service.' if kind=='services' else 'Plan your garment-care quotation, individual timing and confirmed collection arrangements.'),intro('Garment Care '+('Services' if kind=='services' else 'Quotes & Planning'),'Start with the garment and its care label.')+section('Assessment before agreement','Describe the garment, care label, condition and requested care. Available suitable methods, quotation, timing and collection/delivery require individual confirmation. No specialist process, machinery, price or turnaround is assumed.')+related())
+
+def legacy_care_info_page(kind):
     info=care_information();route='/services/garment-care/'+kind+'/'
     if kind=='services':
         title='Garment Care Services';desc='Learn how to enquire about suitable clothing care with Mr Sewing Garment Care in Kigali, and confirm available treatments before proceeding.'
@@ -30,6 +35,12 @@ def care_info_page(kind):
     return out.replace('class="journey-main home-shell"','class="care-main"').replace('</style>','\n'+(ROOT/'_templates/garment-care.css').read_text()+'</style>',1)
 
 def information_page(kind):
+    if kind!='shop':
+        from customer_site import process_page
+        return process_page('/'+kind+'/')
+    return legacy_information_page(kind)
+
+def legacy_information_page(kind):
     if kind=='shop':
         route='/shop/';title='Shop — Coming Soon';desc='Mr Sewing’s online shop is not available yet. Explore tailoring inspiration and services while online shopping is being prepared; no launch date is announced.'
         content=intro('Mr Sewing',title,'Online shopping is not available yet. Our website currently helps you explore designs, discover completed work and discuss tailoring services.')+'<section class="shop-status"><h2>A considered next chapter.</h2><p>There are no online products, checkout or payment facilities on this page, and no launch date has been announced. For current tailoring enquiries, explore the service you need and contact the team directly.</p></section>'+related([('/collections/','Explore Collections'),('/services/','Find a tailoring service')])

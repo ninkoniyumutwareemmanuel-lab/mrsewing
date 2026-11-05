@@ -4,7 +4,7 @@ from pathlib import Path
 from html import escape
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
-NOINDEX={'services/custom-tailoring/standard-order.html','services/custom-tailoring/special-order.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html'}
+NOINDEX={'request.html','services/custom-tailoring/design-choice.html','services/custom-tailoring/standard-order.html','services/custom-tailoring/special-order.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html'}
 STAGING='<script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector(\'meta[name="robots"]\');if(m)m.content="noindex, nofollow";}</script>'
 def route_for(path):
     rel=Path(path).relative_to(ROOT)
@@ -20,7 +20,7 @@ def finalize(source,path):
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
     key=rel.parent.name+'.html' if rel.name=='index.html' and rel.parent!=Path('.') else str(rel)
-    robots='noindex, follow' if name in NOINDEX or key in aliases else 'index, follow'
+    robots='noindex, follow' if name in NOINDEX or key in aliases or 'data-publication-hold' in source else 'index, follow'
     # Ensure basic Open Graph coverage on all canonical documents without new claims.
     title=re.search(r'<title>(.*?)</title>',source,re.S)[1]
     desc=re.search(r'<meta\b[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']\s*/?>',source,re.I)

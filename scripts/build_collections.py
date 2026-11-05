@@ -47,7 +47,17 @@ def load():
             avifs=[{'src':'/'+v['src'],'width':v['width']} for v in avif.get(original,{}).get('variants',[]) if v['width']<=960]
             for v in candidates+avifs:assert (ROOT/v['src'].lstrip('/')).is_file(),v
             images.append({**{k:image[k] for k in ['position','width','height']},'alt':({'r4.jpeg':'Person wearing a light jacket and matching trousers','r7.jpeg':'Person wearing a light jacket with navy trousers','h1.jpeg':'Person wearing an off-white suit','h2.jpeg':'Side view of a person in an off-white suit','h3.jpeg':'Person holding a diploma scroll'}.get(image['originalPath']) or ('Garment photograph shown for design inspiration' if image['alt'].lower().startswith('tailoring design') else re.sub(r'\s*[—·-]\s*MS-\d+\s*$','',image['alt']))),'src':quote(image['src'],safe='/'),'thumb':quote(candidates[0]['src'],safe='/'),'srcset':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in candidates),'avif':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in avifs)})
-        if record['published']:published.append({k:record[k] for k in ['id','slug','name','gender','styles','occasions','colors','garmentType','description','provenance']}|{'images':images})
+        # Existing-public display is not publication permission (owner 5 Nov §28).
+        approved_projects=[p for p in json.loads((ROOT/'_data/customer-projects.json').read_text())['projects'] if p.get('published') and p.get('completedWorkEvidence') and p.get('publicationPermission',{}).get('approved') and p['publicationPermission'].get('evidenceRef')]
+        evidence={i['src']:p for p in approved_projects for i in p['images'] if i.get('permissionEvidenceRef') and i.get('projectAssociationEvidenceRef')}
+        permitted=record['rightsStatus']=='approved' or all(i['src'] in evidence for i in record['images'])
+        if record['published'] and permitted:
+            item={k:record[k] for k in ['id','slug','name','gender','styles','occasions','colors','garmentType','description','provenance']}|{'images':images}
+            project=evidence.get(record['images'][0]['src'])
+            if project:item.update(name=project['title'],description=project['context'],provenance='made_by_mr_sewing')
+            # These two category assignments were explicitly owner-approved in the homepage brief.
+            item['gender']={'/r7.jpeg':'men','/h2.jpeg':'women'}.get(record['images'][0]['src'],item['gender'])
+            published.append(item)
     assert not ids.intersection(content['retiredIds'])
     assert set(registry)==ids|set(content['retiredIds']),'Registry entries must remain present or explicitly retired'
     assert content['nextId']>max(int(i.split('-')[1]) for i in registry)
@@ -139,7 +149,7 @@ def render_design(d,designs):
     image=d['images'][0]
     # No unsupported Product/offers/ownership claims.
     schema={'@context':'https://schema.org','@type':'WebPage','name':name+' | Mr Sewing','url':url,'description':design_description(d),'primaryImageOfPage':{'@type':'ImageObject','contentUrl':'https://mrsewingfashion.com'+image['src']}}
-    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'https://wa.me/250787411501?'+urlencode({'text':msg}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
+    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'/request/?'+urlencode({'service':'custom-tailoring','order':'standard','design':d['id'],'experience':'standard'}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
     return fill('collection-design.html',values)
 
 def main():
@@ -148,6 +158,13 @@ def main():
     outputs.update({ROOT/design_route(d).strip('/')/'index.html':render_design(d,designs) for d in designs})
     outputs[ROOT/'collections/designs/sitemap.xml']='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('<url><loc>https://mrsewingfashion.com'+design_route(d)+'</loc></url>\n' for d in designs)+'</urlset>\n'
     expected={ROOT/design_route(d).strip('/')/'index.html' for d in designs}
+    # Retain legacy reference URLs without displaying unverified photographs.
+    from customer_site import frame,intro,related
+    for record in json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']:
+        if record['published'] and record['id'] not in {d['id'] for d in designs}:
+            path=ROOT/'collections/designs'/record['slug']/'index.html'
+            value=frame('/collections/designs/'+record['slug']+'/', 'Design Reference '+record['id']+' — Review Pending', 'This reference is not available for publication until its permission and description are verified.', intro('Reference Awaiting Verification','This earlier reference is withheld while publication permission is checked. Browse approved designs or ask the team about your own design inspiration.')+related()).replace('<main ', '<main data-publication-hold ',1)
+            outputs[path]=value;expected.add(path)
     stale=set((ROOT/'collections/designs').glob('*/index.html'))-expected
     if stale:raise SystemExit('Review obsolete garment pages before publication: '+', '.join(str(p.relative_to(ROOT)) for p in sorted(stale)))
     outputs[ROOT/'assets/collections-navigation.js']='/* Generated from the approved shared menu controller. */\n'+shared.menu_script()+'\nfunction legacyOrderBookmark(){if(location.hash===\"#orderModal\")location.replace(\"/#orderModal\");}\naddEventListener(\"hashchange\",legacyOrderBookmark);legacyOrderBookmark();\n'

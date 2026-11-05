@@ -88,7 +88,7 @@ def main():
                     assert node['@type'] == 'Organization'
                     for key in ['name', 'url', 'telephone', 'email', 'logo']:
                         assert node[key] == common[key], key
-                    assert node['foundingDate'] == '2019'
+                    assert 'foundingDate' not in node  # source verification required by owner 5 Nov
                     assert node['parentOrganization']['name'] == 'NINKONIYUMUTWARE NEXUS LTD'
                     assert node['alternateName'] == 'Mr Sewing'
                     continue
@@ -130,7 +130,7 @@ def main():
             assert count <= 1, (path.name, 'duplicate business entity')
             if count:
                 business_pages.append(path.name)
-    assert set(business_pages)=={'about.html','contact.html','index.html','suits.html'}, business_pages
+    assert set(business_pages)=={'about.html','contact.html','index.html'}, business_pages
     assert len(business_pages)==len(set(business_pages))
     assert common['telephone'] == '+250787411501'
     assert common['email'] == 'mrsewingfashiondesigner@gmail.com'
@@ -139,7 +139,7 @@ def main():
     subprocess.run(['python3','scripts/sync_business_schema.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_homepage.py','--check'], cwd=ROOT, check=True)
     subprocess.run(['python3','scripts/build_contact.py','--check'], cwd=ROOT, check=True)
-    print(f'PASS: {len(documents)} JSON-LD blocks parse; four full business entities; service pages reference the shared business identity preserve confirmed identity and hours; Contact separately qualifies workshop and appointment-only consultation locations.')
+    print(f'PASS: {len(documents)} JSON-LD blocks parse; three qualified business entities; service pages reference the shared business identity preserve confirmed identity and hours; Contact separately qualifies workshop and appointment-only consultation locations.')
     if options.vocabulary:
         vocabulary_check(documents, options.vocabulary)
 

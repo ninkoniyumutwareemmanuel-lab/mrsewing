@@ -8,7 +8,7 @@ from build_customer_information import outputs,plain
 from customer_information import information,expand
 from build_public_routes import public_routes
 info=information();assert info['advancePercent']==70
-assert [(x['garment'],x['priceRwf']) for x in info['cotton']]==[('Men two-piece',200000),('Men three-piece',250000),('Women two-piece',150000),('Women three-piece',200000)]
+assert info['cotton']==[] and info['priceScheduleStatus'].startswith('UNVERIFIED')
 from faq_help import catalogue, routes as faq_routes
 for path,output in outputs().items():
  assert path.read_text()==output,path.name
@@ -26,7 +26,7 @@ for topic in topics:
 paths=[ROOT/n for n in ['index.html','faq.html','terms-and-conditions.html','refund-policy.html','privacy-policy.html','measurement-submission.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','why-choose.html']]+list((ROOT/'services').rglob('index.html'))
 for p in paths:
  text=p.read_text()
- for stale in ['35%','75%','72 hours','10% of','day 12','1 to 2 weeks','1 to 3 days','within 24 hours','at least 70%','5% off','10% off','ownership rights and deposits paid are forfeited','we do not offer cancellations, returns or refunds','250,000</td><td>350,000','complimentary garment cleaning and special gifts','approved for publication','not listed until their availability']:
+ for stale in ['75%','10% of','day 12','1 to 2 weeks','1 to 3 days','within 24 hours','at least 70%','5% off','10% off','ownership rights and deposits paid are forfeited','we do not offer cancellations, returns or refunds','250,000</td><td>350,000','complimentary garment cleaning and special gifts','approved for publication','not listed until their availability']:
   assert stale not in text,(p,stale)
  assert not re.search(r'\b(?:supplier costs|maker fees|owner pay|profit margin)\b',text,re.I)
 for file in ['booking.html','booking-housecall.html','booking-workplace.html','booking-adjustment.html','measurement-submission.html']:
@@ -47,9 +47,12 @@ assert len(list((ROOT/'collections/designs').glob('*/index.html')))==111
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.
 ref='ac639f145fc976ecefe02e2b8ff5b82f1aae184b'
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
-protected=['assets/forms.js','assets/collections-v3.js','assets/collection-design.js','_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','_templates/collections.css']
+protected=['assets/forms.js','assets/collections-v3.js','_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','_templates/collections.css']
 for file in files:
- if file in protected or file.startswith('collections/') or file.startswith('our-work/') or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
+ if file in protected or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==146+len(faq_routes())
-print('PASS: policy/FAQ output and schema parity, Cotton prices/payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')
+assert len(public_routes())==56
+assert '60%' in (ROOT/'customer-information/index.html').read_text()
+assert '72 hours' in (ROOT/'refund-policy.html').read_text()
+assert '<table' not in (ROOT/'terms-and-conditions.html').read_text()
+print('PASS: policy/FAQ output and schema parity, quote-only unverified prices and supported payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')

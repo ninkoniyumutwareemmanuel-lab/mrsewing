@@ -69,6 +69,10 @@ def service_picture(service,eager=False):
     return '<img class="service-card-image" src="/'+src+'" srcset="'+srcset+'" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 90vw" alt="'+alt+'" width="'+str(width)+'" height="'+str(height)+'" loading="'+('eager' if eager else 'lazy')+'" decoding="async">'
 
 def overview(data):
+    from customer_site import overview as release_overview
+    return release_overview()
+
+def legacy_overview(data):
     content='<section class="journey-intro"><p class="home-eyebrow">Mr Sewing · Kigali</p><h1>Tailoring, made personal.</h1><p>From a first idea to a considered fit. Find the service that meets your needs, then talk with us about the details.</p></section><div class="journey-grid">'
     for n,service in enumerate(data):content+='<a class="journey-card" href="'+service['route']+'">'+service_picture(service,n<3)+'<span class="journey-number">'+str(n+1).zfill(2)+'</span><h2>'+escape(service['title'])+'</h2><p>'+escape(service['intro'])+'</p><span class="home-text-link">Explore service <span class="home-arrow" aria-hidden="true"></span></span></a>'
     content+='</div><p class="journey-image-note">Garment photographs show design inspiration, not verified customer projects. Measurement illustrations explain fitting concepts. The garment-care still life is AI-generated and does not depict Mr Sewing premises, staff or customer work.</p>'
@@ -79,7 +83,16 @@ def service_page(service):
     if service['id']=='custom-tailoring':
         from custom_tailoring import render
         return render()
-    if service['id']=='garment-care':return care_page(service)
+    if service['id'] in ['alterations','garment-care','mobile-fitting']:
+        from customer_site import service_page as release_service
+        return release_service(service['id'])
+    from customer_site import frame,intro,section,related,data as release_data,link
+    if service['id'] in ['wedding-tailoring','graduation-tailoring','express']:
+        route=service['route']
+        if service['id']=='express':
+            return frame(route,'Express Priority Requests','Understand availability, confirmation and the approved Standard-Service priority surcharges.',intro('Express Priority Requests','Priority is a separate choice within your service request, not an additional primary service category.')+section('Express and after-hours arrangements',release_data()['pages']['/customer-information/']['sections'][3]['paragraphs'])+related())
+        title='Ceremony Tailoring' if service['id']=='wedding-tailoring' else 'Graduation Tailoring'
+        return frame(route,title,'Discuss '+title.lower()+' design, measurements and individually confirmed arrangements for your occasion.',intro(title,'Choose your tailoring service experience and design, then confirm the requirements and quotation for your occasion.')+link('/services/custom-tailoring/','Custom Tailoring & Suits','home-button home-button-gold')+related())
     route=service['route'];kind=service['id']
     content='<div class="service-kind-'+kind+'"><section class="journey-intro"><p class="home-eyebrow">A personal service · Kigali</p><h1>'+escape(service['title'])+'</h1><p>'+escape(service['intro'])+'</p></section><section class="service-feature" aria-label="Service introduction">'+service_picture(service,True)+'<div><h2>'+{'custom-tailoring':'Your wardrobe. Your expression.','wedding-tailoring':'For a moment that matters.','graduation-tailoring':'Mark your milestone.','mobile-fitting':'A fitting around your day.','alterations':'A considered refinement.','express':'Tell us your exact deadline.'}.get(kind,'Made personal.')+'</h2><p>'+escape(service['audience'])+'</p><p class="journey-image-note">'+('Measurement illustration; not a customer appointment photograph.' if kind in ['mobile-fitting','alterations'] else 'Garment design inspiration; not a documented customer project.')+'</p></div></section><div class="service-layout"><div class="service-copy">'
     for title,text in service['sections']:content+='<section><h2>'+escape(title)+'</h2><p>'+escape(text)+'</p></section>'

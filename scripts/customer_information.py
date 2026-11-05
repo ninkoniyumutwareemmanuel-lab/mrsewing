@@ -5,6 +5,9 @@ from html import escape
 ROOT=Path(__file__).resolve().parents[1]
 def information():return json.loads((ROOT/'_data/customer-information.json').read_text())
 def cotton_table():
+ return '<p>Request the current individual quotation for your garment, confirmed fabric and package inclusions. No unverified suit or tuxedo price schedule is published.</p>'
+
+def historical_cotton_table():
  return '<div class="tw"><table class="price-table"><caption>Cotton standard suit base prices — RWF</caption><thead><tr><th scope="col">Standard suit</th><th scope="col">Base price (RWF)</th></tr></thead><tbody>'+''.join('<tr><th scope="row">'+escape(row['garment'])+'</th><td>'+format(row['priceRwf'],',')+'</td></tr>' for row in information()['cotton'])+'</tbody></table></div>'
 def expand(text):
  data=information();data['cotton_table']=cotton_table()

@@ -9,7 +9,11 @@ public,_=build.load()
 records=json.loads((build.ROOT/'_data/collection-designs.json').read_text())['designs']
 expected={build.ROOT/build.design_route(d).strip('/')/'index.html' for d in public}
 actual=set((build.ROOT/'collections/designs').glob('*/index.html'))
-assert expected==actual,(len(expected),len(actual))
+assert expected.issubset(actual) and len(actual)==111
+for hold in actual-expected:
+ page=hold.read_text();assert 'data-publication-hold' in page and 'noindex, follow' in page
+ assert '<main data-publication-hold' in page
+ assert not re.search(r'<main.*?<img',page,re.S)
 urls=[el.text for el in ET.parse(build.ROOT/'collections/designs/sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 assert len(urls)==len(public)==len(set(urls))
 assert set(urls)=={'https://mrsewingfashion.com'+build.design_route(d) for d in public}

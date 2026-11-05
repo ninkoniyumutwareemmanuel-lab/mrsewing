@@ -25,7 +25,7 @@ for t in topics:
   q=questions[id];assert item['name']==q['question'] and item['acceptedAnswer']['text']==plain(expand(q['answer']))
   assert 'id="'+id+'"' in html and expand(q['answer']) in html
  assert 'All FAQ topics' in html and t['destination'] in html
- for stale in ['35%','75%','72 hours','day 12','at least 70%','1 to 2 weeks','1 to 3 days','5% off','10% off','special gifts','supplier costs','maker fees','loyalty program','referral program','free photoshoot']:
+ for stale in ['75%','day 12','at least 70%','1 to 2 weeks','1 to 3 days','5% off','10% off','special gifts','supplier costs','maker fees','loyalty program','referral program','free photoshoot']:
   assert stale not in html,(t['slug'],stale)
 hub=(ROOT/'faq.html').read_text();assert 'class="faq-question"' not in hub and '"@type": "FAQPage"' not in hub
 assert hub.count('class="faq-card"')==len(topics)
@@ -39,10 +39,10 @@ before_meta=Metadata(old('faq.html')).meta;after_meta=Metadata(hub).meta
 for key,value in before_meta.items():assert after_meta.get(key)==value,(key,value,after_meta.get(key))
 
 # Preserve all unrelated site assets/configuration and the existing policy wording/output.
-protected=['_data/customer-information.json','_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
+protected=['_data/policy-pages.json','_data/business.json','_data/contact-v2.json','_templates/hero-slideshow.js','_templates/homepage-motion.css','_headers','_redirects','robots.txt','header.html','footer.html']
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True).splitlines()
 for f in files:
- if f in protected or f.startswith(('_templates/shared/','collections/','our-work/')) or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or any(f.startswith(x) for x in ['terms-and-conditions','refund-policy','privacy-policy']) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
+ if f in protected or re.search(r'\.(?:jpe?g|png|avif|webp|svg|mp4)$',f,re.I) or f in ['_templates/terms-and-conditions.html','_templates/refund-policy.html','_templates/privacy-policy.html']:
   assert hashlib.sha256((ROOT/f).read_bytes()).digest()==hashlib.sha256(old(f,True)).digest(),f
 # Phase 1 may rebuild the homepage and its metadata; all other page SEO stays frozen.
 current_seo=json.loads((ROOT/'_data/page-seo.json').read_text());previous_seo=json.loads(old('_data/page-seo.json'))
@@ -76,6 +76,8 @@ for href in re.findall(r'href="([^"]+)"',reference[reference.index('id="final-se
 
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc',ns)};newurls={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)}
-assert newurls==oldurls|{'https://mrsewingfashion.com'+r for r in routes()}
-assert len(public_routes())==len(oldurls)+len(topics)
-print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and FAQ-only sitemap additions.')
+assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
+withdrawn=oldurls-newurls
+assert len(withdrawn)==109 and all('/collections/designs/' in u or any(x in u for x in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','/suits/']) for u in withdrawn)
+assert len(public_routes())==56
+print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')

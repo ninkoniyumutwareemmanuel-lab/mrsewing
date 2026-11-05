@@ -1,7 +1,7 @@
 [
   {
     "id": "custom-tailoring",
-    "title": "Custom Tailoring",
+    "title": "Custom Tailoring & Suits",
     "route": "/services/custom-tailoring/",
     "intro": "Personal tailoring for men and women, from suits and executive outfits to formalwear shaped around your preferences.",
     "audience": "Men and women planning a custom suit, formal outfit or professional wardrobe.",
@@ -44,88 +44,68 @@
     "visualAlt": "Black suit design shown as tailoring inspiration"
   },
   {
-    "id": "wedding-tailoring",
-    "title": "Wedding & Civil Wedding Tailoring",
-    "route": "/services/wedding-tailoring/",
-    "intro": "A personal tailoring conversation for your ceremony, civil wedding or wedding celebrations.",
-    "audience": "Customers preparing a wedding or civil-wedding outfit.",
-    "options": "Discuss your ceremony, preferred silhouette, colours and coordination needs. Specific details and fabric availability are confirmed with the team.",
+    "id": "alterations",
+    "title": "Clothing Alterations & Repairs",
+    "route": "/services/alterations/",
+    "intro": "Garment adjustments assessed around the fit and changes you need.",
+    "audience": "Customers seeking adjustments to an existing suit, jacket, trousers, dress or skirt.",
+    "options": "Possible requests include resizing, sleeve or hem adjustments, zipper or button repairs and lining work. Suitability is assessed before a quote.",
     "steps": [
-      "Share your occasion and event date.",
-      "Discuss your reference, garment requirements and available options.",
-      "Agree measurements, fitting arrangements and a feasible schedule."
+      "Describe the garment and the changes you would like.",
+      "Arrange an assessment of fit, condition and construction.",
+      "Confirm the work, quote and fitting arrangements."
     ],
     "sources": [
-      "_templates/homepage-sections.html",
-      "faq.html"
+      "booking-adjustment.html"
     ],
     "primary": true,
-    "visual": "m-doublebreastedsuittwo1.jpeg",
+    "visual": "chest.jpeg",
     "sections": [
       [
-        "For your ceremony",
-        "Discuss a custom suit, tuxedo request or women’s formalwear for a wedding or civil ceremony. Your reference guides the conversation; the team confirms which design details can be made."
+        "Refine the fit you have",
+        "Request an assessment of a suit, jacket, trousers, dress or skirt. The garment’s condition and construction determine which adjustments are possible."
       ],
       [
-        "A look that belongs to you",
-        "Discuss silhouette, colour, available fabrics and any coordination requirements. No package or fixed price is implied by a reference photograph."
+        "Changes to discuss",
+        "Existing booking options include resizing and tapering, sleeve or hem adjustments, zipper or button repairs and lining work. Each request is assessed; not every change is suitable for every garment."
       ],
       [
-        "Plan the fittings",
-        "Tell us the ceremony date early. Measurements, fitting appointments and a feasible production schedule are agreed individually; submitting an enquiry does not guarantee a deadline."
+        "Assessment before a quote",
+        "Describe the fit concern and arrange an assessment. The team confirms the work, price, fitting needs and estimated timing before you agree."
       ]
     ],
     "requirements": [
-      "Wedding or civil ceremony and event date",
-      "Garment needs and design references",
-      "Preferred colours and fabric options",
-      "Measurements and fitting availability"
+      "Garment type and current fit concern",
+      "Photographs or a clear description of the requested change",
+      "Any repairs or previous alterations",
+      "Preferred timing for assessment"
     ],
-    "visualAlt": "Black formalwear on a mannequin, shown as design inspiration"
+    "visualAlt": "Tape measuring a shirt at chest level, shown as a fit illustration"
   },
   {
-    "id": "graduation-tailoring",
-    "title": "Graduation Tailoring",
-    "route": "/services/graduation-tailoring/",
-    "intro": "Made-to-order outfit enquiries for a milestone worth remembering.",
-    "audience": "Graduates planning an outfit for their ceremony or celebration.",
-    "options": "Discuss suit or outfit styling, your preferred colours and the practical needs of your ceremony.",
+    "id": "garment-care",
+    "title": "Garment Care & Cleaning",
+    "route": "/services/garment-care/",
+    "intro": "A dedicated care conversation for your garments. Confirm available services, suitability and conditions with Mr Sewing.",
+    "audience": "Customers asking about initial suit care or a separately requested garment-care service.",
+    "options": "The standard suit package includes one initial standard professional cleaning. Separately requested care requires a quotation and confirmation.",
     "steps": [
-      "Tell us your graduation date and preferred outfit.",
-      "Share a reference and discuss the details.",
-      "Confirm measurements, fittings and timing before ordering."
+      "Share the order or garment details.",
+      "Ask which care options and conditions apply.",
+      "Agree the next step with the team."
     ],
     "sources": [
-      "_templates/homepage-sections.html",
-      "about.html"
+      "_templates/homepage-sections.html"
     ],
     "primary": true,
-    "visual": "m-classicsuittwo1.jpeg",
-    "sections": [
-      [
-        "An outfit for your milestone",
-        "Discuss graduation clothing for men or women, including a suit or another outfit developed from your references."
-      ],
-      [
-        "Your design, considered",
-        "Talk through the silhouette, colours and available fabric choices. Confirm the final garment details with the team before ordering."
-      ],
-      [
-        "Ready for the fitting conversation",
-        "Share your graduation date, arrange measurements and agree fitting appointments. Timing and collection arrangements depend on the garment and confirmed capacity."
-      ]
-    ],
-    "requirements": [
-      "Graduation date",
-      "Garment category and inspiration",
-      "Fabric and colour preferences",
-      "Measurements and fitting availability"
-    ],
-    "visualAlt": "Classic suit design shown as garment inspiration"
+    "visual": "assets/journey/garment-care-480.webp",
+    "requirements": [],
+    "sections": [],
+    "visualAlt": "AI-generated still life of a jacket, folded shirt and garment brush"
   },
   {
     "id": "mobile-fitting",
-    "title": "Mobile Fitting",
+    "title": "Mobile Tailoring, Styling & Event Assistance",
     "route": "/services/mobile-fitting/",
     "intro": "A measurement or fitting appointment at your location in Kigali, arranged directly with the Mr Sewing team.",
     "audience": "Customers who would like to request measurements or a fitting at home, at an office or at a hotel in Kigali.",
@@ -165,64 +145,86 @@
     "visualAlt": "Measurement tape alongside a suit jacket, shown as a fitting illustration"
   },
   {
-    "id": "garment-care",
-    "title": "Premium Garment Care",
-    "route": "/services/garment-care/",
-    "intro": "A dedicated care conversation for your garments. Confirm available services, suitability and conditions with Mr Sewing.",
-    "audience": "Customers asking about initial suit care or a separately requested garment-care service.",
-    "options": "The standard suit package includes one initial standard professional cleaning. Separately requested care requires a quotation and confirmation.",
+    "id": "wedding-tailoring",
+    "title": "Wedding & Civil Wedding Tailoring",
+    "route": "/services/wedding-tailoring/",
+    "intro": "A personal tailoring conversation for your ceremony, civil wedding or wedding celebrations.",
+    "audience": "Customers preparing a wedding or civil-wedding outfit.",
+    "options": "Discuss your ceremony, preferred silhouette, colours and coordination needs. Specific details and fabric availability are confirmed with the team.",
     "steps": [
-      "Share the order or garment details.",
-      "Ask which care options and conditions apply.",
-      "Agree the next step with the team."
+      "Share your occasion and event date.",
+      "Discuss your reference, garment requirements and available options.",
+      "Agree measurements, fitting arrangements and a feasible schedule."
     ],
     "sources": [
-      "_templates/homepage-sections.html"
+      "_templates/homepage-sections.html",
+      "faq.html"
     ],
-    "primary": true,
-    "visual": "assets/journey/garment-care-480.webp",
-    "requirements": [],
-    "sections": [],
-    "visualAlt": "AI-generated still life of a jacket, folded shirt and garment brush"
-  },
-  {
-    "id": "alterations",
-    "title": "Alterations & Refinements",
-    "route": "/services/alterations/",
-    "intro": "Garment adjustments assessed around the fit and changes you need.",
-    "audience": "Customers seeking adjustments to an existing suit, jacket, trousers, dress or skirt.",
-    "options": "Possible requests include resizing, sleeve or hem adjustments, zipper or button repairs and lining work. Suitability is assessed before a quote.",
-    "steps": [
-      "Describe the garment and the changes you would like.",
-      "Arrange an assessment of fit, condition and construction.",
-      "Confirm the work, quote and fitting arrangements."
-    ],
-    "sources": [
-      "booking-adjustment.html"
-    ],
-    "primary": true,
-    "visual": "chest.jpeg",
+    "primary": false,
+    "visual": "m-doublebreastedsuittwo1.jpeg",
     "sections": [
       [
-        "Refine the fit you have",
-        "Request an assessment of a suit, jacket, trousers, dress or skirt. The garment’s condition and construction determine which adjustments are possible."
+        "For your ceremony",
+        "Discuss a custom suit, tuxedo request or women’s formalwear for a wedding or civil ceremony. Your reference guides the conversation; the team confirms which design details can be made."
       ],
       [
-        "Changes to discuss",
-        "Existing booking options include resizing and tapering, sleeve or hem adjustments, zipper or button repairs and lining work. Each request is assessed; not every change is suitable for every garment."
+        "A look that belongs to you",
+        "Discuss silhouette, colour, available fabrics and any coordination requirements. No package or fixed price is implied by a reference photograph."
       ],
       [
-        "Assessment before a quote",
-        "Describe the fit concern and arrange an assessment. The team confirms the work, price, fitting needs and estimated timing before you agree."
+        "Plan the fittings",
+        "Tell us the ceremony date early. Measurements, fitting appointments and a feasible production schedule are agreed individually; submitting an enquiry does not guarantee a deadline."
       ]
     ],
     "requirements": [
-      "Garment type and current fit concern",
-      "Photographs or a clear description of the requested change",
-      "Any repairs or previous alterations",
-      "Preferred timing for assessment"
+      "Wedding or civil ceremony and event date",
+      "Garment needs and design references",
+      "Preferred colours and fabric options",
+      "Measurements and fitting availability"
     ],
-    "visualAlt": "Tape measuring a shirt at chest level, shown as a fit illustration"
+    "visualAlt": "Black formalwear on a mannequin, shown as design inspiration",
+    "role": "supporting_information"
+  },
+  {
+    "id": "graduation-tailoring",
+    "title": "Graduation Tailoring",
+    "route": "/services/graduation-tailoring/",
+    "intro": "Made-to-order outfit enquiries for a milestone worth remembering.",
+    "audience": "Graduates planning an outfit for their ceremony or celebration.",
+    "options": "Discuss suit or outfit styling, your preferred colours and the practical needs of your ceremony.",
+    "steps": [
+      "Tell us your graduation date and preferred outfit.",
+      "Share a reference and discuss the details.",
+      "Confirm measurements, fittings and timing before ordering."
+    ],
+    "sources": [
+      "_templates/homepage-sections.html",
+      "about.html"
+    ],
+    "primary": false,
+    "visual": "m-classicsuittwo1.jpeg",
+    "sections": [
+      [
+        "An outfit for your milestone",
+        "Discuss graduation clothing for men or women, including a suit or another outfit developed from your references."
+      ],
+      [
+        "Your design, considered",
+        "Talk through the silhouette, colours and available fabric choices. Confirm the final garment details with the team before ordering."
+      ],
+      [
+        "Ready for the fitting conversation",
+        "Share your graduation date, arrange measurements and agree fitting appointments. Timing and collection arrangements depend on the garment and confirmed capacity."
+      ]
+    ],
+    "requirements": [
+      "Graduation date",
+      "Garment category and inspiration",
+      "Fabric and colour preferences",
+      "Measurements and fitting availability"
+    ],
+    "visualAlt": "Classic suit design shown as garment inspiration",
+    "role": "supporting_information"
   },
   {
     "id": "express",
@@ -240,7 +242,7 @@
       "service-express.html",
       "_templates/homepage-sections.html"
     ],
-    "primary": true,
+    "primary": false,
     "visual": "m-modernsuits1.jpeg",
     "sections": [
       [
@@ -262,6 +264,7 @@
       "Fabric availability and measurement status",
       "Your contact details for direct confirmation"
     ],
-    "visualAlt": "Modern suit design shown as garment inspiration"
+    "visualAlt": "Modern suit design shown as garment inspiration",
+    "role": "supporting_information"
   }
 ]
