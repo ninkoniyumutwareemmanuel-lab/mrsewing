@@ -33,10 +33,13 @@ assert '18s infinite' not in (ROOT/'_templates/homepage-motion.css').read_text()
 ref='ce32d5ff67eacecf03804bf6608222c5f13e3cd1'
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
 for f in files:
- if re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',f,re.I) or f in ['_data/collection-designs.json','_data/collection-id-registry.json','_templates/collections.css','assets/collections-v3.js']:
+ if re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',f,re.I) or f in ['_data/collection-designs.json','_data/collection-id-registry.json','_templates/collections.css']:
   old=subprocess.check_output(['git','show',ref+':'+f],cwd=ROOT);assert hashlib.sha256(old).digest()==hashlib.sha256((ROOT/f).read_bytes()).digest(),f
 about_old=subprocess.check_output(['git','show',ref+':_templates/about.html'],cwd=ROOT,text=True)
 assert re.search(r'<main.*?</main>',about_old,re.S)[0]==re.search(r'<main.*?</main>',(ROOT/'_templates/about.html').read_text(),re.S)[0]
 print(f'PASS: existing FAQ route preserved, five authorised projects / seven photographs, gated care offerings, exact homepage destinations, archived About source retained and protected Collections/media; {len(public_routes())} indexable routes.')
 
 assert not (ROOT/'faqs').exists() and not (ROOT/'_data/faqs.json').exists()
+
+# R1 explicitly authorises gender isolation in the gallery runtime.
+assert "payload.defaultGender==='all'" in (ROOT/'assets/collections-v3.js').read_text()

@@ -4,7 +4,7 @@
   const d=JSON.parse(document.getElementById('design-data').textContent).design;
   const $=id=>document.getElementById(id),dialog=$('photo-viewer'),img=dialog.querySelector('img');
   const url=new URL(d.url,location.origin).href;
-  let ctx={};try{ctx=JSON.parse(sessionStorage.getItem('mrsewing-request-context-v1')||'{}');}catch{}const params=new URLSearchParams(location.search);document.querySelector('.design-enquiry').href='/request/?'+new URLSearchParams({service:'custom-tailoring',order:'standard',design:d.id,experience:(params.get('experience')||ctx.experience)==='vip'?'vip':'standard',priority:(params.get('priority')||ctx.priority)==='express'?'express':'standard'});
+  let ctx={};try{ctx=JSON.parse(sessionStorage.getItem('mrsewing-request-context-v1')||'{}');}catch{}const params=new URLSearchParams(location.search);document.querySelector('.design-enquiry').href='/services/custom-tailoring/fabric/?'+new URLSearchParams({service:'custom-tailoring',order:'standard',design:d.id,experience:(params.get('experience')||ctx.experience)==='vip'?'vip':'standard',priority:(params.get('priority')||ctx.priority)==='express'?'express':'standard'});
   let index=0,previousOverflow='',opener=null,sharing=false;
   function photo(){const i=d.images[index];img.src=i.src;img.alt=i.alt;img.width=i.width;img.height=i.height;$('photo-count').textContent=`${index+1} / ${d.images.length}`;$('photo-previous').disabled=$('photo-next').disabled=d.images.length<2;}
   function open(i=0,source=$('open-photo')){index=i;opener=source;previousOverflow=document.body.style.overflow;photo();dialog.showModal();document.body.style.overflow='hidden';$('close-photo').focus();}

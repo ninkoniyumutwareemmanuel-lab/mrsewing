@@ -8,7 +8,7 @@ Use already approved information without asking the owner to repeat it. Latest e
 
 When new owner-approved decisions arrive, create a dated reference version and update source matrix, unresolved states, current pointer, manifest and changelog together. Preserve previous dated versions and supersession evidence in Git. The reference is not exhaustive while originals are missing. Never copy confidential company finances, private management correspondence, credentials or customer records into this reference or public pages.
 
-Exactly four primary services: Custom Tailoring & Suits; Clothing Alterations & Repairs; Garment Care & Cleaning; Mobile Tailoring, Styling & Event Assistance. Keep Service Experience, Design Order and Priority distinct and preserve context.
+Four ordinary service categories plus the dedicated VIP Services website entry point (latest R1 decision): Custom Tailoring & Suits; Clothing Alterations & Repairs; Garment Care & Cleaning; Mobile Tailoring, Styling & Event Assistance. Keep their meanings distinct in the data model; do not require experience/design-choice screens. Custom Tailoring opens Men’s/Women’s galleries; Special is an alternative; other services have direct forms. Consult current R1 source reference for the approved flow.
 
 Work only on `phase1/customer-journey-repairs` for staging. Never modify/reset/merge into main, deploy production or change live settings. Protect approved homepage text, assets, layout and interactions; identify impact and obtain owner authorisation before affecting it. Customer-facing policy changes require owner review before publication. No final VIP-specific terms/FAQs, membership payments, unverified uploads, invented prices/guarantees or automatic customer messages.
 

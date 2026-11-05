@@ -125,18 +125,22 @@ def render(name,gender,title,designs):
     seo=json.loads((ROOT/'_data/page-seo.json').read_text())[name];route='/'+name[:-5]+'/'
     selected=[d for d in designs if gender=='all' or d['gender']==gender]
     header,footer=chrome(route)
-    options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in designs for v in d[key]} | ({'graduation','wedding','civil-wedding'} if key=='occasions' else set())))
+    options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in selected for v in d[key]} | ({'graduation','wedding','civil-wedding'} if key=='occasions' else set())))
     nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/collections/','All Designs'),('/mensuits/','Men'),('/womensuits/','Women')])
-    values={'header':header,'footer':footer,'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'cards':''.join(card(d,i<4) for i,d in enumerate(selected[:12])),'styles_options':options('styles'),'occasions_options':options('occasions'),'data':json_script({'designs':[public_data(d) for d in designs],'defaultGender':gender}),'fallback':''.join('<li><a href="'+design_route(d)+'">'+escape(design_name(d))+'</a></li>' for d in selected),'count':str(len(selected)),'collection_nav':nav}
+    values={'header':header,'footer':footer,'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'cards':''.join(card(d,i<4) for i,d in enumerate(selected[:12])),'styles_options':options('styles'),'occasions_options':options('occasions'),'data':json_script({'designs':[public_data(d) for d in selected],'defaultGender':gender}),'fallback':''.join('<li><a href="'+design_route(d)+'">'+escape(design_name(d))+'</a></li>' for d in selected),'count':str(len(selected)),'collection_nav':nav}
     schema={'@context':'https://schema.org','@type':'CollectionPage','@id':'https://mrsewingfashion.com'+route+'#webpage','url':'https://mrsewingfashion.com'+route,'name':seo['title'],'description':seo['description'],'about':{'@id':'https://mrsewingfashion.com/#organization'},'mainEntity':{'@type':'ItemList','numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'name':design_name(d),'url':'https://mrsewingfashion.com'+design_route(d)} for i,d in enumerate(selected)]}}
     values['schema']=json_script(schema)
-    return fill('collections.html',values)
+    html=fill('collections.html',values)
+    if gender!='all':
+        html=re.sub(r'<nav class="show-collection-links".*?</nav>', '<p class="gallery-special"><a href="/services/custom-tailoring/special-order/?category='+gender+'&amp;order=special">Special Order — Send Your Own Design</a></p>',html,flags=re.S)
+        html=re.sub(r'<details class="show-legacy">.*?</details>', '<p><a class="home-text-link" href="/services/custom-tailoring/">Back</a></p>',html,flags=re.S)
+    return html
 
 def recommendations(d,designs):
     def score(other):
         # Empty/unclassified metadata is never evidence of similarity.
         return (3*len(set(d['styles'])&set(other['styles']))+2*len(set(d['occasions'])&set(other['occasions']))+int(d['gender']!='unclassified' and d['gender']==other['gender']))
-    candidates=[other for other in designs if other['id']!=d['id']]
+    candidates=[other for other in designs if other['id']!=d['id'] and (d['gender']=='unclassified' or other['gender']==d['gender'])]
     similar=sorted([other for other in candidates if score(other)>0],key=lambda other:-score(other))[:4]
     used={d['id'],*(other['id'] for other in similar)}
     more=[other for other in candidates if other['id'] not in used][:4]
@@ -149,7 +153,7 @@ def render_design(d,designs):
     image=d['images'][0]
     # No unsupported Product/offers/ownership claims.
     schema={'@context':'https://schema.org','@type':'WebPage','name':name+' | Mr Sewing','url':url,'description':design_description(d),'primaryImageOfPage':{'@type':'ImageObject','contentUrl':'https://mrsewingfashion.com'+image['src']}}
-    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'/request/?'+urlencode({'service':'custom-tailoring','order':'standard','design':d['id'],'experience':'standard'}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
+    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'/services/custom-tailoring/fabric/?'+urlencode({'service':'custom-tailoring','order':'standard','design':d['id'],'experience':'standard'}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
     return fill('collection-design.html',values)
 
 def main():

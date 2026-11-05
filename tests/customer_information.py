@@ -47,12 +47,15 @@ assert len(list((ROOT/'collections/designs').glob('*/index.html')))==111
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.
 ref='ac639f145fc976ecefe02e2b8ff5b82f1aae184b'
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
-protected=['assets/forms.js','assets/collections-v3.js','_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','_templates/collections.css']
+protected=['assets/forms.js','_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','_templates/collections.css']
 for file in files:
  if file in protected or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==56
+assert len(public_routes())==57
 assert '60%' in (ROOT/'customer-information/index.html').read_text()
 assert '72 hours' in (ROOT/'refund-policy.html').read_text()
 assert '<table' not in (ROOT/'terms-and-conditions.html').read_text()
 print('PASS: policy/FAQ output and schema parity, quote-only unverified prices and supported payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')
+
+# R1 explicitly authorises gender isolation in the gallery runtime.
+assert "payload.defaultGender==='all'" in (ROOT/'assets/collections-v3.js').read_text()

@@ -511,7 +511,7 @@
       "sections": [
         [
           "Your style, your fit",
-          "Discuss design preferences, fabric selection, measurements, consultation, quotation, production, fitting and delivery arrangements. Choose Standard Service or individually assessed VIP Service before choosing a website design (Standard Order) or your own inspiration (Special Order)."
+          "Discuss design preferences, fabric selection, measurements, consultation, quotation, production, fitting and delivery arrangements. Browse Men’s or Women’s Suits and select a website design, or use the Special Order alternative for your own inspiration. Fabric preferences or advice and Standard/Express Priority follow."
         ],
         [
           "Suits and garment scope",
@@ -586,6 +586,43 @@
           "This remains its own official service, including when a customer requests location assistance through tailoring, alterations or care. Standard/VIP experience and Standard/Express Priority are separate choices; any agreed cross-service scope is confirmed in the quotation."
         ]
       ]
+    },
+    {
+      "id": "vip",
+      "route": "/services/vip/",
+      "title": "VIP Services",
+      "intro": "Personalised assistance, individually assessed and arranged through an agreed quotation.",
+      "sections": [
+        [
+          "Personalised service requests",
+          "Describe the tailoring, alterations, garment-care, styling or on-location assistance you need. Location, scope, timing and feasibility require confirmation."
+        ],
+        [
+          "Your agreed VIP quotation",
+          "Approved Express and after-hours assistance is assessed within the agreed VIP scope and quotation. Ordinary-service surcharges are not automatically applied. No unlimited service or completion guarantee is offered."
+        ]
+      ]
     }
-  ]
+  ],
+  "websiteEntryPoints": 5,
+  "ordinaryServiceCategories": 4,
+  "revisionSource": "Owner consolidated revision, 5 November 2026, §§3–23",
+  "journeyModel": {
+    "source": "Owner R1 consolidated revision 5 November 2026 §§6–15,20",
+    "ordinaryExperience": "implicit standard; no experience selector",
+    "vipExperience": "dedicated /services/vip/ route, individually quoted",
+    "tailoring": [
+      "men-or-women-gallery",
+      "design-detail",
+      "fabric-preference-or-advice",
+      "priority-and-customer-details",
+      "review",
+      "submit-enquiry"
+    ],
+    "specialOrder": "alternative from either gallery or direct special-order URL; category retained",
+    "fabricCatalogueStatus": "UNVERIFIED: no available stock catalogue published",
+    "uploads": "DISABLED: no approved private endpoint",
+    "otherServices": "direct service-specific request forms with review",
+    "membership": "information only; no checkout or final terms"
+  }
 }

@@ -7,7 +7,7 @@
   if(legacy){const d=designs.find(d=>d.id===legacy);if(d){location.replace(new URL(d.url,location.origin).href);return;}}
   const normalize=s=>String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const compact=s=>normalize(s).replace(/[^a-z0-9]/g,'');
-  let gender=['all','men','women'].includes(params.get('gender'))?params.get('gender'):payload.defaultGender;
+  let gender=payload.defaultGender==='all'&&['all','men','women'].includes(params.get('gender'))?params.get('gender'):payload.defaultGender;
   let state={q:(params.get('q')||'').slice(0,160),style:params.get('style')||'',occasion:params.get('occasion')||''},shown=12,matches=[];
   const el=(tag,text,attrs={})=>{const e=document.createElement(tag);if(text!==null)e.textContent=text;for(const [k,v]of Object.entries(attrs))e.setAttribute(k,v);return e;};
   function card(d){
@@ -31,6 +31,6 @@
   function reset(){clearTimeout(timer);gender=payload.defaultGender;state={q:'',style:'',occasion:''};for(const id of ['design-search','style-filter','occasion-filter'])$(id).value='';apply();}
   $('clear-filters').addEventListener('click',reset);$('empty-clear').addEventListener('click',()=>{reset();$('design-search').focus();});
   $('load-more').addEventListener('click',()=>{const count=$('design-grid').children.length;shown+=12;render(true);$('design-grid').children[count]?.querySelector('a').focus({preventScroll:true});});
-  addEventListener('popstate',()=>{clearTimeout(timer);params=new URL(location.href).searchParams;gender=['all','men','women'].includes(params.get('gender'))?params.get('gender'):payload.defaultGender;state={q:(params.get('q')||'').slice(0,160),style:params.get('style')||'',occasion:params.get('occasion')||''};$('design-search').value=state.q;for(const [key,id]of [['style','style-filter'],['occasion','occasion-filter']]){if(![...$(id).options].some(o=>o.value===state[key]))state[key]='';$(id).value=state[key];}render();});
+  addEventListener('popstate',()=>{clearTimeout(timer);params=new URL(location.href).searchParams;gender=payload.defaultGender==='all'&&['all','men','women'].includes(params.get('gender'))?params.get('gender'):payload.defaultGender;state={q:(params.get('q')||'').slice(0,160),style:params.get('style')||'',occasion:params.get('occasion')||''};$('design-search').value=state.q;for(const [key,id]of [['style','style-filter'],['occasion','occasion-filter']]){if(![...$(id).options].some(o=>o.value===state[key]))state[key]='';$(id).value=state[key];}render();});
   document.querySelector('.show-controls').hidden=false;render(false,!state.q&&!state.style&&!state.occasion&&gender===payload.defaultGender);
 })();

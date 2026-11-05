@@ -79,5 +79,5 @@ oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc'
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
 assert len(withdrawn)==109 and all('/collections/designs/' in u or any(x in u for x in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','/suits/']) for u in withdrawn)
-assert len(public_routes())==56
+assert len(public_routes())==57
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')
