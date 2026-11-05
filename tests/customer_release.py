@@ -9,7 +9,7 @@ names=['Custom Tailoring & Suits','Clothing Alterations & Repairs','Garment Care
 release=json.loads((ROOT/'_data/customer-release.json').read_text());assert [s['title'] for s in release['services']]==names+['VIP Services']
 registry=json.loads((ROOT/'_data/journey-services.json').read_text());assert [s['title'] for s in registry if s['primary']]==names
 assert '5 November 2026' in release['source']
-allowed={'index.html','_templates/homepage-sections.html','_templates/homepage-header.html','_templates/homepage-footer.html','_templates/homepage-phase1.css','_data/homepage-guides.json'}
+allowed={'index.html','_templates/homepage-sections.html','_templates/homepage-header.html','_templates/homepage-footer.html','_templates/homepage-phase1.css','_data/homepage-guides.json','_data/page-seo.json'}
 for f,h in json.loads((ROOT/'docs/homepage-approved-baseline.json').read_text())['files'].items():
  if f not in allowed:assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h,f
 import subprocess
@@ -41,3 +41,9 @@ print('PASS: four ordinary categories plus VIP entry, revised direct journeys an
 assert (ROOT/'_templates/homepage-phase1.css').read_text().startswith(subprocess.check_output(['git','show','0e6100183aa03c6929ebb5eca572f215eee40250:_templates/homepage-phase1.css'],text=True,cwd=ROOT))
 
 assert next(g for g in json.loads((ROOT/'_data/homepage-guides.json').read_text()) if g['label']=='Fabric Guide')['href']=='/guides/fabrics/'
+
+# R4 changes only gender landing metadata; all other approved SEO remains intact.
+oldseo=json.loads(subprocess.check_output(['git','show','fea75aa7b3329fd819ad06e6b28b99e53119d0ba:_data/page-seo.json'],text=True,cwd=ROOT));newseo=json.loads((ROOT/'_data/page-seo.json').read_text())
+for key in ['mensuits.html','womensuits.html']:
+ assert 'Suits' in newseo[key]['title'] and 'Collection' not in newseo[key]['title'];newseo.pop(key);oldseo.pop(key)
+assert oldseo==newseo

@@ -1,0 +1,122 @@
+# Mr Sewing unresolved policy register
+
+Internal developer reference — 5 November 2026. NOT public website copy or final legal advice. Implementation reviewed at `6fcaca98530742dc4f1556c946432f27418b6774` on `phase1/customer-journey-repairs`. Preserve the approved homepage. No policy publication is authorised by this reference update.
+
+Authority: latest explicit approved owner decision, then latest applicable approved dated decision, then earlier unsuperseded approval. Proposals never supersede approvals merely by being newer. Current implementation is comparison evidence, not independent policy approval.
+
+**Source coverage is incomplete.** The named company originals are unavailable. The two 5 November owner instructions are directly available; source-recorded price/fabric details in the addendum are reported extracts, not independently verified original documents or new price/publication approval.
+
+# Unresolved decisions — owner review required
+
+Internal development reference. None of these is silently resolved or converted into an available paid product.
+
+1. **Company Sources access:** exact archive/index/dated documents listed in CUSTOMER_FACING_SOURCE_REGISTER are unavailable. Current owner message supplies implemented rules; originals are still needed for independent provenance, detailed procedures and omitted price schedules.
+2. **Price schedule and tuxedo inclusions:** verify latest approved tier labels, amounts, composition wording, ordinary/tuxedo package inclusions and customer publication clearance. Historical website Cotton prices are privately retained but withheld from current public data/table.
+3. **Protected homepage terminology:** carousel Standard Order wording describes scheduling; new design Standard Order means website design. Need explicit owner approval for any homepage wording change. All homepage hashes/screenshots remain protected meanwhile.
+4. **Homepage Fabric Guide link:** the approved homepage still displays its existing plain Fabric Guide label. New non-homepage navigation links to the completed guide. Connecting the homepage label needs approval beyond the permission to connect existing service links.
+5. **VIP contract:** final limits, coverage, requirements and pricing unresolved. The proposed combined VIP Garment Care & Alterations Membership covers only those two services. Four included monthly collection/delivery visits is an owner-selected direction; garment allowance, price, coverage, renewal/cancellation and other terms still need Finance/owner/legal assessment. Internal only; no payment, offer, subscription terms or FAQs activated.
+6. **Benefits procedure:** referral attribution, commission conditions/payout, qualifying-order edge cases and group request procedure need complete written conditions. Do not infer them from published rates. Tier gifts/extra cleaning need tier mapping, quantities/frequency, redemption details and transport treatment. No unlimited cleaning, gift-per-suit or Express upgrade is promised.
+7. **Delivery/company-responsibility rule:** owner states a company-caused missed-delivery rule exists but does not supply its exact remedy. Contact/assessment direction implemented without charging a fictional customer-caused fee or promising invented compensation.
+8. **Refund/cancellation:** amounts, deductions if any, cancellation conditions, decision/processing timelines and legal remedies need owner/Finance/Rwanda legal verification. Submission is not approval. Support's first-response target is not a refund-payment deadline.
+9. **Privacy:** confirm operator compliance duties, actual retention/deletion, authorised access, provider contracts, processing locations/transfers and Rwanda legal requirements. Official legal-reference access is proxy-blocked. Privacy remains a staging draft; no compliance declaration.
+10. **Uploads:** no approved file endpoint or private storage. Disabled/unnamed controls only, no simulation. Prior options/cost review remains available. Need server validation, limits, anti-abuse, private access, malware/image handling, retention, deletion and actual receipt tests before activation. No purchase or public customer files.
+11. **Live integration/deployment:** test submissions were intercepted. Actual mailbox receipt, provider spam/domain settings, Cloudflare publication, deployed TLS/headers/cookies and real Search Console/field metrics remain unverified due access or lack of authorisation. No real customer messages sent.
+12. **Rights:** registry/source records remain intact. Seven photographs have explicit existing project-publication evidence; 104 prior detail references and older galleries are withheld. More references require actual permission/provenance verification, not reclassification by appearance.
+13. **Additional factual verification:** exact measurement instructions/tolerances, customer-measurement assistance details, ordinary/tuxedo package tier mapping, location-day exceptions and historic founding-year/story evidence need Sources. No new tolerance, guarantee, founding year or team size invented.
+14. **Engineering/legal review:** legacy appointment/measurement forms are preserved and tested separately; their detailed measurement guidance and operational calendars still warrant company-source review. New journeys provide the full experience/order/priority model. Automated checks do not certify screen-reader compatibility, all WCAG criteria, deployment security or legal compliance.
+
+## Customer-supplied fabric — PROPOSED review outline (not public contractual content)
+
+For owner review only, covering the requested staging development topics without inventing clauses:
+
+- Fabric inspection: who assesses suitability/condition and when acceptance is confirmed.
+- Quantity and condition: how sufficient usable material/defects are agreed before work.
+- Design confirmation: how the final reference and feasible changes are documented.
+- Materials/accessories: which party supplies each item and how missing items are quoted.
+- Sewing quotation: approved scope, price and payment conditions; no fixed unapproved schedule.
+- Measurements: who provides them and how incomplete/incorrect information is assessed.
+- Changes: feasibility, additional quote and customer agreement before work.
+- Corrections: distinguish workmanship errors, supplied-measurement issues and fabric limitations; preserve rights.
+- Collection: payment/identity/authorised collector/receipt requirements to reconcile with approved general rules.
+- Cancellation: no automatic forfeiture or deduction; approved conditions needed.
+- Refunds: human review, approved amount/timing and legal rights, not an invented blanket exclusion.
+
+Original proposed customer-fabric document is unavailable; no claim to have read its clauses.
+
+## Additional release limitations
+
+- Original retained image asset URLs remain accessible static files. Gating active galleries is not private storage, deletion or complete rights clearance. Owner permission records are needed before extending publication.
+- The historical `phase1.spec.cjs` browser suite fails at an obsolete design-navigation/WhatsApp contract. Current release and retained-form suites cover the new contracts; remaining historical test migration is technical debt, not a claimed pass.
+- Tier directions supplied by the owner: Tier 1 men shirt plus necktie, women inner top; Tier 2 men necktie or bow tie, women inner top; Tier 3/4 no included collection gifts or complimentary follow-up cleaning. Tier 1/2 additional cleaning remains conditional on unresolved redemption details. No quantities across multiple suits, transport, unlimited cleaning or Express upgrades inferred. Public package mapping withheld until complete source reconciliation.
+
+## Addendum-specific missing evidence and disposition
+
+| Item | Classification | Exact missing evidence / action | Public disposition |
+|---|---|---|---|
+| Reported price schedule | UNVERIFIED for publication | Original V5; any later approved schedule; publication clearance; package/accessory inclusions | Keep quoted customer journey; no new public price table |
+| Reported tier labels | APPROVED WITH CONDITIONS internal reference | Exact source labels, actual stock, composition verification where claimed | No Vigo/Prado substitution; no lab/stock claim |
+| Pre-production fabric-unavailability refund | UNVERIFIED | Exact approved clause from Refund/Delivery/Collection decisions, amount/process/scope/exception | Do not extrapolate a full refund, deduction or deadline to all cancellations |
+| Company's missed delivery responsibility | OWNER REVIEW REQUIRED | Exact approved remedy, assessment and cost allocation | No invented customer fee or compensation |
+| Gift/cleaning/referral procedures | OWNER REVIEW REQUIRED | Attribution/commission conditions, gift frequency/multiple-suit rules, tier mapping and cleaning redemption | Preserve approved rate scope; no invented entitlement |
+| Current staging rendering/deployment | UNVERIFIED | Origin access blocked in previous check; no fresh live access claimed | Local snapshot reviewed only |
+| Privacy/security operations | OWNER REVIEW REQUIRED | Real provider contracts, retention/deletion/access/transfers, deployed cookies/analytics/payment/order records, Rwanda legal review | Staging draft; no compliance certification |
+| Policy publication | OWNER REVIEW REQUIRED | Owner approval after these references and source gaps are reviewed | No new public policy code changes or push in this audit |
+
+## Separate classifications
+
+**PROPOSED:** customer-supplied fabric contract; combined care/alterations VIP membership and unfinished visit definition/allowance/price.
+
+**CONFLICTING:** protected homepage Standard Order=scheduling versus new Standard Order=website design; homepage restrictions prevent silent correction. Exact baseline wording and new owner definition are preserved in prior reconciliation report. Current owner definition governs new journeys; homepage change still needs approval.
+
+**MISSING:** original eight named company source artefacts, later approved addenda and decision IDs; latest price publication decision; exact fabric-unavailability refund clause.
+
+**UNVERIFIED:** deployed headers/cookies/provider receipt/security, retention arrangements, photo rights beyond existing evidenced projects, historical measurement details, newer price schedule.
+
+**SUPERSEDED / not for reuse:** old blanket standalone-service 70% deposit, generic completion estimates, historical discounts/stacking and Cotton-only prices where conflicting with latest directions. Preserve history; do not reintroduce. See POLICY_RECONCILIATION_REPORT.md for exact comparison boundaries.
+
+## Owner-review stop
+
+This audit changes internal references only. Homepage and customer-facing policy pages remain unchanged at the recorded commit. No new messages, uploads, subscriptions, payment configuration, deployment or production changes. Source coverage is explicitly non-exhaustive.
+
+
+## R1 — owner-approved consolidated website revision, 5 November 2026
+
+Source: latest explicit owner consolidated prompt §§1–25, read in conversation. APPROVED staging interface/journey direction; no production or new contractual policy approval. This supersedes the earlier compulsory C02 experience selectors and C05 design-choice screen **as navigation steps only**. Four ordinary production services remain; five website entry points now include VIP Services separately. Custom Tailoring opens Men's/Women's galleries directly; Special Order is a restrained alternative; selected design proceeds to optional fabric choice/advice, Standard/Express priority, customer details, review and Submit Request. Other ordinary services use direct contextual forms. VIP requests live on a dedicated page; membership entry is truthful information only, no purchase.
+
+Header/footer add VIP and general FAQs; Measurements remains educational, never a required step. Remove redundant body shortcut/toc bars without deleting explanations. Homepage changes authorised only to five What We Offer cards and service/FAQ navigation. Hero, four hero highlights, photographs and unrelated sections protected. General policies/benefits/payment/support rules unchanged. No numeric production timeframe newly approved; source originals remain missing, so use conditional completion explanation, not confirmation targets.
+
+Approved service-hero direction is cream/light with accessible real heading/CTA/features and separate original photographs. Original white-suit hero photograph/reference and four-panel mockup have not been located among the five historical homepage references or repository image audit; exact fidelity remains blocked pending assets. Do not substitute generated photos or assert matches. Fabric research/price labels do not establish a verified available fabric catalogue; advice and stated preferences may be collected, not fake stock. Uploads remain inactive.
+
+## R1 implementation review gates
+
+1. Exact hero-fidelity check is NOT TESTED: approved original white-suit photograph, separate hero A reference and four-panel B–E reference not located. Five layout shells show an explicit pending-photo state; no replacement photographs or generated imagery. Need original approved assets and rights/crop confirmation before visual acceptance.
+2. Choose Fabric Now records customer preference only: verified available fabric photos, stock/colours and publication-cleared price data are unavailable. Advice works; browsing real cleared stock remains pending. No fake catalogue.
+3. No approved numeric production timeframe could be verified from accessible originals. Conditional completion explanation implemented; 24h/2h remain confirmation targets only.
+4. Text requests reuse existing integration, tested with intercepted synthetic provider responses only. Actual email receipt and deployed staging origin remain unverified. No uploads or paid membership.
+5. Homepage comparison now permits header/footer VIP/FAQ navigation and fifth What We Offer card. Every other extracted section and all existing media remain protected; old all-file byte-equality applies to the prior baseline, not these explicitly authorised changes.
+
+## R2 — owner-approved uploaded hero photographs, 5 November 2026
+
+Source: latest explicit owner instruction naming the five WebP files and their service assignments; actual GitHub upload commit a58aa96b992670b96da8cda1a9b5b2e961804e53 inspected. APPROVED for corresponding staging service heroes. All five exact files are at repository root: hero-custom-tailoring.webp, hero-alterations.webp, hero-garment-care.webp, hero-mobile-tailoring.webp and hero-vip-services.webp. This resolves R1 missing **photograph assets**; prior dated notes describe the earlier unavailable state. No commercial rules superseded. The separate earlier four-panel layout mockup is not newly supplied, so do not assert a pixel-exact comparison to that unavailable reference.
+
+Use originals unchanged with real accessible headings/descriptions/buttons in the existing cream composition. Render whole photographs with object-fit:contain, intrinsic dimensions, eager/high-priority loading and descriptive neutral alt text. Do not imply the depicted people are verified staff/customers or that depicted equipment proves actual operational cleaning methods. No regeneration, retouching, file re-encoding, policy rewrite or homepage change. Responsive screenshots and actual browser decoding checks are required. Fabric catalogue, original policy Sources, real form delivery and unfinished VIP terms remain unresolved as before.
+
+## R3 — fabric/measurement visuals and mobile hero update, 5 November 2026
+
+Source: latest explicit owner “WEBSITE IMAGES & CUSTOMER GUIDE UPDATE”, read in conversation. Upload commits229f5be and b6b1d5147ec0edbb76ff956cb8fb06b3249d7b95 inspected: six root fabric WebPs and12 measurement WebPs. Exact second neck path is neck.jepg.webp, not neck.jpeg.webp; it is byte-identical to neck.webp. Use neck.webp; keep both originals. Preserve trauser length.webp spelling and URL-encode spaces.
+
+APPROVED staging visual/interface changes: guide cards using illustrative (not inventory) fabric pictures; shared category/name data between guide and optional selection/advice; mobile hero backgrounds with individual focal positions; fifth VIP ticket on homepage. Desktop service compositions, policies and other homepage content remain protected. This supersedes R2 whole-photo contain behaviour on phones only; desktop retains contain.
+
+Men’s working labels Tier1 Super/Super100s, Tier2 Wool, Tier3 Polyester, Tier4 Cotton/Dubai; Women Tier1 Americano, Tier2 Star, Tier3 Polyester, Tier4 Cotton. Original named company Sources remain inaccessible: label mappings are **working reference categories for staging review, not independently verified stock/composition**. No verified fabric-only starting prices or current colour stock. Display Price on request (RWF) and Ask us about available colours; no numeric suit-package price used as fabric-only price, invented palette, available-stock claim or fabric-performance claim. Source picture colours are illustrative.
+
+Current six-section measurement guidance stays unchanged. Add correctly labelled illustrative pictures; no new measuring methods/tolerances or compulsory measurement step. Image tape numerals/illustrations are not calibrated instructions. Jacket front-view illustration must not be described as demonstrating a verified back-measurement method. Use neutral alt text and guidance to follow garment-specific instructions. Prior general policy/source, secure uploads and unfinished VIP limits remain open.
+
+R3 §8 explicitly requires the Fabric Guide to remain accessible in customer-guide navigation. The homepage still used a historical plain pending label despite the completed route. Wire that existing label to /guides/fabrics/ in header/footer; no duplicate link or new navigation item. This resolves the prior homepage-guide-link approval dependency under the latest explicit instruction, without changing unrelated homepage content.
+
+## R4 — Men's/Women's suit-reference categories, 5 November 2026
+
+Source: latest explicit owner “MEN'S & WOMEN'S SUIT REFERENCE PAGES” §§1–15. APPROVED staging structure: matching Men's Suits/Women's Suits pages, four specified categories each, eight dedicated category routes, direct photograph detail→fabric→priority/details/review/Submit, and Special Order from both landings retaining gender. Supersedes the former flat gender-gallery landing presentation only. Existing approved homepage/heroes/nav/guides/policies remain protected. No fictional products, prices, stock, reference IDs or uploads.
+
+Source inspection: existing five customer-project publication permission/completion records authorise seven photographs. Visual construction review under this task supports r2.jpeg/MS-069 men's single-breasted; r7.jpeg/MS-117 men's double-breasted; h1.jpeg/MS-005 and h2.jpeg/MS-006 same women's asymmetric single-column-button garment (front/side), r3.jpeg/MS-083 and r4.jpeg/MS-096 women's single-breasted tailoring. Exact category evidence is recorded in the new category data; existing original registry and design IDs stay unchanged. h3.jpeg remains an existing project image but its gown hides the suit construction, so it is not assigned to these categories.
+
+Men's tuxedo/formalwear and three-piece; women's double-breasted, skirt and three-piece lack suitable approved references. Keep their category cards/routes ready with explicit pending-photo states, no unrelated photographs or fabricated stock. Empty galleries remain noindex until real references are approved. Original company policy Sources remain inaccessible, but this task introduces no new commercial rules. Prior source/price/stock/secure-upload/VIP restrictions remain.

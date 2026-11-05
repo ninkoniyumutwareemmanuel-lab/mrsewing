@@ -19,3 +19,7 @@ Owner-upload commit a58aa96 verified and fast-forwarded without overwriting work
 ## 2026-11-05-04 — R3 images and customer guides
 
 Owner upload18files inspected. Correct neck typo resolved by byte identity; all originals retained. Guides use illustrative references with unverified price/stock labels, shared optional fabric selection; mobile-only hero background composition and homepage VIP fifth ticket authorised. Desktop and policies protected. Earlier dated versions retained.
+
+## 2026-11-05-05 — R4 suit reference pages
+
+Four categories for each gender; stable existing reference IDs and recorded visual classification/permission evidence. Scoped category context retained to enquiry, and Special alternative preserved. Five categories await approved photographs; no invented placeholders/products. Earlier versions, homepage/heroes/guides and commercial policies retained.

@@ -46,7 +46,10 @@ for f in files:
   assert hashlib.sha256((ROOT/f).read_bytes()).digest()==hashlib.sha256(old(f,True)).digest(),f
 # Phase 1 may rebuild the homepage and its metadata; all other page SEO stays frozen.
 current_seo=json.loads((ROOT/'_data/page-seo.json').read_text());previous_seo=json.loads(old('_data/page-seo.json'))
-current_seo.pop('index.html');previous_seo.pop('index.html');assert current_seo==previous_seo
+
+for key in ['index.html','mensuits.html','womensuits.html']:
+ current_seo.pop(key);previous_seo.pop(key)
+assert current_seo==previous_seo
 # Keep the restored previews and their publication gates through homepage redesigns.
 new=(ROOT/'index.html').read_text();parser=Section(new,'div',('id','programs-section'));parser.feed(new);assert parser.markup
 from site_seo import finalize
@@ -79,5 +82,5 @@ oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc'
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
 assert len(withdrawn)==109 and all('/collections/designs/' in u or any(x in u for x in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','/suits/']) for u in withdrawn)
-assert len(public_routes())==57
+assert len(public_routes())==60
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')

@@ -51,7 +51,7 @@ protected=['assets/forms.js','_data/collection-designs.json','_data/collection-i
 for file in files:
  if file in protected or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==57
+assert len(public_routes())==60
 assert '60%' in (ROOT/'customer-information/index.html').read_text()
 assert '72 hours' in (ROOT/'refund-policy.html').read_text()
 assert '<table' not in (ROOT/'terms-and-conditions.html').read_text()
