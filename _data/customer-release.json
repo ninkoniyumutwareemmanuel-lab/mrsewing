@@ -83,14 +83,14 @@
           "id": "4",
           "title": "Fabric tiers and package prices",
           "paragraphs": [
-            "Ask for the confirmed fabric category, garment composition, package inclusions and quotation. No unverified tier composition or price schedule is published here. Men’s tuxedos have separately documented packages and quotations; ordinary suit inclusions must not be assumed."
+            "Ask for the confirmed fabric category, garment composition, package inclusions and quotation. Men’s tuxedos have separate packages and quotations; ordinary suit inclusions must not be assumed."
           ]
         },
         {
           "id": "5",
           "title": "Care and customer-supplied fabric",
           "paragraphs": [
-            "Follow the verified care label and the guidance confirmed for the chosen fabric. Customer-supplied fabric can be discussed for assessment, but a proposed fixed customer-fabric policy is not an approved contractual offer. Quantity, condition, suitability, materials and all conditions must be agreed individually."
+            "Follow the care label and the guidance confirmed for the chosen fabric. Customer-supplied fabric may be discussed for assessment. Quantity, condition, suitability, materials and conditions must be agreed individually."
           ]
         }
       ]
@@ -230,14 +230,14 @@
           "id": "6",
           "title": "Included cleaning and other benefits",
           "paragraphs": [
-            "Initial standard cleaning is part of the documented standard suit package. Extra cleaning redemption and tier-gift details are not published as entitlements while their mapping, quantity, frequency and procedures remain unresolved. Your quotation should identify any specifically agreed inclusions."
+            "Initial standard cleaning is part of the documented standard suit package. Ask the team to confirm whether any additional cleaning or gift benefit applies to your quotation and how it may be used. Your quotation should identify any specifically agreed inclusions."
           ]
         }
       ]
     },
     "/terms-and-conditions/": {
       "title": "Terms & Conditions",
-      "intro": "General customer conditions for staging review, to be read with your quotation and official confirmation. Clauses requiring legal or financial verification are identified rather than treated as final.",
+      "intro": "Read these general customer conditions together with your quotation and official confirmation. Contact us to clarify the arrangements applicable to your request before accepting.",
       "source": "S-OWNER-2026-11-05 §§14–24,26",
       "sections": [
         {
@@ -307,7 +307,7 @@
           "id": "10",
           "title": "Complaints and refund requests",
           "paragraphs": [
-            "Use Customer Support or the refund request form with order details, reason and relevant evidence. Human review and a decision are required; submission does not approve a refund. No automatic percentage deduction, deposit forfeiture, Express-fee retention, universal penalty or guaranteed processing deadline is imposed here. Unresolved cancellation/refund clauses require owner, Finance and Rwanda legal review."
+            "Use Customer Support or the refund request form with order details, reason and relevant evidence. Human review and a decision are required; submission does not approve a refund. No automatic percentage deduction, deposit forfeiture, Express-fee retention, universal penalty or guaranteed processing deadline is imposed here. Cancellation and refund arrangements are assessed individually; request clarification before accepting your quotation."
           ]
         },
         {
@@ -321,7 +321,7 @@
           "id": "12",
           "title": "Privacy, rights and limitations",
           "paragraphs": [
-            "Personal information is used for the request and service arrangements as described in the staging Privacy Policy. Confirm suitability and limitations for the actual garment/service rather than assuming every repair or treatment is possible. Nothing here removes applicable statutory customer rights. General clauses require Rwanda legal verification; final VIP-specific contractual terms are not included."
+            "Personal information is used for the request and service arrangements as described in the Privacy Policy. Confirm suitability and limitations for the actual garment/service rather than assuming every repair or treatment is possible. Nothing here removes applicable statutory customer rights. VIP-specific arrangements require an individual quotation and agreement."
           ]
         }
       ]
@@ -363,14 +363,14 @@
           "id": "5",
           "title": "Cancellation, amount and timing — review required",
           "paragraphs": [
-            "Cancellation conditions, refund amounts and processing deadlines still require owner, Finance and Rwanda legal verification. No automatic 50% deduction, universal deposit forfeiture, automatic Express-fee retention or one-to-two-week refund deadline is imposed. A submitted request does not predetermine eligibility or an amount."
+            "Contact us about the cancellation conditions, refund assessment and processing arrangements applicable to your request. No automatic 50% deduction, universal deposit forfeiture, automatic Express-fee retention or one-to-two-week refund deadline is imposed. A submitted request does not predetermine eligibility or an amount."
           ]
         }
       ]
     },
     "/privacy-policy/": {
-      "title": "Privacy Policy — Staging Draft",
-      "intro": "This draft describes observed website processing. Retention, provider arrangements and Rwanda legal requirements still need verification; no claim of legal compliance is made.",
+      "title": "Privacy Policy",
+      "intro": "Learn how Mr Sewing Fashion uses information provided through this website and how to contact us about your privacy.",
       "source": "S-OWNER-2026-11-05 §22; observed repository integration",
       "sections": [
         {
@@ -405,7 +405,7 @@
           "id": "5",
           "title": "Selections, cookies and analytics",
           "paragraphs": [
-            "The new request journey may keep service, experience, order type, design reference, priority and after-hours preference in tab-session storage. It does not store name, phone, email or message there. You can edit choices; storage failure does not prevent URL-based navigation. No new analytics/advertising tracker or cookie-consent mechanism is installed. Retained legacy pages reference Font Awesome styles on cdnjs.cloudflare.com, which may receive connection information when loaded. Actual deployed cookies and provider behaviour still require verification."
+            "The new request journey may keep service, experience, order type, design reference, priority and after-hours preference in tab-session storage. Quotation forms also keep a temporary draft of entered text in this browser tab so that moving between steps does not clear your details. The draft expires after 30 minutes without editing and is cleared after a confirmed successful submission. Files and Terms acceptance are not saved in the draft. No staff request record is created by browser storage. You can edit choices; storage failure does not prevent URL-based navigation. No new analytics/advertising tracker or cookie-consent mechanism is installed. Retained legacy pages reference Font Awesome styles on cdnjs.cloudflare.com, which may receive connection information when loaded. Actual deployed cookies and provider behaviour still require verification."
           ]
         },
         {

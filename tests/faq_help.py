@@ -75,6 +75,8 @@ for href in re.findall(r'href="([^"]+)"',reference[reference.index('id="final-se
  if href=='/contact/':
   assert 'href="/contact/"' in (ROOT/'_templates/homepage-header.html').read_text()
   continue
+ if href.startswith('https://wa.me/'):
+  assert 'href="/whatsapp/?text=' in final.markup;continue
  assert 'href="'+href+'"' in ((ROOT/'_templates/homepage-sections.html').read_text() if HOMEPAGE_VISUAL_REVIEW else final.markup),href
 
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
@@ -82,5 +84,7 @@ oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc'
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
 assert len(withdrawn)==109 and all('/collections/designs/' in u or any(x in u for x in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','/suits/']) for u in withdrawn)
-assert len(public_routes())==60
+assert len(public_routes())==73
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')
+
+assert all("Link to this answer" not in p.read_text() for p in (ROOT/"faq").glob("*/index.html"))

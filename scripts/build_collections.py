@@ -170,6 +170,10 @@ def render_design(d,designs):
     if c:
         html=html.replace('</head>','<link rel="stylesheet" href="/assets/suit-references.css"></head>')
         html=html.replace('href="/collections/">← All Designs','href="'+c['route']+'">← Back')
+        from customer_navigation import breadcrumb
+        trail=breadcrumb([('Custom Tailoring & Suits','/services/custom-tailoring/'),("Men's Suits" if c['gender']=='men' else "Women's Suits",'/mensuits/' if c['gender']=='men' else '/womensuits/'),(c['title'],c['route']),(name,None)])
+        trail=trail.replace('href="'+c['route']+'"','class="design-back" href="'+c['route']+'"')
+        html=re.sub(r'<a class="design-back"[^>]*>.*?</a>',lambda _:trail,html,count=1)
         html=html.replace('<p class="design-note">','<p class="design-reference-category">'+escape(category_label(c))+' · Reference '+d['id']+'</p><p class="design-note">',1)
     return html
 

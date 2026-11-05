@@ -10,9 +10,9 @@ m=model();cats=categories();pool=load()[0]
 assert len(cats)==8 and len({c['id'] for c in cats})==8 and len({c['route'] for c in cats})==8
 assert [c['title'] for c in cats if c['gender']=='men']==['Single-Breasted Suits','Double-Breasted Suits','Tuxedos & Formalwear','Three-Piece Suits']
 assert [c['title'] for c in cats if c['gender']=='women']==['Single-Breasted Suits','Double-Breasted Suits','Skirt Suits','Three-Piece Suits']
-assert len(m['references'])==6 and set(m['references']).issubset({d['id'] for d in pool})
+assert len(m['references'])==14 and set(m['references']).issubset({d['id'] for d in pool})
 assert all(r['publicationEvidence'] and r['classificationEvidence'] for r in m['references'].values())
-assert sum(bool(c['designIds']) for c in cats)==3
+assert sum(bool(c['designIds']) for c in cats)==8
 for c in cats:
  rows=references(c,pool);page=(ROOT/c['route'].strip('/')/'index.html').read_text();assert c['route'] in page
  if rows:
@@ -22,8 +22,12 @@ for c in cats:
   assert c['route'] not in public_routes() and 'data-publication-hold' in page and 'noindex, follow' in page
   assert not re.search(r'<main.*?<img',page,re.S)
 for gender in ['men','women']:
- route='/mensuits/' if gender=='men' else '/womensuits/';p=(ROOT/route.strip('/')/'index.html').read_text();assert p.count('class="suit-category-card"')==4;assert 'Explore Suit Styles' in p;assert 'Special Order — Send Your Design' in p
+ route='/mensuits/' if gender=='men' else '/womensuits/';p=(ROOT/route.strip('/')/'index.html').read_text();assert p.count('class="suit-category-card"')==4;assert 'Explore Suit Styles' in p;assert 'Special Order — Send Your Own Design' in p
  assert 'Men’s Collection' not in p and 'Women’s Collection' not in p
-for f in ['_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','index.html','_templates/customer-site.css','_templates/homepage-sections.html','_data/customer-release.json','_data/fabric-reference-catalogue.json','_data/measurement-guide-images.json']:
- assert (ROOT/f).read_bytes()==subprocess.check_output(['git','show','fea75aa7b3329fd819ad06e6b28b99e53119d0ba:'+f],cwd=ROOT),f
-print('PASS: 8 exact category routes, 6 existing authorised references, 3 populated/5 truthful noindex galleries, stable registry/media/customer policies and approved homepage.')
+# R5 permits append-only references, clean guide descriptions, breadcrumbs and consent routing.
+from preservation_contract import append_only
+for file in ['_data/collection-designs.json','_data/collection-id-registry.json']:
+ append_only(subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),(ROOT/file).read_bytes(),file)
+for file in ['_data/customer-projects.json','_templates/homepage-sections.html','_data/measurement-guide-images.json']:
+ assert (ROOT/file).read_bytes()==subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),file
+print('PASS: 8 populated categories/14 assigned references, append-only IDs and protected homepage/media.')

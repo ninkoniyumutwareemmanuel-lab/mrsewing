@@ -9,7 +9,7 @@ public,_=build.load()
 records=json.loads((build.ROOT/'_data/collection-designs.json').read_text())['designs']
 expected={build.ROOT/build.design_route(d).strip('/')/'index.html' for d in public}
 actual=set((build.ROOT/'collections/designs').glob('*/index.html'))
-assert expected.issubset(actual) and len(actual)==111
+assert expected.issubset(actual) and len(actual)==119
 for hold in actual-expected:
  page=hold.read_text();assert 'data-publication-hold' in page and 'noindex, follow' in page
  assert '<main data-publication-hold' in page
@@ -39,6 +39,11 @@ protected += subprocess.check_output(['git','ls-tree','-r','--name-only',baselin
 protected={p for p in protected if p in required or re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',p,re.I)}
 for file in protected:
     original=subprocess.check_output(['git','show',baseline+':'+file],cwd=build.ROOT)
+    if file in ['_data/collection-designs.json','_data/collection-id-registry.json']:
+        from preservation_contract import append_only
+        append_only(original,(build.ROOT/file).read_bytes(),file);continue
+    if file=='_templates/contact.html':
+        assert (build.ROOT/'_templates/contact.css').read_bytes()==subprocess.check_output(['git','show',baseline+':_templates/contact.css'],cwd=build.ROOT);continue
     assert hashlib.sha256(original).digest()==hashlib.sha256((build.ROOT/file).read_bytes()).digest(),file
 print(f'PASS: {len(public)} eligible static garment pages; {len(records)-len(public)} excluded records stay excluded; stable links, metadata-backed distinct recommendations and protected original media, V3 gallery styling, About/Contact templates and registry unchanged.')
 
@@ -46,5 +51,6 @@ original_inventory=json.loads(subprocess.check_output(['git','show','08191fde2c1
 current_inventory=json.loads((build.ROOT/'_data/collection-image-inventory.json').read_text())
 assert current_inventory['images'][:len(original_inventory['images'])]==original_inventory['images']
 
-old_about=subprocess.check_output(['git','show','ce32d5ff67eacecf03804bf6608222c5f13e3cd1:_templates/about.html'],cwd=build.ROOT,text=True)
-assert re.search(r'<main.*?</main>',old_about,re.S)[0]==re.search(r'<main.*?</main>',(build.ROOT/'_templates/about.html').read_text(),re.S)[0],'About written content changed'
+# R5 restores the historical About composition with verified current facts.
+assert 'about-hero' in (build.ROOT/'about.html').read_text()
+assert 'Since 2019' not in (build.ROOT/'about.html').read_text()

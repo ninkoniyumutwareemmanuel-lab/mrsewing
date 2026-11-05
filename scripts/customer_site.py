@@ -5,6 +5,7 @@ from pathlib import Path
 from html import escape,unescape
 import json,re
 import customer_guides as guides
+from customer_navigation import breadcrumb
 from urllib.parse import urlencode
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
@@ -18,7 +19,7 @@ def intro(title,text,label='Mr Sewing Fashion · Kigali, Rwanda'):
 def section(title,paragraphs,id=None):
  return '<section class="release-section"'+(' id="'+escape(id,quote=True)+'"' if id else '')+'><h2>'+escape(title)+'</h2>'+''.join('<p>'+escape(p)+'</p>' for p in (paragraphs if isinstance(paragraphs,list) else [paragraphs]))+'</section>'
 def related():
- return '<p class="release-back">'+link('/services/','Back')+'</p>'
+ return ''
 def hero(ident):
  s=service_map()[ident]
  image=json.loads((ROOT/'_data/service-hero-images.json').read_text())['images'][ident]
@@ -73,7 +74,7 @@ def standard():
  return frame(BASE+'standard-order/','Men’s & Women’s Suit Design Selection','Browse the two approved suit design categories.',body+'</div>'+link(BASE,'Back'))
 
 def fabric_page():
- body=intro('Choose Your Fabric','Choose a reference fabric or request advice. These illustrative pictures do not confirm stock, colours, composition or a final price.')+'<p data-design-line></p><form id="fabricChoiceForm"><fieldset><legend>Fabric preference</legend><label class="fabric-choice"><input type="radio" name="fabricChoice" value="now" required> Choose Fabric Now</label><label class="fabric-choice"><input type="radio" name="fabricChoice" value="advice" required> Help Me Choose Fabric</label><p>Advice is available without choosing a fabric. All fabric references, availability and the final quotation require business confirmation.</p></fieldset><section id="fabricSelection" hidden aria-labelledby="fabric-selection-title"><h2 id="fabric-selection-title">Choose a Fabric Reference</h2><p class="guide-notice">Working tier categories are pending company-source confirmation. These illustrative photographs are not verified inventory. Starting prices and colours are on enquiry.</p><label for="fabricCategory">Suit category</label><select id="fabricCategory"><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select>'
+ body=intro('Choose Your Fabric','Choose a reference fabric or request advice. These illustrative pictures do not confirm stock, colours, composition or a final price.')+'<p data-design-line></p><form id="fabricChoiceForm"><fieldset><legend>Fabric preference</legend><label class="fabric-choice"><input type="radio" name="fabricChoice" value="now" required> Choose Fabric Now</label><label class="fabric-choice"><input type="radio" name="fabricChoice" value="advice" required> Help Me Choose Fabric</label><p>Advice is available without choosing a fabric. All fabric references, availability and the final quotation require business confirmation.</p></fieldset><section id="fabricSelection" hidden aria-labelledby="fabric-selection-title"><h2 id="fabric-selection-title">Choose a Fabric Reference</h2><p class="guide-notice">Illustrative fabric references. Confirm material, available colours and quotation with our team.</p><label for="fabricCategory">Suit category</label><select id="fabricCategory"><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select>'
  for category in ['men','women']:body+='<fieldset data-fabric-category="'+category+'"><legend>'+('Men’s' if category=='men' else 'Women’s')+' suit fabric references</legend>'+guides.cards(category,True)+'</fieldset>'
  body+='</section><div class="request-actions">'+link('/mensuits/','Back','home-button fabric-back')+'<button type="submit" class="home-button home-button-gold">Continue</button></div></form>'
  from build_collections import load,design_route
@@ -107,13 +108,13 @@ def request_form(kind='quotation',special=False,service_id=None):
    if special:body+='<div><label for="requestCategory">Garment category (optional)</label><select id="requestCategory" name="Originating Suit Category"><option value="">Not specified</option><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select></div>'
   body+='</fieldset>'
  if kind=='quotation':body+='<aside data-upload-notice><p>Online file uploads are not enabled. Describe your design now and arrange reference sharing with the team through official WhatsApp or email. No files are attached by this form.</p><label for="requestFiles">Reference pictures or sketches — not enabled</label><input type="file" id="requestFiles" disabled accept="image/jpeg,image/png,image/webp" multiple></aside>'
- body+=fields(kind,service_id)+'<label class="request-check"><input id="requestConsent" name="Consent" type="checkbox" value="Read and requested review" required><span>I have read the '+link('/privacy-policy/','Privacy Policy','')+(' and '+link('/terms-and-conditions/','Terms & Conditions','') if kind=='quotation' else '')+'. I am requesting human review, not automatic acceptance.</span></label><button type="button" id="reviewRequest" class="home-button home-button-gold" disabled>Continue</button></form><section id="requestReview" hidden aria-labelledby="review-title"><h2 id="review-title" tabindex="-1">Review Your Request</h2><dl id="reviewDetails"></dl><p>No order, appointment, payment or refund is confirmed by submitting.</p><div class="request-actions"><button id="editRequest" type="button" class="home-button">Back</button><button id="sendRequest" type="submit" form="customerRequestForm" class="home-button home-button-gold">Submit '+('Refund Request' if kind=='refund' else 'Request' if kind=='quotation' else 'Support Request')+'</button></div></section><p id="requestStatus" role="status" aria-live="polite"></p><section id="requestSuccess" hidden tabindex="-1" role="status"><h2>Request Submitted for Review</h2><p>The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details. No files were attached.</p></section></section>'
+ body+=fields(kind,service_id)+'<label class="request-check"><input id="requestConsent" name="Consent" type="checkbox" value="Read and requested review" required><span>I have read the '+link('/privacy-policy/','Privacy Policy','')+(' and '+link('/terms-and-conditions/','Terms & Conditions','') if kind=='quotation' else '')+'. I am requesting human review, not automatic acceptance.</span></label><button type="button" id="reviewRequest" class="home-button home-button-gold" disabled>Continue</button></form><section id="requestReview" hidden aria-labelledby="review-title"><h2 id="review-title" tabindex="-1">Review Your Request</h2><dl id="reviewDetails"></dl><p>No order, appointment, payment or refund is confirmed by submitting.</p><div class="request-actions"><button id="editRequest" type="button" class="home-button">Back</button><button id="sendRequest" type="submit" form="customerRequestForm" class="home-button home-button-gold">Submit '+('Refund Request' if kind=='refund' else 'Quotation Request' if kind=='quotation' else 'Support Request')+'</button></div></section><p id="requestStatus" role="status" aria-live="polite"></p><section id="requestSuccess" hidden tabindex="-1" role="status"><h2>Request Submitted for Review</h2><p>The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details. No files were attached.</p></section></section>'
  # Only publication-authorised references may be included in an enquiry.
  from build_collections import load,design_name
  designs=load()[0]
  from suit_references import assignment,model as suit_model
  body+='<script id="requestSuitCategories" type="application/json">'+json.dumps({d['id']:{'id':assignment(d['id'])['id'],'gender':assignment(d['id'])['gender']} for d in designs if assignment(d['id'])}).replace('<','\\u003c')+'</script>'
- return body+'<script id="requestDesigns" type="application/json">'+json.dumps({d['id']:suit_model()['references'].get(d['id'],{}).get('label') or design_name(d) for d in designs},ensure_ascii=False).replace('<','\\u003c')+'</script>'+guides.script()
+ return body+'<script src="/assets/request-draft.js" defer></script><script id="requestDesigns" type="application/json">'+json.dumps({d['id']:suit_model()['references'].get(d['id'],{}).get('label') or design_name(d) for d in designs},ensure_ascii=False).replace('<','\\u003c')+'</script>'+guides.script()
 
 def request_page(special=False):
  route=BASE+'special-order/' if special else '/request/'
@@ -121,10 +122,9 @@ def request_page(special=False):
  return frame(route,'Special Order Design Enquiry' if special else 'Your Service Quotation Request','Review design, fabric preferences, priority and contact details before sending a quotation enquiry.',body)
 
 def information(route):
- d=data()['pages'][route];body=intro(d['title'],d['intro'])
+ d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],d['intro'])
  if route=='/guides/fabrics/':body+=guides.fabric_guide()
  if route=='/measurements/':body+=guides.measurements()
- if route in ['/terms-and-conditions/','/refund-policy/','/privacy-policy/']:body+='<p class="release-notice">Staging review: unresolved legal, financial or processing details are identified below; this is not a claim of legal compliance.</p>'
  old=json.loads((ROOT/'_data/policy-pages.json').read_text()).get(route.strip('/'),{});oldids=[s['id'] for s in old.get('sections',[])]+list(old.get('legacyAnchors',{}))
  used=set();nav=[]
  for i,s in enumerate(d['sections']):
@@ -150,7 +150,11 @@ def process_page(route):
 
 def extra_routes():return ['/services/vip/','/services/vip/subscription/',BASE+'fabric/','/guides/fabrics/','/customer-information/','/delivery-and-collection/','/benefits/','/customer-support/','/request/',BASE+'design-choice/']
 def outputs():
+ from whatsapp_consent import page as whatsapp_page
  out={ROOT/r.strip('/')/'index.html':information(r) for r in extra_routes() if r in data()['pages']}
+ out[ROOT/'whatsapp/index.html']=whatsapp_page()
+ out[ROOT/'assets/request-draft.js']=(ROOT/'_templates/request-draft.js').read_text()
+ out[ROOT/'assets/whatsapp-consent.js']=(ROOT/'_templates/whatsapp-consent.js').read_text()
  # Legacy references are retained without unverified imagery.
  for slug in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','w-doublebreasted','w-modernsuits','reviews','happy-customers','suits']:
   route='/'+slug+'/'

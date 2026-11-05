@@ -43,15 +43,18 @@ assert 'fetchpriority="high"' in hero and 'hero-image-note' not in hero
 assert 'Pause slideshow' not in hero and '>01<' not in hero and '>02<' not in hero
 assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==1
 assert 'const interval=10000' in (ROOT/'_templates/hero-slideshow.js').read_text()
-assert len(list((ROOT/'collections/designs').glob('*/index.html')))==111
+assert len(list((ROOT/'collections/designs').glob('*/index.html')))==119
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.
 ref='ac639f145fc976ecefe02e2b8ff5b82f1aae184b'
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
 protected=['assets/forms.js','_data/collection-designs.json','_data/collection-id-registry.json','_data/customer-projects.json','_templates/collections.css']
 for file in files:
  if file in protected or re.search(r'\.(?:jpe?g|png|webp|avif|svg|mp4)$',file,re.I):
+  if file in ['_data/collection-designs.json','_data/collection-id-registry.json']:
+   from preservation_contract import append_only
+   append_only(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT),(ROOT/file).read_bytes(),file);continue
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==60
+assert len(public_routes())==73
 assert '60%' in (ROOT/'customer-information/index.html').read_text()
 assert '72 hours' in (ROOT/'refund-policy.html').read_text()
 assert '<table' not in (ROOT/'terms-and-conditions.html').read_text()

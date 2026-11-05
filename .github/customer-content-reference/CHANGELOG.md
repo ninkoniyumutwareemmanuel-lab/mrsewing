@@ -23,3 +23,6 @@ Owner upload18files inspected. Correct neck typo resolved by byte identity; all 
 ## 2026-11-05-05 — R4 suit reference pages
 
 Four categories for each gender; stable existing reference IDs and recorded visual classification/permission evidence. Scoped category context retained to enquiry, and Special alternative preserved. Five categories await approved photographs; no invented placeholders/products. Earlier versions, homepage/heroes/guides and commercial policies retained.
+
+## 2026-11-05-06
+R5 owner correction request and actual upload70dfdd7; preserve dated R4, record backend/pricing source gaps and approved restoration scope.

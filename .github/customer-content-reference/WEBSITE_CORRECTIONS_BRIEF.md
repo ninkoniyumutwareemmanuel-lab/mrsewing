@@ -1,0 +1,13 @@
+# R5 correction page brief — 5 November 2026
+
+Baseline 70dfdd7; source reference 2026-11-05-06. Actual owner attachment read in full. Applicable C06–C08/C11–C15/C19–C35/C39–C50 and R1–R5: reference permission, enquiry not order, source-qualified fabric/price, current general policies, verified contacts, no unsupported uploads/VIP terms.
+
+Audience/routes: eight suit categories and reference details, fabric guide/selection, informational breadcrumbs, Contact/About presentation, FAQ and all WhatsApp entry points. Service descriptions/eligibility, payments (custom suit70/30 with conditions), delivery/collection, support Mon–Fri09–17 Kigali/24 support-working-hour target and benefits remain unchanged. No new price or garment-completion guarantee. Quotation and acceptance still precede production. General Terms/Refund/Privacy destinations remain available. Contacts reused from existing official configuration; actual email receipt is unverified.
+
+Actions: category card opens its category; Choose This Design opens the actual reference; Continue preserves category/reference/fabric/priority to request; review retains fields and Edit returns without clearing; Submit Quotation Request uses existing provider and acknowledges only actual positive response. Special Order bypasses gallery with originating gender. Informational breadcrumbs open meaningful parent routes, not fake next steps. WhatsApp links open an explicit unchecked Terms gate, then user-activated Continue preserves official destination/message; no consent audit or message delivery claim.
+
+Forms: existing required contacts, design/quantity/preferences/message/consent and review/error/duplicate guards preserved. Secure attachments and persistent staff retrieval require absent server/storage/auth configuration; not activated. Existing measurement provider integration retained; no unauthorised actual messages. Public/internal source notes are separated without inventing unresolved contractual facts.
+
+SEO: preserve unique metadata/canonicals; only actual approved reference pages enter sitemap. Staging noindex remains unchanged. Shared WhatsApp routing affects destinations only, not protected homepage appearance. Desktop heroes/photos preserved.
+
+Testing planned: build/parity, source data rights/inventory, all8 category routes, men/women/Special context and fabric/advice/review/error flows, WhatsApp consent/reset/no-JS safe links, mobile/desktop/axe, homepage and service hero regression hashes. Backend/file persistence, authorised staff retrieval and real email receipt must remain NOT TESTED/BLOCKED until configured.

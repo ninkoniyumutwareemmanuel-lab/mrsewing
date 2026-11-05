@@ -50,8 +50,7 @@ def contact_schema():
 
 
 def render():
-    from customer_site import information
-    return information('/contact/')
+    return legacy_render()
 
 def legacy_render():
     data = json.loads((ROOT/'_data/contact-v2.json').read_text())

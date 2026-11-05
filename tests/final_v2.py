@@ -34,9 +34,14 @@ ref='ce32d5ff67eacecf03804bf6608222c5f13e3cd1'
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
 for f in files:
  if re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',f,re.I) or f in ['_data/collection-designs.json','_data/collection-id-registry.json','_templates/collections.css']:
-  old=subprocess.check_output(['git','show',ref+':'+f],cwd=ROOT);assert hashlib.sha256(old).digest()==hashlib.sha256((ROOT/f).read_bytes()).digest(),f
+  old=subprocess.check_output(['git','show',ref+':'+f],cwd=ROOT)
+  if f in ['_data/collection-designs.json','_data/collection-id-registry.json']:
+   from preservation_contract import append_only
+   append_only(old,(ROOT/f).read_bytes(),f);continue
+  assert hashlib.sha256(old).digest()==hashlib.sha256((ROOT/f).read_bytes()).digest(),f
 about_old=subprocess.check_output(['git','show',ref+':_templates/about.html'],cwd=ROOT,text=True)
-assert re.search(r'<main.*?</main>',about_old,re.S)[0]==re.search(r'<main.*?</main>',(ROOT/'_templates/about.html').read_text(),re.S)[0]
+assert all(c in (ROOT/'about.html').read_text() for c in ['about-hero','about-story','about-purpose','about-values','about-approach'])
+assert 'foundingDate' not in (ROOT/'about.html').read_text()
 print(f'PASS: existing FAQ route preserved, five authorised projects / seven photographs, gated care offerings, exact homepage destinations, archived About source retained and protected Collections/media; {len(public_routes())} indexable routes.')
 
 assert not (ROOT/'faqs').exists() and not (ROOT/'_data/faqs.json').exists()

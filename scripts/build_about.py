@@ -16,15 +16,14 @@ PAGE = 'https://mrsewingfashion.com/about/'
 
 
 def render():
-    from customer_site import information
-    return information('/about/')
+    return legacy_render()
 
 def legacy_render():
     seo = json.loads((ROOT/'_data/page-seo.json').read_text())['about.html']
     business = json.loads((ROOT/'_data/business.json').read_text())
     organization = {'@type':'Organization','@id':business['@id'],
         **{k:business[k] for k in ['name','url','logo','telephone','email']},
-        'alternateName':'Mr Sewing','foundingDate':'2019',
+        'alternateName':'Mr Sewing',
         'description':'Kigali-based bespoke tailoring brand creating personalized clothing in Rwanda.',
         'parentOrganization':{'@type':'Organization','name':'NINKONIYUMUTWARE NEXUS LTD'}}
     schema = {'@context':'https://schema.org','@graph':[

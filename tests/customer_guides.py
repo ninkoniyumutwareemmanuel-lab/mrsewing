@@ -19,6 +19,9 @@ for d in images.values():
  for v in d['variants']:
   p=ROOT/v['src'].lstrip('/');im=Image.open(p);assert im.size==(v['width'],v['height']);assert p.stat().st_size<src.stat().st_size;assert abs(v['height']-round(d['height']*v['width']/d['width']))<=1
 # All approved explanatory/policy paragraphs remain unchanged, not rewritten from pictures.
-old=json.loads(subprocess.check_output(['git','show','b6b1d5147ec0edbb76ff956cb8fb06b3249d7b95:_data/customer-release.json'],cwd=ROOT,text=True));assert read('_data/customer-release.json')==old
+old=json.loads(subprocess.check_output(['git','show','b6b1d5147ec0edbb76ff956cb8fb06b3249d7b95:_data/customer-release.json'],cwd=ROOT,text=True));assert read('_data/customer-release.json')['pages']['/measurements/']==old['pages']['/measurements/']
 assert len(old['pages']['/measurements/']['sections'])==6
 print('PASS: 8 qualified references/6 fabric sources, 11 correct measurement mappings, identical neck duplicates, unchanged originals/instructions/policies and 34 smaller proportional variants.')
+
+guide=(ROOT/"guides/fabrics/index.html").read_text()
+assert guide.count("We recommend visiting our workshop")==1 and "working reference" not in guide

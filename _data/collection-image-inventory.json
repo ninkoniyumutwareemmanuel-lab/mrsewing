@@ -5871,6 +5871,118 @@
       "legacyReferences": [
         "/measurements/"
       ]
+    },
+    {
+      "originalImagePath": "Ivory Elegance — Single-Breasted Suit.webp",
+      "sourceOriginal": "Ivory Elegance — Single-Breasted Suit.webp",
+      "designId": "MS-139",
+      "galleryLocation": "/collections/designs/ms-139/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/mensuits/single-breasted/"
+      ]
+    },
+    {
+      "originalImagePath": "Skyline Double-Breasted Suit.webp",
+      "sourceOriginal": "Skyline Double-Breasted Suit.webp",
+      "designId": "MS-140",
+      "galleryLocation": "/collections/designs/ms-140/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/mensuits/double-breasted/"
+      ]
+    },
+    {
+      "originalImagePath": "Royal Ivory Three-Piece Suit.webp",
+      "sourceOriginal": "Royal Ivory Three-Piece Suit.webp",
+      "designId": "MS-141",
+      "galleryLocation": "/collections/designs/ms-141/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/mensuits/three-piece/"
+      ]
+    },
+    {
+      "originalImagePath": "Royal Ivory Shawl-Lapel Tuxedo.webp",
+      "sourceOriginal": "Royal Ivory Shawl-Lapel Tuxedo.webp",
+      "designId": "MS-142",
+      "galleryLocation": "/collections/designs/ms-142/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/mensuits/tuxedos-formalwear/"
+      ]
+    },
+    {
+      "originalImagePath": "Burgundy Grace Women's Single-Breasted Suit.webp",
+      "sourceOriginal": "Burgundy Grace Women's Single-Breasted Suit.webp",
+      "designId": "MS-143",
+      "galleryLocation": "/collections/designs/ms-143/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/womensuits/single-breasted/"
+      ]
+    },
+    {
+      "originalImagePath": "Midnight Elegance Women's Double-Breasted Suit.webp",
+      "sourceOriginal": "Midnight Elegance Women's Double-Breasted Suit.webp",
+      "designId": "MS-144",
+      "galleryLocation": "/collections/designs/ms-144/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/womensuits/double-breasted/"
+      ]
+    },
+    {
+      "originalImagePath": "Burgundy Royale Women's Skirt Suit.webp",
+      "sourceOriginal": "Burgundy Royale Women's Skirt Suit.webp",
+      "designId": "MS-145",
+      "galleryLocation": "/collections/designs/ms-145/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/womensuits/skirt-suits/"
+      ]
+    },
+    {
+      "originalImagePath": "Camel Grace Women's Three-Piece Suit.webp",
+      "sourceOriginal": "Camel Grace Women's Three-Piece Suit.webp",
+      "designId": "MS-146",
+      "galleryLocation": "/collections/designs/ms-146/",
+      "groupedWithOtherPhotographs": false,
+      "provenance": "design_inspiration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": null,
+      "legacyReferences": [
+        "/womensuits/three-piece/"
+      ]
     }
   ],
   "missingLegacyReferences": [],
@@ -5889,6 +6001,14 @@
     "w-doublebreasted.html": "7c43fefab09013e7a2dc639e2a649252c1b8bbc023560f68a237a05acdde0c54",
     "w-modernsuits.html": "c72082f07080d10f5445b931395995f2c09682acd986cdfe8ee43aecb001a510",
     "_templates/homepage-sections.html": "e3ad6b9b33443418ede04c82aa7c9956107741d5f04f73429d450285650c5e94",
-    "service-standard.html": "c21e7ced9ca2978a3dcd2bd75a160f153654356a05e3e8f72f6c8448a09fc81a"
+    "service-standard.html": "c21e7ced9ca2978a3dcd2bd75a160f153654356a05e3e8f72f6c8448a09fc81a",
+    "Ivory Elegance — Single-Breasted Suit.webp": "408d79ab6928a80fb52d852481e18ddab89a9feef6c135e1e5c2c5efc4d0eb9d",
+    "Skyline Double-Breasted Suit.webp": "af2ff2d0d94606fef2cfb842d3391f7e3e34e505e0144679447a0bfbb777d3f8",
+    "Royal Ivory Three-Piece Suit.webp": "e7657eef6e22e8d59c6a020a246a5ac22d7e6a64efd2142bae3b67b214611a9d",
+    "Royal Ivory Shawl-Lapel Tuxedo.webp": "d180a6fd5eb2cbc0a2c1d0853347277292f5ee5175a6ce863300e65a1bf10f46",
+    "Burgundy Grace Women's Single-Breasted Suit.webp": "82089f9d5a4ead423ab7cf17898c1c8f11d3efe1737f5f78be2f0fe6c7bbee1d",
+    "Midnight Elegance Women's Double-Breasted Suit.webp": "306b627eeda0a730fc894ddef34afb8efff4367b4a757d6c7df651b7c9630580",
+    "Burgundy Royale Women's Skirt Suit.webp": "87b25bf913d841bfedae578cc6f64425030f462c600da52a1f4525b9b20c5277",
+    "Camel Grace Women's Three-Piece Suit.webp": "8a1c65752e5c9a36b91dc77215e066cf822189f0dd6f5e47df875cf241dcde5a"
   }
 }

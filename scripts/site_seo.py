@@ -4,7 +4,7 @@ from pathlib import Path
 from html import escape
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
-NOINDEX={'services/custom-tailoring/fabric.html','services/vip/subscription.html','request.html','services/custom-tailoring/design-choice.html','services/custom-tailoring/standard-order.html','services/custom-tailoring/special-order.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html'}
+NOINDEX={'whatsapp.html','services/custom-tailoring/fabric.html','services/vip/subscription.html','request.html','services/custom-tailoring/design-choice.html','services/custom-tailoring/standard-order.html','services/custom-tailoring/special-order.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html'}
 STAGING='<script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector(\'meta[name="robots"]\');if(m)m.content="noindex, nofollow";}</script>'
 def route_for(path):
     rel=Path(path).relative_to(ROOT)
@@ -29,4 +29,6 @@ def finalize(source,path):
     for key,value in tags.items():
         if not re.search(r'<meta\b[^>]*(?:name|property)=["\']'+re.escape(key)+'["\']',source):source=source.replace('</head>','<meta property="'+key+'" content="'+value+'"></head>',1)
     source=source.replace('</head>','<meta name="robots" content="'+robots+'">'+STAGING+'</head>',1)
+    from whatsapp_consent import protect
+    source=protect(source)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'

@@ -27,8 +27,8 @@ for text in ['35%','25%','60%','24 support working hours','22:00']:
  assert text in (ROOT/'customer-information/index.html').read_text(),text
 assert '72 hours' in (ROOT/'refund-policy.html').read_text()
 assert '6,000 RWF' in (ROOT/'benefits/index.html').read_text()
-assert 'Privacy Policy — Staging Draft' in (ROOT/'privacy-policy.html').read_text()
-assert len(load()[0])==7
+assert 'Privacy Policy' in (ROOT/'privacy-policy.html').read_text()
+assert len(load()[0])==15
 for s in release['services']:
  html=(ROOT/s['route'].strip('/')/'index.html').read_text();assert 'Choose Standard Service' not in html and 'Choose VIP Service' not in html
  assert ('Explore Men’s Suits' in html and 'Explore Women’s Suits' in html) if s['id']=='custom-tailoring' else 'id="customerRequestForm"' in html
