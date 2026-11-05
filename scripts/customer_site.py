@@ -4,6 +4,7 @@ Internal source registers/reconciliations live outside the deployment root.
 from pathlib import Path
 from html import escape,unescape
 import json,re
+import customer_guides as guides
 from urllib.parse import urlencode
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
@@ -24,7 +25,7 @@ def hero(ident):
  assert (ROOT/image['src'].lstrip('/')).is_file(),image['src']
  photo='<img src="'+escape(image['src'],quote=True)+'" width="'+str(image['width'])+'" height="'+str(image['height'])+'" alt="'+escape(image['alt'],quote=True)+'" loading="eager" fetchpriority="high" decoding="async">'
  actions=[('/mensuits/','Explore Men’s Suits'),('/womensuits/','Explore Women’s Suits')] if ident=='custom-tailoring' else [(s['route']+'#request-title',{'alterations':'Request Alteration','garment-care':'Request Garment Care','mobile-fitting':'Request Mobile Service','vip':'Request VIP Service'}[ident])]
- return '<section class="service-hero"><div class="service-hero-copy"><p class="service-breadcrumb">'+link('/','Home','')+' / '+link('/services/','Services','')+'</p><p class="home-eyebrow">Our Service</p><h1>'+escape(s['title'])+'</h1><p>'+escape(s['intro'])+'</p><div class="service-hero-actions">'+''.join(link(u,t,'home-button home-button-gold') for u,t in actions)+'</div><ul class="service-features"><li><span aria-hidden="true">◇</span> Personal guidance</li><li><span aria-hidden="true">✂</span> Individually assessed</li><li><span aria-hidden="true">✓</span> Agreed quotation</li></ul></div><div class="service-hero-photo">'+photo+'</div></section>'
+ return '<section class="service-hero" style="--hero-mobile-position:'+escape(image.get('mobilePosition','50% 50%'),quote=True)+'"><div class="service-hero-copy"><p class="service-breadcrumb">'+link('/','Home','')+' / '+link('/services/','Services','')+'</p><p class="home-eyebrow">Our Service</p><h1>'+escape(s['title'])+'</h1><p>'+escape(s['intro'])+'</p><div class="service-hero-actions">'+''.join(link(u,t,'home-button home-button-gold') for u,t in actions)+'</div><ul class="service-features"><li><span aria-hidden="true">◇</span> Personal guidance</li><li><span aria-hidden="true">✂</span> Individually assessed</li><li><span aria-hidden="true">✓</span> Agreed quotation</li></ul></div><div class="service-hero-photo">'+photo+'</div></section>'
 def frame(route,title,description,content,kind='WebPage',service=None):
  from custom_tailoring import component
  import shared_components as shared
@@ -72,10 +73,12 @@ def standard():
  return frame(BASE+'standard-order/','Men’s & Women’s Suit Design Selection','Browse the two approved suit design categories.',body+'</div>'+link(BASE,'Back'))
 
 def fabric_page():
- body=intro('Choose Your Fabric','Choose how you would like to explore fabric for your selected design. Availability and your final quotation require confirmation.')+'<p data-design-line></p><form id="fabricChoiceForm"><fieldset><legend>Fabric preference</legend><label class="fabric-choice"><input type="radio" name="fabricChoice" value="now" required> Choose Fabric Now</label><p>No verified available fabric catalogue has been cleared for this staging preview. You can describe your preferred fabric on the request form; the team will check availability before agreement.</p><label class="fabric-choice"><input type="radio" name="fabricChoice" value="advice" required> Help Me Choose Fabric</label><p>Request professional advice without selecting a fabric now.</p></fieldset><div class="request-actions">'+link('/mensuits/','Back','home-button')+'<button type="submit" class="home-button home-button-gold">Continue</button></div></form>'
+ body=intro('Choose Your Fabric','Choose a reference fabric or request advice. These illustrative pictures do not confirm stock, colours, composition or a final price.')+'<p data-design-line></p><form id="fabricChoiceForm"><fieldset><legend>Fabric preference</legend><label class="fabric-choice"><input type="radio" name="fabricChoice" value="now" required> Choose Fabric Now</label><label class="fabric-choice"><input type="radio" name="fabricChoice" value="advice" required> Help Me Choose Fabric</label><p>Advice is available without choosing a fabric. All fabric references, availability and the final quotation require business confirmation.</p></fieldset><section id="fabricSelection" hidden aria-labelledby="fabric-selection-title"><h2 id="fabric-selection-title">Choose a Fabric Reference</h2><p class="guide-notice">Working tier categories are pending company-source confirmation. These illustrative photographs are not verified inventory. Starting prices and colours are on enquiry.</p><label for="fabricCategory">Suit category</label><select id="fabricCategory"><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select>'
+ for category in ['men','women']:body+='<fieldset data-fabric-category="'+category+'"><legend>'+('Men’s' if category=='men' else 'Women’s')+' suit fabric references</legend>'+guides.cards(category,True)+'</fieldset>'
+ body+='</section><div class="request-actions">'+link('/mensuits/','Back','home-button fabric-back')+'<button type="submit" class="home-button home-button-gold">Continue</button></div></form>'
  from build_collections import load,design_route
- body+='<script id="fabricDesignRoutes" type="application/json">'+json.dumps({d['id']:design_route(d) for d in load()[0]}).replace('<','\\u003c')+'</script>'
- return frame(BASE+'fabric/','Choose Fabric or Request Advice','Record your fabric preference or request advice before your suit quotation enquiry.',body)
+ body+='<script id="fabricDesignRoutes" type="application/json">'+json.dumps({d['id']:design_route(d) for d in load()[0]}).replace('<','\\u003c')+'</script>'+guides.script()
+ return frame(BASE+'fabric/','Choose Fabric or Request Advice','Choose an illustrative fabric reference or request advice before your suit quotation enquiry.',body)
 
 def subscription():
  return frame('/services/vip/subscription/','VIP Subscription — In Development','Information about the planned combined garment-care and alterations membership.',intro('VIP Subscription','Details are being finalised. This is not an available paid membership.')+section('VIP Garment Care & Alterations Membership','The planned combined membership concerns Clothing Alterations & Repairs and Garment Care & Cleaning. It does not cover subscriptions for Custom Tailoring or Mobile Tailoring. Allowances, visit definitions, pricing, coverage, billing, cancellation and refund conditions are not final. There is no checkout or subscription payment.')+link('/services/vip/','Back'))
@@ -100,7 +103,7 @@ def request_form(kind='quotation',special=False,service_id=None):
   body+='<fieldset><legend>'+('Service details' if kind=='quotation' else 'Support topic')+'</legend>'
   if kind=='support':body+='<label for="requestService">Service</label><select id="requestService" name="Service">'+''.join('<option value="'+s['id']+'">'+escape(s['title'])+'</option>' for s in data()['services'])+'</select>'
   else:
-   body+='<input type="hidden" id="requestService" name="Service" value="'+(service_id or 'custom-tailoring')+'"><input type="hidden" id="requestExperience" name="Service Experience" value="'+('vip' if service_id=='vip' else 'standard')+'"><input type="hidden" id="requestOrder" name="Design Order Type" value="'+('special' if special else 'standard')+'"><p id="requestContextSummary"></p><div data-standard-design><label for="requestDesign">Selected design reference</label><input id="requestDesign" name="Design Reference" readonly><p>'+link('/mensuits/','Back to designs','design-return')+'</p></div><div data-custom-only><label for="requestFabricChoice">Fabric selection or assistance</label><select id="requestFabricChoice" name="Fabric Choice"><option value="advice">Help me choose fabric</option><option value="now">I would like to discuss fabric preferences</option></select></div><label for="requestPriority">Production priority</label><select id="requestPriority" name="Order Priority"><option value="standard">Standard Priority</option><option value="express">Express Priority</option></select><label class="request-check"><input type="checkbox" id="requestAfterHours" name="After-hours Request" value="Requested">Request after-hours availability (17:00–22:00 Kigali time)</label><p id="priority-guidance" class="request-note"></p>'
+   body+='<input type="hidden" id="requestService" name="Service" value="'+(service_id or 'custom-tailoring')+'"><input type="hidden" id="requestExperience" name="Service Experience" value="'+('vip' if service_id=='vip' else 'standard')+'"><input type="hidden" id="requestOrder" name="Design Order Type" value="'+('special' if special else 'standard')+'"><p id="requestContextSummary"></p><div data-standard-design><label for="requestDesign">Selected design reference</label><input id="requestDesign" name="Design Reference" readonly><p>'+link('/mensuits/','Back to designs','design-return')+'</p></div><div data-custom-only><label for="requestFabricChoice">Fabric selection or assistance</label><select id="requestFabricChoice" name="Fabric Choice"><option value="advice">Help me choose fabric</option><option value="now">I would like to choose a fabric reference</option></select><div id="requestFabricReferenceField"><label for="requestFabricSelection">Fabric reference (required only when choosing now)</label><select id="requestFabricSelection" name="Selected Fabric"><option value="">Choose a reference</option>'+guides.options()+'</select><p class="request-note">Illustrative references only; material, availability and final price require confirmation.</p></div></div><label for="requestPriority">Production priority</label><select id="requestPriority" name="Order Priority"><option value="standard">Standard Priority</option><option value="express">Express Priority</option></select><label class="request-check"><input type="checkbox" id="requestAfterHours" name="After-hours Request" value="Requested">Request after-hours availability (17:00–22:00 Kigali time)</label><p id="priority-guidance" class="request-note"></p>'
    if special:body+='<div><label for="requestCategory">Garment category (optional)</label><select id="requestCategory" name="Originating Suit Category"><option value="">Not specified</option><option value="men">Men’s Suits</option><option value="women">Women’s Suits</option></select></div>'
   body+='</fieldset>'
  if kind=='quotation':body+='<aside data-upload-notice><p>Online file uploads are not enabled. Describe your design now and arrange reference sharing with the team through official WhatsApp or email. No files are attached by this form.</p><label for="requestFiles">Reference pictures or sketches — not enabled</label><input type="file" id="requestFiles" disabled accept="image/jpeg,image/png,image/webp" multiple></aside>'
@@ -108,7 +111,7 @@ def request_form(kind='quotation',special=False,service_id=None):
  # Only publication-authorised references may be included in an enquiry.
  from build_collections import load,design_name
  designs=load()[0]
- return body+'<script id="requestDesigns" type="application/json">'+json.dumps({d['id']:design_name(d) for d in designs},ensure_ascii=False).replace('<','\\u003c')+'</script>'
+ return body+'<script id="requestDesigns" type="application/json">'+json.dumps({d['id']:design_name(d) for d in designs},ensure_ascii=False).replace('<','\\u003c')+'</script>'+guides.script()
 
 def request_page(special=False):
  route=BASE+'special-order/' if special else '/request/'
@@ -117,6 +120,8 @@ def request_page(special=False):
 
 def information(route):
  d=data()['pages'][route];body=intro(d['title'],d['intro'])
+ if route=='/guides/fabrics/':body+=guides.fabric_guide()
+ if route=='/measurements/':body+=guides.measurements()
  if route in ['/terms-and-conditions/','/refund-policy/','/privacy-policy/']:body+='<p class="release-notice">Staging review: unresolved legal, financial or processing details are identified below; this is not a claim of legal compliance.</p>'
  old=json.loads((ROOT/'_data/policy-pages.json').read_text()).get(route.strip('/'),{});oldids=[s['id'] for s in old.get('sections',[])]+list(old.get('legacyAnchors',{}))
  used=set();nav=[]
@@ -155,5 +160,5 @@ def outputs():
  out[ROOT/'assets/customer-site.css']=(ROOT/'_templates/customer-site.css').read_text()
  import shared_components as shared
  out[ROOT/'assets/customer-site.js']=shared.menu_script()+'\n'+(ROOT/'_templates/customer-site.js').read_text()
- out[ROOT/'assets/request-context.js']=(ROOT/'_templates/request-context.js').read_text()
+ out[ROOT/'assets/request-context.js']=(ROOT/'_templates/request-context.js').read_text().replace('/* fabric-reference-ids */[]',json.dumps([f['id'] for f in guides.fabrics()]))
  return out

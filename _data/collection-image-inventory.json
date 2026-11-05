@@ -5143,6 +5143,734 @@
       "legacyReferences": [
         "/services/vip/"
       ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-americano-480.webp",
+      "sourceOriginal": "fabric-americano.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-americano-960.webp",
+      "sourceOriginal": "fabric-americano.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-cotton-480.webp",
+      "sourceOriginal": "fabric-cotton.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-cotton-960.webp",
+      "sourceOriginal": "fabric-cotton.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-polyester-480.webp",
+      "sourceOriginal": "fabric-polyester.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-polyester-960.webp",
+      "sourceOriginal": "fabric-polyester.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-star-480.webp",
+      "sourceOriginal": "fabric-star.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-star-960.webp",
+      "sourceOriginal": "fabric-star.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-super-480.webp",
+      "sourceOriginal": "fabric-super.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-super-960.webp",
+      "sourceOriginal": "fabric-super.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-wool-480.webp",
+      "sourceOriginal": "fabric-wool.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/fabric-wool-960.webp",
+      "sourceOriginal": "fabric-wool.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-belly-480.webp",
+      "sourceOriginal": "belly.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-belly-960.webp",
+      "sourceOriginal": "belly.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-bicep-480.webp",
+      "sourceOriginal": "bicep.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-bicep-960.webp",
+      "sourceOriginal": "bicep.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-chest-480.webp",
+      "sourceOriginal": "chest.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-chest-960.webp",
+      "sourceOriginal": "chest.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-hip-480.webp",
+      "sourceOriginal": "hip.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-hip-960.webp",
+      "sourceOriginal": "hip.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-jacket-length-480.webp",
+      "sourceOriginal": "jacket length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-jacket-length-960.webp",
+      "sourceOriginal": "jacket length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-neck-480.webp",
+      "sourceOriginal": "neck.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-neck-960.webp",
+      "sourceOriginal": "neck.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-shoulder-480.webp",
+      "sourceOriginal": "shoulder.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-shoulder-960.webp",
+      "sourceOriginal": "shoulder.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-sleeve-length-480.webp",
+      "sourceOriginal": "sleeve length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-sleeve-length-960.webp",
+      "sourceOriginal": "sleeve length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-thigh-480.webp",
+      "sourceOriginal": "thigh.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-thigh-960.webp",
+      "sourceOriginal": "thigh.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-trouser-length-480.webp",
+      "sourceOriginal": "trauser length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-trouser-length-960.webp",
+      "sourceOriginal": "trauser length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-waist-480.webp",
+      "sourceOriginal": "waist.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "assets/customer-guides/measure-waist-960.webp",
+      "sourceOriginal": "waist.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "belly.webp",
+      "sourceOriginal": "belly.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "bicep.webp",
+      "sourceOriginal": "bicep.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "chest.webp",
+      "sourceOriginal": "chest.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "fabric-americano.webp",
+      "sourceOriginal": "fabric-americano.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "fabric-cotton.webp",
+      "sourceOriginal": "fabric-cotton.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "fabric-polyester.webp",
+      "sourceOriginal": "fabric-polyester.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "fabric-star.webp",
+      "sourceOriginal": "fabric-star.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "fabric-super.webp",
+      "sourceOriginal": "fabric-super.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "fabric-wool.webp",
+      "sourceOriginal": "fabric-wool.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/guides/fabrics/"
+      ]
+    },
+    {
+      "originalImagePath": "hip.webp",
+      "sourceOriginal": "hip.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "jacket length.webp",
+      "sourceOriginal": "jacket length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "neck.jepg.webp",
+      "sourceOriginal": "neck.jepg.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "neck.webp",
+      "sourceOriginal": "neck.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "shoulder.webp",
+      "sourceOriginal": "shoulder.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "sleeve length.webp",
+      "sourceOriginal": "sleeve length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "thigh.webp",
+      "sourceOriginal": "thigh.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "trauser length.webp",
+      "sourceOriginal": "trauser length.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
+    },
+    {
+      "originalImagePath": "waist.webp",
+      "sourceOriginal": "waist.webp",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner_supplied_guide_illustration",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner R3 illustrative guide asset. Not inventory, calibrated measurements or a catalogue design.",
+      "legacyReferences": [
+        "/measurements/"
+      ]
     }
   ],
   "missingLegacyReferences": [],

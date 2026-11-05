@@ -2,15 +2,15 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-05-03**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+Current reviewed reference: **versions/2026-11-05-04**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-05-03/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-05-03/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-05-03/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-05-03/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-05-03/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-05-04/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-05-04/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-05-04/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-05-04/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-05-04/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules
@@ -26,3 +26,5 @@ Work only on phase1/customer-journey-repairs and staging. Preserve the approved 
 Current revision plan and source/rule applicability: [Consolidated page brief](CONSOLIDATED_REVISION_PAGE_BRIEF.md). R1 replaces compulsory experience/design-choice screens; retain four ordinary departments and add VIP as the fifth website entry.
 
 R2 resolves the five hero photographs using the owner-uploaded root WebP files; no policy or journey change. See [hero integration brief](HERO_IMAGE_INTEGRATION_BRIEF.md).
+
+R3 updates illustrative fabric/measurement guides and mobile-only service backgrounds; see [page brief](GUIDES_MOBILE_UPDATE_BRIEF.md). Prices, stock and company-source verification remain unresolved.

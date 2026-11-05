@@ -1,0 +1,328 @@
+{
+  "source": "Owner R3 uploaded illustrative reference photographs; originals preserved",
+  "images": {
+    "fabric-super": {
+      "src": "/fabric-super.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustrative Super / Super 100s fabric reference, not verified stock",
+      "sha256": "97f91f1df7c6a899ba70aaa21460e5bac990e59e1f22e281f9c54a47f31709c4",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/fabric-super-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/fabric-super-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "fabric-wool": {
+      "src": "/fabric-wool.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustrative Wool fabric reference, not verified stock",
+      "sha256": "366441d5f243ac1484d829f74a8837e84ac2747f1402a9c3090fc4a16a3859a5",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/fabric-wool-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/fabric-wool-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "fabric-polyester": {
+      "src": "/fabric-polyester.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustrative Polyester fabric reference, not verified stock",
+      "sha256": "bcc01e645daa1152df46bf76795a87b1109de96f23d4312a0ef76e6ab6a5d2d4",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/fabric-polyester-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/fabric-polyester-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "fabric-cotton": {
+      "src": "/fabric-cotton.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustrative cotton fabric reference, not verified stock",
+      "sha256": "7394839f0bc26c332bc4e90eb27c52e2e3f0f9e71023cb6431d9b3efa90aa9e9",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/fabric-cotton-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/fabric-cotton-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "fabric-americano": {
+      "src": "/fabric-americano.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustrative Americano fabric reference, not verified stock",
+      "sha256": "76347f742b508ca127b4b987006a68fb3c35f3ae1a9bd7c19907f2251dca1483",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/fabric-americano-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/fabric-americano-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "fabric-star": {
+      "src": "/fabric-star.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustrative Star fabric reference, not verified stock",
+      "sha256": "36693a37956b41ac483e17a7bdd671bc47b62d3d15f3003c97c030ba4e2508b5",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/fabric-star-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/fabric-star-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "measure-belly": {
+      "src": "/belly.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Tape shown around the stomach area",
+      "sha256": "48f95ac21bf1139965e4da162eea694dd234d73fe6b344a37d3454ce8341b6b9",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-belly-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/measure-belly-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "measure-bicep": {
+      "src": "/bicep.webp",
+      "width": 1125,
+      "height": 1398,
+      "alt": "Tape shown around the upper arm",
+      "sha256": "7ee7e2209696c35f0ac6d949ce8dcbef5f1eff482d6338cdb3c3c613e1c2ca36",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-bicep-480.webp",
+          "width": 480,
+          "height": 596
+        },
+        {
+          "src": "/assets/customer-guides/measure-bicep-960.webp",
+          "width": 960,
+          "height": 1193
+        }
+      ]
+    },
+    "measure-chest": {
+      "src": "/chest.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Tape shown around the chest",
+      "sha256": "110d7f14579441f00e87fe1697b4b2704a5cad8ac77dfe2e69e6b84072146987",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-chest-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/measure-chest-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "measure-hip": {
+      "src": "/hip.webp",
+      "width": 1254,
+      "height": 1254,
+      "alt": "Tape shown around the hips",
+      "sha256": "bad9147f7a037713123b195f2feb87d5d772a190fdafc654cd7b01a28535b022",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-hip-480.webp",
+          "width": 480,
+          "height": 480
+        },
+        {
+          "src": "/assets/customer-guides/measure-hip-960.webp",
+          "width": 960,
+          "height": 960
+        }
+      ]
+    },
+    "measure-jacket-length": {
+      "src": "/jacket length.webp",
+      "width": 986,
+      "height": 1595,
+      "alt": "Front-view illustration of jacket length",
+      "sha256": "14738b81edcc103b46682ec41c72821e1686ae9803dee9c9f96035df655b6d2b",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-jacket-length-480.webp",
+          "width": 480,
+          "height": 776
+        },
+        {
+          "src": "/assets/customer-guides/measure-jacket-length-960.webp",
+          "width": 960,
+          "height": 1553
+        }
+      ]
+    },
+    "measure-neck": {
+      "src": "/neck.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Tape shown around the neck at collar level",
+      "sha256": "4a7b08d5ac78189f1f7f21ff6a4b4678e2a4138dc38d453ab73d72379657f964",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-neck-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/measure-neck-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "measure-shoulder": {
+      "src": "/shoulder.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Tape shown across the back of the shoulders",
+      "sha256": "75478053b3210c79f38b62393e69181b3514b79c91a548a732b3baed665c95cd",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-shoulder-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/measure-shoulder-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "measure-sleeve-length": {
+      "src": "/sleeve length.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Illustration of sleeve length along the arm",
+      "sha256": "0c082010c46d9f2fa4e65e8976ad65082857e33db536e0ecbbdd4de61a748621",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-sleeve-length-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/measure-sleeve-length-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    },
+    "measure-thigh": {
+      "src": "/thigh.webp",
+      "width": 1254,
+      "height": 1254,
+      "alt": "Tape shown around the upper thigh",
+      "sha256": "f18835277ff2fb48d0850dd39498050df46607a57363af579dc0370eb4298a36",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-thigh-480.webp",
+          "width": 480,
+          "height": 480
+        },
+        {
+          "src": "/assets/customer-guides/measure-thigh-960.webp",
+          "width": 960,
+          "height": 960
+        }
+      ]
+    },
+    "measure-trouser-length": {
+      "src": "/trauser length.webp",
+      "width": 1024,
+      "height": 1536,
+      "alt": "Illustration of trouser length along the outer leg",
+      "sha256": "47e459ecd3f860b79f5d1cf037508808869ec3b1239346145c36c421fc1663ec",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-trouser-length-480.webp",
+          "width": 480,
+          "height": 720
+        },
+        {
+          "src": "/assets/customer-guides/measure-trouser-length-960.webp",
+          "width": 960,
+          "height": 1440
+        }
+      ]
+    },
+    "measure-waist": {
+      "src": "/waist.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Tape shown around the trouser waistline",
+      "sha256": "4051810c5713b2351a819d4d3bee6cfd710ef33476409efa98c98f5cd97fbe51",
+      "variants": [
+        {
+          "src": "/assets/customer-guides/measure-waist-480.webp",
+          "width": 480,
+          "height": 320
+        },
+        {
+          "src": "/assets/customer-guides/measure-waist-960.webp",
+          "width": 960,
+          "height": 640
+        }
+      ]
+    }
+  }
+}

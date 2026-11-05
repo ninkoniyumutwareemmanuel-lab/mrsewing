@@ -1,8 +1,8 @@
 /* Whitelisted request choices only; never persist customer contact details or free text. */
 (()=>{'use strict';if(window.mrRequestContext)return;
 const paths={'custom-tailoring':'/services/custom-tailoring/','alterations':'/services/alterations/','garment-care':'/services/garment-care/','mobile-fitting':'/services/mobile-fitting/','vip':'/services/vip/'};
-const enums={service:Object.keys(paths),experience:['standard','vip'],order:['standard','special'],priority:['standard','express'],afterHours:['yes','no'],category:['men','women'],fabricChoice:['now','advice']},key='mrsewing-request-context-v1';
-function clean(x){const y={};for(const k of Object.keys(enums))if(enums[k].includes(x?.[k]))y[k]=x[k];if(/^MS-\d{3,}$/.test(x?.design||''))y.design=x.design;return y;}
+const enums={service:Object.keys(paths),experience:['standard','vip'],order:['standard','special'],priority:['standard','express'],afterHours:['yes','no'],category:['men','women'],fabricChoice:['now','advice'],fabricRef:["men-super", "men-wool", "men-polyester", "men-cotton", "women-americano", "women-star", "women-polyester", "women-cotton"]},key='mrsewing-request-context-v1';
+function clean(x){const y={};for(const k of Object.keys(enums))if(enums[k].includes(x?.[k]))y[k]=x[k];if(/^MS-\d{3,}$/.test(x?.design||''))y.design=x.design;if(y.fabricChoice==='advice'||y.fabricRef&&y.category&&!y.fabricRef.startsWith(y.category+'-'))delete y.fabricRef;return y;}
 let saved={};try{saved=clean(JSON.parse(sessionStorage.getItem(key)||'{}'));}catch{}
 let state={...saved,...clean(Object.fromEntries(new URLSearchParams(location.search)))};
 for(const [service,path]of Object.entries(paths))if(location.pathname===path){state.service=service;state.experience=service==='vip'?'vip':'standard';}

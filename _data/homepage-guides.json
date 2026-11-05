@@ -6,7 +6,7 @@
   },
   {
     "label": "Fabric Guide",
-    "href": null,
-    "planned_href": "/guides/fabrics/"
+    "href": "/guides/fabrics/",
+    "planned_href": null
   }
 ]

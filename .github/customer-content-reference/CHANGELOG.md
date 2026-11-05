@@ -15,3 +15,7 @@ R1 supersedes mandatory experience/design selection screens; five website servic
 ## 2026-11-05-03 — R2 approved hero images
 
 Owner-upload commit a58aa96 verified and fast-forwarded without overwriting work. Five root WebP photographs now approved for named service heroes; missing-photo status resolved. Originals preserved byte-for-byte. Existing layouts, policies, forms, homepage and prior snapshots retained. Separate historical layout mockup not newly available; no exact comparison claim.
+
+## 2026-11-05-04 — R3 images and customer guides
+
+Owner upload18files inspected. Correct neck typo resolved by byte identity; all originals retained. Guides use illustrative references with unverified price/stock labels, shared optional fabric selection; mobile-only hero background composition and homepage VIP fifth ticket authorised. Desktop and policies protected. Earlier dated versions retained.
