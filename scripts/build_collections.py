@@ -10,7 +10,7 @@ from build_homepage import reserve_image_space
 from build_clean_urls import legacy_script
 from homepage_resources import delivery,CSS as ICON_CSS
 ROOT=Path(__file__).resolve().parents[1]
-PAGES={'collections.html':('all','The Collections'),'mensuits.html':('men',"Men's Suits"),'womensuits.html':('women',"Women's Suits")}
+PAGES={'collections.html':('all','Design References'),'mensuits.html':('men',"Men's Suits"),'womensuits.html':('women',"Women's Suits")}
 SIZES='(min-width: 1100px) 280px, (min-width: 600px) 30vw, calc((100vw - 52px) / 2)'
 
 def load():
@@ -131,7 +131,7 @@ def render(name,gender,title,designs):
     selected=[d for d in designs if gender=='all' or d['gender']==gender]
     header,footer=chrome(route)
     options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in selected for v in d[key]} | ({'graduation','wedding','civil-wedding'} if key=='occasions' else set())))
-    nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/collections/','All Designs'),('/mensuits/','Men'),('/womensuits/','Women')])
+    nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/services/custom-tailoring/','Custom Tailoring & Suits'),('/mensuits/','Men'),('/womensuits/','Women')])
     values={'header':header,'footer':footer,'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'cards':''.join(card(d,i<4) for i,d in enumerate(selected[:12])),'styles_options':options('styles'),'occasions_options':options('occasions'),'data':json_script({'designs':[public_data(d) for d in selected],'defaultGender':gender}),'fallback':''.join('<li><a href="'+design_route(d)+'">'+escape(design_name(d))+'</a></li>' for d in selected),'count':str(len(selected)),'collection_nav':nav}
     schema={'@context':'https://schema.org','@type':'CollectionPage','@id':'https://mrsewingfashion.com'+route+'#webpage','url':'https://mrsewingfashion.com'+route,'name':seo['title'],'description':seo['description'],'about':{'@id':'https://mrsewingfashion.com/#organization'},'mainEntity':{'@type':'ItemList','numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'name':design_name(d),'url':'https://mrsewingfashion.com'+design_route(d)} for i,d in enumerate(selected)]}}
     values['schema']=json_script(schema)
@@ -169,7 +169,7 @@ def render_design(d,designs):
     c=assignment(d['id'])
     if c:
         html=html.replace('</head>','<link rel="stylesheet" href="/assets/suit-references.css"></head>')
-        html=html.replace('href="/collections/">← All Designs','href="'+c['route']+'">← Back')
+        html=html.replace('href="/services/custom-tailoring/">← Custom Tailoring &amp; Suits','href="'+c['route']+'">← Back')
         from customer_navigation import breadcrumb
         trail=breadcrumb([('Custom Tailoring & Suits','/services/custom-tailoring/'),("Men's Suits" if c['gender']=='men' else "Women's Suits",'/mensuits/' if c['gender']=='men' else '/womensuits/'),(c['title'],c['route']),(name,None)])
         trail=trail.replace('href="'+c['route']+'"','class="design-back" href="'+c['route']+'"')

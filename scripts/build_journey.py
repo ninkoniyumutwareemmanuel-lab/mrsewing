@@ -148,10 +148,11 @@ def project_picture(image,eager=False,sizes='(min-width: 1000px) 900px, 90vw'):
     return tag
 
 def project_page(p):
+    from portfolio_requests import enquiry as portfolio_enquiry
     route='/our-work/'+p['slug']+'/'
     sections=''.join('<section><h2>'+label+'</h2><p>'+escape(p[key])+'</p></section>' for key,label in [('requestedDesign','The requested design'),('process','The tailoring process')] if p.get(key))
     sections+=''.join('<section><h2>'+escape(e['heading'])+'</h2><p>'+escape(e['text'])+'</p></section>' for e in p.get('editorial',[]))
-    vals={'project_title':escape(p['title']),'context':escape(p['context']),'photos':''.join('<a class="project-photo" data-project-photo="'+str(n)+'" href="'+escape(i['src'],quote=True)+'">'+project_picture(i,n==0)+'</a>' for n,i in enumerate(p['images'])),'documented_sections':sections,'testimonial':'<blockquote class="project-quote">'+escape(p['testimonial']['text'])+'</blockquote>' if p.get('testimonial') else '', 'enquiry':enquiry(p['title'],route).replace('Enquire with Mr Sewing','Enquire About This Design')}
+    vals={'project_title':escape(p['title']),'context':escape(p['context']),'photos':''.join('<a class="project-photo" data-project-photo="'+str(n)+'" href="'+escape(i['src'],quote=True)+'">'+project_picture(i,n==0)+'</a>' for n,i in enumerate(p['images'])),'documented_sections':sections,'testimonial':'<blockquote class="project-quote">'+escape(p['testimonial']['text'])+'</blockquote>' if p.get('testimonial') else '', 'enquiry':portfolio_enquiry(p)}
     content=(ROOT/'_templates/customer-project.html').read_text()
     for k,v in vals.items():content=content.replace('{{'+k+'}}',v)
     from customer_navigation import breadcrumb
@@ -168,7 +169,7 @@ def work_page(approved):
     if approved:
         content+='<div class="work-project-grid">'+''.join('<article class="work-project"><a href="/our-work/'+p['slug']+'/">'+project_picture(p['images'][0],n==0,'(min-width: 1100px) 380px, (min-width: 700px) 45vw, 90vw')+'<h2>'+escape(p['title'])+'</h2></a><p>'+escape(p['context'])+'</p></article>' for n,p in enumerate(approved))+'</div>'
     else:content+='<section class="work-note"><div><p class="home-eyebrow">Stories, shared with care</p><h2>Details matter.<br>Permission does too.</h2></div><p>Our individual customer project features are being prepared. We publish a story only when the completed work, photograph association and permission to share are confirmed. In the meantime, explore the design collection for inspiration or talk with us about your own tailoring plans.</p></section>'
-    content+='<nav class="work-links" aria-label="Continue exploring"><a class="home-text-link" href="/collections/">Explore design inspiration <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/services/">Discover our services <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/contact/">Discuss your project <span class="home-arrow" aria-hidden="true"></span></a></nav>'
+    content+='<nav class="work-links" aria-label="Continue exploring"><a class="home-text-link" href="/services/custom-tailoring/">Explore suit designs <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/services/">Discover our services <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/contact/">Discuss your project <span class="home-arrow" aria-hidden="true"></span></a></nav>'
     return page('/our-work/','Our Work & Customer Projects | Mr Sewing Fashion','Explore how Mr Sewing presents customer tailoring projects with confirmed details and permission, or discover design inspiration and tailoring services in Kigali.',content,'CollectionPage')
 
 def outputs():

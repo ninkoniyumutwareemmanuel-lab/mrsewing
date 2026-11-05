@@ -85,8 +85,8 @@ ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc',ns)};newurls={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)}
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
-assert len(withdrawn)==109 and all('/collections/designs/' in u or any(x in u for x in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','/suits/']) for u in withdrawn)
-assert len(public_routes())==73
+assert len(withdrawn)==110 and all(u=='https://mrsewingfashion.com/collections/' or '/collections/designs/' in u or any(x in u for x in ['m-classicsuits','m-doublebreasted','m-modernsuits','w-classicsuits','/suits/']) for u in withdrawn)
+assert len(public_routes())==72
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')
 
 assert all("Link to this answer" not in p.read_text() for p in (ROOT/"faq").glob("*/index.html"))

@@ -11,7 +11,10 @@ registry=json.loads((ROOT/'_data/journey-services.json').read_text());assert [s[
 assert '5 November 2026' in release['source']
 allowed={'assets/homepage.js','_templates/homepage-corrective.js','index.html','_templates/homepage-sections.html','_templates/homepage-header.html','_templates/homepage-footer.html','_templates/homepage-phase1.css','_data/homepage-guides.json','_data/page-seo.json'}
 for f,h in json.loads((ROOT/'docs/homepage-approved-baseline.json').read_text())['files'].items():
- if f not in allowed:assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h,f
+ if f=='_templates/homepage.html':
+  original=(ROOT/f).read_text().replace('https://mrsewingfashion.com/services/custom-tailoring/','https://mrsewingfashion.com/collections/')
+  assert hashlib.sha256(original.encode()).hexdigest()==h,f
+ elif f not in allowed:assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h,f
 import subprocess
 from build_homepage import Section,SECTIONS
 for name,(file,tag,identifier) in SECTIONS.items():

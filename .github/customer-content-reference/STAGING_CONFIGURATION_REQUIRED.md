@@ -1,5 +1,15 @@
 # Exact staging configuration and deployment investigation — 5 November 2026
 
+## R7 verified deployment update (supersedes the earlier unknown-status diagnosis)
+
+Public GitHub commit checks independently show successful Cloudflare deployment of433107ea259fcede6a2a7a057f752dd3151b3a32: deployment bfa64c37-cd6b-401b-90b5-eff27f766d77, preview https://bfa64c37.mrsewing-staging.pages.dev. They show **Build failed** for newer b83720b176a49190fb3583d24bf85fcee87a9f3c: deployment273632f8-eb91-4611-8d30-bfe98834dd16, check127431321571. Thus a successful GitHub push did not publish that repair; the older deployed code genuinely contained the Collections CTA. The precise failed-build error is account-protected and unavailable without an authorised Cloudflare account connection. Do not infer a particular failure cause without its log. The new R7 application uses generated plain ES-module allowlists instead of JSON import attributes for simpler Pages bundling; local Wrangler compilation passes, but this alone does not establish the old failure cause.
+
+Read-only source: https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/commit/b83720b176a49190fb3583d24bf85fcee87a9f3c/checks . Detailed staging log: https://dash.cloudflare.com/?to=/ce4c727a75477b72168a3d2c4946c4b6/pages/view/mrsewing-staging/273632f8-eb91-4611-8d30-bfe98834dd16 . Do not change the live project. Direct staging origin access remains proxy-blocked. GitHub check success is deployment evidence, not a rendered-site or email-delivery test.
+
+New release fingerprint: complete-repair-2026-11-05-r7. Use its exact commit and deployment check, not the earlierR6 fingerprint.
+
+## Earlier investigation history (retained; unknown deployment status below is superseded)
+
 ## Confirmed evidence
 
 GitHub remote development ref433107ea259fcede6a2a7a057f752dd3151b3a32 and unchanged remote mainba27bab0425a9df1948fe8f45dd3b941cb322f4c were read at task start. Full294-file change inventory is in the urgent review artefacts. The code contained real omissions independent of deployment (measurement CTA/lightbox, same-page FAQ modal, dedicated service forms, consultation header and portfolio-related section). These have been corrected locally.

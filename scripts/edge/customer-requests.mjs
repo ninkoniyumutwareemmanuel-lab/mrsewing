@@ -1,8 +1,8 @@
 /* Private intake API. No binding defaults, public object URLs or production enablement. */
-import referenceData from '../../_data/request-reference-allowlist.json' with {type:'json'};
+import {references as referenceData,portfolio as portfolioData} from './request-data.mjs';
 const services=['Custom Tailoring & Suits','Clothing Alterations & Repairs','Garment Care & Cleaning','Mobile Tailoring, Styling & Event Assistance','VIP Services'];
 export const limits={maxFiles:3,maxFileBytes:3*1024*1024,maxPixels:20000000};
-const allowed=['Full Name','Phone Number','Email Address','Location','Quantity','Preferred Date','Fabric Preferences','Measurements','Garment Type','Garment Condition','Handover Preference','Assistance Type','Preferred Time','Participants','Event Details','Customer Message','Service','Service Experience','Design Order Type','Design Reference','Design Name','Suit Category','Suit Category Reference','Suit Audience','Fabric Choice','Selected Fabric','Fabric Reference','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Order Priority','After-hours Request'];
+const allowed=['Portfolio Reference','Portfolio Project','Full Name','Phone Number','Email Address','Location','Quantity','Preferred Date','Fabric Preferences','Measurements','Garment Type','Garment Condition','Handover Preference','Assistance Type','Preferred Time','Participants','Event Details','Customer Message','Service','Service Experience','Design Order Type','Design Reference','Design Name','Suit Category','Suit Category Reference','Suit Audience','Fabric Choice','Selected Fabric','Fabric Reference','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Order Priority','After-hours Request'];
 const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow','Cross-Origin-Resource-Policy':'same-origin'};
 const reply=(data,status=200)=>new Response(JSON.stringify(data),{status,headers});
 const digest=async bytes=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');
@@ -17,7 +17,8 @@ export function validateFields(raw){
  if(data['Email Address']&&(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data['Email Address'])||data['Email Address'].length>254))fail(400,'Enter a valid email address.');
  if(!services.includes(data.Service)||!['Standard Priority','Express Priority'].includes(data['Order Priority']))fail(400,'Choose a valid service and priority.');
  if(!/^\d{1,4}$/.test(data.Quantity||'')||+data.Quantity<1)fail(400,'Enter a valid garment quantity.');
- if(data['Design Reference']){const design=referenceData[data['Design Reference']];if(!design)fail(400,'Choose a published design reference.');data['Design Name']=design.name;if(design.category){data['Suit Category']=design.category;data['Suit Audience']=design.audience;}}
+ if(data['Design Reference']){const design=Object.hasOwn(referenceData,data['Design Reference'])?referenceData[data['Design Reference']]:null;if(!design)fail(400,'Choose a published design reference.');data['Design Name']=design.name;if(design.category){data['Suit Category']=design.category;data['Suit Audience']=design.audience;}}
+ if(data['Portfolio Reference']){const slug=data['Portfolio Reference'];if(!Object.hasOwn(portfolioData,slug))fail(400,'Choose an approved portfolio reference.');const project=portfolioData[slug];if(data.Service!=='Custom Tailoring & Suits'||data['Design Reference']!==project.designRef)fail(400,'The portfolio and design references must match.');data['Portfolio Project']=project.name;}else delete data['Portfolio Project'];
  return data;
 }
 const crcTable=Uint32Array.from({length:256},(_,n)=>{for(let k=0;k<8;k++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});

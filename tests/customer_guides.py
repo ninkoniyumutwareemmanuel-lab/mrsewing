@@ -25,3 +25,8 @@ print('PASS: 8 qualified references/6 fabric sources, 11 correct measurement map
 
 guide=(ROOT/"guides/fabrics/index.html").read_text()
 assert guide.count("We recommend visiting our workshop")==1 and "working reference" not in guide
+
+assert [m['id'] for m in measure]==['neck','shoulder','chest','bicep','sleeve-length','belly','waist','jacket-length','hip','thigh','trouser-length']
+prices=read('_data/suit-package-prices.json')['prices']
+assert set(prices)=={f['id'] for f in cat}
+assert guide.count('aria-label="Complete suit starting prices"')==8 and guide.count('Price on request (RWF)')==16

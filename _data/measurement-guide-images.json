@@ -34,12 +34,6 @@
       "caption": "Illustration of sleeve length along the arm. Follow the garment-specific instructions confirmed with the team."
     },
     {
-      "id": "jacket-length",
-      "title": "Jacket length",
-      "image": "measure-jacket-length",
-      "caption": "Front-view illustration of jacket length. Follow the garment-specific instructions confirmed with the team."
-    },
-    {
       "id": "belly",
       "title": "Belly",
       "image": "measure-belly",
@@ -50,6 +44,12 @@
       "title": "Waist",
       "image": "measure-waist",
       "caption": "Tape shown around the trouser waistline. Follow the garment-specific instructions confirmed with the team."
+    },
+    {
+      "id": "jacket-length",
+      "title": "Jacket length",
+      "image": "measure-jacket-length",
+      "caption": "Front-view illustration of jacket length. Follow the garment-specific instructions confirmed with the team."
     },
     {
       "id": "hip",

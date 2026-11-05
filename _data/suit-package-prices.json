@@ -1,0 +1,101 @@
+{
+  "scope": "Complete ordinary suit packages, not fabric-only prices or tuxedos",
+  "prices": {
+    "men-super": {
+      "category": "men",
+      "tier": 1,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "men-wool": {
+      "category": "men",
+      "tier": 2,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "men-polyester": {
+      "category": "men",
+      "tier": 3,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "men-cotton": {
+      "category": "men",
+      "tier": 4,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "women-americano": {
+      "category": "women",
+      "tier": 1,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "women-star": {
+      "category": "women",
+      "tier": 2,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "women-polyester": {
+      "category": "women",
+      "tier": 3,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    },
+    "women-cotton": {
+      "category": "women",
+      "tier": 4,
+      "currency": "RWF",
+      "scope": "complete suit package",
+      "twoPieceRwf": null,
+      "threePieceRwf": null,
+      "publicationApproved": false,
+      "source": "Custom_Tailoring_Decision_Register_v5_2026-11-01.md and latest approved commercial reconciliation/publication clearance unavailable",
+      "sourceDecisionDate": null,
+      "verificationStatus": "UNVERIFIED — source/publication clearance required"
+    }
+  }
+}

@@ -182,7 +182,7 @@
       "slug": "collections-designs",
       "title": "Collections & Design Requests",
       "description": "Find inspiration, share an individual design and distinguish it from completed work.",
-      "destination": "/collections/",
+      "destination": "/services/custom-tailoring/",
       "icon": "grid",
       "questions": [
         "collections-purpose",
@@ -414,7 +414,7 @@
     },
     "wedding-inspiration": {
       "question": "Where can I browse wedding inspiration?",
-      "answer": "Explore <a href=\"/collections/?occasion=wedding\">Wedding</a> or <a href=\"/collections/?occasion=civil-wedding\">Civil Wedding</a> collection filters. Only verified occasion matches appear. If a filter has no matches, discuss your reference directly; inspiration photographs do not imply a wedding package.",
+      "answer": "Explore <a href=\"/services/wedding-tailoring/\">wedding and civil-wedding tailoring</a>, then browse <a href=\"/mensuits/\">Men’s Suits</a> or <a href=\"/womensuits/\">Women’s Suits</a> and discuss the occasion and design with the team. Reference pictures do not confirm fabric or stock availability.",
       "keywords": []
     },
     "wedding-quote": {
@@ -439,7 +439,7 @@
     },
     "graduation-gallery": {
       "question": "Where can I find graduation designs and completed work?",
-      "answer": "Browse <a href=\"/collections/?occasion=graduation\">Graduation inspiration</a> and <a href=\"/our-work/\">Our Work</a> for genuine finished Mr Sewing projects. The inspiration gallery and completed-project gallery have different purposes.",
+      "answer": "Read about <a href=\"/services/graduation-tailoring/\">graduation tailoring</a> and explore <a href=\"/our-work/\">Our Work</a> for approved photographs of completed Mr Sewing projects. Discuss your preferred outfit and occasion with the team.",
       "keywords": []
     },
     "graduation-inclusions": {
@@ -564,7 +564,7 @@
     },
     "collections-browse": {
       "question": "How do I find a design?",
-      "answer": "Browse <a href=\"/collections/\">All Designs</a>, <a href=\"/mensuits/\">Men</a> or <a href=\"/womensuits/\">Women</a>. Use gallery search and filters, then open a design’s dedicated page for its complete photograph and enquiry options.",
+      "answer": "Browse <a href=\"/mensuits/\">Men’s Suits</a> or <a href=\"/womensuits/\">Women’s Suits</a>, choose a style category and open a reference design. Continue to fabric selection or fabric advice before reviewing a quotation request. Photographs are design references, not confirmed stock.",
       "keywords": []
     },
     "collections-share": {
