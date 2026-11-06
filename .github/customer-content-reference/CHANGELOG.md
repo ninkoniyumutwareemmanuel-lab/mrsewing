@@ -70,3 +70,5 @@ R18: owner-approved white storefront/manual product WhatsApp enquiries; known de
 R19: Shop-local Home; remove cart/card enquiry controls; enquiry only on product detail.
 
 R20: owner-requested removal of product-detail Product Information/Payment & Delivery panel; policies unchanged.
+
+R21: owner confirms Cryptocurrency accepted alongside Mobile Money/Bank Transfer; generic accessible symbols and manual preference enabled,no gateway.

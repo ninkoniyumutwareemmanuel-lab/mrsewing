@@ -172,12 +172,12 @@ try {
   await p.locator("#productVariation").selectOption("qa-a");
   await p.locator("#productQuantity").fill("3");
   await p.getByRole("button", { name: "Add to Cart" }).click();
-  assert.equal(await p.locator("[data-cart-count]").innerText(), "0");
+  assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem("mrsewing-shop-cart-v1")||"[]").reduce((n,item)=>n+item.quantity,0)),0);
   await p.locator("#productQuantity").fill("2");
   await p.getByRole("button", { name: "Add to Cart" }).click();
-  assert.equal(await p.locator("[data-cart-count]").innerText(), "2");
+  assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem("mrsewing-shop-cart-v1"))[0].quantity),2);
   await p.reload();
-  assert.equal(await p.locator("[data-cart-count]").innerText(), "2");
+  assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem("mrsewing-shop-cart-v1"))[0].quantity),2);
   await p.goto("http://127.0.0.1:8000/shop/cart/");
   assert.equal(await p.locator(".cart-line input").inputValue(), "2");
   await p.locator(".cart-line input").fill("1");
@@ -186,7 +186,7 @@ try {
   await fillCommon();
   await p.locator("#deliveryAddress").fill("Synthetic collection preference");
   await p.locator("#paymentMethod").selectOption("Mobile Money");
-  assert(await p.locator("#paymentMethod option").last().isDisabled());
+  assert(!(await p.locator("#paymentMethod option").last().isDisabled()));
   await p.locator("[data-review]").click();
   assert.match(
     await p.locator("[data-review-details]").innerText(),

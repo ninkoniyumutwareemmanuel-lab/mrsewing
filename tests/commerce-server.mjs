@@ -22,6 +22,7 @@ const body = {
   total: 1,
 };
 const payload = validate(body, products);
+for(const method of ["Mobile Money","Bank Transfer","Cryptocurrency"])assert.equal(validate({...body,customer:{...customer,"Preferred Payment Method":method}},products)["Preferred Payment Method"],method);
 assert.equal(payload["Catalogue Subtotal RWF"], 24690);
 assert.equal(JSON.parse(payload.Products)[0].catalogueUnitPriceRwf, 12345);
 for (const bad of [
@@ -33,7 +34,7 @@ for (const bad of [
   { ...body, customer: { ...customer, Consent: "" } },
   {
     ...body,
-    customer: { ...customer, "Preferred Payment Method": "Cryptocurrency" },
+    customer: { ...customer, "Preferred Payment Method": "Unsupported payment" },
   },
   { ...body, customer: { ...customer, botcheck: "spam" } },
 ])

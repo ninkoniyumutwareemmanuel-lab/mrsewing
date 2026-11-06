@@ -41,3 +41,5 @@ R17 corrects observed R16 deployment failure: server-only generated preview page
 R18 white Shop: stage products support terms-gated manual WhatsApp enquiries with canonical product link; owner confirms items available for enquiry. Keep unknown commercial fields unset, API publication gate and production isolation. Bank/MobileMoney manual, cryptocurrency pending clearance, no gateway. See WHITE_SHOP_BRIEF.md.
 
 R19 Shop: local Home/breadcrumb returns /shop/; only global headerHome opens root. No cart navigation or card-level WhatsApp actions. Entire product cards open details; retain detail form and Terms-gated WhatsApp only.
+
+R21 owner confirms acceptedmanualShop payments:MobileMoney,BankTransfer,Cryptocurrency. Replace pendingcryptowording/disabledpreference; genericaccessibleicons allowed. No gateway,unverifiedaccount/wallet/chaininstructions orlegalcomplianceclaims. Stagingonly.

@@ -127,7 +127,7 @@ export function validate(body, products) {
       true,
     );
     if (
-      !["Bank Transfer", "Mobile Money"].includes(
+      !["Bank Transfer", "Mobile Money", "Cryptocurrency"].includes(
         customer["Preferred Payment Method"],
       )
     )
