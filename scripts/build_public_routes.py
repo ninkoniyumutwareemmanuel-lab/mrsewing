@@ -4,7 +4,7 @@ import argparse,json,re
 from html.parser import HTMLParser
 from html import unescape
 from pathlib import Path
-from site_seo import ROOT,DOMAIN,NOINDEX
+from site_seo import ROOT,DOMAIN,NOINDEX,INDEXABLE_ROUTES
 from build_journey import services,projects
 from garment_care import catalog as care_catalog
 from build_completion import routes as completion_routes
@@ -21,6 +21,8 @@ def candidates():
 def public_routes():
     routes=[];titles=set();descs=set()
     for route in candidates():
+        if route not in INDEXABLE_ROUTES:
+            continue
         path=ROOT/'index.html' if route=='/' else ROOT/route.strip('/')/'index.html';assert path.is_file(),route
         source=path.read_text();canonical=re.findall(r'<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"',source)
         assert canonical==[DOMAIN+route],(route,canonical)
