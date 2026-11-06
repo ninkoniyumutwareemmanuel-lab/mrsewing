@@ -57,7 +57,7 @@ for file in files:
    from preservation_contract import append_only
    append_only(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT),(ROOT/file).read_bytes(),file);continue
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==14
+assert len(public_routes())==17+len(__import__('shop_catalog').load())  # R13 adds programme pages and Shop
 assert '60%' in (ROOT/'customer-information/index.html').read_text()
 assert '72 hours' in (ROOT/'refund-policy.html').read_text()
 assert '<table' not in (ROOT/'terms-and-conditions.html').read_text()

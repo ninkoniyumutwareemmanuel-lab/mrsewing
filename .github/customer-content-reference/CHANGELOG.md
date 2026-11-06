@@ -51,3 +51,6 @@ Owner replaces consultationpictureWhatsApp action withoptionalHTTP/HTTPS link an
 
 ##2026-11-06-05 — R12 homepage
 Latest ownerupload authorises sharedsource movinggalleries,home booking/support/consent andscopedSEO changes. PreserveR11 consultation andmain967401e reference.
+
+## R13 — 6 November 2026
+Owner authorises Loyalty/Referral/Shop staging pages and linked requests. Preserve previous versions; original operating reference/payout terms and merchandise remain missing. See COMMERCE_PAGE_BRIEF.md.

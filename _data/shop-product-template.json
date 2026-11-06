@@ -1,0 +1,42 @@
+{
+  "publicationStatus": "draft",
+  "id": "",
+  "slug": "",
+  "name": "",
+  "category": "",
+  "description": "",
+  "approval": {
+    "publicDisplay": false,
+    "source": "",
+    "date": ""
+  },
+  "images": [
+    {
+      "src": "",
+      "alt": "",
+      "width": null,
+      "height": null,
+      "rightsApproved": false,
+      "approvalSource": "",
+      "responsiveSources": []
+    }
+  ],
+  "availability": "Out of Stock",
+  "priceRwf": null,
+  "priceApproved": false,
+  "stockQuantity": 0,
+  "variations": [
+    {
+      "id": "",
+      "size": "",
+      "colour": "",
+      "stockQuantity": 0
+    }
+  ],
+  "specifications": {},
+  "careInstructions": "",
+  "orderingNotes": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "socialImage": ""
+}

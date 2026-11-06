@@ -18,7 +18,7 @@ for p in projects():
  assert 'og:image:alt' in page and p['images'][0]['src'] in page
  assert p.get('editorial') and not p.get('requestedDesign') and not p.get('process')
 for route in routes():assert (ROOT/route.strip('/')/'index.html').exists()
-assert '/shop/' not in public_routes()
+assert {'/shop/','/loyalty-program/','/referral-program/'}.issubset(public_routes())  # R13 owner activation
 for page in ['services/garment-care/index.html','services/garment-care/services/index.html','services/garment-care/planning/index.html']:
  html=(ROOT/page).read_text();assert 'Garment Care' in html and 'confirm' in html.lower()
  assert 'Dry Cleaning' not in html and '<table' not in html

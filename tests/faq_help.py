@@ -61,6 +61,7 @@ from build_homepage import HOMEPAGE_VISUAL_REVIEW
 expected_js=menu_script()+(ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else menu_script()+(ROOT/'_templates/homepage-corrective.js').read_text()+(ROOT/'_templates/order-carousel.js').read_text()+(ROOT/'_templates/homepage-galleries.js').read_text()
 assert (ROOT/'assets/homepage.js').read_text()==expected_js
 p=Section(new,'div',('id','programs'));p.feed(new);block=p.markup
+block=re.sub(r'<a href="/(?:loyalty|referral)-program/">([^<]+)</a>',r'\1',block)  # R13 only authorises these two programme links
 assert block.count('Coming Soon')==1 and not re.search(r'<(?:a|button|input|form)\b',block)
 assert all(name in block for name in ['Loyalty Program','Referral Program','Complimentary Photoshoot'])
 assert not re.search(r'%|\bRWF\b|\b(?:discount|commission|gift|cleaning|enrol|redeem|guaranteed)\b',block,re.I)
@@ -86,7 +87,7 @@ oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc'
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
 assert len(withdrawn)==134
-assert len(public_routes())==14
+assert len(public_routes())==17+len(__import__('shop_catalog').load())  # R13 programme/Shop indexing
 assert all('/faq/'+t['slug']+'/' not in public_routes() for t in topics)
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')
 
