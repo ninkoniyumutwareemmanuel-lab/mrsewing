@@ -4,6 +4,29 @@
     "designRef": "MS-005",
     "route": "/our-work/off-white-graduation-suit/",
     "image": "/h1.jpeg",
+    "images": [
+      {
+        "src": "/h1.jpeg",
+        "alt": "Off-white suit with an asymmetric jacket and matching trousers, shown with graduation regalia",
+        "width": 797,
+        "height": 995,
+        "url": "https://mrsewingfashion.com/h1.jpeg"
+      },
+      {
+        "src": "/h2.jpeg",
+        "alt": "Side view of the off-white graduation suit and fitted jacket",
+        "width": 750,
+        "height": 938,
+        "url": "https://mrsewingfashion.com/h2.jpeg"
+      },
+      {
+        "src": "/h3.jpeg",
+        "alt": "Front view of the off-white outfit beneath a graduation gown",
+        "width": 750,
+        "height": 938,
+        "url": "https://mrsewingfashion.com/h3.jpeg"
+      }
+    ],
     "category": "women",
     "suitCategory": "women-single-breasted"
   },
@@ -12,6 +35,15 @@
     "designRef": "MS-117",
     "route": "/our-work/light-grey-and-navy/",
     "image": "/r7.jpeg",
+    "images": [
+      {
+        "src": "/r7.jpeg",
+        "alt": "Finished light grey double-breasted jacket paired with navy trousers",
+        "width": 2048,
+        "height": 2056,
+        "url": "https://mrsewingfashion.com/r7.jpeg"
+      }
+    ],
     "category": "men",
     "suitCategory": "men-double-breasted"
   },
@@ -20,6 +52,15 @@
     "designRef": "MS-096",
     "route": "/our-work/soft-ivory-tailoring/",
     "image": "/r4.jpeg",
+    "images": [
+      {
+        "src": "/r4.jpeg",
+        "alt": "Finished light ivory jacket and matching trousers with a pale top",
+        "width": 1792,
+        "height": 2400,
+        "url": "https://mrsewingfashion.com/r4.jpeg"
+      }
+    ],
     "category": "women",
     "suitCategory": "women-single-breasted"
   },
@@ -28,6 +69,15 @@
     "designRef": "MS-069",
     "route": "/our-work/cobalt-blue-suit/",
     "image": "/r2.jpeg",
+    "images": [
+      {
+        "src": "/r2.jpeg",
+        "alt": "Completed cobalt blue suit with a patterned tie and lapel accessories",
+        "width": 451,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/r2.jpeg"
+      }
+    ],
     "category": "men",
     "suitCategory": "men-single-breasted"
   },
@@ -36,6 +86,15 @@
     "designRef": "MS-083",
     "route": "/our-work/blue-jacket-black-trousers/",
     "image": "/r3.jpeg",
+    "images": [
+      {
+        "src": "/r3.jpeg",
+        "alt": "Completed bright blue jacket worn with a black top and dark trousers",
+        "width": 658,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/r3.jpeg"
+      }
+    ],
     "category": "women",
     "suitCategory": "women-single-breasted"
   }

@@ -9,3 +9,4 @@
 .faq-help .faq-empty .faq-primary{color:#15180f;text-decoration:none}
 
 .js .faq-help .faq-search{display:block}
+.faq-answer-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.faq-answer-actions button,.faq-answer-actions>a{min-height:44px;border:1px solid #9e8243;padding:10px 14px;background:#201e18;color:#f0d694;border-radius:5px;font:inherit;cursor:pointer;text-decoration:none}.faq-answer-actions :focus-visible{outline:3px solid #f0d694;outline-offset:3px}.faq-copy-status{flex-basis:100%;margin:0;font-size:14px;color:#e0d3b2}

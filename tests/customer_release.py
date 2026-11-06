@@ -9,21 +9,20 @@ names=['Custom Tailoring & Suits','Clothing Alterations & Repairs','Garment Care
 release=json.loads((ROOT/'_data/customer-release.json').read_text());assert [s['title'] for s in release['services']]==names+['VIP Services']
 registry=json.loads((ROOT/'_data/journey-services.json').read_text());assert [s['title'] for s in registry if s['primary']]==names
 assert '5 November 2026' in release['source']
-allowed={'assets/homepage.js','_templates/homepage-corrective.js','index.html','_templates/homepage-sections.html','_templates/homepage-header.html','_templates/homepage-footer.html','_templates/homepage-phase1.css','_data/homepage-guides.json','_data/page-seo.json'}
+allowed={'_templates/homepage.html','scripts/build_homepage.py','assets/homepage.js','_templates/homepage-corrective.js','index.html','_templates/homepage-sections.html','_templates/homepage-header.html','_templates/homepage-footer.html','_templates/homepage-phase1.css','_data/homepage-guides.json','_data/page-seo.json'}
 for f,h in json.loads((ROOT/'docs/homepage-approved-baseline.json').read_text())['files'].items():
- if f=='_templates/homepage.html':
-  original=(ROOT/f).read_text().replace('https://mrsewingfashion.com/services/custom-tailoring/','https://mrsewingfashion.com/collections/')
-  assert hashlib.sha256(original.encode()).hexdigest()==h,f
- elif f not in allowed:assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h,f
+ if f not in allowed:assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h,f
 import subprocess
 from build_homepage import Section,SECTIONS
 for name,(file,tag,identifier) in SECTIONS.items():
- if name in ['header','footer','services']:continue
+ if name in ['header','footer','services','hero','customers','contact','final']:continue  # R12 explicitly authorises these homepage sections; dedicated tests cover their new contracts
  old=subprocess.check_output(['git','show','0e6100183aa03c6929ebb5eca572f215eee40250:'+file],text=True,cwd=ROOT)
- a=Section(old,tag,identifier);a.feed(old);b=Section((ROOT/file).read_text(),tag,identifier);b.feed((ROOT/file).read_text());current=re.sub(r'<a class="hero-highlight hero-highlight-vip".*?</a>','',b.markup,flags=re.S) if name=='hero' else b.markup;current=re.sub(r'<a class="hero-highlight" href="/services/(?:custom-tailoring|alterations|garment-care|mobile-fitting)/">(.*?)</a>',r'<div class="hero-highlight">\1</div>',current,flags=re.S);assert a.markup==current.replace('href="/request/?general=1"','href="#quotation"'),name
+ a=Section(old,tag,identifier);a.feed(old);b=Section((ROOT/file).read_text(),tag,identifier);b.feed((ROOT/file).read_text());current=re.sub(r'<a class="hero-highlight hero-highlight-vip".*?</a>','',b.markup,flags=re.S) if name=='hero' else b.markup;current=re.sub(r'<a class="hero-highlight" href="/services/(?:custom-tailoring|alterations|garment-care|mobile-fitting)/">(.*?)</a>',r'<div class="hero-highlight">\1</div>',current,flags=re.S);current=re.sub(r'<a href="/(?:loyalty|referral)-program/">([^<]+)</a>',r'\1',current);assert a.markup==current.replace('href="/request/?general=1"','href="#quotation"'),name
 facts=json.loads((ROOT/'_data/customer-information.json').read_text());assert not facts['cotton'];assert facts['priceScheduleStatus'].startswith('UNVERIFIED')
 assert all(p['source'].startswith('S-OWNER-2026-11-05') for p in release['pages'].values())
-for route in ['/customer-information/','/guides/fabrics/','/delivery-and-collection/','/benefits/','/customer-support/']:assert route in public_routes()
+for route in ['/customer-information/','/guides/fabrics/','/delivery-and-collection/','/benefits/','/customer-support/']:
+ assert (ROOT/route.strip('/')/'index.html').is_file()
+ assert (route in public_routes())==(route=='/guides/fabrics/')
 for route in ['/request/','/services/custom-tailoring/design-choice/','/services/custom-tailoring/standard-order/','/services/custom-tailoring/special-order/']:assert route not in public_routes()
 for route in ['/suits/','/m-classicsuits/','/m-doublebreasted/','/w-classicsuits/']:assert route not in public_routes()
 for text in ['35%','25%','60%','24 support working hours','22:00']:

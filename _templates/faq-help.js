@@ -34,17 +34,6 @@
     if (!entries) entries=data.entries.map(entry => {const text=[entry.question,entry.topic,entry.answer,...entry.keywords].join(' ');return {...entry,haystack:basic(text)+' '+normalise(text)};});
     return entries;
   }
-  function excerpt(answer, text) {
-    const words = basic(text).split(' ').filter(Boolean);
-    for (const group of data.synonyms) if (group.some(term => words.includes(basic(term)))) words.push(...group.map(basic));
-    const lower = answer.toLowerCase();
-    const positions = words.map(word => lower.indexOf(word)).filter(pos => pos>=0);
-    let start = positions.length ? Math.max(0,Math.min(...positions)-45) : 0;
-    if (start) { const nextSpace=answer.indexOf(' ',start); if(nextSpace>=0)start=nextSpace+1; }
-    let end = Math.min(answer.length,start+200);
-    if (end<answer.length) { const space=answer.lastIndexOf(' ',end);if(space>start)end=space; }
-    return (start?'… ':'')+answer.slice(start,end)+(end<answer.length?' …':'');
-  }
   function render(updateUrl=true) {
     const value = query.value.slice(0,160).trim(), terms = normalise(value).split(' ').filter(Boolean);
     clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;
@@ -60,8 +49,8 @@
       const link=document.createElement('a');link.href=entry.url;
       const topic=document.createElement('small');topic.textContent=entry.topic;
       const title=document.createElement('h3');title.textContent=entry.question;
-      const text=document.createElement('p');text.textContent=excerpt(entry.answer,value);
-      link.append(topic,title,text);item.append(link);list.append(item);
+      const text=document.createElement('p');text.textContent=entry.answer;
+      link.append(topic,title);item.append(link,text,window.MrFaqActions.make(entry.answer,entry.source));list.append(item);
     }
   }
   form.hidden=false;

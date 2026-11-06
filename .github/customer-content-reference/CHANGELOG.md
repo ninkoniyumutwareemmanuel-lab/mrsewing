@@ -42,3 +42,35 @@ Latest explicit owner clears exact ordinary suit/tuxedo amounts for staging, rep
 
 ##2026-11-06-02 — R9 Version1 blockers
 Owner permits safe email-only Standard requests and exact production-apex API host;private features stay disabled pending verification. Existing design,prices,fields and prior versions preserved.
+
+##2026-11-06-03 — R10 consultation
+Latest owner approves3consultation services,dynamic methods/fields andrequired dates/times. R9 freeemail/protected private settings retained. Devfast-forwarded62commits frommain to967401e withindexing policy preserved;main untouched.
+
+##2026-11-06-04 — R11
+Owner replaces consultationpictureWhatsApp action withoptionalHTTP/HTTPS link andinspirationguidance. Universalemailflow andR10otherrequirements preserved.
+
+##2026-11-06-05 — R12 homepage
+Latest ownerupload authorises sharedsource movinggalleries,home booking/support/consent andscopedSEO changes. PreserveR11 consultation andmain967401e reference.
+
+## R13 — 6 November 2026
+Owner authorises Loyalty/Referral/Shop staging pages and linked requests. Preserve previous versions; original operating reference/payout terms and merchandise remain missing. See COMMERCE_PAGE_BRIEF.md.
+
+## R14 — 6 November 2026
+Safely synchronised13owner-uploaded product images; inventoried165WebP/21candidates, prepared unpublished drafts with no commercial facts inferred. Registered new assets to repair the strict existing build. Category and mobile Shop preparation only; preserve all approved journeys. See SHOP_IMAGE_PREPARATION_BRIEF.md.
+
+## R15 — 6 November 2026
+Owner changes moving photos to right-to-left, requires same-page support consent and shared canonical selected-photo→fabric→quotation flow from collections and Our Work. Existing service enquiries remain distinct. Five approved project pages receive scoped SEO eligibility. See FINAL_JOURNEY_PAGE_BRIEF.md.
+
+R16 / 2026-11-06-09: owner-approved staging-only Shop visual preview; commercial publication remains gated.
+
+R17: owner-observed failed deployed preview; add server-side staging Shop route independent of CI preview variables.
+
+R18: owner-approved white storefront/manual product WhatsApp enquiries; known details only, crypto clearance pending.
+
+R19: Shop-local Home; remove cart/card enquiry controls; enquiry only on product detail.
+
+R20: owner-requested removal of product-detail Product Information/Payment & Delivery panel; policies unchanged.
+
+R21: owner confirms Cryptocurrency accepted alongside Mobile Money/Bank Transfer; generic accessible symbols and manual preference enabled,no gateway.
+
+R22: Version2attachment plushomepagepayments;source/journey/FAQ/VIP/media/UI rules recorded,no productionauthorisation.

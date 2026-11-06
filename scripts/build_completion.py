@@ -60,7 +60,7 @@ def legacy_information_page(kind):
 def outputs():
     out={}
     for kind in ['services','planning']:out[ROOT/'services/garment-care'/kind/'index.html']=care_info_page(kind)
-    for kind in ['shop','our-process','made-to-measure']:out[ROOT/kind/'index.html']=information_page(kind)
+    for kind in ['our-process','made-to-measure']:out[ROOT/kind/'index.html']=information_page(kind)
     return out
 
 def routes():return ['/services/garment-care/services/','/services/garment-care/planning/','/shop/','/our-process/','/made-to-measure/']

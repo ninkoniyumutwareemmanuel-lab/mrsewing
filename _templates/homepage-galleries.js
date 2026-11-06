@@ -1,0 +1,2 @@
+/* Source-driven motion: no visible playback controls; preference and keyboard stopping. */
+(()=>{const preference=matchMedia('(prefers-reduced-motion: reduce)');document.documentElement.setAttribute('data-galleries-ready','');document.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'&&e.target.closest('.moving-gallery'))document.documentElement.setAttribute('data-galleries-paused','');});document.addEventListener('keydown',e=>{if(e.key==='Escape')document.documentElement.setAttribute('data-galleries-paused','');});})();

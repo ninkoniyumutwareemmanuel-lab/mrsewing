@@ -5,7 +5,7 @@ Existing-public photographs are carried into staging pending owner rights review
 Unreferenced originals are inventoried but excluded from showroom publication.
 No different photographs have been grouped by visual similarity.
 
-15 existing-public designs; 146 original garment records; 368 total image assets inventoried.
+15 existing-public designs; 146 original garment records; 381 total image assets inventoried.
 
 | ID | Original | Showroom | Provenance | Rights |
 | --- | --- | --- | --- | --- |

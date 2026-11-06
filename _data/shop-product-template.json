@@ -1,0 +1,35 @@
+{
+  "publicationStatus": "draft",
+  "id": "",
+  "slug": "",
+  "name": "",
+  "category": "",
+  "description": "",
+  "approval": {
+    "publicDisplay": false,
+    "source": "",
+    "date": ""
+  },
+  "images": [
+    {
+      "src": "",
+      "alt": "",
+      "width": null,
+      "height": null,
+      "rightsApproved": false,
+      "approvalSource": "",
+      "responsiveSources": []
+    }
+  ],
+  "availability": null,
+  "priceRwf": null,
+  "priceApproved": false,
+  "stockQuantity": null,
+  "variations": [],
+  "specifications": {},
+  "careInstructions": "",
+  "orderingNotes": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "socialImage": ""
+}

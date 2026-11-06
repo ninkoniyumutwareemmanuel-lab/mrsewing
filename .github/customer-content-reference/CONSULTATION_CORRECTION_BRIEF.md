@@ -1,0 +1,5 @@
+#Consultation correction brief
+> CURRENT R11 — Consultation correction,6November2026. Latest owner decision supersedes R10 consultationWhatsApp picture button only. All consultation requests always use existing Continue→Review→Submit/Web3Forms flow. Yesdesign path shows optionalHTTP/HTTPS DesignReferenceLink andexact follow-upWhatsApp explanation;no upload,button orautomaticWhatsApp navigation. No path shows inspiration guidance andonlyapprovedmen/women absolute productioncollectionURLs innewtabs;Othergets generalguidance,no inventedroute. Preserve3services/methods/visitfields/mobileNotice/schedule/consent/review/provider/confirmation anddedicatedservices. Stagingonly,no production/main/credentials/provider changes.
+
+
+Consultedcurrentmaster/matrix/unresolved/page map,R8–R11 andconsultationcomponent. Actualscope:/booking/ conditionaldesigncontrols andscopedscript/tests only;Businesshours,contacts,payments,travelconditions,privacy/terms andoperationaleligibility unchanged. Use exactownerURLs,notinventedcollections. Review/emailincludesonlyactivevalidoptionalLink. No actualinbox claim.

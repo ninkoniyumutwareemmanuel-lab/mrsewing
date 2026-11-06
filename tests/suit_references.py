@@ -16,7 +16,7 @@ assert sum(bool(c['designIds']) for c in cats)==8
 for c in cats:
  rows=references(c,pool);page=(ROOT/c['route'].strip('/')/'index.html').read_text();assert c['route'] in page
  if rows:
-  assert c['route'] in public_routes() and 'data-publication-hold' not in page
+  assert c['route'] not in public_routes() and 'content="noindex, follow"' in page and 'data-publication-hold' not in page
   assert all(d['id'] in page for d in rows)
  else:
   assert c['route'] not in public_routes() and 'data-publication-hold' in page and 'noindex, follow' in page
@@ -32,9 +32,11 @@ for file in ['_data/customer-projects.json']:
  assert (ROOT/file).read_bytes()==subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),file
 print('PASS: 8 populated categories/14 assigned references, append-only IDs and protected homepage/media.')
 
-original_home=subprocess.check_output(['git','show','433107e:_templates/homepage-sections.html'],cwd=ROOT,text=True)
-import re
-assert re.sub(r'<a class="hero-highlight" href="/services/(?:custom-tailoring|alterations|garment-care|mobile-fitting)/">(.*?)</a>',r'<div class="hero-highlight">\1</div>',(ROOT/'_templates/homepage-sections.html').read_text(),flags=re.S).replace('href="/request/?general=1"','href="#quotation"')==original_home
+from build_homepage import Section,SECTIONS
+for name,(file,tag,identifier) in SECTIONS.items():
+ if name in ['hero','customers','contact','final']:continue
+ before=subprocess.check_output(['git','show','e2139dec2d96c1ec0d4083e860d9ab6445c145a7:'+file],cwd=ROOT,text=True)
+ a=Section(before,tag,identifier);a.feed(before);b=Section((ROOT/file).read_text(),tag,identifier);b.feed((ROOT/file).read_text());current=b.markup.replace('aria-label="Online Shop"','aria-label="Shop — Coming Soon" title="Shop — Coming Soon; online purchasing is not available yet"');current=re.sub(r'<a href="/(?:loyalty|referral)-program/">([^<]+)</a>',r'\1',current);assert a.markup==current,name
 old=json.loads(subprocess.check_output(['git','show','433107e:_data/measurement-guide-images.json'],cwd=ROOT,text=True));now=json.loads((ROOT/'_data/measurement-guide-images.json').read_text())
 assert {m['id']:m for m in old['measurements']}=={m['id']:m for m in now['measurements']}
 assert now['measurements'][0]['id']=='neck' and now['measurements'][-1]['id']=='trouser-length'

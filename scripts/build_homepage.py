@@ -31,7 +31,6 @@ SECTIONS = {
     'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
     'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
     'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
-    'quote_dialog': ('_templates/homepage-quotation.html', 'dialog', ('id', 'quotation')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
 
@@ -145,6 +144,12 @@ def render():
         template = template.replace('{{' + key + '}}', markup)
         section_styles = re.findall(r'<style[^>]*>(.*?)</style>', source, re.S)
         styles.extend(section_styles)
+    from payment_methods import payment_methods
+    template=template.replace('{{payment_methods}}','<section id="payment-methods" class="home-section home-payments"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Pay with confidence</p><h2>Payment Methods</h2><p>We accept Mobile Money, Bank Transfer and Cryptocurrency. Our team provides payment instructions after reviewing your request.</p></div>'+payment_methods()+'</div></section>')
+    styles.append((ROOT/'_templates/payment-methods.css').read_text())
+    from homepage_galleries import suit_section,moments_gallery
+    template=template.replace('{{suit_collections}}',suit_section()).replace('{{moments_gallery}}',moments_gallery())
+    styles.append((ROOT/'_templates/homepage-galleries.css').read_text())
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
     styles.append((ROOT/'_templates/homepage-motion.css').read_text())
@@ -166,7 +171,7 @@ def main():
     args = parser.parse_args()
     output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
-    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else (ROOT/'_templates/homepage-interactions.js').read_text() + shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text())
+    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text() + (ROOT/'_templates/homepage-galleries.js').read_text())
     navigation_path = ROOT / 'assets/homepage.js'
     if args.check:
         if navigation_path.read_text() != navigation:
