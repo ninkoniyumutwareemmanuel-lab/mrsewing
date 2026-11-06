@@ -146,7 +146,7 @@ def request_page(special=False):
 def information(route):
  d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],d['intro'])
  if route=='/guides/fabrics/':
-  body+='<p><a class="home-button home-button-gold" data-own-fabric href="/request/custom-tailoring/?fabricChoice=own">I Have My Own Fabric</a></p><p>Customer-supplied fabric is assessed for suitability before requirements and quotation are agreed.</p>'+guides.fabric_guide()
+  body+='<p><a class="home-button home-button-gold" data-own-fabric href="/services/custom-tailoring/special-order/?fabricChoice=own">I Have My Own Fabric</a></p><p>Customer-supplied fabric is assessed for suitability before requirements and quotation are agreed.</p>'+guides.fabric_guide()
   from selected_designs import design_media
   from portfolio_requests import model as portfolio_model
   body+='<script id="requestDesignMedia" type="application/json">'+json.dumps(design_media()).replace('<','\\u003c')+'</script><script id="portfolioRequestData" type="application/json">'+json.dumps(portfolio_model()).replace('<','\\u003c')+'</script><script src="/assets/selected-design.js" defer></script>'
