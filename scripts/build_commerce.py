@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import quote
 from shop_catalog import ROOT,load,route,STATUSES,categories as shop_categories,category_route
 from shop_preview import enabled as preview_enabled,candidates as preview_candidates
+from public_enquiries import approved as public_enquiries
 from customer_site import frame
 from site_seo import finalize,DOMAIN
 
@@ -22,6 +23,7 @@ def form(kind,extra='',referral=False):
  return '<form method="post" action="/api/shop-request" data-commerce-form="'+kind+'" novalidate><div data-fields>'+common_fields()+extra+consent(referral)+review('Submit Participation Request' if referral else 'Submit Quotation Request' if kind=='quote' else 'Submit Purchase Request')
 def page(url,title,desc,body,products=None,product=None):
  source=frame(url,title,desc,'<div class="commerce'+(' storefront' if url.startswith('/shop/') else '')+'">'+body+'<noscript><p class="notice">JavaScript is needed for cart and request submission. You can still read the information and use our Contact Us page for assistance.</p></noscript></div>')
+ if url.startswith('/shop/'):source=source.replace('class="tailoring-page customer-site"','class="tailoring-page customer-site shop-page"')
  source=source.replace('</head>','<link rel="stylesheet" href="/assets/commerce.css"><script src="/assets/commerce.js" defer></script></head>',1)
  payload={'products':products if products is not None else []}
  if url.startswith('/shop/'):
@@ -68,7 +70,7 @@ def card(p):return '<a class="product-card" href="'+route(p)+'" data-product-car
 def category_nav(products,selected=None):
  return '<nav class="shop-categories" aria-label="Product categories">'+a('/shop/','All Products')+''.join('<a href="'+category_route(c)+'"'+(' aria-current="page"' if c==selected else '')+'>'+e(c)+'</a>' for c in shop_categories(products))+'</nav>'
 from payment_methods import payment_methods
-def shop(products,selected=None,drafts=None):
+def shop(products,selected=None,drafts=None,public=False):
  drafts=drafts or []
  display=products+drafts
  render=lambda p:draft_card(p) if p in drafts else card(p)
@@ -83,8 +85,8 @@ def shop(products,selected=None,drafts=None):
   body+='<section class="shop-assurance"><h2>Shop with Personal Assistance</h2><p>Choose a product to see its details, then enquire on WhatsApp. We confirm the available options, final amount and delivery or collection arrangements before you pay.</p><h3>Payment Options</h3>'+payment_methods()+'<p>Payment instructions are provided directly by our team after review.</p></section>'
  if selected:
   body=body.replace('<h1>Online Shop</h1>','<h1>'+e(selected)+'</h1>')
-  return (noindex if drafts else lambda x:x)(page(category_route(selected),selected+' | Shop','Browse '+selected.lower()+' in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation.',body,products))
- return (noindex if drafts else lambda x:x)(page('/shop/','Online Shop','Browse the Mr Sewing Fashion product catalogue in Rwanda. Request availability and pricing, or submit a purchase request for approved in-stock products.',body,products))
+  return (noindex if drafts and not public else lambda x:x)(page(category_route(selected),selected+' | Shop','Browse '+selected.lower()+' in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation.',body,products))
+ return (noindex if drafts and not public else lambda x:x)(page('/shop/','Online Shop','Browse the Mr Sewing Fashion product catalogue in Rwanda. Request availability and pricing, or submit a purchase request for approved in-stock products.',body,products))
 def product_page(p,products):
  body=shop_nav()+category_nav(products,p['category'])+'<p>'+a(category_route(p['category']),p['category'])+' / '+e(p['name'])+'</p><div class="product-layout"><div>'+photo(p['images'][0],True)+'<div class="photo-strip">'+''.join(photo(i) for i in p['images'][1:])+'</div></div><div><h1>'+e(p['name'])+'</h1><p>'+e(p['description'])+'</p><p>'+e(p['availability'])+'</p>'+('<p class="price">RWF '+format(p['priceRwf'],',')+'</p>' if p.get('priceRwf') else '')+'<p>Product ID: '+e(p['id'])+'</p><form id="productSelection" data-product-id="'+e(p['id'])+'"><label for="productVariation">Size / Colour</label><select id="productVariation" required><option value="">Select a size and colour</option>'+''.join('<option value="'+e(v['id'])+'"'+(' disabled' if p['availability']=='Available in Stock' and v['stockQuantity']==0 else '')+'>'+e(v['size']+' / '+v['colour'])+(' — '+str(v['stockQuantity'])+' available' if p['availability']=='Available in Stock' else '')+'</option>' for v in p['variations'])+'</select><label for="productQuantity">Quantity</label><input id="productQuantity" type="number" min="1" step="1" value="1" required><div class="actions"><button type="submit" class="home-button home-button-gold"'+(' disabled' if p['availability']=='Out of Stock' else '')+'>'+('Add to Cart' if p['availability']=='Available in Stock' else 'Request a Quote' if p['availability']=='Available on Orders' else 'Out of Stock')+'</button></div><p id="productStatus" role="status"></p></form><p>Recorded availability is subject to confirmation; requests do not reserve stock.</p></div></div><section><h2>Product Specifications</h2><dl>'+''.join('<dt>'+e(k)+'</dt><dd>'+e(v)+'</dd>' for k,v in p['specifications'].items())+'</dl><h2>Care Instructions</h2><p>'+e(p['careInstructions'])+'</p><h2>Ordering Notes</h2><p>'+e(p['orderingNotes'])+'</p></section>'
  if p['availability']=='Available on Orders':body+='<dialog id="quoteDialog" aria-labelledby="quoteTitle"><button type="button" class="home-button dialog-close" data-close>Close</button><h2 id="quoteTitle">Request a Quote</h2><p id="quoteContext"></p>'+form('quote','<label for="quoteRequirements">Additional requirements (optional)</label><textarea id="quoteRequirements" name="Additional Requirements" maxlength="2000" rows="3"></textarea>')+'</dialog>'
@@ -95,11 +97,11 @@ def cart(products):
 def routes():return ['/loyalty-program/','/referral-program/','/shop/','/shop/cart/']+[route(p) for p in load()]+[category_route(c) for c in shop_categories()]
 def outputs(products=None):
  ps=load() if products is None else products
- drafts=preview_candidates() if products is None and preview_enabled() else []
- out={ROOT/'loyalty-program/index.html':loyalty(),ROOT/'referral-program/index.html':referral(),ROOT/'shop/index.html':shop(ps,drafts=drafts),ROOT/'shop/cart/index.html':cart(ps)}
+ drafts=public_enquiries() if products is None else []
+ out={ROOT/'loyalty-program/index.html':loyalty(),ROOT/'referral-program/index.html':referral(),ROOT/'shop/index.html':shop(ps,drafts=drafts,public=True),ROOT/'shop/cart/index.html':cart(ps)}
  for p in ps:out[ROOT/route(p).strip('/')/'index.html']=product_page(p,ps)
  for p in drafts:out[ROOT/route(p).strip('/')/'index.html']=draft_page(p,ps+drafts)
- for c in shop_categories(ps+drafts):out[ROOT/category_route(c).strip('/')/'index.html']=shop(ps,c,drafts)
+ for c in shop_categories(ps+drafts):out[ROOT/category_route(c).strip('/')/'index.html']=shop(ps,c,drafts,public=True)
  # Server-only preview snapshot: independent of unverified CI preview variables.
  # The Pages route enforces the exact staging project hostname on every request.
  review=preview_candidates()
@@ -125,5 +127,5 @@ if __name__=='__main__':
   if args.check:
    assert path.exists() and path.read_text()==value,'Stale commerce output: '+str(path)
   else:path.parent.mkdir(parents=True,exist_ok=True);path.write_text(value)
- print('Shop draft preview: '+('enabled for verified staging build' if preview_enabled() else 'disabled; published products only'))
+ print('Public enquiry displays: '+str(len(public_enquiries()))+'; sale catalogue remains publication-validated')
  print('PASS: programme pages and '+str(len(load()))+' verified merchandise products '+('synchronized' if args.check else 'generated'))

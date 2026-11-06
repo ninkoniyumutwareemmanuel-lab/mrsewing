@@ -214,6 +214,9 @@ def outputs():
  from v2_pages import subscription_page,media_page
  out[ROOT/'request/vip-subscription/index.html']=subscription_page();out[ROOT/'media-kit/index.html']=media_page()
  out[ROOT/'request/index.html']=request_page();out[ROOT/(BASE+'design-choice/').strip('/')/'index.html']=design_choice()
+ config=json.loads((ROOT/'_data/public-api.json').read_text());assert config['backendOrigin']=='https://main.mrsewing-staging.pages.dev'
+ out[ROOT/'assets/public-api.js']=(ROOT/'_templates/public-api.js').read_text().replace('/* public-api-config */{}',json.dumps(config))
+ out[ROOT/'functions/_lib/public-api-config.js']='// Non-secret public intake routing.\nexport const config='+json.dumps(config)+';\n'
  out[ROOT/'assets/customer-site.css']=(ROOT/'_templates/customer-site.css').read_text()
  import shared_components as shared
  from suit_references import categories,category_label

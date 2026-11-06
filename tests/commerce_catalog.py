@@ -29,7 +29,8 @@ assert '<meta property="og:image" content="https://mrsewingfashion.com/hero-cust
 assert '<meta name="twitter:image" content="https://mrsewingfashion.com/hero-custom-tailoring.webp">' in source
 assert '<meta name="robots" content="noindex, follow">' in (ROOT/'shop/cart/index.html').read_text()
 assert 'shop/qa-only-product/index.html' not in json.loads((ROOT/'_data/shop-generated-pages.json').read_text())
-assert (ROOT/'booking/index.html').read_text().replace('aria-label="Online Shop"','aria-label="Shop — Coming Soon" title="Shop — Coming Soon; online purchasing is not available yet"')==subprocess.check_output(['git','show','09be5c7:booking/index.html'],cwd=ROOT,text=True)
+from main_preservation import normalise_runtime
+assert normalise_runtime((ROOT/'booking/index.html').read_text()).replace('aria-label="Online Shop"','aria-label="Shop — Coming Soon" title="Shop — Coming Soon; online purchasing is not available yet"')==subprocess.check_output(['git','show','09be5c7:booking/index.html'],cwd=ROOT,text=True)
 # R22 explicitly changes homepage gallery control and adds payment methods.
 from v2_preservation import assert_home_protected
 assert_home_protected()

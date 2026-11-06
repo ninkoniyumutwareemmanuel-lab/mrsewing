@@ -15,12 +15,12 @@ assert not load()
 prod=outputs();assert 'data-shop-whatsapp-form' not in prod[ROOT/'shop/index.html']
 os.environ.update(base);preview=outputs()
 assert preview[ROOT/'shop/index.html'].count('class="product-card draft-card"')==21
-assert '<meta name="robots" content="noindex, nofollow"' in preview[ROOT/'shop/index.html']
+assert '<meta name="robots" content="index, follow"' in prod[ROOT/'shop/index.html']
 assert preview[ROOT/'functions/_lib/shop-runtime.js']==prod[ROOT/'functions/_lib/shop-runtime.js']
 for p in ps:
  html=preview[ROOT/'shop'/p['slug']/'index.html']
  assert 'data-shop-whatsapp-form' in html and 'productSelection' not in html and 'data-commerce-form' not in html
  assert '"@type": "Product"' not in html and '"@type": "Offer"' not in html
  assert 'noindex, nofollow' in html
- assert ROOT/'shop'/p['slug']/'index.html' not in prod
-print('PASS 21 drafts;6categories;8gate scenarios;production exclusion;WhatsApp enquiry only/no offers/schema;unchanged API catalogue')
+ assert ROOT/'shop'/p['slug']/'index.html' in prod
+print('PASS 21 drafts;6categories;8gate scenarios;public enquiry display approval; full-sale exclusion;WhatsApp enquiry only/no offers/schema;unchanged API catalogue')

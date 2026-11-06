@@ -85,5 +85,5 @@ document.addEventListener('visibilitychange',reset);motion.addEventListener('cha
 window.addEventListener('pagehide',stop);window.addEventListener('pageshow',reset);
 reorder();root.dataset.enhanced='true';root.querySelector('.carousel-controls').hidden=false;reset();
 })();
-/* Source-driven motion: no visible playback controls; preference and keyboard stopping. */
-(()=>{const preference=matchMedia('(prefers-reduced-motion: reduce)');document.documentElement.setAttribute('data-galleries-ready','');document.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'&&e.target.closest('.moving-gallery'))document.documentElement.setAttribute('data-galleries-paused','');});document.addEventListener('keydown',e=>{if(e.key==='Escape')document.documentElement.setAttribute('data-galleries-paused','');});})();
+/* Continuous source-driven motion. Normal phone scrolling never stops a gallery. */
+(()=>{'use strict';document.documentElement.setAttribute('data-galleries-ready','');document.addEventListener('keydown',e=>{if(e.key==='Escape')document.documentElement.setAttribute('data-galleries-paused','');});})();

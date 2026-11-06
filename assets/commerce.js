@@ -412,7 +412,7 @@
       const controller = new AbortController(),
         timer = setTimeout(() => controller.abort(), 20000);
       try {
-        const response = await fetch("/api/shop-request", {
+        const response = await fetch(window.MrPublicAPI?.url("/api/shop-request")||"/api/shop-request", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

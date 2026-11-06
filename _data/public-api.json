@@ -1,0 +1,6 @@
+{
+  "backendOrigin": "https://main.mrsewing-staging.pages.dev",
+  "productionOrigins": ["https://mrsewingfashion.com", "https://www.mrsewingfashion.com"],
+  "paths": ["/api/selected-design-request", "/api/shop-request"],
+  "purpose": "Existing Cloudflare main-branch runtime supplies validated public email enquiries for the static live site. No private storage, staff or payment endpoints."
+}

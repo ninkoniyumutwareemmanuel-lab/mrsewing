@@ -74,3 +74,5 @@ R20: owner-requested removal of product-detail Product Information/Payment & Del
 R21: owner confirms Cryptocurrency accepted alongside Mobile Money/Bank Transfer; generic accessible symbols and manual preference enabled,no gateway.
 
 R22: Version2attachment plushomepagepayments;source/journey/FAQ/VIP/media/UI rules recorded,no productionauthorisation.
+
+R23: explicitmain/liveparity+phonepriority;21approvedpublicenquiry displays,validatedmain-runtimeAPIrouting,normaltouchno permanentmotionstop.

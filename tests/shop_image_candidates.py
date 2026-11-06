@@ -22,7 +22,8 @@ for p in raw:
  except AssertionError:pass
  for f in ['shop/index.html','shop/cart/index.html','functions/_lib/shop-runtime.js','sitemap.xml']:
   assert p['id'] not in (ROOT/f).read_text(),(p['id'],f)
- assert not (ROOT/'shop'/p['slug']/'index.html').exists()
+ assert (ROOT/'shop'/p['slug']/'index.html').is_file()
+ assert 'data-shop-whatsapp-form' in (ROOT/'shop'/p['slug']/'index.html').read_text()
 try:load({'schemaVersion':1,'products':[raw[0],raw[0]]});raise RuntimeError('Duplicate drafts accepted')
 except AssertionError:pass
 assert not categories() and category_route("Men's Suits")=='/shop/category/mens-suits/'
@@ -33,6 +34,9 @@ for path in subprocess.check_output(['git','ls-tree','-r','--name-only','626ccd8
    from v2_preservation import assert_home_protected
    assert_home_protected();continue
   current=(ROOT/path).read_bytes()
+  if path in ['booking/index.html','loyalty-program/index.html','referral-program/index.html']:
+   from main_preservation import normalise_runtime
+   current=normalise_runtime(current.decode()).encode()
   if path=='index.html':current=current.replace(b'from{transform:translateX(0)}to{transform:translateX(-50%)}',b'from{transform:translateX(-50%)}to{transform:translateX(0)}').replace(b'data-whatsapp-modal href="/whatsapp/"',b'href="/whatsapp/"')  # R15 exact authorisations
   assert current==subprocess.check_output(['git','show','626ccd8:'+path],cwd=ROOT),path
-print('PASS165 real WebP decode;21 unique drafts/8 suit-reference matches; all commercial unknowns null; publication/duplicate gates; no draft pages/schema/server catalogue; originals/home/booking/programmes preserved')
+print('PASS165 real WebP decode;21 unique drafts/8 suit-reference matches; all commercial unknowns null; publication/duplicate gates; owner-approved enquiry pages only; no sale offers/server catalogue; originals/home/booking/programmes preserved')

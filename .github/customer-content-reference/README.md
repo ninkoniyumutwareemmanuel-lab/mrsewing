@@ -2,15 +2,15 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-06-15**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+Current reviewed reference: **versions/2026-11-06-16**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-06-15/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-06-15/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-06-15/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-06-15/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-06-15/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-06-16/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-06-16/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-06-16/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-06-16/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-06-16/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules

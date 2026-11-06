@@ -1,6 +1,6 @@
 {
-  "release": "v2-staging-owner-review-2026-11-06-r22",
-  "branch": "phase1/customer-journey-repairs",
+  "release": "v2-production-parity-mobile-2026-11-06-r23",
+  "branch": null,
   "commit": null,
   "note": "When built in Cloudflare CI, commit is populated from CF_PAGES_COMMIT_SHA."
 }

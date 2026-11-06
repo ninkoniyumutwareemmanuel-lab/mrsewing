@@ -1,0 +1,91 @@
+{
+  "scope": "public-enquiry-display-only",
+  "ownerApproval": "Owner instruction,6November2026: investigate and fix main so the live Shop matches the staging Shop with its21existing products. Public photographs/names/details and manualWhatsApp enquiries only; no price/stock/checkout approval.",
+  "date": "2026-11-06",
+  "products": [
+    {
+      "id": "SHOP-DRAFT-001",
+      "displayFingerprint": "46184915864e75d2a62fc242bb0034e92e8e33cd53645c470192fdbd4df15583"
+    },
+    {
+      "id": "SHOP-DRAFT-002",
+      "displayFingerprint": "55ec44e2a9d0b410709fba5687114ace40ac3fefabc4cab82eb2d06fe3d62df2"
+    },
+    {
+      "id": "SHOP-DRAFT-003",
+      "displayFingerprint": "f922b9ee2dc6d0bfc6cf648aa2a47b290210e7ed42e320de937949e2a90013f7"
+    },
+    {
+      "id": "SHOP-DRAFT-004",
+      "displayFingerprint": "63476aea2b3a67c97f8cba12a126b531a1ebec24a9ec957d2f5534dc1d0b3120"
+    },
+    {
+      "id": "SHOP-DRAFT-005",
+      "displayFingerprint": "fceea0493517831670b5b139c690f752318961ed43e5d2941b5c369fc0396c76"
+    },
+    {
+      "id": "SHOP-DRAFT-006",
+      "displayFingerprint": "ac062668dd3858e8b650dd9a864f53a909136f97aceb53c66a4551db1885d71f"
+    },
+    {
+      "id": "SHOP-DRAFT-007",
+      "displayFingerprint": "7917dba563900f75ca733485631cc42ad61c1ba71983908b172f34413ca88a01"
+    },
+    {
+      "id": "SHOP-DRAFT-008",
+      "displayFingerprint": "7a73fb3440079e894a0502991f933beaa5a040295ce627dc0102a572847dea53"
+    },
+    {
+      "id": "SHOP-DRAFT-009",
+      "displayFingerprint": "6802374e01b7c05eeeef6d477838841515fae95511e34750190adee3cf8f9707"
+    },
+    {
+      "id": "SHOP-DRAFT-010",
+      "displayFingerprint": "90667df49e08525955bbe4bc11dcb7d125ebba273884eaeca308f25d49a91db7"
+    },
+    {
+      "id": "SHOP-DRAFT-011",
+      "displayFingerprint": "7a0cdab926fa498cfc664cdf98951ebcc08adafbfc3df8f31e9ee525e48d5cf1"
+    },
+    {
+      "id": "SHOP-DRAFT-012",
+      "displayFingerprint": "731064d309d0a83444576ac61d03564668504d751a953d1f855a2bff7923663b"
+    },
+    {
+      "id": "SHOP-DRAFT-013",
+      "displayFingerprint": "bfa1b36c98ae1ec0cd412065339eb500c0789a6d18b66159052cef869b397d16"
+    },
+    {
+      "id": "SHOP-DRAFT-014",
+      "displayFingerprint": "ccf90b516c70b9b70edd65b2bd7bec8cd503781982ae263a82eccc42360e408a"
+    },
+    {
+      "id": "SHOP-DRAFT-015",
+      "displayFingerprint": "31bd5708126cefb7a8e527ed98ef29c5fc532d9850fd032217ce5ef6b57a2b9b"
+    },
+    {
+      "id": "SHOP-DRAFT-016",
+      "displayFingerprint": "5967d405fd4674f92a0e2801a21d5bcb2451b1c2980e1d828bd1d6bcca303db3"
+    },
+    {
+      "id": "SHOP-DRAFT-017",
+      "displayFingerprint": "59995cc8026ebb34ab5857770aa3df360d6a6e60ae1e66e1b3a799f5f7c858a8"
+    },
+    {
+      "id": "SHOP-DRAFT-018",
+      "displayFingerprint": "6703eaf8d4442275103873f6d03fe6c553e59edbec495c7ad7615cd6bb3e3904"
+    },
+    {
+      "id": "SHOP-DRAFT-019",
+      "displayFingerprint": "38150a4168f9ddb32a905d4aa8cc6d99e8bd7c8446be58063ea567f3499cfc1d"
+    },
+    {
+      "id": "SHOP-DRAFT-020",
+      "displayFingerprint": "0717b71adbffc44130279abd0ccfda64268df8e448c406d8ab69bfbce4382033"
+    },
+    {
+      "id": "SHOP-DRAFT-021",
+      "displayFingerprint": "c3c5b9f7f2b0ca59d4c14d18bd56a1baa43c24dc75110d2c42ecd0ec2a1c70b2"
+    }
+  ]
+}

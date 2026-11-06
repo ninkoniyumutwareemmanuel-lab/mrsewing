@@ -391,15 +391,15 @@
           "id": "3",
           "title": "Forms, hosting and messaging",
           "paragraphs": [
-            "The existing form action sends text enquiries to Web3Forms for submission processing. A successful provider response does not prove mailbox receipt. The site is hosted on Cloudflare Pages; requests may involve host/network technical information. Choosing a WhatsApp, email, social or external link uses the relevant external provider. Their processing is separate from this website; provider contracts, retention and international arrangements have not been verified here."
+            "The website uses GitHub Pages for public-page deployment and Cloudflare Pages for text-enquiry validation and staging. Text enquiries are processed through Web3Forms, either directly or after validation. A successful provider response does not prove mailbox receipt. Hosting and network services process requests needed to operate the site. Choosing a WhatsApp, email, social or external link uses the relevant provider; its processing is separate from this website."
           ]
         },
         {
           "id": "4",
           "title": "Reference files and measurements",
           "paragraphs": [
-            "Website file upload controls are disabled and no upload storage provider has been activated. No reference files are attached by the text forms. Customers may arrange reference or measurement sharing with the team through official communication channels. No retention period or public-file entitlement is assumed.",
-            "Attachment-enabled quotation requests use Cloudflare database and private object storage, with access limited to authorised staff. The form uses a security check and request-rate controls. An email notification may contain request details and a reference; image files are accessed through the authenticated staff area rather than public image links. Upload availability is shown in the form. Contact the team about retention, deletion and the arrangements applicable to your information."
+            "Website file uploads are disabled in the public forms. No reference files are attached to text enquiries. Customers may arrange reference or measurement sharing with the team through official communication channels.",
+            "The public forms do not use private website request or file storage in this release. A submission acknowledgement does not confirm a privately stored website record. Contact the business about the retention and deletion arrangements applicable to information shared through its providers and communication channels."
           ]
         },
         {
