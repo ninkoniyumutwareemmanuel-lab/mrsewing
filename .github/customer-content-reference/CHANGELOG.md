@@ -48,3 +48,6 @@ Latest owner approves3consultation services,dynamic methods/fields andrequired d
 
 ##2026-11-06-04 — R11
 Owner replaces consultationpictureWhatsApp action withoptionalHTTP/HTTPS link andinspirationguidance. Universalemailflow andR10otherrequirements preserved.
+
+##2026-11-06-05 — R12 homepage
+Latest ownerupload authorises sharedsource movinggalleries,home booking/support/consent andscopedSEO changes. PreserveR11 consultation andmain967401e reference.

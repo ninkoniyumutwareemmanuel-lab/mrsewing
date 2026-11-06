@@ -23,9 +23,9 @@ for page in ['services/garment-care/index.html','services/garment-care/services/
  html=(ROOT/page).read_text();assert 'Garment Care' in html and 'confirm' in html.lower()
  assert 'Dry Cleaning' not in html and '<table' not in html
 source=(ROOT/'_templates/homepage-sections.html').read_text()
-for photo,slug in [('h2.jpeg','off-white-graduation-suit'),('r7.jpeg','light-grey-and-navy')]:
- assert re.search(r'<figure class="customer-card-slide"><(?:picture[^>]*>.*?)?img src="'+re.escape(photo),source)
- assert not re.search('href="/our-work/'+slug+r'/"[^>]*><img',source)
+from homepage_galleries import project_items,moments_gallery
+assert {x['photo']['src'] for x in project_items()}=={i['src'] for p in projects() for i in p['images']}
+assert '{{moments_gallery}}' in source and '<a ' not in moments_gallery().split('<div class="section-action">')[0]
 for href in ['/our-process/','/services/garment-care/']:assert href in source
 assert (ROOT/'made-to-measure/index.html').is_file()  # Preserved route; owner removed process-related information links.
 assert '18s infinite' not in (ROOT/'_templates/homepage-motion.css').read_text()
