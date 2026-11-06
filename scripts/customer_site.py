@@ -150,7 +150,7 @@ def information(route):
   from selected_designs import design_media
   from portfolio_requests import model as portfolio_model
   body+='<script id="requestDesignMedia" type="application/json">'+json.dumps(design_media()).replace('<','\\u003c')+'</script><script id="portfolioRequestData" type="application/json">'+json.dumps(portfolio_model()).replace('<','\\u003c')+'</script><script src="/assets/selected-design.js" defer></script>'
- if route=='/measurements/':body+=guides.measurements()+'<p>'+link('/measurement-submission/','Submit Measurements','home-button home-button-gold')+'</p>'
+ if route=='/measurements/':body+=guides.measurements()
  old=json.loads((ROOT/'_data/policy-pages.json').read_text()).get(route.strip('/'),{});oldids=[s['id'] for s in old.get('sections',[])]+list(old.get('legacyAnchors',{}))
  used=set();nav=[]
  for i,s in enumerate(d['sections']):
@@ -165,6 +165,7 @@ def information(route):
   if route=='/guides/fabrics/' and s['title']=='Reference pictures are not stock guarantees':continue
   anchors=''.join('<span class="legacy-anchor" id="'+escape(a,quote=True)+'" aria-hidden="true"></span>' for a in dict.fromkeys(oldids) if a not in used and str(targets.get(a,1))==s['id'])
   body+=anchors+section(s['title'],s['paragraphs'],ident)
+ if route=='/measurements/':body+='<p>'+link('/measurement-submission/','Submit Measurements','home-button home-button-gold')+'</p>'
  if route=='/refund-policy/':body+=request_form('refund')
  if route=='/customer-support/':body+=request_form('support')
  if route=='/contact/' or route=='/customer-support/':body+='<section class="release-section"><h2>Official Contacts</h2>'+link('tel:+250787411501','+250 787 411 501')+link('mailto:mrsewingfashiondesigner@gmail.com','mrsewingfashiondesigner@gmail.com')+link('https://wa.me/250787411501','WhatsApp Mr Sewing')+'</section>'
