@@ -7,7 +7,7 @@ const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-C
 const reply=(data,status=200)=>new Response(JSON.stringify(data),{status,headers});
 const digest=async bytes=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');
 export function ready(env){return env.REQUESTS_ENABLED==='true'&&['REQUESTS_DB','PRIVATE_REQUEST_FILES','TURNSTILE_SECRET','TURNSTILE_SITE_KEY','REQUEST_EMAIL_ACCESS_KEY','REQUEST_RATE_SECRET','STAFF_ACCESS_TEAM','STAFF_ACCESS_AUD','STAFF_ALLOWED_EMAILS'].every(k=>!!env[k])&&String(env.REQUEST_RATE_SECRET).length>=32&&/^[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.STAFF_ACCESS_TEAM)&&String(env.STAFF_ALLOWED_EMAILS).split(',').every(e=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim()));}
-function permittedHost(request,env){const h=new URL(request.url).hostname;return h==='mrsewing-staging.pages.dev'||h.endsWith('.mrsewing-staging.pages.dev')||(env.LOCAL_TESTING==='true'&&['127.0.0.1','localhost'].includes(h));}
+function permittedHost(request,env){const h=new URL(request.url).hostname;return h==='mrsewingfashion.com'||h==='mrsewing-staging.pages.dev'||h.endsWith('.mrsewing-staging.pages.dev')||(env.LOCAL_TESTING==='true'&&['127.0.0.1','localhost'].includes(h));}
 function fail(status,message){throw Object.assign(Error(message),{status});}
 export function validateFields(raw){
  if(!raw||Array.isArray(raw)||typeof raw!=='object')fail(400,'Invalid request fields.');
@@ -56,16 +56,17 @@ export async function authorised(request,env,fetcher=fetch){
   const key=await crypto.subtle.importKey('jwk',jwk,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['verify']);return await crypto.subtle.verify('RSASSA-PKCS1-v1_5',key,decode(parts[2]),new TextEncoder().encode(parts[0]+'.'+parts[1]));
  }catch(_){return false;}
 }
-async function sendEmail(record,env,fetcher){
- let state='failed';try{const body={...JSON.parse(record.fields_json),access_key:env.REQUEST_EMAIL_ACCESS_KEY,subject:'Mr Sewing request '+record.id,from_name:'Mr Sewing Website','Request Reference':record.id,'Private Attachments':'View through the authenticated Customer Requests area.','Staff Requests':'https://mrsewing-staging.pages.dev/staff/customer-requests/'};if(body['Email Address'])body.replyto=body['Email Address'];const r=await fetcher('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)});if(r.ok&&(await r.json()).success===true)state='accepted';}catch(_){}
+async function sendEmail(record,env,fetcher,origin){
+ let state='failed';try{const body={...JSON.parse(record.fields_json),access_key:env.REQUEST_EMAIL_ACCESS_KEY,subject:'Mr Sewing request '+record.id,from_name:'Mr Sewing Website','Request Reference':record.id,'Private Attachments':'View through the authenticated Customer Requests area.','Staff Requests':origin+'/staff/customer-requests/'};if(body['Email Address'])body.replyto=body['Email Address'];const r=await fetcher('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(15000)});if(r.ok&&(await r.json()).success===true)state='accepted';}catch(_){}
  await env.REQUESTS_DB.prepare('UPDATE customer_requests SET email_status=? WHERE id=?').bind(state,record.id).run();return state;
 }
 export async function handle(request,env,fetcher=fetch){
  try{
-  if(!permittedHost(request,env))return reply({error:'This API is enabled for the staging project only.'},403);
+  if(!permittedHost(request,env))return reply({error:'This API is not enabled for this hostname.'},403);
   const path=new URL(request.url).pathname;
-  if(path==='/api/customer-requests/config'&&request.method==='GET')return reply({enabled:ready(env),...(ready(env)?{siteKey:env.TURNSTILE_SITE_KEY,...limits}:{})});
-  if(!ready(env))return reply({error:'Private requests are not configured. No request or file has been saved.'},503);
+  const enabled=ready(env)&&(new URL(request.url).hostname!=='mrsewingfashion.com'||env.PRODUCTION_PRIVATE_REQUESTS_ENABLED==='true');
+  if(path==='/api/customer-requests/config'&&request.method==='GET')return reply({enabled,...(enabled?{siteKey:env.TURNSTILE_SITE_KEY,...limits}:{})});
+  if(!enabled)return reply({error:'Private requests are not configured. No request or file has been saved.'},503);
   if(path.startsWith('/api/staff/')){
    if(!await authorised(request,env,fetcher))return reply({error:'Authorised staff access is required.'},401);
    if(path==='/api/staff/customer-requests'&&request.method==='GET'){
@@ -96,7 +97,7 @@ export async function handle(request,env,fetcher=fetch){
   try{for(const f of prepared){const attachmentId=crypto.randomUUID(),key=id+'/'+attachmentId;attachments.push({id:attachmentId,key,name:f.name,size:f.bytes.byteLength,...f.info});await env.PRIVATE_REQUEST_FILES.put(key,f.bytes,{httpMetadata:{contentType:f.info.type}});}
    const record={id,created_at:new Date().toISOString(),fields_json:JSON.stringify(fields),attachments_json:JSON.stringify(attachments)};
    await env.REQUESTS_DB.prepare('INSERT INTO customer_requests(id,created_at,idempotency_key,payload_hash,fields_json,attachments_json,status,email_status) VALUES(?,?,?,?,?,?,?,?)').bind(id,record.created_at,idem,hash,record.fields_json,record.attachments_json,'New','pending').run();
-   const emailStatus=await sendEmail(record,env,fetcher);return reply({saved:true,reference:id,emailStatus},201);
+   const emailStatus=await sendEmail(record,env,fetcher,new URL(request.url).origin);return reply({saved:true,reference:id,emailStatus},201);
   }catch(error){const saved=await env.REQUESTS_DB.prepare('SELECT id,email_status FROM customer_requests WHERE idempotency_key=?').bind(idem).first();if(saved){if(saved.id!==id)await Promise.allSettled(attachments.map(a=>env.PRIVATE_REQUEST_FILES.delete(a.key)));return reply({saved:true,reference:saved.id,emailStatus:saved.email_status},202);}await Promise.allSettled(attachments.map(a=>env.PRIVATE_REQUEST_FILES.delete(a.key)));throw error;}
  }catch(error){return reply({error:error.status?error.message:'We could not confirm the request. Please contact Customer Support before retrying.'},error.status||503);}
 }

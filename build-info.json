@@ -1,5 +1,5 @@
 {
-  "release": "final-corrections-2026-11-06-r8",
+  "release": "v1-technical-blockers-2026-11-06-r9",
   "branch": "phase1/customer-journey-repairs",
   "commit": null,
   "note": "When built in Cloudflare CI, commit is populated from CF_PAGES_COMMIT_SHA."

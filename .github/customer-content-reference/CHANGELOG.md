@@ -39,3 +39,6 @@ R7 independently confirms the failed b83720b Cloudflare build via GitHub; retain
 
 ##2026-11-06-01 — R8
 Latest explicit owner clears exact ordinary suit/tuxedo amounts for staging, replaces upload UI with manual Custom WhatsApp, adds design previews/fabric naming/garment care/consultation/home links. Earlier versions retained. No original Sources independently accessible.
+
+##2026-11-06-02 — R9 Version1 blockers
+Owner permits safe email-only Standard requests and exact production-apex API host;private features stay disabled pending verification. Existing design,prices,fields and prior versions preserved.
