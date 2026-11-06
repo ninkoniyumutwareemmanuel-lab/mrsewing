@@ -5,7 +5,7 @@ Existing-public photographs are carried into staging pending owner rights review
 Unreferenced originals are inventoried but excluded from showroom publication.
 No different photographs have been grouped by visual similarity.
 
-111 existing-public designs; 138 original garment records; 298 total image assets inventoried.
+15 existing-public designs; 146 original garment records; 368 total image assets inventoried.
 
 | ID | Original | Showroom | Provenance | Rights |
 | --- | --- | --- | --- | --- |
@@ -147,3 +147,11 @@ No different photographs have been grouped by visual similarity.
 | MS-136 | `w4.jpeg` | existing public display preserved | unverified | review_required |
 | MS-137 | `w5.jpeg` | existing public display preserved | unverified | review_required |
 | MS-138 | `standard.jpeg` | excluded pending review | unverified | review_required |
+| MS-139 | `Ivory Elegance — Single-Breasted Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-140 | `Skyline Double-Breasted Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-141 | `Royal Ivory Three-Piece Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-142 | `Royal Ivory Shawl-Lapel Tuxedo.webp` | existing public display preserved | design_inspiration | approved |
+| MS-143 | `Burgundy Grace Women's Single-Breasted Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-144 | `Midnight Elegance Women's Double-Breasted Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-145 | `Burgundy Royale Women's Skirt Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-146 | `Camel Grace Women's Three-Piece Suit.webp` | existing public display preserved | design_inspiration | approved |

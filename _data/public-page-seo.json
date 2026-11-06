@@ -1,0 +1,58 @@
+{
+  "/": {
+    "title": "Mr Sewing Fashion | Tailoring & Alterations in Kigali",
+    "description": "Mr Sewing Fashion in Kigali, Rwanda: bespoke suits, custom tailoring, clothing alterations and garment care. Explore our work, designs and service information."
+  },
+  "/about/": {
+    "title": "About Mr Sewing Fashion | Bespoke Tailoring in Kigali",
+    "description": "Meet Mr Sewing Fashion, a Kigali tailoring and garment-assistance brand operated by NINKONIYUMUTWARE NEXUS LTD in Rwanda."
+  },
+  "/contact/": {
+    "title": "Contact Mr Sewing Fashion | Tailoring in Kigali",
+    "description": "Contact Mr Sewing Fashion for bespoke tailoring in Kigali, Rwanda. Book a consultation, share your design, or plan a visit to our workshop."
+  },
+  "/faq/": {
+    "title": "Tailoring FAQs for Kigali Clients | Mr Sewing Fashion",
+    "description": "Answers about Mr Sewing Fashion services in Kigali, Rwanda: suit designs, fabrics, measurements, quotations, payments, delivery and customer support."
+  },
+  "/mensuits/": {
+    "title": "Men's Suits in Kigali | Mr Sewing Fashion",
+    "description": "Explore men’s suit design references by style at Mr Sewing Fashion in Kigali. Choose a category, view a reference or send your own design for assessment."
+  },
+  "/womensuits/": {
+    "title": "Women's Suits in Kigali | Mr Sewing Fashion",
+    "description": "Explore women’s suit design references at Mr Sewing Fashion in Kigali. Browse tailoring categories or send your own inspiration for a quotation enquiry."
+  },
+  "/measurements/": {
+    "title": "Suit Measurement Guide, Kigali | Mr Sewing Fashion",
+    "description": "Follow the suit measurement guide from Mr Sewing Fashion in Kigali, Rwanda. Learn which measurements to take, review sizing guidance or arrange a fitting."
+  },
+  "/services/custom-tailoring/": {
+    "title": "Custom Tailoring & Suits in Kigali, Rwanda | Mr Sewing Fashion",
+    "description": "Plan custom suits and made-to-measure tailoring in Kigali, Rwanda. Explore men’s and women’s suit references, fabric preferences and a personal quotation."
+  },
+  "/services/alterations/": {
+    "title": "Clothing Alterations & Repairs in Kigali | Mr Sewing Fashion",
+    "description": "Request clothing alterations and garment repairs in Kigali, Rwanda. Describe the garment and changes needed for assessment, fitting arrangements and a quotation."
+  },
+  "/services/garment-care/": {
+    "title": "Garment Care & Cleaning in Kigali | Mr Sewing Fashion",
+    "description": "Discuss garment care and cleaning in Kigali, Rwanda. Share the garment type, care requirements and condition for service suitability and quotation."
+  },
+  "/services/mobile-fitting/": {
+    "title": "Mobile Tailoring & Styling in Kigali | Mr Sewing Fashion",
+    "description": "Request mobile tailoring, suit fitting, styling or event assistance in Kigali, Rwanda. Location visits are assessed for availability, feasibility and quotation."
+  },
+  "/services/vip/": {
+    "title": "VIP Styling & Garment Assistance in Kigali | Mr Sewing Fashion",
+    "description": "Discuss personalised VIP tailoring, styling and garment assistance in Kigali, Rwanda. Requirements and service arrangements are individually assessed and quoted."
+  },
+  "/our-work/": {
+    "title": "Tailoring Portfolio in Kigali | Mr Sewing Fashion",
+    "description": "Explore authorised photographs of completed Mr Sewing tailoring projects in Kigali, Rwanda, with garment details and a way to discuss your own design."
+  },
+  "/guides/fabrics/": {
+    "title": "Suit Fabrics & Starting Prices in Kigali | Mr Sewing Fashion",
+    "description": "Explore men’s and women’s suit fabrics, tiers and starting suit prices in RWF. Mr Sewing Fashion in Kigali confirms availability and your final quotation."
+  }
+}

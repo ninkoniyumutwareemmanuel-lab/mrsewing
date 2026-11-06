@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "endpoint": "/api/customer-requests",
+  "maxFiles": 3,
+  "maxFileBytes": 3145728,
+  "reason": "Private recording requires verified database, private storage, staff authentication, spam protection and email configuration. Version1 uses the existing email submission path while disabled."
+}

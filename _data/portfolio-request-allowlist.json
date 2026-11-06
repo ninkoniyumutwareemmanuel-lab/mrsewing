@@ -1,0 +1,42 @@
+{
+  "off-white-graduation-suit": {
+    "name": "Off-White Graduation Suit",
+    "designRef": "MS-005",
+    "route": "/our-work/off-white-graduation-suit/",
+    "image": "/h1.jpeg",
+    "category": "women",
+    "suitCategory": "women-single-breasted"
+  },
+  "light-grey-and-navy": {
+    "name": "Light Grey & Navy Contrast",
+    "designRef": "MS-117",
+    "route": "/our-work/light-grey-and-navy/",
+    "image": "/r7.jpeg",
+    "category": "men",
+    "suitCategory": "men-double-breasted"
+  },
+  "soft-ivory-tailoring": {
+    "name": "Soft Ivory Tailoring",
+    "designRef": "MS-096",
+    "route": "/our-work/soft-ivory-tailoring/",
+    "image": "/r4.jpeg",
+    "category": "women",
+    "suitCategory": "women-single-breasted"
+  },
+  "cobalt-blue-suit": {
+    "name": "Cobalt Blue Suit",
+    "designRef": "MS-069",
+    "route": "/our-work/cobalt-blue-suit/",
+    "image": "/r2.jpeg",
+    "category": "men",
+    "suitCategory": "men-single-breasted"
+  },
+  "blue-jacket-black-trousers": {
+    "name": "Blue Jacket, Dark Foundation",
+    "designRef": "MS-083",
+    "route": "/our-work/blue-jacket-black-trousers/",
+    "image": "/r3.jpeg",
+    "category": "women",
+    "suitCategory": "women-single-breasted"
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "route": "/",
+    "intent": "local service enquiry",
+    "global": "tailoring",
+    "rwanda": "tailoring in Rwanda",
+    "kigali": "tailoring in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/about/",
+    "intent": "brand/portfolio",
+    "global": "Mr Sewing Fashion",
+    "rwanda": "Mr Sewing Fashion in Rwanda",
+    "kigali": "Mr Sewing Fashion in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/contact/",
+    "intent": "local service enquiry",
+    "global": "contact Mr Sewing",
+    "rwanda": "contact Mr Sewing in Rwanda",
+    "kigali": "contact Mr Sewing in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/faq/",
+    "intent": "educational",
+    "global": "tailoring questions",
+    "rwanda": "tailoring questions in Rwanda",
+    "kigali": "tailoring questions in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/mensuits/",
+    "intent": "local service enquiry",
+    "global": "men's suits",
+    "rwanda": "men's suits in Rwanda",
+    "kigali": "men's suits in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/womensuits/",
+    "intent": "local service enquiry",
+    "global": "women's suits",
+    "rwanda": "women's suits in Rwanda",
+    "kigali": "women's suits in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/measurements/",
+    "intent": "educational",
+    "global": "suit measurements guide",
+    "rwanda": "suit measurements guide in Rwanda",
+    "kigali": "suit measurements guide in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/services/custom-tailoring/",
+    "intent": "local service enquiry",
+    "global": "custom suits",
+    "rwanda": "custom suits in Rwanda",
+    "kigali": "custom suits in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/services/alterations/",
+    "intent": "local service enquiry",
+    "global": "clothing alterations",
+    "rwanda": "clothing alterations in Rwanda",
+    "kigali": "clothing alterations in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/services/garment-care/",
+    "intent": "local service enquiry",
+    "global": "garment care",
+    "rwanda": "garment care in Rwanda",
+    "kigali": "garment care in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/services/mobile-fitting/",
+    "intent": "local service enquiry",
+    "global": "mobile tailoring and suit fitting",
+    "rwanda": "mobile tailoring and suit fitting in Rwanda",
+    "kigali": "mobile tailoring and suit fitting in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/services/vip/",
+    "intent": "local service enquiry",
+    "global": "personal styling assistance",
+    "rwanda": "personal styling assistance in Rwanda",
+    "kigali": "personal styling assistance in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/our-work/",
+    "intent": "brand/portfolio",
+    "global": "tailoring portfolio",
+    "rwanda": "tailoring portfolio in Rwanda",
+    "kigali": "tailoring portfolio in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  },
+  {
+    "route": "/guides/fabrics/",
+    "intent": "educational",
+    "global": "suit fabric guide",
+    "rwanda": "suit fabric guide in Rwanda",
+    "kigali": "suit fabric guide in Kigali",
+    "method": "Owner-provided keyword themes and repository content/intention review; no live search-volume or ranking data verified."
+  }
+]

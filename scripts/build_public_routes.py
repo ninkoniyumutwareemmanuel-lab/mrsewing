@@ -14,7 +14,9 @@ from faq_help import routes as faq_routes
 def candidates():
     aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
     original=[aliases.get(n,'/' if n=='index.html' else '/'+n[:-5]+'/') for n in json.loads((ROOT/'_data/page-seo.json').read_text())]
-    return list(dict.fromkeys(original+['/our-work/']+[s['route'] for s in services()]+[design_route(d) for d in load()[0]]+['/our-work/'+p['slug']+'/' for p in projects()]+['/services/garment-care/'+c['slug']+'/' for c in care_catalog()[1]]+completion_routes()+faq_routes()))
+    from customer_site import extra_routes
+    from suit_references import categories
+    return list(dict.fromkeys(original+extra_routes()+[c['route'] for c in categories()]+['/our-work/']+[s['route'] for s in services()]+[design_route(d) for d in load()[0]]+['/our-work/'+p['slug']+'/' for p in projects()]+['/services/garment-care/'+c['slug']+'/' for c in care_catalog()[1]]+completion_routes()+faq_routes()))
 
 def public_routes():
     routes=[];titles=set();descs=set()

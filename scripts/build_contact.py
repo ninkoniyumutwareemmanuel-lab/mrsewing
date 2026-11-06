@@ -50,6 +50,9 @@ def contact_schema():
 
 
 def render():
+    return legacy_render()
+
+def legacy_render():
     data = json.loads((ROOT/'_data/contact-v2.json').read_text())
     seo = json.loads((ROOT/'_data/page-seo.json').read_text())['contact.html']
     header = delivery(re.sub(r'<img\b[^>]*>', reserve_image_space, shared.header('/contact/')), 'header')

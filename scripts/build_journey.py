@@ -69,6 +69,10 @@ def service_picture(service,eager=False):
     return '<img class="service-card-image" src="/'+src+'" srcset="'+srcset+'" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 90vw" alt="'+alt+'" width="'+str(width)+'" height="'+str(height)+'" loading="'+('eager' if eager else 'lazy')+'" decoding="async">'
 
 def overview(data):
+    from customer_site import overview as release_overview
+    return release_overview()
+
+def legacy_overview(data):
     content='<section class="journey-intro"><p class="home-eyebrow">Mr Sewing · Kigali</p><h1>Tailoring, made personal.</h1><p>From a first idea to a considered fit. Find the service that meets your needs, then talk with us about the details.</p></section><div class="journey-grid">'
     for n,service in enumerate(data):content+='<a class="journey-card" href="'+service['route']+'">'+service_picture(service,n<3)+'<span class="journey-number">'+str(n+1).zfill(2)+'</span><h2>'+escape(service['title'])+'</h2><p>'+escape(service['intro'])+'</p><span class="home-text-link">Explore service <span class="home-arrow" aria-hidden="true"></span></span></a>'
     content+='</div><p class="journey-image-note">Garment photographs show design inspiration, not verified customer projects. Measurement illustrations explain fitting concepts. The garment-care still life is AI-generated and does not depict Mr Sewing premises, staff or customer work.</p>'
@@ -76,7 +80,19 @@ def overview(data):
     return page('/services/',title,desc,content,'CollectionPage')
 
 def service_page(service):
-    if service['id']=='garment-care':return care_page(service)
+    if service['id']=='custom-tailoring':
+        from custom_tailoring import render
+        return render()
+    if service['id'] in ['alterations','garment-care','mobile-fitting']:
+        from customer_site import service_page as release_service
+        return release_service(service['id'])
+    from customer_site import frame,intro,section,related,data as release_data,link
+    if service['id'] in ['wedding-tailoring','graduation-tailoring','express']:
+        route=service['route']
+        if service['id']=='express':
+            return frame(route,'Express Priority Requests','Understand availability, confirmation and the approved Standard-Service priority surcharges.',intro('Express Priority Requests','Priority is a separate choice within your service request, not an additional primary service category.')+section('Express and after-hours arrangements',release_data()['pages']['/customer-information/']['sections'][3]['paragraphs'])+related())
+        title='Ceremony Tailoring' if service['id']=='wedding-tailoring' else 'Graduation Tailoring'
+        return frame(route,title,'Discuss '+title.lower()+' design, measurements and individually confirmed arrangements for your occasion.',intro(title,'Choose your tailoring service experience and design, then confirm the requirements and quotation for your occasion.')+link('/services/custom-tailoring/','Custom Tailoring & Suits','home-button home-button-gold')+related())
     route=service['route'];kind=service['id']
     content='<div class="service-kind-'+kind+'"><section class="journey-intro"><p class="home-eyebrow">A personal service · Kigali</p><h1>'+escape(service['title'])+'</h1><p>'+escape(service['intro'])+'</p></section><section class="service-feature" aria-label="Service introduction">'+service_picture(service,True)+'<div><h2>'+{'custom-tailoring':'Your wardrobe. Your expression.','wedding-tailoring':'For a moment that matters.','graduation-tailoring':'Mark your milestone.','mobile-fitting':'A fitting around your day.','alterations':'A considered refinement.','express':'Tell us your exact deadline.'}.get(kind,'Made personal.')+'</h2><p>'+escape(service['audience'])+'</p><p class="journey-image-note">'+('Measurement illustration; not a customer appointment photograph.' if kind in ['mobile-fitting','alterations'] else 'Garment design inspiration; not a documented customer project.')+'</p></div></section><div class="service-layout"><div class="service-copy">'
     for title,text in service['sections']:content+='<section><h2>'+escape(title)+'</h2><p>'+escape(text)+'</p></section>'
@@ -85,7 +101,7 @@ def service_page(service):
     elif kind=='alterations':
         content+='<section><h2>Payment and planning</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>'+customer_text('{{alterationTiming}}')+'</p></section>'
     content+='<section><h2>What to share with us</h2><ul class="service-requirements">'+''.join('<li>'+escape(item)+'</li>' for item in service['requirements'])+'</ul></section><section><h2>How to begin</h2><ol class="service-steps">'+''.join('<li>'+escape(step)+'</li>' for step in service['steps'])+'</ol></section>'
-    related={'custom-tailoring':[('/mensuits/','Men’s collection'),('/womensuits/','Women’s collection')],'wedding-tailoring':[('/collections/?occasion=wedding','Wedding inspiration'),('/collections/?occasion=civil-wedding','Civil wedding inspiration')],'graduation-tailoring':[('/collections/?occasion=graduation','Graduation inspiration')],'mobile-fitting':[('/measurements/','Measurement guide')],'alterations':[('/booking-adjustment/','Request an assessment')]}.get(kind,[])
+    related={'custom-tailoring':[('/mensuits/','Men’s collection'),('/womensuits/','Women’s collection')],'wedding-tailoring':[('/mensuits/','Men’s suit designs'),('/womensuits/','Women’s suit designs')],'graduation-tailoring':[('/mensuits/','Men’s suit designs'),('/womensuits/','Women’s suit designs')],'mobile-fitting':[('/measurements/','Measurement guide')],'alterations':[('/booking-adjustment/','Request an assessment')]}.get(kind,[])
     if related:content+='<nav class="service-related" aria-label="Related guidance">'+''.join('<a class="home-text-link" href="'+url+'">'+escape(title)+'</a>' for url,title in related)+'</nav>'
     content+='</div><aside class="service-enquiry" aria-label="Service enquiry"><p class="home-eyebrow">Let’s begin with a conversation</p><p>'+escape({'mobile-fitting':'Include your Kigali location and preferred dates. Coverage, visit charges and appointment availability must be confirmed.','express':'Include the exact date and time you need the garment. Capacity, fees and timing must be confirmed before production.'}.get(kind,'Share your garment needs and references. We will discuss suitable options, a quote and arrangements before you proceed.'))+'</p>'+enquiry(service['title'],route)+'</aside></div></div>'
     title,desc=metadata(route,service['title'],service['intro']+' Discuss your requirements with Mr Sewing in Kigali.')
@@ -132,22 +148,28 @@ def project_picture(image,eager=False,sizes='(min-width: 1000px) 900px, 90vw'):
     return tag
 
 def project_page(p):
+    from portfolio_requests import enquiry as portfolio_enquiry
     route='/our-work/'+p['slug']+'/'
     sections=''.join('<section><h2>'+label+'</h2><p>'+escape(p[key])+'</p></section>' for key,label in [('requestedDesign','The requested design'),('process','The tailoring process')] if p.get(key))
     sections+=''.join('<section><h2>'+escape(e['heading'])+'</h2><p>'+escape(e['text'])+'</p></section>' for e in p.get('editorial',[]))
-    vals={'project_title':escape(p['title']),'context':escape(p['context']),'photos':''.join('<a class="project-photo" data-project-photo="'+str(n)+'" href="'+escape(i['src'],quote=True)+'">'+project_picture(i,n==0)+'</a>' for n,i in enumerate(p['images'])),'documented_sections':sections,'testimonial':'<blockquote class="project-quote">'+escape(p['testimonial']['text'])+'</blockquote>' if p.get('testimonial') else '', 'enquiry':enquiry(p['title'],route)}
+    vals={'project_title':escape(p['title']),'context':escape(p['context']),'photos':''.join('<a class="project-photo" data-project-photo="'+str(n)+'" href="'+escape(i['src'],quote=True)+'">'+project_picture(i,n==0)+'</a>' for n,i in enumerate(p['images'])),'documented_sections':sections,'testimonial':'<blockquote class="project-quote">'+escape(p['testimonial']['text'])+'</blockquote>' if p.get('testimonial') else '', 'enquiry':portfolio_enquiry(p)}
     content=(ROOT/'_templates/customer-project.html').read_text()
     for k,v in vals.items():content=content.replace('{{'+k+'}}',v)
+    from customer_navigation import breadcrumb
+    content=breadcrumb([('Home','/'),('Our Work','/our-work/'),(p['title'],None)])+content
+    others=[o for o in projects() if o['slug']!=p['slug']]
+    content+='<section class="work-more"><h2>Explore More of Our Work</h2><div class="work-project-grid">'+''.join('<article class="work-project"><a href="/our-work/'+o['slug']+'/">'+project_picture(o['images'][0])+'<h3>'+escape(o['title'])+'</h3></a><p>'+escape(o['context'])+'</p></article>' for o in others)+'</div></section>'
     content+='<dialog id="project-viewer" class="project-viewer" aria-label="Completed project photographs"><button type="button" id="project-close">Close photograph</button><img alt=""><div class="project-viewer-controls"><button type="button" id="project-previous" aria-label="Previous photograph">←</button><p id="project-photo-count" role="status" aria-live="polite"></p><button type="button" id="project-next" aria-label="Next photograph">→</button></div></dialog><script id="project-photos" type="application/json">'+json.dumps([{k:i[k] for k in ['src','alt','width','height']} for i in p['images']]).replace('<','\\u003c')+'</script>'
     out=page(route,p['title']+' | Mr Sewing Fashion',p['context'],content).replace('</head>','<meta property="og:image:alt" content="'+escape(p['images'][0]['alt'],quote=True)+'"><script src="/assets/project-gallery.js" defer></script></head>',1)
     return out.replace(DOMAIN+'/assets/images/mr-logo-480.webp',DOMAIN+p['images'][0]['src'])
 
 def work_page(approved):
-    content='<section class="journey-intro"><p class="home-eyebrow">Our Work</p><h1>Every garment has a story.</h1><p>A personal design. A considered fit. A meaningful occasion. Explore finished Mr Sewing projects through garment photographs, considered silhouettes and the details that make each look distinct.</p></section>'
+    from customer_navigation import breadcrumb
+    content=breadcrumb([('Home','/'),('Our Work',None)])+'<section class="journey-intro"><p class="home-eyebrow">Our Work</p><h1>Every garment has a story.</h1><p>A personal design. A considered fit. A meaningful occasion. Explore finished Mr Sewing projects through garment photographs, considered silhouettes and the details that make each look distinct.</p></section>'
     if approved:
         content+='<div class="work-project-grid">'+''.join('<article class="work-project"><a href="/our-work/'+p['slug']+'/">'+project_picture(p['images'][0],n==0,'(min-width: 1100px) 380px, (min-width: 700px) 45vw, 90vw')+'<h2>'+escape(p['title'])+'</h2></a><p>'+escape(p['context'])+'</p></article>' for n,p in enumerate(approved))+'</div>'
     else:content+='<section class="work-note"><div><p class="home-eyebrow">Stories, shared with care</p><h2>Details matter.<br>Permission does too.</h2></div><p>Our individual customer project features are being prepared. We publish a story only when the completed work, photograph association and permission to share are confirmed. In the meantime, explore the design collection for inspiration or talk with us about your own tailoring plans.</p></section>'
-    content+='<nav class="work-links" aria-label="Continue exploring"><a class="home-text-link" href="/collections/">Explore design inspiration <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/services/">Discover our services <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/contact/">Discuss your project <span class="home-arrow" aria-hidden="true"></span></a></nav>'
+    content+='<nav class="work-links" aria-label="Continue exploring"><a class="home-text-link" href="/services/custom-tailoring/">Explore suit designs <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/services/">Discover our services <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/contact/">Discuss your project <span class="home-arrow" aria-hidden="true"></span></a></nav>'
     return page('/our-work/','Our Work & Customer Projects | Mr Sewing Fashion','Explore how Mr Sewing presents customer tailoring projects with confirmed details and permission, or discover design inspiration and tailoring services in Kigali.',content,'CollectionPage')
 
 def outputs():
@@ -155,6 +177,8 @@ def outputs():
 document.querySelectorAll('.journey-enquiry').forEach(a=>{const u=new URL(a.href),text=u.searchParams.get('text');if(text)u.searchParams.set('text',text.replace('https://mrsewingfashion.com',location.origin));a.href=u.href;});
 '''}
     for service in data:out[ROOT/service['route'].strip('/')/'index.html']=service_page(service)
+    from custom_tailoring import outputs as tailoring_outputs
+    out.update(tailoring_outputs())
     care=next(s for s in data if s['id']=='garment-care')
     for category in care_catalog()[1]:out[ROOT/'services/garment-care'/category['slug']/'index.html']=care_page(care,category)
     for project in approved:out[ROOT/'our-work'/project['slug']/'index.html']=project_page(project)

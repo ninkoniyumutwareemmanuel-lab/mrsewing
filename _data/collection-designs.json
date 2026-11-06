@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "nextId": 139,
+  "nextId": 147,
   "retiredIds": [],
   "designs": [
     {
@@ -4558,6 +4558,262 @@
       ],
       "metadataEvidence": [],
       "sourceAnchor": "standard.jpeg"
+    },
+    {
+      "id": "MS-139",
+      "slug": "ms-139",
+      "name": "Ivory Elegance One-Button Suit",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Ivory Elegance — Single-Breasted Suit.webp",
+          "originalPath": "Ivory Elegance — Single-Breasted Suit.webp",
+          "width": 1254,
+          "height": 1254,
+          "position": "50% 0%",
+          "alt": "Ivory Elegance One-Button Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Ivory Elegance — Single-Breasted Suit.webp"
+    },
+    {
+      "id": "MS-140",
+      "slug": "ms-140",
+      "name": "Skyline Double-Breasted Suit",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Skyline Double-Breasted Suit.webp",
+          "originalPath": "Skyline Double-Breasted Suit.webp",
+          "width": 1100,
+          "height": 1429,
+          "position": "50% 0%",
+          "alt": "Skyline Double-Breasted Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Skyline Double-Breasted Suit.webp"
+    },
+    {
+      "id": "MS-141",
+      "slug": "ms-141",
+      "name": "Royal Ivory Three-Piece Suit",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Royal Ivory Three-Piece Suit.webp",
+          "originalPath": "Royal Ivory Three-Piece Suit.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Royal Ivory Three-Piece Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Royal Ivory Three-Piece Suit.webp"
+    },
+    {
+      "id": "MS-142",
+      "slug": "ms-142",
+      "name": "Royal Ivory Tuxedo",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Royal Ivory Shawl-Lapel Tuxedo.webp",
+          "originalPath": "Royal Ivory Shawl-Lapel Tuxedo.webp",
+          "width": 1091,
+          "height": 1442,
+          "position": "50% 0%",
+          "alt": "Royal Ivory Tuxedo shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Royal Ivory Shawl-Lapel Tuxedo.webp"
+    },
+    {
+      "id": "MS-143",
+      "slug": "ms-143",
+      "name": "Burgundy Grace Women's Single-Breasted Suit",
+      "gender": "women",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Burgundy Grace Women's Single-Breasted Suit.webp",
+          "originalPath": "Burgundy Grace Women's Single-Breasted Suit.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Burgundy Grace Women's Single-Breasted Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Burgundy Grace Women's Single-Breasted Suit.webp"
+    },
+    {
+      "id": "MS-144",
+      "slug": "ms-144",
+      "name": "Midnight Elegance Women's Double-Breasted Suit",
+      "gender": "women",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Midnight Elegance Women's Double-Breasted Suit.webp",
+          "originalPath": "Midnight Elegance Women's Double-Breasted Suit.webp",
+          "width": 941,
+          "height": 1672,
+          "position": "50% 0%",
+          "alt": "Midnight Elegance Women's Double-Breasted Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Midnight Elegance Women's Double-Breasted Suit.webp"
+    },
+    {
+      "id": "MS-145",
+      "slug": "ms-145",
+      "name": "Burgundy Royale Women's Skirt Suit",
+      "gender": "women",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Burgundy Royale Women's Skirt Suit.webp",
+          "originalPath": "Burgundy Royale Women's Skirt Suit.webp",
+          "width": 1087,
+          "height": 1447,
+          "position": "50% 0%",
+          "alt": "Burgundy Royale Women's Skirt Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Burgundy Royale Women's Skirt Suit.webp"
+    },
+    {
+      "id": "MS-146",
+      "slug": "ms-146",
+      "name": "Camel Grace Women's Three-Piece Suit",
+      "gender": "women",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Camel Grace Women's Three-Piece Suit.webp",
+          "originalPath": "Camel Grace Women's Three-Piece Suit.webp",
+          "width": 1088,
+          "height": 1445,
+          "position": "50% 0%",
+          "alt": "Camel Grace Women's Three-Piece Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner R5 complete website corrections,5 November2026",
+        "Git upload70dfdd7"
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Camel Grace Women's Three-Piece Suit.webp"
     }
   ]
 }

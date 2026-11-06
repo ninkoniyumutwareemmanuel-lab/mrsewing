@@ -182,7 +182,7 @@
       "slug": "collections-designs",
       "title": "Collections & Design Requests",
       "description": "Find inspiration, share an individual design and distinguish it from completed work.",
-      "destination": "/collections/",
+      "destination": "/services/custom-tailoring/",
       "icon": "grid",
       "questions": [
         "collections-purpose",
@@ -366,7 +366,7 @@
   "questions": {
     "start-order": {
       "question": "How do I place a suit order?",
-      "answer": "Share your design and garment needs, agree the details and quotation, and confirm measurements and fittings. {{suitPayment}} {{balance}}",
+      "answer": "Choose <a href=\"/services/custom-tailoring/\">Custom Tailoring &amp; Suits</a>, then Men’s or Women’s Suits. Choose an approved website design or the Special Order alternative for your own inspiration, indicate fabric preferences or request advice, and choose Standard or Express Priority. Review your details before submitting an enquiry; no order is automatically confirmed.",
       "keywords": []
     },
     "garment-options": {
@@ -376,7 +376,7 @@
     },
     "own-fabric": {
       "question": "Can I bring my own fabric or sketch?",
-      "answer": "Yes. Bring sketches, reference photographs or cloth you already own. Ask the team to assess fabric quantity, suitability and any additional materials before agreeing the garment and quotation.",
+      "answer": "Customer-supplied fabric may be discussed for assessment, but the proposed fixed customer-fabric policy is not an approved contract. Confirm suitability, quantity, materials and quotation individually before relying on an arrangement.",
       "keywords": [
         "cloth",
         "drawing"
@@ -414,7 +414,7 @@
     },
     "wedding-inspiration": {
       "question": "Where can I browse wedding inspiration?",
-      "answer": "Explore <a href=\"/collections/?occasion=wedding\">Wedding</a> or <a href=\"/collections/?occasion=civil-wedding\">Civil Wedding</a> collection filters. Only verified occasion matches appear. If a filter has no matches, discuss your reference directly; inspiration photographs do not imply a wedding package.",
+      "answer": "Explore <a href=\"/services/wedding-tailoring/\">wedding and civil-wedding tailoring</a>, then browse <a href=\"/mensuits/\">Men’s Suits</a> or <a href=\"/womensuits/\">Women’s Suits</a> and discuss the occasion and design with the team. Reference pictures do not confirm fabric or stock availability.",
       "keywords": []
     },
     "wedding-quote": {
@@ -439,7 +439,7 @@
     },
     "graduation-gallery": {
       "question": "Where can I find graduation designs and completed work?",
-      "answer": "Browse <a href=\"/collections/?occasion=graduation\">Graduation inspiration</a> and <a href=\"/our-work/\">Our Work</a> for genuine finished Mr Sewing projects. The inspiration gallery and completed-project gallery have different purposes.",
+      "answer": "Read about <a href=\"/services/graduation-tailoring/\">graduation tailoring</a> and explore <a href=\"/our-work/\">Our Work</a> for approved photographs of completed Mr Sewing projects. Discuss your preferred outfit and occasion with the team.",
       "keywords": []
     },
     "graduation-inclusions": {
@@ -494,12 +494,12 @@
     },
     "alter-payment": {
       "question": "When do I pay for a standalone alteration?",
-      "answer": "{{standalonePayment}} {{balance}}",
+      "answer": "{{standalonePayment}} Your quotation confirms the agreed total, payments received and any balance due.",
       "keywords": []
     },
     "alter-concern": {
       "question": "What if there is a fit concern?",
-      "answer": "If you believe a garment does not match the agreed order or has a fit problem, contact us promptly with the order details, a description and photographs if useful. Arrange an assessment with the team. Describe any measurements supplied remotely, wear, damage or previous alterations so the concern can be assessed. See the <a href=\"/refund-policy/#fit\">Refund &amp; Cancellation Policy</a>.",
+      "answer": "Report promptly with order details. Guidance is within 72 hours after receipt/collection without restricting statutory rights. Mr Sewing assesses its own errors, corrects feasible errors without another tailoring charge and may remake at company expense if proper correction is impossible.",
       "keywords": []
     },
     "express-request": {
@@ -524,7 +524,7 @@
     },
     "express-charge": {
       "question": "How do I confirm express charges and payment?",
-      "answer": "Request the quotation directly; do not assume an automatic surcharge or percentage. For suit orders, {{suitPayment}} {{balance}}",
+      "answer": "For Standard Service, Express adds 35% of the original quoted service price. Standard after-hours work 17:00–22:00 adds 25%; when both apply the combined surcharge is 60% of the original base price, not compounded. Availability and confirmation apply. Work after 22:00 is individually reviewed and quoted.",
       "keywords": []
     },
     "care-enquiry": {
@@ -544,7 +544,7 @@
     },
     "care-payment": {
       "question": "When is a standalone cleaning balance due?",
-      "answer": "{{standalonePayment}} {{balance}}",
+      "answer": "{{standalonePayment}} Your quotation confirms the agreed total, payments received and any balance due.",
       "keywords": []
     },
     "care-timing": {
@@ -559,12 +559,12 @@
     },
     "collections-purpose": {
       "question": "Are Collections and Our Work the same gallery?",
-      "answer": "No. <a href=\"/collections/\">Collections</a> provides design inspiration. <a href=\"/our-work/\">Our Work</a> presents genuine completed Mr Sewing projects. Discuss which details can be made for your request rather than assuming an inspiration photograph is a completed project.",
+      "answer": "Browse approved garment photographs and design references with their publication status. A reference is not proof of stock, exact fabric availability or that every pictured garment was completed by Mr Sewing. Unverified references are withheld pending rights verification.",
       "keywords": []
     },
     "collections-browse": {
       "question": "How do I find a design?",
-      "answer": "Browse <a href=\"/collections/\">All Designs</a>, <a href=\"/mensuits/\">Men</a> or <a href=\"/womensuits/\">Women</a>. Use gallery search and filters, then open a design’s dedicated page for its complete photograph and enquiry options.",
+      "answer": "Browse <a href=\"/mensuits/\">Men’s Suits</a> or <a href=\"/womensuits/\">Women’s Suits</a>, choose a style category and open a reference design. Continue to fabric selection or fabric advice before reviewing a quotation request. Photographs are design references, not confirmed stock.",
       "keywords": []
     },
     "collections-share": {
@@ -599,17 +599,17 @@
     },
     "measure-ease": {
       "question": "Should I add extra room to body measurements?",
-      "answer": "Provide direct body measurements without extra room added, following the <a href=\"/measurements/\">Measurement Guide</a>. Discuss fit preferences with the team rather than altering the measurements yourself.",
+      "answer": "Ask the team which measurements, units and method are needed for your garment. Explain fit preferences and clarify incomplete information rather than guessing a tolerance or adding an unconfirmed allowance. You can request guidance before providing measurements.",
       "keywords": []
     },
     "measure-concern": {
       "question": "How should I raise a measurement or fitting concern?",
-      "answer": "Contact the team with the order details, fit concern and any measurements supplied remotely. Explain wear, damage or previous alterations so the garment can be assessed. See <a href=\"/refund-policy/#fit\">garment concerns</a>; no automatic free-correction window is stated here.",
+      "answer": "Report concerns promptly, preferably through official WhatsApp; documented guidance is within 72 hours after receipt/collection without restricting statutory rights. Company-caused feasible errors are corrected without additional tailoring charges; a company-funded remake may apply if proper correction is impossible. Supplied-measurement errors need feasibility assessment.",
       "keywords": []
     },
     "cotton-prices": {
-      "question": "What are the Cotton suit base prices?",
-      "answer": "{{cotton_table}} {{contents}} {{extras}}",
+      "question": "How do I confirm current suit and tuxedo prices?",
+      "answer": "Request the current quotation for the garment, fabric category, inclusions and requirements. Men’s tuxedos have separate packages; do not infer composition or availability from a photograph or tier label.",
       "keywords": []
     },
     "suit-contents": {
@@ -629,7 +629,7 @@
     },
     "standalone-payment": {
       "question": "How are standalone alterations and cleaning paid?",
-      "answer": "{{standalonePayment}} {{balance}}",
+      "answer": "{{standalonePayment}} Your quotation confirms the agreed total, payments received and any balance due.",
       "keywords": []
     },
     "higher-collections": {
@@ -639,7 +639,7 @@
     },
     "shirt-skirt": {
       "question": "Is a shirt or skirt included at the standard price?",
-      "answer": "A shirt is not automatically included. Skirt-suit options require a separate quotation and confirmation; do not assume the standard jacket-and-trousers package price.",
+      "answer": "Confirm the exact garments, accessories and any specifically agreed benefits in your quotation. Men’s ordinary two-piece suits contain jacket and trousers; a three-piece adds a waistcoat. Women’s styles and men’s tuxedo packages are confirmed separately. Do not infer inclusions from an image or package name.",
       "keywords": []
     },
     "payment-methods": {
@@ -654,7 +654,7 @@
     },
     "appointment-needed": {
       "question": "Do I need an appointment?",
-      "answer": "Confirm appointments directly with the team before relying on a preferred time. Ordinary Saturday visits do not require an appointment; Sunday and Umuganda visits require advance arrangements. Check the current hours in the website footer.",
+      "answer": "Confirm visit availability and any appointment directly with the team. Normal operating hours are 09:00–17:00 Kigali time; location visits and after-hours work require confirmation. Support hours are a separate Monday–Friday schedule excluding Rwandan public holidays.",
       "keywords": []
     },
     "request-appointment": {
@@ -664,7 +664,7 @@
     },
     "reschedule": {
       "question": "What if I need to reschedule a visit?",
-      "answer": "Contact the team as early as possible with the appointment details. Ask about the next available arrangements and any payment already made.",
+      "answer": "For delivery, the documented rescheduling policy allows at least one hour’s notice. Later changes or failed deliveries may involve justified approved costs where applicable. For appointments, contact the team promptly to agree revised arrangements.",
       "keywords": []
     },
     "directions": {
@@ -674,7 +674,7 @@
     },
     "production-start": {
       "question": "When does production start?",
-      "answer": "Production does not begin before the 70% advance is confirmed. The team confirms the production start and a realistic schedule directly; a website form or WhatsApp message alone does not start production.",
+      "answer": "An enquiry is not an accepted production order. Quotation, customer acceptance, required payment, availability/sourcing checks and official order confirmation precede the separate official production-start notice. For the documented custom-suit model, the advance is 70%; confirm any applicable authorised exception with the team.",
       "keywords": []
     },
     "tailoring-timing": {
@@ -689,32 +689,32 @@
     },
     "ready-notice": {
       "question": "When should I arrange to collect or receive my suit?",
-      "answer": "Wait for readiness confirmation and agree handover arrangements with the team. For suits, the balance is due when tailoring is complete, before final cleaning and delivery. Full payment is required before release.",
+      "answer": "Wait for readiness confirmation and agree handover arrangements. For the documented custom-suit model, the balance is due before final cleaning, delivery or release. Full payment before release applies subject to documented authorised exceptions.",
       "keywords": []
     },
     "late-collection": {
       "question": "What if I cannot collect or receive my garment?",
-      "answer": "Contact the team with your order details to discuss handover arrangements. Full payment is required before release or delivery.",
+      "answer": "Seven calendar days of free storage run from the ready notification. An extension needs individual approval and written confirmation. No unapproved daily storage penalty, forfeiture or resale rule is imposed.",
       "keywords": []
     },
     "outside-kigali": {
       "question": "Who pays for delivery outside Kigali?",
-      "answer": "Outside-Kigali courier or agency charges are customer-paid and confirmed before dispatch. Confirm the provider and arrangements directly; no universal courier deadline is promised. Initial door-to-door Kigali delivery is included with the standard suit package.",
+      "answer": "Additional or outside-Kigali delivery arrangements require an individually agreed quotation where applicable. Confirm the address, provider and handover arrangements; no universal shipping price or delivery deadline is promised. Initial Kigali delivery is included in the documented standard custom-suit package.",
       "keywords": []
     },
     "cancel-before": {
       "question": "Can I cancel before production starts?",
-      "answer": "If you want to cancel before production has officially started, contact us as soon as possible with your order details and reason. The team reviews the order status and any costs already incurred, and explains the proposed outcome. A refund or deduction is considered case by case; neither an automatic refund nor automatic advance forfeiture is promised. See the <a href=\"/refund-policy/#before\">Refund &amp; Cancellation Policy</a>.",
+      "answer": "Contact Support promptly with the order details and reason. Cancellation conditions and any refund amount require human assessment under the applicable approved arrangements and customer rights; no automatic deposit forfeiture or deduction is imposed.",
       "keywords": []
     },
     "cancel-after": {
       "question": "What about a cancellation or refund after work starts?",
-      "answer": "For a request after production starts, contact the team with your order details and concern. We review the circumstances and discuss the available next steps. A request does not itself confirm a cancellation, refund or deduction. If we cannot complete an order for a reason on our side, we discuss a solution that may include a refund for work not delivered. Nothing on this page limits rights or remedies that apply under law.",
+      "answer": "Submit the order details and concern for human review. A request does not itself approve a refund or determine an amount. No automatic Express-fee retention or unverified processing deadline is imposed.",
       "keywords": []
     },
     "refund-review": {
       "question": "How do I ask for a refund review?",
-      "answer": "Send your order details, reason and relevant payment or garment evidence. The team reviews the request and explains the proposed outcome. If a refund is agreed, confirm the amount, method and expected processing time directly.",
+      "answer": "Use the <a href=\"/refund-policy/#request-title\">refund request form</a> with order details, reason and relevant evidence. Human review and a decision are required. Amounts, cancellation conditions and payment-processing deadlines require owner, Finance and legal reconciliation; no automatic deduction or guaranteed deadline is imposed.",
       "keywords": []
     },
     "order-change": {
@@ -734,7 +734,7 @@
     },
     "form-processing": {
       "question": "How are website form details processed?",
-      "answer": "Booking and measurement forms use Web3Forms to forward your request to Mr Sewing by email. Read the <a href=\"/privacy-policy/\">Privacy Policy</a> before submitting information.",
+      "answer": "Text forms use the existing Web3Forms submission service. Uploads remain disabled. New request selections may use tab-session storage without storing contact fields or message text there. See the <a href=\"/privacy-policy/\">staging Privacy Policy</a> for observed processing and verification gaps.",
       "keywords": []
     },
     "photo-request": {

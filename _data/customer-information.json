@@ -5,32 +5,16 @@
   "website": "https://mrsewingfashion.com",
   "advancePercent": 70,
   "suitPayment": "Pay a 70% advance before production. For a suit order, the balance is due when tailoring is complete, before final cleaning and delivery. Full payment is required before garment release.",
-  "standalonePayment": "Standalone alterations and cleaning require a 70% advance. With that advance, the remaining 30% is payable when the service is complete, before release or delivery. For standalone cleaning, this means after cleaning is complete.",
+  "standalonePayment": "For standalone alterations and cleaning, confirm the required payment and balance conditions in your individual quotation before proceeding. Do not automatically apply custom-suit payment percentages to every service.",
   "balance": "With a 70% advance, the balance is 30%. Your actual balance is the agreed total less payments already received.",
-  "contents": "A standard two-piece suit includes a jacket and trousers. A standard three-piece includes a jacket, trousers and waistcoat. A shirt is not automatically included. Skirt-suit options require a separate quotation and confirmation; the standard trouser-package price must not be assumed.",
-  "package": "The standard suit package includes the agreed suit and standard tailoring, a branded hanger and protective cover, one initial standard professional cleaning, and initial door-to-door delivery within Kigali. These included items are not charged separately again.",
+  "contents": "The documented men’s two-piece suit contains a jacket and trousers; a three-piece adds a waistcoat. Women’s two- and three-piece business or ceremony styles are confirmed in the quotation. Men’s tuxedos have separate packages; ordinary suit accessories and women’s tuxedos must not be assumed.",
+  "package": "The documented standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Included services are not charged twice.",
   "extras": "Extra fabric, decorations, embroidery, attachments and special requirements need a quotation and confirmation before payment.",
-  "higherCollections": "For Polyester, Wool/Star and Super/Americano collection enquiries, request a quotation. No prices for these collections are listed here. Collection names alone do not establish verified fabric composition.",
-  "delivery": "Initial door-to-door Kigali delivery is included with the standard suit package. Outside-Kigali courier or agency charges are customer-paid and confirmed before dispatch. A courier deadline must be confirmed individually. Mobile fittings, collection visits and follow-up transport are separate arrangements; confirm their scope and any charges directly.",
-  "timing": "Standard tailoring usually takes 2–4 days; express tailoring usually takes 12–15 hours. These are tailoring-stage estimates, not delivered-suit deadlines. Sourcing, scheduling, fittings, changes, final cleaning and delivery affect the full order timeline. Confirm a realistic completion date individually.",
-  "alterationTiming": "Alterations are usually completed within one maker day. This is a work-stage estimate, not a guaranteed handover time; confirm assessment, scheduling, fitting and delivery arrangements individually.",
+  "higherCollections": "Confirm the fabric label, suitability, availability and quotation with the team. Collection or tier names do not establish verified fabric composition. No unverified price schedule is published.",
+  "delivery": "Initial Kigali delivery is included in the documented standard custom-suit package. Additional or outside-Kigali delivery requires an agreed quotation where applicable. Confirm address, time and required payment before dispatch. No shipping price or delivery deadline is assumed.",
+  "timing": "Completion, fitting, sourcing and handover arrangements are individually confirmed. Standard 24-hour and Express 2-hour targets concern order confirmation after the required steps, not garment completion.",
+  "alterationTiming": "Alterations depend on garment condition, requested work, scheduling and fitting arrangements. Confirm the actual quotation and completion arrangements individually.",
   "careTiming": "Confirm the cleaning service, suitability and estimated completion date with the team before proceeding. The full schedule depends on the garment, treatment and current capacity.",
-  "cotton": [
-    {
-      "garment": "Men two-piece",
-      "priceRwf": 200000
-    },
-    {
-      "garment": "Men three-piece",
-      "priceRwf": 250000
-    },
-    {
-      "garment": "Women two-piece",
-      "priceRwf": 150000
-    },
-    {
-      "garment": "Women three-piece",
-      "priceRwf": 200000
-    }
-  ]
+  "cotton": [],
+  "priceScheduleStatus": "UNVERIFIED — latest dated schedule and publication clearance require source verification"
 }

@@ -1,0 +1,46 @@
+{
+  "source": "Owner approved image assignments, 5 November 2026",
+  "uploadCommit": "a58aa96b992670b96da8cda1a9b5b2e961804e53",
+  "images": {
+    "custom-tailoring": {
+      "src": "/hero-custom-tailoring.webp",
+      "width": 1536,
+      "height": 1024,
+      "alt": "Ivory suit jacket on a black mannequin in a light room",
+      "sha256": "c32555935e97e220d9caae7ca2128d8eb4942811da2508f6d1ef8b0ffbc73250",
+      "mobilePosition": "55% 45%"
+    },
+    "alterations": {
+      "src": "/hero-alterations.webp",
+      "width": 1000,
+      "height": 571,
+      "alt": "Tailor adjusting a dark jacket on a mannequin",
+      "sha256": "3557894e371a68f93ce63e777a430fdcf57940c0a022df7a32d60c2e6e7edb23",
+      "mobilePosition": "42% 45%"
+    },
+    "garment-care": {
+      "src": "/hero-garment-care.webp",
+      "width": 800,
+      "height": 800,
+      "alt": "Navy suit on a hanger beside a garment steamer",
+      "sha256": "fa8f1ae81a3ac00ecbb9c1e8123b75201a25404ab2f181c9fc41a8b737e030e4",
+      "mobilePosition": "48% 50%"
+    },
+    "mobile-fitting": {
+      "src": "/hero-mobile-tailoring.webp",
+      "width": 1365,
+      "height": 768,
+      "alt": "Tailoring consultation with a customer wearing a navy suit",
+      "sha256": "6bb51da1c407643cc6c8d3429559871b85075ae41795e94cfd8abc3c41dcd5d3",
+      "mobilePosition": "50% 42%"
+    },
+    "vip": {
+      "src": "/hero-vip-services.webp",
+      "width": 1536,
+      "height": 1030,
+      "alt": "Consultation setting with a suit mannequin and tailoring accessories",
+      "sha256": "bb4c84b23e10095003f6df850c222d15bfec627f8407c33df498cb5b7c6d4157",
+      "mobilePosition": "38% 45%"
+    }
+  }
+}

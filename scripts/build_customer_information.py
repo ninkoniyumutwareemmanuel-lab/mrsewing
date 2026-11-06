@@ -27,7 +27,10 @@ def outputs():
   path=ROOT/(slug+'.html');data={**data,'route':slug};source=(ROOT/'_templates'/(slug+'.html')).read_text().replace('{{content}}',policy_main(data))
   # Keep the existing restrained policy style and provide a responsive price table.
   source=source.replace('</style>','.tw{overflow-x:auto}.price-table{width:100%;border-collapse:collapse}.price-table th,.price-table td{padding:12px;text-align:left;border-bottom:1px solid #444}.price-table caption{text-align:left;padding:12px 0;color:#d4af37}section{scroll-margin-top:90px}</style>',1)
-  out[path]=finalize(apply(static_header(source),meta[path.name]),path)
+  from customer_site import information
+  out[path]=finalize(information('/'+slug+'/'),path)
+ from customer_site import information
+ out[ROOT/'measurements.html']=finalize(information('/measurements/'),ROOT/'measurements.html')
  out.update(faq_outputs())
  return out
 

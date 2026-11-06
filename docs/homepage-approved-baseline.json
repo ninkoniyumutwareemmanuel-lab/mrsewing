@@ -1,0 +1,31 @@
+{
+  "approvedHomepageCommit": "c17639947d79f988bec3a72cd95a4bdb44a4fb74",
+  "ownerApproval": "Owner explicitly identified the existing homepage as visually approved in the Custom Tailoring & Suits task.",
+  "files": {
+    "index.html": "ba63b760131fabaaf5fbb103769d714a49f1f23849b69abf55ddd393d88da627",
+    "assets/homepage.js": "f99a706e8aae0d6810d90b634282a713d28a67e4b49c1f811b7a5e67c844b13e",
+    "_templates/homepage.html": "bb051a0b5540cbbc4fb4480e3258d61e622b9ee74206e01a73f69b8c0bf837b7",
+    "_templates/homepage-header.html": "1c21ac1060873ded55601cd859d9755a93835214279c90216ef1ceec98a90cb4",
+    "_templates/homepage-footer.html": "8db11bfb525e0e1c0d65b4405dc2c3045f925a8f9d37b728e9a33bd1d71395dd",
+    "_templates/homepage-sections.html": "3e5e2026487c0b2f9677a0eca63aa4dd7176e66761011a86c56824e9efe0a91a",
+    "_templates/homepage-phase1.css": "79b7d14121b2cb558ea3b6c7d71eb2a67b00b82ebaa0a0090cae104c0e027499",
+    "_templates/homepage-corrective.js": "620cf269458e3317798d60814f2009a170a3aad5b86c5db24a6dd9ab192505c0",
+    "_templates/homepage-interactions.js": "0ed72f64f13733f688b1695fdebde708200d4f423cc8fc0077c89909ce6b601d",
+    "_templates/order-carousel.js": "39bcd4e7ab27ec5e2e8b414e41b268126ddf0056740c4fdff5f22dcf716519be",
+    "_templates/homepage-quotation.html": "16f087af2acd19c3fffdae6462bd5d6ad019657bd1c8035bb3d1b0ab1f439d1b",
+    "_templates/shared/site.css": "06948d7134e4e7a1f172796b03ddbe434f19a765a66dbb463d791d00b159e256",
+    "_templates/shared/navigation.js": "39f3a44f5e64e01beee9d5af593aa8bd1cd323b312f09e30ce900cb120492fc9",
+    "_data/homepage-guides.json": "8adb3a8a74dc6694e8e9dccfdb385f04d5968694eb26a4ed0ac99b6490b755c9",
+    "_data/page-seo.json": "a0856864224e3f1353c8b5bae61596dcbf9ca0961ee7fc28d29b67a90fb0ee0d",
+    "_data/business.json": "77d885e02f5be5b9ef17d786137d3bb4154f02a928d07a0dd7d0de4f83288348",
+    "scripts/build_homepage.py": "b25908721e6050dea2b713716cb1def18c354a74facd45daea7684a3457e6aeb",
+    "scripts/homepage_resources.py": "6eb5bcfbb0d4f0a7332a0493ca77ac69dfaaa7c5787becf076b636ce11eb33ee",
+    "_data/homepage-media.json": "e534f516ed8e48ba1d1625d7765ddcbd67b4cc9bd1e4e4ea4cabee82310cf602",
+    "_data/homepage-icons.json": "ba6731a70702438191604f7c71090e52bc5c8b69b1ecc363c472fb6dfc6f681a"
+  },
+  "screenshotReferences": [
+    "/workspace/artifacts/navigation-support-corrections/homepage-390.png",
+    "/workspace/artifacts/navigation-support-corrections/homepage-1440.png"
+  ],
+  "protection": "Do not change homepage layout, copy, photographs, interactions or SEO in service-page work. Any necessary shared change must preserve these file hashes and pass regressions."
+}

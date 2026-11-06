@@ -50,7 +50,7 @@ def icon(name):
  assert name in paths,name
  return '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'+paths[name]+'</svg>'
 def contact(title,path):
- return '<a class="faq-primary" href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
+ return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
 def search_data():
  data,topics,qs,_=catalogue()
  return {'synonyms':data['synonyms'],'entries':[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]}
@@ -70,7 +70,7 @@ def topic_content(t,topics,qs):
  path=route(t)
  out='<nav class="faq-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/faq/">All FAQ topics</a><span aria-hidden="true">/</span><span>'+escape(t['title'])+'</span></nav><section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">'+escape(t['title'])+' FAQs</h1><p>'+escape(t['description'])+'</p></section><div class="faq-topic-layout"><div class="faq-questions">'
  for id in t['questions']:
-  q=qs[id];out+='<details class="faq-question" id="'+id+'"><summary><h2>'+escape(q['question'])+'</h2></summary><div class="faq-answer">'+expand(q['answer'])+'<br><a class="faq-permalink" href="'+path+'#'+id+'">Link to this answer <span class="visually-hidden">: '+escape(q['question'])+'</span></a></div></details>'
+  q=qs[id];out+='<details class="faq-question" id="'+id+'"><summary><h2>'+escape(q['question'])+'</h2></summary><div class="faq-answer">'+expand(q['answer'])+'</div></details>'
  out+='</div><aside class="faq-side"><h2>Your next step.</h2><p>Discuss your needs with the team for an assessment, quotation or confirmation of arrangements.</p>'+contact(t['title'],path)+'<a class="faq-side-link" href="'+t['destination']+'">View related '+('service' if t['destination'].startswith('/services/') else 'information')+' <span aria-hidden="true">↗</span></a><a class="faq-side-link" href="/faq/">All FAQ topics</a></aside></div>'
  byslug={x['slug']:x for x in topics};out+='<nav class="faq-related" aria-label="Related FAQ topics"><h2>Related topics</h2><div class="faq-related-links">'+''.join('<a href="'+route(byslug[s])+'">'+escape(byslug[s]['title'])+'</a>' for s in t['related'])+'</div></nav>'
  return out

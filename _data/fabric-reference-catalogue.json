@@ -1,0 +1,102 @@
+{
+  "source": "Owner R3 working categories; 5 November2026 addendum reports V5 labels, original Sources inaccessible",
+  "approvalStatus": "WORKING REFERENCE — source/stock/composition confirmation pending",
+  "fabrics": [
+    {
+      "id": "men-super",
+      "category": "men",
+      "name": "Super / Super 100s",
+      "tier": 1,
+      "image": "fabric-super",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Super / Super 100s with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "men-wool",
+      "category": "men",
+      "name": "Wool",
+      "tier": 2,
+      "image": "fabric-wool",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Wool with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "men-polyester",
+      "category": "men",
+      "name": "Polyester",
+      "tier": 3,
+      "image": "fabric-polyester",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Polyester with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "men-cotton",
+      "category": "men",
+      "name": "Cotton / Dubai",
+      "tier": 4,
+      "image": "fabric-cotton",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Cotton / Dubai with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "women-americano",
+      "category": "women",
+      "name": "Americano",
+      "tier": 1,
+      "image": "fabric-americano",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Americano with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "women-star",
+      "category": "women",
+      "name": "Star",
+      "tier": 2,
+      "image": "fabric-star",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Star with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "women-polyester",
+      "category": "women",
+      "name": "Polyester",
+      "tier": 3,
+      "image": "fabric-polyester",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Polyester with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    },
+    {
+      "id": "women-cotton",
+      "category": "women",
+      "name": "Cotton",
+      "tier": 4,
+      "image": "fabric-cotton",
+      "startingPriceRwf": null,
+      "priceStatus": "Price on request",
+      "colourStatus": "Ask us about available colours.",
+      "description": "Discuss Cotton with our team to choose a fabric suited to your garment and preferences.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+    }
+  ]
+}

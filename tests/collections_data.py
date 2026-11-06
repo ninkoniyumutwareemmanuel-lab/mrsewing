@@ -9,7 +9,8 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import build_collections as build
 public,inventory=build.load()
 assert len({d['id'] for d in public})==len(public)
-assert all(d['provenance']=='unverified' for d in public)
+assert len(public)==15 and sum(d['provenance']=='made_by_mr_sewing' for d in public)==7 and sum(d['provenance']=='design_inspiration' for d in public)==8
+assert {d['id'] for d in public if d['provenance']=='made_by_mr_sewing'}=={'MS-005','MS-006','MS-007','MS-069','MS-083','MS-096','MS-117'}
 assert not inventory['missingLegacyReferences']
 read=Path.read_text
 source=json.loads(read(build.ROOT/'_data/collection-designs.json'))

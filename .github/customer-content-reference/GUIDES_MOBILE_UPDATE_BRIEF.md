@@ -1,0 +1,13 @@
+# R3 pre-writing page brief
+
+Baseline b6b1d5147ec0edbb76ff956cb8fb06b3249d7b95, owner upload only; working branch phase1/customer-journey-repairs. Consult source reference2026-11-05-04, R3 owner instruction and C11–15. Exact company originals unavailable; do not claim independent verification of working tier labels, prices, composition or stock.
+
+Audience/pages: Fabric Guide presents six illustrative references in two working category groups; fabric step selects category/fabric or advice without confirming stock; request records selected label/category and assistance; Measurements keeps six current guidance sections plus11 labelled illustrations; five service heroes use same approved original photo as mobile background, individual focal points, unchanged desktop; homepage adds only VIP ticket.
+
+Eligibility/journey: unchanged. Gallery design→optional fabric/advice→Standard/Express→details→review→Submit. Category/reference retained; no measurement prerequisite. No prices/stock guarantees or new commercial conditions. Existing 70/30 custom scope, confirmation/support distinctions, delivery/collection, benefits and general policies unchanged. Contacts remain configured official +250787411501 and mrsewingfashiondesigner@gmail.com/wa.me250787411501; actual receipt not verified.
+
+Actions: Guide has no repeated shortcut groups; fabric radio cards/selects only choose preferences, Continue validates then retains enum fabric/category via context, Back returns to prior design; advice disables/clears selected reference. Request permits review/edit and maps enum to trusted shared fabric labels/category; real provider success only, failure preserves entries. VIP ticket routes /services/vip/ (no subscription checkout). No new external integration, PII storage or uploads.
+
+SEO: existing title/canonical/schema/indexing preserved. Encoded image paths, descriptive alt, intrinsic dimensions, lazy belowfold and eager hero loading. Every uploaded original retained. Company-source documents/prices/current colours remain explicitly pending. Measurement picture numbers are illustrative; no new method inferred.
+
+Verification: inspect both neck files and every label/photo; full six existing measurement text sections unchanged; all8 category cards/6 images resolve; shared choices payload tested, advice/reset/category changes/invalid values/blocked storage and provider errors; mobile backgrounds and readability at320/360/390/430/768; desktop hero pixel comparisons1024/1440; homepage all unrelated sections/4 existing tickets preserved; axe, builds, metadata, viewport and nav/form regression. No physical device, real delivery or live Cloudflare success claim without evidence.

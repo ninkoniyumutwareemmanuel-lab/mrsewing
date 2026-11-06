@@ -1,0 +1,181 @@
+# Mr Sewing policy source matrix
+
+Internal developer reference — 5 November 2026. NOT public website copy or final legal advice. Implementation reviewed at `6fcaca98530742dc4f1556c946432f27418b6774` on `phase1/customer-journey-repairs`. Preserve the approved homepage. No policy publication is authorised by this reference update.
+
+Authority: latest explicit approved owner decision, then latest applicable approved dated decision, then earlier unsuperseded approval. Proposals never supersede approvals merely by being newer. Current implementation is comparison evidence, not independent policy approval.
+
+**Source coverage is incomplete.** The named company originals are unavailable. The two 5 November owner instructions are directly available; source-recorded price/fabric details in the addendum are reported extracts, not independently verified original documents or new price/publication approval.
+
+## Actual source inventory
+
+- S-MASTER: owner comprehensive master prompt, 5 November 2026, §§1–35, read in conversation. Latest explicit approved customer-rule directions where stated.
+- S-ADDENDUM: owner Final Source Audit, Missing Information and Developer Decision Rules, 5 November 2026, §§1–19, read in conversation. Governs verification/publication; §4 price amounts are reported extracts, not new price approval.
+- S-ATTACH-1: `/workspace/attachments/814eac2c-7db9-4bfe-8c99-4efe313e5899/Pasted text.txt`; full pasted homepage instruction read; no explicit document date verified, historical homepage scope only.
+- S-ATTACH-2: `/workspace/attachments/06102922-450b-49e8-bc99-d8ae01a585e8/Pasted text.txt`; full pasted homepage instruction read; no explicit document date verified, historical homepage scope only.
+
+**Totals:** four available owner instruction documents inspected in this audit (two current conversation documents and two historical pasted attachments). **Zero of the eight specifically named company-original files/archives were accessed.** Additional management updates/reconciliation documents are an unenumerated unavailable category. Repository snapshot, existing internal reports and test artefacts are implementation evidence and are not counted as approved company sources.
+
+
+
+Searched repository, /workspace attachments/library/shared, /tmp/codex-remote-attachments and available resource/connector catalog. No Project Sources connector or owner Sources archive is exposed.
+
+- Mr_Sewing_Company_Sources.zip
+- NEXUS_LTD_Cross_Department_Source_Index_2026-11-01.md
+- Custom_Tailoring_Decision_Register_v5_2026-11-01.md
+- Mr_Sewing_Sanitized_Customer_Facts_Handoff_2026-11-01.md
+- Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md
+- Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md
+- MR-SEWING-FASHION-—-APPROVED-OPERATING-HOURS-AND-OVERNIGHT-SERVICES.txt
+- MR-SEWING-FASHION-—-APPROVED-COMBINED-SURCHARGE-POLICY.txt
+- Approved management updates, financial-policy reconciliations and other dated company Sources not supplied to the accessible workspace.
+
+Do not label these as read. Exact product prices/tier definitions and unquoted procedures remain unverified. An older handbook is not promoted over these missing Sources or the current owner instruction.
+
+
+## Rule-level matrix
+
+Actual supporting document for C01–C50: **S-MASTER (conversation), 5 November 2026**, section/date below. Candidate original filenames are reported targets, not evidence of original inspection. No original decision reference is invented.
+
+| ID | Faithful rule | Actual source/date/decision reference | Reported original to verify | Status | Applicable service | Customer destination | Conditions / supersession |
+|---|---|---|---|---|---|---|---|
+| C01 | Exactly four official primary service names | §5; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Services/nav/forms/footer | Supersedes seven top-level service presentation |
+| C02 | Standard/VIP Service across all four categories | §6; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Service selectors | Intro/individual quote only; no final VIP contract |
+| C03 | VIP on-location/cross-service/Express/after-hours requests | §6,15; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | VIP selection/introduction | Feasibility/scope and agreed quotation; no package guarantee |
+| C04 | VIP garment care/alterations membership; four visits direction | §6; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | PROPOSED | As scoped; all four unless noted | No public product/payment | Internal only: allowance/price/coverage/renewal/cancellation unresolved; Finance/legal |
+| C05 | Standard Order=website design; Special=customer design | §7; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Tailoring/design routes | Separate from Service and Priority axes |
+| C06 | Men's/Women's categories, real references/preferences | §7,28; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Existing galleries/design detail | Publication/rights evidence required; no invented stock/prices |
+| C07 | Special form without mandatory gallery/measurements | §7; 5 Nov; S-UPLOAD; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Special request | Text only until secure upload approval |
+| C08 | Standard/Express Priority separate selection and editable review | §7,31; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Review-before-submit | No automatic order/payment |
+| C09 | Men's two/three-piece, business/ceremony, men's tuxedos | §8; 5 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Tailoring scope | Tuxedo inclusions/prices not supplied |
+| C10 | Women's two/three-piece business/ceremony | §8; 5 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Tailoring scope | No standard women's tuxedo claim |
+| C11 | Suit/tuxedo tier prices and gift/package mapping | §8,24; owner references 1 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | UNVERIFIED | Custom suits only | Quote instead of price list | Exact schedule/publication clearance absent; Finance needed |
+| C12 | Exact pictured fabric/colour not guaranteed; alternatives agreed | §9; 5 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | APPROVED | As scoped; all four unless noted | Fabric Guide | No substitution without consent; no research-as-composition claim |
+| C13 | Measurement preparation/incomplete info/pro assistance | §10; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Measurements Guide | No invented tolerances or exact technical measuring instructions |
+| C14 | Company-caused fitting/workmanship errors corrected without tailoring charge; remake if proper correction impossible | §10,19; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Measurements/corrections/Terms | Preserve legal remedies; legal review |
+| C15 | Customer-supplied measurement errors assessed; no universal correction guarantee; replacement quote where applicable | §10,19; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Measurements/Terms | Exact assistance detail absent; legal review |
+| C16 | Alterations/repair assessment and individual quote | §11; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Alterations | No universal repair guarantee or fixed prices |
+| C17 | Care suitability, labels/condition; verified methods only | §12; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Care | Specific machinery/processes/prices unverified |
+| C18 | Mobile consultation/measurement/fitting/styling/event visits | §13; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Mobile assistance | Staffing/location/timing/feasibility/quote confirmed |
+| C19 | Custom suit advance 70%, balance 30% before final cleaning/delivery/release, full payment before release | §14; 5 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Payment guide/Terms/tailoring | Authorised exceptions not supplied; do not apply automatically to all other services |
+| C20 | Enquiry→quote→acceptance→payment→sourcing→official confirmation→separate production-start notice | §14; 5 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | APPROVED | As scoped; all four unless noted | Order guide/service requests | Neither enquiry nor browser selection confirms production |
+| C21 | Confirmation targets Standard 24h, Express 2h after required steps | §14; 5 Nov; original decision ID unavailable | Custom_Tailoring_Decision_Register_v5_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Order guide | Not garment completion deadlines; distinguish support response |
+| C22 | Normal 09–17 Kigali; standard after-hours 17–22, 25% surcharge; later overnight individual quotation | §15; owner cites 2 Nov; original decision ID unavailable | MR-SEWING-FASHION-—-APPROVED-OPERATING-HOURS-AND-OVERNIGHT-SERVICES.txt (reported 2 Nov; inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Hours/priority guide/Terms | Day-of-week conflicts with protected home kept for review; availability applies |
+| C23 | Standard-service Express 35%, after-hours 25%, combined 60% of original quote | §15; 5 Nov reaffirmation; original decision ID unavailable | MR-SEWING-FASHION-—-APPROVED-COMBINED-SURCHARGE-POLICY.txt (original date unverified; inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Priority guide/Terms | No compounding; not automatically applied to VIP |
+| C24 | VIP Express/after-hours within agreed VIP quote | §15; latest owner direction; original decision ID unavailable | MR-SEWING-FASHION-—-APPROVED-COMBINED-SURCHARGE-POLICY.txt (original date unverified; inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Service quote context | Supersedes automatic Standard-service surcharges for VIP; no final VIP terms/FAQ |
+| C25 | Support Mon–Fri 09–17 Kigali excluding Rwanda holidays; first response within 24 support working hours | §16; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Support/contact/order guide | Not consecutive hours or refund deadline |
+| C26 | Professional communications and status updates | §16,17; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Support/order guide | Actual updates via team, no fake tracking |
+| C27 | Assess interruption's completion-date effect before announcing delay | §17; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Order guide | Communicate confirmed issue and realistic revisions |
+| C28 | Standard Kigali suit package initial cleaning/protection/initial delivery | §18; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED | Custom suits only | Delivery/Terms | No duplicate charge; extra/outside Kigali separately agreed |
+| C29 | Address/time/payment verified before dispatch; delivery completion recorded | §18; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED | As scoped; all four unless noted | Delivery guide | No fake automated record/tracking implementation |
+| C30 | Reschedule at least 1h notice; later/failed deliveries may justify agreed costs | §18; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Delivery/Terms | No automatic fee; company-caused failure rule details missing |
+| C31 | Collection payment/ID, written third-party authority, receipt and customer notification | §18; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Collection guide | Do not collect ID scans in website forms |
+| C32 | Seven calendar days free storage from ready notice; written approved extensions | §18; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED | As scoped; all four unless noted | Delivery/Terms | No daily penalty/forfeiture/resale inventions |
+| C33 | Report fitting issues promptly, guidance within 72h after receipt, preferably WhatsApp | §19; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Corrections/Refund/Terms | Not a statutory-rights cutoff; supersedes historical ban on mentioning 72h |
+| C34 | Refund request form, human assessment, WhatsApp/email reply, decision and follow-up | §20; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Refund Policy/form | No automatic approval/deduction/deadline |
+| C35 | Refund amounts/cancellation conditions/processing deadline | §20; 5 Nov; original decision ID unavailable | Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md (inaccessible) | OWNER REVIEW REQUIRED | As scoped; all four unless noted | Clearly marked review note | Finance/legal verification; no invented clause |
+| C36 | General Terms cover 22 requested topics and statutory rights | §21; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Terms | Rwanda legal review; exclude final VIP terms |
+| C37 | Privacy explains actual data/processor/rights; no invented retention/security guarantees | §22; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Privacy | Operator/provider/retention/transfer/legal evidence gaps; staging draft |
+| C38 | Loyalty 3% from second separate qualifying suit purchase | §23; owner cites 1 Nov; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Benefits/Terms | Qualifying suits only; procedures not invented |
+| C39 | Referred new customer 2% first qualifying suit order | §23; owner cites 1 Nov; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Benefits | Attribution/edge cases unresolved; disclose assessment |
+| C40 | Referrer 6,000 RWF per qualifying suit in first order | §23; owner cites 1 Nov; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Benefits with explicit conditions pending | Commission conditions not fully supplied; no payout timing or broad entitlement |
+| C41 | Bulk 3% second/subsequent qualifying suits together for one customer | §23; owner cites 1 Nov; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Benefits | No extension to unrelated services |
+| C42 | Group 3% for ≥2 customers' qualifying suits together | §23; owner cites 1 Nov; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Benefits | Request procedure details missing; confirm eligibility |
+| C43 | Highest eligible customer discount only; referral commission separate | §23; 5 Nov; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED | Custom suits only | Benefits/Terms | Supersedes historical stacking/percentages |
+| C44 | Tier gifts and extra cleaning (Tier1/2); none tier3/4 | §24; owner cites later reconciliation; original decision ID unavailable | Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md (inaccessible) | APPROVED WITH CONDITIONS | Custom suits only | Internal review only pending full terms | Tier mapping, quantity/frequency/redemption unresolved: withhold public promise |
+| C45 | Customer-supplied fabric fixed policy | §25; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | PROPOSED | As scoped; all four unless noted | Internal staging review document | Owner approval required; no active contractual conditions |
+| C46 | Context forms, validation/review/context/error preservation | §26,31; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | All request forms | Existing approved integration; no real messages in tests |
+| C47 | Mr Sewing Fashion / NINKONIYUMUTWARE NEXUS LTD / Kigali | §27; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | About/contact | Existing contact comparison; no invented year/team |
+| C48 | Image provenance and completed-work distinction | §28; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | Work/galleries | Existing registry has review-required reference images; no new licensing claims |
+| C49 | General FAQs only supported facts; no VIP-specific FAQ finalisation | §29; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED WITH CONDITIONS | As scoped; all four unless noted | FAQ | Reconcile conflicting historical rules; do not add new FAQ contracts |
+| C50 | Protected home, staging-only, source/SEO/legal boundaries | §4,30,34; 5 Nov; original decision ID unavailable | Cross-department index/sanitized handoff and applicable approved addendum (exact originating decision unavailable) | APPROVED | As scoped; all four unless noted | Baseline/tests | Homepage changes need separate approval; no production |
+
+## Internal price and fabric reference — NOT CLEARED FOR PUBLICATION
+
+Reported exact source: `Custom_Tailoring_Decision_Register_v5_2026-11-01.md`, 1 November 2026, via S-ADDENDUM §§4–5. Original inaccessible; decision ID and newer schedule checks NOT VERIFIED. Status: **UNVERIFIED for current publication; owner-reported historical reconfirmation**. Never substitute historical Cotton-only website figures. No supplier costs are included.
+
+| Tier | Men 2-piece RWF | Men 3-piece RWF | Women 2-piece RWF | Women 3-piece RWF | Men's local label | Women's local label |
+|---|---:|---:|---:|---:|---|---|
+| 1 | 600,000 | 650,000 | 500,000 | 550,000 | Super / Super 100s | Americano |
+| 2 | 400,000 | 450,000 | 350,000 | 400,000 | Wool | Star |
+| 3 | 270,000 | 320,000 | 220,000 | 270,000 | Polyester | Polyester in approved price schedule |
+| 4 | 200,000 | 250,000 | 150,000 | 200,000 | Cotton / Dubai | Cotton in approved price schedule |
+
+| Men's tuxedo tier | 2-piece RWF | 3-piece RWF |
+|---|---:|---:|
+| 1 | 800,000 | 1,000,000 |
+| 2 | 600,000 | 800,000 |
+
+Ordinary men's two-piece means jacket/trousers; three-piece adds waistcoat. Exact women's package composition, all accessories, tuxedo package inclusions and publication clearance need original evidence. No standard women's tuxedo offering is inferred. Local labels are not certified fibre-composition claims. Vigo/Prado research does not replace the approved schedule, price or stock. Reference photos do not verify composition, stock, colours or licence. Customer consent is required for alternatives; quotation changes need agreement.
+
+## Additional addendum rule records
+
+| ID | Rule | Source/date | Status and conditions | Pages / supersession |
+|---|---|---|---|---|
+| A01 | Reported ordinary suit and men's tuxedo tables above | S-ADDENDUM §4, 5 Nov; reports V5 1 Nov | UNVERIFIED for current publication; newness, inclusions and clearance unresolved | Tailoring/Fabric Guide only after clearance; supersedes no published rule by itself |
+| A02 | Local men's/women's tier labels above | S-ADDENDUM §5, 5 Nov; reports V5 1 Nov | APPROVED WITH CONDITIONS as an internal reported reference; no composition/stock certification | Fabric Guide future review; Vigo/Prado does not replace schedule |
+| A03 | Pre-production fabric-unavailability refund exception | S-ADDENDUM §10, 5 Nov | UNVERIFIED exact rule; original clause missing | Refund/Terms/Fabric Guide; no extrapolation to all cancellations |
+| A04 | Hold customer-facing policy publication pending review | S-ADDENDUM §§18–19, 5 Nov | APPROVED development restriction | All policy destinations; no new policy push in this audit |
+| A05 | Communication drafts only; distinguish lifecycle events | S-ADDENDUM §7, 5 Nov | APPROVED; never send automatically | Internal communication library; no deadline invention |
+
+## Reconciliation process
+
+Identify exact competing statements; record both approval states/dates; prefer latest applicable explicit approval, not newest proposal; cite supersession evidence. If unresolved, OWNER REVIEW REQUIRED. Existing protected-home wording is not silently rewritten. See MR_SEWING_UNRESOLVED_POLICY_REGISTER.md for conflicts and missing originals.
+
+## Source-topic → page coverage matrix
+
+| Rule/source topic | Page responsibility | Conditions / remaining coverage |
+|---|---|---|
+| C01 Exactly four official primary service names | Services/nav/forms/footer | Supersedes seven top-level service presentation |
+| C02 Standard/VIP Service across all four categories | Service selectors | Intro/individual quote only; no final VIP contract |
+| C03 VIP on-location/cross-service/Express/after-hours requests | VIP selection/introduction | Feasibility/scope and agreed quotation; no package guarantee |
+| C04 VIP garment care/alterations membership; four visits direction | No public product/payment | Internal only: allowance/price/coverage/renewal/cancellation unresolved; Finance/legal |
+| C05 Standard Order=website design; Special=customer design | Tailoring/design routes | Separate from Service and Priority axes |
+| C06 Men's/Women's categories, real references/preferences | Existing galleries/design detail | Publication/rights evidence required; no invented stock/prices |
+| C07 Special form without mandatory gallery/measurements | Special request | Text only until secure upload approval |
+| C08 Standard/Express Priority separate selection and editable review | Review-before-submit | No automatic order/payment |
+| C09 Men's two/three-piece, business/ceremony, men's tuxedos | Tailoring scope | Tuxedo inclusions/prices not supplied |
+| C10 Women's two/three-piece business/ceremony | Tailoring scope | No standard women's tuxedo claim |
+| C11 Suit/tuxedo tier prices and gift/package mapping | Quote instead of price list | Exact schedule/publication clearance absent; Finance needed |
+| C12 Exact pictured fabric/colour not guaranteed; alternatives agreed | Fabric Guide | No substitution without consent; no research-as-composition claim |
+| C13 Measurement preparation/incomplete info/pro assistance | Measurements Guide | No invented tolerances or exact technical measuring instructions |
+| C14 Company-caused fitting/workmanship errors corrected without tailoring charge; remake if proper correction impossible | Measurements/corrections/Terms | Preserve legal remedies; legal review |
+| C15 Customer-supplied measurement errors assessed; no universal correction guarantee; replacement quote where applicable | Measurements/Terms | Exact assistance detail absent; legal review |
+| C16 Alterations/repair assessment and individual quote | Alterations | No universal repair guarantee or fixed prices |
+| C17 Care suitability, labels/condition; verified methods only | Care | Specific machinery/processes/prices unverified |
+| C18 Mobile consultation/measurement/fitting/styling/event visits | Mobile assistance | Staffing/location/timing/feasibility/quote confirmed |
+| C19 Custom suit advance 70%, balance 30% before final cleaning/delivery/release, full payment before release | Payment guide/Terms/tailoring | Authorised exceptions not supplied; do not apply automatically to all other services |
+| C20 Enquiry→quote→acceptance→payment→sourcing→official confirmation→separate production-start notice | Order guide/service requests | Neither enquiry nor browser selection confirms production |
+| C21 Confirmation targets Standard 24h, Express 2h after required steps | Order guide | Not garment completion deadlines; distinguish support response |
+| C22 Normal 09–17 Kigali; standard after-hours 17–22, 25% surcharge; later overnight individual quotation | Hours/priority guide/Terms | Day-of-week conflicts with protected home kept for review; availability applies |
+| C23 Standard-service Express 35%, after-hours 25%, combined 60% of original quote | Priority guide/Terms | No compounding; not automatically applied to VIP |
+| C24 VIP Express/after-hours within agreed VIP quote | Service quote context | Supersedes automatic Standard-service surcharges for VIP; no final VIP terms/FAQ |
+| C25 Support Mon–Fri 09–17 Kigali excluding Rwanda holidays; first response within 24 support working hours | Support/contact/order guide | Not consecutive hours or refund deadline |
+| C26 Professional communications and status updates | Support/order guide | Actual updates via team, no fake tracking |
+| C27 Assess interruption's completion-date effect before announcing delay | Order guide | Communicate confirmed issue and realistic revisions |
+| C28 Standard Kigali suit package initial cleaning/protection/initial delivery | Delivery/Terms | No duplicate charge; extra/outside Kigali separately agreed |
+| C29 Address/time/payment verified before dispatch; delivery completion recorded | Delivery guide | No fake automated record/tracking implementation |
+| C30 Reschedule at least 1h notice; later/failed deliveries may justify agreed costs | Delivery/Terms | No automatic fee; company-caused failure rule details missing |
+| C31 Collection payment/ID, written third-party authority, receipt and customer notification | Collection guide | Do not collect ID scans in website forms |
+| C32 Seven calendar days free storage from ready notice; written approved extensions | Delivery/Terms | No daily penalty/forfeiture/resale inventions |
+| C33 Report fitting issues promptly, guidance within 72h after receipt, preferably WhatsApp | Corrections/Refund/Terms | Not a statutory-rights cutoff; supersedes historical ban on mentioning 72h |
+| C34 Refund request form, human assessment, WhatsApp/email reply, decision and follow-up | Refund Policy/form | No automatic approval/deduction/deadline |
+| C35 Refund amounts/cancellation conditions/processing deadline | Clearly marked review note | Finance/legal verification; no invented clause |
+| C36 General Terms cover 22 requested topics and statutory rights | Terms | Rwanda legal review; exclude final VIP terms |
+| C37 Privacy explains actual data/processor/rights; no invented retention/security guarantees | Privacy | Operator/provider/retention/transfer/legal evidence gaps; staging draft |
+| C38 Loyalty 3% from second separate qualifying suit purchase | Benefits/Terms | Qualifying suits only; procedures not invented |
+| C39 Referred new customer 2% first qualifying suit order | Benefits | Attribution/edge cases unresolved; disclose assessment |
+| C40 Referrer 6,000 RWF per qualifying suit in first order | Benefits with explicit conditions pending | Commission conditions not fully supplied; no payout timing or broad entitlement |
+| C41 Bulk 3% second/subsequent qualifying suits together for one customer | Benefits | No extension to unrelated services |
+| C42 Group 3% for ≥2 customers' qualifying suits together | Benefits | Request procedure details missing; confirm eligibility |
+| C43 Highest eligible customer discount only; referral commission separate | Benefits/Terms | Supersedes historical stacking/percentages |
+| C44 Tier gifts and extra cleaning (Tier1/2); none tier3/4 | Internal review only pending full terms | Tier mapping, quantity/frequency/redemption unresolved: withhold public promise |
+| C45 Customer-supplied fabric fixed policy | Internal staging review document | Owner approval required; no active contractual conditions |
+| C46 Context forms, validation/review/context/error preservation | All request forms | Existing approved integration; no real messages in tests |
+| C47 Mr Sewing Fashion / NINKONIYUMUTWARE NEXUS LTD / Kigali | About/contact | Existing contact comparison; no invented year/team |
+| C48 Image provenance and completed-work distinction | Work/galleries | Existing registry has review-required reference images; no new licensing claims |
+| C49 General FAQs only supported facts; no VIP-specific FAQ finalisation | FAQ | Reconcile conflicting historical rules; do not add new FAQ contracts |
+| C50 Protected home, staging-only, source/SEO/legal boundaries | Baseline/tests | Homepage changes need separate approval; no production |
+
+## A06 — permanent reference governance
+
+Source: explicit owner request “Please establish a permanent, version-controlled Customer-Facing Website Content Reference”, 5 November 2026, current conversation. Status: APPROVED developer workflow, not a new commercial policy. Before every page task consult latest available approved Sources and current source matrix, identify all applicable customer rules, record unresolved gaps, preserve dates/approval/history, exclude confidential information and retain staging/VIP boundaries. Applies to every customer-facing page and communication draft. No previous commercial rule superseded. Implemented by root AGENTS.md, dated reference snapshots, current pointer, manifest, changelog and required pre-writing brief.

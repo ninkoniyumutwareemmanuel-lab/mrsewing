@@ -48,6 +48,9 @@ files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,
 for file in files:
  if re.search(r'\.(?:jpe?g|png|webp|avif|gif|svg|mp4)$',file,re.I) or file in ['_data/collection-designs.json','_data/collection-id-registry.json','_templates/collections.css']:
   original=subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)
+  if file in ['_data/collection-designs.json','_data/collection-id-registry.json']:
+   from preservation_contract import append_only
+   append_only(original,(ROOT/file).read_bytes(),file);continue
   assert hashlib.sha256(original).digest()==hashlib.sha256((ROOT/file).read_bytes()).digest(),file
 assert '/views.html /our-work/ 301' in outputs()[ROOT/'_redirects']
 headers=outputs()[ROOT/'_headers'];assert 'https://mrsewingfashion.com' not in headers

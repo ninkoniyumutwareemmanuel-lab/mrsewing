@@ -1,0 +1,196 @@
+{
+  "source": "Owner R4 suit-reference pages instruction, 5 November2026; actual existing project permission evidence and visual construction inspection",
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "men-single-breasted",
+      "gender": "men",
+      "slug": "single-breasted",
+      "title": "Single-Breasted Suits",
+      "description": "Explore single-breasted tailoring references with a single front button row.",
+      "route": "/mensuits/single-breasted/",
+      "designIds": [
+        "MS-069",
+        "MS-139"
+      ],
+      "coverDesignId": "MS-139",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "men-double-breasted",
+      "gender": "men",
+      "slug": "double-breasted",
+      "title": "Double-Breasted Suits",
+      "description": "Explore overlapping-front tailoring references with two button columns.",
+      "route": "/mensuits/double-breasted/",
+      "designIds": [
+        "MS-117",
+        "MS-140"
+      ],
+      "coverDesignId": "MS-140",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "men-tuxedos-formalwear",
+      "gender": "men",
+      "slug": "tuxedos-formalwear",
+      "title": "Tuxedos & Formalwear",
+      "description": "Explore approved tuxedo and formalwear references.",
+      "route": "/mensuits/tuxedos-formalwear/",
+      "designIds": [
+        "MS-142"
+      ],
+      "coverDesignId": "MS-142",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "men-three-piece",
+      "gender": "men",
+      "slug": "three-piece",
+      "title": "Three-Piece Suits",
+      "description": "Explore jacket, trousers and waistcoat references.",
+      "route": "/mensuits/three-piece/",
+      "designIds": [
+        "MS-141"
+      ],
+      "coverDesignId": "MS-141",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "women-single-breasted",
+      "gender": "women",
+      "slug": "single-breasted",
+      "title": "Single-Breasted Suits",
+      "description": "Explore single-breasted tailoring, including asymmetric fronts and coordinated separates.",
+      "route": "/womensuits/single-breasted/",
+      "designIds": [
+        "MS-005",
+        "MS-006",
+        "MS-083",
+        "MS-096",
+        "MS-143"
+      ],
+      "coverDesignId": "MS-143",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "women-double-breasted",
+      "gender": "women",
+      "slug": "double-breasted",
+      "title": "Double-Breasted Suits",
+      "description": "Explore overlapping-front tailoring with two button columns.",
+      "route": "/womensuits/double-breasted/",
+      "designIds": [
+        "MS-144"
+      ],
+      "coverDesignId": "MS-144",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "women-skirt-suits",
+      "gender": "women",
+      "slug": "skirt-suits",
+      "title": "Skirt Suits",
+      "description": "Explore jacket-and-skirt design references.",
+      "route": "/womensuits/skirt-suits/",
+      "designIds": [
+        "MS-145"
+      ],
+      "coverDesignId": "MS-145",
+      "assetStatus": "owner-approved reference available"
+    },
+    {
+      "id": "women-three-piece",
+      "gender": "women",
+      "slug": "three-piece",
+      "title": "Three-Piece Suits",
+      "description": "Explore three-piece tailoring references.",
+      "route": "/womensuits/three-piece/",
+      "designIds": [
+        "MS-146"
+      ],
+      "coverDesignId": "MS-146",
+      "assetStatus": "owner-approved reference available"
+    }
+  ],
+  "references": {
+    "MS-069": {
+      "label": "Blue single-breasted tailoring",
+      "classificationEvidence": "Visible single-column front closure and matching trousers in r2.jpeg; existing approved Bright Blue Two-Piece project; visual construction review under R4.",
+      "publicationEvidence": "Existing _data/customer-projects.json permission and completed-work records, owner authorization30 October2026"
+    },
+    "MS-117": {
+      "label": "Grey double-breasted tailoring",
+      "classificationEvidence": "Existing approved project description explicitly identifies double-breasted jacket; visible paired button columns in r7.jpeg.",
+      "publicationEvidence": "Existing _data/customer-projects.json permission and completed-work records, owner authorization30 October2026"
+    },
+    "MS-005": {
+      "label": "Off-white tailoring — front view",
+      "classificationEvidence": "Single diagonal button column visible in h1.jpeg; same approved project/outfit as owner-labelled women’s h2.jpeg. Same garment as MS-006, different photograph.",
+      "publicationEvidence": "Existing _data/customer-projects.json permission and completed-work records, owner authorization30 October2026"
+    },
+    "MS-006": {
+      "label": "Off-white tailoring — side view",
+      "classificationEvidence": "Visible single-column asymmetric front in h2.jpeg; same approved outfit as h1.jpeg. Same garment as MS-005, different photograph.",
+      "publicationEvidence": "Existing _data/customer-projects.json permission and completed-work records, owner authorization30 October2026"
+    },
+    "MS-083": {
+      "label": "Blue single-breasted separates",
+      "classificationEvidence": "Visible single-row one-button jacket and trousers in r3.jpeg; existing approved Bright Blue Tailoring project; visual construction review under R4.",
+      "publicationEvidence": "Existing _data/customer-projects.json permission and completed-work records, owner authorization30 October2026"
+    },
+    "MS-096": {
+      "label": "Light single-breasted tailoring",
+      "classificationEvidence": "Visible single-front closure and matching trousers in r4.jpeg; existing approved Light Tailoring project; visual construction review under R4.",
+      "publicationEvidence": "Existing _data/customer-projects.json permission and completed-work records, owner authorization30 October2026"
+    },
+    "MS-139": {
+      "label": "Ivory Elegance One-Button Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-140": {
+      "label": "Skyline Double-Breasted Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-141": {
+      "label": "Royal Ivory Three-Piece Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-142": {
+      "label": "Royal Ivory Tuxedo",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-143": {
+      "label": "Burgundy Grace Women's Single-Breasted Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-144": {
+      "label": "Midnight Elegance Women's Double-Breasted Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-145": {
+      "label": "Burgundy Royale Women's Skirt Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-146": {
+      "label": "Camel Grace Women's Three-Piece Suit",
+      "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
+      "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    }
+  }
+}
