@@ -91,6 +91,13 @@ def outputs(products=None):
  for p in ps:out[ROOT/route(p).strip('/')/'index.html']=product_page(p,ps)
  for p in drafts:out[ROOT/route(p).strip('/')/'index.html']=draft_page(p,ps+drafts)
  for c in shop_categories(ps+drafts):out[ROOT/category_route(c).strip('/')/'index.html']=shop(ps,c,drafts)
+ # Server-only preview snapshot: independent of unverified CI preview variables.
+ # The Pages route enforces the exact staging project hostname on every request.
+ review=preview_candidates()
+ preview_pages={'/shop/':shop(ps,drafts=review)}
+ for draft in review:preview_pages[route(draft)]=draft_page(draft,ps+review)
+ for category in shop_categories(ps+review):preview_pages[category_route(category)]=shop(ps,category,review)
+ out[ROOT/'functions/_lib/shop-preview-pages.js']='// Generated server-only staging presentation; never a purchasable catalogue.\nexport const pages='+json.dumps(preview_pages,ensure_ascii=False).replace('<','\\u003c')+';\n'
  out[ROOT/'assets/commerce.css']=(ROOT/'_templates/commerce.css').read_text();out[ROOT/'assets/commerce.js']=(ROOT/'_templates/commerce.js').read_text()
  # Server-only module: reuse the existing publishable provider key, never create/alter provider credentials.
  template=(ROOT/'_templates/homepage-quotation.html').read_text();key=unescape(re.search(r'name="access_key" value="([^"]+)"',template)[1])

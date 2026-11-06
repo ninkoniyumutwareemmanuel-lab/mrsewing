@@ -62,3 +62,5 @@ Safely synchronised13owner-uploaded product images; inventoried165WebP/21candida
 Owner changes moving photos to right-to-left, requires same-page support consent and shared canonical selected-photo→fabric→quotation flow from collections and Our Work. Existing service enquiries remain distinct. Five approved project pages receive scoped SEO eligibility. See FINAL_JOURNEY_PAGE_BRIEF.md.
 
 R16 / 2026-11-06-09: owner-approved staging-only Shop visual preview; commercial publication remains gated.
+
+R17: owner-observed failed deployed preview; add server-side staging Shop route independent of CI preview variables.
