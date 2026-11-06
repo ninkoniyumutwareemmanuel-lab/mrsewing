@@ -20,22 +20,7 @@ def services():
     assert all(all((ROOT/p).is_file() for p in s['sources']) for s in data)
     return data
 
-def projects():
-    records=json.loads((ROOT/'_data/customer-projects.json').read_text())['projects'];published=[]
-    for p in records:
-        assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',p['slug'])
-        if not p.get('published'):continue
-        assert p.get('completedWorkEvidence') and p.get('publicationPermission',{}).get('approved') is True and p['publicationPermission'].get('evidenceRef'),'Completion and publication permission required'
-        assert p.get('title') and p.get('context') and p.get('images')
-        for image in p['images']:
-            assert image.get('permissionEvidenceRef') and image.get('projectAssociationEvidenceRef')
-            path=(ROOT/image['src'].lstrip('/')).resolve()
-            assert image['src'].startswith('/') and path.is_relative_to(ROOT) and path.is_file() and path.suffix.lower() in ['.jpg','.jpeg','.png','.webp','.avif']
-            assert image.get('alt') and image.get('width') and image.get('height')
-        if p.get('testimonial'):assert p['testimonial'].get('approvalEvidenceRef') and p['testimonial'].get('text')
-        published.append(p)
-    assert len({p['slug'] for p in records})==len(records)
-    return published
+from project_catalog import projects
 
 def enquiry(name,route):
     text='Hello Mr Sewing! I would like to enquire about '+name+'.\n'+DOMAIN+route
@@ -152,15 +137,16 @@ def project_page(p):
     route='/our-work/'+p['slug']+'/'
     sections=''.join('<section><h2>'+label+'</h2><p>'+escape(p[key])+'</p></section>' for key,label in [('requestedDesign','The requested design'),('process','The tailoring process')] if p.get(key))
     sections+=''.join('<section><h2>'+escape(e['heading'])+'</h2><p>'+escape(e['text'])+'</p></section>' for e in p.get('editorial',[]))
-    vals={'project_title':escape(p['title']),'context':escape(p['context']),'photos':''.join('<a class="project-photo" data-project-photo="'+str(n)+'" href="'+escape(i['src'],quote=True)+'">'+project_picture(i,n==0)+'</a>' for n,i in enumerate(p['images'])),'documented_sections':sections,'testimonial':'<blockquote class="project-quote">'+escape(p['testimonial']['text'])+'</blockquote>' if p.get('testimonial') else '', 'enquiry':portfolio_enquiry(p)}
+    vals={'project_title':escape(p['title']),'context':escape(p['context']),'photos':''.join('<a class="project-photo" data-project-photo="'+str(n)+'" href="'+escape(i['src'],quote=True)+'">'+project_picture(i,n==0)+'</a>' for n,i in enumerate(p['images'])),'documented_sections':sections,'testimonial':'<blockquote class="project-quote">'+escape(p['testimonial']['text'])+'</blockquote>' if p.get('testimonial') else '', 'enquiry':'<p data-project-selection>Selected photograph: 1 of '+str(len(p['images']))+'</p>'+portfolio_enquiry(p)}
     content=(ROOT/'_templates/customer-project.html').read_text()
     for k,v in vals.items():content=content.replace('{{'+k+'}}',v)
     from customer_navigation import breadcrumb
     content=breadcrumb([('Home','/'),('Our Work','/our-work/'),(p['title'],None)])+content
     others=[o for o in projects() if o['slug']!=p['slug']]
     content+='<section class="work-more"><h2>Explore More of Our Work</h2><div class="work-project-grid">'+''.join('<article class="work-project"><a href="/our-work/'+o['slug']+'/">'+project_picture(o['images'][0])+'<h3>'+escape(o['title'])+'</h3></a><p>'+escape(o['context'])+'</p></article>' for o in others)+'</div></section>'
-    content+='<dialog id="project-viewer" class="project-viewer" aria-label="Completed project photographs"><button type="button" id="project-close">Close photograph</button><img alt=""><div class="project-viewer-controls"><button type="button" id="project-previous" aria-label="Previous photograph">←</button><p id="project-photo-count" role="status" aria-live="polite"></p><button type="button" id="project-next" aria-label="Next photograph">→</button></div></dialog><script id="project-photos" type="application/json">'+json.dumps([{k:i[k] for k in ['src','alt','width','height']} for i in p['images']]).replace('<','\\u003c')+'</script>'
-    out=page(route,p['title']+' | Mr Sewing Fashion',p['context'],content).replace('</head>','<meta property="og:image:alt" content="'+escape(p['images'][0]['alt'],quote=True)+'"><script src="/assets/project-gallery.js" defer></script></head>',1)
+    content+='<dialog id="project-viewer" class="project-viewer" aria-label="Completed project photographs"><button type="button" id="project-close">Close photograph</button><img alt="">'+portfolio_enquiry(p)+'<div class="project-viewer-controls"><button type="button" id="project-previous" aria-label="Previous photograph">←</button><p id="project-photo-count" role="status" aria-live="polite"></p><button type="button" id="project-next" aria-label="Next photograph">→</button></div></dialog><script id="project-photos" type="application/json">'+json.dumps([{k:i[k] for k in ['src','alt','width','height']}|{'url':__import__('selected_designs').image_url(i['src'])} for i in p['images']]).replace('<','\\u003c')+'</script>'
+    out=page(route,p['title']+' | Mr Sewing Fashion',p['context'],'<div class="portfolio-project">'+content+'</div>','CreativeWork',{'image':[__import__('selected_designs').image_url(i['src']) for i in p['images']],'about':{'@type':'Thing','name':p['title']},'breadcrumb':{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Our Work','item':DOMAIN+'/our-work/'},{'@type':'ListItem','position':2,'name':p['title'],'item':DOMAIN+route}]}}).replace('</head>','<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="'+escape(p['title']+' | Mr Sewing Fashion',quote=True)+'"><meta name="twitter:description" content="'+escape(p['context'],quote=True)+'"><meta name="twitter:image" content="'+__import__('selected_designs').image_url(p['images'][0]['src'])+'"><meta property="og:image:alt" content="'+escape(p['images'][0]['alt'],quote=True)+'"><script src="/assets/project-gallery.js" defer></script></head>',1)
+    out=out.replace('<meta property="og:image:alt" content="Mr Sewing logo">','')
     return out.replace(DOMAIN+'/assets/images/mr-logo-480.webp',DOMAIN+p['images'][0]['src'])
 
 def work_page(approved):
@@ -169,7 +155,7 @@ def work_page(approved):
     if approved:
         content+='<div class="work-project-grid">'+''.join('<article class="work-project"><a href="/our-work/'+p['slug']+'/">'+project_picture(p['images'][0],n==0,'(min-width: 1100px) 380px, (min-width: 700px) 45vw, 90vw')+'<h2>'+escape(p['title'])+'</h2></a><p>'+escape(p['context'])+'</p></article>' for n,p in enumerate(approved))+'</div>'
     else:content+='<section class="work-note"><div><p class="home-eyebrow">Stories, shared with care</p><h2>Details matter.<br>Permission does too.</h2></div><p>Our individual customer project features are being prepared. We publish a story only when the completed work, photograph association and permission to share are confirmed. In the meantime, explore the design collection for inspiration or talk with us about your own tailoring plans.</p></section>'
-    content+='<nav class="work-links" aria-label="Continue exploring"><a class="home-text-link" href="/services/custom-tailoring/">Explore suit designs <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/services/">Discover our services <span class="home-arrow" aria-hidden="true"></span></a><a class="home-text-link" href="/contact/">Discuss your project <span class="home-arrow" aria-hidden="true"></span></a></nav>'
+    content+='<nav class="work-links" aria-label="Continue exploring"><a class="home-text-link" href="/services/custom-tailoring/">Explore suit designs <span class="home-arrow" aria-hidden="true"></span></a></nav>'
     return page('/our-work/','Our Work & Customer Projects | Mr Sewing Fashion','Explore how Mr Sewing presents customer tailoring projects with confirmed details and permission, or discover design inspiration and tailoring services in Kigali.',content,'CollectionPage')
 
 def outputs():

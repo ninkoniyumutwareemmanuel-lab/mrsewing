@@ -2,7 +2,7 @@
 import {references as referenceData,portfolio as portfolioData} from './request-data.mjs';
 const services=['Custom Tailoring & Suits','Clothing Alterations & Repairs','Garment Care & Cleaning','Mobile Tailoring, Styling & Event Assistance','VIP Services'];
 export const limits={maxFiles:3,maxFileBytes:3*1024*1024,maxPixels:20000000};
-const allowed=['Design Link','Design Image','Other Garment','Portfolio Reference','Portfolio Project','Full Name','Phone Number','Email Address','Location','Quantity','Preferred Date','Fabric Preferences','Measurements','Garment Type','Garment Condition','Handover Preference','Assistance Type','Preferred Time','Participants','Event Details','Customer Message','Service','Service Experience','Design Order Type','Design Reference','Design Name','Suit Category','Suit Category Reference','Suit Audience','Fabric Choice','Selected Fabric','Fabric Reference','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Order Priority','After-hours Request'];
+const allowed=['Selected Photograph URL','Project Page URL','VIP Assistance','Occasion or Purpose','Design Link','Design Image','Other Garment','Portfolio Reference','Portfolio Project','Full Name','Phone Number','Email Address','Location','Quantity','Preferred Date','Fabric Preferences','Measurements','Garment Type','Garment Condition','Handover Preference','Assistance Type','Preferred Time','Participants','Event Details','Customer Message','Service','Service Experience','Design Order Type','Design Reference','Design Name','Suit Category','Suit Category Reference','Suit Audience','Fabric Choice','Selected Fabric','Fabric Reference','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Order Priority','After-hours Request'];
 const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Robots-Tag':'noindex, nofollow','Cross-Origin-Resource-Policy':'same-origin'};
 const reply=(data,status=200)=>new Response(JSON.stringify(data),{status,headers});
 const digest=async bytes=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');
@@ -17,8 +17,19 @@ export function validateFields(raw){
  if(data['Email Address']&&(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data['Email Address'])||data['Email Address'].length>254))fail(400,'Enter a valid email address.');
  if(!services.includes(data.Service)||!['Standard Priority','Express Priority'].includes(data['Order Priority']))fail(400,'Choose a valid service and priority.');
  if(!/^\d{1,4}$/.test(data.Quantity||'')||+data.Quantity<1)fail(400,'Enter a valid garment quantity.');
- if(data['Design Reference']){const design=Object.hasOwn(referenceData,data['Design Reference'])?referenceData[data['Design Reference']]:null;if(!design)fail(400,'Choose a published design reference.');data['Design Name']=design.name;data['Design Link']='https://mrsewingfashion.com/collections/designs/'+data['Design Reference'].toLowerCase()+'/';if(design.image)data['Design Image']='https://mrsewingfashion.com'+design.image;if(design.category){data['Suit Category']=design.category;data['Suit Audience']=design.audience;}}
- if(data['Portfolio Reference']){const slug=data['Portfolio Reference'];if(!Object.hasOwn(portfolioData,slug))fail(400,'Choose an approved portfolio reference.');const project=portfolioData[slug];if(data.Service!=='Custom Tailoring & Suits'||data['Design Reference']!==project.designRef)fail(400,'The portfolio and design references must match.');data['Portfolio Project']=project.name;}else delete data['Portfolio Project'];
+ if(data['Design Reference']){
+  if(data.Service!=='Custom Tailoring & Suits'||data['Design Order Type']==='Special Order')fail(400,'Website design references apply only to selected-design tailoring.');
+  const design=Object.hasOwn(referenceData,data['Design Reference'])?referenceData[data['Design Reference']]:null;
+  if(!design)fail(400,'Choose a published design reference.');
+  let project=null;
+  if(data['Portfolio Reference']){const slug=data['Portfolio Reference'];project=Object.hasOwn(portfolioData,slug)?portfolioData[slug]:null;if(!project||project.designRef!==data['Design Reference'])fail(400,'The portfolio and design references must match.');data['Portfolio Project']=project.name;data['Project Page URL']='https://mrsewingfashion.com'+project.route;}
+  if(!project){delete data['Portfolio Project'];delete data['Project Page URL'];}
+  const images=project?.images||design.images;const supplied=data['Selected Photograph URL']||data['Design Image'];
+  const image=images.find(i=>i.url===(supplied||images[0].url));if(!image)fail(400,'Choose a photograph belonging to the approved design or project.');
+  data['Design Name']=project?.name||design.name;data['Design Link']='https://mrsewingfashion.com'+(project?.route||'/collections/designs/'+data['Design Reference'].toLowerCase()+'/');data['Design Image']=image.url;data['Selected Photograph URL']=image.url;
+  if(design.category)data['Suit Category']=design.category;else delete data['Suit Category'];if(['men','women'].includes(design.audience))data['Suit Audience']=design.audience;if(project?.category)data['Suit Audience']=project.category;
+ }else{if(data['Portfolio Reference'])fail(400,'The project needs its approved design reference.');for(const field of ['Portfolio Project','Project Page URL','Design Image','Design Name','Design Link','Selected Photograph URL'])delete data[field];}
+
  return data;
 }
 const crcTable=Uint32Array.from({length:256},(_,n)=>{for(let k=0;k<8;k++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});
@@ -84,7 +95,7 @@ export async function handle(request,env,fetcher=fetch){
   if(!request.body)return reply({error:'Request body is required.'},400);
   const reader=request.body.getReader();let total=0,parts=[];while(true){const {value,done}=await reader.read();if(done)break;total+=value.byteLength;if(total>10*1024*1024){await reader.cancel();return reply({error:'Request too large.'},413);}parts.push(value);}
   const bytes=new Uint8Array(total);let at=0;for(const part of parts){bytes.set(part,at);at+=part.byteLength;}const form=await new Response(bytes,{headers:{'Content-Type':request.headers.get('content-type')}}).formData();if(form.get('botcheck'))return reply({error:'Request not accepted.'},400);
-  let raw;try{raw=JSON.parse(String(form.get('fields')));}catch(_){return reply({error:'Invalid request details.'},400);}const fields=validateFields(raw);if(fields['Design Reference']){const origin=new URL(request.url).origin;fields['Design Link']=origin+'/collections/designs/'+fields['Design Reference'].toLowerCase()+'/';const image=referenceData[fields['Design Reference']].image;if(image)fields['Design Image']=new URL(image,origin).href;}if(form.get('termsAccepted')!=='true')return reply({error:'Terms acceptance is required.'},400);
+  let raw;try{raw=JSON.parse(String(form.get('fields')));}catch(_){return reply({error:'Invalid request details.'},400);}const fields=validateFields(raw);if(form.get('termsAccepted')!=='true')return reply({error:'Terms acceptance is required.'},400);
   const files=form.getAll('files');if(files.length>limits.maxFiles)return reply({error:'Too many images.'},400);const prepared=[];
   for(const f of files){if(typeof f==='string'||f.size===0||f.size>limits.maxFileBytes)return reply({error:'Each image must be no larger than 3 MB.'},400);const bytes=await f.arrayBuffer(),info=inspectImage(bytes,f.type);prepared.push({bytes,info,name:f.name.replace(/[\u0000-\u001f\u007f]/g,'').slice(0,120),hash:await digest(bytes)});}
   fields['Terms Acceptance']='Customer asserted acceptance at submission';fields['Terms Version']='general-2026-11-05-r6';

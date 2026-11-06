@@ -57,3 +57,6 @@ Owner authorises Loyalty/Referral/Shop staging pages and linked requests. Preser
 
 ## R14 — 6 November 2026
 Safely synchronised13owner-uploaded product images; inventoried165WebP/21candidates, prepared unpublished drafts with no commercial facts inferred. Registered new assets to repair the strict existing build. Category and mobile Shop preparation only; preserve all approved journeys. See SHOP_IMAGE_PREPARATION_BRIEF.md.
+
+## R15 — 6 November 2026
+Owner changes moving photos to right-to-left, requires same-page support consent and shared canonical selected-photo→fabric→quotation flow from collections and Our Work. Existing service enquiries remain distinct. Five approved project pages receive scoped SEO eligibility. See FINAL_JOURNEY_PAGE_BRIEF.md.

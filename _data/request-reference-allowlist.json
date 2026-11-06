@@ -2,89 +2,225 @@
   "MS-096": {
     "name": "Light single-breasted tailoring",
     "image": "/r4.jpeg",
-    "category": "Women's Single-Breasted Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/r4.jpeg",
+        "alt": "Person wearing a light jacket and matching trousers",
+        "width": 1792,
+        "height": 2400,
+        "url": "https://mrsewingfashion.com/r4.jpeg"
+      }
+    ],
+    "category": "Women's Single-Breasted Suits"
   },
   "MS-117": {
     "name": "Grey double-breasted tailoring",
     "image": "/r7.jpeg",
-    "category": "Men's Double-Breasted Suits",
-    "audience": "men"
+    "audience": "men",
+    "images": [
+      {
+        "src": "/r7.jpeg",
+        "alt": "Person wearing a light jacket with navy trousers",
+        "width": 2048,
+        "height": 2056,
+        "url": "https://mrsewingfashion.com/r7.jpeg"
+      }
+    ],
+    "category": "Men's Double-Breasted Suits"
   },
   "MS-005": {
     "name": "Off-white tailoring — front view",
     "image": "/h1.jpeg",
-    "category": "Women's Single-Breasted Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/h1.jpeg",
+        "alt": "Person wearing an off-white suit",
+        "width": 797,
+        "height": 995,
+        "url": "https://mrsewingfashion.com/h1.jpeg"
+      }
+    ],
+    "category": "Women's Single-Breasted Suits"
   },
   "MS-006": {
     "name": "Off-white tailoring — side view",
     "image": "/h2.jpeg",
-    "category": "Women's Single-Breasted Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/h2.jpeg",
+        "alt": "Side view of a person in an off-white suit",
+        "width": 750,
+        "height": 938,
+        "url": "https://mrsewingfashion.com/h2.jpeg"
+      }
+    ],
+    "category": "Women's Single-Breasted Suits"
   },
   "MS-007": {
     "name": "Off-White Graduation Suit",
-    "image": "/h3.jpeg"
+    "image": "/h3.jpeg",
+    "audience": "unclassified",
+    "images": [
+      {
+        "src": "/h3.jpeg",
+        "alt": "Person holding a diploma scroll",
+        "width": 750,
+        "height": 938,
+        "url": "https://mrsewingfashion.com/h3.jpeg"
+      }
+    ]
   },
   "MS-069": {
     "name": "Blue single-breasted tailoring",
     "image": "/r2.jpeg",
-    "category": "Men's Single-Breasted Suits",
-    "audience": "men"
+    "audience": "men",
+    "images": [
+      {
+        "src": "/r2.jpeg",
+        "alt": "Garment photograph shown for design inspiration",
+        "width": 451,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/r2.jpeg"
+      }
+    ],
+    "category": "Men's Single-Breasted Suits"
   },
   "MS-083": {
     "name": "Blue single-breasted separates",
     "image": "/r3.jpeg",
-    "category": "Women's Single-Breasted Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/r3.jpeg",
+        "alt": "Garment photograph shown for design inspiration",
+        "width": 658,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/r3.jpeg"
+      }
+    ],
+    "category": "Women's Single-Breasted Suits"
   },
   "MS-139": {
     "name": "Ivory Elegance One-Button Suit",
     "image": "/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp",
-    "category": "Men's Single-Breasted Suits",
-    "audience": "men"
+    "audience": "men",
+    "images": [
+      {
+        "src": "/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp",
+        "alt": "Ivory Elegance One-Button Suit shown as a tailoring design reference",
+        "width": 1254,
+        "height": 1254,
+        "url": "https://mrsewingfashion.com/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp"
+      }
+    ],
+    "category": "Men's Single-Breasted Suits"
   },
   "MS-140": {
     "name": "Skyline Double-Breasted Suit",
     "image": "/Skyline%20Double-Breasted%20Suit.webp",
-    "category": "Men's Double-Breasted Suits",
-    "audience": "men"
+    "audience": "men",
+    "images": [
+      {
+        "src": "/Skyline%20Double-Breasted%20Suit.webp",
+        "alt": "Skyline Double-Breasted Suit shown as a tailoring design reference",
+        "width": 1100,
+        "height": 1429,
+        "url": "https://mrsewingfashion.com/Skyline%20Double-Breasted%20Suit.webp"
+      }
+    ],
+    "category": "Men's Double-Breasted Suits"
   },
   "MS-141": {
     "name": "Royal Ivory Three-Piece Suit",
     "image": "/Royal%20Ivory%20Three-Piece%20Suit.webp",
-    "category": "Men's Three-Piece Suits",
-    "audience": "men"
+    "audience": "men",
+    "images": [
+      {
+        "src": "/Royal%20Ivory%20Three-Piece%20Suit.webp",
+        "alt": "Royal Ivory Three-Piece Suit shown as a tailoring design reference",
+        "width": 1086,
+        "height": 1448,
+        "url": "https://mrsewingfashion.com/Royal%20Ivory%20Three-Piece%20Suit.webp"
+      }
+    ],
+    "category": "Men's Three-Piece Suits"
   },
   "MS-142": {
     "name": "Royal Ivory Tuxedo",
     "image": "/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp",
-    "category": "Men's Tuxedos & Formalwear",
-    "audience": "men"
+    "audience": "men",
+    "images": [
+      {
+        "src": "/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp",
+        "alt": "Royal Ivory Tuxedo shown as a tailoring design reference",
+        "width": 1091,
+        "height": 1442,
+        "url": "https://mrsewingfashion.com/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp"
+      }
+    ],
+    "category": "Men's Tuxedos & Formalwear"
   },
   "MS-143": {
     "name": "Burgundy Grace Women's Single-Breasted Suit",
     "image": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
-    "category": "Women's Single-Breasted Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+        "alt": "Burgundy Grace Women's Single-Breasted Suit shown as a tailoring design reference",
+        "width": 1086,
+        "height": 1448,
+        "url": "https://mrsewingfashion.com/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp"
+      }
+    ],
+    "category": "Women's Single-Breasted Suits"
   },
   "MS-144": {
     "name": "Midnight Elegance Women's Double-Breasted Suit",
     "image": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
-    "category": "Women's Double-Breasted Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
+        "alt": "Midnight Elegance Women's Double-Breasted Suit shown as a tailoring design reference",
+        "width": 941,
+        "height": 1672,
+        "url": "https://mrsewingfashion.com/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp"
+      }
+    ],
+    "category": "Women's Double-Breasted Suits"
   },
   "MS-145": {
     "name": "Burgundy Royale Women's Skirt Suit",
     "image": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
-    "category": "Women's Skirt Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
+        "alt": "Burgundy Royale Women's Skirt Suit shown as a tailoring design reference",
+        "width": 1087,
+        "height": 1447,
+        "url": "https://mrsewingfashion.com/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp"
+      }
+    ],
+    "category": "Women's Skirt Suits"
   },
   "MS-146": {
     "name": "Camel Grace Women's Three-Piece Suit",
     "image": "/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp",
-    "category": "Women's Three-Piece Suits",
-    "audience": "women"
+    "audience": "women",
+    "images": [
+      {
+        "src": "/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp",
+        "alt": "Camel Grace Women's Three-Piece Suit shown as a tailoring design reference",
+        "width": 1088,
+        "height": 1445,
+        "url": "https://mrsewingfashion.com/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp"
+      }
+    ],
+    "category": "Women's Three-Piece Suits"
   }
 }

@@ -33,6 +33,7 @@ assert (ROOT/'booking/index.html').read_text().replace('aria-label="Online Shop"
 # Only exact authorised homepage navigation edits are permitted.
 current=(ROOT/'index.html').read_text().replace('aria-label="Online Shop"','aria-label="Shop — Coming Soon" title="Shop — Coming Soon; online purchasing is not available yet"')
 import re
+current=current.replace('from{transform:translateX(0)}to{transform:translateX(-50%)}','from{transform:translateX(-50%)}to{transform:translateX(0)}').replace('data-whatsapp-modal href="/whatsapp/"','href="/whatsapp/"')
 current=re.sub(r'<a href="/(?:loyalty|referral)-program/">([^<]+)</a>',r'\1',current)
 assert current==subprocess.check_output(['git','show','09be5c7:index.html'],cwd=ROOT,text=True)
 assert (ROOT/'assets/homepage.js').read_bytes()==subprocess.check_output(['git','show','09be5c7:assets/homepage.js'],cwd=ROOT)

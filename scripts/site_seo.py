@@ -2,6 +2,7 @@
 import json,re
 from pathlib import Path
 from html import escape
+from project_catalog import projects as approved_projects
 from shop_catalog import load as shop_products, route as shop_product_route, categories as shop_categories, category_route
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
@@ -14,6 +15,7 @@ INDEXABLE_ROUTES = {
     '/services/mobile-fitting/',
     '/services/vip/',
     '/our-work/',
+    *['/our-work/'+p['slug']+'/' for p in approved_projects()],
     '/about/',
     '/contact/',
     '/faq/',
