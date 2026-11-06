@@ -45,3 +45,6 @@ Owner permits safe email-only Standard requests and exact production-apex API ho
 
 ##2026-11-06-03 — R10 consultation
 Latest owner approves3consultation services,dynamic methods/fields andrequired dates/times. R9 freeemail/protected private settings retained. Devfast-forwarded62commits frommain to967401e withindexing policy preserved;main untouched.
+
+##2026-11-06-04 — R11
+Owner replaces consultationpictureWhatsApp action withoptionalHTTP/HTTPS link andinspirationguidance. Universalemailflow andR10otherrequirements preserved.
