@@ -66,3 +66,5 @@ R16 / 2026-11-06-09: owner-approved staging-only Shop visual preview; commercial
 R17: owner-observed failed deployed preview; add server-side staging Shop route independent of CI preview variables.
 
 R18: owner-approved white storefront/manual product WhatsApp enquiries; known details only, crypto clearance pending.
+
+R19: Shop-local Home; remove cart/card enquiry controls; enquiry only on product detail.

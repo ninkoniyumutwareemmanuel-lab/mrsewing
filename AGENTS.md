@@ -39,3 +39,5 @@ R16 Shop visual review: exact Cloudflare staging project URL + CF_PAGES=1 + deve
 R17 corrects observed R16 deployment failure: server-only generated preview pages served by Pages /shop/[[path]] on exact staging project hosts, independently of CI preview variables. Production falls through. Never infer deployed visibility from successful build alone.
 
 R18 white Shop: stage products support terms-gated manual WhatsApp enquiries with canonical product link; owner confirms items available for enquiry. Keep unknown commercial fields unset, API publication gate and production isolation. Bank/MobileMoney manual, cryptocurrency pending clearance, no gateway. See WHITE_SHOP_BRIEF.md.
+
+R19 Shop: local Home/breadcrumb returns /shop/; only global headerHome opens root. No cart navigation or card-level WhatsApp actions. Entire product cards open details; retain detail form and Terms-gated WhatsApp only.

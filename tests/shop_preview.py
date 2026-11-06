@@ -19,7 +19,7 @@ assert '<meta name="robots" content="noindex, nofollow"' in preview[ROOT/'shop/i
 assert preview[ROOT/'functions/_lib/shop-runtime.js']==prod[ROOT/'functions/_lib/shop-runtime.js']
 for p in ps:
  html=preview[ROOT/'shop'/p['slug']/'index.html']
- assert 'data-shop-whatsapp-form' in html and 'data-whatsapp-modal' in html and 'productSelection' not in html and 'data-commerce-form' not in html
+ assert 'data-shop-whatsapp-form' in html and 'productSelection' not in html and 'data-commerce-form' not in html
  assert '"@type": "Product"' not in html and '"@type": "Offer"' not in html
  assert 'noindex, nofollow' in html
  assert ROOT/'shop'/p['slug']/'index.html' not in prod
