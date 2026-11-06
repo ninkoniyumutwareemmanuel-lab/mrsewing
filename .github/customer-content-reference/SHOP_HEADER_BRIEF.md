@@ -1,0 +1,3 @@
+# Shop search-first header — 6 November 2026
+
+Owner supplied current Mr Sewing and Amazon phone screenshots and requested an Amazon-style Shop header on phone/laptop. Scope: Shop listing/category masthead only, using Mr Sewing identity, prominent functional search, horizontal categories, local Shop Home and contact help. No Amazon assets, fake account/cart/delivery promises or policy changes. Preserve white storefront, 21 approved enquiry displays, catalogue commercial gates, product details/manual Terms WhatsApp, existing global business navigation and other forms. Source applicability: current R23 master/matrix, latest owner visual request; service/eligibility/payment/delivery/privacy conditions unchanged. No new business claims. Stage for visual review first.
