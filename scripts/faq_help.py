@@ -53,9 +53,9 @@ def contact(title,path):
  return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
 def search_data():
  data,topics,qs,_=catalogue()
- return {'synonyms':data['synonyms'],'entries':[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]}
+ return {'synonyms':data['synonyms'],'entries':[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'source':DOMAIN+route(t)+'#'+id,'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]}
 def hub(topics,data):
- out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">How can we help?</h1><p>Choose a topic or search for an answer.</p></section>'
+ out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">Frequently Asked Questions</h1><p>Choose a topic or search for an answer.</p></section>'
  out+='<form class="faq-search" id="faq-search" role="search" aria-label="Search all FAQ topics" action="/faq/" method="get"><label for="faq-query">Search every topic and answer</label><div class="faq-search-box">'+icon('search')+'<input type="search" id="faq-query" name="q" placeholder="Try payments, fittings or delivery" autocomplete="off" maxlength="160" aria-controls="faq-results" aria-describedby="faq-search-hint"><button type="button" id="faq-clear" aria-label="Clear FAQ search" hidden>'+icon('close')+'</button></div><p id="faq-search-hint" class="faq-search-hint">Search questions, service topics and practical customer guidance.</p></form><noscript><p>Choose a topic below to browse its answers. Search is available when JavaScript is enabled.</p></noscript>'
  out+='<section id="faq-results" aria-labelledby="faq-results-title" hidden><h2 id="faq-results-title">Search results</h2><p id="faq-search-status" class="faq-search-status" role="status" aria-live="polite" aria-atomic="true"></p><ol class="faq-result-list" id="faq-result-list"></ol><div class="faq-empty" id="faq-empty" hidden><p>No answers match your search. Try another word or ask us about your request.</p>'+contact('a customer enquiry','/faq/')+'</div></section>'
  out+='<nav class="faq-grid" id="faq-topics" aria-label="FAQ topics">'
@@ -70,7 +70,7 @@ def topic_content(t,topics,qs):
  path=route(t)
  out='<nav class="faq-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/faq/">All FAQ topics</a><span aria-hidden="true">/</span><span>'+escape(t['title'])+'</span></nav><section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">'+escape(t['title'])+' FAQs</h1><p>'+escape(t['description'])+'</p></section><div class="faq-topic-layout"><div class="faq-questions">'
  for id in t['questions']:
-  q=qs[id];out+='<details class="faq-question" id="'+id+'"><summary><h2>'+escape(q['question'])+'</h2></summary><div class="faq-answer">'+expand(q['answer'])+'</div></details>'
+  q=qs[id];out+='<details class="faq-question" id="'+id+'"><summary><h2>'+escape(q['question'])+'</h2></summary><div class="faq-answer" data-faq-source="'+DOMAIN+path+'#'+id+'" data-faq-answer="'+escape(plain(expand(q['answer'])),quote=True)+'">'+expand(q['answer'])+'</div></details>'
  out+='</div><aside class="faq-side"><h2>Your next step.</h2><p>Discuss your needs with the team for an assessment, quotation or confirmation of arrangements.</p>'+contact(t['title'],path)+'<a class="faq-side-link" href="'+t['destination']+'">View related '+('service' if t['destination'].startswith('/services/') else 'information')+' <span aria-hidden="true">↗</span></a><a class="faq-side-link" href="/faq/">All FAQ topics</a></aside></div>'
  byslug={x['slug']:x for x in topics};out+='<nav class="faq-related" aria-label="Related FAQ topics"><h2>Related topics</h2><div class="faq-related-links">'+''.join('<a href="'+route(byslug[s])+'">'+escape(byslug[s]['title'])+'</a>' for s in t['related'])+'</div></nav>'
  return out
@@ -88,7 +88,7 @@ def outputs():
   path=route(t);title=t['title']+' FAQs | Mr Sewing Fashion, Kigali';desc=t['description']+' Find practical answers from Mr Sewing and the next step for your enquiry.'
   schema={'@context':'https://schema.org','@type':'FAQPage','@id':DOMAIN+path+'#faq','name':title,'description':desc,'url':DOMAIN+path,'isPartOf':{'@id':DOMAIN+'/faq/'},'mainEntity':[{'@type':'Question','name':qs[id]['question'],'acceptedAnswer':{'@type':'Answer','text':plain(expand(qs[id]['answer']))}} for id in t['questions']],'breadcrumb':{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':DOMAIN+'/'},{'@type':'ListItem','position':2,'name':'FAQs','item':DOMAIN+'/faq/'},{'@type':'ListItem','position':3,'name':t['title'],'item':DOMAIN+path}]}}
   out[ROOT/path.strip('/')/'index.html']=render(path,title,desc,topic_content(t,topics,qs),schema)
- out[ROOT/'assets/faq-help.js']=shared.menu_script()+'\n'+(ROOT/'_templates/faq-help.js').read_text()
+ out[ROOT/'assets/faq-help.js']=shared.menu_script()+'\n'+(ROOT/'_templates/faq-actions.js').read_text()+'\n'+(ROOT/'_templates/faq-help.js').read_text()
  # Guard obsolete generated topics rather than silently publishing withdrawn answers.
  stale=set((ROOT/'faq').glob('*/index.html'))-{ROOT/route(t).strip('/')/'index.html' for t in topics}
  assert not stale,'Unpublished FAQ topic output requires review: '+str(stale)

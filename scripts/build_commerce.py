@@ -67,9 +67,7 @@ def noindex(source):
 def card(p):return '<a class="product-card" href="'+route(p)+'" data-product-card data-name="'+e((p['name']+' '+p['description']).lower())+'" data-category="'+e(p['category'])+'" data-availability="'+p['availability']+'" data-price="'+str(p.get('priceRwf') or 0)+'">'+photo(p['images'][0])+'<h2>'+e(p['name'])+'</h2><p>'+e(p['availability'])+'</p>'+('<p class="price">RWF '+format(p['priceRwf'],',')+'</p>' if p.get('priceRwf') else '<p>Request a Quote</p>' if p['availability']=='Available on Orders' else '')+'</a>'
 def category_nav(products,selected=None):
  return '<nav class="shop-categories" aria-label="Product categories">'+a('/shop/','All Products')+''.join('<a href="'+category_route(c)+'"'+(' aria-current="page"' if c==selected else '')+'>'+e(c)+'</a>' for c in shop_categories(products))+'</nav>'
-def payment_methods():
- paths=[('Mobile Money','<rect x="7" y="2" width="14" height="24" rx="3"/><path d="M11 6h6M12 22h4M10 12h8M10 16h5"/>'),('Bank Transfer','<path d="M2 10 14 3l12 7H2ZM4 24h20M7 12v9m7-9v9m7-9v9M2 27h24"/>'),('Cryptocurrency','<circle cx="14" cy="14" r="11"/><circle cx="14" cy="8" r="2"/><circle cx="9" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="m13 10-3 5m5-5 3 5m-7 2h6"/>')]
- return '<ul class="payment-methods" aria-label="Accepted payment methods">'+''.join('<li><svg width="28" height="28" viewBox="0 0 28 30" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false">'+path+'</svg><span>'+label+'</span></li>' for label,path in paths)+'</ul>'
+from payment_methods import payment_methods
 def shop(products,selected=None,drafts=None):
  drafts=drafts or []
  display=products+drafts

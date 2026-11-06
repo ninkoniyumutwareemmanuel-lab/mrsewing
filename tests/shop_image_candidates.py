@@ -29,6 +29,9 @@ assert not categories() and category_route("Men's Suits")=='/shop/category/mens-
 # Preserve all existing original images and all unrelated generated pages byte-for-byte.
 for path in subprocess.check_output(['git','ls-tree','-r','--name-only','626ccd8'],cwd=ROOT,text=True).splitlines():
  if path.lower().endswith(('.jpeg','.jpg','.png','.webp','.avif','.gif','.svg')) or path in ['index.html','assets/homepage.js','booking/index.html','assets/consultation.js','loyalty-program/index.html','referral-program/index.html','_data/collection-designs.json','_data/customer-projects.json']:
+  if path in ['index.html','assets/homepage.js']:
+   from v2_preservation import assert_home_protected
+   assert_home_protected();continue
   current=(ROOT/path).read_bytes()
   if path=='index.html':current=current.replace(b'from{transform:translateX(0)}to{transform:translateX(-50%)}',b'from{transform:translateX(-50%)}to{transform:translateX(0)}').replace(b'data-whatsapp-modal href="/whatsapp/"',b'href="/whatsapp/"')  # R15 exact authorisations
   assert current==subprocess.check_output(['git','show','626ccd8:'+path],cwd=ROOT),path

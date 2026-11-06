@@ -43,3 +43,5 @@ R18 white Shop: stage products support terms-gated manual WhatsApp enquiries wit
 R19 Shop: local Home/breadcrumb returns /shop/; only global headerHome opens root. No cart navigation or card-level WhatsApp actions. Entire product cards open details; retain detail form and Terms-gated WhatsApp only.
 
 R21 owner confirms acceptedmanualShop payments:MobileMoney,BankTransfer,Cryptocurrency. Replace pendingcryptowording/disabledpreference; genericaccessibleicons allowed. No gateway,unverifiedaccount/wallet/chaininstructions orlegalcomplianceclaims. Stagingonly.
+
+R22 Version2currentreference: no visiblegallerypausebutton (Escape/touchcontainerstop+reducedmotion),URL-onlyselected-designquote,3fabricchoicesincludingassessmentofownfabric,onebottommeasurementCTA,oneordinaryserviceheroCTA,separateVIPsubscriptionenquiry,noactivation,FAQ3copy/sourceactions,MediaKitproposalnoPDF,andhomepageR21paymentmethods. PreserveShop/booking/policies;stagingonly.

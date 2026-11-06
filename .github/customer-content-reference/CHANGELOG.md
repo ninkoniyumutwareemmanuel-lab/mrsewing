@@ -72,3 +72,5 @@ R19: Shop-local Home; remove cart/card enquiry controls; enquiry only on product
 R20: owner-requested removal of product-detail Product Information/Payment & Delivery panel; policies unchanged.
 
 R21: owner confirms Cryptocurrency accepted alongside Mobile Money/Bank Transfer; generic accessible symbols and manual preference enabled,no gateway.
+
+R22: Version2attachment plushomepagepayments;source/journey/FAQ/VIP/media/UI rules recorded,no productionauthorisation.

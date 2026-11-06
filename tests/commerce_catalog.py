@@ -30,13 +30,9 @@ assert '<meta name="twitter:image" content="https://mrsewingfashion.com/hero-cus
 assert '<meta name="robots" content="noindex, follow">' in (ROOT/'shop/cart/index.html').read_text()
 assert 'shop/qa-only-product/index.html' not in json.loads((ROOT/'_data/shop-generated-pages.json').read_text())
 assert (ROOT/'booking/index.html').read_text().replace('aria-label="Online Shop"','aria-label="Shop — Coming Soon" title="Shop — Coming Soon; online purchasing is not available yet"')==subprocess.check_output(['git','show','09be5c7:booking/index.html'],cwd=ROOT,text=True)
-# Only exact authorised homepage navigation edits are permitted.
-current=(ROOT/'index.html').read_text().replace('aria-label="Online Shop"','aria-label="Shop — Coming Soon" title="Shop — Coming Soon; online purchasing is not available yet"')
-import re
-current=current.replace('from{transform:translateX(0)}to{transform:translateX(-50%)}','from{transform:translateX(-50%)}to{transform:translateX(0)}').replace('data-whatsapp-modal href="/whatsapp/"','href="/whatsapp/"')
-current=re.sub(r'<a href="/(?:loyalty|referral)-program/">([^<]+)</a>',r'\1',current)
-assert current==subprocess.check_output(['git','show','09be5c7:index.html'],cwd=ROOT,text=True)
-assert (ROOT/'assets/homepage.js').read_bytes()==subprocess.check_output(['git','show','09be5c7:assets/homepage.js'],cwd=ROOT)
+# R22 explicitly changes homepage gallery control and adds payment methods.
+from v2_preservation import assert_home_protected
+assert_home_protected()
 for path in ['_templates/consultation.js','scripts/consultation_form.py','_templates/homepage-quotation.html','_data/public-page-seo.json','_data/business.json','_data/collection-designs.json','_data/customer-projects.json']:
  assert (ROOT/path).read_bytes()==subprocess.check_output(['git','show','09be5c7:'+path],cwd=ROOT),path
 # Prove a single catalogue edit updates listing/detail/server records, then withdrawal removes them.

@@ -35,6 +35,9 @@
   matchMedia('(max-width: 1099px)').addEventListener('change', () => setOpen(false));
 })();
 
+/* Copy only approved answer text. Source links always point to the original public FAQ. */
+(()=>{'use strict';function make(answer,source){const wrap=document.createElement('div');wrap.className='faq-answer-actions';let u;try{u=new URL(source);if(u.origin!=='https://mrsewingfashion.com'||!/^\/faq\/[a-z0-9-]+\/$/.test(u.pathname)||!/^#[a-z0-9-]+$/.test(u.hash))throw Error();}catch{return wrap;}const status=document.createElement('p');status.setAttribute('role','status');status.className='faq-copy-status';for(const[label,value]of[['Copy Answer',answer],['Copy Answer + Link',answer+'\n\nSource: '+u.href]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(value);status.textContent='Copied.';}catch{status.textContent='Copy could not be completed. Select the answer text and copy it manually.';}});wrap.append(b);}const a=document.createElement('a');a.href=u.href;a.textContent='View Original Source';a.target='_blank';a.rel='noopener';wrap.append(a,status);return wrap;}window.MrFaqActions={make};document.addEventListener('DOMContentLoaded',()=>{for(const node of document.querySelectorAll('[data-faq-source]')){const answer=node.dataset.faqAnswer||node.textContent.trim();node.append(make(answer,node.dataset.faqSource));}});})();
+
 /* Local FAQ enhancement: native links/details remain useful without JavaScript. */
 (() => {
   'use strict';
@@ -71,17 +74,6 @@
     if (!entries) entries=data.entries.map(entry => {const text=[entry.question,entry.topic,entry.answer,...entry.keywords].join(' ');return {...entry,haystack:basic(text)+' '+normalise(text)};});
     return entries;
   }
-  function excerpt(answer, text) {
-    const words = basic(text).split(' ').filter(Boolean);
-    for (const group of data.synonyms) if (group.some(term => words.includes(basic(term)))) words.push(...group.map(basic));
-    const lower = answer.toLowerCase();
-    const positions = words.map(word => lower.indexOf(word)).filter(pos => pos>=0);
-    let start = positions.length ? Math.max(0,Math.min(...positions)-45) : 0;
-    if (start) { const nextSpace=answer.indexOf(' ',start); if(nextSpace>=0)start=nextSpace+1; }
-    let end = Math.min(answer.length,start+200);
-    if (end<answer.length) { const space=answer.lastIndexOf(' ',end);if(space>start)end=space; }
-    return (start?'… ':'')+answer.slice(start,end)+(end<answer.length?' …':'');
-  }
   function render(updateUrl=true) {
     const value = query.value.slice(0,160).trim(), terms = normalise(value).split(' ').filter(Boolean);
     clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;
@@ -97,8 +89,8 @@
       const link=document.createElement('a');link.href=entry.url;
       const topic=document.createElement('small');topic.textContent=entry.topic;
       const title=document.createElement('h3');title.textContent=entry.question;
-      const text=document.createElement('p');text.textContent=excerpt(entry.answer,value);
-      link.append(topic,title,text);item.append(link);list.append(item);
+      const text=document.createElement('p');text.textContent=entry.answer;
+      link.append(topic,title);item.append(link,text,window.MrFaqActions.make(entry.answer,entry.source));list.append(item);
     }
   }
   form.hidden=false;
