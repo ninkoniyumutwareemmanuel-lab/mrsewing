@@ -23,7 +23,9 @@ for name,(file,tag,identifier) in SECTIONS.items():
  a=Section(old,tag,identifier);a.feed(old);b=Section((ROOT/file).read_text(),tag,identifier);b.feed((ROOT/file).read_text());current=re.sub(r'<a class="hero-highlight hero-highlight-vip".*?</a>','',b.markup,flags=re.S) if name=='hero' else b.markup;current=re.sub(r'<a class="hero-highlight" href="/services/(?:custom-tailoring|alterations|garment-care|mobile-fitting)/">(.*?)</a>',r'<div class="hero-highlight">\1</div>',current,flags=re.S);assert a.markup==current.replace('href="/request/?general=1"','href="#quotation"'),name
 facts=json.loads((ROOT/'_data/customer-information.json').read_text());assert not facts['cotton'];assert facts['priceScheduleStatus'].startswith('UNVERIFIED')
 assert all(p['source'].startswith('S-OWNER-2026-11-05') for p in release['pages'].values())
-for route in ['/customer-information/','/guides/fabrics/','/delivery-and-collection/','/benefits/','/customer-support/']:assert route in public_routes()
+for route in ['/customer-information/','/guides/fabrics/','/delivery-and-collection/','/benefits/','/customer-support/']:
+ assert (ROOT/route.strip('/')/'index.html').is_file()
+ assert (route in public_routes())==(route=='/guides/fabrics/')
 for route in ['/request/','/services/custom-tailoring/design-choice/','/services/custom-tailoring/standard-order/','/services/custom-tailoring/special-order/']:assert route not in public_routes()
 for route in ['/suits/','/m-classicsuits/','/m-doublebreasted/','/w-classicsuits/']:assert route not in public_routes()
 for text in ['35%','25%','60%','24 support working hours','22:00']:

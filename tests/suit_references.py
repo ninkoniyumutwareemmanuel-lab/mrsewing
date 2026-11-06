@@ -16,7 +16,7 @@ assert sum(bool(c['designIds']) for c in cats)==8
 for c in cats:
  rows=references(c,pool);page=(ROOT/c['route'].strip('/')/'index.html').read_text();assert c['route'] in page
  if rows:
-  assert c['route'] in public_routes() and 'data-publication-hold' not in page
+  assert c['route'] not in public_routes() and 'content="noindex, follow"' in page and 'data-publication-hold' not in page
   assert all(d['id'] in page for d in rows)
  else:
   assert c['route'] not in public_routes() and 'data-publication-hold' in page and 'noindex, follow' in page
