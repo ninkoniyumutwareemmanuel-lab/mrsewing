@@ -1,0 +1,26 @@
+# Version 2 — Owner-approved correction scope (6 November 2026)
+
+**Status:** Owner authorised starting development-branch corrections and staging-only review on 6 November 2026. This is an implementation brief, NOT approval to publish legal text, release a media kit, merge to main or deploy production.
+
+**Branch:** `phase1/customer-journey-repairs`. Follow root `AGENTS.md`, current customer-content README/policy matrix/unresolved register, and page brief template before edits. Preserve all existing Codex Shop and journey work; inspect the latest branch before changes. No invented facts, prices, subscription commitments or commercial approvals.
+
+## Requested changes and acceptance criteria
+
+1. **Homepage:** Remove the visible **Pause moving galleries** control from the Explore Our Suit Collections section. Keep all three right-to-left auto-scrolling, non-clickable galleries and reduced-motion accessibility. Review accessibility implications; do not break reduced-motion support.
+2. **Selected design URL only:** On both Custom Tailoring and Our Work quotation journeys, do not render a selected photograph preview/image in the *form* or review UI; display the full clickable canonical selected-photo URL as text. Carry that exact URL through fabric selection, review, and submitted email; never attach/upload/encode images. Preserve server-side allowlist validation and the correct selected photograph, including a project's non-first photo. Do not break image galleries on their originating pages.
+3. **Fabric Guide and fabric choice:** Show three distinct paths: **Choose Fabric**, **Help Me Choose Fabric**, **I Have My Own Fabric**. Make customer-supplied fabric reachable directly from the dedicated Fabric Guide and from design → fabric → quotation. Do not require selecting a site fabric when own fabric is chosen. Preserve design photo URL and collect only policy-approved customer-supplied-fabric details; do not imply acceptance of all fabrics or fixed price.
+4. **Measurements Guide:** Exactly one **Submit Measurements** CTA after ALL instructional pictures/content, not above or after individual pictures. Preserve ordered images, enlarged views and correct submission route.
+5. **Service pages:** Clothing Alterations & Repairs, Garment Care & Cleaning, and Mobile Fitting: retain one **Request Service** CTA in each hero and remove the second duplicate CTA; keep content and distinct service forms.
+6. **VIP:** Preserve existing VIP presentation and do not calculate/publish subscription prices. Add a dedicated **VIP Subscription Enquiry** form with customer/contact, individual or family, number of people, requested services (e.g. wash/care/alterations), frequency, location and notes where appropriate. Clearly say request for review/quotation, not active subscription, membership, payment or guaranteed service. Keep existing VIP service enquiry separate. Use the site's existing secure form submission conventions, validation, privacy/consent and positive-provider-only success; no fake receipt.
+7. **Searchable FAQ:** Build a dedicated responsive, keyboard-accessible FAQ page with search over verified, approved public FAQs. Each result shows answer and three real actions: **Copy Answer** (answer text only), **Copy Answer + Link** (answer plus canonical URL of its original source/section), **View Original Source** (opens that same verified page/section). No invented answers, unsupported legal promises or links to internal source files. Include empty/no-results state, URL/anchor validation, SEO metadata and mobile tests. Defer any FAQ requiring unresolved policy approval.
+8. **Media Kit page:** Create an attractive on-brand page scaffold with verified company introduction and safe media enquiry information. Do NOT publish the draft PDF, unapproved photographs, logo usage, invented partnerships or unverified contact details. Mark download unavailable until owner approves final bilingual PDF. This page is a staging proposal pending owner review.
+9. **Release readiness audit:** Audit Terms, Privacy, customer consent, all service navigation/forms, Shop publication gating, technical SEO (titles, descriptions, canonical, robots, sitemap, schema, noindex), mobile responsiveness, accessibility, performance and security. Report verified / failed / untested / owner decision required, without claiming legal compliance or search ranking. Keep staging noindex and prevent draft merchandise from leaking to production.
+
+## Delivery gates
+
+- Read current source/reference and inspect the implementation; avoid rebuilding already-correct behaviour.
+- Implement in coherent commits **only on the development branch**. No main/production merge or deployment.
+- Run build, existing regression suites, and tests for each of the nine requirements; test error states and source URL copy output.
+- Deploy to Cloudflare **staging only** if existing configured workflow permits; distinguish CI/deployment notification from direct HTTP verification.
+- Provide exact commit SHA, staging URL, changed-file summary, screenshots/test evidence and remaining blockers for owner review.
+- STOP before any production change, policy publication, media kit download activation or paid integration.
