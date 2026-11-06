@@ -126,9 +126,9 @@
     const cards = [...grid.children];
     function filter() {
       const text = $("#shopSearch").value.trim().toLowerCase(),
-        cat = $("#shopCategory").value,
-        availability = $("#shopAvailability").value,
-        sort = $("#shopSort").value;
+        cat = ($("#shopCategory")?.value || grid.dataset.category || ""),
+        availability = ($("#shopAvailability")?.value || ""),
+        sort = ($("#shopSort")?.value || "name");
       cards
         .sort((a, b) =>
           sort === "name"
@@ -151,7 +151,7 @@
       $("#shopEmpty").hidden = count > 0;
     }
     ["shopSearch", "shopCategory", "shopAvailability", "shopSort"].forEach(
-      (id) => $("#" + id).addEventListener("input", filter),
+      (id) => $("#" + id)?.addEventListener("input", filter),
     );
     filter();
   }
