@@ -12,7 +12,7 @@ const selectionKeys=['project','design','photo','category','suitCategory','fabri
 for(const[service,path]of Object.entries(paths))if(location.pathname===path){state.service=service;state.experience=service==='vip'?'vip':'standard';}
 if(location.pathname.startsWith('/services/custom-tailoring/')){state.service='custom-tailoring';state.experience='standard';}
 if(/^\/(?:mensuits|womensuits)\//.test(location.pathname)){state.service='custom-tailoring';state.experience='standard';state.order='standard';state.category=location.pathname.startsWith('/mensuits/')?'men':'women';erase(state,['design','project','photo']);const id=state.category+'-'+location.pathname.split('/')[2];if(enums.suitCategory.includes(id))state.suitCategory=id;else delete state.suitCategory;}
-if(location.pathname.endsWith('/special-order/')){if(state.order!=='special')erase(state,['fabricChoice','fabricRef']);state.order='special';erase(state,['design','project','photo','suitCategory']);}
+if(location.pathname.endsWith('/special-order/')){if(state.order!=='special'){erase(state,['fabricChoice','fabricRef']);if(incoming.fabricChoice==='own')state.fabricChoice='own';}state.order='special';erase(state,['design','project','photo','suitCategory']);}
 if(location.pathname==='/request/'&&!params.has('project'))delete state.project;
 const dedicated=location.pathname.match(/^\/request\/([^/]+)\/$/);
 if(dedicated&&paths[dedicated[1]]){state.service=dedicated[1];state.experience=state.service==='vip'?'vip':'standard';state.order='general';erase(state,selectionKeys);if(dedicated[1]==='custom-tailoring'&&incoming.fabricChoice==='own')state.fabricChoice='own';}
