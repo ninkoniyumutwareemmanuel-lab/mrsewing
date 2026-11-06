@@ -54,3 +54,6 @@ Latest ownerupload authorises sharedsource movinggalleries,home booking/support/
 
 ## R13 — 6 November 2026
 Owner authorises Loyalty/Referral/Shop staging pages and linked requests. Preserve previous versions; original operating reference/payout terms and merchandise remain missing. See COMMERCE_PAGE_BRIEF.md.
+
+## R14 — 6 November 2026
+Safely synchronised13owner-uploaded product images; inventoried165WebP/21candidates, prepared unpublished drafts with no commercial facts inferred. Registered new assets to repair the strict existing build. Category and mobile Shop preparation only; preserve all approved journeys. See SHOP_IMAGE_PREPARATION_BRIEF.md.

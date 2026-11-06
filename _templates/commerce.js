@@ -153,6 +153,7 @@
     ["shopSearch", "shopCategory", "shopAvailability", "shopSort"].forEach(
       (id) => $("#" + id).addEventListener("input", filter),
     );
+    filter();
   }
   const selection = $("#productSelection"),
     dialog = $("#quoteDialog");

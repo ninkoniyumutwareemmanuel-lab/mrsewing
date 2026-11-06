@@ -55,7 +55,7 @@ with tempfile.TemporaryDirectory() as tmp:
 # Fixture products are rendered outside deployment root for browser interception only.
 ps=[]
 for n,status in enumerate(['Available in Stock','Available on Orders','Out of Stock']):
- q=copy.deepcopy(p);q.update(id='QA_'+str(n),slug='qa-only-'+str(n),name='Synthetic QA '+str(n),availability=status)
+ q=copy.deepcopy(p);q.update(id='QA_'+str(n),slug='qa-only-'+str(n),name='Synthetic QA '+str(n),availability=status,category=["Men's Suits",'Clothes Hangers','Garment Covers'][n])
  if n:
   q['stockQuantity']=0;q['priceRwf']=None
   for v in q['variations']:v['stockQuantity']=0

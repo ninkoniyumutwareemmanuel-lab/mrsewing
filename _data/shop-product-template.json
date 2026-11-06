@@ -21,18 +21,11 @@
       "responsiveSources": []
     }
   ],
-  "availability": "Out of Stock",
+  "availability": null,
   "priceRwf": null,
   "priceApproved": false,
-  "stockQuantity": 0,
-  "variations": [
-    {
-      "id": "",
-      "size": "",
-      "colour": "",
-      "stockQuantity": 0
-    }
-  ],
+  "stockQuantity": null,
+  "variations": [],
   "specifications": {},
   "careInstructions": "",
   "orderingNotes": "",

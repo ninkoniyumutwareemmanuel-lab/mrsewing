@@ -9,11 +9,12 @@ def load(source=None):
  ids=set();slugs=set();out=[]
  for p in data['products']:
   assert p.get('publicationStatus') in ['draft','published','archived'],'Invalid publication status'
+  assert re.fullmatch(r'[A-Za-z0-9_-]{1,64}',p.get('id','')) and p['id'] not in ids,'Duplicate/unsafe ID';ids.add(p['id'])
+  assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',p.get('slug','')) and p['slug'] not in slugs and p['slug'] not in ['cart','checkout','category'],'Duplicate/reserved slug';slugs.add(p['slug'])
   if p['publicationStatus']!='published':continue
+  assert not p.get('missingInformation'),'Unresolved product information must be reviewed before publication'
   for k in ['id','name','slug','category','description','seoTitle','seoDescription','orderingNotes','careInstructions']:
    assert isinstance(p.get(k),str) and p[k].strip() and len(p[k])<=4000,('Missing product field',k)
-  assert re.fullmatch(r'[A-Za-z0-9_-]{1,64}',p['id']) and p['id'] not in ids,'Duplicate/unsafe ID';ids.add(p['id'])
-  assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',p['slug']) and p['slug'] not in slugs and p['slug'] not in ['cart','checkout'],'Duplicate/reserved slug';slugs.add(p['slug'])
   assert p.get('approval',{}).get('publicDisplay') is True and p['approval'].get('source') and p['approval'].get('date'),'Publication evidence required'
   assert p.get('availability') in STATUSES,'Invalid availability'
   assert isinstance(p.get('specifications'),dict),'Specifications required'
@@ -44,3 +45,14 @@ def load(source=None):
  return out
 
 def route(p):return '/shop/'+p['slug']+'/'
+
+def category_route(name):
+ import unicodedata
+ slug=re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD',name).encode('ascii','ignore').decode().lower().replace("'",'').replace('’','')).strip('-')
+ assert slug,'Invalid category name'
+ return '/shop/category/'+slug+'/'
+
+def categories(products=None):
+ names=sorted({p['category'] for p in (load() if products is None else products)})
+ assert len({category_route(n) for n in names})==len(names),'Conflicting category URLs'
+ return names

@@ -1,4 +1,1270 @@
 {
   "schemaVersion": 1,
-  "products": []
+  "products": [
+    {
+      "id": "SHOP-DRAFT-001",
+      "publicationStatus": "draft",
+      "name": "Burgundy Grace Women's Single-Breasted Suit",
+      "slug": "burgundy-grace-women-s-single-breasted-suit",
+      "category": "Women's Suits",
+      "description": "Reference image showing a burgundy jacket and trousers on a mannequin.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Burgundy Grace Women's Single-Breasted Suit.webp",
+          "alt": "a burgundy jacket and trousers on a mannequin",
+          "width": 1086,
+          "height": 1448,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Burgundy Grace Women's Single-Breasted Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a burgundy jacket and trousers on a mannequin. Product details and availability require confirmation.",
+      "socialImage": "/Burgundy Grace Women's Single-Breasted Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Burgundy Grace Women's Single-Breasted Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "82089f9d5a4ead423ab7cf17898c1c8f11d3efe1737f5f78be2f0fe6c7bbee1d",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-143"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": []
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-002",
+      "publicationStatus": "draft",
+      "name": "Burgundy Royale Women's Skirt Suit",
+      "slug": "burgundy-royale-women-s-skirt-suit",
+      "category": "Women's Suits",
+      "description": "Reference image showing a burgundy jacket and skirt.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Burgundy Royale Women's Skirt Suit.webp",
+          "alt": "a burgundy jacket and skirt",
+          "width": 1087,
+          "height": 1447,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Burgundy Royale Women's Skirt Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a burgundy jacket and skirt. Product details and availability require confirmation.",
+      "socialImage": "/Burgundy Royale Women's Skirt Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Burgundy Royale Women's Skirt Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "87b25bf913d841bfedae578cc6f64425030f462c600da52a1f4525b9b20c5277",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-145"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": []
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-003",
+      "publicationStatus": "draft",
+      "name": "Camel Grace Women's Three-Piece Suit",
+      "slug": "camel-grace-women-s-three-piece-suit",
+      "category": "Women's Suits",
+      "description": "Reference image showing a camel-coloured jacket, waistcoat and trousers.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Camel Grace Women's Three-Piece Suit.webp",
+          "alt": "a camel-coloured jacket, waistcoat and trousers",
+          "width": 1088,
+          "height": 1445,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Camel Grace Women's Three-Piece Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a camel-coloured jacket, waistcoat and trousers. Product details and availability require confirmation.",
+      "socialImage": "/Camel Grace Women's Three-Piece Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Camel Grace Women's Three-Piece Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "8a1c65752e5c9a36b91dc77215e066cf822189f0dd6f5e47df875cf241dcde5a",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-146"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": []
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-004",
+      "publicationStatus": "draft",
+      "name": "Ivory Elegance Single-Breasted Suit",
+      "slug": "ivory-elegance-single-breasted-suit",
+      "category": "Men's Suits",
+      "description": "Reference image showing a light-coloured single-breasted suit jacket on a mannequin.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Ivory Elegance — Single-Breasted Suit.webp",
+          "alt": "a light-coloured single-breasted suit jacket on a mannequin",
+          "width": 1254,
+          "height": 1254,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Ivory Elegance Single-Breasted Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a light-coloured single-breasted suit jacket on a mannequin. Product details and availability require confirmation.",
+      "socialImage": "/Ivory Elegance — Single-Breasted Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Ivory Elegance — Single-Breasted Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "408d79ab6928a80fb52d852481e18ddab89a9feef6c135e1e5c2c5efc4d0eb9d",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-139"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": []
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-005",
+      "publicationStatus": "draft",
+      "name": "Midnight Elegance Women's Double-Breasted Suit",
+      "slug": "midnight-elegance-women-s-double-breasted-suit",
+      "category": "Women's Suits",
+      "description": "Reference image showing a dark double-breasted jacket and trousers.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Midnight Elegance Women's Double-Breasted Suit.webp",
+          "alt": "a dark double-breasted jacket and trousers",
+          "width": 941,
+          "height": 1672,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Midnight Elegance Women's Double-Breasted Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a dark double-breasted jacket and trousers. Product details and availability require confirmation.",
+      "socialImage": "/Midnight Elegance Women's Double-Breasted Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Midnight Elegance Women's Double-Breasted Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "306b627eeda0a730fc894ddef34afb8efff4367b4a757d6c7df651b7c9630580",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-144"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": []
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-006",
+      "publicationStatus": "draft",
+      "name": "Royal Ivory Shawl-Lapel Tuxedo",
+      "slug": "royal-ivory-shawl-lapel-tuxedo",
+      "category": "Men's Suits",
+      "description": "Reference image showing a light-coloured jacket with contrasting dark lapels and formalwear accessories.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Royal Ivory Shawl-Lapel Tuxedo.webp",
+          "alt": "a light-coloured jacket with contrasting dark lapels and formalwear accessories",
+          "width": 1091,
+          "height": 1442,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Royal Ivory Shawl-Lapel Tuxedo | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a light-coloured jacket with contrasting dark lapels and formalwear accessories. Product details and availability require confirmation.",
+      "socialImage": "/Royal Ivory Shawl-Lapel Tuxedo.webp",
+      "candidateEvidence": {
+        "originalFilename": "Royal Ivory Shawl-Lapel Tuxedo.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "d180a6fd5eb2cbc0a2c1d0853347277292f5ee5175a6ce863300e65a1bf10f46",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-142"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Confirm garment and accessory package inclusions"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Confirm garment and accessory package inclusions"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-007",
+      "publicationStatus": "draft",
+      "name": "Royal Ivory Three-Piece Suit",
+      "slug": "royal-ivory-three-piece-suit",
+      "category": "Men's Suits",
+      "description": "Reference image showing a light-coloured jacket, waistcoat and trousers on a mannequin.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Royal Ivory Three-Piece Suit.webp",
+          "alt": "a light-coloured jacket, waistcoat and trousers on a mannequin",
+          "width": 1086,
+          "height": 1448,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Royal Ivory Three-Piece Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a light-coloured jacket, waistcoat and trousers on a mannequin. Product details and availability require confirmation.",
+      "socialImage": "/Royal Ivory Three-Piece Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Royal Ivory Three-Piece Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "e7657eef6e22e8d59c6a020a246a5ac22d7e6a64efd2142bae3b67b214611a9d",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-141"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Confirm whether pictured accessories are included"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Confirm whether pictured accessories are included"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-008",
+      "publicationStatus": "draft",
+      "name": "Skyline Double-Breasted Suit",
+      "slug": "skyline-double-breasted-suit",
+      "category": "Men's Suits",
+      "description": "Reference image showing a blue double-breasted suit jacket on a mannequin.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Skyline Double-Breasted Suit.webp",
+          "alt": "a blue double-breasted suit jacket on a mannequin",
+          "width": 1100,
+          "height": 1429,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Skyline Double-Breasted Suit | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a blue double-breasted suit jacket on a mannequin. Product details and availability require confirmation.",
+      "socialImage": "/Skyline Double-Breasted Suit.webp",
+      "candidateEvidence": {
+        "originalFilename": "Skyline Double-Breasted Suit.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "af2ff2d0d94606fef2cfb842d3391f7e3e34e505e0144679447a0bfbb777d3f8",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [
+          "MS-140"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": []
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-009",
+      "publicationStatus": "draft",
+      "name": "Beige Clothes Hangers",
+      "slug": "beige-clothes-hangers",
+      "category": "Clothes Hangers",
+      "description": "Reference image showing beige-coloured hangers with metal-coloured hooks.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/Premium Non-Slip Velvet Clothes Hangers – Beige.webp",
+          "alt": "beige-coloured hangers with metal-coloured hooks",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Beige Clothes Hangers | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing beige-coloured hangers with metal-coloured hooks. Product details and availability require confirmation.",
+      "socialImage": "/Premium Non-Slip Velvet Clothes Hangers – Beige.webp",
+      "candidateEvidence": {
+        "originalFilename": "Premium Non-Slip Velvet Clothes Hangers – Beige.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "35a5bae681746adaff862bdb9e0c494f38be99294c7a748bbb83f3967ca6575f",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Verify filename claims: premium, non-slip, velvet; pack contents unknown"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Verify filename claims: premium, non-slip, velvet; pack contents unknown"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-010",
+      "publicationStatus": "draft",
+      "name": "Black and White Formal Shirts",
+      "slug": "black-and-white-formal-shirts",
+      "category": "Shirts",
+      "description": "Reference image showing black and white folded shirts.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/classic-formal-dress-shirts-black-white.webp",
+          "alt": "black and white folded shirts",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Black and White Formal Shirts | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing black and white folded shirts. Product details and availability require confirmation.",
+      "socialImage": "/classic-formal-dress-shirts-black-white.webp",
+      "candidateEvidence": {
+        "originalFilename": "classic-formal-dress-shirts-black-white.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "208f423c19f40d8076f8c92d273c29a95fca37bdeba170493345b9d331191c90",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Confirm whether these are separate colour options or a set"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Confirm whether these are separate colour options or a set"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-011",
+      "publicationStatus": "draft",
+      "name": "White Formal Shirt",
+      "slug": "white-formal-shirt",
+      "category": "Shirts",
+      "description": "Reference image showing a folded white shirt with dark buttons.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/classic-white-fitted-formal-dress-shirt.webp",
+          "alt": "a folded white shirt with dark buttons",
+          "width": 1108,
+          "height": 1420,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "White Formal Shirt | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a folded white shirt with dark buttons. Product details and availability require confirmation.",
+      "socialImage": "/classic-white-fitted-formal-dress-shirt.webp",
+      "candidateEvidence": {
+        "originalFilename": "classic-white-fitted-formal-dress-shirt.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "1819c7c98cd95d03fb536dc077becef7e91bec3b1ca82ebb3926f75db789637e",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Verify fitted description and any visible third-party branding/permission"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Verify fitted description and any visible third-party branding/permission"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-012",
+      "publicationStatus": "draft",
+      "name": "Geometric Pattern Slide Sandals",
+      "slug": "geometric-pattern-slide-sandals",
+      "category": "Footwear",
+      "description": "Reference image showing black slide sandals with gold-coloured and white geometric patterns.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/geometric-double-strap-slide-sandals-black-gold.webp",
+          "alt": "black slide sandals with gold-coloured and white geometric patterns",
+          "width": 1217,
+          "height": 1293,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Geometric Pattern Slide Sandals | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing black slide sandals with gold-coloured and white geometric patterns. Product details and availability require confirmation.",
+      "socialImage": "/geometric-double-strap-slide-sandals-black-gold.webp",
+      "candidateEvidence": {
+        "originalFilename": "geometric-double-strap-slide-sandals-black-gold.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "2c73f179501087bb1a9a579561f09e3f9e590acdfa656ca530448de2cf0fac59",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Confirm product identity against the composite sandals image"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-013"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Confirm product identity against the composite sandals image"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-013",
+      "publicationStatus": "draft",
+      "name": "Patterned Sandals Composite Reference",
+      "slug": "patterned-sandals-composite-reference",
+      "category": "Footwear",
+      "description": "Composite reference image showing two differently patterned sandal designs.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/geometric-triangle-heel-strap-sandals-black-white.webp",
+          "alt": "two differently patterned sandal designs",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Patterned Sandals Composite Reference | Mr Sewing Fashion",
+      "seoDescription": "Composite reference image showing two differently patterned sandal designs. Product details and availability require confirmation.",
+      "socialImage": "/geometric-triangle-heel-strap-sandals-black-white.webp",
+      "candidateEvidence": {
+        "originalFilename": "geometric-triangle-heel-strap-sandals-black-white.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "49aa8545dad2f69b8fa63ada6935b0917b08af298ebcc7fbe3efe2426e814840",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Composite includes slide sandals pictured separately; confirm which design this record represents before assigning a saleable SKU"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-012"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Composite includes slide sandals pictured separately; confirm which design this record represents before assigning a saleable SKU"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-014",
+      "publicationStatus": "draft",
+      "name": "Black Suit Garment Cover",
+      "slug": "black-suit-garment-cover",
+      "category": "Garment Covers",
+      "description": "Reference image showing an open black garment cover with a suit inside.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/mr-sewing-premium-suit-garment-cover-black.webp",
+          "alt": "an open black garment cover with a suit inside",
+          "width": 1254,
+          "height": 1254,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Black Suit Garment Cover | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing an open black garment cover with a suit inside. Product details and availability require confirmation.",
+      "socialImage": "/mr-sewing-premium-suit-garment-cover-black.webp",
+      "candidateEvidence": {
+        "originalFilename": "mr-sewing-premium-suit-garment-cover-black.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "b887ec4f9eec103167cd2d5ca4449da8451fad9e73a3fb0a83fc4a5d71650451",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Confirm whether pictured suit and hanger are excluded from the offer"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Confirm whether pictured suit and hanger are excluded from the offer"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-015",
+      "publicationStatus": "draft",
+      "name": "Black Clothes Hangers",
+      "slug": "black-clothes-hangers",
+      "category": "Clothes Hangers",
+      "description": "Reference image showing black hangers with a label reading 20 Pack.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-black-velvet-clothes-hangers-20-pack.webp",
+          "alt": "black hangers with a label reading 20 Pack",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Black Clothes Hangers | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing black hangers with a label reading 20 Pack. Product details and availability require confirmation.",
+      "socialImage": "/premium-black-velvet-clothes-hangers-20-pack.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-black-velvet-clothes-hangers-20-pack.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "9be0512314c993847857dd0aa8f93c1d9f6d6cb91795493706d509d8f551aa25",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Confirm pack contents; visible label is not verified selling quantity or stock",
+          "Verify velvet/premium claims"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Confirm pack contents; visible label is not verified selling quantity or stock",
+        "Verify velvet/premium claims"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-016",
+      "publicationStatus": "draft",
+      "name": "Black Garment Cover Reference",
+      "slug": "black-garment-cover-reference",
+      "category": "Garment Covers",
+      "description": "Reference image showing a black garment cover in extended and compact arrangements.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-foldable-suit-garment-cover-black.webp",
+          "alt": "a black garment cover in extended and compact arrangements",
+          "width": 1254,
+          "height": 1254,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Black Garment Cover Reference | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a black garment cover in extended and compact arrangements. Product details and availability require confirmation.",
+      "socialImage": "/premium-foldable-suit-garment-cover-black.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-foldable-suit-garment-cover-black.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "43c35044e0e1d80175805a2bc161fa36d725b8d1d9ce7355f6c332bce21e9bab",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Verify foldable specification, dimensions and included items"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-020"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Verify foldable specification, dimensions and included items"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-017",
+      "publicationStatus": "draft",
+      "name": "Silver-Coloured Hangers Composite Reference",
+      "slug": "silver-coloured-hangers-composite-reference",
+      "category": "Clothes Hangers",
+      "description": "Composite reference image showing silver-coloured hangers beside a dark wooden-looking hanger with clips.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-metal-clothes-hangers-silver.webp",
+          "alt": "silver-coloured hangers beside a dark wooden-looking hanger with clips",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Silver-Coloured Hangers Composite Reference | Mr Sewing Fashion",
+      "seoDescription": "Composite reference image showing silver-coloured hangers beside a dark wooden-looking hanger with clips. Product details and availability require confirmation.",
+      "socialImage": "/premium-metal-clothes-hangers-silver.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-metal-clothes-hangers-silver.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "939b187764b1b2fc7a86cb83bf18a11889c8104d4e1dfbd5622cc87e2be8301a",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Composite also depicts the separately pictured clipped hanger; confirm intended product identity and image suitability",
+          "Verify metal composition"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-021"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Composite also depicts the separately pictured clipped hanger; confirm intended product identity and image suitability",
+        "Verify metal composition"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-018",
+      "publicationStatus": "draft",
+      "name": "Natural-Coloured Clothes Hangers",
+      "slug": "natural-coloured-clothes-hangers",
+      "category": "Clothes Hangers",
+      "description": "Reference image showing a group of light wood-coloured hangers.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-natural-wooden-clothes-hangers.webp",
+          "alt": "a group of light wood-coloured hangers",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Natural-Coloured Clothes Hangers | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a group of light wood-coloured hangers. Product details and availability require confirmation.",
+      "socialImage": "/premium-natural-wooden-clothes-hangers.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-natural-wooden-clothes-hangers.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "28dfa1f5ce064e4242cf0d533ed727b9748c494de4cc59f0835528a531148f4a",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Verify wood material and pack contents; compare with garment-cover composite"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-020"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Verify wood material and pack contents; compare with garment-cover composite"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-019",
+      "publicationStatus": "draft",
+      "name": "Black Broad-Shoulder Hangers",
+      "slug": "black-broad-shoulder-hangers",
+      "category": "Clothes Hangers",
+      "description": "Reference image showing black hangers with broad curved shoulders.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-wide-shoulder-suit-hangers-black.webp",
+          "alt": "black hangers with broad curved shoulders",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Black Broad-Shoulder Hangers | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing black hangers with broad curved shoulders. Product details and availability require confirmation.",
+      "socialImage": "/premium-wide-shoulder-suit-hangers-black.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-wide-shoulder-suit-hangers-black.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "c417369999985f8a7edb0b48fd0741d70cd82a18ecd7ae98fb6dfbc8a8f6e04f",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Verify material, dimensions and pack contents"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Verify material, dimensions and pack contents"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-020",
+      "publicationStatus": "draft",
+      "name": "Garment Cover and Hangers Composite Reference",
+      "slug": "garment-cover-and-hangers-composite-reference",
+      "category": "Clothes Hangers",
+      "description": "Composite reference image showing a black garment cover beside light wood-coloured hangers.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-wooden-clothes-hangers-natural.webp",
+          "alt": "a black garment cover beside light wood-coloured hangers",
+          "width": 1254,
+          "height": 1254,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Garment Cover and Hangers Composite Reference | Mr Sewing Fashion",
+      "seoDescription": "Composite reference image showing a black garment cover beside light wood-coloured hangers. Product details and availability require confirmation.",
+      "socialImage": "/premium-wooden-clothes-hangers-natural.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-wooden-clothes-hangers-natural.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "9624a9e81db362b671e06697424a4c16217d43998dad1def605fcbefcd1d5159",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Potentially overlapping cover/hanger assets; confirm whether a bundle, alternate photograph or separate item before publication",
+          "Do not infer bundled quantities or wood composition"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-018",
+          "SHOP-DRAFT-016"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Potentially overlapping cover/hanger assets; confirm whether a bundle, alternate photograph or separate item before publication",
+        "Do not infer bundled quantities or wood composition"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-021",
+      "publicationStatus": "draft",
+      "name": "Dark Brown Hanger with Clips",
+      "slug": "dark-brown-hanger-with-clips",
+      "category": "Clothes Hangers",
+      "description": "Reference image showing a dark brown wooden-looking hanger with two clips.",
+      "approval": {
+        "publicDisplay": false,
+        "source": null,
+        "date": null
+      },
+      "images": [
+        {
+          "src": "/premium-wooden-suit-hanger-trouser-clips-dark-brown.webp",
+          "alt": "a dark brown wooden-looking hanger with two clips",
+          "width": 1536,
+          "height": 1024,
+          "rightsApproved": false,
+          "approvalSource": null,
+          "responsiveSources": []
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Dark Brown Hanger with Clips | Mr Sewing Fashion",
+      "seoDescription": "Reference image showing a dark brown wooden-looking hanger with two clips. Product details and availability require confirmation.",
+      "socialImage": "/premium-wooden-suit-hanger-trouser-clips-dark-brown.webp",
+      "candidateEvidence": {
+        "originalFilename": "premium-wooden-suit-hanger-trouser-clips-dark-brown.webp",
+        "inventoryCommit": "626ccd8145c282a2732922d44646387d681c2a55",
+        "imageSha256": "192796ee1a6e8a75368282c5c27d5329f36f5b91d32998e0d61456826dc6969c",
+        "visualInspection": "2026-11-06 contact-sheet inspection; filename is not commercial approval",
+        "existingSuitReferenceIds": [],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": true,
+        "reviewNotes": [
+          "Verify material, dimensions and intended use; compare with silver-hanger composite"
+        ],
+        "possibleRelatedDraftIds": [
+          "SHOP-DRAFT-017"
+        ]
+      },
+      "missingInformation": [
+        "Owner approval that this is a saleable Shop product",
+        "Shop image publication rights and provenance",
+        "Availability status approval",
+        "Approved RWF price if in stock; no fixed price if on orders",
+        "Verified stock and variation quantities",
+        "Approved sizes and colours/variation identifiers",
+        "Verified product specifications and selling/package contents",
+        "Care instructions and ordering conditions",
+        "Final product name/SEO approval",
+        "Verify material, dimensions and intended use; compare with silver-hanger composite"
+      ]
+    }
+  ]
 }

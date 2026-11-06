@@ -87,7 +87,7 @@ oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc'
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
 assert len(withdrawn)==134
-assert len(public_routes())==17+len(__import__('shop_catalog').load())  # R13 programme/Shop indexing
+assert len(public_routes())==17+len(__import__('shop_catalog').load())+len(__import__('shop_catalog').categories())  # R13 programme/Shop indexing
 assert all('/faq/'+t['slug']+'/' not in public_routes() for t in topics)
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')
 

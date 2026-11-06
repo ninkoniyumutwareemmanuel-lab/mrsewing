@@ -2,7 +2,7 @@
 import json,re
 from pathlib import Path
 from html import escape
-from shop_catalog import load as shop_products, route as shop_product_route
+from shop_catalog import load as shop_products, route as shop_product_route, categories as shop_categories, category_route
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://mrsewingfashion.com'
 NOINDEX={'collections.html','whatsapp.html','services/custom-tailoring/fabric.html','services/vip/subscription.html','request.html','services/custom-tailoring/design-choice.html','services/custom-tailoring/standard-order.html','services/custom-tailoring/special-order.html','booking.html','booking-adjustment.html','booking-housecall.html','booking-workplace.html','measurement-submission.html','reviews.html','w-doublebreasted.html','w-modernsuits.html','shop.html'}
@@ -23,6 +23,7 @@ INDEXABLE_ROUTES = {
     '/measurements/',
     '/loyalty-program/', '/referral-program/', '/shop/',
     *[shop_product_route(p) for p in shop_products()],
+    *[category_route(c) for c in shop_categories()],
 }
 STAGING='<script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector(\'meta[name="robots"]\');if(m)m.content="noindex, nofollow";}</script>'
 def route_for(path):
