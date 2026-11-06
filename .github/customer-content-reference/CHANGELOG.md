@@ -68,3 +68,5 @@ R17: owner-observed failed deployed preview; add server-side staging Shop route 
 R18: owner-approved white storefront/manual product WhatsApp enquiries; known details only, crypto clearance pending.
 
 R19: Shop-local Home; remove cart/card enquiry controls; enquiry only on product detail.
+
+R20: owner-requested removal of product-detail Product Information/Payment & Delivery panel; policies unchanged.
