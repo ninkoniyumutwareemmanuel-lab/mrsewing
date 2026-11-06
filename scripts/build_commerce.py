@@ -5,6 +5,7 @@ from html import escape,unescape
 from pathlib import Path
 from urllib.parse import quote
 from shop_catalog import ROOT,load,route,STATUSES,categories as shop_categories,category_route
+from shop_preview import enabled as preview_enabled,candidates as preview_candidates
 from customer_site import frame
 from site_seo import finalize,DOMAIN
 
@@ -52,18 +53,29 @@ def photo(i,primary=False):
  sources=i.get('responsiveSources',[])
  responsive=(' srcset="'+e(', '.join(quote(x['src'],safe='/')+' '+str(x['width'])+'w' for x in sources))+'" sizes="(min-width:1000px) 520px, (min-width:650px) 50vw, 100vw"') if sources else ''
  return '<img src="'+e(quote(i['src'],safe='/'))+'" alt="'+e(i['alt'])+'" width="'+str(i['width'])+'" height="'+str(i['height'])+'" loading="'+('eager' if primary else 'lazy')+'" decoding="async" class="product-photo"'+responsive+'>'
+def draft_card(p):
+ return '<a class="product-card draft-card" href="'+route(p)+'" data-product-card data-name="'+e((p['name']+' '+p['description']).lower())+'" data-category="'+e(p['category'])+'" data-availability="" data-price="0">'+photo(p['images'][0])+'<h2>'+e(p['name'])+'</h2><p>'+e(p['category'])+'</p><p class="draft-badge">Draft — Awaiting Approval</p></a>'
+def draft_page(p,products):
+ body=shop_nav()+category_nav(products,p['category'])+'<p>'+a('/shop/','Shop')+' / '+e(p['category'])+'</p><div class="product-layout"><div>'+photo(p['images'][0],True)+'</div><div><h1>'+e(p['name'])+'</h1><p class="draft-badge">Draft — Awaiting Approval</p><p>'+e(p['category'])+'</p><p>'+e(p['description'])+'</p><p>Proposed product for staging visual review only. Not approved for sale. Price, availability, specifications and image publication rights remain subject to approval.</p></div></div>'
+ return noindex(page(route(p),p['name']+' | Draft Preview','Staging visual review of a proposed product. Not approved for sale.',body))
+def noindex(source):
+ return re.sub(r'(<meta name="robots" content=")[^"]*',r'\g<1>noindex, nofollow',source)
 def card(p):return '<a class="product-card" href="'+route(p)+'" data-product-card data-name="'+e((p['name']+' '+p['description']).lower())+'" data-category="'+e(p['category'])+'" data-availability="'+p['availability']+'" data-price="'+str(p.get('priceRwf') or 0)+'">'+photo(p['images'][0])+'<h2>'+e(p['name'])+'</h2><p>'+e(p['availability'])+'</p>'+('<p class="price">RWF '+format(p['priceRwf'],',')+'</p>' if p.get('priceRwf') else '<p>Request a Quote</p>' if p['availability']=='Available on Orders' else '')+'</a>'
 def category_nav(products,selected=None):
  return '<nav class="shop-categories" aria-label="Product categories">'+a('/shop/','All Products')+''.join('<a href="'+category_route(c)+'"'+(' aria-current="page"' if c==selected else '')+'>'+e(c)+'</a>' for c in shop_categories(products))+'</nav>'
-def shop(products,selected=None):
+def shop(products,selected=None,drafts=None):
+ drafts=drafts or []
+ display=products+drafts
+ render=lambda p:draft_card(p) if p in drafts else card(p)
  body=shop_nav()+'<p class="home-eyebrow">Mr Sewing Fashion</p><h1>Online Shop</h1><p class="lead">Browse products and send a purchase request or ask for a quotation. Our team confirms availability and the final amount before any payment.</p>'
- categories=shop_categories(products)
- body+='<aside class="shop-banner" aria-label="Shop introduction"><p>Style for you. Care for your wardrobe.</p><small>Availability and final arrangements are confirmed by our team.</small></aside>'+category_nav(products,selected)
- body+='<div class="filters"><label>Search products<input id="shopSearch" type="search" maxlength="120"></label><label>Category<select id="shopCategory"><option value="">All categories</option>'+''.join('<option'+(' selected' if c==selected else '')+'>'+e(c)+'</option>' for c in categories)+'</select></label><label>Availability<select id="shopAvailability"><option value="">All availability</option>'+''.join('<option>'+s+'</option>' for s in STATUSES)+'</select></label><label>Sort by<select id="shopSort"><option value="name">Name A–Z</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></label></div><p id="shopCount" role="status">'+str(sum(not selected or p['category']==selected for p in products))+' products</p><section class="shop-grid" id="shopGrid" aria-label="Products">'+''.join(card(p).replace('data-product-card','data-product-card hidden',1) if selected and p['category']!=selected else card(p) for p in products)+'</section><section class="panel empty" id="shopEmpty"'+(' hidden' if products else '')+'><h2>'+('No matching products' if products else 'Our catalogue is being prepared')+'</h2><p>'+('Try another search or filter.' if products else 'No products are listed yet. Product details, photographs, prices and availability will appear here when the catalogue is ready. There are no products available to purchase through this catalogue at present.')+'</p></section><p class="notice">Submitting a purchase request does not reserve stock in real time or confirm an order. Please wait for verified payment instructions from Mr Sewing Fashion.</p>'
+ categories=shop_categories(display)
+ body+='<aside class="shop-banner" aria-label="Shop introduction"><p>Style for you. Care for your wardrobe.</p><small>Availability and final arrangements are confirmed by our team.</small></aside>'+category_nav(display,selected)
+ if drafts:body+='<p class="notice">Staging visual preview: draft products are not approved for sale. Categories are provisional. Purchasing and quotation requests are unavailable for drafts.</p>'
+ body+='<div class="filters"><label>Search products<input id="shopSearch" type="search" maxlength="120"></label><label>Category<select id="shopCategory"><option value="">All categories</option>'+''.join('<option'+(' selected' if c==selected else '')+'>'+e(c)+'</option>' for c in categories)+'</select></label><label>Availability<select id="shopAvailability"><option value="">All availability</option>'+''.join('<option>'+s+'</option>' for s in STATUSES)+'</select></label><label>Sort by<select id="shopSort"><option value="name">Name A–Z</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></label></div><p id="shopCount" role="status">'+str(sum(not selected or p['category']==selected for p in display))+' products</p><section class="shop-grid" id="shopGrid" aria-label="Products">'+''.join(render(p).replace('data-product-card','data-product-card hidden',1) if selected and p['category']!=selected else render(p) for p in display)+'</section><section class="panel empty" id="shopEmpty"'+(' hidden' if display else '')+'><h2>'+('No matching products' if display else 'Our catalogue is being prepared')+'</h2><p>'+('Try another search or filter.' if display else 'No products are listed yet. Product details, photographs, prices and availability will appear here when the catalogue is ready. There are no products available to purchase through this catalogue at present.')+'</p></section><p class="notice">Submitting a purchase request does not reserve stock in real time or confirm an order. Please wait for verified payment instructions from Mr Sewing Fashion.</p>'
  if selected:
   body=body.replace('<h1>Online Shop</h1>','<h1>'+e(selected)+'</h1>')
-  return page(category_route(selected),selected+' | Shop','Browse '+selected.lower()+' in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation.',body,products)
- return page('/shop/','Online Shop','Browse the Mr Sewing Fashion product catalogue in Rwanda. Request availability and pricing, or submit a purchase request for approved in-stock products.',body,products)
+  return (noindex if drafts else lambda x:x)(page(category_route(selected),selected+' | Shop','Browse '+selected.lower()+' in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation.',body,products))
+ return (noindex if drafts else lambda x:x)(page('/shop/','Online Shop','Browse the Mr Sewing Fashion product catalogue in Rwanda. Request availability and pricing, or submit a purchase request for approved in-stock products.',body,products))
 def product_page(p,products):
  body=shop_nav()+category_nav(products,p['category'])+'<p>'+a(category_route(p['category']),p['category'])+' / '+e(p['name'])+'</p><div class="product-layout"><div>'+photo(p['images'][0],True)+'<div class="photo-strip">'+''.join(photo(i) for i in p['images'][1:])+'</div></div><div><h1>'+e(p['name'])+'</h1><p>'+e(p['description'])+'</p><p>'+e(p['availability'])+'</p>'+('<p class="price">RWF '+format(p['priceRwf'],',')+'</p>' if p.get('priceRwf') else '')+'<p>Product ID: '+e(p['id'])+'</p><form id="productSelection" data-product-id="'+e(p['id'])+'"><label for="productVariation">Size / Colour</label><select id="productVariation" required><option value="">Select a size and colour</option>'+''.join('<option value="'+e(v['id'])+'"'+(' disabled' if p['availability']=='Available in Stock' and v['stockQuantity']==0 else '')+'>'+e(v['size']+' / '+v['colour'])+(' — '+str(v['stockQuantity'])+' available' if p['availability']=='Available in Stock' else '')+'</option>' for v in p['variations'])+'</select><label for="productQuantity">Quantity</label><input id="productQuantity" type="number" min="1" step="1" value="1" required><div class="actions"><button type="submit" class="home-button home-button-gold"'+(' disabled' if p['availability']=='Out of Stock' else '')+'>'+('Add to Cart' if p['availability']=='Available in Stock' else 'Request a Quote' if p['availability']=='Available on Orders' else 'Out of Stock')+'</button></div><p id="productStatus" role="status"></p></form><p>Recorded availability is subject to confirmation; requests do not reserve stock.</p></div></div><section><h2>Product Specifications</h2><dl>'+''.join('<dt>'+e(k)+'</dt><dd>'+e(v)+'</dd>' for k,v in p['specifications'].items())+'</dl><h2>Care Instructions</h2><p>'+e(p['careInstructions'])+'</p><h2>Ordering Notes</h2><p>'+e(p['orderingNotes'])+'</p></section>'
  if p['availability']=='Available on Orders':body+='<dialog id="quoteDialog" aria-labelledby="quoteTitle"><button type="button" class="home-button dialog-close" data-close>Close</button><h2 id="quoteTitle">Request a Quote</h2><p id="quoteContext"></p>'+form('quote','<label for="quoteRequirements">Additional requirements (optional)</label><textarea id="quoteRequirements" name="Additional Requirements" maxlength="2000" rows="3"></textarea>')+'</dialog>'
@@ -74,9 +86,11 @@ def cart(products):
 def routes():return ['/loyalty-program/','/referral-program/','/shop/','/shop/cart/']+[route(p) for p in load()]+[category_route(c) for c in shop_categories()]
 def outputs(products=None):
  ps=load() if products is None else products
- out={ROOT/'loyalty-program/index.html':loyalty(),ROOT/'referral-program/index.html':referral(),ROOT/'shop/index.html':shop(ps),ROOT/'shop/cart/index.html':cart(ps)}
+ drafts=preview_candidates() if products is None and preview_enabled() else []
+ out={ROOT/'loyalty-program/index.html':loyalty(),ROOT/'referral-program/index.html':referral(),ROOT/'shop/index.html':shop(ps,drafts=drafts),ROOT/'shop/cart/index.html':cart(ps)}
  for p in ps:out[ROOT/route(p).strip('/')/'index.html']=product_page(p,ps)
- for c in shop_categories(ps):out[ROOT/category_route(c).strip('/')/'index.html']=shop(ps,c)
+ for p in drafts:out[ROOT/route(p).strip('/')/'index.html']=draft_page(p,ps+drafts)
+ for c in shop_categories(ps+drafts):out[ROOT/category_route(c).strip('/')/'index.html']=shop(ps,c,drafts)
  out[ROOT/'assets/commerce.css']=(ROOT/'_templates/commerce.css').read_text();out[ROOT/'assets/commerce.js']=(ROOT/'_templates/commerce.js').read_text()
  # Server-only module: reuse the existing publishable provider key, never create/alter provider credentials.
  template=(ROOT/'_templates/homepage-quotation.html').read_text();key=unescape(re.search(r'name="access_key" value="([^"]+)"',template)[1])
@@ -95,4 +109,5 @@ if __name__=='__main__':
   if args.check:
    assert path.exists() and path.read_text()==value,'Stale commerce output: '+str(path)
   else:path.parent.mkdir(parents=True,exist_ok=True);path.write_text(value)
+ print('Shop draft preview: '+('enabled for verified staging build' if preview_enabled() else 'disabled; published products only'))
  print('PASS: programme pages and '+str(len(load()))+' verified merchandise products '+('synchronized' if args.check else 'generated'))
