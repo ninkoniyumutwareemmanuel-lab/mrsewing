@@ -37,3 +37,5 @@ R15 supersedes R12 motion direction: three home photo galleries run RIGHT TO LEF
 R16 Shop visual review: exact Cloudflare staging project URL + CF_PAGES=1 + development branch enables build-time draft rendering in the real storefront. Never add drafts to published load(), commerce API runtime, Product schema or sitemap; no draft sale/quote controls. Default/production builds remain published-only. See SHOP_PREVIEW_BRIEF.md and latest reference; no commercial approvals inferred.
 
 R17 corrects observed R16 deployment failure: server-only generated preview pages served by Pages /shop/[[path]] on exact staging project hosts, independently of CI preview variables. Production falls through. Never infer deployed visibility from successful build alone.
+
+R18 white Shop: stage products support terms-gated manual WhatsApp enquiries with canonical product link; owner confirms items available for enquiry. Keep unknown commercial fields unset, API publication gate and production isolation. Bank/MobileMoney manual, cryptocurrency pending clearance, no gateway. See WHITE_SHOP_BRIEF.md.

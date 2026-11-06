@@ -479,3 +479,7 @@
     });
   });
 })();
+/* Manual product enquiries: no payment, stock reservation or automatic sending. */
+(()=>{document.querySelectorAll('[data-shop-whatsapp-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const error=form.querySelector('[data-shop-whatsapp-error]'),quantity=Number(form.elements.quantity.value);if(!Number.isSafeInteger(quantity)||quantity<1||quantity>999){error.textContent='Enter a whole quantity between 1 and 999.';return;}if(!window.MrSewingWhatsApp){error.textContent='WhatsApp enquiry is temporarily unavailable. Please try again or contact our team.';return;}error.textContent='';const text='Hello Mr Sewing Fashion, I would like to enquire about purchasing '+form.dataset.productName+' ('+form.dataset.productId+').\nProduct: '+form.dataset.productUrl+'\nRequested quantity: '+quantity+'\nPreferred payment: '+form.elements.payment.value+'\nPreferences: '+(form.elements.preferences.value.trim()||'Please advise')+'\nPlease confirm availability, options, final price and payment instructions.';window.MrSewingWhatsApp.open(text,form.querySelector('[type=submit]'));}));})();
+
+(()=>{document.querySelectorAll('[data-share-product]').forEach(button=>button.addEventListener('click',async()=>{const status=document.querySelector('[data-share-status]');try{await navigator.clipboard.writeText(button.dataset.shareProduct);status.textContent='Product link copied.';}catch{status.textContent='Product link: '+button.dataset.shareProduct;}}));})();

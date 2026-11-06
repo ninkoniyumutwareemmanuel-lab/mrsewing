@@ -1,0 +1,17 @@
+# White Shop and manual purchase enquiries — 6 November 2026
+
+Owner R18 authorises replacing the black Shop body with a white professional storefront, all21items available for manual WhatsApp enquiry, and per-product purchase enquiry links. Header/footer/brand identity and unrelated pages remain intact. This is staging only, not a production release or automatic approval of missing commercial data.
+
+## Functionality
+
+Shop-only white background, dark readable typography, restrained gold actions, existing banner/search/category navigation/filtering, mobile two-column cards and responsive desktop grid. Each card has product-photo/name detail links and a separate WhatsApp enquiry action. Detail pages show original photograph (existing accessible enlargement), proposed name/category, known description, quantity, preferences, payment preference, copyable product link and related items. The review route is still isolated server-side to the exact staging project; production cannot access these21preview pages. WhatsApp messages include exact product name/ID/link and, from detail pages, quantity/payment/preference. Existing unchecked Terms modal gates opening the chat; customers review and press Send. No message delivery, stock reservation, order, payment or private-record success is claimed. Product links are rewritten server-side to the current staging deployment for review, avoiding nonexistent production product pages. Canonical metadata remains prepared for eventual publication.
+
+Unknown price, stock counts, sizes, colours, exact materials and package contents are not invented; our team confirms these before purchase. Catalogue source records remain unchanged and draft pending complete publication evidence. The direct email/cart API still rejects these draft IDs; existing genuinely published-product cart/checkout behaviour is preserved for later approved stock. No invented price sorting or stock filter assertions are displayed for the21manual enquiry entries.
+
+Mobile Money and Bank Transfer are manually arranged after review. Cryptocurrency is visible as pending verification and disabled as a selectable payment method; applicable legal/operational clearance and verified instructions remain unavailable. No bank number, wallet/account or gateway is introduced.
+
+## Verification
+
+Actual local Cloudflare HTTPS Worker:21cards,147original-image loads,7widths320/360/390/430/768/1024/1440, two mobile columns, white computed background, category/search, photo/name/detail navigation, Terms modal/disabled unchecked consent/Escape, invalid quantity, WhatsApp message exact product/link/quantity/payment and no real sending. Detail-page Axe checks at mobile and desktop. PASS existing commerce fixture browser regressions cover cart, checkout, quotation, referral/provider failure,7widths and8Axe scans. Cart-total and quotation-dialog contrast regressions were found and fixed; final suite passed. Production-host Worker fallthrough and draft API rejection retained. Build/parity and Wrangler Functions compilation checked; no real inbox or real customer messages.
+
+Homepage, booking/consultation, programme pages and catalogue data checked byte-identical to baseline. Production/main/DNS/provider credentials untouched. Exact final commit, deployment evidence and current test logs supplied in delivery report; do not substitute deployment notification for direct live inspection. Product specifications/prices and cryptocurrency clearance remain owner/operational review items.

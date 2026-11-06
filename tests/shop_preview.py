@@ -12,15 +12,15 @@ assert not enabled({})
 ps=candidates();assert len(ps)==21 and len({p['id'] for p in ps})==21
 assert sorted(__import__('collections').Counter(p['category'] for p in ps).values())==[2,2,2,4,4,7]
 assert not load()
-prod=outputs();assert 'Draft — Awaiting Approval' not in prod[ROOT/'shop/index.html']
+prod=outputs();assert 'data-shop-whatsapp-form' not in prod[ROOT/'shop/index.html']
 os.environ.update(base);preview=outputs()
 assert preview[ROOT/'shop/index.html'].count('class="product-card draft-card"')==21
 assert '<meta name="robots" content="noindex, nofollow"' in preview[ROOT/'shop/index.html']
 assert preview[ROOT/'functions/_lib/shop-runtime.js']==prod[ROOT/'functions/_lib/shop-runtime.js']
 for p in ps:
  html=preview[ROOT/'shop'/p['slug']/'index.html']
- assert 'Draft — Awaiting Approval' in html and 'productSelection' not in html and 'data-commerce-form' not in html
+ assert 'data-shop-whatsapp-form' in html and 'data-whatsapp-modal' in html and 'productSelection' not in html and 'data-commerce-form' not in html
  assert '"@type": "Product"' not in html and '"@type": "Offer"' not in html
  assert 'noindex, nofollow' in html
  assert ROOT/'shop'/p['slug']/'index.html' not in prod
-print('PASS 21 drafts;6categories;8gate scenarios;production exclusion;no actions/offers/schema;unchanged API catalogue')
+print('PASS 21 drafts;6categories;8gate scenarios;production exclusion;WhatsApp enquiry only/no offers/schema;unchanged API catalogue')
