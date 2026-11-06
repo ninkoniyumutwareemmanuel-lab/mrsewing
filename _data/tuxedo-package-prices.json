@@ -1,0 +1,16 @@
+{
+  "scope": "Men\u2019s tuxedos only; separate quotation/inclusions confirmation",
+  "source": "R8 owner \u00a78,6November2026",
+  "tiers": [
+    {
+      "tier": 1,
+      "twoPieceRwf": 800000,
+      "threePieceRwf": 1000000
+    },
+    {
+      "tier": 2,
+      "twoPieceRwf": 600000,
+      "threePieceRwf": 800000
+    }
+  ]
+}

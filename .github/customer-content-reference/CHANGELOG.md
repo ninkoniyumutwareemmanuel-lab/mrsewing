@@ -36,3 +36,6 @@ R6 owner clarification also replaces the About Collections CTA with a header-der
 R7 complete repair/audit, precise measurement sequence, portfolio quotation references and complete suit package pricing model. Prior approvals/versions retained.
 
 R7 independently confirms the failed b83720b Cloudflare build via GitHub; retains inaccessible detailed-log status. Adds actual local test evidence, current unresolved price/binding/email dependencies and provenance-validated portfolio quotations. No policy approval inferred.
+
+##2026-11-06-01 — R8
+Latest explicit owner clears exact ordinary suit/tuxedo amounts for staging, replaces upload UI with manual Custom WhatsApp, adds design previews/fabric naming/garment care/consultation/home links. Earlier versions retained. No original Sources independently accessible.

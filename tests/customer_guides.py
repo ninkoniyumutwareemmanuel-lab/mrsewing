@@ -29,4 +29,7 @@ assert guide.count("We recommend visiting our workshop")==1 and "working referen
 assert [m['id'] for m in measure]==['neck','shoulder','chest','bicep','sleeve-length','belly','waist','jacket-length','hip','thigh','trouser-length']
 prices=read('_data/suit-package-prices.json')['prices']
 assert set(prices)=={f['id'] for f in cat}
-assert guide.count('aria-label="Complete suit starting prices"')==8 and guide.count('Price on request (RWF)')==16
+assert guide.count('aria-label="Complete suit starting prices"')==8 and guide.count('Starting from RWF ')==16
+
+assert [(p['twoPieceRwf'],p['threePieceRwf']) for p in prices.values()]==[(600000,650000),(400000,450000),(270000,320000),(200000,250000),(500000,550000),(350000,400000),(220000,270000),(150000,200000)]
+assert all(p['publicationApproved'] and p['sourceDecisionDate']=='2026-11-06' for p in prices.values())

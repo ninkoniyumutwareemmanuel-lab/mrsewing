@@ -33,7 +33,8 @@ for file in ['_data/customer-projects.json']:
 print('PASS: 8 populated categories/14 assigned references, append-only IDs and protected homepage/media.')
 
 original_home=subprocess.check_output(['git','show','433107e:_templates/homepage-sections.html'],cwd=ROOT,text=True)
-assert (ROOT/'_templates/homepage-sections.html').read_text().replace('href="/request/?general=1"','href="#quotation"')==original_home
+import re
+assert re.sub(r'<a class="hero-highlight" href="/services/(?:custom-tailoring|alterations|garment-care|mobile-fitting)/">(.*?)</a>',r'<div class="hero-highlight">\1</div>',(ROOT/'_templates/homepage-sections.html').read_text(),flags=re.S).replace('href="/request/?general=1"','href="#quotation"')==original_home
 old=json.loads(subprocess.check_output(['git','show','433107e:_data/measurement-guide-images.json'],cwd=ROOT,text=True));now=json.loads((ROOT/'_data/measurement-guide-images.json').read_text())
 assert {m['id']:m for m in old['measurements']}=={m['id']:m for m in now['measurements']}
 assert now['measurements'][0]['id']=='neck' and now['measurements'][-1]['id']=='trouser-length'

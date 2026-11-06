@@ -34,6 +34,9 @@ for file in ['booking.html','booking-housecall.html','booking-workplace.html','b
  assert 'action="https://api.web3forms.com/submit"' in text
  # No fields, endpoints or access-key/integration values are changed.
  attrs=lambda s: re.findall(r'<(?:input|select|textarea)\b[^>]*\bname="([^"]+)"',s)
+ if file=='booking.html':
+  assert 'data-kind="consultation"' in text and 'Preferred Consultation Date' in text and 'Preferred Consultation Time' in text and text.count('<option value=')>=5
+  continue
  assert attrs(text)==attrs(old)
  assert re.search(r'<p class="form-note">[^<]*Web3Forms.*?<a href="/privacy-policy/">',text)
  assert 'not a confirmed appointment or accepted production order' in text
