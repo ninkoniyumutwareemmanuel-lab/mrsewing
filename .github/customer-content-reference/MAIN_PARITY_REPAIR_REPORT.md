@@ -29,3 +29,7 @@ Rollback preserved remotely: rollback/production-before-parity-repair-2026-11-06
 Deployment commit and GitHub Pages/Cloudflare checks are recorded after push in the delivery report. Both runtimes must deploy the repair: public static site and existing main.mrsewing-staging.pages.dev intake. Direct requests to public/Cloudflare domains are blocked by this environment proxy; direct live rendering must not be described as verified. Real inbox receipt remains unverified and requires a controlled post-deployment owner-confirmed test. Browser tests mocked submissions and WhatsApp; opening a chat does not send a message. Private storage/staff features remain disabled. No payment, DNS or hosting settings changed.
 
 Screenshots and detailed local evidence: /workspace/artifacts/main-parity and /workspace/review/main-parity. Modified files are recorded in the repair commit; many HTML changes are generated script-version/API-loader references, not page redesigns.
+
+## Phone follow-up — retained hover state
+
+Owner reports latest version still stationary on phone. Removed remaining CSS hover/focus pause rules, which can stop a track when a touch browser retains hover. Escape and OS reduced-motion still stop movement intentionally. Homepage script cache version advanced to R24. Targeted Chromium390px test held hover over a gallery for1.5seconds: all three tracks advanced approximately28pixels with running state. Full seven-width/phone-profile Shop and motion regression passed again. Direct physical-device/live verification remains blocked/unverified as above.

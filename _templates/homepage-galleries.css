@@ -2,5 +2,4 @@
 
 .suit-collections h2 em{color:#87621b}
 
-.gallery-motion-note{text-align:center;font-size:13px;color:#5b5143}.moving-gallery:focus-within .moving-gallery-track{animation-play-state:paused}
-@media(hover:hover){.moving-gallery:hover .moving-gallery-track{animation-play-state:paused}}
+.gallery-motion-note{text-align:center;font-size:13px;color:#5b5143}
