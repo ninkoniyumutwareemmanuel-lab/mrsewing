@@ -55,8 +55,8 @@ def finalize(source,path):
     name='index.html' if route=='/' else route.strip('/')+'.html'
     # These tags are regenerated, so repeated builds never duplicate them.
     source=re.sub(r'<script src="/assets/public-api[.]js[^"]*" defer></script>','',source)
-    if 'customerRequestForm' in source or 'data-commerce-form' in source or 'shopData' in source:source=source.replace('</head>','<script src="/assets/public-api.js?v=photo-release-r28" defer></script></head>',1)
-    source=source.replace('src="/assets/request-context.js"','src="/assets/request-context.js?v=photo-release-r28"').replace('src="/assets/customer-site.js"','src="/assets/customer-site.js?v=photo-release-r28"').replace('src="/assets/commerce.js"','src="/assets/commerce.js?v=photo-release-r28"').replace('src="/assets/homepage.js"','src="/assets/homepage.js?v=mobile-motion-r24"')
+    if 'customerRequestForm' in source or 'data-commerce-form' in source or 'shopData' in source:source=source.replace('</head>','<script src="/assets/public-api.js?v=canonical-browse-r30" defer></script></head>',1)
+    source=source.replace('src="/assets/request-context.js"','src="/assets/request-context.js?v=canonical-browse-r30"').replace('src="/assets/customer-site.js"','src="/assets/customer-site.js?v=canonical-browse-r30"').replace('src="/assets/commerce.js"','src="/assets/commerce.js?v=canonical-browse-r30"').replace('src="/assets/homepage.js"','src="/assets/homepage.js?v=mobile-motion-r24"')
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
