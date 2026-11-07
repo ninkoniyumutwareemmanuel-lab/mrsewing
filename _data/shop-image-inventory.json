@@ -3,10 +3,10 @@
   "baselineCommit": "626ccd8145c282a2732922d44646387d681c2a55",
   "scope": "All repository WebP files, including supporting derivatives; not all are merchandise. Image inspection does not establish sale approval.",
   "totals": {
-    "webpFiles": 165,
-    "decoded": 165,
-    "candidateImages": 21,
-    "supportingOrExcluded": 144,
+    "webpFiles": 182,
+    "decoded": 182,
+    "candidateImages": 26,
+    "supportingOrExcluded": 156,
     "publishedShopProducts": 0
   },
   "exactDuplicateGroups": [
@@ -110,6 +110,48 @@
       ]
     },
     {
+      "filename": "Emerald Elegance Women's Tailored Pantsuit – Executive Collection two piec.webp",
+      "path": "/Emerald Elegance Women's Tailored Pantsuit – Executive Collection two piec.webp",
+      "sha256": "9fa2197e939f683e6875a6f37a6a5c231b565cdcb1c1ff4f01d00877d2f75870",
+      "bytes": 161258,
+      "width": 1024,
+      "height": 1536,
+      "decoded": true,
+      "error": null,
+      "role": "unclassified root WebP — review",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+      "path": "/Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+      "sha256": "eeb4da5e8d8bdd0fae86fdae6d17bae2e2006b11ac645917123631ddcec051d0",
+      "bytes": 71000,
+      "width": 1086,
+      "height": 1448,
+      "decoded": true,
+      "error": null,
+      "role": "candidate",
+      "proposedProductName": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
+      "proposedCategory": "Men's Suits",
+      "matchedShopIds": [
+        "SHOP-DRAFT-023"
+      ],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [
+        "MS-148"
+      ],
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
+    },
+    {
       "filename": "Ivory Elegance — Single-Breasted Suit.webp",
       "path": "/Ivory Elegance — Single-Breasted Suit.webp",
       "sha256": "408d79ab6928a80fb52d852481e18ddab89a9feef6c135e1e5c2c5efc4d0eb9d",
@@ -138,6 +180,31 @@
         "Verified product specifications and selling/package contents",
         "Care instructions and ordering conditions",
         "Final product name/SEO approval"
+      ]
+    },
+    {
+      "filename": "Midnight Black Double-Breasted Suit – Gold Edition.webp",
+      "path": "/Midnight Black Double-Breasted Suit – Gold Edition.webp",
+      "sha256": "36e5e8378126b1ccda91ff9babc1391a306e80397c4647a1517072e8e9dcbf51",
+      "bytes": 85416,
+      "width": 915,
+      "height": 1719,
+      "decoded": true,
+      "error": null,
+      "role": "candidate",
+      "proposedProductName": "Midnight Black Double-Breasted Suit – Gold Edition",
+      "proposedCategory": "Men's Suits",
+      "matchedShopIds": [
+        "SHOP-DRAFT-022"
+      ],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [
+        "MS-147"
+      ],
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
       ]
     },
     {
@@ -200,6 +267,48 @@
         "Final product name/SEO approval",
         "Verify filename claims: premium, non-slip, velvet; pack contents unknown"
       ]
+    },
+    {
+      "filename": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+      "path": "/Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+      "sha256": "9155a7390bc41eab21d2779fd41feab04f05b6bef3f5771aa06d4017989f5124",
+      "bytes": 222034,
+      "width": 1199,
+      "height": 1312,
+      "decoded": true,
+      "error": null,
+      "role": "candidate",
+      "proposedProductName": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
+      "proposedCategory": "Women's Suits",
+      "matchedShopIds": [
+        "SHOP-DRAFT-026"
+      ],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [
+        "MS-151"
+      ],
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
+    },
+    {
+      "filename": "Royal Blue Executive Women's skirt.webp",
+      "path": "/Royal Blue Executive Women's skirt.webp",
+      "sha256": "3ff607b36722b7f2146811c02a6806ee9e1c9b7cc8d328838b9517144e237cea",
+      "bytes": 134174,
+      "width": 1024,
+      "height": 1536,
+      "decoded": true,
+      "error": null,
+      "role": "unclassified root WebP — review",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
     },
     {
       "filename": "Royal Ivory Shawl-Lapel Tuxedo.webp",
@@ -266,6 +375,23 @@
       ]
     },
     {
+      "filename": "Royal Navy Executive Suit – Gold Edition women two piece.webp",
+      "path": "/Royal Navy Executive Suit – Gold Edition women two piece.webp",
+      "sha256": "44fa81545a98f7366a217b8c5afba75f0e2625f2d6ec613cfa7005265a57bbfa",
+      "bytes": 101806,
+      "width": 1312,
+      "height": 1199,
+      "decoded": true,
+      "error": null,
+      "role": "unclassified root WebP — review",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
       "filename": "Skyline Double-Breasted Suit.webp",
       "path": "/Skyline Double-Breasted Suit.webp",
       "sha256": "af2ff2d0d94606fef2cfb842d3391f7e3e34e505e0144679447a0bfbb777d3f8",
@@ -294,6 +420,31 @@
         "Verified product specifications and selling/package contents",
         "Care instructions and ordering conditions",
         "Final product name/SEO approval"
+      ]
+    },
+    {
+      "filename": "The blue suit two piece.webp",
+      "path": "/The blue suit two piece.webp",
+      "sha256": "08801fb5fae1b45ec1cfa6537228ee366c0c4999797952cfb81124ab28dd276a",
+      "bytes": 161630,
+      "width": 1086,
+      "height": 1448,
+      "decoded": true,
+      "error": null,
+      "role": "candidate",
+      "proposedProductName": "Sky Blue Elegance Suit",
+      "proposedCategory": "Men's Suits",
+      "matchedShopIds": [
+        "SHOP-DRAFT-024"
+      ],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [
+        "MS-149"
+      ],
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
       ]
     },
     {
@@ -1113,6 +1264,40 @@
       "missingInformation": []
     },
     {
+      "filename": "ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+      "path": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+      "sha256": "e2fdd1d241a017afafcb2f0908a43f5c4214c0a13bf8c710701be5b140c32df8",
+      "bytes": 15996,
+      "width": 480,
+      "height": 640,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "ivory-elegance-shawl-tuxedo-black-tie-960.webp",
+      "path": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-960.webp",
+      "sha256": "dfd4129d6738b3ee6f78e24e89eaba4d38553f525c9a2b0c9687c01f72030d5c",
+      "bytes": 38674,
+      "width": 960,
+      "height": 1280,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
       "filename": "m-classicsuittwo1-480.webp",
       "path": "/assets/images/m-classicsuittwo1-480.webp",
       "sha256": "54c172e1832418f7698cbac513ff95d6a688019dbf2c7d3d77b34aac1508cd24",
@@ -1459,6 +1644,23 @@
       "bytes": 113844,
       "width": 960,
       "height": 1192,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "midnight-black-double-breasted-gold-480.webp",
+      "path": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+      "sha256": "b4e73ec4b51a39b463bcfecc979772bae3bd0e5b7b072847c93209b6aa72e9c0",
+      "bytes": 20476,
+      "width": 480,
+      "height": 902,
       "decoded": true,
       "error": null,
       "role": "optimised derivative/supporting website asset",
@@ -2116,6 +2318,74 @@
       "missingInformation": []
     },
     {
+      "filename": "rose-elegance-suit-480.webp",
+      "path": "/assets/images/rose-elegance-suit-480.webp",
+      "sha256": "16ce0256199f20f3b6ed2ac949eeeeaca6516e1a139bd1391a7010594d0cf186",
+      "bytes": 44716,
+      "width": 480,
+      "height": 720,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "rose-elegance-suit-960.webp",
+      "path": "/assets/images/rose-elegance-suit-960.webp",
+      "sha256": "798d908b866ab7e6758b92b6313ffc8d5bbc0050509e93395f782acf6aa99cd1",
+      "bytes": 191544,
+      "width": 960,
+      "height": 1439,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "royal-blue-executive-womens-three-piece-480.webp",
+      "path": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+      "sha256": "6cab0b0c64ddfa6ebe1a8c8033ff69d275fe06ba3d7f76df8b5848d48635ffb7",
+      "bytes": 37848,
+      "width": 480,
+      "height": 525,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "royal-blue-executive-womens-three-piece-960.webp",
+      "path": "/assets/images/royal-blue-executive-womens-three-piece-960.webp",
+      "sha256": "dc626a589965111e2b939d9f30c04ca4a92fe03313723aa6f4d1920193bec587",
+      "bytes": 108890,
+      "width": 960,
+      "height": 1050,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
       "filename": "s1-480.webp",
       "path": "/assets/images/s1-480.webp",
       "sha256": "d2324acd0053416ed97e05146e857ff2d1ec0bf95ad6b4428f31e175d265d2de",
@@ -2139,6 +2409,40 @@
       "bytes": 39026,
       "width": 480,
       "height": 618,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "sky-blue-elegance-suit-480.webp",
+      "path": "/assets/images/sky-blue-elegance-suit-480.webp",
+      "sha256": "d1a928221573560f9001da8de2ee3f4bbacb5b651c427ad3322c7c526c8f610c",
+      "bytes": 23374,
+      "width": 480,
+      "height": 640,
+      "decoded": true,
+      "error": null,
+      "role": "optimised derivative/supporting website asset",
+      "proposedProductName": null,
+      "proposedCategory": null,
+      "matchedShopIds": [],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [],
+      "missingInformation": []
+    },
+    {
+      "filename": "sky-blue-elegance-suit-960.webp",
+      "path": "/assets/images/sky-blue-elegance-suit-960.webp",
+      "sha256": "3310314d50db0d18d9b70b5c77a213f331f0d62a89c11b6f9962aeb2b7b9fc0f",
+      "bytes": 63722,
+      "width": 960,
+      "height": 1280,
       "decoded": true,
       "error": null,
       "role": "optimised derivative/supporting website asset",
@@ -3020,6 +3324,31 @@
         "Care instructions and ordering conditions",
         "Final product name/SEO approval",
         "Verify material, dimensions and intended use; compare with silver-hanger composite"
+      ]
+    },
+    {
+      "filename": "rose-pink three piecsuit.webp",
+      "path": "/rose-pink three piecsuit.webp",
+      "sha256": "0bedf782defd25c4b14be76d5885cfb0173abcbc00b47d36a4ffdacc22548c25",
+      "bytes": 338516,
+      "width": 1024,
+      "height": 1535,
+      "decoded": true,
+      "error": null,
+      "role": "candidate",
+      "proposedProductName": "Rose Elegance Suit",
+      "proposedCategory": "Men's Suits",
+      "matchedShopIds": [
+        "SHOP-DRAFT-025"
+      ],
+      "publishedShopIds": [],
+      "existingSuitReferenceIds": [
+        "MS-150"
+      ],
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
       ]
     },
     {

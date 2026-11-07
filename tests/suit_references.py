@@ -10,7 +10,7 @@ m=model();cats=categories();pool=load()[0]
 assert len(cats)==8 and len({c['id'] for c in cats})==8 and len({c['route'] for c in cats})==8
 assert [c['title'] for c in cats if c['gender']=='men']==['Single-Breasted Suits','Double-Breasted Suits','Tuxedos & Formalwear','Three-Piece Suits']
 assert [c['title'] for c in cats if c['gender']=='women']==['Single-Breasted Suits','Double-Breasted Suits','Skirt Suits','Three-Piece Suits']
-assert len(m['references'])==14 and set(m['references']).issubset({d['id'] for d in pool})
+assert len(m['references'])==19 and set(m['references']).issubset({d['id'] for d in pool})
 assert all(r['publicationEvidence'] and r['classificationEvidence'] for r in m['references'].values())
 assert sum(bool(c['designIds']) for c in cats)==8
 for c in cats:
@@ -30,7 +30,7 @@ for file in ['_data/collection-designs.json','_data/collection-id-registry.json'
  append_only(subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),(ROOT/file).read_bytes(),file)
 for file in ['_data/customer-projects.json']:
  assert (ROOT/file).read_bytes()==subprocess.check_output(['git','show','70dfdd7:'+file],cwd=ROOT),file
-print('PASS: 8 populated categories/14 assigned references, append-only IDs and protected homepage/media.')
+print('PASS: 8 populated categories/19 assigned references, append-only IDs and protected homepage/media.')
 
 from build_homepage import Section,SECTIONS
 for name,(file,tag,identifier) in SECTIONS.items():

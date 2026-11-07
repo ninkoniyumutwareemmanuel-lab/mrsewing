@@ -3,3 +3,8 @@
 .suit-collections h2 em{color:#87621b}
 
 .gallery-motion-note{text-align:center;font-size:13px;color:#5b5143}
+
+/* Preserve complete garments in the newly approved white-background photographs. */
+.moving-gallery-card[data-reference="MS-147"] img,.moving-gallery-card[data-reference="MS-148"] img,.moving-gallery-card[data-reference="MS-149"] img,.moving-gallery-card[data-reference="MS-150"] img,.moving-gallery-card[data-reference="MS-151"] img{object-fit:contain;background:#fff}
+
+.home-shop-categories{background:#fff;color:#211c15}.home-shop-categories h2,.home-shop-categories h3{color:#211c15}.home-shop-categories .section-heading p{color:#514b41}.home-shop-category-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:auto}.home-shop-category{display:block;background:#fff;color:#57400c;text-decoration:none;border:1px solid #d8c99f;border-radius:8px;padding:14px}.home-shop-category img{width:100%;height:clamp(190px,30vw,330px);object-fit:contain;background:#fff}.home-shop-category h3{font:400 clamp(20px,3vw,28px)/1.3 Georgia,serif;margin:12px 0}.home-shop-category span{font-size:14px}.home-shop-category:focus-visible{outline:3px solid #795409;outline-offset:4px}@media(max-width:430px){.home-shop-category-grid{gap:10px}.home-shop-category{padding:10px}.home-shop-category span{font-size:12px}}

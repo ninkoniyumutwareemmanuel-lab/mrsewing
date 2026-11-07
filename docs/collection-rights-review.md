@@ -5,7 +5,7 @@ Existing-public photographs are carried into staging pending owner rights review
 Unreferenced originals are inventoried but excluded from showroom publication.
 No different photographs have been grouped by visual similarity.
 
-15 existing-public designs; 146 original garment records; 381 total image assets inventoried.
+20 existing-public designs; 151 original garment records; 398 total image assets inventoried.
 
 | ID | Original | Showroom | Provenance | Rights |
 | --- | --- | --- | --- | --- |
@@ -155,3 +155,8 @@ No different photographs have been grouped by visual similarity.
 | MS-144 | `Midnight Elegance Women's Double-Breasted Suit.webp` | existing public display preserved | design_inspiration | approved |
 | MS-145 | `Burgundy Royale Women's Skirt Suit.webp` | existing public display preserved | design_inspiration | approved |
 | MS-146 | `Camel Grace Women's Three-Piece Suit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-147 | `Midnight Black Double-Breasted Suit – Gold Edition.webp` | existing public display preserved | design_inspiration | approved |
+| MS-148 | `Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp` | existing public display preserved | design_inspiration | approved |
+| MS-149 | `The blue suit two piece.webp` | existing public display preserved | design_inspiration | approved |
+| MS-150 | `rose-pink three piecsuit.webp` | existing public display preserved | design_inspiration | approved |
+| MS-151 | `Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp` | existing public display preserved | design_inspiration | approved |

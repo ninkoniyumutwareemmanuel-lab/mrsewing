@@ -1265,6 +1265,302 @@
         "Final product name/SEO approval",
         "Verify material, dimensions and intended use; compare with silver-hanger composite"
       ]
+    },
+    {
+      "id": "SHOP-DRAFT-022",
+      "publicationStatus": "draft",
+      "name": "Midnight Black Double-Breasted Suit – Gold Edition",
+      "slug": "midnight-black-double-breasted-gold",
+      "category": "Men's Suits",
+      "description": "Design photograph for a personalised enquiry. Garment details, fabric, availability and final quotation require confirmation.",
+      "approval": {
+        "publicDisplay": true,
+        "source": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "date": "2026-11-07"
+      },
+      "images": [
+        {
+          "src": "/Midnight Black Double-Breasted Suit – Gold Edition.webp",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference",
+          "width": 915,
+          "height": 1719,
+          "rightsApproved": true,
+          "approvalSource": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+          "responsiveSources": [
+            {
+              "src": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+              "width": 480
+            }
+          ]
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Midnight Black Double-Breasted Suit – Gold Edition | Mr Sewing Fashion",
+      "seoDescription": "Explore Midnight Black Double-Breasted Suit – Gold Edition. Enquire with Mr Sewing Fashion in Kigali to confirm garment requirements and quotation.",
+      "socialImage": "/Midnight Black Double-Breasted Suit – Gold Edition.webp",
+      "candidateEvidence": {
+        "originalFilename": "Midnight Black Double-Breasted Suit – Gold Edition.webp",
+        "inventoryCommit": "7daf8466ae72b7bdfd6933599500718ea818643a",
+        "imageSha256": "36e5e8378126b1ccda91ff9babc1391a306e80397c4647a1517072e8e9dcbf51",
+        "visualInspection": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "existingSuitReferenceIds": [
+          "MS-147"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": false
+      },
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-023",
+      "publicationStatus": "draft",
+      "name": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
+      "slug": "ivory-elegance-shawl-tuxedo-black-tie",
+      "category": "Men's Suits",
+      "description": "Design photograph for a personalised enquiry. Garment details, fabric, availability and final quotation require confirmation.",
+      "approval": {
+        "publicDisplay": true,
+        "source": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "date": "2026-11-07"
+      },
+      "images": [
+        {
+          "src": "/Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+          "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference",
+          "width": 1086,
+          "height": 1448,
+          "rightsApproved": true,
+          "approvalSource": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+          "responsiveSources": [
+            {
+              "src": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+              "width": 480
+            },
+            {
+              "src": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-960.webp",
+              "width": 960
+            }
+          ]
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition | Mr Sewing Fashion",
+      "seoDescription": "Explore Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition. Enquire with Mr Sewing Fashion in Kigali to confirm garment requirements and quotation.",
+      "socialImage": "/Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+      "candidateEvidence": {
+        "originalFilename": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+        "inventoryCommit": "7daf8466ae72b7bdfd6933599500718ea818643a",
+        "imageSha256": "eeb4da5e8d8bdd0fae86fdae6d17bae2e2006b11ac645917123631ddcec051d0",
+        "visualInspection": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "existingSuitReferenceIds": [
+          "MS-148"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": false
+      },
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-024",
+      "publicationStatus": "draft",
+      "name": "Sky Blue Elegance Suit",
+      "slug": "sky-blue-elegance-suit",
+      "category": "Men's Suits",
+      "description": "Design photograph for a personalised enquiry. Garment details, fabric, availability and final quotation require confirmation.",
+      "approval": {
+        "publicDisplay": true,
+        "source": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "date": "2026-11-07"
+      },
+      "images": [
+        {
+          "src": "/The blue suit two piece.webp",
+          "alt": "Sky Blue Elegance Suit shown as a tailoring design reference",
+          "width": 1086,
+          "height": 1448,
+          "rightsApproved": true,
+          "approvalSource": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+          "responsiveSources": [
+            {
+              "src": "/assets/images/sky-blue-elegance-suit-480.webp",
+              "width": 480
+            },
+            {
+              "src": "/assets/images/sky-blue-elegance-suit-960.webp",
+              "width": 960
+            }
+          ]
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Sky Blue Elegance Suit | Mr Sewing Fashion",
+      "seoDescription": "Explore Sky Blue Elegance Suit. Enquire with Mr Sewing Fashion in Kigali to confirm garment requirements and quotation.",
+      "socialImage": "/The blue suit two piece.webp",
+      "candidateEvidence": {
+        "originalFilename": "The blue suit two piece.webp",
+        "inventoryCommit": "7daf8466ae72b7bdfd6933599500718ea818643a",
+        "imageSha256": "08801fb5fae1b45ec1cfa6537228ee366c0c4999797952cfb81124ab28dd276a",
+        "visualInspection": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "existingSuitReferenceIds": [
+          "MS-149"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": false
+      },
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-025",
+      "publicationStatus": "draft",
+      "name": "Rose Elegance Suit",
+      "slug": "rose-elegance-suit",
+      "category": "Men's Suits",
+      "description": "Design photograph for a personalised enquiry. Garment details, fabric, availability and final quotation require confirmation.",
+      "approval": {
+        "publicDisplay": true,
+        "source": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "date": "2026-11-07"
+      },
+      "images": [
+        {
+          "src": "/rose-pink three piecsuit.webp",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference",
+          "width": 1024,
+          "height": 1535,
+          "rightsApproved": true,
+          "approvalSource": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+          "responsiveSources": [
+            {
+              "src": "/assets/images/rose-elegance-suit-480.webp",
+              "width": 480
+            },
+            {
+              "src": "/assets/images/rose-elegance-suit-960.webp",
+              "width": 960
+            }
+          ]
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Rose Elegance Suit | Mr Sewing Fashion",
+      "seoDescription": "Explore Rose Elegance Suit. Enquire with Mr Sewing Fashion in Kigali to confirm garment requirements and quotation.",
+      "socialImage": "/rose-pink three piecsuit.webp",
+      "candidateEvidence": {
+        "originalFilename": "rose-pink three piecsuit.webp",
+        "inventoryCommit": "7daf8466ae72b7bdfd6933599500718ea818643a",
+        "imageSha256": "0bedf782defd25c4b14be76d5885cfb0173abcbc00b47d36a4ffdacc22548c25",
+        "visualInspection": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "existingSuitReferenceIds": [
+          "MS-150"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": false
+      },
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
+    },
+    {
+      "id": "SHOP-DRAFT-026",
+      "publicationStatus": "draft",
+      "name": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
+      "slug": "royal-blue-executive-womens-three-piece",
+      "category": "Women's Suits",
+      "description": "Design photograph for a personalised enquiry. Garment details, fabric, availability and final quotation require confirmation.",
+      "approval": {
+        "publicDisplay": true,
+        "source": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "date": "2026-11-07"
+      },
+      "images": [
+        {
+          "src": "/Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference",
+          "width": 1199,
+          "height": 1312,
+          "rightsApproved": true,
+          "approvalSource": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+          "responsiveSources": [
+            {
+              "src": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+              "width": 480
+            },
+            {
+              "src": "/assets/images/royal-blue-executive-womens-three-piece-960.webp",
+              "width": 960
+            }
+          ]
+        }
+      ],
+      "availability": null,
+      "priceRwf": null,
+      "priceApproved": false,
+      "stockQuantity": null,
+      "variations": [],
+      "specifications": {},
+      "careInstructions": null,
+      "orderingNotes": null,
+      "seoTitle": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection | Mr Sewing Fashion",
+      "seoDescription": "Explore Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection. Enquire with Mr Sewing Fashion in Kigali to confirm garment requirements and quotation.",
+      "socialImage": "/Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+      "candidateEvidence": {
+        "originalFilename": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+        "inventoryCommit": "7daf8466ae72b7bdfd6933599500718ea818643a",
+        "imageSha256": "9155a7390bc41eab21d2779fd41feab04f05b6bef3f5771aa06d4017989f5124",
+        "visualInspection": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+        "existingSuitReferenceIds": [
+          "MS-151"
+        ],
+        "technicalDraftIdNotApprovedSKU": true,
+        "categoryIsProposed": false
+      },
+      "missingInformation": [
+        "Approved commercial availability",
+        "Approved price and stock/variation details",
+        "Verified specifications and package inclusions"
+      ]
     }
   ]
 }

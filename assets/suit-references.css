@@ -4,3 +4,6 @@
 .suit-design-card img{object-fit:contain;background:#e8e0d2}
 
 .customer-breadcrumb ol{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1rem 0;font-size:.85rem}.customer-breadcrumb li+li:before{content:"/";margin-right:.5rem;color:#98866c}.customer-breadcrumb a{color:#79530b}.suit-reference-view .customer-breadcrumb a{color:#ddb956}.customer-breadcrumb [aria-current]{color:inherit}
+
+/* New category covers retain the whole approved garment, including composite views. */
+img[alt^="Midnight Black Double-Breasted Suit"],img[alt^="Ivory Elegance Shawl-Lapel Tuxedo"],img[alt^="Sky Blue Elegance Suit"],img[alt^="Rose Elegance Suit"],img[alt^="Royal Blue Executive Women's Three-Piece Pantsuit"]{object-fit:contain;background:#fff}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "nextId": 147,
+  "nextId": 152,
   "retiredIds": [],
   "designs": [
     {
@@ -4814,6 +4814,161 @@
       ],
       "metadataEvidence": [],
       "sourceAnchor": "Camel Grace Women's Three-Piece Suit.webp"
+    },
+    {
+      "id": "MS-147",
+      "slug": "midnight-black-double-breasted-gold",
+      "name": "Midnight Black Double-Breasted Suit – Gold Edition",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Midnight Black Double-Breasted Suit – Gold Edition.webp",
+          "originalPath": "Midnight Black Double-Breasted Suit – Gold Edition.webp",
+          "width": 915,
+          "height": 1719,
+          "position": "50% 0%",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence."
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Midnight Black Double-Breasted Suit – Gold Edition.webp"
+    },
+    {
+      "id": "MS-148",
+      "slug": "ivory-elegance-shawl-tuxedo-black-tie",
+      "name": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "tuxedo",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+          "originalPath": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence."
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp"
+    },
+    {
+      "id": "MS-149",
+      "slug": "sky-blue-elegance-suit",
+      "name": "Sky Blue Elegance Suit",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/The blue suit two piece.webp",
+          "originalPath": "The blue suit two piece.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Sky Blue Elegance Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence."
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "The blue suit two piece.webp"
+    },
+    {
+      "id": "MS-150",
+      "slug": "rose-elegance-suit",
+      "name": "Rose Elegance Suit",
+      "gender": "men",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/rose-pink three piecsuit.webp",
+          "originalPath": "rose-pink three piecsuit.webp",
+          "width": 1024,
+          "height": 1535,
+          "position": "50% 0%",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence."
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "rose-pink three piecsuit.webp"
+    },
+    {
+      "id": "MS-151",
+      "slug": "royal-blue-executive-womens-three-piece",
+      "name": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
+      "gender": "women",
+      "styles": [],
+      "occasions": [],
+      "colors": [],
+      "garmentType": "suit",
+      "description": "Design inspiration for a personalised tailoring enquiry. Fabric, suitability and quotation require confirmation before production.",
+      "images": [
+        {
+          "src": "/Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+          "originalPath": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp",
+          "width": 1199,
+          "height": 1312,
+          "position": "50% 0%",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "rightsStatus": "approved",
+      "published": true,
+      "publicationBasis": "owner_approved_design_reference",
+      "sources": [
+        "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence."
+      ],
+      "metadataEvidence": [],
+      "sourceAnchor": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp"
     }
   ]
 }

@@ -222,5 +222,80 @@
       }
     ],
     "category": "Women's Three-Piece Suits"
+  },
+  "MS-147": {
+    "name": "Midnight Black Double-Breasted Suit – Gold Edition",
+    "image": "/Midnight%20Black%20Double-Breasted%20Suit%20%E2%80%93%20Gold%20Edition.webp",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/Midnight%20Black%20Double-Breasted%20Suit%20%E2%80%93%20Gold%20Edition.webp",
+        "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference",
+        "width": 915,
+        "height": 1719,
+        "url": "https://mrsewingfashion.com/Midnight%20Black%20Double-Breasted%20Suit%20%E2%80%93%20Gold%20Edition.webp"
+      }
+    ],
+    "category": "Men's Double-Breasted Suits"
+  },
+  "MS-148": {
+    "name": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
+    "image": "/Ivory%20Elegance%20Shawl-Lapel%20Tuxedo%20%E2%80%93%20Black%20Tie%20Edition.webp",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/Ivory%20Elegance%20Shawl-Lapel%20Tuxedo%20%E2%80%93%20Black%20Tie%20Edition.webp",
+        "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference",
+        "width": 1086,
+        "height": 1448,
+        "url": "https://mrsewingfashion.com/Ivory%20Elegance%20Shawl-Lapel%20Tuxedo%20%E2%80%93%20Black%20Tie%20Edition.webp"
+      }
+    ],
+    "category": "Men's Tuxedos & Formalwear"
+  },
+  "MS-149": {
+    "name": "Sky Blue Elegance Suit",
+    "image": "/The%20blue%20suit%20two%20piece.webp",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/The%20blue%20suit%20two%20piece.webp",
+        "alt": "Sky Blue Elegance Suit shown as a tailoring design reference",
+        "width": 1086,
+        "height": 1448,
+        "url": "https://mrsewingfashion.com/The%20blue%20suit%20two%20piece.webp"
+      }
+    ],
+    "category": "Men's Single-Breasted Suits"
+  },
+  "MS-150": {
+    "name": "Rose Elegance Suit",
+    "image": "/rose-pink%20three%20piecsuit.webp",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/rose-pink%20three%20piecsuit.webp",
+        "alt": "Rose Elegance Suit shown as a tailoring design reference",
+        "width": 1024,
+        "height": 1535,
+        "url": "https://mrsewingfashion.com/rose-pink%20three%20piecsuit.webp"
+      }
+    ],
+    "category": "Men's Three-Piece Suits"
+  },
+  "MS-151": {
+    "name": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
+    "image": "/Royal%20Blue%20Executive%20Women%27s%20Three-Piece%20Pantsuit%20%E2%80%93%20Signature%20Collection.webp",
+    "audience": "women",
+    "images": [
+      {
+        "src": "/Royal%20Blue%20Executive%20Women%27s%20Three-Piece%20Pantsuit%20%E2%80%93%20Signature%20Collection.webp",
+        "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference",
+        "width": 1199,
+        "height": 1312,
+        "url": "https://mrsewingfashion.com/Royal%20Blue%20Executive%20Women%27s%20Three-Piece%20Pantsuit%20%E2%80%93%20Signature%20Collection.webp"
+      }
+    ],
+    "category": "Women's Three-Piece Suits"
   }
 }

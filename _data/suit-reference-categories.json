@@ -10,10 +10,11 @@
       "description": "Explore single-breasted tailoring references with a single front button row.",
       "route": "/mensuits/single-breasted/",
       "designIds": [
+        "MS-149",
         "MS-069",
         "MS-139"
       ],
-      "coverDesignId": "MS-139",
+      "coverDesignId": "MS-149",
       "assetStatus": "owner-approved reference available"
     },
     {
@@ -24,10 +25,11 @@
       "description": "Explore overlapping-front tailoring references with two button columns.",
       "route": "/mensuits/double-breasted/",
       "designIds": [
+        "MS-147",
         "MS-117",
         "MS-140"
       ],
-      "coverDesignId": "MS-140",
+      "coverDesignId": "MS-147",
       "assetStatus": "owner-approved reference available"
     },
     {
@@ -38,9 +40,10 @@
       "description": "Explore approved tuxedo and formalwear references.",
       "route": "/mensuits/tuxedos-formalwear/",
       "designIds": [
+        "MS-148",
         "MS-142"
       ],
-      "coverDesignId": "MS-142",
+      "coverDesignId": "MS-148",
       "assetStatus": "owner-approved reference available"
     },
     {
@@ -51,9 +54,10 @@
       "description": "Explore jacket, trousers and waistcoat references.",
       "route": "/mensuits/three-piece/",
       "designIds": [
+        "MS-150",
         "MS-141"
       ],
-      "coverDesignId": "MS-141",
+      "coverDesignId": "MS-150",
       "assetStatus": "owner-approved reference available"
     },
     {
@@ -107,9 +111,10 @@
       "description": "Explore three-piece tailoring references.",
       "route": "/womensuits/three-piece/",
       "designIds": [
+        "MS-151",
         "MS-146"
       ],
-      "coverDesignId": "MS-146",
+      "coverDesignId": "MS-151",
       "assetStatus": "owner-approved reference available"
     }
   ],
@@ -191,6 +196,31 @@
       "evidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
       "publicationEvidence": "Owner R5 uploaded suit reference approval, 5 November2026; actual upload70dfdd7; visual construction inspected. Reference inspiration only, not completed-project/stock evidence.",
       "classificationEvidence": "Visual inspection of the corresponding owner-named uploaded image, 5 November2026."
+    },
+    "MS-147": {
+      "label": "Midnight Black Double-Breasted Suit – Gold Edition",
+      "publicationEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "classificationEvidence": "Visible garment construction reviewed in owner-supplied photograph; category follows explicit owner description."
+    },
+    "MS-148": {
+      "label": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
+      "publicationEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "classificationEvidence": "Visible garment construction reviewed in owner-supplied photograph; category follows explicit owner description."
+    },
+    "MS-149": {
+      "label": "Sky Blue Elegance Suit",
+      "publicationEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "classificationEvidence": "Visible garment construction reviewed in owner-supplied photograph; category follows explicit owner description."
+    },
+    "MS-150": {
+      "label": "Rose Elegance Suit",
+      "publicationEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "classificationEvidence": "Visible garment construction reviewed in owner-supplied photograph; category follows explicit owner description."
+    },
+    "MS-151": {
+      "label": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
+      "publicationEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
+      "classificationEvidence": "Visible garment construction reviewed in owner-supplied photograph; category follows explicit owner description."
     }
   }
 }

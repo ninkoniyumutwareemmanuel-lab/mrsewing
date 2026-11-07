@@ -1384,5 +1384,85 @@
     "height": 387,
     "originalBytes": 13138,
     "variants": []
+  },
+  "Midnight Black Double-Breasted Suit – Gold Edition.webp": {
+    "width": 915,
+    "height": 1719,
+    "originalBytes": 85416,
+    "variants": [
+      {
+        "src": "assets/images/midnight-black-double-breasted-gold-480.webp",
+        "width": 480,
+        "bytes": 20476
+      }
+    ]
+  },
+  "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition.webp": {
+    "width": 1086,
+    "height": 1448,
+    "originalBytes": 71000,
+    "variants": [
+      {
+        "src": "assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+        "width": 480,
+        "bytes": 15996
+      },
+      {
+        "src": "assets/images/ivory-elegance-shawl-tuxedo-black-tie-960.webp",
+        "width": 960,
+        "bytes": 38674
+      }
+    ]
+  },
+  "The blue suit two piece.webp": {
+    "width": 1086,
+    "height": 1448,
+    "originalBytes": 161630,
+    "variants": [
+      {
+        "src": "assets/images/sky-blue-elegance-suit-480.webp",
+        "width": 480,
+        "bytes": 23374
+      },
+      {
+        "src": "assets/images/sky-blue-elegance-suit-960.webp",
+        "width": 960,
+        "bytes": 63722
+      }
+    ]
+  },
+  "rose-pink three piecsuit.webp": {
+    "width": 1024,
+    "height": 1535,
+    "originalBytes": 338516,
+    "variants": [
+      {
+        "src": "assets/images/rose-elegance-suit-480.webp",
+        "width": 480,
+        "bytes": 44716
+      },
+      {
+        "src": "assets/images/rose-elegance-suit-960.webp",
+        "width": 960,
+        "bytes": 191544
+      }
+    ]
+  },
+  "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp": {
+    "width": 1199,
+    "height": 1312,
+    "originalBytes": 222034,
+    "variants": [
+      {
+        "src": "assets/images/royal-blue-executive-womens-three-piece-480.webp",
+        "width": 480,
+        "bytes": 37848
+      },
+      {
+        "src": "assets/images/royal-blue-executive-womens-three-piece-960.webp",
+        "width": 960,
+        "bytes": 108890
+      }
+    ]
   }
 }
