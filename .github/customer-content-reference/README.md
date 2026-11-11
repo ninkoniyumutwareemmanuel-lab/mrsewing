@@ -2,15 +2,15 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-11-01**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+Current reviewed reference: **versions/2026-11-11-02**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-11-01/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-11-01/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-11-01/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-11-01/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-11-01/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-11-02/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-11-02/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-11-02/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-11-02/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-11-02/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules
@@ -42,3 +42,5 @@ R7 current task brief: [publication repair](PUBLICATION_REPAIR_BRIEF.md). About 
 Current policy wording is on a review branch only; see [Stage A policy review](policy-review-2026-11-07/README.md). Final owner text approval precedes production under the latest instruction.
 
 Latest collected staging adjustment brief: [R32](STAGING_ADJUSTMENTS_2026-11-11.md). No main publication authorised for this release.
+
+Latest visual/journey brief: [R33](FAQ_THEME_FABRIC_PICKER_BRIEF_2026-11-11.md).
