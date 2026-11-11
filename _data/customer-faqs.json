@@ -86,7 +86,9 @@
         "mobile-location",
         "mobile-prepare",
         "mobile-fees",
-        "mobile-confirm"
+        "mobile-confirm",
+        "workplace-measurement",
+        "vip-price"
       ],
       "related": [
         "booking-visiting",
@@ -111,7 +113,8 @@
         "alter-quote",
         "alter-timing",
         "alter-payment",
-        "alter-concern"
+        "alter-concern",
+        "alter-four-days"
       ],
       "related": [
         "measurements-fittings",
@@ -136,7 +139,9 @@
         "express-details",
         "express-delivery",
         "express-availability",
-        "express-charge"
+        "express-charge",
+        "after-hours",
+        "overnight"
       ],
       "related": [
         "production-delivery",
@@ -243,7 +248,9 @@
         "standalone-payment",
         "higher-collections",
         "shirt-skirt",
-        "payment-methods"
+        "payment-methods",
+        "domestic-deposit",
+        "international-payment"
       ],
       "related": [
         "custom-tailoring",
@@ -297,7 +304,10 @@
         "delivery-arrangements",
         "ready-notice",
         "late-collection",
-        "outside-kigali"
+        "outside-kigali",
+        "international-shipping",
+        "kigali-round-trip",
+        "deadline-not-accepted"
       ],
       "related": [
         "express-tailoring",
@@ -375,12 +385,15 @@
       "keywords": []
     },
     "own-fabric": {
-      "question": "Can I bring my own fabric or sketch?",
-      "answer": "You can request an assessment of your own fabric or share a sketch. Our team will confirm suitability, quantity, materials and quotation before agreeing the arrangements.",
+      "question": "Can I supply my own fabric?",
+      "answer": "{{policyOwnFabric}}",
       "keywords": [
-        "cloth",
-        "drawing"
-      ]
+        "customer fabric",
+        "cloth"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/custom-tailoring/#service-info-fabric"
     },
     "design-details": {
       "question": "How are design and fabric details agreed?",
@@ -449,8 +462,13 @@
     },
     "mobile-how": {
       "question": "How do mobile fittings work?",
-      "answer": "Request a visit with your location and garment needs. Confirm coverage, scheduling and any charges directly before the visit. The included initial Kigali suit delivery does not automatically include mobile fittings or follow-up transport. See <a href=\"/services/mobile-fitting/\">Mobile Fitting</a>.",
-      "keywords": []
+      "answer": "{{policyMobileMeasurement}} {{policyMobileConsultation}} Arrange the appropriate service and confirm the location, time and scope before the visit.",
+      "keywords": [
+        "visit"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/mobile-fitting/#service-info-mobile"
     },
     "mobile-location": {
       "question": "Where can I request a mobile fitting?",
@@ -463,9 +481,18 @@
       "keywords": []
     },
     "mobile-fees": {
-      "question": "Are mobile fittings included in suit delivery?",
-      "answer": "Initial door-to-door Kigali suit delivery is included with the standard suit package. Mobile fitting visits, collection visits and follow-up transport are separate arrangements. Confirm scope and any charges directly; no universal visit fee is listed here.",
-      "keywords": []
+      "question": "What is the difference between the 10,000, 25,000 and 50,000 RWF mobile services?",
+      "answer": "{{policyMobileMeasurement}} {{policyMobileConsultation}} {{policyMobileAssistance}}",
+      "keywords": [
+        "measurement visit",
+        "consultation",
+        "50000",
+        "25000",
+        "10000"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/mobile-fitting/#service-info-mobile"
     },
     "mobile-confirm": {
       "question": "When is my requested visit confirmed?",
@@ -489,8 +516,14 @@
     },
     "alter-timing": {
       "question": "How long do alterations take?",
-      "answer": "{{alterationTiming}}",
-      "keywords": []
+      "answer": "{{policyAlterationTime}}",
+      "keywords": [
+        "working hours",
+        "duration"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/alterations/#service-info-timing"
     },
     "alter-payment": {
       "question": "When do I pay for a standalone alteration?",
@@ -503,9 +536,16 @@
       "keywords": []
     },
     "express-request": {
-      "question": "How do I request express tailoring?",
-      "answer": "Share your exact deadline, garment, fabric and measurement needs. {{timing}} Confirm capacity, scope and the quotation before paying. See <a href=\"/services/express-tailoring/\">Express Tailoring</a>.",
-      "keywords": []
+      "question": "How fast is Express tailoring?",
+      "answer": "{{policyTailoringTime}} {{policyCharges}}",
+      "keywords": [
+        "urgent",
+        "days",
+        "rush"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/custom-tailoring/#service-info-timing"
     },
     "express-details": {
       "question": "What details are needed to assess an urgent request?",
@@ -513,9 +553,15 @@
       "keywords": []
     },
     "express-delivery": {
-      "question": "Does an express tailoring estimate include cleaning and delivery?",
-      "answer": "No. {{timing}}",
-      "keywords": []
+      "question": "Does an Express estimate automatically guarantee handover?",
+      "answer": "No. Express custom tailoring is estimated at 2–3 days subject to feasibility and capacity. Confirm the actual completion, fitting, cleaning and delivery arrangements in the accepted quotation; a requested date is not automatically accepted.",
+      "keywords": [
+        "delivery",
+        "cleaning"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/custom-tailoring/#service-info-timing"
     },
     "express-availability": {
       "question": "Does contacting the team reserve express production?",
@@ -523,9 +569,17 @@
       "keywords": []
     },
     "express-charge": {
-      "question": "How do I confirm express charges and payment?",
-      "answer": "For Standard Service, Express adds 35% of the original quoted service price. Standard after-hours work 17:00–22:00 adds 25%; when both apply the combined surcharge is 60% of the original base price, not compounded. Availability and confirmation apply. Work after 22:00 is individually reviewed and quoted.",
-      "keywords": []
+      "question": "How much is Express and can after-hours fees apply too?",
+      "answer": "{{policyCharges}} {{policyChargeExample}}",
+      "keywords": [
+        "35%",
+        "25%",
+        "60%",
+        "fees"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#6"
     },
     "care-enquiry": {
       "question": "How do I enquire about cleaning?",
@@ -548,19 +602,32 @@
       "keywords": []
     },
     "care-timing": {
-      "question": "How do I confirm a cleaning completion date?",
-      "answer": "{{careTiming}} Agree the service and full schedule directly before proceeding; no universal cleaning deadline is given here.",
-      "keywords": []
+      "question": "How long does cleaning take?",
+      "answer": "{{policyCareTime}}",
+      "keywords": [
+        "cleaning",
+        "3 days",
+        "hours"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/garment-care/#service-info-timing"
     },
     "care-handover": {
-      "question": "How do I arrange care pickup or delivery?",
-      "answer": "Confirm any standalone care pickup, handover or delivery arrangements and charges with the team. These are separate from the included initial Kigali suit delivery. See <a href=\"/services/garment-care/planning/\">Garment Care planning</a>.",
-      "keywords": []
+      "question": "How do I arrange care collection or delivery?",
+      "answer": "{{policyTransport}} Arrange collection details and an agreed time with the team after the garment and service requirements are assessed.",
+      "keywords": [],
+      "source": "/services/garment-care/#service-info-transport",
+      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
+      "approvalDate": "2026-11-07"
     },
     "collections-purpose": {
-      "question": "Are Collections and Our Work the same gallery?",
-      "answer": "Browse approved garment photographs and design references with their publication status. A reference is not proof of stock, exact fabric availability or that every pictured garment was completed by Mr Sewing. Unverified references are withheld pending rights verification.",
-      "keywords": []
+      "question": "Are suit references and Our Work the same gallery?",
+      "answer": "Men’s and Women’s Suits contain design-reference photographs to help you choose a style. Our Work shows the approved completed projects identified on that page. A design reference does not guarantee ready-made stock, exact fabric availability or that Mr Sewing made the pictured garment.",
+      "keywords": [],
+      "source": "/mensuits/",
+      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
+      "approvalDate": "2026-11-07"
     },
     "collections-browse": {
       "question": "How do I find a design?",
@@ -608,9 +675,16 @@
       "keywords": []
     },
     "cotton-prices": {
-      "question": "How do I confirm current suit and tuxedo prices?",
-      "answer": "Request the current quotation for the garment, fabric category, inclusions and requirements. Men’s tuxedos have separate packages; do not infer composition or availability from a photograph or tier label.",
-      "keywords": []
+      "question": "What are the starting prices for suits?",
+      "answer": "{{policySuitPrices}} See the <a href=\"/guides/fabrics/\">Fabric Guide</a> for the approved fabric tiers and photographs.",
+      "keywords": [
+        "prices",
+        "tiers",
+        "starting"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/guides/fabrics/#fabric-references-title"
     },
     "suit-contents": {
       "question": "What is included in a two-piece or three-piece suit?",
@@ -643,19 +717,31 @@
       "keywords": []
     },
     "payment-methods": {
-      "question": "What payment methods can I use?",
-      "answer": "Confirm the available payment method with the team when agreeing your quotation. Do not send a card or mobile-money PIN.",
-      "keywords": []
+      "question": "How should I arrange and verify payment?",
+      "answer": "Mobile Money, Bank Transfer and Cryptocurrency are manually arranged payment options in the Shop. Wait for verified instructions from Mr Sewing Fashion; no automatic gateway or payment confirmation is provided. A screenshot is not proof of received funds. Never share payment PINs, passwords or private keys. For service enquiries, follow the payment method and requirements in your agreed quotation.",
+      "keywords": [
+        "payment",
+        "verification"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#3"
     },
     "locations": {
       "question": "Where is Mr Sewing based?",
-      "answer": "Mr Sewing Fashion Designer operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Contact the team for directions and to confirm the appropriate workshop or appointment location.",
-      "keywords": []
+      "answer": "The main workshop is in Karama, Norvège, KN 441 St, Nyarugenge, Kigali. The Downtown consultation location is in MIC Building, Downtown Kigali, by appointment. See the <a href=\"/contact/#locations-heading\">Contact page</a> for the workshop map and the appropriate visit arrangements.",
+      "keywords": [],
+      "source": "/contact/#locations-heading",
+      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
+      "approvalDate": "2026-11-07"
     },
     "appointment-needed": {
       "question": "Do I need an appointment?",
-      "answer": "Confirm visit availability and any appointment directly with the team. Normal operating hours are 09:00–17:00 Kigali time; location visits and after-hours work require confirmation. Support hours are a separate Monday–Friday schedule excluding Rwandan public holidays.",
-      "keywords": []
+      "answer": "Normal workshop hours are Monday–Saturday, 09:00–17:00 Kigali time. Ordinary Saturday workshop visits do not require an appointment. On the last Saturday of the month (Umuganda), hours are 12:00–17:00 by advance appointment; Sunday is by appointment only. The MIC Building consultation location is appointment-only. Mobile appointments and after-hours work require confirmation. Customer Support separately operates Monday–Friday, excluding Rwandan public holidays.",
+      "keywords": [],
+      "source": "/contact/#hours-heading",
+      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
+      "approvalDate": "2026-11-07"
     },
     "request-appointment": {
       "question": "How do I request an appointment?",
@@ -678,9 +764,16 @@
       "keywords": []
     },
     "tailoring-timing": {
-      "question": "How long does tailoring take?",
-      "answer": "{{timing}}",
-      "keywords": []
+      "question": "How long does a custom suit take?",
+      "answer": "{{policyTailoringTime}}",
+      "keywords": [
+        "weeks",
+        "standard",
+        "duration"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/custom-tailoring/#service-info-timing"
     },
     "delivery-arrangements": {
       "question": "How do delivery and collection work?",
@@ -714,13 +807,19 @@
     },
     "refund-review": {
       "question": "How do I ask for a refund review?",
-      "answer": "Use the <a href=\"/refund-policy/#request-title\">refund request form</a> with order details, reason and relevant evidence. Human review and a decision are required. Amounts, cancellation conditions and payment-processing deadlines require owner, Finance and legal reconciliation; no automatic deduction or guaranteed deadline is imposed.",
-      "keywords": []
+      "answer": "Use the <a href=\"/refund-policy/#request-title\">refund request form</a> with your order or quotation reference, contact details, reason, relevant dates, evidence and the remedy you request. The team reviews the circumstances, may ask for clarification and communicates the decision through WhatsApp or email. You may ask for further assistance. Submitting the form does not approve a refund or determine its amount or payment date.",
+      "keywords": [],
+      "source": "/refund-policy/#1",
+      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
+      "approvalDate": "2026-11-07"
     },
     "order-change": {
-      "question": "Can I change an order after it starts?",
+      "question": "Can I change my design after payment?",
       "answer": "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed.",
-      "keywords": []
+      "keywords": [],
+      "source": "/terms-and-conditions/#5",
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026 §§11–12; existing approved change-assessment procedure",
+      "approvalDate": "2026-11-07"
     },
     "policy-documents": {
       "question": "Where can I read the current policy information?",
@@ -734,8 +833,11 @@
     },
     "form-processing": {
       "question": "How are website form details processed?",
-      "answer": "Text forms use the existing Web3Forms submission service. Uploads remain disabled. New request selections may use tab-session storage without storing contact fields or message text there. See the <a href=\"/privacy-policy/\">staging Privacy Policy</a> for observed processing and verification gaps.",
-      "keywords": []
+      "answer": "Text enquiries use Web3Forms, directly or through the website’s Cloudflare validation endpoint. Website file uploads are not required. Selected website designs are shared as photograph URLs, not attached files. The quotation form also saves a temporary per-tab draft of contact and request fields to preserve your progress; this is not an accepted request or a private order record. See the <a href=\"/privacy-policy/#5\">Privacy Policy</a> for browser-storage information.",
+      "keywords": [],
+      "source": "/privacy-policy/#5",
+      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
+      "approvalDate": "2026-11-07"
     },
     "photo-request": {
       "question": "How can I ask about an existing photograph?",
@@ -751,6 +853,128 @@
       "question": "Should I send my payment PIN with an enquiry?",
       "answer": "No. Do not send your card PIN or mobile-money PIN. Confirm the payment method and share only the relevant payment reference when needed for your order.",
       "keywords": []
+    },
+    "alter-four-days": {
+      "question": "Can I have my suit altered within four days?",
+      "answer": "{{policyFourDays}}",
+      "keywords": [
+        "4 days",
+        "four days",
+        "deadline"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/alterations/#service-info-timing"
+    },
+    "after-hours": {
+      "question": "What is the after-hours fee?",
+      "answer": "{{policyCharges}}",
+      "keywords": [
+        "17:00",
+        "22:00",
+        "evening"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#6"
+    },
+    "overnight": {
+      "question": "What happens after 22:00?",
+      "answer": "Work after 22:00 needs an individual quotation and payment arrangement. There is no universal overnight percentage, and availability must be confirmed.",
+      "keywords": [
+        "overnight",
+        "night"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#6"
+    },
+    "domestic-deposit": {
+      "question": "What deposit must I pay and when is the balance due?",
+      "answer": "{{policyDomesticPayment}} {{policyPaymentVerification}}",
+      "keywords": [
+        "70%",
+        "30%",
+        "advance",
+        "deposit"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#3"
+    },
+    "international-payment": {
+      "question": "Do international customers pay in full?",
+      "answer": "{{policyInternationalPayment}}",
+      "keywords": [
+        "100%",
+        "international",
+        "overseas"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#3"
+    },
+    "international-shipping": {
+      "question": "Is international shipping included?",
+      "answer": "International shipping and other applicable charges are clearly quoted before agreement. Do not assume that initial Kigali delivery in an eligible suit package includes international shipping. No fixed international shipping price or deadline is promised without verified arrangements.",
+      "keywords": [
+        "shipping",
+        "international"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/terms-and-conditions/#3"
+    },
+    "kigali-round-trip": {
+      "question": "How much is Kigali collection and return?",
+      "answer": "{{policyTransport}}",
+      "keywords": [
+        "10,000",
+        "10000",
+        "round trip",
+        "transport"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/delivery-and-collection/#1"
+    },
+    "workplace-measurement": {
+      "question": "Can someone visit my workplace for measurements?",
+      "answer": "{{policyMobileMeasurement}} If you have not confirmed a garment order, the separately purchased 25,000 RWF Consultation & Fitting service may suit your needs. Share your Kigali location; timing, scope, feasibility and any travel arrangements require confirmation.",
+      "keywords": [
+        "office",
+        "workplace",
+        "hotel",
+        "home"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/mobile-fitting/#service-info-mobile"
+    },
+    "vip-price": {
+      "question": "How are VIP services priced?",
+      "answer": "{{policyVIP}}",
+      "keywords": [
+        "VIP",
+        "family",
+        "groups",
+        "five people",
+        "three hours"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/services/vip/#service-info-vip"
+    },
+    "deadline-not-accepted": {
+      "question": "What happens if my requested deadline cannot be accepted?",
+      "answer": "A requested date is not automatically confirmed. The team assesses the garment, materials, measurements, fittings and capacity before acceptance. Agree a feasible completion date and quotation before proceeding; do not assume that selecting Express guarantees the deadline.",
+      "keywords": [
+        "deadline",
+        "capacity"
+      ],
+      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "source": "/customer-information/#service-estimates"
     }
   },
   "synonyms": [

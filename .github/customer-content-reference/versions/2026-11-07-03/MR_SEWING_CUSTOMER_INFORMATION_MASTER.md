@@ -1,0 +1,781 @@
+> CURRENT R15 — Owner “Final Homepage, Our Work and Customer Form Improvements”, 6 November 2026. Supersedes R12 gallery direction only: all3homepage photo galleries now RIGHT→LEFT, preserving shared sources, noninteractive photos, smooth loops and reduced-motion. Home Support WhatsApp and Send Design reuse same-page unchecked Terms dialog with Cancel/Close/Escape/focus and explicit continuation. Both selected-design entry points (suit collection/approved completed project) route through fabric to the same existing quotation form; mandatory actual original-photo canonical URL from publication-gated asset allowlists is preserved/reviewed/submitted as text URL, never uploaded/attached/Base64. Retain IDs/project URLs/category/fabric as context. General Custom, Special, Alterations, Garment Care, VIP/Mobile remain separate relevant enquiries without required website photo. Special may be contacted on WhatsApp for pictures after review; no upload required. Five approved Our Work project pages retain grouping/descriptions/photos and become sitemap/index eligible with accurate metadata; no broader policy rewrite. Preserve booking/Shop/programmes, prices, policies and all unapproved Shop drafts. Staging only, no main/production/paid services/private feature activation.
+
+> CURRENT R14 — Owner task “Use Existing GitHub Product Images”, 6 November 2026. Synced owner upload commit 626ccd8145c282a2732922d44646387d681c2a55 safely. Audit covers 165 WebP files: 21 candidate images, remaining 144 hero/guide/derivative assets. Prepare image-derived drafts only; upload/reference-gallery approval does not confirm merchandise publication, price, stock, variations/material/package contents or one of the three availability statuses. Unknown status remains null and unpublished. Exactly Available in Stock / Available on Orders / Out of Stock when approved. Four mixed/overlapping images require identity/set/alternate-photo review. Proposed Shirts/Footwear categories are supported by actual shirt/sandal assets; no Accessories products identified. Keep all 21 candidates draft until essential data/rights/approval verified. Preserve black/gold Shop, promotional introduction, category navigation, two-column mobile grid/cart/quote flows; generate category routes only for published merchandise. No homepage/booking/loyalty/referral redesign, external images, paid services, main/production publication or payment changes.
+
+> CURRENT R13 — Owner task “Loyalty, Referral and E-commerce Shop”, 6 November 2026. Explicitly authorises staging activation of /loyalty-program/, /referral-program/ and /shop/, superseding earlier release deferrals only for these features. C38–C40/C43 remain scoped to qualifying suits. Loyalty: 3% from second separate qualifying suit purchase; first-order quantity is not separate purchases; highest eligible discount only. Referrer need not have purchased; 6,000 RWF per qualifying suit in first qualifying order, referred customer 2%; no repeat commission; completion/full payment/handover required. Owner reports operating-reference attribution before first deposit, no self-referrals, one referrer, seven-calendar-day payout subject to verification. Original commercial/operating references remain inaccessible: attribution rules may be explained as requirements supplied by owner; seven-day payout promise withheld pending applicable-terms verification. No automatic membership/commission/codes. Shop Git catalogue has exactly three availability labels; no verified products currently, so no invented live product pages. Purchase/quote requests are not orders/reservations/payments. Bank/MobileMoney preference only; cryptocurrency unavailable pending legal/operational approval. No accounts/payment credentials/private data in catalogue. Preserve R11 booking and R12 homepage except necessary programme links/Shop navigation. Staging only.
+
+> CURRENT R12 — Homepage approval,6November2026,owner uploaded Pastedtext task. Stagingonly. Add suit galleries betweenSixSteps andWhyChoose/MadeAroundNeeds;Moments uses OurWork photos. Same published loaders/rights/category sources,no separately maintainedphoto list. Continuous slowleft→right CSS loops,noninteractive photos,noarrows/dots,no touchpause;reducedmotion stable. Explicitpause/resume control permits WCAG motionstopping withoutphotointeraction. Hero/allhomequote/consultCTA→/booking/;preserve R11 consultation. CustomerSupport staysinplace withpositive-provider-only exactnewsuccess/noWhatsAppbutton. SendDesign usesexisting same-pageTerms modal. ExactapprovedhomeSEOdescription,titleunchanged,oneH1 withlocalservice context. No madeupfacts/stock/testimonials,unrelatedSEO orpaidservices.
+
+> CURRENT R11 — Consultation correction,6November2026. Latest owner decision supersedes R10 consultationWhatsApp picture button only. All consultation requests always use existing Continue→Review→Submit/Web3Forms flow. Yesdesign path shows optionalHTTP/HTTPS DesignReferenceLink andexact follow-upWhatsApp explanation;no upload,button orautomaticWhatsApp navigation. No path shows inspiration guidance andonlyapprovedmen/women absolute productioncollectionURLs innewtabs;Othergets generalguidance,no inventedroute. Preserve3services/methods/visitfields/mobileNotice/schedule/consent/review/provider/confirmation anddedicatedservices. Stagingonly,no production/main/credentials/provider changes.
+
+> CURRENT R10 — Consultation form approval,6November2026. Staging only. BookConsultation offers exactly Custom Tailoring & Suits,Clothing Alterations & Repairs,Garment Care & Cleaning;VIP/Mobile remain on dedicated forms unchanged. All3support workshop/customer-location/phoneWhatsApp. Customer visits require locationtype/address andthe exact MobileConsultationNotice;no automatic charges/availability. Required common contact/service/method/date/time/requirements andunchecked Terms/Privacy;optionalemail/additionalinfo. Dynamic garment/design/repair/care fields;manualoptionalCustomWhatsApp pictures only. Same freeWeb3Forms action/key unchanged,review/edit/positive-provider success only. Normal business09–17MonSat,lastSaturday12–17appointment-only;Sundayno fixedhours/byappointment only. No invented slots/guarantees. Preventpast date/time usingAfrica/Kigali.
+
+> CURRENT R9 — Version1 technical launch-blocker instruction,6November2026. Latest explicit owner authorises production-apex API host support and a safe alternative to unavailable Standard request recording. With private recording disabled,V1 Standard Alterations/Care use the same existing Web3Forms email submission path as quotations/consultation;only provider acceptance is acknowledged,no database/staff record or inbox receipt claimed. Express remains Terms/manualWhatsApp when private service is disabled. Private intake stays gated by verified configuration and frontend flagfalse. No paid service,private upload activation,commercial policy/price/design change or production publication. R8 prices/photographs/forms/fields remain approved and protected.
+
+> CURRENT R8 —6November2026: the latest explicit owner instruction approves the exact ordinary-suit and men’s tuxedo prices for staging, replacing historical publication holds for those amounts. Web uploads are removed from request UI; only Custom Tailoring offers manual, Terms-gated WhatsApp pictures. Earlier text below is historical unless still consistent with R8. Original company documents remain inaccessible, not claimed read.
+
+# Mr Sewing customer information master
+
+> Latest R6 status: application code and revised About five-service dropdown are implemented; actual new Cloudflare deployment, private-service activation, real email receipt and pricing Sources remain unverified. Owner confirms old staging433107e was successful but its About CTA was still Collections. R6 About menu supersedes the intermediate simple Services link.
+
+> Current R5 implementation status: eight new references are available; prior R4 five-category asset gaps are RESOLVED. Fifteen references are published in total (fourteen assigned to suit categories). Older sections below retain historical scope; the latest R5 rules and dependency record take precedence. Secure uploads/staff persistence, original pricing Sources, real email receipt and final VIP/legal clauses remain unresolved.
+
+Internal developer reference — 5 November 2026. NOT public website copy or final legal advice. Implementation reviewed at `6fcaca98530742dc4f1556c946432f27418b6774` on `phase1/customer-journey-repairs`. Preserve the approved homepage. No policy publication is authorised by this reference update.
+
+Authority: latest explicit approved owner decision, then latest applicable approved dated decision, then earlier unsuperseded approval. Proposals never supersede approvals merely by being newer. Current implementation is comparison evidence, not independent policy approval.
+
+**Source coverage is incomplete.** The named company originals are unavailable. The two 5 November owner instructions are directly available; source-recorded price/fabric details in the addendum are reported extracts, not independently verified original documents or new price/publication approval.
+
+## Actual source inventory
+
+- S-MASTER: owner comprehensive master prompt, 5 November 2026, §§1–35, read in conversation. Latest explicit approved customer-rule directions where stated.
+- S-ADDENDUM: owner Final Source Audit, Missing Information and Developer Decision Rules, 5 November 2026, §§1–19, read in conversation. Governs verification/publication; §4 price amounts are reported extracts, not new price approval.
+- S-ATTACH-1: `/workspace/attachments/814eac2c-7db9-4bfe-8c99-4efe313e5899/Pasted text.txt`; full pasted homepage instruction read; no explicit document date verified, historical homepage scope only.
+- S-ATTACH-2: `/workspace/attachments/06102922-450b-49e8-bc99-d8ae01a585e8/Pasted text.txt`; full pasted homepage instruction read; no explicit document date verified, historical homepage scope only.
+
+**Totals:** four available owner instruction documents inspected in this audit (two current conversation documents and two historical pasted attachments). **Zero of the eight specifically named company-original files/archives were accessed.** Additional management updates/reconciliation documents are an unenumerated unavailable category. Repository snapshot, existing internal reports and test artefacts are implementation evidence and are not counted as approved company sources.
+
+
+
+Searched repository, /workspace attachments/library/shared, /tmp/codex-remote-attachments and available resource/connector catalog. No Project Sources connector or owner Sources archive is exposed.
+
+- Mr_Sewing_Company_Sources.zip
+- NEXUS_LTD_Cross_Department_Source_Index_2026-11-01.md
+- Custom_Tailoring_Decision_Register_v5_2026-11-01.md
+- Mr_Sewing_Sanitized_Customer_Facts_Handoff_2026-11-01.md
+- Mr_Sewing_Complete_Approved_Commercial_Policy_and_Open_Decisions_2026-11-01.md
+- Mr_Sewing_Refund_Delivery_Collection_Approved_Decisions_2026-11-01.md
+- MR-SEWING-FASHION-—-APPROVED-OPERATING-HOURS-AND-OVERNIGHT-SERVICES.txt
+- MR-SEWING-FASHION-—-APPROVED-COMBINED-SURCHARGE-POLICY.txt
+- Approved management updates, financial-policy reconciliations and other dated company Sources not supplied to the accessible workspace.
+
+Do not label these as read. Exact product prices/tier definitions and unquoted procedures remain unverified. An older handbook is not promoted over these missing Sources or the current owner instruction.
+
+
+## Operating instructions for future developers
+
+Consult this master, the source matrix and the unresolved register before writing a page. Check actual dated approvals when they become available. Record a specific conflict and its resolution/evidence; do not invent a compromise or repeatedly ask for information already supplied. These versioned, sanitised developer references are not customer-facing policy pages. Never add confidential material; static-host exclusion is not a secrecy boundary. Reopen policy publication only after owner review.
+
+## Approved and conditional rules by topic
+
+### C01 — Exactly four official primary service names
+
+Source: S-MASTER §5; 5 Nov. Status: **APPROVED**. Conditions: Supersedes seven top-level service presentation. Destination: Services/nav/forms/footer. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C02 — Standard/VIP Service across all four categories
+
+Source: S-MASTER §6; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Intro/individual quote only; no final VIP contract. Destination: Service selectors. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C03 — VIP on-location/cross-service/Express/after-hours requests
+
+Source: S-MASTER §6,15; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Feasibility/scope and agreed quotation; no package guarantee. Destination: VIP selection/introduction. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C04 — VIP garment care/alterations membership; four visits direction
+
+Source: S-MASTER §6; 5 Nov. Status: **PROPOSED**. Conditions: Internal only: allowance/price/coverage/renewal/cancellation unresolved; Finance/legal. Destination: No public product/payment. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C05 — Standard Order=website design; Special=customer design
+
+Source: S-MASTER §7; 5 Nov. Status: **APPROVED**. Conditions: Separate from Service and Priority axes. Destination: Tailoring/design routes. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C06 — Men's/Women's categories, real references/preferences
+
+Source: S-MASTER §7,28; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Publication/rights evidence required; no invented stock/prices. Destination: Existing galleries/design detail. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C07 — Special form without mandatory gallery/measurements
+
+Source: S-MASTER §7; 5 Nov; S-UPLOAD. Status: **APPROVED**. Conditions: Text only until secure upload approval. Destination: Special request. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C08 — Standard/Express Priority separate selection and editable review
+
+Source: S-MASTER §7,31; 5 Nov. Status: **APPROVED**. Conditions: No automatic order/payment. Destination: Review-before-submit. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C09 — Men's two/three-piece, business/ceremony, men's tuxedos
+
+Source: S-MASTER §8; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Tuxedo inclusions/prices not supplied. Destination: Tailoring scope. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C10 — Women's two/three-piece business/ceremony
+
+Source: S-MASTER §8; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: No standard women's tuxedo claim. Destination: Tailoring scope. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C11 — Suit/tuxedo tier prices and gift/package mapping
+
+Source: S-MASTER §8,24; owner references 1 Nov. Status: **UNVERIFIED**. Conditions: Exact schedule/publication clearance absent; Finance needed. Destination: Quote instead of price list. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C12 — Exact pictured fabric/colour not guaranteed; alternatives agreed
+
+Source: S-MASTER §9; 5 Nov. Status: **APPROVED**. Conditions: No substitution without consent; no research-as-composition claim. Destination: Fabric Guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C13 — Measurement preparation/incomplete info/pro assistance
+
+Source: S-MASTER §10; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: No invented tolerances or exact technical measuring instructions. Destination: Measurements Guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C14 — Company-caused fitting/workmanship errors corrected without tailoring charge; remake if proper correction impossible
+
+Source: S-MASTER §10,19; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Preserve legal remedies; legal review. Destination: Measurements/corrections/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C15 — Customer-supplied measurement errors assessed; no universal correction guarantee; replacement quote where applicable
+
+Source: S-MASTER §10,19; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Exact assistance detail absent; legal review. Destination: Measurements/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C16 — Alterations/repair assessment and individual quote
+
+Source: S-MASTER §11; 5 Nov. Status: **APPROVED**. Conditions: No universal repair guarantee or fixed prices. Destination: Alterations. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C17 — Care suitability, labels/condition; verified methods only
+
+Source: S-MASTER §12; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Specific machinery/processes/prices unverified. Destination: Care. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C18 — Mobile consultation/measurement/fitting/styling/event visits
+
+Source: S-MASTER §13; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Staffing/location/timing/feasibility/quote confirmed. Destination: Mobile assistance. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C19 — Custom suit advance 70%, balance 30% before final cleaning/delivery/release, full payment before release
+
+Source: S-MASTER §14; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Authorised exceptions not supplied; do not apply automatically to all other services. Destination: Payment guide/Terms/tailoring. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C20 — Enquiry→quote→acceptance→payment→sourcing→official confirmation→separate production-start notice
+
+Source: S-MASTER §14; 5 Nov. Status: **APPROVED**. Conditions: Neither enquiry nor browser selection confirms production. Destination: Order guide/service requests. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C21 — Confirmation targets Standard 24h, Express 2h after required steps
+
+Source: S-MASTER §14; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Not garment completion deadlines; distinguish support response. Destination: Order guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C22 — Normal 09–17 Kigali; standard after-hours 17–22, 25% surcharge; later overnight individual quotation
+
+Source: S-MASTER §15; owner cites 2 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Day-of-week conflicts with protected home kept for review; availability applies. Destination: Hours/priority guide/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C23 — Standard-service Express 35%, after-hours 25%, combined 60% of original quote
+
+Source: S-MASTER §15; 5 Nov reaffirmation. Status: **APPROVED WITH CONDITIONS**. Conditions: No compounding; not automatically applied to VIP. Destination: Priority guide/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C24 — VIP Express/after-hours within agreed VIP quote
+
+Source: S-MASTER §15; latest owner direction. Status: **APPROVED WITH CONDITIONS**. Conditions: Supersedes automatic Standard-service surcharges for VIP; no final VIP terms/FAQ. Destination: Service quote context. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C25 — Support Mon–Fri 09–17 Kigali excluding Rwanda holidays; first response within 24 support working hours
+
+Source: S-MASTER §16; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Not consecutive hours or refund deadline. Destination: Support/contact/order guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C26 — Professional communications and status updates
+
+Source: S-MASTER §16,17; 5 Nov. Status: **APPROVED**. Conditions: Actual updates via team, no fake tracking. Destination: Support/order guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C27 — Assess interruption's completion-date effect before announcing delay
+
+Source: S-MASTER §17; 5 Nov. Status: **APPROVED**. Conditions: Communicate confirmed issue and realistic revisions. Destination: Order guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C28 — Standard Kigali suit package initial cleaning/protection/initial delivery
+
+Source: S-MASTER §18; 5 Nov. Status: **APPROVED**. Conditions: No duplicate charge; extra/outside Kigali separately agreed. Destination: Delivery/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C29 — Address/time/payment verified before dispatch; delivery completion recorded
+
+Source: S-MASTER §18; 5 Nov. Status: **APPROVED**. Conditions: No fake automated record/tracking implementation. Destination: Delivery guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C30 — Reschedule at least 1h notice; later/failed deliveries may justify agreed costs
+
+Source: S-MASTER §18; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: No automatic fee; company-caused failure rule details missing. Destination: Delivery/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C31 — Collection payment/ID, written third-party authority, receipt and customer notification
+
+Source: S-MASTER §18; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Do not collect ID scans in website forms. Destination: Collection guide. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C32 — Seven calendar days free storage from ready notice; written approved extensions
+
+Source: S-MASTER §18; 5 Nov. Status: **APPROVED**. Conditions: No daily penalty/forfeiture/resale inventions. Destination: Delivery/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C33 — Report fitting issues promptly, guidance within 72h after receipt, preferably WhatsApp
+
+Source: S-MASTER §19; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Not a statutory-rights cutoff; supersedes historical ban on mentioning 72h. Destination: Corrections/Refund/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C34 — Refund request form, human assessment, WhatsApp/email reply, decision and follow-up
+
+Source: S-MASTER §20; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: No automatic approval/deduction/deadline. Destination: Refund Policy/form. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C35 — Refund amounts/cancellation conditions/processing deadline
+
+Source: S-MASTER §20; 5 Nov. Status: **OWNER REVIEW REQUIRED**. Conditions: Finance/legal verification; no invented clause. Destination: Clearly marked review note. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C36 — General Terms cover 22 requested topics and statutory rights
+
+Source: S-MASTER §21; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Rwanda legal review; exclude final VIP terms. Destination: Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C37 — Privacy explains actual data/processor/rights; no invented retention/security guarantees
+
+Source: S-MASTER §22; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Operator/provider/retention/transfer/legal evidence gaps; staging draft. Destination: Privacy. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C38 — Loyalty 3% from second separate qualifying suit purchase
+
+Source: S-MASTER §23; owner cites 1 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Qualifying suits only; procedures not invented. Destination: Benefits/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C39 — Referred new customer 2% first qualifying suit order
+
+Source: S-MASTER §23; owner cites 1 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Attribution/edge cases unresolved; disclose assessment. Destination: Benefits. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C40 — Referrer 6,000 RWF per qualifying suit in first order
+
+Source: S-MASTER §23; owner cites 1 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Commission conditions not fully supplied; no payout timing or broad entitlement. Destination: Benefits with explicit conditions pending. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C41 — Bulk 3% second/subsequent qualifying suits together for one customer
+
+Source: S-MASTER §23; owner cites 1 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: No extension to unrelated services. Destination: Benefits. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C42 — Group 3% for ≥2 customers' qualifying suits together
+
+Source: S-MASTER §23; owner cites 1 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Request procedure details missing; confirm eligibility. Destination: Benefits. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C43 — Highest eligible customer discount only; referral commission separate
+
+Source: S-MASTER §23; 5 Nov. Status: **APPROVED**. Conditions: Supersedes historical stacking/percentages. Destination: Benefits/Terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C44 — Tier gifts and extra cleaning (Tier1/2); none tier3/4
+
+Source: S-MASTER §24; owner cites later reconciliation. Status: **APPROVED WITH CONDITIONS**. Conditions: Tier mapping, quantity/frequency/redemption unresolved: withhold public promise. Destination: Internal review only pending full terms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C45 — Customer-supplied fabric fixed policy
+
+Source: S-MASTER §25; 5 Nov. Status: **PROPOSED**. Conditions: Owner approval required; no active contractual conditions. Destination: Internal staging review document. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C46 — Context forms, validation/review/context/error preservation
+
+Source: S-MASTER §26,31; 5 Nov. Status: **APPROVED**. Conditions: Existing approved integration; no real messages in tests. Destination: All request forms. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C47 — Mr Sewing Fashion / NINKONIYUMUTWARE NEXUS LTD / Kigali
+
+Source: S-MASTER §27; 5 Nov. Status: **APPROVED**. Conditions: Existing contact comparison; no invented year/team. Destination: About/contact. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C48 — Image provenance and completed-work distinction
+
+Source: S-MASTER §28; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Existing registry has review-required reference images; no new licensing claims. Destination: Work/galleries. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C49 — General FAQs only supported facts; no VIP-specific FAQ finalisation
+
+Source: S-MASTER §29; 5 Nov. Status: **APPROVED WITH CONDITIONS**. Conditions: Reconcile conflicting historical rules; do not add new FAQ contracts. Destination: FAQ. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+### C50 — Protected home, staging-only, source/SEO/legal boundaries
+
+Source: S-MASTER §4,30,34; 5 Nov. Status: **APPROVED**. Conditions: Homepage changes need separate approval; no production. Destination: Baseline/tests. Verification: local implementation checks only; original-source and operational/legal limits remain.
+
+## Internal price and fabric reference — NOT CLEARED FOR PUBLICATION
+
+Reported exact source: `Custom_Tailoring_Decision_Register_v5_2026-11-01.md`, 1 November 2026, via S-ADDENDUM §§4–5. Original inaccessible; decision ID and newer schedule checks NOT VERIFIED. Status: **UNVERIFIED for current publication; owner-reported historical reconfirmation**. Never substitute historical Cotton-only website figures. No supplier costs are included.
+
+| Tier | Men 2-piece RWF | Men 3-piece RWF | Women 2-piece RWF | Women 3-piece RWF | Men's local label | Women's local label |
+|---|---:|---:|---:|---:|---|---|
+| 1 | 600,000 | 650,000 | 500,000 | 550,000 | Super / Super 100s | Americano |
+| 2 | 400,000 | 450,000 | 350,000 | 400,000 | Wool | Star |
+| 3 | 270,000 | 320,000 | 220,000 | 270,000 | Polyester | Polyester in approved price schedule |
+| 4 | 200,000 | 250,000 | 150,000 | 200,000 | Cotton / Dubai | Cotton in approved price schedule |
+
+| Men's tuxedo tier | 2-piece RWF | 3-piece RWF |
+|---|---:|---:|
+| 1 | 800,000 | 1,000,000 |
+| 2 | 600,000 | 800,000 |
+
+Ordinary men's two-piece means jacket/trousers; three-piece adds waistcoat. Exact women's package composition, all accessories, tuxedo package inclusions and publication clearance need original evidence. No standard women's tuxedo offering is inferred. Local labels are not certified fibre-composition claims. Vigo/Prado research does not replace the approved schedule, price or stock. Reference photos do not verify composition, stock, colours or licence. Customer consent is required for alternatives; quotation changes need agreement.
+
+## Existing implemented explanatory copy, for comparison
+
+The following is the actual release data, not a substitute for source approval.
+
+### Custom Tailoring & Suits
+
+Personalised garment design, fabric preferences, measurements and fitting arrangements for your individual tailoring request.
+
+**Your style, your fit:** Discuss design preferences, fabric selection, measurements, consultation, quotation, production, fitting and delivery arrangements. Choose Standard Service or individually assessed VIP Service before choosing a website design (Standard Order) or your own inspiration (Special Order).
+
+**Suits and garment scope:** Men’s suits include two-piece garments (jacket and trousers), three-piece garments (jacket, trousers and waistcoat), business and ceremony styles, and men’s tuxedos. Women’s two- and three-piece business and ceremony styles are discussed for your requirements.
+
+**Packages and quotations:** Men’s tuxedos have separate package inclusions and quotations. We confirm the fabric category, garment composition, availability, accessories and package inclusions in your quotation.
+
+**Payment and confirmation:** The documented custom-suit model is 70% advance before production and 30% before final cleaning, delivery or release, subject to documented authorised exceptions. International and Special requests must have their applicable conditions confirmed. An enquiry is not an accepted order.
+
+### Clothing Alterations & Repairs
+
+Discuss adjustments to fit and repairs to clothing, assessed against the garment’s condition and the change you need.
+
+**Describe the garment and work:** Tell us the garment type, current fit or damage, requested change and relevant previous repairs. The team assesses condition, materials and feasibility before quoting; not every garment can be repaired.
+
+**Fitting and handover:** Measurements or fitting assistance may be arranged where relevant. Collection, delivery, timing and any approved visit are individually confirmed. No fixed alteration price list or universal completion time is published.
+
+**Choose your assistance:** Standard Service uses established arrangements. VIP requests for personalised or cross-service/on-location assistance are individually assessed and quoted. Choose Standard or Express Priority separately; priority is not a service package.
+
+### Garment Care & Cleaning
+
+Request an assessment of suitable care for your garment, its care label, condition and individual requirements.
+
+**The garment comes first:** Describe the item, care label, fabric information you know, stains/damage and previous treatment. The team confirms which approved available care option is suitable. Not every fabric is suitable for every process.
+
+**Confirm the actual service:** The team explains the suitable available method, care requirements and limitations before quoting. Confirm the actual service, charges and timing before handing over a garment.
+
+**Collection and assistance:** Collection, delivery and priority requests require confirmation. Initial standard cleaning in the standard suit package is not charged twice. Additional cleaning, visits and transport are confirmed in the quotation.
+
+### Mobile Tailoring, Styling & Event Assistance
+
+Individually arranged assistance for tailoring consultation, measurements, fitting, styling and garment needs around an event or location.
+
+**Tell us where and what you need:** Describe your home, workplace or event location, the garment or styling need, preferred timing and practical requirements. On-location consultation, measurements, fittings and event-related assistance are assessed individually.
+
+**Availability and scope:** Location, timing, staffing, feasibility and quotation must be confirmed. Not every request can be accepted. A form or selected date is not a confirmed visit or event commitment.
+
+**Your own service, or coordinated assistance:** This remains its own official service, including when a customer requests location assistance through tailoring, alterations or care. Standard/VIP experience and Standard/Express Priority are separate choices; any agreed cross-service scope is confirmed in the quotation.
+
+### Quotations, Orders & Service Guidance — `/customer-information/`
+
+Understand the steps between an enquiry, an agreed quotation and an officially confirmed service.
+
+**Your request is the beginning**
+
+Choose a service and experience, describe your garment or assistance needs, and request a quotation. Sending a request or choosing a design does not confirm production, payment or availability.
+
+**From enquiry to production**
+
+The sequence is: customer enquiry; quotation; customer acceptance; required payment; availability and final sourcing checks; official order confirmation; a separate official production-start notice; production and fitting; final balance; collection or delivery.
+
+Standard order-confirmation target: 24 hours after the required steps are complete. Express order-confirmation target: 2 hours after the required steps are complete. These are confirmation targets, not garment-completion promises.
+
+**Custom-suit payment stages**
+
+The documented custom-suit model is a 70% advance before production and a 30% balance before final cleaning, delivery or garment release. Full payment is required before release, subject to documented authorised exceptions. Confirm any applicable exception and your actual quotation with the team; do not assume the same payment arrangement for every other service or request.
+
+**Standard and Express Priority**
+
+Standard Priority follows the agreed scheduling arrangements. Express Priority is subject to capacity, feasibility and confirmation. It does not guarantee a completion time.
+
+For Standard Service, the Express surcharge is 35% of the original quoted service price. Standard after-hours work is 17:00–22:00, subject to availability, with a 25% surcharge. When both apply, the combined charge is 60% of the original quoted service price: base × 1.60, not compounded charges.
+
+**Hours and overnight requests**
+
+Normal operating hours are 09:00–17:00 Kigali time. Requests for work after 22:00 are individually reviewed and quoted; there is no universal overnight surcharge. Confirm visit and work availability before relying on arrangements.
+
+**Your communications and updates**
+
+Customer Support operates Monday–Friday, 09:00–17:00 Kigali time, excluding Rwandan public holidays. The first-response target is within 24 support working hours, not 24 consecutive clock hours and not a refund-payment deadline.
+
+The team communicates about quotations, payment confirmation, fabric availability, official production start, important changes, fittings, garment readiness, final payment and delivery or collection. If an interruption arises, its effect on the agreed completion date is assessed before a delay is announced. Confirmed issues and realistic revised arrangements are then discussed. This website does not provide live order tracking.
+
+### Fabric Guide — `/guides/fabrics/`
+
+Choose fabric and colour with clear expectations before your order is confirmed.
+
+**Start with your garment and preferences**
+
+Tell us the garment, occasion, preferred feel, colour and style. Suitability and availability are assessed for the actual garment and quotation.
+
+**Reference pictures are not stock guarantees**
+
+A photograph on this website does not guarantee that the exact fabric, finish or colour is available. We check availability and discuss suitable alternatives. Research images and visual comparisons are not laboratory-confirmed fabric composition.
+
+**Agree alternatives before sourcing**
+
+If you request another colour or fabric, the team assesses suitability and availability. A change may require a revised quotation and customer agreement. We do not substitute fabric without your agreement.
+
+**Fabric tiers and package prices**
+
+Ask for the confirmed fabric category, garment composition, package inclusions and quotation. No unverified tier composition or price schedule is published here. Men’s tuxedos have separately documented packages and quotations; ordinary suit inclusions must not be assumed.
+
+**Care and customer-supplied fabric**
+
+Follow the verified care label and the guidance confirmed for the chosen fabric. Customer-supplied fabric can be discussed for assessment, but a proposed fixed customer-fabric policy is not an approved contractual offer. Quantity, condition, suitability, materials and all conditions must be agreed individually.
+
+### Measurements Guide — `/measurements/`
+
+Accurate measurements help the team plan your garment and fitting arrangements. You can begin an enquiry before you have measurements.
+
+**Prepare for measurement assistance**
+
+Describe the garment and intended fit, and tell us whether you already have measurements or need guidance. Wear suitable everyday clothing for an agreed appointment and discuss any practical needs with the team. Confirm which measurements are needed for your garment; no universal numerical tolerance is promised.
+
+**Provide information carefully**
+
+Use the measurement instructions supplied for your garment. Confirm units and who took the measurements, and check for missing or unclear information before sending. The team will clarify incomplete information and arrange professional assistance or a fitting where applicable.
+
+**Measurements and fitting appointments**
+
+Consultation, measurements, fittings and any location visit are individually arranged. Confirm the date, place, garment requirements and quotation. Do not assume a visit or fitting is confirmed simply because a form was sent.
+
+**If supplied measurements are incorrect**
+
+Tell us promptly about a concern. We assess whether correction is feasible and discuss the approved assistance arrangements. A replacement garment may require a separate quotation where appropriate; not every incorrect customer-supplied measurement can be corrected.
+
+**If Mr Sewing makes an error**
+
+Mr Sewing assesses its own fitting or workmanship errors and corrects feasible errors without an additional tailoring charge. A remake at the company’s expense may be appropriate if proper correction is impossible. This does not exclude applicable customer rights or legal remedies.
+
+**Report a fitting concern**
+
+Report concerns promptly, preferably through official WhatsApp, with order details and a description. The documented guidance is within 72 hours after receipt or collection. This guidance is not a cutoff for statutory rights. Arrange assessment rather than relying on an automatic acceptance of a claim.
+
+### Delivery, Collection & Storage — `/delivery-and-collection/`
+
+Agree the practical handover arrangements and check your ready notification.
+
+**Included and separately agreed arrangements**
+
+The documented standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Included services are not charged again. Additional delivery and outside-Kigali arrangements require an agreed quotation where applicable; no shipping cost or delivered-by deadline is assumed.
+
+**Before dispatch**
+
+The team confirms the delivery address and time, verifies required payment and records delivery completion. Customers should provide accurate contact and address details and be available for the agreed arrangements.
+
+**Changes and unsuccessful delivery**
+
+The documented rescheduling policy allows at least one hour’s notice. Later changes or failed delivery may involve justified approved additional costs, agreed as applicable; no automatic flat fee is published. If the company causes a missed delivery, contact Support for the applicable business-responsibility arrangements. The exact reimbursement/remedy rule still requires source reconciliation; do not assume a customer-caused fee applies.
+
+**Collection and authorised collectors**
+
+Collection requires full payment where applicable and appropriate identity or collection verification. Another collector needs written authorisation. A collection receipt and notification to the original customer are used where applicable. Do not send ID scans through this website form.
+
+**Storage after readiness**
+
+Seven calendar days of free storage run from the ready notification. Any extension needs individual approval and written confirmation. No daily storage penalty, garment forfeiture, abandonment or resale condition is published.
+
+### Suit Benefits, Loyalty & Referrals — `/benefits/`
+
+Approved customer discounts apply to qualifying suits, not automatically to unrelated services. Confirm eligibility with the team.
+
+**Loyalty**
+
+A 3% discount begins with the second separate qualifying suit purchase.
+
+**Referral customer discount**
+
+An eligible new referred customer receives 2% off qualifying suits in their first qualifying order. Referral attribution and edge-case procedures are not fully published; confirm participation and eligibility with the team before relying on a benefit.
+
+**Referrer commission**
+
+The approved rate is 6,000 RWF per qualifying suit in the referred customer’s first qualifying order, subject to the approved commission conditions. Attribution, verification and payment procedures require confirmation; this page does not promise automatic eligibility or a payout date.
+
+**Bulk and group**
+
+Bulk: 3% on the second and subsequent qualifying suits ordered together by one customer. Group: 3% for qualifying suit orders placed together by at least two customers, subject to the documented request conditions. Ask the team to confirm those request conditions before ordering.
+
+**How customer discounts combine**
+
+Customer discounts do not stack on the same suit. Use the single highest eligible customer discount. Referral commission is separate from the customer’s discount.
+
+**Included cleaning and other benefits**
+
+Initial standard cleaning is part of the documented standard suit package. Extra cleaning redemption and tier-gift details are not published as entitlements while their mapping, quantity, frequency and procedures remain unresolved. Your quotation should identify any specifically agreed inclusions.
+
+### Terms & Conditions — `/terms-and-conditions/`
+
+General customer conditions for staging review, to be read with your quotation and official confirmation. Clauses requiring legal or financial verification are identified rather than treated as final.
+
+**Identity and scope**
+
+Mr Sewing Fashion operates under NINKONIYUMUTWARE NEXUS LTD in Kigali, Rwanda. Its four primary services are Custom Tailoring & Suits; Clothing Alterations & Repairs; Garment Care & Cleaning; Mobile Tailoring, Styling & Event Assistance.
+
+**Enquiries, quotations and acceptance**
+
+A website enquiry, chosen design or acknowledgement is not a confirmed order. Review the quotation, design, fabric, measurements, price and relevant conditions. Customer acceptance, required payment, availability/sourcing checks and official confirmation are separate steps; production also has a separate official start notice.
+
+**Payments and release**
+
+For documented custom-suit orders: 70% advance before production and 30% balance before final cleaning, delivery or garment release. Full payment is required before release, subject to documented authorised exceptions. Conditions for other services and any authorised exception must be confirmed in the quotation. This page does not provide bank details or authorise a payment method.
+
+**Design, fabric and availability**
+
+Website references guide design selection; customer-provided designs require feasibility assessment. Confirm exact requirements, fabric suitability and availability. Pictures do not guarantee exact fabric/colour or stock. Any substitution or quotation change requires customer agreement. No fixed customer-supplied-fabric contract is activated here.
+
+**Measurements, fittings and changes**
+
+Provide accurate information and follow the agreed measurement guidance. Clarify incomplete information and arrange fittings where applicable. Customer-requested changes are assessed for feasibility, quotation and scheduling before agreement; no universal change penalty is published.
+
+**Timing and priorities**
+
+Confirmation targets are Standard 24 hours or Express 2 hours after the required steps, not completion guarantees. Completion/fitting arrangements are confirmed individually. For Standard Service, Express adds 35% and standard after-hours work 17:00–22:00 adds 25% of the original quoted service price; together 60% (base × 1.60). Availability applies. Work after 22:00 is individually reviewed and quoted; no universal overnight rate.
+
+**Communication and production**
+
+Customer Support operates Monday–Friday 09:00–17:00 Kigali time excluding Rwandan public holidays, with a first-response target within 24 support working hours. Keep official contact details and relevant order information available. The team provides confirmed updates; interruptions are assessed for their effect on the agreed date before a delay is communicated.
+
+**Delivery, collection and storage**
+
+The standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Additional/outside-Kigali arrangements are agreed separately. Confirm address, time and payment before dispatch. Reschedule with at least one hour’s notice; later/failed delivery may involve justified approved costs where applicable. Collection verification, written third-party authority, receipt and notification apply. Free storage is seven calendar days from the ready notification; written approval is needed for an extension. No forfeiture, resale or unapproved daily penalty is imposed.
+
+**Corrections and workmanship**
+
+Report fitting/workmanship concerns promptly, preferably via WhatsApp; documented guidance is within 72 hours after receipt/collection without limiting statutory rights. Mr Sewing assesses company-caused errors, corrects feasible errors without an additional tailoring charge and may provide a company-funded remake if proper correction is impossible. Customer-supplied measurement errors need feasibility assessment; a replacement may need a separate quote.
+
+**Complaints and refund requests**
+
+Use Customer Support or the refund request form with order details, reason and relevant evidence. Human review and a decision are required; submission does not approve a refund. No automatic percentage deduction, deposit forfeiture, Express-fee retention, universal penalty or guaranteed processing deadline is imposed here. Unresolved cancellation/refund clauses require owner, Finance and Rwanda legal review.
+
+**Discounts and inclusions**
+
+Qualifying suits may receive the approved loyalty, referral, bulk or group customer discount. The highest eligible customer discount applies; discounts do not stack on one suit. Referral commission is separate. See the benefits guidance and confirm applicable procedures; do not assume unrelated-service, gift, extra-cleaning or transport benefits.
+
+**Privacy, rights and limitations**
+
+Personal information is used for the request and service arrangements as described in the staging Privacy Policy. Confirm suitability and limitations for the actual garment/service rather than assuming every repair or treatment is possible. Nothing here removes applicable statutory customer rights. General clauses require Rwanda legal verification; final VIP-specific contractual terms are not included.
+
+### Refund Requests & Corrections — `/refund-policy/`
+
+Submit a request for human assessment. An enquiry or form acknowledgement is not an approved refund.
+
+**How to request a review**
+
+Use the request form below or official WhatsApp/email. Provide the order or quotation reference, your contact details, the issue, relevant dates and the remedy requested. Describe any receipt, payment or garment evidence you can supply; the team will explain how to share it. Do not send card details, payment PINs or ID scans.
+
+**Review and decision**
+
+Support reviews the request with the relevant team, seeks clarification if needed and communicates the decision through WhatsApp or email. You may ask for further assistance or clarification. First-response guidance is within 24 support working hours during Monday–Friday 09:00–17:00 Kigali time excluding Rwandan public holidays; this is not a refund-payment deadline.
+
+**Fitting and workmanship concerns**
+
+Report promptly, preferably through WhatsApp. The documented guidance is within 72 hours after receipt/collection, without limiting statutory rights. Mr Sewing corrects feasible company-caused fitting/workmanship errors without an additional tailoring charge and may remake at company expense if proper correction is impossible. Other remedies remain subject to applicable customer rights.
+
+**Customer-provided measurements**
+
+Correction feasibility is assessed. Not every supplied-measurement error can be corrected; an appropriate replacement may require a separate quotation under the applicable approved assistance arrangements.
+
+**Cancellation, amount and timing — review required**
+
+Cancellation conditions, refund amounts and processing deadlines still require owner, Finance and Rwanda legal verification. No automatic 50% deduction, universal deposit forfeiture, automatic Express-fee retention or one-to-two-week refund deadline is imposed. A submitted request does not predetermine eligibility or an amount.
+
+### Privacy Policy — Staging Draft — `/privacy-policy/`
+
+This draft describes observed website processing. Retention, provider arrangements and Rwanda legal requirements still need verification; no claim of legal compliance is made.
+
+**Who operates the website**
+
+Mr Sewing Fashion is the public brand of NINKONIYUMUTWARE NEXUS LTD, Kigali, Rwanda. Contact the business through the official email, phone or WhatsApp listed on the Contact page for privacy questions or requests.
+
+**Information you provide**
+
+Quotation, support and refund forms collect the name, phone and optional email needed to respond, relevant location, selected service/preferences and your message. Design, measurement, address, order-reference and payment-related evidence may be discussed with the team as relevant. Do not enter payment PINs, full card details or identity scans in these forms.
+
+**Forms, hosting and messaging**
+
+The existing form action sends text enquiries to Web3Forms for submission processing. A successful provider response does not prove mailbox receipt. The site is hosted on Cloudflare Pages; requests may involve host/network technical information. Choosing a WhatsApp, email, social or external link uses the relevant external provider. Their processing is separate from this website; provider contracts, retention and international arrangements have not been verified here.
+
+**Reference files and measurements**
+
+Website file upload controls are disabled and no upload storage provider has been activated. No reference files are attached by the text forms. Customers may arrange reference or measurement sharing with the team through official communication channels. No retention period or public-file entitlement is assumed.
+
+**Selections, cookies and analytics**
+
+The new request journey may keep service, experience, order type, design reference, priority and after-hours preference in tab-session storage. It does not store name, phone, email or message there. You can edit choices; storage failure does not prevent URL-based navigation. No new analytics/advertising tracker or cookie-consent mechanism is installed. Retained legacy pages reference Font Awesome styles on cdnjs.cloudflare.com, which may receive connection information when loaded. Actual deployed cookies and provider behaviour still require verification.
+
+**Purposes and sharing**
+
+Information supports assessment, quotations, communications, service arrangements, complaints and requested follow-up. The observed processors/channels above are not a declaration of verified data-processing agreements or transfer safeguards. Do not treat a website submission as consent to publish a customer photograph or testimonial.
+
+**Retention, protection and customer requests — verification needed**
+
+Ask the business about access, correction, deletion and other applicable privacy rights. Actual retention/deletion schedules, authorised staff access, processor agreements, safeguards and relevant Rwanda data-protection requirements require documented review. This draft does not invent encryption guarantees, certifications, retention periods or a legal right that overrides applicable law.
+
+### Customer Support — `/customer-support/`
+
+Have a question or need assistance? Describe the relevant service, order or concern so the team can help.
+
+**Support schedule**
+
+Monday–Friday 09:00–17:00 Kigali time, excluding Rwandan public holidays. Our first-response target is within 24 support working hours, not 24 consecutive hours. This is not a completion guarantee or refund-payment deadline.
+
+**What we can help clarify**
+
+Ask about enquiries, quotations, measurements, fabric availability, order details, delivery/collection, fittings, complaints, refund procedures or follow-up assistance. Use the relevant official service in the form and explain your request. The website does not provide automatic order acceptance or live tracking.
+
+### About Mr Sewing Fashion — `/about/`
+
+Personal tailoring and garment assistance in Kigali, Rwanda, operated by NINKONIYUMUTWARE NEXUS LTD.
+
+**Our work begins with your needs**
+
+Mr Sewing Fashion helps customers discuss garment design, fit, care and practical assistance. The four official services are Custom Tailoring & Suits; Clothing Alterations & Repairs; Garment Care & Cleaning; Mobile Tailoring, Styling & Event Assistance.
+
+**A clear, personal process**
+
+We assess requirements, provide quotations and confirm the agreed scope before work begins. Ask about Standard or individually assessed VIP assistance, measurements, fabric options, fittings and handover arrangements.
+
+**Photographs and company information**
+
+Explore Our Work for evidenced project photographs and discuss your own garment requirements with the team.
+
+### Contact Mr Sewing Fashion — `/contact/`
+
+Contact the team using the existing official business details below. Confirm appointments and visit arrangements before travelling.
+
+**Location**
+
+Main workshop: KN 441 St, Norvège, Nyarugenge, Kigali, Rwanda. The existing MIC Building, Downtown consultation location is by appointment; confirm arrangements with the team. These are retained repository contact records, not a new branch or staffed-location claim.
+
+**Hours**
+
+Normal service hours: 09:00–17:00 Kigali time. Standard after-hours work 17:00–22:00 is subject to availability and quotation. Work after 22:00 is individually reviewed. Confirm workshop visit days and availability with the team.
+
+**Customer Support**
+
+Support operates Monday–Friday 09:00–17:00 Kigali time excluding Rwandan public holidays. The first-response target is within 24 support working hours. Support hours and production/after-hours availability are different schedules.
+
+## Distinctions that must remain explicit
+
+General business 09–17 Kigali is distinct from Support Mon–Fri 09–17 excluding Rwanda holidays, appointment arrangements, availability-dependent 17–22 after-hours and individually assessed post-22 overnight work. A support first-response target of 24 support working hours is not the conditional Standard24h/Express2h order-confirmation target, garment completion or refund payment. Payment verification, official order confirmation and separate production-start notification are distinct steps.
+
+Measurements taken by Mr Sewing and workmanship errors require company assessment/correction without an extra tailoring charge; remake may be needed when correction is impossible, preserving legal remedies. Customer-supplied measurements require feasibility assessment, not a guaranteed fix. Customer-requested design changes require separate scope/feasibility/quotation agreement; do not misclassify them as workmanship corrections. Technically impossible correction does not automatically remove statutory remedies.
+
+Refund request → eligibility assessment → communication → decision → approved processing → dispute/further review. The specific pre-production fabric-unavailability refund rule is missing: do not apply a presumed rule to every cancellation. No invented percentage, automatic deduction or processing deadline.
+
+## Real technical processing and limits
+
+Static Cloudflare Pages target; HTTPS form calls to Web3Forms; phone/email and user-initiated WhatsApp links; names, phone/email, garment/location/date/design preferences and message fields; measurements in retained measurement forms. Request selection context uses session storage/URLs (service, experience, design-order, priority, after-hours, reference), not contact messages. Browser form acceptance is not proof of staff mailbox receipt. No active customer file upload, payment processor or secure order-tracking backend verified. Legacy Font Awesome CDN references exist. No new analytics or cookie-consent mechanism was added; deployed cookies/analytics/provider processing, access/retention/deletion/transfers and legal requirements remain unverified. No certification or encryption-at-rest claim.
+
+## Reserved VIP phase
+
+Introductory Standard/VIP experience structure remains across all four services. Individually agreed VIP scope/quotation may include approved Express/after-hours assistance; Standard-service 35/25/60 charges are not automatically applied. Combined Garment Care & Alterations membership and four monthly collection/delivery visits are internal owner-selected directions only; visit definition, allowance, price, area, renewal/cancellation and legal terms unresolved. No tailoring/mobile subscription, final VIP terms/FAQs, unlimited promise or subscription payment.
+
+
+## R1 — owner-approved consolidated website revision, 5 November 2026
+
+Source: latest explicit owner consolidated prompt §§1–25, read in conversation. APPROVED staging interface/journey direction; no production or new contractual policy approval. This supersedes the earlier compulsory C02 experience selectors and C05 design-choice screen **as navigation steps only**. Four ordinary production services remain; five website entry points now include VIP Services separately. Custom Tailoring opens Men's/Women's galleries directly; Special Order is a restrained alternative; selected design proceeds to optional fabric choice/advice, Standard/Express priority, customer details, review and Submit Request. Other ordinary services use direct contextual forms. VIP requests live on a dedicated page; membership entry is truthful information only, no purchase.
+
+Header/footer add VIP and general FAQs; Measurements remains educational, never a required step. Remove redundant body shortcut/toc bars without deleting explanations. Homepage changes authorised only to five What We Offer cards and service/FAQ navigation. Hero, four hero highlights, photographs and unrelated sections protected. General policies/benefits/payment/support rules unchanged. No numeric production timeframe newly approved; source originals remain missing, so use conditional completion explanation, not confirmation targets.
+
+Approved service-hero direction is cream/light with accessible real heading/CTA/features and separate original photographs. Original white-suit hero photograph/reference and four-panel mockup have not been located among the five historical homepage references or repository image audit; exact fidelity remains blocked pending assets. Do not substitute generated photos or assert matches. Fabric research/price labels do not establish a verified available fabric catalogue; advice and stated preferences may be collected, not fake stock. Uploads remain inactive.
+
+## Current-version instruction inventory clarification
+
+The baseline inventory above described four inspected instruction documents. This dated revision also uses the permanent-reference owner request (A06) and the latest consolidated revision (R1): six identified instruction documents in this reference lineage, not six original company policy files. Zero of the eight named original company artefacts have been accessed. R1 changes journeys/entry points, not rates or contractual terms.
+
+## R2 — owner-approved uploaded hero photographs, 5 November 2026
+
+Source: latest explicit owner instruction naming the five WebP files and their service assignments; actual GitHub upload commit a58aa96b992670b96da8cda1a9b5b2e961804e53 inspected. APPROVED for corresponding staging service heroes. All five exact files are at repository root: hero-custom-tailoring.webp, hero-alterations.webp, hero-garment-care.webp, hero-mobile-tailoring.webp and hero-vip-services.webp. This resolves R1 missing **photograph assets**; prior dated notes describe the earlier unavailable state. No commercial rules superseded. The separate earlier four-panel layout mockup is not newly supplied, so do not assert a pixel-exact comparison to that unavailable reference.
+
+Use originals unchanged with real accessible headings/descriptions/buttons in the existing cream composition. Render whole photographs with object-fit:contain, intrinsic dimensions, eager/high-priority loading and descriptive neutral alt text. Do not imply the depicted people are verified staff/customers or that depicted equipment proves actual operational cleaning methods. No regeneration, retouching, file re-encoding, policy rewrite or homepage change. Responsive screenshots and actual browser decoding checks are required. Fabric catalogue, original policy Sources, real form delivery and unfinished VIP terms remain unresolved as before.
+
+## R3 — fabric/measurement visuals and mobile hero update, 5 November 2026
+
+Source: latest explicit owner “WEBSITE IMAGES & CUSTOMER GUIDE UPDATE”, read in conversation. Upload commits229f5be and b6b1d5147ec0edbb76ff956cb8fb06b3249d7b95 inspected: six root fabric WebPs and12 measurement WebPs. Exact second neck path is neck.jepg.webp, not neck.jpeg.webp; it is byte-identical to neck.webp. Use neck.webp; keep both originals. Preserve trauser length.webp spelling and URL-encode spaces.
+
+APPROVED staging visual/interface changes: guide cards using illustrative (not inventory) fabric pictures; shared category/name data between guide and optional selection/advice; mobile hero backgrounds with individual focal positions; fifth VIP ticket on homepage. Desktop service compositions, policies and other homepage content remain protected. This supersedes R2 whole-photo contain behaviour on phones only; desktop retains contain.
+
+Men’s working labels Tier1 Super/Super100s, Tier2 Wool, Tier3 Polyester, Tier4 Cotton/Dubai; Women Tier1 Americano, Tier2 Star, Tier3 Polyester, Tier4 Cotton. Original named company Sources remain inaccessible: label mappings are **working reference categories for staging review, not independently verified stock/composition**. No verified fabric-only starting prices or current colour stock. Display Price on request (RWF) and Ask us about available colours; no numeric suit-package price used as fabric-only price, invented palette, available-stock claim or fabric-performance claim. Source picture colours are illustrative.
+
+Current six-section measurement guidance stays unchanged. Add correctly labelled illustrative pictures; no new measuring methods/tolerances or compulsory measurement step. Image tape numerals/illustrations are not calibrated instructions. Jacket front-view illustration must not be described as demonstrating a verified back-measurement method. Use neutral alt text and guidance to follow garment-specific instructions. Prior general policy/source, secure uploads and unfinished VIP limits remain open.
+
+R3 §8 explicitly requires the Fabric Guide to remain accessible in customer-guide navigation. The homepage still used a historical plain pending label despite the completed route. Wire that existing label to /guides/fabrics/ in header/footer; no duplicate link or new navigation item. This resolves the prior homepage-guide-link approval dependency under the latest explicit instruction, without changing unrelated homepage content.
+
+## R4 — Men's/Women's suit-reference categories, 5 November 2026
+
+Source: latest explicit owner “MEN'S & WOMEN'S SUIT REFERENCE PAGES” §§1–15. APPROVED staging structure: matching Men's Suits/Women's Suits pages, four specified categories each, eight dedicated category routes, direct photograph detail→fabric→priority/details/review/Submit, and Special Order from both landings retaining gender. Supersedes the former flat gender-gallery landing presentation only. Existing approved homepage/heroes/nav/guides/policies remain protected. No fictional products, prices, stock, reference IDs or uploads.
+
+Source inspection: existing five customer-project publication permission/completion records authorise seven photographs. Visual construction review under this task supports r2.jpeg/MS-069 men's single-breasted; r7.jpeg/MS-117 men's double-breasted; h1.jpeg/MS-005 and h2.jpeg/MS-006 same women's asymmetric single-column-button garment (front/side), r3.jpeg/MS-083 and r4.jpeg/MS-096 women's single-breasted tailoring. Exact category evidence is recorded in the new category data; existing original registry and design IDs stay unchanged. h3.jpeg remains an existing project image but its gown hides the suit construction, so it is not assigned to these categories.
+
+Men's tuxedo/formalwear and three-piece; women's double-breasted, skirt and three-piece lack suitable approved references. Keep their category cards/routes ready with explicit pending-photo states, no unrelated photographs or fabricated stock. Empty galleries remain noindex until real references are approved. Original company policy Sources remain inaccessible, but this task introduces no new commercial rules. Prior source/price/stock/secure-upload/VIP restrictions remain.
+
+
+## R5 — complete website corrections, 5 November 2026
+
+Actual source inspected: owner attachment “MR SEWING FASHION — COMPLETE WEBSITE CORRECTIONS AND CUSTOMER JOURNEY UPDATE”, 21,973 bytes, supplied this task. APPROVED staging-only interface changes: eight owner-uploaded suit references; design → fabric/advice → priority → details → review → Submit Quotation Request; shared explicit WhatsApp Terms acceptance; clean customer-facing guide copy/breadcrumbs; restoration of historical Contact/About presentation while preserving current supported facts. Upload commit 70dfdd7 supplies all eight images. Visual inspection confirms their eight category assignments. Original filenames stay unchanged. Existing approved photographs, homepage and desktop service heroes remain protected.
+
+This supersedes R4 pending-photo status for the five previously empty categories. All eight new images are design inspiration, not evidence of completed orders or stock. Prior reference IDs remain stable. New IDs are allocated only to actual uploaded images.
+
+Secure persistent image uploads and an authenticated Customer Requests area are requested, but no backend, private storage, staff identity provider, server credentials or runtime bindings are configured in the accessible repository/environment. Do not represent text-provider acknowledgement as database persistence, attachment delivery or staff retrieval. Record these as blocked integration dependencies. No uploads or browser-only staff portal may pretend to work. Measurement email recipient/delivery is not independently verified. No actual customer/test messages are authorised without a safe recipient.
+
+Original approved company Sources remain inaccessible. In particular V5 pricing/publication clearance, newer prices, suit-package inclusions and fabric-only prices remain unverified. No numeric prices or stock colours are newly approved. Keep Price on request and accurate global availability qualifications; remove repeated internal editorial notes without hiding material contractual uncertainty. VIP contracts remain unfinished.
+
+### R5 implementation evidence and remaining gates
+
+Eight real uploaded references MS-139–MS-146 now populate all eight categories; older records/IDs/media retained. Contact presentation restored from 1fce4f5 (later retained through ac639f1) and About composition from4a8b61d; current identity/service/support facts retained, unsupported founding-year/family-history claims omitted. Numeric suit/fabric prices remain withheld pending original Sources and publication clearance.
+
+Implemented shared WhatsApp unchecked Terms gate (static and dynamic entry points), semantic informational/category/detail breadcrumbs, clean Fabric Guide with one Choosing Your Fabric paragraph and shared data, hidden FAQ permalinks while retaining answer anchors, Submit Quotation Request wording and per-tab draft retention across request steps. Drafts expire after30minutes without editing, clear on confirmed provider success and never include files/Terms acceptance; privacy processing description updated accordingly. Provider acknowledgement does not establish email receipt, staff persistence or order confirmation.
+
+No private uploads or staff portal activated: see ../../PRIVATE_REQUESTS_DEPENDENCIES.md for the actual missing infrastructure and required validation/access controls. Proposed staff statuses remain unapproved workflow ideas. Company-original price/policy documents and real measurement recipient settings remain unavailable. Policy legal/financial/processor gaps remain OWNER REVIEW REQUIRED despite removal of public editorial notes; no legal-compliance claim or final VIP contract.
+
+
+## R6 — urgent corrective implementation,5 November2026
+Source: latest owner urgent task in conversation, inspected in full. APPROVED staging corrections: measurement submit CTA/enlarge/order; unified general quotation entry; Special breadcrumbs; FAQ same-page Terms modal; dedicated service request routes; consultation header repair; genuine portfolio details/related work; About services CTA;14 specified SEO page types. Standard alterations/care require email+internal persistence; Express requires persistence then explicit Terms and WhatsApp handoff with genuine reference, never a sent-message claim. Existing service/financial rules unchanged.
+
+Implement secure private-request application code behind a staging-only feature gate; no storage/auth/binding guessed or public uploads. Staff auth must be server-verified. All actual deployment, backend and recipient tests remain BLOCKED until available. Original pricing Sources remain unavailable; no new numerical price approval. Latest instruction defers activation of Shop/Royal/Referral/Search&AnswerCentre; do not activate any. Preserve approved home/desktop heroes except authorised quotation routing.
+
+### R6 completed application and owner About steering
+Owner explicitly confirmed that staging successfully served433107e and its About button still displayed Explore Our Collections. Source inspection confirms that exact old button in433107e. This is owner-provided deployment evidence, not an independent Cloudflare API observation. The current About requirement supersedes the earlier link-to-/services/ implementation: its Explore Our Services disclosure must reuse the header's exact five service links. shared_components.services_picker extracts the actual header component at build time; native details plus a small keyboard/outside-click controller are tested.
+
+R6 implements measurement CTA/ordered enlargement, dedicated four service forms, common general quotation, same-page FAQ Terms modal, legacy booking-header integration fix, genuine portfolio related work and14-route SEO metadata/intent map. Secure staging-only API code, additive D1 schema, privateR2 storage, signed AccessJWT staff allowlist, image validation, idempotency, captcha/rate controls and provider notification handling are implemented and locally tested. The application remains disabled pending actual account bindings/auth/recipient/privacy verification. Local SQLite/private-file tests are real local persistence, with external email/captcha mocked; not Cloudflare or inbox verification. Staff list is read-only and limited to100 latest requests; final workflow/status management and larger-scale pagination remain future operational review. No final VIP contract, paid membership, Shop, Royal/Referral activation or new Search & Answer Centre.
+
+Original price Sources still missing; public prices remain on request. Internal selection URLs contain IDs/enums only; the voluntary Terms-approved WhatsApp handoff encodes the user-requested message/reference in WhatsApp's URL. No file bytes or public private-file URLs are used. No production changes. New deployment/Cloudflare project configuration remain blocked by CONNECT403 and missing account access. Supported network draft save failed as draft_not_editable; proposed network settings preserved for owner action.
+
+
+## R7 — complete repair and pre-publication audit,5 November2026
+Actual source: latest owner full22-section implementation request in conversation. APPROVED staging changes: preserve/freshly verify About five-service dropdown; portfolio enquiry must open quotation with genuine project/design reference; exact measurement order now puts belly/waist before jacket length; complete suit-package two/three-piece labels on applicable gender/tier fabric cards; general/custom quotation handoff only after real saved reference and explicit Terms. Keep Special controls, FAQ modal, dedicated service forms, full approved portfolio, main five service identities and heroes.
+
+Discontinue customer navigation to /collections/ landing; retain legacy content/individual /collections/designs/ references and immutable IDs. No future Shop/Royal/Referral/Search&AnswerCentre activation. Do not create new unfinished feature links. No new prices/contract/stock facts approved. Original V5/latest price Sources and publication clearance still absent; never treat complete-package reported amounts as fabric-only prices.
+
+Implementation baseline b83720b. Local evidence is distinct from actual Cloudflare deployment, provider inbox delivery and real account binding verification. Current environment has no Cloudflare account/secret/runtime bindings and staging origin is blocked by outbound proxy CONNECT403. Continue safe application work and document precise dependencies; do not enable private backend without configured secure services, identity/recipient/privacy checks. No production/main/DNS changes or production sitemap submission.
+
+
+## R7 verified evidence update —5 November2026
+Read-only GitHub Cloudflare checks independently verify433107e successful at bfa64c37-cd6b-401b-90b5-eff27f766d77 and b83720b Build failed at273632f8-eb91-4611-8d30-bfe98834dd16. The exact error log remains account-protected; owner directed continued independent repository/build investigation. This supersedes earlier unknown-status wording, not business policy. Direct staging origin remains blocked by the environment proxy. New delivery must be checked using its own commit check.
+
+LocalR7 evidence:16 Python suites; About7widths/10destination navigations;150page-view cases/50axe scans;60suit page-view cases/14reference journeys/20axe scans;40hero checks/10axe scans;15persisted customer journeys;12backend/security groups plus portfolio/prototype validation;6focused negative/context/modal checks;30legacy mocked outcomes; four-second carousel including emulated Android/iPhone/reduced-motion. Local Worker compilation and full build/parity pass. Email/captcha are mocked; none of this verifies deployed bindings/inbox receipt or real devices. Homepage390/1440 screenshots pixel-identical to433107e.
+
+Original named Company Sources accessed:0. Eight applicable gender/tier package records support16ordinary-suit two/three-piece price slots but all numeric entries remain null pending original V5/latest schedule, exact inclusions and publication clearance. Do not silently substitute reported historical numbers. Customer price model explicitly excludes fabric-only and tuxedo pricing.
+
+New implementation: genuine portfolio slug+existing design reference persists to review/private record/staff, server normalises project title and rejects mismatch/unknown/prototype keys. General/custom quotations offer optional post-save reference-bound Terms-gated WhatsApp; no automatic send/attachment. Dedicated service context is isolated; text drafts are project-scoped. Exact measurement ordering and legacy Collections retirement implemented. Static fallback still uses existing verified-response text integration; actual recipient/inbox remains unverified. Private API flag remainsfalse. No production settings/main/media/customer policies changed.
+
+
+## R8 — explicit owner decisions,6 November2026
+Latest owner Final Corrections and Publication Readiness §§3–9 authorises Custom Tailoring-only WhatsApp picture sharing instead of disabled uploads; actual selected design photo/name/link with editable choice; customer-friendly fabric labels; garment-care audience/other garment choices; shared consultation form; publication of16ordinary suit selling prices and4separate men’s tuxedo prices exactly as supplied; all5home hero tickets become links. Latest explicit instruction clears earlier price-publication gap for these exact amounts. Original V4/V5/HandbookV8 files remain unavailable; no independent subsequent-source coverage claim. No newer approved source found. Super / Quality1 / Tier1 explicitly approved; other numeric Quality labels remain source-unverified and are not added; retain approved fabric names/Tier2–4. No fabric-only prices/stock/women’s tuxedos inferred.
+Custom pictures shared manually by customer in official WhatsApp after unchecked Terms modal; no auto-send/API costs or automatic attachment claim. Reference included only when actually available. Selected website photographs remain original approved assets. Other services no picture requirement. Consultation requested date/time subject to confirmation; Kigali business09–17, no fabricated availability slots or automatic booking. Existing support schedule/response, payment70/30conditions, delivery/collection, corrections/refund/privacy rules unchanged; no final VIP contracts/payments.
+Base implementation50ae5b6 successfully published to Cloudflare staging3176092e-e749-4cf1-9102-dc5bd658860c (GitHub check evidence); direct origin and actual email/private bindings remain unverified. Prior reported b93720b is not an inspected commit; known failed b83720b status distinguished. Keep production/main unchanged.
+
+R8 Express clarification: when secure recording is unavailable, Alterations/Care Express can pass a preserved draft through the unchecked Terms modal to manual WhatsApp; no saved/submitted/sent status or synthetic reference. Standard fails closed until recording is configured. Actual storage/email remain externally unverified. No new price, benefit or contract outside the exact owner decisions.
+
+R9 source:latest owner Version1 Launch Blocker Fixes in conversation. This technical safe-email alternative supersedes R8 Standard fail-closed behaviour when private storage is disabled. Record exactly which external recipient/inbox,productionTLS/indexing/environment and rollback checks remain unverified. Current code6177038 and confirmed staging71edb294 are preserved baseline. Original source coverage unchanged;no new handbook/factual approval inferred.
+
+R9 production safety gate: exact apex is permitted,but optional private API also requires PRODUCTION_PRIVATE_REQUESTS_ENABLED=true plus all existing ready() settings. Default remains disabled even if staging settings are present. Email-onlyV1 requires none of those private bindings and does not claim internal Customer Requests records. Staff notification links are derived from the authorised request origin. No production variables changed here.
+
+## Current R13 customer-facing reference
+Loyalty uses R13-L1/C38/C43. Referral uses R13-R1/C39/C40 with human verification and owner-supplied before-deposit/no-self/one-referrer conditions. Do not invent a verified payout deadline while R13-U1 is unresolved. Public Shop is separate merchandise, not the suit inspiration catalogue. A product request never confirms an order, price, reservation or payment. Bank/Mobile Money are preferences; no account/payment details. Crypto remains disabled. Public product data must satisfy explicit publication/image/price/inventory gates; do not populate it with suit-gallery photos or synthetic QA fixtures. Consult docs/shop-catalogue.md and current source matrix. No paid services, private database or staff feature activation.
+
+
+## R16 — Shop staging preview, 6 November 2026
+Source: owner task “FIX SHOP PRODUCT VISIBILITY AND STAGING PRESENTATION”, explicit approved presentation direction. Supersedes R14 empty staging storefront only. Display existing 21 drafts in real Shop cards/category/detail preview on the exact staging project/development branch at build time. Do not change draft publication, rights, prices, stock or availability. Draft — Awaiting Approval is a review label, not a fourth availability status. No draft purchase/quote/checkout; server catalogue remains published-only. Production builds exclude drafts. Remove temporary /shop/draft-review/. Original company Sources remain unavailable; no new commercial facts approved. Owner review required for each product’s rights, descriptions, category, commercial fields and publication.
+
+
+## R17 — Correct failed staging preview activation,6November2026
+Owner screenshots confirm deployed b69c930 Shop still has0cards. Build-variable activation was not established; do not mark deployed preview passed. Existing R16 visual approval only remains. Generate a server-only preview snapshot and serve it through Pages Functions only on exact staging host/project subdomains; production falls through to published-only static assets. No reliance on client JavaScript or CI preview variables for this server route. Drafts remain noncommercial; no image/price/stock/rights approval. Direct origin verification remains blocked until network access or owner screenshots establish deployed rendering.
+
+
+## R18 — White Shop and manual WhatsApp purchasing enquiries,6November2026
+Source: latest explicit owner message approving white professional e-commerce styling, confirming all21items available for customer enquiries, each product enquiry carries its link to WhatsApp for review/availability confirmation. Supersedes R16/R17 noninteractive visual-review presentation and visible Draft label only. Staging-only; no automatic catalogue publication, invented prices/quantities/variants/specifications or production sale. Existing21records retained and server API still published-only. New staging enquiry route asks quantity/preferences, payment preference and uses existing official250787411501 manual terms-gated WhatsApp; no message delivered automatically or reservation/order/payment claim. Bank Transfer/Mobile Money manually arranged. Cryptocurrency legal/operational clearance remains unverified; show pending, not enabled. No accounts or wallets published. Future checkout/gateway activation remains deferred. Product descriptions from inspected catalogue; no inferred pack contents/materials.
+
+
+## R19 — Shop navigation and product-only enquiry,6November2026
+Latest explicit owner instruction: in-page Shop Home/breadcrumb returns to /shop/; only global header Home opens main website. Remove visible Shop cart link and all card-level WhatsApp actions. Product cards open dedicated details; only the product detail form has Enquire on WhatsApp, preserving quantity/preferences/payment/Terms. Supersedes R18 card-level CTA only. Retain white styling and existing21records/server staging isolation. No change to business rules, prices, approvals, unknown stock or main/production. Existing cart implementation may remain dormant for future use; no Shop cart navigation in this phase.
+
+
+## R20 — Remove product-detail information panel,6November2026
+Latest explicit owner request with screenshot: remove the entire Product Information / Payment & Delivery panel from Shop product details, including its explanatory paragraphs and inline policy links. Presentation removal only; underlying policies, enquiry form/payment preference, Terms modal,footer links and related products remain unchanged. Staging only; no new commercial decisions or approvals. Supersedes R18 detail-page panel presentation.
+
+
+## R21 — Three accepted manual payment methods,6November2026
+Latest explicit owner confirmation with Shop screenshot: Mr Sewing Fashion accepts Mobile Money, Bank Transfer and Cryptocurrency. Owner approves listing all3with simple symbols. Supersedes earlier customer-facing pending/not-enabled cryptocurrency presentation and disabled manual preference only. This does not activate a gateway, wallet, automatic transaction, payment instruction or paid provider. No asset/network/account/wallet details provided; team arranges exact instructions after review. Use generic phone/bank/digital-network icons with visible text, not third-party provider branding. Update Shop listing and manual enquiry/payment preference consistently; staging only. Actual legal compliance/technical settlement are not claimed verified by this content approval. Preserve R19navigation/R20removedpanel and draft/production isolation.
+
+
+## R22 — Version2 implementation and homepage payment section,6November2026
+Sources: owner attachment “MR SEWING FASHION — VERSION2 WEBSITE CORRECTIONS, IMPLEMENTATION & STAGING VERIFICATION” (sediment file00000000cebc8211ae915f14fbe86fd1), prior explicit homepagePaymentMethods instruction, and V2_OWNER_APPROVED_CORRECTIONS_BRIEF_2026-11-06.md. Approved UI staging only. R22.1 removes visiblegallerypausebutton; preserveRTL/noninteractivepictures/reducedmotion with Escape/touch-containerstop alternative. R22.2 selected-design quotation/review URLonly,exactallowlist retained. R22.3 now/advice/ownfabric independentofdesign/priority;ownfabric assessmentnotautomaticacceptance/fixedcontract. R22.4 onebottomSubmitMeasurements. R22.5 oneheroRequestService foralterations/care/mobile. R22.6 separateVIPsubscription enquiry forindividual/family actualpeople count,care/alterations needs/frequency/location;no paidmembership/price/contract/benefit activation. R22.7 publishedFAQ catalogue/source fragments only;fullanswer copyingandcanonicalsource;no VIPpolicyinvention. R22.8 MediaKit scaffold verifiedidentity/public-projectphotos/noPDF/download/redistributionapproval. R22.9 customerinfo/security/SEO audit; originalcompanyarchives remain unavailable,legal/privacy/retention/providerdelivery verification gaps remain. R22.10 homepagePaymentMethods reusesR21acceptedmanualMobileMoney/BankTransfer/Cryptocurrency symbols,no gateway. Keep R19/20Shopupdates,21draftserverisolation/booking/programmes. No production/main/DNS/payment activation.
+
+R22 implementation audit: design/project-derived fabric category prevents direct-link category mismatch; selected fullURL remains validated. Two obsolete experience-selection sentences corrected to the already-approved direct-service flow. General Terms/Refund/Privacy content, original photographs,Shop/booking/programmes and private-disabled flag remain unchanged. Real inbox, direct deployed-origin access, full original Source archives, legal/privacy/provider-retention review and MediaKitPDF approval remain unverified/deferred; no factual/legal compliance claim.
+
+
+## R23 — Owner-authorised main/live parity repair,6November2026
+Latest owner explicitly asks to compare phase1/customer-journey-repairs against main and fix main because the liveShop lacks the21pictures visible in staging; subsequent steering prioritises phones and fixes mobile gallery movement. This authorises production repair of these confirmed differences, not unrelated future releases. Main/staging initial Git trees match; deployment runtime differs. Public enquiry display of these exact21existing records is authorised through shop-public-enquiries.json approval IDs+display/asset fingerprints; commercial publicationStatus remainsdraft and sale/stock/price/checkout validation remainsunchanged. Future/unapproved candidates are not automatically public. No fabricated prices,availability,quantities,rights certification or package details.
+Public email intake from exact live origins uses the existing Cloudflare main-branch runtime at https://main.mrsewing-staging.pages.dev for /api/selected-design-request and /api/shop-request only. Server validation is retained; strict CORS exactOrigins/host/paths; private/staff/storage routes excluded. Other forms keep Web3Forms direct. No new provider/key/recipient/storage/payment or paid service.
+Mobile correction supersedes R22 touch-to-stop: ordinary touch/scroll must not permanently stop galleries. Preserve RTL/loop/images/keyboardEscape and OSreducedmotion; changedhomepageJS cachebusted. Physicaldevice/Safari tests and directlive/inbox delivery remain unverified unless separately observed. Preserve all existingdata/design/policies; publish focusedmainfix withrollback; synchronisedevelopmentbranchwithoutoverwrite.
+
+R23technicalprivacyaudit: clarifypublic-page deployment viaGitHubPages,Cloudflaretextvalidation andWeb3Formsprocessing;replacecontradictoryactive-upload/storageparagraphs withtheactualpublic-formdisabledstate. No change to retention/rightsbasis/contracts orlegalcomplianceclaim. Actualcloudaccount/inbox state remainsunverified.
+
+## R28 — Direct production photo update, 7 November 2026
+Latest explicit owner authorisation supersedes the prior main freeze only for this photo/gallery task. Actual main upload7daf846 inspected: eight WebP files. Publish five clean-white assets as design references and enquiry-only Shop displays: MS-147–151 / SHOP-DRAFT-022–026. No sale publication, price/stock/variation claims, checkout or payment changes. Names for Sky Blue and Rose come from the exact owner list; other names retained. Navy/Burgundy share one combined image; Emerald and teal skirt have non-white room backgrounds. Defer those final assets and unclear teal name; do not generate replacements or split/retouch without approval. Existing Moments photo records remain unchanged. Duration per gallery tile12s→10s gives20% faster continuous RTL; keep reduced motion/no pause button. Homepage Shop category cards derive from the same explicitly approved enquiry list. All final new image references are canonical original URLs in the existing quote pipeline, not uploads. Original company policy Sources remain inaccessible; no new business facts. Direct live access must be tested or reported blocked, deployment notification is not rendered-page proof.
+
+## R29 — Owner production sitemap instruction,7November2026
+Owner explicitly requests main/live sitemap correction after Search Console shows URLunknown/No referring sitemaps detected. Existing XML and robots declaration valid22URLs; legacy indexability scope excluded public browsing pages. Latest instruction authorises discovery for19assigned approved design-reference pages,8populated suit categories,6approved enquiry Shop categories, plus22existing pages =55. Do not index forms/private/staff/cart/unapproveddraftproductdetails. No ProductOffers/price/stock activation. Source-backed public references/categories only. Unassigned diploma/photo reference remains excluded. Shared public route eligibility drives candidates to avoid sitemap drift. Google submission/processing is separate and unavailable without Search Console access; no indexing guarantee, no false lastmod. DirectliveHTTP blocked by environmentproxy.
+
+## R31 — Owner customer information and policy correction,7November2026
+STAGE A REVIEW ONLY. Latest owner explicitly supplies customer turnaround: suitsStandard1–3weeks/Express2–3days; alterations12–15workinghours/2–12workinghours; careapproximately3days/Express2–12hours subjectconfirmation. These supersede conflicting historical stage/fullorderduration. Express35%,necessary agreed17:00–22:00afterhours25%,combinedadditive60%;overnightindividualquote. Domesticcustom70/30 and balance beforefinalcleaning/release; internationalcustom100% beforeproduction afteracceptance/feasibility; screenshotsnotpaymentreceipt. Standaloneadvance arrangements stillneed exactpolicy, no automatic universal70%. MeasurementorderVisit10k afteracceptedgarmentquote/70%advance; independentconsult/fitting25k;50kassistanceup to5people/3hours, beyond eitherVIPassessment; travelinclusions unresolved. EligibleKigalialter/care10kroundtriponcepercombinedorder; suitinitialKigalideliveryalreadyincluded. No pricesforcare/alterations invented.
+Use _data/customer-policy-facts.json + customer_policies.py andFAQexpand, not duplicate unsupportedrules. Remove3repeatedFAQactions;structuredsource-linkedsearch includes onlypublicpolicies/services/Shopguidance. Correct actualquotationdraftprivacy(sessionStoragecontactfields,agecheckonreopen/clearonprovideracceptance); no inventedproviderretention/deletion/security/legalcompliance. All20refund/cancellationtopics auditedwithsupportedearlierownerdecisions;unresolvedclauses/proposals stayinreviewregister. Owner instruction§18 requiresfinalpolicytextreview BEFORE main/production; this supersedes earliergeneralimmediatepublicationauthority for this task. Proposedtext,sourceinventory,FAQ87auditand28changes(10new), gaps/legalquestions in policy-review-2026-11-07/. No mainpush until finalapproval.

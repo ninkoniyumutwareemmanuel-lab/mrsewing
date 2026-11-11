@@ -17,7 +17,8 @@ def link(url,label,cls='home-text-link'):return '<a class="'+cls+'" href="'+esca
 def intro(title,text,label='Mr Sewing Fashion · Kigali, Rwanda'):
  return '<section class="release-intro"><p class="home-eyebrow">'+escape(label)+'</p><h1>'+escape(title)+'</h1><p>'+escape(text)+'</p></section>'
 def section(title,paragraphs,id=None):
- return '<section class="release-section"'+(' id="'+escape(id,quote=True)+'"' if id else '')+'><h2>'+escape(title)+'</h2>'+''.join('<p>'+escape(p)+'</p>' for p in (paragraphs if isinstance(paragraphs,list) else [paragraphs]))+'</section>'
+ from customer_information import expand
+ return '<section class="release-section"'+(' id="'+escape(id,quote=True)+'"' if id else '')+'><h2>'+escape(title)+'</h2>'+''.join('<p>'+escape(expand(p))+'</p>' for p in (paragraphs if isinstance(paragraphs,list) else [paragraphs]))+'</section>'
 def related():
  return ''
 def hero(ident):
@@ -56,10 +57,11 @@ def service_page(ident):
   body+=section(title,text)
  if ident=='custom-tailoring':
   body+='<p>'+link('/request/custom-tailoring/','Enquire About Custom Tailoring','home-text-link')+'</p>'
-  body+=section('How Long Does Custom Tailoring Take?','The time required to complete your garment depends on the selected design, fabric availability, measurements, fitting requirements and production schedule. Standard and Express requests are assessed according to the work involved and available capacity. We will confirm the applicable completion timeframe before your order is accepted.')
+
  else:
   if ident=='vip':body+=section('VIP Subscription','The combined VIP Garment Care & Alterations Membership is being developed. It is not available to purchase. Details are subject to further review.')+link('/request/vip-subscription/','VIP Subscription Enquiry','home-text-link')
   if ident=='vip':body+='<p class="service-request-action">'+link('/request/'+ident+'/','Request Service','home-button home-button-gold')+'</p>'
+ body+=__import__('customer_policies').render(ident)
  return frame(s['route'],s['title'],s['intro'],body,service=s)
 
 def overview():

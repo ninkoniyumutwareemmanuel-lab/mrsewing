@@ -50,7 +50,7 @@
       const topic=document.createElement('small');topic.textContent=entry.topic;
       const title=document.createElement('h3');title.textContent=entry.question;
       const text=document.createElement('p');text.textContent=entry.answer;
-      link.append(topic,title);item.append(link,text,window.MrFaqActions.make(entry.answer,entry.source));list.append(item);
+      link.append(topic,title);const source=document.createElement('a');source.href=entry.source;source.textContent='Read the full guidance';item.append(link,text,source);list.append(item);
     }
   }
   form.hidden=false;

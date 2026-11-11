@@ -1,0 +1,145 @@
+{
+  "originalCompanySourceFilesInspected": 0,
+  "repositoryFilesInspected": 21,
+  "files": [
+    {
+      "source": "_data/customer-information.json",
+      "sha256": "707ec7b261f98f00b0b1cbd352f38b166fab7bf456010ff6fb9d5be3515f745d",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/customer-release.json",
+      "sha256": "591521119e18ff7f3a44138ce3ed504533f2ac41fcf3e2ae76bc4275dd24b2bf",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/customer-faqs.json",
+      "sha256": "c62eeaaf968dee145b40299848fa4fa263e2c8989a8c2ba40c2eb43502f27431",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/suit-package-prices.json",
+      "sha256": "53cf8cf9e9a365664de210ad9642514afc4e6b62a81b717d1bc8fb565c602aac",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/tuxedo-package-prices.json",
+      "sha256": "52dbeebc7c8c45301b58dc69114aeec7cf91d04821670987457e0c50d08125ae",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/garment-care.json",
+      "sha256": "0bb27dd8c88eb77746fc572b051bafea339d7d07f984b982122b061843dd9431",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/care-information.json",
+      "sha256": "9dce8e992420f3530580a6eba7fdcfe91e2b9156011a9c0e2289421343c6fd68",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/business-hours.json",
+      "sha256": "0351beadad0894ae9153d226cb42af50c308dbfa7512ee75b262f6b1d7537d40",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/business.json",
+      "sha256": "77d885e02f5be5b9ef17d786137d3bb4154f02a928d07a0dd7d0de4f83288348",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/contact-v2.json",
+      "sha256": "f23238fd82d26a6d9f8764e02a765b779be264fdb488ab1dff912094f49737bf",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/policy-pages.json",
+      "sha256": "4f75a204a7f237bbfe3c34da308544323f4027dbb8a0b34037e5dd61a879efc4",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/journey-services.json",
+      "sha256": "72dc30e262d689970e2a82e7448989db568eb3ee0ba2b970eca09295141e2635",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/customer-request-backend.json",
+      "sha256": "011dcd92d6979895883cca09600c8d0302193fd331444a11b2c809ed18462cb4",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_data/public-api.json",
+      "sha256": "6a0d070bcb1ff54de6a795c75d49508ab6774af04774ce7f04c0a6333e5f17b0",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_templates/request-draft.js",
+      "sha256": "f51d765605d1ee7816605dd585a30cdc6300fdd9b92acdc6e78e8a1cfc1b333c",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_templates/request-context.js",
+      "sha256": "9fe9e54f858cdf2a0238d7d9dc6137ea4da264a8e9f2e17595b5d4bf56d49798",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": "_templates/commerce.js",
+      "sha256": "cb2d3b2d60d9c40fa8e7156c0f8a5bba970191c90707c2ba59401427760b3b27",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": ".github/customer-content-reference/versions/2026-11-07-02/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md",
+      "sha256": "f1e6fc736ee6f781abe6f04887e7a80f0ec8c2a6c3c0ae6c4a3f3958b933d436",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": ".github/customer-content-reference/versions/2026-11-07-02/MR_SEWING_POLICY_SOURCE_MATRIX.md",
+      "sha256": "61d64e5a7b8dcd12e065a878d686384bd02028767503d5cc9468fb361ce2305a",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": ".github/customer-content-reference/versions/2026-11-07-02/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md",
+      "sha256": "85a4d2c06f29c174717d5860f4fdb0ea0b537555183e8706d2d95fce9d015896",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    },
+    {
+      "source": ".github/customer-content-reference/versions/2026-11-07-02/MR_SEWING_PAGE_CONTENT_MAP.md",
+      "sha256": "9c25a0f03eb02edb8d2c514a60930ab0ee9c7155b38d04ee51fec6e2a1bfca75",
+      "accessed": true,
+      "authority": "Code evidence for implementation; dated owner evidence in source register; not independent proof of company originals"
+    }
+  ],
+  "primaryLatestApproval": "Owner Complete Customer Information & Policy Correction,7November2026",
+  "unavailable": [
+    "Master Operating HandbookV8",
+    "Full Operating HandbookV7",
+    "Approved Management UpdatesV5/V6",
+    "Custom Tailoring Decision RegisterV4/V5 originals",
+    "Approved Commercial Policy and Open Decisions original",
+    "Operating Hours/Overnight original",
+    "Combined Surcharge original",
+    "Financial Management Directive",
+    "Refund Delivery Collection Review original",
+    "Finance reconciliations originals"
+  ]
+}

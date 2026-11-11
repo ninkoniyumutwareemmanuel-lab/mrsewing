@@ -8,7 +8,7 @@ from build_customer_information import outputs,plain
 from customer_information import information,expand
 from build_public_routes import public_routes
 info=information();assert info['advancePercent']==70
-assert info['cotton']==[] and info['priceScheduleStatus'].startswith('UNVERIFIED')
+assert info['cotton']==[] and info['priceScheduleStatus'].startswith('APPROVED')
 from faq_help import catalogue, routes as faq_routes
 for path,output in outputs().items():
  assert path.read_text()==output,path.name
@@ -46,7 +46,7 @@ assert 'fetchpriority="high"' in hero and 'hero-image-note' not in hero
 assert 'Pause slideshow' not in hero and '>01<' not in hero and '>02<' not in hero
 assert 'id="programs"' in source and source.count('class="program-status">Coming Soon')==1
 assert 'const interval=10000' in (ROOT/'_templates/hero-slideshow.js').read_text()
-assert len(list((ROOT/'collections/designs').glob('*/index.html')))==119
+assert {str(p.relative_to(ROOT)) for p in (ROOT/'collections/designs').glob('*/index.html')}=={p for p in subprocess.check_output(['git','ls-tree','-r','--name-only','bae385e','collections/designs'],cwd=ROOT,text=True).splitlines() if p.endswith('/index.html')}  # Policy review preserves every existing design route
 # This phase must not rewrite the approved gallery, projects, original assets or submissions.
 ref='ac639f145fc976ecefe02e2b8ff5b82f1aae184b'
 files=subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
@@ -57,11 +57,11 @@ for file in files:
    from preservation_contract import append_only
    append_only(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT),(ROOT/file).read_bytes(),file);continue
   assert hashlib.sha256((ROOT/file).read_bytes()).digest()==hashlib.sha256(subprocess.check_output(['git','show',ref+':'+file],cwd=ROOT)).digest(),file
-assert len(public_routes())==17+len(__import__('shop_catalog').load())+len(__import__('shop_catalog').categories())+len(__import__('project_catalog').projects())  # R13 adds programme pages and Shop
+assert len(public_routes())==55  # Preserve owner-approved current browsing sitemap
 assert '60%' in (ROOT/'customer-information/index.html').read_text()
 assert '72 hours' in (ROOT/'refund-policy.html').read_text()
 assert '<table' not in (ROOT/'terms-and-conditions.html').read_text()
-print('PASS: policy/FAQ output and schema parity, quote-only unverified prices and supported payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')
+print('PASS: policy/FAQ output and schema parity, approved suit schedules, quotation-only unknown extras and supported payment phases, stale-claim boundaries, Coming Soon previews and protected forms/gallery/projects/media.')
 
 # R1 explicitly authorises gender isolation in the gallery runtime.
 assert "payload.defaultGender==='all'" in (ROOT/'assets/collections-v3.js').read_text()

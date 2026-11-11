@@ -79,7 +79,7 @@ def shop(products,selected=None,drafts=None,public=False):
  if drafts:
   body=re.sub(r'<option>Available in Stock</option>.*?<option>Out of Stock</option>','',body)
   body=body.replace('<option value="">All availability</option>','<option value="">Confirm on WhatsApp</option>').replace('<option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option>','')
-  body+='<section class="shop-assurance"><h2>Shop with Personal Assistance</h2><p>Choose a product to see its details, then enquire on WhatsApp. We confirm the available options, final amount and delivery or collection arrangements before you pay.</p><h3>Payment Options</h3>'+payment_methods()+'<p>Payment instructions are provided directly by our team after review.</p></section>'
+  body+='<section class="shop-assurance" id="shop-assistance"><h2>Shop with Personal Assistance</h2><p>Choose a product to see its details, then enquire on WhatsApp. We confirm the available options, final amount and delivery or collection arrangements before you pay.</p><h3>Payment Options</h3>'+payment_methods()+'<p>Payment instructions are provided directly by our team after review.</p></section>'
  if selected:
   body=body.replace('<h1>Online Shop</h1>','<h1>'+e(selected)+'</h1>')
   return (noindex if drafts and not public else lambda x:x)(page(category_route(selected),selected+' | Shop','Browse '+selected.lower()+' in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation.',body,products))

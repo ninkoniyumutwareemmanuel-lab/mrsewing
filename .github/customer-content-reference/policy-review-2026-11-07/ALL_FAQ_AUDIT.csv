@@ -1,0 +1,88 @@
+ID,Question,Action,Rationale
+start-order,How do I place a suit order?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+garment-options,What clothing can I discuss with Mr Sewing?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+own-fabric,Can I supply my own fabric?,UPDATED,Direct owner-confirmed rule
+design-details,How are design and fabric details agreed?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+tailoring-preparation,What should I prepare for a tailoring enquiry?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+tailoring-next,Where can I find payment and package information?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+wedding-options,What wedding or civil-wedding outfits can I discuss?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+wedding-enquiry,What should I include in a wedding enquiry?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+wedding-fittings,When should I discuss wedding measurements and fittings?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+wedding-inspiration,Where can I browse wedding inspiration?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+wedding-quote,Is there a fixed wedding package or group price?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+graduation-options,What graduation outfits can I enquire about?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+graduation-reference,What information helps with a graduation quotation?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+graduation-fitting,How do I plan graduation measurements and fittings?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+graduation-gallery,Where can I find graduation designs and completed work?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+graduation-inclusions,What should I check before paying for a graduation suit?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+mobile-how,How do mobile fittings work?,UPDATED,Direct owner-confirmed rule
+mobile-location,Where can I request a mobile fitting?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+mobile-prepare,What should I prepare for the visit?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+mobile-fees,"What is the difference between the 10,000, 25,000 and 50,000 RWF mobile services?",UPDATED,Direct owner-confirmed rule
+mobile-confirm,When is my requested visit confirmed?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+alter-existing,Can you alter clothes I already own?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+alter-options,Which adjustments can I ask the team to assess?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+alter-quote,How is an alteration quotation prepared?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+alter-timing,How long do alterations take?,UPDATED,Direct owner-confirmed rule
+alter-payment,When do I pay for a standalone alteration?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+alter-concern,What if there is a fit concern?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+express-request,How fast is Express tailoring?,UPDATED,Direct owner-confirmed rule
+express-details,What details are needed to assess an urgent request?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+express-delivery,Does an Express estimate automatically guarantee handover?,UPDATED,Direct owner-confirmed rule
+express-availability,Does contacting the team reserve express production?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+express-charge,How much is Express and can after-hours fees apply too?,UPDATED,Direct owner-confirmed rule
+care-enquiry,How do I enquire about cleaning?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+care-preparation,What should I prepare for a care enquiry?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+care-included,Is cleaning included with a suit?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+care-payment,When is a standalone cleaning balance due?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+care-timing,How long does cleaning take?,UPDATED,Direct owner-confirmed rule
+care-handover,How do I arrange care collection or delivery?,UPDATED,Direct owner-confirmed rule
+collections-purpose,Are suit references and Our Work the same gallery?,UPDATED,Direct owner-confirmed rule
+collections-browse,How do I find a design?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+collections-share,How can I share or enquire about one design?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+collections-occasion,What if an occasion filter shows no designs?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+collections-customise,Can I request changes to an inspiration design?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+measure-prepare,What should I share before measurements or a fitting?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+measure-options,Can I visit for measurements or request a mobile fitting?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+measure-send,Can I send a standard size or my own measurements?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+measure-ease,Should I add extra room to body measurements?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+measure-concern,How should I raise a measurement or fitting concern?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+cotton-prices,What are the starting prices for suits?,UPDATED,Direct owner-confirmed rule
+suit-contents,What is included in a two-piece or three-piece suit?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+suit-package,What does the standard suit package include?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+suit-balance,When is the suit balance due?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+standalone-payment,How are standalone alterations and cleaning paid?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+higher-collections,How much are higher collections?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+shirt-skirt,Is a shirt or skirt included at the standard price?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+payment-methods,How should I arrange and verify payment?,UPDATED,Direct owner-confirmed rule
+locations,Where is Mr Sewing based?,UPDATED,Direct owner-confirmed rule
+appointment-needed,Do I need an appointment?,UPDATED,Direct owner-confirmed rule
+request-appointment,How do I request an appointment?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+reschedule,What if I need to reschedule a visit?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+directions,How can I get directions and check opening hours?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+production-start,When does production start?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+tailoring-timing,How long does a custom suit take?,UPDATED,Direct owner-confirmed rule
+delivery-arrangements,How do delivery and collection work?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+ready-notice,When should I arrange to collect or receive my suit?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+late-collection,What if I cannot collect or receive my garment?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+outside-kigali,Who pays for delivery outside Kigali?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+cancel-before,Can I cancel before production starts?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+cancel-after,What about a cancellation or refund after work starts?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+refund-review,How do I ask for a refund review?,UPDATED,Direct owner-confirmed rule
+order-change,Can I change my design after payment?,UPDATED,Direct owner-confirmed rule
+policy-documents,Where can I read the current policy information?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+photo-permission,Does placing an order authorize use of my photograph?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+form-processing,How are website form details processed?,UPDATED,Direct owner-confirmed rule
+photo-request,How can I ask about an existing photograph?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+data-questions,How do I ask about my records or a correction?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+privacy-payments,Should I send my payment PIN with an enquiry?,PRESERVED,Existing useful process/assessment information; no unsupported new rule
+alter-four-days,Can I have my suit altered within four days?,ADDED,Direct owner-confirmed rule
+after-hours,What is the after-hours fee?,ADDED,Direct owner-confirmed rule
+overnight,What happens after 22:00?,ADDED,Direct owner-confirmed rule
+domestic-deposit,What deposit must I pay and when is the balance due?,ADDED,Direct owner-confirmed rule
+international-payment,Do international customers pay in full?,ADDED,Direct owner-confirmed rule
+international-shipping,Is international shipping included?,ADDED,Direct owner-confirmed rule
+kigali-round-trip,How much is Kigali collection and return?,ADDED,Direct owner-confirmed rule
+workplace-measurement,Can someone visit my workplace for measurements?,ADDED,Direct owner-confirmed rule
+vip-price,How are VIP services priced?,ADDED,Direct owner-confirmed rule
+deadline-not-accepted,What happens if my requested deadline cannot be accepted?,ADDED,Direct owner-confirmed rule

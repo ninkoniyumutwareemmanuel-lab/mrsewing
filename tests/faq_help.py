@@ -14,7 +14,7 @@ baseline='40c18afc0e4094fd9e1616ad6fe48db1fd4df757'
 def old(file,raw=False):
  b=subprocess.check_output(['git','show',baseline+':'+file],cwd=ROOT);return b if raw else b.decode()
 data,topics,questions,owners=catalogue();assert len(topics)==14
-entries=search_data()['entries'];assert len(entries)==len(owners) and len({e['url'] for e in entries})==len(entries)
+entries=search_data()['entries'];assert len(entries)>len(owners) and set(owners).issubset({e['id'] for e in entries}) and len({e['url'] for e in entries})==len(entries)
 assert {t['destination'] for t in topics if t['destination'].startswith('/services/')}=={s['route'] for s in json.loads((ROOT/'_data/journey-services.json').read_text())}
 for path,output in outputs().items():assert path.read_text()==output,path
 for t in topics:
@@ -86,8 +86,8 @@ ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 oldurls={e.text for e in ET.fromstring(old('sitemap.xml')).findall('s:url/s:loc',ns)};newurls={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)}
 assert newurls=={'https://mrsewingfashion.com'+r for r in public_routes()}
 withdrawn=oldurls-newurls
-assert len(withdrawn)==134-len(__import__('project_catalog').projects())  # R15 scoped project indexing
-assert len(public_routes())==17+len(__import__('shop_catalog').load())+len(__import__('shop_catalog').categories())+len(__import__('project_catalog').projects())  # R13 programme/Shop indexing
+assert all(u.removeprefix('https://mrsewingfashion.com') not in __import__('site_seo').INDEXABLE_ROUTES for u in withdrawn)  # Current approved public eligibility governs withdrawals
+assert len(public_routes())==55  # Owner-approved R29 public browsing discovery; private/draft product details excluded
 assert all('/faq/'+t['slug']+'/' not in public_routes() for t in topics)
 print(f'PASS: {len(topics)} topics/{len(owners)} unique published answers, source/schema/search parity, generated homepage consistency and policy/hero/shared/asset/config preservation, safe Coming Soon previews and publication-aware canonical sitemap.')
 

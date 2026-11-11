@@ -53,7 +53,20 @@ def contact(title,path):
  return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
 def search_data():
  data,topics,qs,_=catalogue()
- return {'synonyms':data['synonyms'],'entries':[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'source':DOMAIN+route(t)+'#'+id,'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]}
+ entries=[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'source':DOMAIN+qs[id].get('source',route(t)+'#'+id),'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]
+ release=json.loads((ROOT/'_data/customer-release.json').read_text())
+ for path in ['/terms-and-conditions/','/refund-policy/','/privacy-policy/','/customer-information/','/delivery-and-collection/']:
+  page=release['pages'][path]
+  for row in page['sections']:
+   entries.append({'id':path.strip('/')+'-'+row['id'],'question':row['title'],'topic':page['title'],'url':path+'#'+row['id'],'source':DOMAIN+path+'#'+row['id'],'answer':plain(expand(' '.join(row['paragraphs']))),'keywords':[]})
+ from customer_policies import sections
+ for service in release['services']:
+  for ident,title,answer in sections(service['id']):
+   url=service['route']+'#service-info-'+ident
+   entries.append({'id':service['id']+'-'+ident,'question':title,'topic':service['title'],'url':url,'source':DOMAIN+url,'answer':answer,'keywords':[service['title']]})
+ entries.append({'id':'shop-payments-delivery','question':'Shop enquiries, payment and delivery','topic':'Online Shop','url':'/shop/#shop-assistance','source':DOMAIN+'/shop/#shop-assistance','answer':__import__('customer_policies').facts()['texts']['policyShopEnquiry'],'keywords':['shop','payment','delivery','WhatsApp']})
+ return {'synonyms':data['synonyms'],'entries':entries}
+
 def hub(topics,data):
  out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">Frequently Asked Questions</h1><p>Choose a topic or search for an answer.</p></section>'
  out+='<form class="faq-search" id="faq-search" role="search" aria-label="Search all FAQ topics" action="/faq/" method="get"><label for="faq-query">Search every topic and answer</label><div class="faq-search-box">'+icon('search')+'<input type="search" id="faq-query" name="q" placeholder="Try payments, fittings or delivery" autocomplete="off" maxlength="160" aria-controls="faq-results" aria-describedby="faq-search-hint"><button type="button" id="faq-clear" aria-label="Clear FAQ search" hidden>'+icon('close')+'</button></div><p id="faq-search-hint" class="faq-search-hint">Search questions, service topics and practical customer guidance.</p></form><noscript><p>Choose a topic below to browse its answers. Search is available when JavaScript is enabled.</p></noscript>'
