@@ -25,7 +25,7 @@
       "paymentRule": "payments; standalone rates only as accepted quotation",
       "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted",
       "approvedOrdinaryStartingSuitPricesRwf": {
-        "menTwoPiece": 200000,
+        "menTwoPiece": 250000,
         "menThreePiece": 250000,
         "womenTwoPiece": 150000,
         "womenThreePiece": 200000
@@ -153,6 +153,16 @@
     "policyVIP": "VIP assistance is individually quoted for individual, family, event or group needs across tailoring, alterations, garment care and mobile/styling assistance. The quotation considers group size, time, location, service complexity and operational requirements. Standard mobile assistance exceeding five people or three hours needs VIP assessment. Scope, feasibility, payment arrangements and service confirmation must be agreed. No universal VIP price, unlimited service, free benefit, membership payment or guaranteed response time is promised. Approved VIP Express and after-hours assistance is addressed within the agreed VIP quotation.",
     "policyOwnFabric": "You may ask us to assess fabric you supply. Suitability, quantity, condition, design and any additional materials are checked before a quotation and acceptance. A reference photograph does not promise exact replication, exact fabric or colour availability. Alternatives and quotation changes require your agreement. Customer-supplied fabric does not automatically carry a blanket liability exclusion or refund forfeiture.",
     "policyFourDays": "Four days is normally longer than the published Standard alterations estimate of 12–15 working hours. Inspection, operating hours, fittings and confirmed capacity still determine the agreed completion date. Mentioning a four-day deadline does not automatically require Express service or an Express fee.",
-    "policyShopEnquiry": "Choose a Shop product to view its details, then enquire on WhatsApp. Our team confirms available options, the final amount, and delivery or collection arrangements before payment. An enquiry does not reserve stock or confirm a purchase. Mobile Money, Bank Transfer and Cryptocurrency are manually arranged payment options; wait for verified instructions. No automatic payment gateway is activated."
+    "policyShopEnquiry": "Choose a Shop product to view its details, then enquire on WhatsApp. Our team confirms available options, the final amount, and delivery or collection arrangements before payment. An enquiry does not reserve stock or confirm a purchase. Mobile Money, Bank Transfer and Cryptocurrency are manually arranged payment options; wait for verified instructions. No automatic payment gateway is activated.",
+    "policyChildren": "Custom clothing for young children, including children aged two years, can be requested subject to confirming the design, measurements, suitable materials and production requirements. Children’s garments receive an individual quotation; a price discussed for one garment is not a universal children’s price.",
+    "policyParentChild": "Where a parent-and-child offer is individually made and confirmed in the quotation, a 50% discount applies to the child’s eligible garment only when the parent and child order together. Eligibility, garment pricing and exclusions must be agreed before acceptance. This is not an automatic discount or a permanent entitlement for every order."
+  },
+  "stagingAmendments": {
+    "source": "Owner collected adjustments,11November2026",
+    "approvalStatus": "APPROVED FOR DEVELOPMENT/STAGING; production requires separate approval",
+    "standardMensTwoPieceStartingRwf": 250000,
+    "parentChildOffer": "Individual quotation only, not automatic/permanent",
+    "google": "Verified existing Maps directions link; no rating supplied",
+    "logo": "Original NLOGO.png; RGB black background, not transparent"
   }
 }

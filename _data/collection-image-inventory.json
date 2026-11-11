@@ -6343,6 +6343,42 @@
       "missing": false,
       "excludedReason": "Final approved white-background/single-design asset or exact name requires confirmation.",
       "legacyReferences": []
+    },
+    {
+      "originalImagePath": "NLOGO.png",
+      "sourceOriginal": "NLOGO.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved parent-company About hero logo, not a garment reference",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/images/nexus-logo-480.webp",
+      "sourceOriginal": "NLOGO.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved parent-company About hero logo, not a garment reference",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/images/nexus-logo-960.webp",
+      "sourceOriginal": "NLOGO.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "unverified",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Owner-approved parent-company About hero logo, not a garment reference",
+      "legacyReferences": []
     }
   ],
   "missingLegacyReferences": [],

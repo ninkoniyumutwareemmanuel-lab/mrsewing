@@ -26,7 +26,7 @@ export function validateFields(raw){
   if(!project){delete data['Portfolio Project'];delete data['Project Page URL'];}
   const images=project?.images||design.images;const supplied=data['Selected Photograph URL']||data['Design Image'];
   const image=images.find(i=>i.url===(supplied||images[0].url));if(!image)fail(400,'Choose a photograph belonging to the approved design or project.');
-  data['Design Name']=project?.name||design.name;data['Design Link']='https://mrsewingfashion.com'+(project?.route||'/collections/designs/'+data['Design Reference'].toLowerCase()+'/');data['Design Image']=image.url;data['Selected Photograph URL']=image.url;
+  data['Design Name']=project?.name||design.name;data['Design Link']='https://mrsewingfashion.com'+(project?.route||design.route||'/collections/designs/'+data['Design Reference'].toLowerCase()+'/');data['Design Image']=image.url;data['Selected Photograph URL']=image.url;
   if(design.category)data['Suit Category']=design.category;else delete data['Suit Category'];if(['men','women'].includes(design.audience))data['Suit Audience']=design.audience;if(project?.category)data['Suit Audience']=project.category;
  }else{if(data['Portfolio Reference'])fail(400,'The project needs its approved design reference.');for(const field of ['Portfolio Project','Project Page URL','Design Image','Design Name','Design Link','Selected Photograph URL'])delete data[field];}
 

@@ -75,7 +75,7 @@
   }
   function render(updateUrl=true) {
     const value = query.value.slice(0,160).trim(), terms = normalise(value).split(' ').filter(Boolean);
-    clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;
+    clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;const common=document.getElementById('faq-common');if(common)common.hidden=!!value;
     list.replaceChildren();
     if (updateUrl) { const url=new URL(location.href);if(value)url.searchParams.set('q',value);else url.searchParams.delete('q');history.replaceState(null,'',url); }
     if (!value) { status.textContent='';empty.hidden=true;return; }

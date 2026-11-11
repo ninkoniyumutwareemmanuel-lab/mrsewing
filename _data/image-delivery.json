@@ -1464,5 +1464,22 @@
         "bytes": 108890
       }
     ]
+  },
+  "NLOGO.png": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 641531,
+    "variants": [
+      {
+        "src": "assets/images/nexus-logo-480.webp",
+        "width": 480,
+        "bytes": 8666
+      },
+      {
+        "src": "assets/images/nexus-logo-960.webp",
+        "width": 960,
+        "bytes": 21256
+      }
+    ]
   }
 }

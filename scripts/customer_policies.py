@@ -8,9 +8,9 @@ def facts():
  prices=json.loads((ROOT/'_data/suit-package-prices.json').read_text())['prices'];lines=[]
  for gender,label in [('men','Men’s ordinary suits'),('women','Women’s ordinary suits')]:
   rows=sorted([p for p in prices.values() if p['category']==gender and p.get('publicationApproved')],key=lambda p:p['tier'])
-  lines.append(label+': '+ '; '.join('Tier '+str(p['tier'])+' — two-piece '+format(p['twoPieceRwf'],',')+' RWF, three-piece '+format(p['threePieceRwf'],',')+' RWF' for p in rows)+'.')
+  lines.append(label+': '+ '; '.join('Tier '+str(p['tier'])+' — Two-Piece Starting Price '+format(p['twoPieceRwf'],',')+' RWF, Three-Piece Starting Price '+format(p['threePieceRwf'],',')+' RWF' for p in rows)+'.')
  tux=json.loads((ROOT/'_data/tuxedo-package-prices.json').read_text())
- lines.append('Men’s tuxedos, separate schedule: '+'; '.join('Tier '+str(p['tier'])+' — two-piece '+format(p['twoPieceRwf'],',')+' RWF, three-piece '+format(p['threePieceRwf'],',')+' RWF' for p in tux['tiers'])+'.')
+ lines.append('Men’s tuxedos, separate schedule: '+'; '.join('Tier '+str(p['tier'])+' — Two-Piece Starting Price '+format(p['twoPieceRwf'],',')+' RWF, Three-Piece Starting Price '+format(p['threePieceRwf'],',')+' RWF' for p in tux['tiers'])+'.')
  data['priceLines']=lines
  data['texts']['policySuitPrices']=' '.join(lines)+' These are complete garment starting prices, not fabric-only prices. Your selected fabric, design, inclusions and service requirements are reviewed before the final quotation is confirmed.'
  return data
@@ -20,6 +20,7 @@ def sections(service):
  if service in ['custom-tailoring','alterations','garment-care']:rows.append(('charges','Express, after-hours and overnight',f['texts']['policyCharges']))
  if service=='custom-tailoring':
   rows.append(('prices','Starting Suit Prices',f['texts']['policySuitPrices']))
+  rows.append(('children','Children’s tailoring',f['texts']['policyChildren']+' '+f['texts']['policyParentChild']))
   rows.extend([('payments','Payments before production and release',' '.join(f['texts'][k] for k in ['policyDomesticPayment','policyInternationalPayment','policyPaymentVerification'])),('fabric','Customer-supplied fabric and design references',f['texts']['policyOwnFabric'])])
  if service in ['custom-tailoring','alterations']:rows.append(('corrections','Fitting and workmanship concerns','Report concerns promptly, preferably through official WhatsApp. The reporting guidance is within 72 hours after receipt or collection without limiting applicable customer rights. Mr Sewing assesses its own errors, corrects feasible errors without an additional tailoring charge and may provide a company-funded remake if proper correction is impossible. Customer-supplied measurement errors require an assessment; a replacement may need a separate quotation.'))
  if service in ['alterations','garment-care']:rows.append(('payment','Payment and garment assessment','Payment and balance arrangements are confirmed in your quotation before work starts. Full payment is required before release. Inspection determines suitability, work and the final price; not every garment or treatment can be accepted.'))

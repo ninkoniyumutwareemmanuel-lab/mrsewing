@@ -9,9 +9,9 @@
       "twoPieceRwf": 600000,
       "threePieceRwf": 650000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "men-wool": {
       "category": "men",
@@ -21,9 +21,9 @@
       "twoPieceRwf": 400000,
       "threePieceRwf": 450000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "men-polyester": {
       "category": "men",
@@ -33,21 +33,21 @@
       "twoPieceRwf": 270000,
       "threePieceRwf": 320000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "men-cotton": {
       "category": "men",
       "tier": 4,
       "currency": "RWF",
       "scope": "complete suit package",
-      "twoPieceRwf": 200000,
+      "twoPieceRwf": 250000,
       "threePieceRwf": 250000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
-      "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "source": "Owner staging adjustment: standard men’s suit starting price confirmed250,000RWF,11November2026",
+      "sourceDecisionDate": "2026-11-11",
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "women-americano": {
       "category": "women",
@@ -57,9 +57,9 @@
       "twoPieceRwf": 500000,
       "threePieceRwf": 550000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "women-star": {
       "category": "women",
@@ -69,9 +69,9 @@
       "twoPieceRwf": 350000,
       "threePieceRwf": 400000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "women-polyester": {
       "category": "women",
@@ -81,9 +81,9 @@
       "twoPieceRwf": 220000,
       "threePieceRwf": 270000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
     "women-cotton": {
       "category": "women",
@@ -93,9 +93,9 @@
       "twoPieceRwf": 150000,
       "threePieceRwf": 200000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 \u00a78; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
+      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
       "sourceDecisionDate": "2026-11-06",
-      "verificationStatus": "APPROVED \u2014 latest explicit owner publication instruction"
+      "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     }
   }
 }

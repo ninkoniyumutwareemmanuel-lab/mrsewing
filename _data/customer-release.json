@@ -353,6 +353,21 @@
             "{{policyMobileAssistance}}",
             "{{policyVIP}}"
           ]
+        },
+        {
+          "id": "starting-prices",
+          "title": "Two-piece and three-piece starting prices",
+          "paragraphs": [
+            "{{policySuitPrices}}"
+          ]
+        },
+        {
+          "id": "childrens-tailoring",
+          "title": "Children’s tailoring and individually agreed offers",
+          "paragraphs": [
+            "{{policyChildren}}",
+            "{{policyParentChild}}"
+          ]
         }
       ]
     },

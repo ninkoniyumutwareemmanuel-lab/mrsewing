@@ -12,7 +12,12 @@
         "own-fabric",
         "design-details",
         "tailoring-preparation",
-        "tailoring-next"
+        "tailoring-next",
+        "double-breasted-cost",
+        "children-tailoring",
+        "parent-child-offer",
+        "mens-suit-cost",
+        "womens-suit-cost"
       ],
       "related": [
         "collections-designs",
@@ -88,7 +93,10 @@
         "mobile-fees",
         "mobile-confirm",
         "workplace-measurement",
-        "vip-price"
+        "vip-price",
+        "mobile-visit-cost",
+        "event-assistance-cost",
+        "vip-cost"
       ],
       "related": [
         "booking-visiting",
@@ -114,7 +122,8 @@
         "alter-timing",
         "alter-payment",
         "alter-concern",
-        "alter-four-days"
+        "alter-four-days",
+        "alterations-cost"
       ],
       "related": [
         "measurements-fittings",
@@ -141,7 +150,9 @@
         "express-availability",
         "express-charge",
         "after-hours",
-        "overnight"
+        "overnight",
+        "express-cost",
+        "after-hours-cost"
       ],
       "related": [
         "production-delivery",
@@ -168,7 +179,8 @@
         "care-included",
         "care-payment",
         "care-timing",
-        "care-handover"
+        "care-handover",
+        "washing-suit-cost"
       ],
       "related": [
         "prices-packages-payments",
@@ -250,7 +262,12 @@
         "shirt-skirt",
         "payment-methods",
         "domestic-deposit",
-        "international-payment"
+        "international-payment",
+        "suit-starting-cost",
+        "tuxedo-cost",
+        "standard-service-cost",
+        "children-cost",
+        "shop-product-cost"
       ],
       "related": [
         "custom-tailoring",
@@ -975,6 +992,210 @@
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
       "source": "/customer-information/#service-estimates"
+    },
+    "suit-starting-cost": {
+      "question": "How much does a suit cost?",
+      "answer": "Ordinary men’s two-piece suits start at 250,000 RWF and three-piece suits at 250,000 RWF in the standard starting schedule. Women’s two-piece suits start at 150,000 RWF and three-piece suits at 200,000 RWF. Fabric tier, design and garment requirements affect the final quotation. {{policySuitPrices}}",
+      "source": "/terms-and-conditions/#starting-prices",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "suit price",
+        "standard"
+      ]
+    },
+    "double-breasted-cost": {
+      "question": "How much does a double-breasted suit cost?",
+      "answer": "A double-breasted design is quoted according to the fabric tier, number of pieces and requested details. The ordinary men’s two-piece starting schedule begins at 250,000 RWF; this is not a fixed price for every double-breasted design. The team confirms feasibility and the final quotation.",
+      "source": "/services/custom-tailoring/#service-info-prices",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "double breasted",
+        "price"
+      ]
+    },
+    "tuxedo-cost": {
+      "question": "How much does a tuxedo cost?",
+      "answer": "Men’s tuxedo starting prices are separate from ordinary suits: Tier 1 two-piece 800,000 RWF and three-piece 1,000,000 RWF; Tier 2 two-piece 600,000 RWF and three-piece 800,000 RWF. Confirm the design, accessories, fabric and final quotation.",
+      "source": "/guides/fabrics/#tuxedo-prices",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "tuxedo"
+      ]
+    },
+    "express-cost": {
+      "question": "How much is the Express fee?",
+      "answer": "Express adds 35% of the eligible quoted base service. For a 100,000 RWF eligible base, the surcharge is 35,000 RWF and the total is 135,000 RWF. Feasibility and capacity must be confirmed; it is not one flat Express fee.",
+      "source": "/terms-and-conditions/#6",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "express fee",
+        "rush"
+      ]
+    },
+    "after-hours-cost": {
+      "question": "How much is after-hours service?",
+      "answer": "Necessary and agreed work from 17:00 to 22:00 adds 25% of the eligible quoted base. For a 100,000 RWF base this is 25,000 RWF extra. Express plus after-hours is additive 60% of the same base, not compounded. After 22:00 is individually quoted.",
+      "source": "/terms-and-conditions/#6",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "after hours"
+      ]
+    },
+    "alterations-cost": {
+      "question": "How much do clothing alterations and repairs cost?",
+      "answer": "The price is quoted after assessing the garment, requested adjustment or repair, condition and complexity. Standard work is estimated at 12–15 working hours. Express requests require acceptance and add 35% of the eligible quoted base; eligible Kigali collection and return is 10,000 RWF total round trip.",
+      "source": "/services/alterations/#service-info-payment",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "standard price",
+        "repair cost"
+      ]
+    },
+    "washing-suit-cost": {
+      "question": "How much does washing or cleaning my suit cost?",
+      "answer": "The garment-care price is quoted after the garment, care label, condition and requested treatment are assessed. Standard care takes approximately three days. Express care takes 2–12 hours subject to confirmation, with the eligible 35% Express surcharge. Eligible Kigali collection and return costs 10,000 RWF total round trip, charged once when the same order combines alterations and cleaning.",
+      "source": "/services/garment-care/#service-info-payment",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "washing",
+        "wash my suit",
+        "cleaning price"
+      ]
+    },
+    "standard-service-cost": {
+      "question": "How much is Standard service?",
+      "answer": "For suits, use the approved two-piece and three-piece starting schedule; men’s standard two-piece starts at 250,000 RWF. Alterations and garment care are priced for the actual assessed work. Standard priority does not itself add an Express surcharge. Mobile services have their own scope-based fees, rather than a universal price across all services.",
+      "source": "/terms-and-conditions/#starting-prices",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "standard"
+      ]
+    },
+    "children-tailoring": {
+      "question": "Do you make clothes for young children?",
+      "answer": "{{policyChildren}}",
+      "source": "/terms-and-conditions/#childrens-tailoring",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "child",
+        "children",
+        "two years"
+      ]
+    },
+    "children-cost": {
+      "question": "How much does children’s tailoring cost?",
+      "answer": "Children’s tailoring is individually quoted for the design, measurements, fabric and production requirements. A price offered for one child’s garment is not a general price for all children.",
+      "source": "/terms-and-conditions/#childrens-tailoring",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "child",
+        "children"
+      ]
+    },
+    "parent-child-offer": {
+      "question": "Is the parent-and-child discount automatic?",
+      "answer": "{{policyParentChild}}",
+      "source": "/terms-and-conditions/#childrens-tailoring",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "child",
+        "50%",
+        "parent"
+      ]
+    },
+    "mobile-visit-cost": {
+      "question": "How much is a measurement visit or consultation?",
+      "answer": "{{policyMobileMeasurement}} {{policyMobileConsultation}}",
+      "source": "/services/mobile-fitting/#service-info-mobile",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "visit",
+        "consultation"
+      ]
+    },
+    "event-assistance-cost": {
+      "question": "How much is tailoring, styling or event assistance?",
+      "answer": "{{policyMobileAssistance}} {{policyVIP}}",
+      "source": "/services/mobile-fitting/#service-info-mobile",
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11",
+      "keywords": [
+        "how much",
+        "event",
+        "styling"
+      ]
+    },
+    "mens-suit-cost": {
+      "question": "How much is a men’s two-piece or three-piece suit?",
+      "answer": "The standard men’s starting schedule is 250,000 RWF for a two-piece suit and 250,000 RWF for a three-piece suit. Higher fabric tiers and requested design requirements can change the quotation. Men’s tuxedos use a separate price schedule.",
+      "source": "/services/custom-tailoring/#service-info-prices",
+      "keywords": [
+        "how much",
+        "men",
+        "two piece",
+        "three piece"
+      ],
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11"
+    },
+    "womens-suit-cost": {
+      "question": "How much is a women’s two-piece or three-piece suit?",
+      "answer": "Women’s ordinary suits start at 150,000 RWF for a two-piece suit and 200,000 RWF for a three-piece suit in the approved starting schedule. Fabric tier, design and garment requirements affect the final quotation.",
+      "source": "/services/custom-tailoring/#service-info-prices",
+      "keywords": [
+        "how much",
+        "women",
+        "two piece",
+        "three piece"
+      ],
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11"
+    },
+    "vip-cost": {
+      "question": "How much does VIP assistance cost?",
+      "answer": "{{policyVIP}}",
+      "source": "/services/vip/#service-info-vip",
+      "keywords": [
+        "how much",
+        "vip",
+        "family"
+      ],
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11"
+    },
+    "shop-product-cost": {
+      "question": "How much does a Shop product cost?",
+      "answer": "{{policyShopEnquiry}}",
+      "source": "/shop/#shop-assistance",
+      "keywords": [
+        "how much",
+        "shop",
+        "product price"
+      ],
+      "approvalSource": "Owner collected staging adjustments,11November2026",
+      "approvalDate": "2026-11-11"
     }
   },
   "synonyms": [
