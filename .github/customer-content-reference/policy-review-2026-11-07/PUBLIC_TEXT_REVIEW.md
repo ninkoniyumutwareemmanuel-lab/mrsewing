@@ -481,4 +481,3 @@ Source link: /services/vip/#service-info-vip
 A requested date is not automatically confirmed. The team assesses the garment, materials, measurements, fittings and capacity before acceptance. Agree a feasible completion date and quotation before proceeding; do not assume that selecting Express guarantees the deadline.
 
 Source link: /customer-information/#service-estimates
-
