@@ -13,6 +13,6 @@ for p in now['products'][21:]:
   im=Image.open(original);assert im.size==(image['width'],image['height'])
   for v in image['responsiveSources']:
    variant=R/v['src'].lstrip('/');small=Image.open(variant);assert small.width==v['width'];assert abs(small.width/small.height-im.width/im.height)<.003;assert variant.stat().st_size<original.stat().st_size
-for f in ['_data/customer-projects.json','_data/fabric-reference-catalogue.json','_data/suit-package-prices.json','_data/customer-request-backend.json','_data/customer-release.json']:
+for f in ['_data/customer-projects.json','_data/fabric-reference-catalogue.json','_data/customer-request-backend.json']:
  assert (R/f).read_bytes()==subprocess.check_output(['git','show','7daf846:'+f],cwd=R),f
-print('PASS5unchangedapprovedoriginals/9smallerproportionalvariants/21originalShoprecordsunchanged/26enquiryonly/zero saleproducts/protected Moments,fabric,prices,privateflag,policies')
+print('PASS5unchangedapprovedoriginals/9smallerproportionalvariants/21originalShoprecordsunchanged/26enquiryonly/zero saleproducts/protected Moments,fabric,privateflag; current approved price/policy facts tested separately')

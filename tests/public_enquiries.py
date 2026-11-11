@@ -5,7 +5,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import public_enquiries as pe
 from shop_catalog import load
 ROOT=pe.ROOT;raw=json.loads((ROOT/'_data/shop-products.json').read_text());policy=json.loads((ROOT/'_data/shop-public-enquiries.json').read_text())
-assert len(pe.approved())==21 and not load()
+assert len(pe.approved())==26 and not load()
 with tempfile.TemporaryDirectory() as d:
  tmp=Path(d);(tmp/'_data').mkdir()
  for p in raw['products']:
@@ -16,9 +16,9 @@ with tempfile.TemporaryDirectory() as d:
  future=copy.deepcopy(raw['products'][0]);future.update(id='FUTURE_UNAPPROVED_QA',slug='future-unapproved-qa')
  source=copy.deepcopy(raw);source['products'].append(future);(tmp/'_data/shop-products.json').write_text(json.dumps(source));old=pe.ROOT;pe.ROOT=tmp
  try:
-  assert len(pe.approved())==21 and all(p['id']!='FUTURE_UNAPPROVED_QA' for p in pe.approved())
+  assert len(pe.approved())==26 and all(p['id']!='FUTURE_UNAPPROVED_QA' for p in pe.approved())
   source['products'][0]['name']='Unreviewed change';(tmp/'_data/shop-products.json').write_text(json.dumps(source))
   try:pe.approved();raise RuntimeError('Unapproved display edit escaped fingerprint')
   except AssertionError:pass
  finally:pe.ROOT=old
-print('PASS21explicit public enquiry approvals;future draft excluded;changed content rejected;raw drafts/commerce publication gate preserved')
+print('PASS26explicit public enquiry approvals;future draft excluded;changed content rejected;raw drafts/commerce publication gate preserved')
