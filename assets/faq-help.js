@@ -35,8 +35,7 @@
   matchMedia('(max-width: 1099px)').addEventListener('change', () => setOpen(false));
 })();
 
-/* Copy only approved answer text. Source links always point to the original public FAQ. */
-(()=>{'use strict';function make(answer,source){const wrap=document.createElement('div');wrap.className='faq-answer-actions';let u;try{u=new URL(source);if(u.origin!=='https://mrsewingfashion.com'||!/^\/faq\/[a-z0-9-]+\/$/.test(u.pathname)||!/^#[a-z0-9-]+$/.test(u.hash))throw Error();}catch{return wrap;}const status=document.createElement('p');status.setAttribute('role','status');status.className='faq-copy-status';for(const[label,value]of[['Copy Answer',answer],['Copy Answer + Link',answer+'\n\nSource: '+u.href]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(value);status.textContent='Copied.';}catch{status.textContent='Copy could not be completed. Select the answer text and copy it manually.';}});wrap.append(b);}const a=document.createElement('a');a.href=u.href;a.textContent='View Original Source';a.target='_blank';a.rel='noopener';wrap.append(a,status);return wrap;}window.MrFaqActions={make};document.addEventListener('DOMContentLoaded',()=>{for(const node of document.querySelectorAll('[data-faq-source]')){const answer=node.dataset.faqAnswer||node.textContent.trim();node.append(make(answer,node.dataset.faqSource));}});})();
+/* FAQ answers remain readable without repeated copy/source button groups. */
 
 /* Local FAQ enhancement: native links/details remain useful without JavaScript. */
 (() => {
@@ -76,7 +75,7 @@
   }
   function render(updateUrl=true) {
     const value = query.value.slice(0,160).trim(), terms = normalise(value).split(' ').filter(Boolean);
-    clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;
+    clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;const common=document.getElementById('faq-common');if(common)common.hidden=!!value;
     list.replaceChildren();
     if (updateUrl) { const url=new URL(location.href);if(value)url.searchParams.set('q',value);else url.searchParams.delete('q');history.replaceState(null,'',url); }
     if (!value) { status.textContent='';empty.hidden=true;return; }
@@ -90,7 +89,7 @@
       const topic=document.createElement('small');topic.textContent=entry.topic;
       const title=document.createElement('h3');title.textContent=entry.question;
       const text=document.createElement('p');text.textContent=entry.answer;
-      link.append(topic,title);item.append(link,text,window.MrFaqActions.make(entry.answer,entry.source));list.append(item);
+      link.append(topic,title);const source=document.createElement('a');source.href=entry.source;source.textContent='Read the full guidance';item.append(link,text,source);list.append(item);
     }
   }
   form.hidden=false;

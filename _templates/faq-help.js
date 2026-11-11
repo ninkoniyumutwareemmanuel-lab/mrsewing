@@ -36,7 +36,7 @@
   }
   function render(updateUrl=true) {
     const value = query.value.slice(0,160).trim(), terms = normalise(value).split(' ').filter(Boolean);
-    clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;
+    clear.hidden = !value; cards.hidden = !!value; results.hidden = !value;const common=document.getElementById('faq-common');if(common)common.hidden=!!value;
     list.replaceChildren();
     if (updateUrl) { const url=new URL(location.href);if(value)url.searchParams.set('q',value);else url.searchParams.delete('q');history.replaceState(null,'',url); }
     if (!value) { status.textContent='';empty.hidden=true;return; }
@@ -50,7 +50,7 @@
       const topic=document.createElement('small');topic.textContent=entry.topic;
       const title=document.createElement('h3');title.textContent=entry.question;
       const text=document.createElement('p');text.textContent=entry.answer;
-      link.append(topic,title);item.append(link,text,window.MrFaqActions.make(entry.answer,entry.source));list.append(item);
+      link.append(topic,title);const source=document.createElement('a');source.href=entry.source;source.textContent='Read the full guidance';item.append(link,text,source);list.append(item);
     }
   }
   form.hidden=false;

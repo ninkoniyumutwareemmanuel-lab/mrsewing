@@ -53,16 +53,32 @@ def contact(title,path):
  return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
 def search_data():
  data,topics,qs,_=catalogue()
- return {'synonyms':data['synonyms'],'entries':[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'source':DOMAIN+route(t)+'#'+id,'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]}
+ entries=[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'source':DOMAIN+qs[id].get('source',route(t)+'#'+id),'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]
+ release=json.loads((ROOT/'_data/customer-release.json').read_text())
+ for path in ['/terms-and-conditions/','/refund-policy/','/privacy-policy/','/customer-information/','/delivery-and-collection/']:
+  page=release['pages'][path]
+  for row in page['sections']:
+   entries.append({'id':path.strip('/')+'-'+row['id'],'question':row['title'],'topic':page['title'],'url':path+'#'+row['id'],'source':DOMAIN+path+'#'+row['id'],'answer':plain(expand(' '.join(row['paragraphs']))),'keywords':[]})
+ from customer_policies import sections
+ for service in release['services']:
+  for ident,title,answer in sections(service['id']):
+   url=service['route']+'#service-info-'+ident
+   entries.append({'id':service['id']+'-'+ident,'question':title,'topic':service['title'],'url':url,'source':DOMAIN+url,'answer':answer,'keywords':[service['title']]})
+ entries.append({'id':'shop-payments-delivery','question':'Shop enquiries, payment and delivery','topic':'Online Shop','url':'/shop/#shop-assistance','source':DOMAIN+'/shop/#shop-assistance','answer':__import__('customer_policies').facts()['texts']['policyShopEnquiry'],'keywords':['shop','payment','delivery','WhatsApp']})
+ return {'synonyms':data['synonyms'],'entries':entries}
+
 def hub(topics,data):
- out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">Frequently Asked Questions</h1><p>Choose a topic or search for an answer.</p></section>'
- out+='<form class="faq-search" id="faq-search" role="search" aria-label="Search all FAQ topics" action="/faq/" method="get"><label for="faq-query">Search every topic and answer</label><div class="faq-search-box">'+icon('search')+'<input type="search" id="faq-query" name="q" placeholder="Try payments, fittings or delivery" autocomplete="off" maxlength="160" aria-controls="faq-results" aria-describedby="faq-search-hint"><button type="button" id="faq-clear" aria-label="Clear FAQ search" hidden>'+icon('close')+'</button></div><p id="faq-search-hint" class="faq-search-hint">Search questions, service topics and practical customer guidance.</p></form><noscript><p>Choose a topic below to browse its answers. Search is available when JavaScript is enabled.</p></noscript>'
+ out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">Welcome to the Mr Sewing Help Centre</h1><p>Find answers about our services, prices and your request.</p></section>'
+ out+='<form class="faq-search" id="faq-search" role="search" aria-label="Search all FAQ topics" action="/faq/" method="get"><label for="faq-query">Search every topic and answer</label><div class="faq-search-box">'+icon('search')+'<input type="search" id="faq-query" name="q" placeholder="Search for answers…" autocomplete="off" maxlength="160" aria-controls="faq-results" aria-describedby="faq-search-hint"><button type="button" id="faq-clear" aria-label="Clear FAQ search" hidden>'+icon('close')+'</button></div><p id="faq-search-hint" class="faq-search-hint">Search questions, service topics and practical customer guidance.</p></form><noscript><p>Choose a topic below to browse its answers. Search is available when JavaScript is enabled.</p></noscript>'
  out+='<section id="faq-results" aria-labelledby="faq-results-title" hidden><h2 id="faq-results-title">Search results</h2><p id="faq-search-status" class="faq-search-status" role="status" aria-live="polite" aria-atomic="true"></p><ol class="faq-result-list" id="faq-result-list"></ol><div class="faq-empty" id="faq-empty" hidden><p>No answers match your search. Try another word or ask us about your request.</p>'+contact('a customer enquiry','/faq/')+'</div></section>'
+ common=['suit-starting-cost','express-cost','locations']
+ out+='<section class="faq-common" id="faq-common" aria-labelledby="faq-common-title"><h2 id="faq-common-title">Common Questions</h2><ul>'+''.join('<li><a href="/faq/'+catalogue()[3][id]+'/#'+id+'">'+escape(data['questions'][id]['question'])+' <span aria-hidden="true">›</span></a></li>' for id in common)+'</ul></section>'
  out+='<nav class="faq-grid" id="faq-topics" aria-label="FAQ topics">'
  for t in topics:
   old=''.join('<span id="'+id+'" aria-hidden="true"></span>' for id,dest in data['legacyFragments'].items() if dest.split('#')[0]==t['slug'])
   out+='<a class="faq-card" href="'+route(t)+'">'+old+'<span class="faq-icon">'+icon(t['icon'])+'</span><h2>'+escape(t['title'])+'</h2><p>'+escape(t['description'])+'</p><small>'+str(len(t['questions']))+' answers <span aria-hidden="true">↗</span></small></a>'
- out+='</nav><aside class="faq-contact"><p>Need an assessment or quotation? Share your garment or service needs with the team.</p>'+contact('a customer enquiry','/faq/')+'</aside>'
+ maps=json.loads((ROOT/'_data/contact-v2.json').read_text())['mainWorkshop']['mapsUrl']
+ out+='</nav><aside class="faq-contact"><h2>More Questions?</h2><p>Email <a href="mailto:mrsewingfashiondesigner@gmail.com">mrsewingfashiondesigner@gmail.com</a> or use our official WhatsApp. Our first-response target is within 24 support working hours, Monday–Friday, 09:00–17:00 Kigali time, excluding Rwandan public holidays.</p>'+contact('a customer enquiry','/faq/')+'<p><a class="faq-google-link" href="'+escape(maps,quote=True)+'" target="_blank" rel="noopener">'+icon('pin')+'Find Mr Sewing on Google Maps</a></p></aside>'
  out+='<script type="application/json" id="faq-search-data">'+json.dumps(search_data(),ensure_ascii=False).replace('<','\\u003c')+'</script><script type="application/json" id="faq-legacy-data">'+json.dumps({id:'/faq/'+dest.split('#')[0]+'/'+('#'+dest.split('#')[1] if '#' in dest else '') for id,dest in data['legacyFragments'].items()}).replace('<','\\u003c')+'</script>'
  return out
 
@@ -79,6 +95,7 @@ def render(path,title,description,content,schema,legacy=False):
  source=(ROOT/'_templates/faq.html').read_text();vals={'title':escape(title,quote=True),'description':escape(description,quote=True),'route':path,'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/faq.css').read_text(),'header':delivery(re.sub(r'<img\b[^>]*>',reserve_image_space,shared.header('/faq/')),'header'),'footer':delivery(shared.footer(),'footer'),'content':content.replace('<span aria-hidden="true">↗</span>',icon('arrow')),'schema':json.dumps(schema,ensure_ascii=False).replace('<','\\u003c'),'discovery':DISCOVERY_LINKS,'legacy':legacy_script('faq.html') if legacy else ''}
  for k,v in vals.items():source=source.replace('{{'+k+'}}',v)
  assert not re.search(r'{{\w+}}',source)
+ source=source.replace('<body>','<body class="faq-page">')
  return finalize(source,ROOT/'faq.html' if legacy else ROOT/path.strip('/')/'index.html')
 def outputs():
  data,topics,qs,_=catalogue();seo=json.loads((ROOT/'_data/page-seo.json').read_text())['faq.html'];out={}

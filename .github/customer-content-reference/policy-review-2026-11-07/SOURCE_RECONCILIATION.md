@@ -1,0 +1,31 @@
+# Source reconciliation and precedence
+
+Latest authority: owner’s **Complete Customer Information & Policy Correction, 7 November 2026**, specifically §§2–10 for confirmed public facts and §18 for final policy-text review before production. This is inspected conversation text, not an inaccessible handbook. Prior explicit instruction to avoid unnecessary “unconfirmed” labels does not override §18 or turn absent refund rules into approved deductions.
+
+| Topic | Exact available supporting source | Date / approval | Earlier conflict or gap | Implemented in review |
+|---|---|---|---|---|
+| Custom suit turnaround | Latest owner §2 | 7 Nov / APPROVED | Historical 2–4-day workshop-stage descriptions and vague full-order timing | 1–3 weeks / Express 2–3 days; feasibility, fittings, materials and agreed date |
+| Alterations turnaround | Latest owner §§2,8 | 7 Nov / APPROVED | No published estimate | 12–15 working hours / Express 2–12 working hours; four-day FAQ |
+| Cleaning turnaround | Latest owner §§2,9 | 7 Nov / APPROVED | Generic contact-only timing | Approx.3 days / Express2–12hours subject confirmation; no outcome guarantee |
+| Express/after-hours/overnight | Latest owner §3; existing customer-release Terms§6 | 7 Nov / APPROVED | Clarify after-hours only when necessary and agreed; no multiplication | 35% /25% /60% same eligible base; 100k examples;17–22;overnight individual quote |
+| Domestic garment payment | Latest owner §4; prior custom-suit policy in customer-information.json | 7 Nov / APPROVED WITH CONDITIONS | Do not auto-extend suit advance to every standalone service |70/30;balance before final cleaning/release;receipt verification |
+| International custom payment | Latest owner §4 |7 Nov / APPROVED | Earlier generic international conditions |100% before production after acceptance/feasibility; shipping separately quoted |
+| Standalone/mobile/VIP advances | Latest owner §4 asks original policy check; originals inaccessible | OWNER REVIEW REQUIRED | Exact percentage/start/balance trigger missing | Quotation-specific terms only; no universal70% invented |
+| Mobile fees and limits | Latest owner §5 |7 Nov / APPROVED WITH CONDITIONS | “No universal visit fee” / possible ten-person assumption |10k confirmed-order measurement after70%;25k separateconsult;50k up to5people/3hours;VIP beyond either |
+| Mobile travel inclusions | Latest owner §5 asks check; originals inaccessible | OWNER REVIEW REQUIRED | No category-specific travel inclusion found | No free-travel/included-distance assertion |
+| Kigali transport | Latest owner §6 |7 Nov / APPROVED WITH CONDITIONS | No explicit care/alter roundtrip fee |10k eligible roundtrip, once for combinedorder; not same as visits or shipping |
+| Suit/tuxedo starting prices | Actual _data/suit-package-prices.json, _data/tuxedo-package-prices.json; prior owner6Nov price publication and current§7 | Earlier explicit approved schedule retained | Stale generic price clearance text | Starting minima answered; full FabricGuide unchanged;ordinary andtuxedo separate |
+| Alteration/care starting prices | _data/garment-care.json empty unapproved price rows; no approved alteration list located | UNVERIFIED / OWNER REVIEW REQUIRED | Exact garment/task price entries missing | No invented figures; quote depends on actual work |
+| Workmanship / measurements | Earlier owner5Nov§19 recorded in existing Terms§9/Refund§3–4; latest owner§§7,11 | Earlier APPROVED, legal verification outstanding | Preserve rights, no blanket exclusions | Existing supported correction/remake/assessment wording retained |
+| Refund/cancellation 20 topics | Existing customer-release Refund§1–5, Terms§5/8–10; latest owner§11 | Mixed approved procedure / unresolved substantive decisions | No authoritative deduction/timing/cancellation-original supplied | Separate20topic audit/proposals; no new automatic financial/legal rule |
+| Collection/storage | Earlier owner5Nov§18 in existing customer-release delivery§3–5 | Earlier APPROVED | Do not reuse delivery1hour as mobile cancellation rule |7calendar free storage days/extension approval retained; no forfeiture/fees |
+| VIP | Latest owner§§5,10 plus existing approved VIP quotation scope | APPROVED WITH CONDITIONS | Subscription/contract limits unfinished | Individual/family/event/group scope; no fee/subscription/free-service guarantees |
+| Actual privacy processing | _templates/request-draft.js;request-context.js;commerce.js;customer-request-backend.json;public-api.json | Code inspected7Nov; proposed public wording REQUIRES REVIEW | FAQ incorrectly denied contact data in per-tab draft | Accurate per-tab contacts/request draft,30min reopening check,provider-success cleanup; no server retention/compliance claim |
+| Official location/hours | Actual _data/contact-v2.json,business.json,business-hours.json and existing approved homepage hours | Earlier approved implementation | Location/appointment answers needlessly vague | Main workshop/map;MICappointment;regular/Umuganda/Sunday/support schedules distinguished |
+| FAQ actions/search | Latest owner§14 |7 Nov / APPROVED interface direction | Three repeated controls everywhere;FAQ-only index | Remove controls entirely;141public entries linked to genuine public sections |
+
+The originals named by the owner (HandbooksV7/V8, ManagementUpdatesV5/V6, DecisionRegisterV4/V5, commercial/financial/operating/surcharge/refund reconciliations) are **unavailable**, not read. Their filenames do not establish actual rules. SOURCE_INVENTORY.json lists the21 inspected repository/reference/code files; none is falsely described as an inspected original handbook. Confidential finance is not extracted or indexed.
+
+Legal verification: current Rwanda consumer/data-protection texts, application to this business, privacy retention/transfer/provider arrangements and disputed-refund remedies are not established by this repository. Qualified review is required before any compliance representation; no such representation is added.
+
+11November recovered-work review: fullstartingprices andcorrectionguidance nowdisplayeddirectlyonCustomTailoring; priceFAQ comesfromthesameapprovedpricesource. FAQ28changed/10new/87total;144searchentries. Searchresultclickandcorrectsourceanchor tested, notjust hrefsyntax. No source originals became available.

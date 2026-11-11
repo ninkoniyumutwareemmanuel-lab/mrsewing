@@ -2,6 +2,7 @@
   "MS-096": {
     "name": "Light single-breasted tailoring",
     "image": "/r4.jpeg",
+    "route": "/collections/designs/ms-096/",
     "audience": "women",
     "images": [
       {
@@ -17,6 +18,7 @@
   "MS-117": {
     "name": "Grey double-breasted tailoring",
     "image": "/r7.jpeg",
+    "route": "/collections/designs/ms-117/",
     "audience": "men",
     "images": [
       {
@@ -32,6 +34,7 @@
   "MS-005": {
     "name": "Off-white tailoring — front view",
     "image": "/h1.jpeg",
+    "route": "/collections/designs/ms-005/",
     "audience": "women",
     "images": [
       {
@@ -47,6 +50,7 @@
   "MS-006": {
     "name": "Off-white tailoring — side view",
     "image": "/h2.jpeg",
+    "route": "/collections/designs/ms-006/",
     "audience": "women",
     "images": [
       {
@@ -62,6 +66,7 @@
   "MS-007": {
     "name": "Off-White Graduation Suit",
     "image": "/h3.jpeg",
+    "route": "/collections/designs/ms-007/",
     "audience": "unclassified",
     "images": [
       {
@@ -76,6 +81,7 @@
   "MS-069": {
     "name": "Blue single-breasted tailoring",
     "image": "/r2.jpeg",
+    "route": "/collections/designs/ms-069/",
     "audience": "men",
     "images": [
       {
@@ -91,6 +97,7 @@
   "MS-083": {
     "name": "Blue single-breasted separates",
     "image": "/r3.jpeg",
+    "route": "/collections/designs/ms-083/",
     "audience": "women",
     "images": [
       {
@@ -106,6 +113,7 @@
   "MS-139": {
     "name": "Ivory Elegance One-Button Suit",
     "image": "/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp",
+    "route": "/collections/designs/ms-139/",
     "audience": "men",
     "images": [
       {
@@ -121,6 +129,7 @@
   "MS-140": {
     "name": "Skyline Double-Breasted Suit",
     "image": "/Skyline%20Double-Breasted%20Suit.webp",
+    "route": "/collections/designs/ms-140/",
     "audience": "men",
     "images": [
       {
@@ -136,6 +145,7 @@
   "MS-141": {
     "name": "Royal Ivory Three-Piece Suit",
     "image": "/Royal%20Ivory%20Three-Piece%20Suit.webp",
+    "route": "/collections/designs/ms-141/",
     "audience": "men",
     "images": [
       {
@@ -151,6 +161,7 @@
   "MS-142": {
     "name": "Royal Ivory Tuxedo",
     "image": "/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp",
+    "route": "/collections/designs/ms-142/",
     "audience": "men",
     "images": [
       {
@@ -166,6 +177,7 @@
   "MS-143": {
     "name": "Burgundy Grace Women's Single-Breasted Suit",
     "image": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+    "route": "/collections/designs/ms-143/",
     "audience": "women",
     "images": [
       {
@@ -181,6 +193,7 @@
   "MS-144": {
     "name": "Midnight Elegance Women's Double-Breasted Suit",
     "image": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
+    "route": "/collections/designs/ms-144/",
     "audience": "women",
     "images": [
       {
@@ -196,6 +209,7 @@
   "MS-145": {
     "name": "Burgundy Royale Women's Skirt Suit",
     "image": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
+    "route": "/collections/designs/ms-145/",
     "audience": "women",
     "images": [
       {
@@ -211,6 +225,7 @@
   "MS-146": {
     "name": "Camel Grace Women's Three-Piece Suit",
     "image": "/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp",
+    "route": "/collections/designs/ms-146/",
     "audience": "women",
     "images": [
       {
@@ -226,6 +241,7 @@
   "MS-147": {
     "name": "Midnight Black Double-Breasted Suit – Gold Edition",
     "image": "/Midnight%20Black%20Double-Breasted%20Suit%20%E2%80%93%20Gold%20Edition.webp",
+    "route": "/collections/designs/midnight-black-double-breasted-gold/",
     "audience": "men",
     "images": [
       {
@@ -241,6 +257,7 @@
   "MS-148": {
     "name": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
     "image": "/Ivory%20Elegance%20Shawl-Lapel%20Tuxedo%20%E2%80%93%20Black%20Tie%20Edition.webp",
+    "route": "/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/",
     "audience": "men",
     "images": [
       {
@@ -256,6 +273,7 @@
   "MS-149": {
     "name": "Sky Blue Elegance Suit",
     "image": "/The%20blue%20suit%20two%20piece.webp",
+    "route": "/collections/designs/sky-blue-elegance-suit/",
     "audience": "men",
     "images": [
       {
@@ -271,6 +289,7 @@
   "MS-150": {
     "name": "Rose Elegance Suit",
     "image": "/rose-pink%20three%20piecsuit.webp",
+    "route": "/collections/designs/rose-elegance-suit/",
     "audience": "men",
     "images": [
       {
@@ -286,6 +305,7 @@
   "MS-151": {
     "name": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
     "image": "/Royal%20Blue%20Executive%20Women%27s%20Three-Piece%20Pantsuit%20%E2%80%93%20Signature%20Collection.webp",
+    "route": "/collections/designs/royal-blue-executive-womens-three-piece/",
     "audience": "women",
     "images": [
       {

@@ -34,10 +34,10 @@ def legacy_render():
             {'@type':'ListItem','position':1,'name':'Home','item':'https://mrsewingfashion.com/'},
             {'@type':'ListItem','position':2,'name':'About Mr Sewing','item':PAGE}]}]}
     # Official existing logo, using its established responsive WebP derivatives.
-    image = ('<img class="about-hero-image about-logo" src="assets/images/mr-logo-480.webp" '
-        'srcset="assets/images/mr-logo-480.webp 480w, assets/images/mr-logo-960.webp 960w" '
-        'sizes="(min-width: 768px) 360px, 80vw" width="1244" height="802" loading="eager" '
-        'fetchpriority="high" decoding="async" alt="Official Mr Sewing MS logo">')
+    image = ('<img class="about-hero-image about-logo" src="assets/images/nexus-logo-480.webp" '
+        'srcset="assets/images/nexus-logo-480.webp 480w, assets/images/nexus-logo-960.webp 960w" '
+        'sizes="(min-width: 768px) 360px, 80vw" width="1536" height="1024" loading="eager" '
+        'fetchpriority="high" decoding="async" alt="Owner-supplied Nexus company logo">')
     header = delivery(re.sub(r'<img\b[^>]*>', reserve_image_space, shared.header('/about/')), 'header')
     values = {'services_picker':shared.services_picker(),'header':header,'footer':delivery(shared.footer(),'footer'),
         'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/about.css').read_text(),

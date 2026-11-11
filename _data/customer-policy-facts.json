@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "source": "Owner Complete Customer Information & Policy Correction,7November2026",
+  "approvalDate": "2026-11-07",
+  "approvalStatus": "APPROVED",
+  "releaseStatus": "OWNER FINAL POLICY TEXT REVIEW BEFORE PUBLICATION",
+  "services": {
+    "custom-tailoring": {
+      "standardTurnaround": "1–3 weeks",
+      "expressTurnaround": "2–3 days",
+      "startingPriceSource": "_data/suit-package-prices.json and _data/tuxedo-package-prices.json",
+      "startingPriceRwf": null,
+      "source": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "approvalStatus": "APPROVED",
+      "exceptions": "Feasibility, capacity, actual garment and accepted quotation; not automatic deadline acceptance.",
+      "pages": [
+        "/services/custom-tailoring/",
+        "/faq/",
+        "/terms-and-conditions/"
+      ],
+      "timingTextKey": "policyTailoringTime",
+      "name": "Custom Tailoring & Suits",
+      "surchargeRule": "charges; ordinary percentages not automatically applied to VIP",
+      "paymentRule": "payments; standalone rates only as accepted quotation",
+      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted",
+      "approvedOrdinaryStartingSuitPricesRwf": {
+        "menTwoPiece": 250000,
+        "menThreePiece": 250000,
+        "womenTwoPiece": 150000,
+        "womenThreePiece": 200000
+      }
+    },
+    "alterations": {
+      "standardTurnaround": "12–15 working hours",
+      "expressTurnaround": "2–12 working hours",
+      "startingPriceSource": null,
+      "startingPriceRwf": null,
+      "source": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "approvalStatus": "APPROVED",
+      "exceptions": "Feasibility, capacity, actual garment and accepted quotation; not automatic deadline acceptance.",
+      "pages": [
+        "/services/alterations/",
+        "/faq/",
+        "/terms-and-conditions/"
+      ],
+      "timingTextKey": "policyAlterationTime",
+      "name": "Clothing Alterations & Repairs",
+      "surchargeRule": "charges; ordinary percentages not automatically applied to VIP",
+      "paymentRule": "payments; standalone rates only as accepted quotation",
+      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted"
+    },
+    "garment-care": {
+      "standardTurnaround": "Approximately 3 days",
+      "expressTurnaround": "2–12 hours, subject to confirmation",
+      "startingPriceSource": null,
+      "startingPriceRwf": null,
+      "source": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "approvalStatus": "APPROVED",
+      "exceptions": "Feasibility, capacity, actual garment and accepted quotation; not automatic deadline acceptance.",
+      "pages": [
+        "/services/garment-care/",
+        "/faq/",
+        "/terms-and-conditions/"
+      ],
+      "timingTextKey": "policyCareTime",
+      "name": "Garment Care & Cleaning",
+      "surchargeRule": "charges; ordinary percentages not automatically applied to VIP",
+      "paymentRule": "payments; standalone rates only as accepted quotation",
+      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted"
+    },
+    "mobile-fitting": {
+      "standardTurnaround": null,
+      "expressTurnaround": null,
+      "startingPriceSource": null,
+      "startingPriceRwf": null,
+      "source": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "approvalStatus": "APPROVED",
+      "exceptions": "Feasibility, capacity, actual garment and accepted quotation; not automatic deadline acceptance.",
+      "pages": [
+        "/services/mobile-fitting/",
+        "/faq/",
+        "/terms-and-conditions/"
+      ],
+      "timingTextKey": null,
+      "name": "Mobile Tailoring, Styling & Event Assistance",
+      "surchargeRule": "charges; ordinary percentages not automatically applied to VIP",
+      "paymentRule": "payments; standalone rates only as accepted quotation",
+      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted"
+    },
+    "vip": {
+      "standardTurnaround": null,
+      "expressTurnaround": null,
+      "startingPriceSource": null,
+      "startingPriceRwf": null,
+      "source": "Owner Complete Customer Information & Policy Correction,7November2026",
+      "approvalDate": "2026-11-07",
+      "approvalStatus": "APPROVED",
+      "exceptions": "Feasibility, capacity, actual garment and accepted quotation; not automatic deadline acceptance.",
+      "pages": [
+        "/services/vip/",
+        "/faq/",
+        "/terms-and-conditions/"
+      ],
+      "timingTextKey": null,
+      "name": "VIP Services",
+      "surchargeRule": "charges; ordinary percentages not automatically applied to VIP",
+      "paymentRule": "payments; standalone rates only as accepted quotation",
+      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted"
+    }
+  },
+  "charges": {
+    "expressPercent": 35,
+    "afterHoursPercent": 25,
+    "combinedPercent": 60,
+    "afterHoursStart": "17:00",
+    "afterHoursEnd": "22:00",
+    "overnight": "individual quotation"
+  },
+  "payments": {
+    "domesticCustomAdvancePercent": 70,
+    "domesticCustomBalancePercent": 30,
+    "internationalCustomAdvancePercent": 100,
+    "standaloneAdvancePercent": null
+  },
+  "transport": {
+    "eligibleKigaliRoundTripRwf": 10000,
+    "combinedOrderChargedOnce": true
+  },
+  "mobile": {
+    "confirmedOrderMeasurementVisitRwf": 10000,
+    "consultationAndFittingRwf": 25000,
+    "independentAssistanceRwf": 50000,
+    "maximumPeople": 5,
+    "maximumHours": 3
+  },
+  "texts": {
+    "policyTailoringTime": "Standard Custom Tailoring & Suits takes 1–3 weeks. Express takes 2–3 days, subject to feasibility and capacity confirmation. Measurements, fabric/material availability, fittings and operational requirements may affect completion. Your actual completion date is agreed before order acceptance; a requested deadline is not automatically accepted.",
+    "policyAlterationTime": "Standard Clothing Alterations & Repairs takes 12–15 working hours; Express takes 2–12 working hours, subject to inspection, feasibility and capacity. Working hours are not consecutive clock hours or calendar days. The actual completion date is confirmed before acceptance.",
+    "policyCareTime": "Standard Garment Care & Cleaning takes approximately 3 days. Express garment care takes 2–12 hours, subject to confirmation, garment assessment and available capacity. No stain-removal or fabric-outcome guarantee is given. The actual completion date is agreed before acceptance.",
+    "policyCharges": "Express adds 35% of the eligible quoted base service. Necessary and agreed after-hours work from 17:00 to 22:00 Kigali time adds 25% of the same eligible base. When both apply, the additive surcharge is 60%, not compounded. Charges are shown separately in the quotation for your agreement. Work after 22:00 requires an individual quotation and payment arrangement; there is no universal overnight percentage. Ordinary-service percentages are not automatically added to an individually agreed VIP quotation.",
+    "policyChargeExample": "Calculation examples for an eligible 100,000 RWF base: Express totals 135,000 RWF; after-hours totals 125,000 RWF; both total 160,000 RWF. These illustrate the calculation, not a universal service price. No after-hours charge applies automatically if after-hours work is not needed and agreed.",
+    "policyDomesticPayment": "Domestic custom garment orders require a 70% advance before production and the remaining 30% before release or delivery. For custom tailoring, the balance is due when tailoring is complete and before final cleaning and delivery. Full payment is required before garment release. Standalone alterations, cleaning, mobile assistance and VIP requests use the payment arrangement stated in the accepted quotation; do not assume the suit schedule applies to every service.",
+    "policyInternationalPayment": "International custom orders require feasibility confirmation, quotation acceptance and 100% of the agreed quotation before production. Shipping and other applicable charges must be clearly quoted. No fixed international shipping cost or delivery time is promised without verified arrangements.",
+    "policyPaymentVerification": "A payment screenshot is not proof that funds have been received. Production or service commencement requires verified payment and all necessary order requirements, followed by the applicable official confirmation and production-start notice. Use verified payment instructions from Mr Sewing Fashion; do not share payment PINs or account credentials.",
+    "policyTransport": "Eligible Kigali alterations and garment-care orders have a 10,000 RWF total collection-and-return charge for the round trip. The same order combining alterations and cleaning is not charged twice. Customer drop-off, professional visits, included initial Kigali custom-suit delivery and international shipping are different arrangements. Location eligibility and any separate arrangement are confirmed in the quotation; no nationwide delivery price is implied.",
+    "policyMobileMeasurement": "Order Measurement Visit: 10,000 RWF for a Kigali measurement visit after you accept the garment quotation and pay the required 70% garment advance. This separate visit fee does not add a second 25,000 RWF consultation charge merely for measuring an already-confirmed order.",
+    "policyMobileConsultation": "Consultation & Fitting: 25,000 RWF for customers without a confirmed garment order who request professional measurement, fitting, garment-selection or planning assistance. This is a separately purchased service. Location, scope and appointment require confirmation.",
+    "policyMobileAssistance": "Independent Tailoring Assistance: 50,000 RWF for the agreed independent tailoring, styling or event-assistance scope, up to five people and three hours. Exceeding either limit requires VIP assessment and an individually revised quotation. Confirm location eligibility and any travel arrangements before agreement.",
+    "policyVIP": "VIP assistance is individually quoted for individual, family, event or group needs across tailoring, alterations, garment care and mobile/styling assistance. The quotation considers group size, time, location, service complexity and operational requirements. Standard mobile assistance exceeding five people or three hours needs VIP assessment. Scope, feasibility, payment arrangements and service confirmation must be agreed. No universal VIP price, unlimited service, free benefit, membership payment or guaranteed response time is promised. Approved VIP Express and after-hours assistance is addressed within the agreed VIP quotation.",
+    "policyOwnFabric": "You may ask us to assess fabric you supply. Suitability, quantity, condition, design and any additional materials are checked before a quotation and acceptance. A reference photograph does not promise exact replication, exact fabric or colour availability. Alternatives and quotation changes require your agreement. Customer-supplied fabric does not automatically carry a blanket liability exclusion or refund forfeiture.",
+    "policyFourDays": "Four days is normally longer than the published Standard alterations estimate of 12–15 working hours. Inspection, operating hours, fittings and confirmed capacity still determine the agreed completion date. Mentioning a four-day deadline does not automatically require Express service or an Express fee.",
+    "policyShopEnquiry": "Choose a Shop product to view its details, then enquire on WhatsApp. Our team confirms available options, the final amount, and delivery or collection arrangements before payment. An enquiry does not reserve stock or confirm a purchase. Mobile Money, Bank Transfer and Cryptocurrency are manually arranged payment options; wait for verified instructions. No automatic payment gateway is activated.",
+    "policyChildren": "Custom clothing for young children, including children aged two years, can be requested subject to confirming the design, measurements, suitable materials and production requirements. Children’s garments receive an individual quotation; a price discussed for one garment is not a universal children’s price.",
+    "policyParentChild": "Where a parent-and-child offer is individually made and confirmed in the quotation, a 50% discount applies to the child’s eligible garment only when the parent and child order together. Eligibility, garment pricing and exclusions must be agreed before acceptance. This is not an automatic discount or a permanent entitlement for every order."
+  },
+  "stagingAmendments": {
+    "source": "Owner collected adjustments,11November2026",
+    "approvalStatus": "APPROVED FOR DEVELOPMENT/STAGING; production requires separate approval",
+    "standardMensTwoPieceStartingRwf": 250000,
+    "parentChildOffer": "Individual quotation only, not automatic/permanent",
+    "google": "Verified existing Maps directions link; no rating supplied",
+    "logo": "Original NLOGO.png; RGB black background, not transparent"
+  }
+}

@@ -8,7 +8,7 @@ from sync_page_seo import apply
 from customer_information import expand
 from faq_help import outputs as faq_outputs, plain, catalogue
 def policy_main(data):
- title=escape(data['title']);out='<div class="page-title"><img src="/assets/images/mr-logo-480.webp" alt="Mr Sewing logo" class="about-logo" width="1244" height="802" decoding="async"><h1>'+title+'</h1><p>Mr Sewing Fashion Designer · Kigali, Rwanda</p><span class="updated">Last updated: 30 October 2026</span></div><div class="box"><p>'+escape(data['intro'])+'</p></div>'
+ title=escape(data['title']);out='<div class="page-title"><img src="/assets/images/mr-logo-480.webp" alt="Mr Sewing logo" class="about-logo" width="1244" height="802" decoding="async"><h1>'+title+'</h1><p>Mr Sewing Fashion · Kigali, Rwanda</p><span class="updated">Last updated: 30 October 2026</span></div><div class="box"><p>'+escape(data['intro'])+'</p></div>'
  out+='<nav class="box" aria-label="On this page"><h2>On this page</h2><ul>'+''.join('<li><a href="/'+data['route']+'/#'+s['id']+'">'+escape(s['title'])+'</a></li>' for s in data['sections'])+'</ul></nav>'
  for s in data['sections']:
   anchors=''.join('<span id="'+old+'"></span>' for old,new in data.get('legacyAnchors',{}).items() if new==s['id'])

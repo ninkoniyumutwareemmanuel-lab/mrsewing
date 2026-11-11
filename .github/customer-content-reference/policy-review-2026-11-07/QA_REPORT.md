@@ -1,0 +1,15 @@
+# Stage A implementation and QA — verified11November2026; owner rules7November2026
+
+PASS production build and deterministic --check on review branch. PASS facts/35+25additive/70+30/100international/three mobile fees/combinedtransport/sourcesandanchors/privacydraftstorage/private-disabled tests. PASS55URLindexingguard. PASS actual publicCORS,selectedphoto andauthoritativecommercevalidators withmockedprovider responses;no realmessages. PASS5newdesign→fabric→sharedquote/photoURL/provideracceptance journeys;26enquiry-onlyShopcardsandrestrictions;7widths,RTL/reducedmotion and8main-contentAxe scans.
+
+PASS FAQtest14categories/87accordionanswers;normalbrowsingnocopybuttons;10queries/empty/clear;source-link checks;9pagesat320,360,390,430,768,1024,1440px;3Axe scanswithno violations. Realphysicalmobile/Safari nottested. Sourceindex144publicentries notconfidentialdocuments.
+
+Pagesprepared:FAQhub+14topics;Terms;Refund&Cancellation;Privacy;customerinformation/process;deliverycollection;fiveordinary/VIPservicepagesand legacy timingnormalisation. Shop only gains stable assistanceanchorforsearch; commercialfieldsunchanged. FAQs28changedincluding10new,87total. Fulltext/source/20topicrefundproposals and exactFAQchangelog providedseparately. Source originals unavailable; no claim of exhaustivecompanysourcecoverage orlegalcompliance.
+
+Important privacycode observation:per-tabquotationdraftstoresname/phone/email/location/requestfields;agecheck30minuteswhenformopens,clearonacceptedsubmission. Notserverretention. Privatebackend remainsfalse; emailonlyandmanualWhatsApp remain unchanged. No paidservice,productionsettings,paymentgateway orVIPactivation.
+
+Realinboxreceipt NOTTESTED. Productiondeployment NOTPERFORMED; owner§18requiresfinalpolicytextreviewfirst. Directlive/stagingHTTP previouslyproxyblocked; any Cloudflarepreview buildsuccess mustnotbereported asdirectlivefunctionalverification. Main remainsbae385ec7c12e99178b1d8b20f35737ba645ace2 unless ownerorotheractorchangesit. Reviewbranchcommitandpreviewchecks recordedafterpushoutside this document.
+
+Resume verification11November: all saved files recovered. Re-ran build/parity,facts/sitemap/CORS/commerce,FAQ14categories/87answers/10queries/realresultopening/sourceanchor/7widths/3Axe,and5newselected-designquote/26Shop/8Axe tests. Added fullshared-approvedprice schedule andcorrectioninformation toCustomTailoring/Alterations; FAQpriceanswer uses the same approvedpriceJSON. Main unchanged. PASS consultation24case regression (Yes/No/optionalHTTP(S), invalidschemes, service/garmentswitch, review/edit, providerfailure,4widths, noWhatsApp/noattachments).
+
+Legacy FAQ/customer-information/customer-release/finalV2 Python regressions were re-run. Historical assertions assuming FAQ-only search, unapproved prices,119designroutes or22publicpages were updated to the explicit current owner-approved contracts: mixed public-source search, approved suit schedules, preserved main-baseline design routes and55URLpublic sitemap. No unrelated asset/policypreservation guard removed.

@@ -25,15 +25,17 @@
           "id": "3",
           "title": "Custom-suit payment stages",
           "paragraphs": [
-            "The documented custom-suit model is a 70% advance before production and a 30% balance before final cleaning, delivery or garment release. Full payment is required before release, subject to documented authorised exceptions. Confirm any applicable exception and your actual quotation with the team; do not assume the same payment arrangement for every other service or request."
+            "{{policyDomesticPayment}}",
+            "{{policyInternationalPayment}}",
+            "{{policyPaymentVerification}}"
           ]
         },
         {
           "id": "4",
           "title": "Standard and Express Priority",
           "paragraphs": [
-            "Standard Priority follows the agreed scheduling arrangements. Express Priority is subject to capacity, feasibility and confirmation. It does not guarantee a completion time.",
-            "For Standard Service, the Express surcharge is 35% of the original quoted service price. Standard after-hours work is 17:00–22:00, subject to availability, with a 25% surcharge. When both apply, the combined charge is 60% of the original quoted service price: base × 1.60, not compounded charges."
+            "{{policyCharges}}",
+            "{{policyChargeExample}}"
           ]
         },
         {
@@ -49,6 +51,15 @@
           "paragraphs": [
             "Customer Support operates Monday–Friday, 09:00–17:00 Kigali time, excluding Rwandan public holidays. The first-response target is within 24 support working hours, not 24 consecutive clock hours and not a refund-payment deadline.",
             "The team communicates about quotations, payment confirmation, fabric availability, official production start, important changes, fittings, garment readiness, final payment and delivery or collection. If an interruption arises, its effect on the agreed completion date is assessed before a delay is announced. Confirmed issues and realistic revised arrangements are then discussed. This website does not provide live order tracking."
+          ]
+        },
+        {
+          "id": "service-estimates",
+          "title": "Service completion estimates",
+          "paragraphs": [
+            "{{policyTailoringTime}}",
+            "{{policyAlterationTime}}",
+            "{{policyCareTime}}"
           ]
         }
       ]
@@ -153,7 +164,8 @@
           "id": "1",
           "title": "Included and separately agreed arrangements",
           "paragraphs": [
-            "The documented standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Included services are not charged again. Additional delivery and outside-Kigali arrangements require an agreed quotation where applicable; no shipping cost or delivered-by deadline is assumed."
+            "The documented standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Included services are not charged again. Additional delivery and outside-Kigali arrangements require an agreed quotation where applicable; no shipping cost or delivered-by deadline is assumed.",
+            "{{policyTransport}}"
           ]
         },
         {
@@ -258,14 +270,16 @@
           "id": "3",
           "title": "Payments and release",
           "paragraphs": [
-            "For documented custom-suit orders: 70% advance before production and 30% balance before final cleaning, delivery or garment release. Full payment is required before release, subject to documented authorised exceptions. Conditions for other services and any authorised exception must be confirmed in the quotation. This page does not provide bank details or authorise a payment method."
+            "{{policyDomesticPayment}}",
+            "{{policyInternationalPayment}}",
+            "{{policyPaymentVerification}}"
           ]
         },
         {
           "id": "4",
           "title": "Design, fabric and availability",
           "paragraphs": [
-            "Website references guide design selection; customer-provided designs require feasibility assessment. Confirm exact requirements, fabric suitability and availability. Pictures do not guarantee exact fabric/colour or stock. Any substitution or quotation change requires customer agreement. No fixed customer-supplied-fabric contract is activated here."
+            "{{policyOwnFabric}}"
           ]
         },
         {
@@ -279,7 +293,12 @@
           "id": "6",
           "title": "Timing and priorities",
           "paragraphs": [
-            "Confirmation targets are Standard 24 hours or Express 2 hours after the required steps, not completion guarantees. Completion/fitting arrangements are confirmed individually. For Standard Service, Express adds 35% and standard after-hours work 17:00–22:00 adds 25% of the original quoted service price; together 60% (base × 1.60). Availability applies. Work after 22:00 is individually reviewed and quoted; no universal overnight rate."
+            "{{policyTailoringTime}}",
+            "{{policyAlterationTime}}",
+            "{{policyCareTime}}",
+            "{{policyCharges}}",
+            "{{policyChargeExample}}",
+            "Standard 24-hour and Express 2-hour order-confirmation targets apply only after required steps are complete. These are separate from production completion."
           ]
         },
         {
@@ -293,6 +312,7 @@
           "id": "8",
           "title": "Delivery, collection and storage",
           "paragraphs": [
+            "{{policyTransport}}",
             "The standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Additional/outside-Kigali arrangements are agreed separately. Confirm address, time and payment before dispatch. Reschedule with at least one hour’s notice; later/failed delivery may involve justified approved costs where applicable. Collection verification, written third-party authority, receipt and notification apply. Free storage is seven calendar days from the ready notification; written approval is needed for an extension. No forfeiture, resale or unapproved daily penalty is imposed."
           ]
         },
@@ -323,11 +343,36 @@
           "paragraphs": [
             "Personal information is used for the request and service arrangements as described in the Privacy Policy. Confirm suitability and limitations for the actual garment/service rather than assuming every repair or treatment is possible. Nothing here removes applicable statutory customer rights. VIP-specific arrangements require an individual quotation and agreement."
           ]
+        },
+        {
+          "id": "mobile-fees",
+          "title": "Mobile visits and individual VIP assistance",
+          "paragraphs": [
+            "{{policyMobileMeasurement}}",
+            "{{policyMobileConsultation}}",
+            "{{policyMobileAssistance}}",
+            "{{policyVIP}}"
+          ]
+        },
+        {
+          "id": "starting-prices",
+          "title": "Two-piece and three-piece starting prices",
+          "paragraphs": [
+            "{{policySuitPrices}}"
+          ]
+        },
+        {
+          "id": "childrens-tailoring",
+          "title": "Children’s tailoring and individually agreed offers",
+          "paragraphs": [
+            "{{policyChildren}}",
+            "{{policyParentChild}}"
+          ]
         }
       ]
     },
     "/refund-policy/": {
-      "title": "Refund Requests & Corrections",
+      "title": "Refund & Cancellation Policy",
       "intro": "Submit a request for human assessment. An enquiry or form acknowledgement is not an approved refund.",
       "source": "S-OWNER-2026-11-05 §§19–20",
       "sections": [
@@ -361,9 +406,10 @@
         },
         {
           "id": "5",
-          "title": "Cancellation, amount and timing — review required",
+          "title": "Cancellation and changes",
           "paragraphs": [
-            "Contact us about the cancellation conditions, refund assessment and processing arrangements applicable to your request. No automatic 50% deduction, universal deposit forfeiture, automatic Express-fee retention or one-to-two-week refund deadline is imposed. A submitted request does not predetermine eligibility or an amount."
+            "Tell us promptly if you wish to cancel or change an order, service or visit. Include whether a quotation has been accepted, payment has been made, materials have been committed or work has started. Changes require feasibility, quotation and scheduling agreement before the team proceeds.",
+            "The team assesses your request and supporting information and communicates its decision. Submitting a request does not itself approve a refund or fix a deduction or payment date. These procedures do not remove applicable customer rights."
           ]
         }
       ]
@@ -406,21 +452,23 @@
           "id": "5",
           "title": "Selections, cookies and analytics",
           "paragraphs": [
-            "The new request journey may keep service, experience, order type, design reference, priority and after-hours preference in tab-session storage. Quotation forms also keep a temporary draft of entered text in this browser tab so that moving between steps does not clear your details. The draft expires after 30 minutes without editing and is cleared after a confirmed successful submission. Files and Terms acceptance are not saved in the draft. No staff request record is created by browser storage. You can edit choices; storage failure does not prevent URL-based navigation. No new analytics/advertising tracker or cookie-consent mechanism is installed. Retained legacy pages reference Font Awesome styles on cdnjs.cloudflare.com, which may receive connection information when loaded. Actual deployed cookies and provider behaviour still require verification."
+            "The website keeps service/design/fabric choices in per-tab browser session storage. Quotation forms also keep a temporary per-tab draft of contact and request fields so navigation or editing need not lose your work. The code checks for a draft older than 30 minutes when reopening the form and clears it after an accepted submission; this is not a server or email-retention period. Browser storage can be unavailable, and a saved draft is not a submitted request.",
+            "Existing cart code can save product selections, not payment credentials, in browser local storage. Current enquiry-only Shop products do not activate a purchasing cart. No new analytics, advertising tracker or cookie-consent system is introduced by these changes. Legacy pages may load Font Awesome from cdnjs.cloudflare.com. Actual deployed cookies and external-provider practices require separate verification."
           ]
         },
         {
           "id": "6",
           "title": "Purposes and sharing",
           "paragraphs": [
-            "Information supports assessment, quotations, communications, service arrangements, complaints and requested follow-up. The observed processors/channels above are not a declaration of verified data-processing agreements or transfer safeguards. Do not treat a website submission as consent to publish a customer photograph or testimonial."
+            "Information is used to assess requests, prepare quotations, communicate with you, arrange services, review complaints and provide requested follow-up. Hosting, form-submission, email and messaging providers process information needed for their part of these communications. A website enquiry is not permission to publish your photograph or testimonial."
           ]
         },
         {
           "id": "7",
-          "title": "Retention, protection and customer requests — verification needed",
+          "title": "Privacy questions and requests",
           "paragraphs": [
-            "Ask the business about access, correction, deletion and other applicable privacy rights. Actual retention/deletion schedules, authorised staff access, processor agreements, safeguards and relevant Rwanda data-protection requirements require documented review. This draft does not invent encryption guarantees, certifications, retention periods or a legal right that overrides applicable law."
+            "Contact Mr Sewing Fashion through the official contact details for questions about access, correction, deletion or other applicable privacy rights. Explain the request and relevant enquiry reference without sending passwords, payment PINs or unnecessary identity documents.",
+            "Data retention, provider processing and any international-transfer arrangements depend on the systems actually used and applicable requirements. This policy does not promise an unverified retention period, security certification or automatic deletion across email and messaging providers."
           ]
         }
       ]
@@ -524,7 +572,7 @@
         ],
         [
           "Payment and confirmation",
-          "The documented custom-suit model is 70% advance before production and 30% before final cleaning, delivery or release, subject to documented authorised exceptions. International and Special requests must have their applicable conditions confirmed. An enquiry is not an accepted order."
+          "{{policyDomesticPayment}} {{policyInternationalPayment}} {{policyPaymentVerification}}"
         ]
       ]
     },
@@ -540,7 +588,7 @@
         ],
         [
           "Fitting and handover",
-          "Measurements or fitting assistance may be arranged where relevant. Collection, delivery, timing and any approved visit are individually confirmed. No fixed alteration price list or universal completion time is published."
+          "Measurements or fitting assistance may be arranged where relevant. Collection, delivery, timing and any approved visit are individually confirmed. The final alteration price depends on inspection, complexity and the accepted quotation."
         ],
         [
           "Choose your assistance",
