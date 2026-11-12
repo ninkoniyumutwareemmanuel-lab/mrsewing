@@ -46,3 +46,13 @@
 .custom-tailoring-mobile .tailoring-quote-action a:focus-visible,.custom-tailoring-mobile .tailoring-bottom-nav a:focus-visible{outline:3px solid #efcb72;outline-offset:4px}
 @media(min-width:700px){.custom-tailoring-mobile .tailoring-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.custom-tailoring-mobile .tailoring-bottom-nav>div{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:1100px){.custom-tailoring-mobile .tailoring-payment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Ordinary suits separate pieces into four tier/price/benefit tables. */
+.custom-tailoring-mobile .ordinary-benefit-table th:first-child{width:27%}
+.custom-tailoring-mobile .ordinary-benefit-table th:nth-child(2){width:26%}
+.custom-tailoring-mobile .ordinary-benefit-table th:nth-child(3){width:47%}
+.custom-tailoring-mobile .ordinary-benefit-table td:last-child{text-align:left;white-space:normal;overflow-wrap:normal;font-size:13px;line-height:1.6;color:#d9d1bd}
+.custom-tailoring-mobile .ordinary-benefit-table thead th:last-child{text-align:left}
+.custom-tailoring-mobile .ordinary-benefit-table tbody th{font-size:13px;line-height:1.6}
+.custom-tailoring-mobile .tuxedo-price-table{margin-top:28px;max-width:700px}
+.custom-tailoring-mobile #service-info-bulk{margin:24px 0}
+@media(min-width:1100px){.custom-tailoring-mobile .tailoring-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

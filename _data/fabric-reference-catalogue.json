@@ -5,13 +5,11 @@
     {
       "id": "men-super",
       "category": "men",
-      "name": "Super / Super 100s",
+      "name": "Super",
       "tier": 1,
       "image": "fabric-super",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Super / Super 100s with our team to choose a fabric suited to your garment and preferences.",
+      "description": "Super is the existing Tier 1 fabric reference. Confirm the exact fabric and its suitability with our team.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
     },
     {
@@ -20,8 +18,6 @@
       "name": "Wool",
       "tier": 2,
       "image": "fabric-wool",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Wool with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
@@ -32,8 +28,6 @@
       "name": "Polyester",
       "tier": 3,
       "image": "fabric-polyester",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Polyester with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
@@ -44,8 +38,6 @@
       "name": "Cotton / Dubai",
       "tier": 4,
       "image": "fabric-cotton",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Cotton / Dubai with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
@@ -56,8 +48,6 @@
       "name": "Americano",
       "tier": 1,
       "image": "fabric-americano",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Americano with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
@@ -68,8 +58,6 @@
       "name": "Star",
       "tier": 2,
       "image": "fabric-star",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Star with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
@@ -80,8 +68,6 @@
       "name": "Polyester",
       "tier": 3,
       "image": "fabric-polyester",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Polyester with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
@@ -92,11 +78,10 @@
       "name": "Cotton",
       "tier": 4,
       "image": "fabric-cotton",
-      "startingPriceRwf": null,
-      "priceStatus": "Price on request",
       "colourStatus": "Ask us about available colours.",
       "description": "Discuss Cotton with our team to choose a fabric suited to your garment and preferences.",
       "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
     }
-  ]
+  ],
+  "classificationModel": "Each fabric independently refers to audience and tier; several fabric IDs may share a tier. No per-fabric suit prices."
 }

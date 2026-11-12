@@ -1,55 +1,55 @@
 {
   "scope": "Complete ordinary suit packages, not fabric-only prices or tuxedos",
   "prices": {
-    "men-super": {
+    "men-tier-1": {
       "category": "men",
       "tier": 1,
       "currency": "RWF",
       "scope": "complete suit package",
       "twoPieceRwf": 600000,
-      "threePieceRwf": 650000,
+      "threePieceRwf": 800000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
-      "sourceDecisionDate": "2026-11-06",
+      "source": "Owner Final Custom Tailoring, Pricing, Benefits and Fabric Guide Update,12November2026",
+      "sourceDecisionDate": "2026-11-12",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "men-wool": {
+    "men-tier-2": {
       "category": "men",
       "tier": 2,
       "currency": "RWF",
       "scope": "complete suit package",
       "twoPieceRwf": 400000,
-      "threePieceRwf": 450000,
+      "threePieceRwf": 550000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
-      "sourceDecisionDate": "2026-11-06",
+      "source": "Owner Final Custom Tailoring, Pricing, Benefits and Fabric Guide Update,12November2026",
+      "sourceDecisionDate": "2026-11-12",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "men-polyester": {
+    "men-tier-3": {
       "category": "men",
       "tier": 3,
       "currency": "RWF",
       "scope": "complete suit package",
-      "twoPieceRwf": 270000,
-      "threePieceRwf": 320000,
+      "twoPieceRwf": 300000,
+      "threePieceRwf": 400000,
       "publicationApproved": true,
-      "source": "R8 owner explicit instruction6November2026 §8; owner cites V4 dated1Nov andHandbookV8 dated2Nov; originals inaccessible",
-      "sourceDecisionDate": "2026-11-06",
+      "source": "Owner Final Custom Tailoring, Pricing, Benefits and Fabric Guide Update,12November2026",
+      "sourceDecisionDate": "2026-11-12",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "men-cotton": {
+    "men-tier-4": {
       "category": "men",
       "tier": 4,
       "currency": "RWF",
       "scope": "complete suit package",
       "twoPieceRwf": 250000,
-      "threePieceRwf": 250000,
+      "threePieceRwf": 300000,
       "publicationApproved": true,
-      "source": "Owner staging adjustment: standard men’s suit starting price confirmed250,000RWF,11November2026",
-      "sourceDecisionDate": "2026-11-11",
+      "source": "Owner Final Custom Tailoring, Pricing, Benefits and Fabric Guide Update,12November2026",
+      "sourceDecisionDate": "2026-11-12",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "women-americano": {
+    "women-tier-1": {
       "category": "women",
       "tier": 1,
       "currency": "RWF",
@@ -61,7 +61,7 @@
       "sourceDecisionDate": "2026-11-06",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "women-star": {
+    "women-tier-2": {
       "category": "women",
       "tier": 2,
       "currency": "RWF",
@@ -73,7 +73,7 @@
       "sourceDecisionDate": "2026-11-06",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "women-polyester": {
+    "women-tier-3": {
       "category": "women",
       "tier": 3,
       "currency": "RWF",
@@ -85,7 +85,7 @@
       "sourceDecisionDate": "2026-11-06",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     },
-    "women-cotton": {
+    "women-tier-4": {
       "category": "women",
       "tier": 4,
       "currency": "RWF",
@@ -97,5 +97,51 @@
       "sourceDecisionDate": "2026-11-06",
       "verificationStatus": "APPROVED — latest explicit owner publication instruction"
     }
+  },
+  "pricingBasis": "audience and quality tier; never an individual fabric ID",
+  "approvalSource": "Owner final site-wide pricing and benefits instruction,12November2026; STAGING ONLY",
+  "benefitsByTier": {
+    "1": {
+      "standardCleaningsTotal": 3,
+      "collectionGifts": {
+        "men": "shirt and necktie",
+        "women": "inner top"
+      }
+    },
+    "2": {
+      "standardCleaningsTotal": 3,
+      "collectionGifts": {
+        "men": "necktie or bow tie",
+        "women": "inner top"
+      }
+    },
+    "3": {
+      "standardCleaningsTotal": 1,
+      "collectionGifts": {
+        "men": null,
+        "women": null
+      }
+    },
+    "4": {
+      "standardCleaningsTotal": 1,
+      "collectionGifts": {
+        "men": null,
+        "women": null
+      }
+    }
+  },
+  "benefitConditions": {
+    "allTiers": [
+      "Initial standard professional cleaning",
+      "Initial delivery within Kigali",
+      "Branded hanger and protective garment cover"
+    ],
+    "followUpSessions": 2,
+    "followUpWindowMonthsAfterReceipt": 3,
+    "followUpCoverage": "qualifying suit and one shirt",
+    "followUpTransport": "customer-paid",
+    "giftQuantitiesForMultiSuitOrders": null,
+    "unlimitedBenefits": false,
+    "scope": "qualifying ordinary suits; tuxedos retain their separate approved package eligibility"
   }
 }

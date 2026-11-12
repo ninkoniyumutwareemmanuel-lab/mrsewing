@@ -23,13 +23,7 @@
       "name": "Custom Tailoring & Suits",
       "surchargeRule": "charges; ordinary percentages not automatically applied to VIP",
       "paymentRule": "payments; standalone rates only as accepted quotation",
-      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted",
-      "approvedOrdinaryStartingSuitPricesRwf": {
-        "menTwoPiece": 250000,
-        "menThreePiece": 250000,
-        "womenTwoPiece": 150000,
-        "womenThreePiece": 200000
-      }
+      "transportRule": "transport for eligible alteration/care round trips; mobile/professional visits separately quoted"
     },
     "alterations": {
       "standardTurnaround": "12–15 working hours",
@@ -145,7 +139,7 @@
     "policyChargeExample": "Calculation examples for an eligible 100,000 RWF base: Express totals 135,000 RWF; after-hours totals 125,000 RWF; both total 160,000 RWF. These illustrate the calculation, not a universal service price. No after-hours charge applies automatically if after-hours work is not needed and agreed.",
     "policyDomesticPayment": "Domestic custom garment orders require a 70% advance before production and the remaining 30% before release or delivery. For custom tailoring, the balance is due when tailoring is complete and before final cleaning and delivery. Full payment is required before garment release. Standalone alterations, cleaning, mobile assistance and VIP requests use the payment arrangement stated in the accepted quotation; do not assume the suit schedule applies to every service.",
     "policyInternationalPayment": "International custom orders require feasibility confirmation, quotation acceptance and 100% of the agreed quotation before production. Shipping and other applicable charges must be clearly quoted. No fixed international shipping cost or delivery time is promised without verified arrangements.",
-    "policyPaymentVerification": "A payment screenshot is not proof that funds have been received. Production or service commencement requires verified payment and all necessary order requirements, followed by the applicable official confirmation and production-start notice. Use verified payment instructions from Mr Sewing Fashion; do not share payment PINs or account credentials.",
+    "policyPaymentVerification": "Payment verification applies to domestic and international customers. Workplace cash payments must be received, recorded and acknowledged. Bank transfers and Mobile Money require verification of actual receipt; screenshots alone do not prove cleared funds, and pending transactions are not completed payments. After verification, customers receive payment confirmation and the appropriate next steps. Existing owner-authorised exception procedures remain available where applicable. Verification alone is not the official production-start notice: required order conditions and the separate approved production-start process still apply. Use verified instructions and protect PINs and account credentials.",
     "policyTransport": "Eligible Kigali alterations and garment-care orders have a 10,000 RWF total collection-and-return charge for the round trip. The same order combining alterations and cleaning is not charged twice. Customer drop-off, professional visits, included initial Kigali custom-suit delivery and international shipping are different arrangements. Location eligibility and any separate arrangement are confirmed in the quotation; no nationwide delivery price is implied.",
     "policyMobileMeasurement": "Order Measurement Visit: 10,000 RWF for a Kigali measurement visit after you accept the garment quotation and pay the required 70% garment advance. This separate visit fee does not add a second 25,000 RWF consultation charge merely for measuring an already-confirmed order.",
     "policyMobileConsultation": "Consultation & Fitting: 25,000 RWF for customers without a confirmed garment order who request professional measurement, fitting, garment-selection or planning assistance. This is a separately purchased service. Location, scope and appointment require confirmation.",
@@ -154,8 +148,10 @@
     "policyOwnFabric": "You may ask us to assess fabric you supply. Suitability, quantity, condition, design and any additional materials are checked before a quotation and acceptance. A reference photograph does not promise exact replication, exact fabric or colour availability. Alternatives and quotation changes require your agreement. Customer-supplied fabric does not automatically carry a blanket liability exclusion or refund forfeiture.",
     "policyFourDays": "Four days is normally longer than the published Standard alterations estimate of 12–15 working hours. Inspection, operating hours, fittings and confirmed capacity still determine the agreed completion date. Mentioning a four-day deadline does not automatically require Express service or an Express fee.",
     "policyShopEnquiry": "Choose a Shop product to view its details, then enquire on WhatsApp. Our team confirms available options, the final amount, and delivery or collection arrangements before payment. An enquiry does not reserve stock or confirm a purchase. Mobile Money, Bank Transfer and Cryptocurrency are manually arranged payment options; wait for verified instructions. No automatic payment gateway is activated.",
-    "policyChildren": "Custom clothing for young children, including children aged two years, can be requested subject to confirming the design, measurements, suitable materials and production requirements. Children’s garments receive an individual quotation; a price discussed for one garment is not a universal children’s price.",
-    "policyParentChild": "Where a parent-and-child offer is individually made and confirmed in the quotation, a 50% discount applies to the child’s eligible garment only when the parent and child order together. Eligibility, garment pricing and exclusions must be agreed before acceptance. This is not an automatic discount or a permanent entitlement for every order."
+    "policyChildren": "We make custom clothing for children, including children aged two, after confirming design, measurements and production requirements. Children’s ordinary suit starting prices follow the corresponding Tier / Quality schedule.",
+    "policyParentChild": "Children younger than 12 automatically receive 50% off each eligible ordinary suit when the same order includes at least one adult suit charged at its normal applicable price. The offer applies across all tiers and quality levels. Without an adult suit, children’s suits use the normal corresponding suit price. Customer discounts do not stack on the same suit; no separate promotional approval is required.",
+    "policyBulk": "For two or more qualifying suits in one order, the highest-priced qualifying suit remains at its regular price and the second and subsequent qualifying suits receive 3% off. This is not 3% off every suit and does not cover unrelated services. Customer discounts do not stack on the same suit; use the highest eligible customer discount. The quotation identifies qualifying items; no automatic discount engine is active.",
+    "policyTierExplanation": "Tier 1 / Quality 1 through Tier 4 / Quality 4 are ordinary suit pricing and collection categories with different included benefits. Fabrics have assigned tiers, and several fabrics may share a tier. Read the Fabric Guide for reference classifications; final fabric and design requirements are reviewed in the quotation."
   },
   "stagingAmendments": {
     "source": "Owner collected adjustments,11November2026",
@@ -164,5 +160,11 @@
     "parentChildOffer": "Individual quotation only, not automatic/permanent",
     "google": "Verified existing Maps directions link; no rating supplied",
     "logo": "Original NLOGO.png; RGB black background, not transparent"
+  },
+  "latestPricingBenefitsApproval": {
+    "date": "2026-11-12",
+    "source": "Owner final site-wide pricing/benefits/Fabric Guide task R37",
+    "status": "APPROVED FOR STAGING ONLY",
+    "scope": "ordinary suits, benefits, FAQs, payment information; no sale engine or production publication"
   }
 }

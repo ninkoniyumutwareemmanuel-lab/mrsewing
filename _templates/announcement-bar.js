@@ -1,2 +1,2 @@
-/* Reusable offer motion; content is supplied separately. No visible controls or requests. */
-(()=>{for(const bar of document.querySelectorAll('.announcement-bar')){const motion=matchMedia('(prefers-reduced-motion: reduce)');let stopped=false;const paint=()=>{bar.toggleAttribute('data-motion-ready',!motion.matches);bar.toggleAttribute('data-paused',stopped);};bar.addEventListener('keydown',e=>{if(e.key==='Escape'){stopped=true;paint();}});bar.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'){stopped=true;paint();}});motion.addEventListener('change',paint);paint();}})();
+/* Non-interactive sequence. Only the operating-system reduced-motion preference changes movement. */
+(()=>{for(const bar of document.querySelectorAll('.announcement-bar')){const motion=matchMedia('(prefers-reduced-motion: reduce)');const paint=()=>bar.toggleAttribute('data-motion-ready',!motion.matches);motion.addEventListener('change',paint);paint();}})();

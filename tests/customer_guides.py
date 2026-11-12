@@ -6,9 +6,9 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 read=lambda p:json.loads((ROOT/p).read_text())
 cat=read('_data/fabric-reference-catalogue.json')['fabrics'];images=read('_data/customer-guide-images.json')['images'];measure=read('_data/measurement-guide-images.json')['measurements']
-assert [(f['tier'],f['name']) for f in cat if f['category']=='men']==[(1,'Super / Super 100s'),(2,'Wool'),(3,'Polyester'),(4,'Cotton / Dubai')]
+assert [(f['tier'],f['name']) for f in cat if f['category']=='men']==[(1,'Super'),(2,'Wool'),(3,'Polyester'),(4,'Cotton / Dubai')]
 assert [(f['tier'],f['name']) for f in cat if f['category']=='women']==[(1,'Americano'),(2,'Star'),(3,'Polyester'),(4,'Cotton')]
-assert all(f['startingPriceRwf'] is None and f['priceStatus']=='Price on request' and f['colourStatus']=='Ask us about available colours.' for f in cat)
+assert all('startingPriceRwf' not in f and 'priceStatus' not in f and f['colourStatus']=='Ask us about available colours.' for f in cat)
 assert len({f['image'] for f in cat})==6 and len(measure)==11
 assert (ROOT/'neck.jepg.webp').read_bytes()==(ROOT/'neck.webp').read_bytes()
 assert next(x for x in measure if x['id']=='neck')['image']=='measure-neck'
@@ -28,8 +28,9 @@ assert guide.count("We recommend visiting our workshop")==1 and "working referen
 
 assert [m['id'] for m in measure]==['neck','shoulder','chest','bicep','sleeve-length','belly','waist','jacket-length','hip','thigh','trouser-length']
 prices=read('_data/suit-package-prices.json')['prices']
-assert set(prices)=={f['id'] for f in cat}
-assert guide.count('aria-label="Complete suit starting prices"')==8 and guide.count('Starting from RWF ')==16
-
-assert [(p['twoPieceRwf'],p['threePieceRwf']) for p in prices.values()]==[(600000,650000),(400000,450000),(270000,320000),(200000,250000),(500000,550000),(350000,400000),(220000,270000),(150000,200000)]
-assert all(p['publicationApproved'] and p['sourceDecisionDate']=='2026-11-06' for p in prices.values())
+assert all(f['category']+'-tier-'+str(f['tier']) in prices for f in cat)
+assert 'suit-package-prices' not in guide and 'Two-Piece Starting Price:' not in guide and 'Three-Piece Starting Price:' not in guide
+assert '/services/custom-tailoring/#service-info-prices' in guide
+assert [(p['twoPieceRwf'],p['threePieceRwf']) for p in prices.values()]==[(600000,800000),(400000,550000),(300000,400000),(250000,300000),(500000,550000),(350000,400000),(220000,270000),(150000,200000)]
+assert all(p['publicationApproved'] for p in prices.values())
+print('PASS tier-based current prices; Fabric Guide contains classifications/price links only, no numeric suit schedule')

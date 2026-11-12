@@ -2,15 +2,15 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-12-02**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+Current reviewed reference: **versions/2026-11-12-03**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-12-02/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-12-02/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-12-02/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-12-02/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-12-02/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-12-03/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-12-03/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-12-03/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-12-03/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-12-03/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules
@@ -50,3 +50,5 @@ Latest scoped production authorisation and audit: [R34](PRODUCTION_RELEASE_AUDIT
 Latest scoped staging task: [R35 Custom Tailoring mobile brief](CUSTOM_TAILORING_MOBILE_BRIEF_2026-11-12.md). No production publication authorised.
 
 Latest final refinement staging scope: [R36](CUSTOM_TAILORING_FINAL_BRIEF_2026-11-12.md). No production publication authorised.
+
+Latest site-wide authorised staging content: [R37](PRICING_BENEFITS_FABRICS_BRIEF_2026-11-12.md). Supersedes earlier page-only scope; production remains unchanged.

@@ -8,7 +8,8 @@ def information():
  for key,ref in [('timing','policyTailoringTime'),('alterationTiming','policyAlterationTime'),('careTiming','policyCareTime'),('suitPayment','policyDomesticPayment')]:data[key]=texts[ref]
  return data
 def cotton_table():
- return '<p>Ordinary suit starting prices are shown in the Fabric Guide: men’s two-piece from 250,000 RWF and three-piece from 250,000 RWF; women’s two-piece from 150,000 RWF and three-piece from 200,000 RWF. Men’s tuxedos have a separate schedule. Confirm fabric, design, inclusions and the final quotation before acceptance.</p>'
+ from customer_policies import facts
+ return '<p>'+escape(facts()['texts']['policyMensStarting']+' '+facts()['texts']['policyWomensStarting'])+' <a href="/services/custom-tailoring/#service-info-prices">View the tier pricing tables and included benefits</a>. Men’s tuxedos have a separate schedule.</p>'
 
 def historical_cotton_table():
  return '<div class="tw"><table class="price-table"><caption>Cotton standard suit base prices — RWF</caption><thead><tr><th scope="col">Standard suit</th><th scope="col">Base price (RWF)</th></tr></thead><tbody>'+''.join('<tr><th scope="row">'+escape(row['garment'])+'</th><td>'+format(row['priceRwf'],',')+'</td></tr>' for row in information()['cotton'])+'</tbody></table></div>'

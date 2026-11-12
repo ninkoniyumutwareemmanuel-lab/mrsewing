@@ -267,7 +267,15 @@
         "tuxedo-cost",
         "standard-service-cost",
         "children-cost",
-        "shop-product-cost"
+        "shop-product-cost",
+        "suit-tier-differences",
+        "suit-complimentary-cleanings",
+        "suit-cleaning-window",
+        "suit-followup-shirt",
+        "suit-benefit-transport",
+        "fabric-tier-pricing",
+        "bulk-order-discount",
+        "payment-verification"
       ],
       "related": [
         "custom-tailoring",
@@ -709,9 +717,12 @@
       "keywords": []
     },
     "suit-package": {
-      "question": "What does the standard suit package include?",
-      "answer": "{{package}}",
-      "keywords": []
+      "question": "What is included in every custom suit?",
+      "answer": "{{policyAllSuitBenefits}} See the <a href=\"/services/custom-tailoring/#service-info-prices\">tier prices and benefits</a>.",
+      "keywords": [],
+      "source": "/services/custom-tailoring/#service-info-prices",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
     },
     "suit-balance": {
       "question": "When is the suit balance due?",
@@ -724,9 +735,12 @@
       "keywords": []
     },
     "higher-collections": {
-      "question": "How much are higher collections?",
-      "answer": "{{higherCollections}} {{extras}}",
-      "keywords": []
+      "question": "What gifts are included in Tier 1 and Tier 2?",
+      "answer": "{{policyGiftBenefits}}",
+      "keywords": [],
+      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
     },
     "shirt-skirt": {
       "question": "Is a shirt or skirt included at the standard price?",
@@ -735,13 +749,13 @@
     },
     "payment-methods": {
       "question": "How should I arrange and verify payment?",
-      "answer": "Mobile Money, Bank Transfer and Cryptocurrency are manually arranged payment options in the Shop. Wait for verified instructions from Mr Sewing Fashion; no automatic gateway or payment confirmation is provided. A screenshot is not proof of received funds. Never share payment PINs, passwords or private keys. For service enquiries, follow the payment method and requirements in your agreed quotation.",
+      "answer": "Mobile Money, Bank Transfer and Cryptocurrency are manually arranged Shop payment options; there is no new online gateway. For services, follow your accepted quotation and verified instructions. {{policyPaymentVerification}}",
       "keywords": [
         "payment",
         "verification"
       ],
-      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
-      "approvalDate": "2026-11-07",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12",
       "source": "/terms-and-conditions/#3"
     },
     "locations": {
@@ -995,10 +1009,10 @@
     },
     "suit-starting-cost": {
       "question": "How much does a suit cost?",
-      "answer": "Ordinary men’s two-piece suits start at 250,000 RWF and three-piece suits at 250,000 RWF in the standard starting schedule. Women’s two-piece suits start at 150,000 RWF and three-piece suits at 200,000 RWF. Fabric tier, design and garment requirements affect the final quotation. {{policySuitPrices}}",
-      "source": "/terms-and-conditions/#starting-prices",
-      "approvalSource": "Owner collected staging adjustments,11November2026",
-      "approvalDate": "2026-11-11",
+      "answer": "{{policyMensStarting}} {{policyWomensStarting}} <a href=\"/services/custom-tailoring/#service-info-prices\">Compare all tiers and included benefits</a>.",
+      "source": "/services/custom-tailoring/#service-info-prices",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12",
       "keywords": [
         "how much",
         "suit price",
@@ -1007,7 +1021,7 @@
     },
     "double-breasted-cost": {
       "question": "How much does a double-breasted suit cost?",
-      "answer": "A double-breasted design is quoted according to the fabric tier, number of pieces and requested details. The ordinary men’s two-piece starting schedule begins at 250,000 RWF; this is not a fixed price for every double-breasted design. The team confirms feasibility and the final quotation.",
+      "answer": "A double-breasted design is quoted according to the quality tier, number of pieces and requested details. {{policyMensStarting}} These are not fixed prices for every double-breasted design; feasibility and the final quotation are confirmed.",
       "source": "/services/custom-tailoring/#service-info-prices",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1020,9 +1034,9 @@
     "tuxedo-cost": {
       "question": "How much does a tuxedo cost?",
       "answer": "Men’s tuxedo starting prices are separate from ordinary suits: Tier 1 two-piece 800,000 RWF and three-piece 1,000,000 RWF; Tier 2 two-piece 600,000 RWF and three-piece 800,000 RWF. Confirm the design, accessories, fabric and final quotation.",
-      "source": "/guides/fabrics/#tuxedo-prices",
-      "approvalSource": "Owner collected staging adjustments,11November2026",
-      "approvalDate": "2026-11-11",
+      "source": "/services/custom-tailoring/#tuxedo-prices",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12",
       "keywords": [
         "how much",
         "tuxedo"
@@ -1078,7 +1092,7 @@
     },
     "standard-service-cost": {
       "question": "How much is Standard service?",
-      "answer": "For suits, use the approved two-piece and three-piece starting schedule; men’s standard two-piece starts at 250,000 RWF. Alterations and garment care are priced for the actual assessed work. Standard priority does not itself add an Express surcharge. Mobile services have their own scope-based fees, rather than a universal price across all services.",
+      "answer": "For ordinary suits, use the approved Tier / Quality and two-piece or three-piece schedule. {{policyMensStarting}} Alterations and garment care are priced for the actual assessed work. Standard priority does not itself add an Express surcharge; mobile services have their own scope-based fees.",
       "source": "/terms-and-conditions/#starting-prices",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1101,10 +1115,10 @@
     },
     "children-cost": {
       "question": "How much does children’s tailoring cost?",
-      "answer": "Children’s tailoring is individually quoted for the design, measurements, fabric and production requirements. A price offered for one child’s garment is not a general price for all children.",
+      "answer": "Children’s ordinary suit starting prices follow the corresponding Tier / Quality schedule. {{policyParentChild}} Special designs and the final quotation depend on the confirmed requirements.",
       "source": "/terms-and-conditions/#childrens-tailoring",
-      "approvalSource": "Owner collected staging adjustments,11November2026",
-      "approvalDate": "2026-11-11",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12",
       "keywords": [
         "how much",
         "child",
@@ -1112,11 +1126,11 @@
       ]
     },
     "parent-child-offer": {
-      "question": "Is the parent-and-child discount automatic?",
+      "question": "How does the children’s 50% discount work?",
       "answer": "{{policyParentChild}}",
       "source": "/terms-and-conditions/#childrens-tailoring",
-      "approvalSource": "Owner collected staging adjustments,11November2026",
-      "approvalDate": "2026-11-11",
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12",
       "keywords": [
         "child",
         "50%",
@@ -1149,7 +1163,7 @@
     },
     "mens-suit-cost": {
       "question": "How much is a men’s two-piece or three-piece suit?",
-      "answer": "The standard men’s starting schedule is 250,000 RWF for a two-piece suit and 250,000 RWF for a three-piece suit. Higher fabric tiers and requested design requirements can change the quotation. Men’s tuxedos use a separate price schedule.",
+      "answer": "{{policyMensStarting}} <a href=\"/services/custom-tailoring/#service-info-prices\">See all men’s tiers and benefits</a>. Men’s tuxedos use a separate schedule.",
       "source": "/services/custom-tailoring/#service-info-prices",
       "keywords": [
         "how much",
@@ -1157,12 +1171,12 @@
         "two piece",
         "three piece"
       ],
-      "approvalSource": "Owner collected staging adjustments,11November2026",
-      "approvalDate": "2026-11-11"
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
     },
     "womens-suit-cost": {
       "question": "How much is a women’s two-piece or three-piece suit?",
-      "answer": "Women’s ordinary suits start at 150,000 RWF for a two-piece suit and 200,000 RWF for a three-piece suit in the approved starting schedule. Fabric tier, design and garment requirements affect the final quotation.",
+      "answer": "{{policyWomensStarting}} <a href=\"/services/custom-tailoring/#service-info-prices\">See women’s tiers and benefits</a>.",
       "source": "/services/custom-tailoring/#service-info-prices",
       "keywords": [
         "how much",
@@ -1170,8 +1184,8 @@
         "two piece",
         "three piece"
       ],
-      "approvalSource": "Owner collected staging adjustments,11November2026",
-      "approvalDate": "2026-11-11"
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
     },
     "vip-cost": {
       "question": "How much does VIP assistance cost?",
@@ -1196,6 +1210,114 @@
       ],
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11"
+    },
+    "suit-tier-differences": {
+      "question": "What is the difference between Tier 1, Tier 2, Tier 3 and Tier 4?",
+      "answer": "{{policyTierExplanation}} {{policyAllSuitBenefits}} Tiers 1 and 2 also have the approved follow-up cleaning and collection gifts; Tiers 3 and 4 do not.",
+      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "keywords": [
+        "quality",
+        "tier",
+        "benefits",
+        "fabric"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "suit-complimentary-cleanings": {
+      "question": "How many complimentary cleanings do I receive?",
+      "answer": "{{policyCleaningBenefits}}",
+      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "keywords": [
+        "cleaning",
+        "three",
+        "two follow-up",
+        "tiers"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "suit-cleaning-window": {
+      "question": "When can I use my additional cleaning benefits?",
+      "answer": "The two follow-up standard cleaning sessions for qualifying Tier 1 and Tier 2 suits must be used within three months after you receive the garment. Arrange the follow-up with our team; any collection and delivery transport is customer-paid. These are two follow-up sessions, not unlimited cleaning.",
+      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "keywords": [
+        "three months",
+        "follow up",
+        "cleaning"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "suit-followup-shirt": {
+      "question": "Does complimentary cleaning include a shirt?",
+      "answer": "For qualifying Tier 1 and Tier 2 follow-up standard cleaning, the approved coverage is the suit and one shirt. This does not create additional sessions or unlimited garment cleaning; the two follow-ups are within the approved three-month period after garment receipt.",
+      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "keywords": [
+        "shirt",
+        "cleaning",
+        "suit"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "suit-benefit-transport": {
+      "question": "Is collection and delivery free?",
+      "answer": "The initial suit delivery within Kigali is included with the qualifying standard suit package. Transport for later complimentary cleaning is customer-paid. Other collection/delivery, mobile visits, outside-Kigali arrangements and international shipping follow their separate approved quotation; they are not free because a cleaning benefit applies.",
+      "source": "/services/custom-tailoring/#service-info-transport",
+      "keywords": [
+        "free",
+        "initial",
+        "follow up",
+        "transport",
+        "Kigali"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "fabric-tier-pricing": {
+      "question": "Do all fabric types have different prices?",
+      "answer": "Ordinary suit starting prices are categorised by Tier / Quality and two-piece or three-piece garments. Each fabric has an assigned tier, and several fabrics may share a tier. The Fabric Guide explains references rather than listing a separate suit price for every fabric. Your final quotation still accounts for special design and order requirements.",
+      "source": "/guides/fabrics/#fabric-references-title",
+      "keywords": [
+        "fabric",
+        "price",
+        "tier",
+        "quality"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "bulk-order-discount": {
+      "question": "What is the bulk-order discount?",
+      "answer": "{{policyBulk}}",
+      "source": "/benefits/#4",
+      "keywords": [
+        "bulk",
+        "3%",
+        "second",
+        "additional suits",
+        "highest priced"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
+    },
+    "payment-verification": {
+      "question": "How are payments verified?",
+      "answer": "{{policyPaymentVerification}} {{policyDomesticPayment}} {{policyInternationalPayment}}",
+      "source": "/terms-and-conditions/#3",
+      "keywords": [
+        "cash",
+        "workplace",
+        "Mobile Money",
+        "bank",
+        "pending",
+        "screenshot",
+        "domestic",
+        "international"
+      ],
+      "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
+      "approvalDate": "2026-11-12"
     }
   },
   "synonyms": [

@@ -8,10 +8,13 @@ def facts():
  prices=json.loads((ROOT/'_data/suit-package-prices.json').read_text())['prices'];lines=[]
  for gender,label in [('men','Men’s ordinary suits'),('women','Women’s ordinary suits')]:
   rows=sorted([p for p in prices.values() if p['category']==gender and p.get('publicationApproved')],key=lambda p:p['tier'])
-  lines.append(label+': '+ '; '.join('Tier '+str(p['tier'])+' — Two-Piece Starting Price '+format(p['twoPieceRwf'],',')+' RWF, Three-Piece Starting Price '+format(p['threePieceRwf'],',')+' RWF' for p in rows)+'.')
+  lines.append(label+': '+ '; '.join('Tier '+str(p['tier'])+' / Quality '+str(p['tier'])+' — Two-Piece Starting Price '+format(p['twoPieceRwf'],',')+' RWF, Three-Piece Starting Price '+format(p['threePieceRwf'],',')+' RWF' for p in rows)+'.')
  tux=json.loads((ROOT/'_data/tuxedo-package-prices.json').read_text())
- lines.append('Men’s tuxedos, separate schedule: '+'; '.join('Tier '+str(p['tier'])+' — Two-Piece Starting Price '+format(p['twoPieceRwf'],',')+' RWF, Three-Piece Starting Price '+format(p['threePieceRwf'],',')+' RWF' for p in tux['tiers'])+'.')
+ lines.append('Men’s tuxedos, separate schedule: '+'; '.join('Tier '+str(p['tier'])+' / Quality '+str(p['tier'])+' — Two-Piece Starting Price '+format(p['twoPieceRwf'],',')+' RWF, Three-Piece Starting Price '+format(p['threePieceRwf'],',')+' RWF' for p in tux['tiers'])+'.')
  data['priceLines']=lines
+ from suit_pricing import starting_text,minimum,all_benefits,cleaning_benefits,gift_benefits
+ data['services']['custom-tailoring']['approvedOrdinaryStartingSuitPricesRwf']={'menTwoPiece':minimum('men','twoPieceRwf'),'menThreePiece':minimum('men','threePieceRwf'),'womenTwoPiece':minimum('women','twoPieceRwf'),'womenThreePiece':minimum('women','threePieceRwf')}
+ data['texts'].update({'policyMensStarting':starting_text('men'),'policyWomensStarting':starting_text('women'),'policyAllSuitBenefits':all_benefits(),'policyCleaningBenefits':cleaning_benefits(),'policyGiftBenefits':gift_benefits()})
  data['texts']['policySuitPrices']=' '.join(lines)+' These are complete garment starting prices, not fabric-only prices. Your selected fabric, design, inclusions and service requirements are reviewed before the final quotation is confirmed.'
  return data
 def sections(service):

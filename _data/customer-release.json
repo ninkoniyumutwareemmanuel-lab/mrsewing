@@ -228,7 +228,8 @@
           "id": "4",
           "title": "Bulk and group",
           "paragraphs": [
-            "Bulk: 3% on the second and subsequent qualifying suits ordered together by one customer. Group: 3% for qualifying suit orders placed together by at least two customers, subject to the documented request conditions. Ask the team to confirm those request conditions before ordering."
+            "{{policyBulk}}",
+            "Group: 3% for qualifying suit orders placed together by at least two customers, subject to the documented request conditions. Ask the team to confirm those request conditions before ordering."
           ]
         },
         {
@@ -242,7 +243,9 @@
           "id": "6",
           "title": "Included cleaning and other benefits",
           "paragraphs": [
-            "Initial standard cleaning is part of the documented standard suit package. Ask the team to confirm whether any additional cleaning or gift benefit applies to your quotation and how it may be used. Your quotation should identify any specifically agreed inclusions."
+            "{{policyAllSuitBenefits}}",
+            "{{policyCleaningBenefits}}",
+            "{{policyGiftBenefits}}"
           ]
         }
       ]
@@ -334,7 +337,11 @@
           "id": "11",
           "title": "Discounts and inclusions",
           "paragraphs": [
-            "Qualifying suits may receive the approved loyalty, referral, bulk or group customer discount. The highest eligible customer discount applies; discounts do not stack on one suit. Referral commission is separate. See the benefits guidance and confirm applicable procedures; do not assume unrelated-service, gift, extra-cleaning or transport benefits."
+            "Customer discounts do not stack on the same suit. Use the highest eligible customer discount. Referral commission is separate.",
+            "{{policyBulk}}",
+            "{{policyAllSuitBenefits}}",
+            "{{policyCleaningBenefits}}",
+            "{{policyGiftBenefits}}"
           ]
         },
         {
@@ -363,7 +370,7 @@
         },
         {
           "id": "childrens-tailoring",
-          "title": "Children’s tailoring and individually agreed offers",
+          "title": "Children’s tailoring and the family suit discount",
           "paragraphs": [
             "{{policyChildren}}",
             "{{policyParentChild}}"

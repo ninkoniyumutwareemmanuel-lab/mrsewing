@@ -105,3 +105,6 @@ Custom Tailoring mobile-only staging task: preserve20priceamounts inthree tables
 
 ## 2026-11-12-02 — R36
 Focused final Custom Tailoring refinement: owner updates scoped men’s selling prices, fixedOFFER with approvedchildpromotion/noPause/noUndefinedBenefits, compactcards/disclosures, quotationCTA and bottomnavigation. Women/tuxedos/globaldata/otherpages unchanged. Stagingonly; preservepreviouswork andmainfreeze.
+
+## 2026-11-12-03 — R37
+Authoritativeordinarytierpricing/sitewideconsistency;fourbenefittables;FabricGuidetierclassificationonly;11dedicatedFAQsubjects;approvedcleaning/gifts/bulk/child/paymentverification;noninteractive3offerbarwithreportedmotionlimitation. Historicaldecisionsunchanged;stagingonly/mainprotected.
