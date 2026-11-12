@@ -1,0 +1,15 @@
+{
+  "source": "Owner Custom Tailoring Page Final Refinement, 12 November 2026",
+  "approvalStatus": "APPROVED FOR STAGING ONLY; Custom Tailoring page scope",
+  "mensOrdinaryPrices": [
+    {"tier": 1, "twoPieceRwf": 600000, "threePieceRwf": 800000},
+    {"tier": 2, "twoPieceRwf": 400000, "threePieceRwf": 550000},
+    {"tier": 3, "twoPieceRwf": 300000, "threePieceRwf": 400000},
+    {"tier": 4, "twoPieceRwf": 250000, "threePieceRwf": 300000}
+  ],
+  "announcement": {
+    "message": "50% off eligible children’s suits for under-12s when ordered with an adult suit. See conditions.",
+    "href": "/services/custom-tailoring/#service-info-children",
+    "source": "Owner-approved automatic family discount, 12 November 2026, R35; reconfirmed R36"
+  }
+}

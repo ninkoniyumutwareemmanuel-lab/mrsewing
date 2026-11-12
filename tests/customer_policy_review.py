@@ -19,7 +19,7 @@ for id,phrase in [('custom-tailoring','1–3 weeks'),('alterations','12–15 wor
 terms=(R/'terms-and-conditions/index.html').read_text();assert all(x in terms for x in ['1–3 weeks','2–3 days','12–15 working hours','2–12 working hours','25,000 RWF','50,000 RWF','10,000 RWF','100%'])
 for id,phrase in [('mobile-fitting','five people'),('vip','family')]:assert phrase in (R/'services'/id/'index.html').read_text()
 pricepage=(R/'services/custom-tailoring/index.html').read_text()
-for price in json.loads((R/'_data/suit-package-prices.json').read_text())['prices'].values():
+for price in [p for p in json.loads((R/'_data/suit-package-prices.json').read_text())['prices'].values() if p['category']=='women'] + [dict(p,publicationApproved=True) for p in json.loads((R/'_data/custom-tailoring-page.json').read_text())['mensOrdinaryPrices']]:
  if price.get('publicationApproved'):
   assert '<td>'+format(price['twoPieceRwf'],',')+'</td>' in pricepage and '<td>'+format(price['threePieceRwf'],',')+'</td>' in pricepage
 for price in json.loads((R/'_data/tuxedo-package-prices.json').read_text())['tiers']:

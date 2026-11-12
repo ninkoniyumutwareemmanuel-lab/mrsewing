@@ -102,3 +102,6 @@ Owner directs full relevant audit and then main merge of the reviewed release. C
 
 ## 2026-11-12-01 — R35
 Custom Tailoring mobile-only staging task: preserve20priceamounts inthree tables; owner approves automatic under12family50%discount withadult suit; streamlinecustompaymentsections; reusableaccessibleannouncementonlyhere. No unrelatedroutes/main/productionchanges. Priorchildofferwording superseded on scopedpage; otherpagesunchangedbytaskrestriction.
+
+## 2026-11-12-02 — R36
+Focused final Custom Tailoring refinement: owner updates scoped men’s selling prices, fixedOFFER with approvedchildpromotion/noPause/noUndefinedBenefits, compactcards/disclosures, quotationCTA and bottomnavigation. Women/tuxedos/globaldata/otherpages unchanged. Stagingonly; preservepreviouswork andmainfreeze.
