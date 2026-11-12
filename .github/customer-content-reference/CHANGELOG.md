@@ -108,3 +108,6 @@ Focused final Custom Tailoring refinement: owner updates scoped men’s selling 
 
 ## 2026-11-12-03 — R37
 Authoritativeordinarytierpricing/sitewideconsistency;fourbenefittables;FabricGuidetierclassificationonly;11dedicatedFAQsubjects;approvedcleaning/gifts/bulk/child/paymentverification;noninteractive3offerbarwithreportedmotionlimitation. Historicaldecisionsunchanged;stagingonly/mainprotected.
+
+## 2026-11-12-04 — R38
+Stickyexistingoffer/75scycle/SpecialTailoringbuttons+description. Kaundalegacyimagesinspected;allpermission-gated,nowomenapproved,noemptycategoryornewrightsapproval. PreserveR37facts/journeys/main.

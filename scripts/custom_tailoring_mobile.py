@@ -31,6 +31,7 @@ def disclosure(ident,title,paragraphs):
 def content(service,hero,section,link):
     from customer_policies import facts,sections
     f=facts();body=hero('custom-tailoring').replace(escape(service['intro']),'Tailoring shaped around your style, with guidance on fabrics, measurements and fit.',1)
+    body+='<section class="release-section tailoring-special-intro" aria-labelledby="special-tailoring-heading"><h2 id="special-tailoring-heading">Special Tailoring &amp; Custom Garments</h2><p>Need something beyond a standard suit? We tailor shirts, trousers, dresses, coats and other custom garments. Share your requirements or design idea, and our team will review your request and prepare a quotation.</p></section>'
     body+=pricing()+children()+payments()+disclosure('bulk','Bulk-order discount',[f['texts']['policyBulk']])
     body+='''<section class="release-section" id="service-info-timing"><h2>Tailoring Around Your Order</h2><div class="tailoring-service-grid"><article><h3>Standard Tailoring</h3><p>We agree your completion date after reviewing your order, design, fabric availability and production capacity.</p></article><article><h3>Express Service — +35%</h3><p>Priority tailoring is subject to availability, feasibility and an individually confirmed completion date.</p></article></div><details class="tailoring-disclosure"><summary>Turnaround estimates &amp; additional charges</summary><div class="tailoring-detail-content"><p>'''+escape(f['texts'][f['services']['custom-tailoring']['timingTextKey']])+'''</p><div id="service-info-charges"><p>'''+escape(f['texts']['policyCharges'])+'''</p></div></div></details></section>'''
     body+='''<section class="release-section" id="tailoring-inclusions"><h2>Included with Your Standard Suit</h2><ul class="tailoring-inclusions"><li>Initial standard garment cleaning</li><li>Branded hanger and protective cover</li><li>Initial Kigali delivery</li></ul><p>These inclusions apply to the standard custom-suit package. Men’s tuxedo inclusions and any separately quoted requirements are confirmed in your quotation.</p></section>'''
@@ -40,7 +41,7 @@ def content(service,hero,section,link):
     body+=disclosure('transport','Collection & delivery arrangements',['Initial Kigali delivery is included with your standard suit package as shown above. Confirm the delivery address, timing and required payment before dispatch. Additional or outside-Kigali delivery and international shipping require the applicable agreed quotation; no universal price or transit time is promised.'])
     correction=next(row[2] for row in sections('custom-tailoring') if row[0]=='corrections')
     body+=disclosure('corrections','Fitting & workmanship concerns',[correction])+'</section>'
-    body+='<nav class="tailoring-bottom-nav release-section" aria-labelledby="tailoring-next"><h2 id="tailoring-next">Find Your Next Design</h2><div>'+link('/mensuits/','Explore Men’s Suits','home-button home-button-gold')+link('/womensuits/','Explore Women’s Suits','home-button home-button-gold')+'</div></nav>'
+    body+='<nav class="tailoring-bottom-nav release-section" aria-labelledby="tailoring-next"><h2 id="tailoring-next">Find Your Next Design</h2><div>'+link('/mensuits/','Explore Men’s Suits','home-button home-button-gold')+link('/womensuits/','Explore Women’s Suits','home-button home-button-gold')+link('/services/custom-tailoring/special-order/','Special Tailoring','home-button home-button-gold')+'</div></nav>'
     return body
 
 def decorate(source):
@@ -49,5 +50,6 @@ def decorate(source):
     offer=json.loads((ROOT/'_data/custom-tailoring-page.json').read_text())['announcement']
     messages=''.join('<span class="announcement-message">'+escape(message)+'</span>' for message in offer['messages'])
     bar=(ROOT/'_templates/announcement-bar.html').read_text().replace('{{offer_messages}}',messages)
-    source=source.replace('<main id="main-content"',bar+'<main id="main-content"',1)
+    assert source.count('</div><main id="main-content"')==1
+    source=source.replace('</div><main id="main-content"',bar+'</div><main id="main-content"',1)
     return source.replace('</body>','<script>'+ (ROOT/'_templates/announcement-bar.js').read_text()+'</script></body>',1)

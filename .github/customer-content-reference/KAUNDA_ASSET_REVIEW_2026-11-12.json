@@ -1,0 +1,162 @@
+{
+  "status": "OWNER IMAGE APPROVAL REQUIRED; not a publication list",
+  "source": "Existing collection records and source images inspected12November2026",
+  "eligibleApprovedKaundaCount": 0,
+  "approvedWomenKaundaCount": 0,
+  "records": [
+    {
+      "id": "MS-029",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits1.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-030",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits2.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-031",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits3.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-032",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits4.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-033",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits5.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-034",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits6.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-035",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits7.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-036",
+      "name": "Men’s Kaunda suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "m-kaundasuits8.jpeg",
+      "sources": [
+        "m-kaundasuits.html"
+      ]
+    },
+    {
+      "id": "MS-120",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "s1.jpeg",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ]
+    },
+    {
+      "id": "MS-121",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "s2.jpeg",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ]
+    },
+    {
+      "id": "MS-122",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "s3.jpeg",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ]
+    },
+    {
+      "id": "MS-123",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "s4.jpeg",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ]
+    },
+    {
+      "id": "MS-124",
+      "name": "Men’s Kaunda Modern suit",
+      "gender": "men",
+      "rightsStatus": "review_required",
+      "provenance": "unverified",
+      "sourceAnchor": "s5.jpeg",
+      "sources": [
+        "suits.html",
+        "m-kaundasuits.html",
+        "m-modernsuits.html"
+      ]
+    }
+  ],
+  "visualReview": "Original m-kaundasuits1..8.jpeg present. s1/s2/s4/s5 depict western/unrelated suit references; do not substitute them for Kaunda. s3/MS-122 is a possible women’s stand-collar reference but currently men-labelled and review_required; owner classification and permission needed."
+}

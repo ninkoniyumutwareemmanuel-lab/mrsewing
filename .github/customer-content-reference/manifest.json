@@ -1,13 +1,13 @@
 {
-  "currentVersion": "2026-11-12-03",
-  "implementationBaseline": "0a446ad2b8360038b650a5853d3fc9007493d4f7",
+  "currentVersion": "2026-11-12-04",
+  "implementationBaseline": "0ab19a14eb0880b17cd7f8fe803b65af6bd515f6",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R37 approved current pricing/benefits/payment facts for STAGING ONLY; no production publication",
+  "customerPolicyPublication": "R38 UI staging only; R37 facts unchanged; Kaunda image approval required; no production publication",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "718519a15557cf7f784212c5fe703a295f4dbaa1c78377727acfb5e11f72592d",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "ca0970148e9ce24678e70f1f3568cc31c700673383356cfe863fe815f942c2d7",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "69438a06c09bdafbb8f3b35191429758f6c6d4fb06d8f0564391931fde205338",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "93b67ab67b7e7f6719a2825227ca338b256816b6dcd89d9cf9bb4a88ed55814b",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "c9832a6fd2a028079090446ba4f307034e900c140f4b9633af8762b509c93463"
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "25cddf465a3531acb72b2e14214de6909c5c41687f23bd0ebac2741c65e6311b",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "87f193f1483272f7a18b74c8ab2a978fc4ef59218205fd12feabc916ec3f1f19",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "1e3f1e9222a8f00e8913aa618f24feecf50a3c561619eec40a2352f0f76b734c",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "c86e756c46df53355101923c8ae0f8b7c3e78797e779e85ea5b64c51639c1c7c",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "9af7e98a06b070e947a2b2b38ea4e10f17800e8622513803fc3cf1322d020c80"
   }
 }

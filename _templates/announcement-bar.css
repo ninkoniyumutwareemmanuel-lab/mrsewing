@@ -5,10 +5,14 @@
 .announcement-track{display:flex;width:max-content;transform:none}
 .announcement-group{display:flex;flex:none}
 .announcement-message{display:inline-flex;align-items:center;min-height:48px;padding-right:56px;color:#edcf86;font:14px/1.5 Arial,sans-serif;text-decoration:none;white-space:nowrap}
-.announcement-bar[data-motion-ready] .announcement-track{animation:announcement-drift 90s linear infinite}
+.announcement-bar[data-motion-ready] .announcement-track{animation:announcement-drift 75s linear infinite}
 @keyframes announcement-drift{to{transform:translateX(-50%)}}
 .announcement-bar:not([data-motion-ready]) .announcement-group[aria-hidden=true]{display:none}
 .announcement-bar:not([data-motion-ready]) .announcement-track{width:100%}
 .announcement-bar:not([data-motion-ready]) .announcement-group{display:block;min-width:0;flex:1}
 .announcement-bar:not([data-motion-ready]) .announcement-message{display:block;white-space:normal;padding:8px 0;min-height:0}
 @media(prefers-reduced-motion:reduce){.announcement-bar .announcement-track{animation:none!important;transform:none!important;width:100%!important}.announcement-bar .announcement-group[aria-hidden=true]{display:none!important}.announcement-bar .announcement-group{display:block;min-width:0;flex:1}.announcement-bar .announcement-message{display:block;white-space:normal;padding:8px 0;min-height:0}}
+
+/* The existing header wrapper holds the brand header and offer bar as one sticky stack. */
+html.has-sticky-offer{scroll-padding-top:calc(var(--offer-header-height,140px) + 16px)}
+html.has-sticky-offer .custom-tailoring-mobile .release-section,html.has-sticky-offer .custom-tailoring-mobile .tailoring-disclosure,html.has-sticky-offer .custom-tailoring-mobile .tailoring-disclosure summary{scroll-margin-top:0}
