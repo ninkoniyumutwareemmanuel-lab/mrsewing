@@ -99,3 +99,6 @@ Owner-approved black/gold FAQ styling and illustrated per-design fabric selectio
 
 ## 2026-11-11-03 — R34
 Owner directs full relevant audit and then main merge of the reviewed release. Current public wording approved for this release; unresolved proposals/private activation remain held. SEO, journeys, mobile and production-origin simulations passed; direct website access blocked by environment proxy. See production audit.
+
+## 2026-11-12-01 — R35
+Custom Tailoring mobile-only staging task: preserve20priceamounts inthree tables; owner approves automatic under12family50%discount withadult suit; streamlinecustompaymentsections; reusableaccessibleannouncementonlyhere. No unrelatedroutes/main/productionchanges. Priorchildofferwording superseded on scopedpage; otherpagesunchangedbytaskrestriction.

@@ -21,9 +21,9 @@ for id,phrase in [('mobile-fitting','five people'),('vip','family')]:assert phra
 pricepage=(R/'services/custom-tailoring/index.html').read_text()
 for price in json.loads((R/'_data/suit-package-prices.json').read_text())['prices'].values():
  if price.get('publicationApproved'):
-  assert format(price['twoPieceRwf'],',')+' RWF' in pricepage and format(price['threePieceRwf'],',')+' RWF' in pricepage
+  assert '<td>'+format(price['twoPieceRwf'],',')+'</td>' in pricepage and '<td>'+format(price['threePieceRwf'],',')+'</td>' in pricepage
 for price in json.loads((R/'_data/tuxedo-package-prices.json').read_text())['tiers']:
- assert format(price['twoPieceRwf'],',')+' RWF' in pricepage and format(price['threePieceRwf'],',')+' RWF' in pricepage
+ assert '<td>'+format(price['twoPieceRwf'],',')+'</td>' in pricepage and '<td>'+format(price['threePieceRwf'],',')+'</td>' in pricepage
 assert '30 minutes' in (R/'privacy-policy/index.html').read_text()
 assert 'MrFaqActions.make' not in (R/'assets/faq-help.js').read_text();assert 'Copy Answer' not in (R/'assets/faq-help.js').read_text()
 search=search_data();assert len(search['entries'])>=140

@@ -1,13 +1,13 @@
 {
-  "currentVersion": "2026-11-11-03",
-  "implementationBaseline": "9fe41cdf84b94b1fdd099db2fd2d149f6928741a",
+  "currentVersion": "2026-11-12-01",
+  "implementationBaseline": "4d972f29417fa60366ebdb6348e1599208f6ae08",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "OWNER AUTHORISED current reviewed staged public wording under R34; unresolved proposals remain unapproved",
+  "customerPolicyPublication": "R35 new Custom Tailoring content is STAGING ONLY pending owner review; previous R34 release retained",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "885c8a7125ffbe5ba5263de3db8141cb4deaa759e1a06dd39382deb1a0d8c0cb",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "140df73e954b6db77b9cea59b84c95718f9bf6b4296b5f17013a149dfae9a11d",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "26f01b90ebd77d03fedd6420b43de07f559835495af77547326978dba9101b99",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "a85e58140221718c7cec72a3a2747740c5932c993fe5c56d79f9c54ea0d4f962",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "03e121e7985f67048db933c04cf34cef8327444e1cdfbea14a1df01135306d77"
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "bca5b912ac29bbbfc9298b14a16b75600df519885cb4e87be6ec251876b80201",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "da52f32a48cbcd906e642f2779c5bcb7e475a6d9f73de59e8b343b5039c82955",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "74475d358d424fb91bd82394f28c74af09dca59de32fd8a37231bdedd3bd2683",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "a96cffd0c24c8474422e88aa54d278a9d4a31f54615115485b3df8382d6e2e35",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "f044500e7d36dc1a6599803148a1831f3d30cfbe791e44ea1524fd5531572046"
   }
 }

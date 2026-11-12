@@ -48,10 +48,15 @@ def frame(route,title,description,content,kind='WebPage',service=None):
  for key,value in values.items():source=source.replace('{{'+key+'}}',value)
  source=source.replace('class="tailoring-page"','class="tailoring-page customer-site"').replace('/assets/custom-tailoring.js','/assets/customer-site.js').replace('</head>','<link rel="stylesheet" href="/assets/customer-site.css"></head>')
  assert not re.search(r'{{\w+}}',source)
+ if route==BASE:source=__import__('custom_tailoring_mobile').decorate(source)
  return source
 
 def service_page(ident):
- s=service_map()[ident];body=hero(ident)
+ s=service_map()[ident]
+ if ident=='custom-tailoring':
+  body=__import__('custom_tailoring_mobile').content(s,hero,section,link)
+  return frame(s['route'],s['title'],s['intro'],body,service=s)
+ body=hero(ident)
  for title,text in s['sections']:
   if ident=='custom-tailoring':text=text.replace('Choose Standard Service or individually assessed VIP Service before choosing a website design (Standard Order) or your own inspiration (Special Order).','Browse Men’s or Women’s Suits, or use the Special Order alternative to describe your own inspiration.')
   body+=section(title,text)
