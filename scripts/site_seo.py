@@ -57,14 +57,14 @@ def finalize(source,path):
     source=re.sub(r'<script src="/assets/public-api[.]js[^"]*" defer></script>','',source)
     if 'customerRequestForm' in source or 'data-commerce-form' in source or 'shopData' in source:source=source.replace('</head>','<script src="/assets/public-api.js?v=staging-r32" defer></script></head>',1)
     source=source.replace('src="/assets/faq-help.js"','src="/assets/faq-help.js?v=staging-r32"').replace('src="/assets/faq-actions.js"','src="/assets/faq-actions.js?v=staging-r32"').replace('src="/assets/request-context.js"','src="/assets/request-context.js?v=staging-r32"').replace('src="/assets/customer-site.js"','src="/assets/customer-site.js?v=staging-r32"').replace('src="/assets/commerce.js"','src="/assets/commerce.js?v=staging-r32"').replace('src="/assets/homepage.js"','src="/assets/homepage.js?v=mobile-motion-r24"')
-    source=re.sub(r'<script id="designSelectionData".*?</script>|<script src="/assets/design-selections.js[^"]*" defer></script>|<link rel="stylesheet" href="/assets/design-selections.css">','',source,flags=re.S)
+    source=re.sub(r'<script id="designSelectionData".*?</script>|<script src="/assets/design-selections.js[^"]*" defer></script>|<link rel="stylesheet" href="/assets/design-selections.css[^\"]*">','',source,flags=re.S)
     if route.startswith(('/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
         refs=json.loads((ROOT/'_data/request-reference-allowlist.json').read_text());slugs={d['id']:d['slug'] for d in json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']}
         for id,d in refs.items():d['id']=id;d['route']='/collections/designs/'+slugs[id]+'/'
         from customer_policies import facts as _facts
         fabrics={f['id']:f for f in json.loads((ROOT/'_data/fabric-reference-catalogue.json').read_text())['fabrics']}
         selection_data={'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics}
-        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=staging-r33" defer></script><link rel="stylesheet" href="/assets/design-selections.css"></head>',1)
+        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=staging-r43" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r43"></head>',1)
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())

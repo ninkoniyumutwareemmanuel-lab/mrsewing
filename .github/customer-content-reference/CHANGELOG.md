@@ -123,3 +123,6 @@ Record owner’s website-wide preservation and page-specific search-intent rule.
 
 ## 2026-11-12-08 — R42 suitgallery refinement and sharedOFFER
 Latest owner approves compact image/name gallerylinks,category-specific intro/H2 and shared75sstickyOFFER on suitlandings/categories/approveddetails. Detailjourney/SEO/catalogue/commercialfacts preserved. Stagingonly; knowncontinuousmotionlimitation retained.
+
+## 2026-11-12-09 — R43 selectionreview andsharing
+Owner authorises actionablewholebarlink, actualphoto review, optionalWhatsApp/native/copysharing andpreservedfabricquotation. Stageonly;noauto messages/uploads/newforms/production.
