@@ -1,0 +1,406 @@
+{
+  "rule": "R41",
+  "date": "2026-11-12",
+  "scope": "Indexable canonical pages; no new indexing permission. Special Order enquiry remains noindex.",
+  "pages": [
+    {
+      "route": "/",
+      "primaryTopic": "tailoring and alterations in Kigali",
+      "secondaryTopics": [
+        "Mr Sewing Fashion",
+        "Mr Sewing",
+        "tailor shop in Kigali",
+        "custom tailoring in Rwanda"
+      ],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/about/",
+      "primaryTopic": "About Mr Sewing Fashion",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/mensuits/",
+      "primaryTopic": "men’s suits in Kigali",
+      "secondaryTopics": [
+        "custom suits",
+        "men’s tailoring in Kigali"
+      ],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/womensuits/",
+      "primaryTopic": "women’s suits in Kigali",
+      "secondaryTopics": [
+        "women’s tailoring in Kigali"
+      ],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/services/custom-tailoring/",
+      "primaryTopic": "Custom Tailoring & Suits in Kigali, Rwanda",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/services/mobile-fitting/",
+      "primaryTopic": "Mobile Tailoring & Styling in Kigali",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/measurements/",
+      "primaryTopic": "Suit Measurement Guide, Kigali",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/contact/",
+      "primaryTopic": "Contact Mr Sewing Fashion",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/faq/",
+      "primaryTopic": "Tailoring FAQs for Kigali Clients",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/loyalty-program/",
+      "primaryTopic": "Loyalty Program",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/referral-program/",
+      "primaryTopic": "Referral Program",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/",
+      "primaryTopic": "Online Shop",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/services/vip/",
+      "primaryTopic": "VIP Styling & Garment Assistance in Kigali",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/guides/fabrics/",
+      "primaryTopic": "Suit Fabrics & Starting Prices in Kigali",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/mensuits/single-breasted/",
+      "primaryTopic": "Men's Single-Breasted Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/mensuits/double-breasted/",
+      "primaryTopic": "Men's Double-Breasted Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/mensuits/tuxedos-formalwear/",
+      "primaryTopic": "Men's Tuxedos & Formalwear",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/mensuits/three-piece/",
+      "primaryTopic": "Men's Three-Piece Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/mensuits/kaunda/",
+      "primaryTopic": "Kaunda suits",
+      "secondaryTopics": [
+        "Kaunda suit tailoring in Kigali"
+      ],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/womensuits/single-breasted/",
+      "primaryTopic": "Women's Single-Breasted Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/womensuits/double-breasted/",
+      "primaryTopic": "Women's Double-Breasted Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/womensuits/skirt-suits/",
+      "primaryTopic": "Women's Skirt Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/womensuits/three-piece/",
+      "primaryTopic": "Women's Three-Piece Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/our-work/",
+      "primaryTopic": "Tailoring Portfolio in Kigali",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/services/alterations/",
+      "primaryTopic": "Clothing Alterations & Repairs in Kigali",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/services/garment-care/",
+      "primaryTopic": "garment care and cleaning in Kigali",
+      "secondaryTopics": [
+        "garment cleaning",
+        "garment care in Rwanda"
+      ],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-096/",
+      "primaryTopic": "Light single-breasted tailoring · MS-096",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-117/",
+      "primaryTopic": "Grey double-breasted tailoring · MS-117",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-005/",
+      "primaryTopic": "Off-white tailoring — front view · MS-005",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-006/",
+      "primaryTopic": "Off-white tailoring — side view · MS-006",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-029/",
+      "primaryTopic": "Kaunda suit — MS-029 · MS-029",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-030/",
+      "primaryTopic": "Kaunda suit — MS-030 · MS-030",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-031/",
+      "primaryTopic": "Kaunda suit — MS-031 · MS-031",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-032/",
+      "primaryTopic": "Kaunda suit — MS-032 · MS-032",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-033/",
+      "primaryTopic": "Kaunda suit — MS-033 · MS-033",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-034/",
+      "primaryTopic": "Kaunda suit — MS-034 · MS-034",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-035/",
+      "primaryTopic": "Kaunda suit — MS-035 · MS-035",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-036/",
+      "primaryTopic": "Kaunda suit — MS-036 · MS-036",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-069/",
+      "primaryTopic": "Blue single-breasted tailoring · MS-069",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-083/",
+      "primaryTopic": "Blue single-breasted separates · MS-083",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-139/",
+      "primaryTopic": "Ivory Elegance One-Button Suit · MS-139",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-140/",
+      "primaryTopic": "Skyline Double-Breasted Suit · MS-140",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-141/",
+      "primaryTopic": "Royal Ivory Three-Piece Suit · MS-141",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-142/",
+      "primaryTopic": "Royal Ivory Tuxedo · MS-142",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-143/",
+      "primaryTopic": "Burgundy Grace Women's Single-Breasted Suit · MS-143",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-144/",
+      "primaryTopic": "Midnight Elegance Women's Double-Breasted Suit · MS-144",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-145/",
+      "primaryTopic": "Burgundy Royale Women's Skirt Suit · MS-145",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ms-146/",
+      "primaryTopic": "Camel Grace Women's Three-Piece Suit · MS-146",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/midnight-black-double-breasted-gold/",
+      "primaryTopic": "Midnight Black Double-Breasted Suit – Gold Edition · MS-147",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/",
+      "primaryTopic": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition · MS-148",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/sky-blue-elegance-suit/",
+      "primaryTopic": "Sky Blue Elegance Suit · MS-149",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/rose-elegance-suit/",
+      "primaryTopic": "Rose Elegance Suit · MS-150",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/collections/designs/royal-blue-executive-womens-three-piece/",
+      "primaryTopic": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection · MS-151",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/our-work/off-white-graduation-suit/",
+      "primaryTopic": "Off-White Graduation Suit",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/our-work/light-grey-and-navy/",
+      "primaryTopic": "Light Grey & Navy Contrast",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/our-work/soft-ivory-tailoring/",
+      "primaryTopic": "Soft Ivory Tailoring",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/our-work/cobalt-blue-suit/",
+      "primaryTopic": "Cobalt Blue Suit",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/our-work/blue-jacket-black-trousers/",
+      "primaryTopic": "Blue Jacket, Dark Foundation",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/category/clothes-hangers/",
+      "primaryTopic": "Clothes Hangers",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/category/footwear/",
+      "primaryTopic": "Footwear",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/category/garment-covers/",
+      "primaryTopic": "Garment Covers",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/category/mens-suits/",
+      "primaryTopic": "Men's Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/category/shirts/",
+      "primaryTopic": "Shirts",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/shop/category/womens-suits/",
+      "primaryTopic": "Women's Suits",
+      "secondaryTopics": [],
+      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    }
+  ]
+}

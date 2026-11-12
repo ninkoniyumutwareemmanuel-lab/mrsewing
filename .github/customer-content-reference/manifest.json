@@ -1,13 +1,13 @@
 {
-  "currentVersion": "2026-11-12-06",
-  "implementationBaseline": "33d23e3472691e566efac65743a03eab993c9713",
+  "currentVersion": "2026-11-12-07",
+  "implementationBaseline": "7707c0f6217f959e3a1aa635a2853d41c17a6217",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R40 eight Men\u2019s Kaunda reference photographs and category staging only; no new commercial policy",
+  "customerPolicyPublication": "R41 standing SEO governance; no public policy or production change",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "44103c3c1a6f9d5aa1ddbc354ff1236cc527764d8073d9e637a6ee455b0446e1",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "baf9ac5bdebd157f063665e5badda8fed8738c1e1fc9a47de556a88ab082ff22",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "01251996dbad10b1ab6b1ceff2fce478d0d05f2db08116028ddce9bb3650c9e1",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "2887ced7ea2b7b8587f05f1fa7c4c86d6d5b5011c87b68e212fca69e5e78a9a6",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "39347d4d56980c23a8c50aaba34141d9e004713b24c65d3078715f8794e2b265"
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "4e809d8a21ff33a530536fba8f63cb832eaf8774eaadd25f97488e6a8e6e6aae",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "a2fbe08e0215778416a396b93ef621383e060ebf8b1314c31106f8f4ef2ac2d1",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "accfbf299558f4b62be8ea172f08db0e5199b5fa4494008531a18b9563c5622a",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "ce6c71342a012bb30b711fbb27dd901a35d2758af69f3df8800e83c870a0e804",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "0ec5d2d3c957854cba96813fe07a45ee3017b7de7a337430a46782b465b53771"
   }
 }

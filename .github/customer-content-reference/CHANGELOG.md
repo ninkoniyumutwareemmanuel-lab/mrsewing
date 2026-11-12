@@ -117,3 +117,6 @@ Two suit-category landing intros shortened;landingSpecialOrderbuttonremoved. Car
 
 ## 2026-11-12-06 — R40 Men’s Kaunda restoration
 Explicit owner approval resolves precisely MS-029–036 publication hold. Retain historical sources, unverified creator provenance and women/s1–s5 holds. Existing architecture, staging only.
+
+## 2026-11-12-07 — R41 mandatory two-level SEO
+Record owner’s website-wide preservation and page-specific search-intent rule. Audit64canonical pages, preserve public content and stagingnoindex; no production change.

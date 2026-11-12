@@ -1,0 +1,1228 @@
+{
+  "scope": "64 sitemap-listed canonical pages, local generated staging source; excludes held/legacy/request pages from duplicate comparisons",
+  "pages": [
+    {
+      "route": "/",
+      "title": [
+        "Mr Sewing Fashion | Tailoring & Alterations in Kigali"
+      ],
+      "description": [
+        "Mr Sewing Fashion in Kigali, Rwanda offers custom tailoring, suits, clothing alterations and garment care. Explore our services and book a consultation."
+      ],
+      "h1": [
+        "Mr Sewing Fashion"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/about/",
+      "title": [
+        "About Mr Sewing Fashion | Bespoke Tailoring in Kigali"
+      ],
+      "description": [
+        "Meet Mr Sewing Fashion, a Kigali tailoring and garment-assistance brand operated by NINKONIYUMUTWARE NEXUS LTD in Rwanda."
+      ],
+      "h1": [
+        "More Than Tailoring.A Reflection of You."
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/about/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/mensuits/",
+      "title": [
+        "Men's Suits in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Explore men’s suit design references by style at Mr Sewing Fashion in Kigali. Choose a category, view a reference or send your own design for assessment."
+      ],
+      "h1": [
+        "Men's Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/womensuits/",
+      "title": [
+        "Women's Suits in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Explore women’s suit design references at Mr Sewing Fashion in Kigali. Browse tailoring categories or send your own inspiration for a quotation enquiry."
+      ],
+      "h1": [
+        "Women's Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/services/custom-tailoring/",
+      "title": [
+        "Custom Tailoring & Suits in Kigali, Rwanda | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Plan custom suits and made-to-measure tailoring in Kigali, Rwanda. Explore men’s and women’s suit references, fabric preferences and a personal quotation."
+      ],
+      "h1": [
+        "Custom Tailoring & Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/services/mobile-fitting/",
+      "title": [
+        "Mobile Tailoring & Styling in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Request mobile tailoring, suit fitting, styling or event assistance in Kigali, Rwanda. Location visits are assessed for availability, feasibility and quotation."
+      ],
+      "h1": [
+        "Mobile Tailoring, Styling & Event Assistance"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/services/mobile-fitting/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/measurements/",
+      "title": [
+        "Suit Measurement Guide, Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Follow the suit measurement guide from Mr Sewing Fashion in Kigali, Rwanda. Learn which measurements to take, review sizing guidance or arrange a fitting."
+      ],
+      "h1": [
+        "Measurements Guide"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/measurements/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/contact/",
+      "title": [
+        "Contact Mr Sewing Fashion | Tailoring in Kigali"
+      ],
+      "description": [
+        "Contact Mr Sewing Fashion for bespoke tailoring in Kigali, Rwanda. Book a consultation, share your design, or plan a visit to our workshop."
+      ],
+      "h1": [
+        "Let's Create Something Exceptional."
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/contact/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/faq/",
+      "title": [
+        "Tailoring FAQs for Kigali Clients | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Answers about Mr Sewing Fashion services in Kigali, Rwanda: suit designs, fabrics, measurements, quotations, payments, delivery and customer support."
+      ],
+      "h1": [
+        "Welcome to the Mr Sewing Help Centre"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/faq/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/loyalty-program/",
+      "title": [
+        "Loyalty Program | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Learn about the 3% loyalty discount for qualifying repeat suit purchases at Mr Sewing Fashion in Kigali, Rwanda."
+      ],
+      "h1": [
+        "Loyalty Program"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/loyalty-program/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/referral-program/",
+      "title": [
+        "Referral Program | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Refer eligible new suit customers to Mr Sewing Fashion. Learn about referral benefits and request participation in Kigali, Rwanda."
+      ],
+      "h1": [
+        "Referral Program"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/referral-program/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/",
+      "title": [
+        "Online Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse the Mr Sewing Fashion product catalogue in Rwanda. Request availability and pricing, or submit a purchase request for approved in-stock products."
+      ],
+      "h1": [
+        "Online Shop"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/services/vip/",
+      "title": [
+        "VIP Styling & Garment Assistance in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Discuss personalised VIP tailoring, styling and garment assistance in Kigali, Rwanda. Requirements and service arrangements are individually assessed and quoted."
+      ],
+      "h1": [
+        "VIP Services"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/services/vip/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/guides/fabrics/",
+      "title": [
+        "Suit Fabrics & Starting Prices in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Explore men’s and women’s suit fabrics, tiers and starting suit prices in RWF. Mr Sewing Fashion in Kigali confirms availability and your final quotation."
+      ],
+      "h1": [
+        "Fabric Guide"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/mensuits/single-breasted/",
+      "title": [
+        "Men's Single-Breasted Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore single-breasted tailoring references with a single front button row. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Men's Single-Breasted Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/single-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/mensuits/double-breasted/",
+      "title": [
+        "Men's Double-Breasted Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore overlapping-front tailoring references with two button columns. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Men's Double-Breasted Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/double-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/mensuits/tuxedos-formalwear/",
+      "title": [
+        "Men's Tuxedos & Formalwear | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore approved tuxedo and formalwear references. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Men's Tuxedos & Formalwear"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/tuxedos-formalwear/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/mensuits/three-piece/",
+      "title": [
+        "Men's Three-Piece Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore jacket, trousers and waistcoat references. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Men's Three-Piece Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/three-piece/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/mensuits/kaunda/",
+      "title": [
+        "Men's Kaunda Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore Kaunda suit design references for your custom-tailored garment. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Men's Kaunda Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/kaunda/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/womensuits/single-breasted/",
+      "title": [
+        "Women's Single-Breasted Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore single-breasted tailoring, including asymmetric fronts and coordinated separates. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Women's Single-Breasted Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/single-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/womensuits/double-breasted/",
+      "title": [
+        "Women's Double-Breasted Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore overlapping-front tailoring with two button columns. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Women's Double-Breasted Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/double-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/womensuits/skirt-suits/",
+      "title": [
+        "Women's Skirt Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore jacket-and-skirt design references. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Women's Skirt Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/skirt-suits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/womensuits/three-piece/",
+      "title": [
+        "Women's Three-Piece Suits | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Explore three-piece tailoring references. Browse design references for an individually assessed tailoring quotation."
+      ],
+      "h1": [
+        "Women's Three-Piece Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/three-piece/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/our-work/",
+      "title": [
+        "Tailoring Portfolio in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Explore authorised photographs of completed Mr Sewing tailoring projects in Kigali, Rwanda, with garment details and a way to discuss your own design."
+      ],
+      "h1": [
+        "Every garment has a story."
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/services/alterations/",
+      "title": [
+        "Clothing Alterations & Repairs in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Request clothing alterations and garment repairs in Kigali, Rwanda. Describe the garment and changes needed for assessment, fitting arrangements and a quotation."
+      ],
+      "h1": [
+        "Clothing Alterations & Repairs"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/services/alterations/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/services/garment-care/",
+      "title": [
+        "Garment Care & Cleaning in Kigali | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Discuss garment care and cleaning in Kigali, Rwanda. Share the garment type, care requirements and condition for service suitability and quotation."
+      ],
+      "h1": [
+        "Garment Care & Cleaning"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/services/garment-care/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-096/",
+      "title": [
+        "Light single-breasted tailoring · MS-096 | Mr Sewing"
+      ],
+      "description": [
+        "Explore light single-breasted tailoring, design reference MS-096, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Light single-breasted tailoring"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-096/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-117/",
+      "title": [
+        "Grey double-breasted tailoring · MS-117 | Mr Sewing"
+      ],
+      "description": [
+        "Explore grey double-breasted tailoring, design reference MS-117, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Grey double-breasted tailoring"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-117/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-005/",
+      "title": [
+        "Off-white tailoring — front view · MS-005 | Mr Sewing"
+      ],
+      "description": [
+        "Explore off-white tailoring — front view, design reference MS-005, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Off-white tailoring — front view"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-005/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-006/",
+      "title": [
+        "Off-white tailoring — side view · MS-006 | Mr Sewing"
+      ],
+      "description": [
+        "Explore off-white tailoring — side view, design reference MS-006, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Off-white tailoring — side view"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-006/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-029/",
+      "title": [
+        "Kaunda suit — MS-029 · MS-029 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-029, design reference MS-029, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-029"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-029/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-030/",
+      "title": [
+        "Kaunda suit — MS-030 · MS-030 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-030, design reference MS-030, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-030"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-030/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-031/",
+      "title": [
+        "Kaunda suit — MS-031 · MS-031 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-031, design reference MS-031, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-031"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-031/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-032/",
+      "title": [
+        "Kaunda suit — MS-032 · MS-032 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-032, design reference MS-032, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-032"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-032/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-033/",
+      "title": [
+        "Kaunda suit — MS-033 · MS-033 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-033, design reference MS-033, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-033"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-033/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-034/",
+      "title": [
+        "Kaunda suit — MS-034 · MS-034 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-034, design reference MS-034, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-034"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-034/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-035/",
+      "title": [
+        "Kaunda suit — MS-035 · MS-035 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-035, design reference MS-035, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-035"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-035/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-036/",
+      "title": [
+        "Kaunda suit — MS-036 · MS-036 | Mr Sewing"
+      ],
+      "description": [
+        "Explore kaunda suit — ms-036, design reference MS-036, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Kaunda suit — MS-036"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-036/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-069/",
+      "title": [
+        "Blue single-breasted tailoring · MS-069 | Mr Sewing"
+      ],
+      "description": [
+        "Explore blue single-breasted tailoring, design reference MS-069, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Blue single-breasted tailoring"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-069/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-083/",
+      "title": [
+        "Blue single-breasted separates · MS-083 | Mr Sewing"
+      ],
+      "description": [
+        "Explore blue single-breasted separates, design reference MS-083, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Blue single-breasted separates"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-083/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-139/",
+      "title": [
+        "Ivory Elegance One-Button Suit · MS-139 | Mr Sewing"
+      ],
+      "description": [
+        "Explore ivory elegance one-button suit, design reference MS-139, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Ivory Elegance One-Button Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-139/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-140/",
+      "title": [
+        "Skyline Double-Breasted Suit · MS-140 | Mr Sewing"
+      ],
+      "description": [
+        "Explore skyline double-breasted suit, design reference MS-140, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Skyline Double-Breasted Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-140/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-141/",
+      "title": [
+        "Royal Ivory Three-Piece Suit · MS-141 | Mr Sewing"
+      ],
+      "description": [
+        "Explore royal ivory three-piece suit, design reference MS-141, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Royal Ivory Three-Piece Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-141/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-142/",
+      "title": [
+        "Royal Ivory Tuxedo · MS-142 | Mr Sewing"
+      ],
+      "description": [
+        "Explore royal ivory tuxedo, design reference MS-142, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Royal Ivory Tuxedo"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-142/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-143/",
+      "title": [
+        "Burgundy Grace Women's Single-Breasted Suit · MS-143 | Mr Sewing"
+      ],
+      "description": [
+        "Explore burgundy grace women's single-breasted suit, design reference MS-143, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Burgundy Grace Women's Single-Breasted Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-143/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-144/",
+      "title": [
+        "Midnight Elegance Women's Double-Breasted Suit · MS-144 | Mr Sewing"
+      ],
+      "description": [
+        "Explore midnight elegance women's double-breasted suit, design reference MS-144, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Midnight Elegance Women's Double-Breasted Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-144/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-145/",
+      "title": [
+        "Burgundy Royale Women's Skirt Suit · MS-145 | Mr Sewing"
+      ],
+      "description": [
+        "Explore burgundy royale women's skirt suit, design reference MS-145, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Burgundy Royale Women's Skirt Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-145/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ms-146/",
+      "title": [
+        "Camel Grace Women's Three-Piece Suit · MS-146 | Mr Sewing"
+      ],
+      "description": [
+        "Explore camel grace women's three-piece suit, design reference MS-146, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Camel Grace Women's Three-Piece Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-146/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/midnight-black-double-breasted-gold/",
+      "title": [
+        "Midnight Black Double-Breasted Suit – Gold Edition · MS-147 | Mr Sewing"
+      ],
+      "description": [
+        "Explore midnight black double-breasted suit – gold edition, design reference MS-147, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Midnight Black Double-Breasted Suit – Gold Edition"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/midnight-black-double-breasted-gold/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/",
+      "title": [
+        "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition · MS-148 | Mr Sewing"
+      ],
+      "description": [
+        "Explore ivory elegance shawl-lapel tuxedo – black tie edition, design reference MS-148, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/sky-blue-elegance-suit/",
+      "title": [
+        "Sky Blue Elegance Suit · MS-149 | Mr Sewing"
+      ],
+      "description": [
+        "Explore sky blue elegance suit, design reference MS-149, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Sky Blue Elegance Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/sky-blue-elegance-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/rose-elegance-suit/",
+      "title": [
+        "Rose Elegance Suit · MS-150 | Mr Sewing"
+      ],
+      "description": [
+        "Explore rose elegance suit, design reference MS-150, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Rose Elegance Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/rose-elegance-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/collections/designs/royal-blue-executive-womens-three-piece/",
+      "title": [
+        "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection · MS-151 | Mr Sewing"
+      ],
+      "description": [
+        "Explore royal blue executive women's three-piece pantsuit – signature collection, design reference MS-151, in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit."
+      ],
+      "h1": [
+        "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/royal-blue-executive-womens-three-piece/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/our-work/off-white-graduation-suit/",
+      "title": [
+        "Off-White Graduation Suit | Mr Sewing Fashion"
+      ],
+      "description": [
+        "Off-white tailoring, photographed with a graduation cap, gown and diploma scroll. An asymmetric jacket and matching trousers create a composed silhouette."
+      ],
+      "h1": [
+        "Off-White Graduation Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/off-white-graduation-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/our-work/light-grey-and-navy/",
+      "title": [
+        "Light Grey & Navy Contrast | Mr Sewing Fashion"
+      ],
+      "description": [
+        "A light grey double-breasted jacket is paired with navy trousers, a dark tie and a coordinating pocket square."
+      ],
+      "h1": [
+        "Light Grey & Navy Contrast"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/light-grey-and-navy/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/our-work/soft-ivory-tailoring/",
+      "title": [
+        "Soft Ivory Tailoring | Mr Sewing Fashion"
+      ],
+      "description": [
+        "A light jacket and matching trousers create a tonal look, layered over a simple pale top."
+      ],
+      "h1": [
+        "Soft Ivory Tailoring"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/soft-ivory-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/our-work/cobalt-blue-suit/",
+      "title": [
+        "Cobalt Blue Suit | Mr Sewing Fashion"
+      ],
+      "description": [
+        "A vivid blue jacket and matching trousers form a coordinated suit, finished with small lapel and pocket accents."
+      ],
+      "h1": [
+        "Cobalt Blue Suit"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/cobalt-blue-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/our-work/blue-jacket-black-trousers/",
+      "title": [
+        "Blue Jacket, Dark Foundation | Mr Sewing Fashion"
+      ],
+      "description": [
+        "A bright blue jacket is worn over a black top and dark trousers, creating a clear contrast between colour and neutral layers."
+      ],
+      "h1": [
+        "Blue Jacket, Dark Foundation"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/blue-jacket-black-trousers/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/category/clothes-hangers/",
+      "title": [
+        "Clothes Hangers | Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse clothes hangers in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation."
+      ],
+      "h1": [
+        "Clothes Hangers"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/clothes-hangers/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/category/footwear/",
+      "title": [
+        "Footwear | Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse footwear in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation."
+      ],
+      "h1": [
+        "Footwear"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/footwear/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/category/garment-covers/",
+      "title": [
+        "Garment Covers | Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse garment covers in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation."
+      ],
+      "h1": [
+        "Garment Covers"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/garment-covers/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/category/mens-suits/",
+      "title": [
+        "Men's Suits | Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse men's suits in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation."
+      ],
+      "h1": [
+        "Men's Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/mens-suits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/category/shirts/",
+      "title": [
+        "Shirts | Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse shirts in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation."
+      ],
+      "h1": [
+        "Shirts"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/shirts/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    },
+    {
+      "route": "/shop/category/womens-suits/",
+      "title": [
+        "Women's Suits | Shop | Mr Sewing Fashion, Kigali"
+      ],
+      "description": [
+        "Browse women's suits in the Mr Sewing Fashion catalogue. Availability and final purchase arrangements require confirmation."
+      ],
+      "h1": [
+        "Women's Suits"
+      ],
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/womens-suits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "jsonLdBlocks": 1
+    }
+  ],
+  "issues": [],
+  "stagingHeaderPreserved": true,
+  "limitations": [
+    "JSON-LD syntax checked; Google rich-result eligibility not independently verified.",
+    "Live rendering and Search Console indexing not checked; environment previously blocked pages.dev and production domains.",
+    "Internal link target files checked; server redirects, external links and remote responses not checked."
+  ]
+}
