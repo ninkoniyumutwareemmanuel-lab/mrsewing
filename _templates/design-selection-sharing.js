@@ -2,12 +2,11 @@
 (()=>{'use strict';
  const byId=id=>document.getElementById(id);
  function init(){
-  const toggle=byId('selection-share-toggle'),options=byId('selection-share-options');
-  if(!toggle||!options)return;
+  const options=byId('selection-share-options');
+  if(!options)return;
   const whatsapp=byId('selection-share-whatsapp'),native=byId('selection-share-native'),copy=byId('selection-share-copy'),status=byId('selection-share-status'),manual=byId('selection-share-text'),parts=byId('selection-share-parts');
   const MAX_PART=1800;
   const fits=text=>text.length<=MAX_PART&&encodeURIComponent(text).length<=MAX_PART;
-  toggle.setAttribute('aria-controls',options.id);toggle.setAttribute('aria-expanded',String(!options.hidden));
   const say=text=>{status.textContent=text;};
   function data(){
    const rows=window.MrDesignSelections?.sharingSnapshot?.()||[];
@@ -23,17 +22,18 @@
    if(!rows.length)throw Error('No designs selected');
    const preview=!['mrsewingfashion.com','www.mrsewingfashion.com'].includes(location.hostname);
    const intro='Hello Mr Sewing Fashion. I have selected '+rows.length+' suit '+(rows.length===1?'design':'designs')+' from your website and would like to share '+(rows.length===1?'it':'them')+' with you.';
+   const total='Total garments: '+rows.reduce((sum,row)=>sum+row.quantity,0)+'.';
    const note=preview?'Staging preview links: these open the current preview website, not the live production website.':'';
-   const entries=rows.map((row,i)=>(i+1)+'. '+row.name+'\nQuantity: '+row.quantity+'\nDesign: '+row.design+'\nPhotograph: '+row.photograph);
+   const entries=rows.map((row,i)=>(i+1)+'. '+row.name+'\nQuantity: '+row.quantity+'\nPhotograph: '+row.photograph);
+   const links=rows.map((row,i)=>(i+1)+'. '+row.name+'\nQuantity: '+row.quantity+'\nDesign: '+row.design+'\nPhotograph: '+row.photograph);
    const close='Please review these designs with me.';
-   return {rows,intro,note,entries,close,text:[intro,note,...entries,close].filter(Boolean).join('\n\n')};
+   return {rows,intro: intro+'\n'+total,note,entries,close,text:[intro,total,note,...links,close].filter(Boolean).join('\n\n'),whatsappText:[intro,total,note,...entries,close].filter(Boolean).join('\n\n')};
   }
   function fallback(message,text){
    manual.value=text;manual.hidden=false;manual.focus();manual.select();say(message);
   }
   function get(){try{return prepared();}catch{say('Your selected designs are unavailable. Return to the suit galleries and review your selections.');return null;}}
   function reset(){parts?.replaceChildren();manual.value='';manual.hidden=true;say('');}
-  toggle.addEventListener('click',()=>{const open=options.hidden;options.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(open){reset();whatsapp.focus();}});
   function handoff(text,trigger){
    if(!window.MrSewingWhatsApp?.open){fallback('WhatsApp is unavailable here. Copy the complete design list below and use the official contact link.',get()?.text||text);return;}
    // Existing Terms controller has a 6000-character cap; never pass an oversized message.
@@ -43,7 +43,7 @@
   }
   whatsapp.addEventListener('click',()=>{
    const bundle=get();if(!bundle)return;reset();
-   if(fits(bundle.text)){handoff(bundle.text,whatsapp);return;}
+   if(fits(bundle.whatsappText)){handoff(bundle.whatsappText,whatsapp);return;}
    // Split only between whole design entries. The original order and every link are retained.
    const chunks=[];let group=[];
    const compose=(entries,part,total)=>[bundle.intro,bundle.note,'Part '+part+' of '+total,...entries,bundle.close].filter(Boolean).join('\n\n');

@@ -80,7 +80,8 @@ for d in pool:
  assert groups==[[x['id']for x in g]for g in first],f+' generated recommendation list stale'
  out['details'][route]['recommendations']={'similar':groups[0],'more':groups[1]}
 if not args.capture_baseline:
- for f in ['sitemap.xml','robots.txt','_headers','_data/collection-designs.json','_data/collection-id-registry.json','_data/suit-reference-categories.json','_data/request-reference-allowlist.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','_data/customer-faqs.json','_data/fabric-reference-catalogue.json','_templates/design-selection-sharing.js','_templates/customer-interactions.js','_templates/customer-site.js','functions/_lib/selected-design-handler.js','index.html']:
+ # R45 selected-only shared JS/intake changes are audited in selected_suit_preservation.py and selected-suit-refinement tests.
+ for f in ['sitemap.xml','robots.txt','_headers','_data/collection-designs.json','_data/collection-id-registry.json','_data/suit-reference-categories.json','_data/request-reference-allowlist.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','_data/customer-faqs.json','_data/fabric-reference-catalogue.json','_templates/customer-interactions.js','index.html']:
   assert (ROOT/f).read_bytes()==subprocess.check_output(['git','show',BASE+':'+f],cwd=ROOT),f+' out-of-scope change'
  images={i['originalPath'] for d in json.loads((ROOT/'_data/collection-designs.json').read_text())['designs'] if d['id'] in {x['id'] for x in pool} for i in d['images']}
  for image in images:assert (ROOT/image).read_bytes()==subprocess.check_output(['git','show',BASE+':'+image],cwd=ROOT),image+' original changed'

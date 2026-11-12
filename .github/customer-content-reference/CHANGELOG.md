@@ -129,3 +129,6 @@ Owner authorises actionablewholebarlink, actualphoto review, optionalWhatsApp/na
 
 ## 2026-11-12-10 — R44 detailrefinement
 Owner approvescategory-aware recommendations,scopedbreadcrumb/mobilepolish,matchingBreadcrumbList andbrowsing-onlyfloatinglinkwithoutselectionloss. ExistingSEO/fabrictiers/quotation/sharing/OFFER preserved;stagingonly.
+
+## 2026-11-12-11 — R45 selected-suit form refinement
+OwnerapprovesdirectWhatsApp,compactdesignsummary,requiredKigalideadline/contactfields,nopriorityclassification/repeatedfabriccontrols. Existingper-designfabricpage andotherforms retained;completepayloadmocktests/noinboxclaim;stagingonly.

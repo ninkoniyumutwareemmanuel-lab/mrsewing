@@ -32,11 +32,12 @@ for route in routes:
   # R44 permits only the recommendation/breadcrumb/style changes audited in the dedicated test.
   assert re.search(r'<article class="design-layout">.*?</article>',old,re.S)[0]==re.search(r'<article class="design-layout">.*?</article>',new,re.S)[0],f+' primary photo/copy/selection journey changed'
  elif route!='/services/custom-tailoring/selected-designs/':
-  normalized=re.sub(r'design-selections.js\?v=staging-r(?:43|44)','design-selections.js?v=staging-r33',new).replace('design-selections.css?v=staging-r43','design-selections.css')
-  assert normalized==old,f+' unrelated static page changed'
+  normalized=lambda text:re.sub(r'((?:src|href)="/assets/[^"?]+\.(?:js|css))\?v=[^"]+',r'\1',text)
+  assert normalized(new)==normalized(old),f+' unrelated static page changed'
  else:
   assert ('h1','Your Selected Designs') in b.text and 'content="noindex, follow"' in new
-  assert 'Share Selected Designs' in new and 'Continue on Website' in new
-for f in ['sitemap.xml','robots.txt','_headers','_data/collection-designs.json','_data/collection-id-registry.json','_data/suit-reference-categories.json','_data/request-reference-allowlist.json','_data/customer-faqs.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','_data/fabric-reference-catalogue.json','_templates/customer-interactions.js','_templates/customer-site.js','functions/_lib/selected-design-handler.js','index.html']:
+  assert 'Send Selected Designs to Mr Sewing on WhatsApp' in new and 'Continue on Website' in new
+# R45 selected-only shared JS/intake changes are audited in selected_suit_preservation.py and selected-suit-refinement tests.
+for f in ['sitemap.xml','robots.txt','_headers','_data/collection-designs.json','_data/collection-id-registry.json','_data/suit-reference-categories.json','_data/request-reference-allowlist.json','_data/customer-faqs.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','_data/fabric-reference-catalogue.json','_templates/customer-interactions.js','index.html']:
  assert (R/f).read_bytes()==subprocess.check_output(['git','show',BASE+':'+f],cwd=R),f+' preserved scope'
 print('PASS43canonicalpages metadata/schema/canonicals preserved;reviewH1onlyexplicitchange;allotherstaticmarkup preservedapartfromsharedassetcacheversions;R44 detailrec/breadcrumb scope audited separately;catalogue/SEO/noindex/prices/forms/WhatsAppTerms/provider unchanged')

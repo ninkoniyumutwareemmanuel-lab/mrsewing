@@ -9,13 +9,14 @@ const digest=async bytes=>[...new Uint8Array(await crypto.subtle.digest('SHA-256
 export function ready(env){return env.REQUESTS_ENABLED==='true'&&['REQUESTS_DB','PRIVATE_REQUEST_FILES','TURNSTILE_SECRET','TURNSTILE_SITE_KEY','REQUEST_EMAIL_ACCESS_KEY','REQUEST_RATE_SECRET','STAFF_ACCESS_TEAM','STAFF_ACCESS_AUD','STAFF_ALLOWED_EMAILS'].every(k=>!!env[k])&&String(env.REQUEST_RATE_SECRET).length>=32&&/^[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.STAFF_ACCESS_TEAM)&&String(env.STAFF_ALLOWED_EMAILS).split(',').every(e=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim()));}
 function permittedHost(request,env){const h=new URL(request.url).hostname;return h==='mrsewingfashion.com'||h==='mrsewing-staging.pages.dev'||h.endsWith('.mrsewing-staging.pages.dev')||(env.LOCAL_TESTING==='true'&&['127.0.0.1','localhost'].includes(h));}
 function fail(status,message){throw Object.assign(Error(message),{status});}
-export function validateFields(raw){
+export function validateFields(raw,{selectedSuit=false}={}){
  if(!raw||Array.isArray(raw)||typeof raw!=='object')fail(400,'Invalid request fields.');
- const data={};for(const k of allowed)if(raw[k]!==undefined){if(typeof raw[k]!=='string'||raw[k].length>4000||/\u0000/.test(raw[k]))fail(400,'Invalid field length or value.');data[k]=raw[k].trim();}
- if(!data['Full Name']||data['Full Name'].length>160||!data['Customer Message']||!data.Location||data.Location.length>160)fail(400,'Complete name, location and message.');
+ const data={};for(const k of selectedSuit?[...allowed,'Country','Delivery Location / Address','Requested Completion Date','Requested Completion Time','Requested Completion Time Zone']:allowed)if(raw[k]!==undefined){if(typeof raw[k]!=='string'||raw[k].length>4000||/\u0000/.test(raw[k]))fail(400,'Invalid field length or value.');data[k]=raw[k].trim();}
+ if(!data['Full Name']||data['Full Name'].length>160||(!selectedSuit&&!data['Customer Message'])||!data.Location||data.Location.length>(selectedSuit?500:160))fail(400,selectedSuit?'Complete your full name and delivery location.':'Complete name, location and message.');
  if(!/^[+\d\s().-]{7,40}$/.test(data['Phone Number']||'')||!/^\d{7,15}$/.test((data['Phone Number']||'').replace(/\D/g,'')))fail(400,'Enter a valid phone number.');
  if(data['Email Address']&&(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data['Email Address'])||data['Email Address'].length>254))fail(400,'Enter a valid email address.');
- if(!services.includes(data.Service)||!['Standard Priority','Express Priority'].includes(data['Order Priority']))fail(400,'Choose a valid service and priority.');
+ if(!services.includes(data.Service)||!selectedSuit&&!['Standard Priority','Express Priority'].includes(data['Order Priority']))fail(400,'Choose a valid service and priority.');
+ if(selectedSuit&&(data.Service!=='Custom Tailoring & Suits'||data['Design Order Type']!=='Standard Order'||!data['Design Reference']))fail(400,'Selected suit validation applies only to approved website-design tailoring.');
  if(!/^\d{1,4}$/.test(data.Quantity||'')||+data.Quantity<1)fail(400,'Enter a valid garment quantity.');
  if(data['Design Reference']){
   if(data.Service!=='Custom Tailoring & Suits'||data['Design Order Type']==='Special Order')fail(400,'Website design references apply only to selected-design tailoring.');
