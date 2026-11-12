@@ -78,6 +78,134 @@
       }
     ]
   },
+  "MS-029": {
+    "name": "Kaunda suit — MS-029",
+    "image": "/m-kaundasuits1.jpeg",
+    "route": "/collections/designs/ms-029/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits1.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 716,
+        "height": 715,
+        "url": "https://mrsewingfashion.com/m-kaundasuits1.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-030": {
+    "name": "Kaunda suit — MS-030",
+    "image": "/m-kaundasuits2.jpeg",
+    "route": "/collections/designs/ms-030/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits2.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 542,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits2.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-031": {
+    "name": "Kaunda suit — MS-031",
+    "image": "/m-kaundasuits3.jpeg",
+    "route": "/collections/designs/ms-031/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits3.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 657,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits3.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-032": {
+    "name": "Kaunda suit — MS-032",
+    "image": "/m-kaundasuits4.jpeg",
+    "route": "/collections/designs/ms-032/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits4.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 528,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits4.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-033": {
+    "name": "Kaunda suit — MS-033",
+    "image": "/m-kaundasuits5.jpeg",
+    "route": "/collections/designs/ms-033/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits5.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 476,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits5.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-034": {
+    "name": "Kaunda suit — MS-034",
+    "image": "/m-kaundasuits6.jpeg",
+    "route": "/collections/designs/ms-034/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits6.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 461,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits6.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-035": {
+    "name": "Kaunda suit — MS-035",
+    "image": "/m-kaundasuits7.jpeg",
+    "route": "/collections/designs/ms-035/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits7.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 658,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits7.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
+  "MS-036": {
+    "name": "Kaunda suit — MS-036",
+    "image": "/m-kaundasuits8.jpeg",
+    "route": "/collections/designs/ms-036/",
+    "audience": "men",
+    "images": [
+      {
+        "src": "/m-kaundasuits8.jpeg",
+        "alt": "Men’s Kaunda suit",
+        "width": 566,
+        "height": 658,
+        "url": "https://mrsewingfashion.com/m-kaundasuits8.jpeg"
+      }
+    ],
+    "category": "Men's Kaunda Suits"
+  },
   "MS-069": {
     "name": "Blue single-breasted tailoring",
     "image": "/r2.jpeg",

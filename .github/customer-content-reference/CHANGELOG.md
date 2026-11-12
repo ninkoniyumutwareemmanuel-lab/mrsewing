@@ -114,3 +114,6 @@ Stickyexistingoffer/75scycle/SpecialTailoringbuttons+description. Kaundalegacyim
 
 ## 2026-11-12-05 — R39
 Two suit-category landing intros shortened;landingSpecialOrderbuttonremoved. Cards/gallerydestinations/CustomTailoringSpecial/form/approvedfactsandKaundagatepreserved. Stagingonly.
+
+## 2026-11-12-06 — R40 Men’s Kaunda restoration
+Explicit owner approval resolves precisely MS-029–036 publication hold. Retain historical sources, unverified creator provenance and women/s1–s5 holds. Existing architecture, staging only.

@@ -37,7 +37,7 @@
 
 /* Reviewed quotations, private-upload adapter and genuine portfolio references. No order/payment confirmation. */
 document.addEventListener('DOMContentLoaded',()=>{'use strict';const context=window.mrRequestContext;const names={'custom-tailoring':'Custom Tailoring & Suits','alterations':'Clothing Alterations & Repairs','garment-care':'Garment Care & Cleaning','mobile-fitting':'Mobile Tailoring, Styling & Event Assistance','vip':'VIP Services'};
-const suitLabels={"men-single-breasted": "Men's Single-Breasted Suits", "men-double-breasted": "Men's Double-Breasted Suits", "men-tuxedos-formalwear": "Men's Tuxedos & Formalwear", "men-three-piece": "Men's Three-Piece Suits", "women-single-breasted": "Women's Single-Breasted Suits", "women-double-breasted": "Women's Double-Breasted Suits", "women-skirt-suits": "Women's Skirt Suits", "women-three-piece": "Women's Three-Piece Suits"};
+const suitLabels={"men-single-breasted": "Men's Single-Breasted Suits", "men-double-breasted": "Men's Double-Breasted Suits", "men-tuxedos-formalwear": "Men's Tuxedos & Formalwear", "men-three-piece": "Men's Three-Piece Suits", "men-kaunda": "Men's Kaunda Suits", "women-single-breasted": "Women's Single-Breasted Suits", "women-double-breasted": "Women's Double-Breasted Suits", "women-skirt-suits": "Women's Skirt Suits", "women-three-piece": "Women's Three-Piece Suits"};
 const portfolioData=JSON.parse(document.getElementById('portfolioRequestData')?.textContent||'{}');
 const fabricData=JSON.parse(document.getElementById('fabricReferenceData')?.textContent||'{}');
 document.querySelector('[data-own-fabric]')?.addEventListener('click',e=>{e.preventDefault();location.href='/services/custom-tailoring/special-order/?fabricChoice=own';});

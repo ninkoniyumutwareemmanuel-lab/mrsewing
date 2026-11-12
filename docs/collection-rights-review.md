@@ -5,7 +5,7 @@ Existing-public photographs are carried into staging pending owner rights review
 Unreferenced originals are inventoried but excluded from showroom publication.
 No different photographs have been grouped by visual similarity.
 
-20 existing-public designs; 151 original garment records; 401 total image assets inventoried.
+28 existing-public designs; 151 original garment records; 401 total image assets inventoried.
 
 | ID | Original | Showroom | Provenance | Rights |
 | --- | --- | --- | --- | --- |
@@ -37,14 +37,14 @@ No different photographs have been grouped by visual similarity.
 | MS-026 | `m-doublebreastedsuittwo7.jpeg` | existing public display preserved | unverified | review_required |
 | MS-027 | `m-doublebreastedsuittwo8.jpeg` | existing public display preserved | unverified | review_required |
 | MS-028 | `m-doublebreastedsuittwo9.jpeg` | existing public display preserved | unverified | review_required |
-| MS-029 | `m-kaundasuits1.jpeg` | existing public display preserved | unverified | review_required |
-| MS-030 | `m-kaundasuits2.jpeg` | existing public display preserved | unverified | review_required |
-| MS-031 | `m-kaundasuits3.jpeg` | existing public display preserved | unverified | review_required |
-| MS-032 | `m-kaundasuits4.jpeg` | existing public display preserved | unverified | review_required |
-| MS-033 | `m-kaundasuits5.jpeg` | existing public display preserved | unverified | review_required |
-| MS-034 | `m-kaundasuits6.jpeg` | existing public display preserved | unverified | review_required |
-| MS-035 | `m-kaundasuits7.jpeg` | existing public display preserved | unverified | review_required |
-| MS-036 | `m-kaundasuits8.jpeg` | existing public display preserved | unverified | review_required |
+| MS-029 | `m-kaundasuits1.jpeg` | existing public display preserved | unverified | approved |
+| MS-030 | `m-kaundasuits2.jpeg` | existing public display preserved | unverified | approved |
+| MS-031 | `m-kaundasuits3.jpeg` | existing public display preserved | unverified | approved |
+| MS-032 | `m-kaundasuits4.jpeg` | existing public display preserved | unverified | approved |
+| MS-033 | `m-kaundasuits5.jpeg` | existing public display preserved | unverified | approved |
+| MS-034 | `m-kaundasuits6.jpeg` | existing public display preserved | unverified | approved |
+| MS-035 | `m-kaundasuits7.jpeg` | existing public display preserved | unverified | approved |
+| MS-036 | `m-kaundasuits8.jpeg` | existing public display preserved | unverified | approved |
 | MS-037 | `m-modernsuits1.jpeg` | existing public display preserved | unverified | review_required |
 | MS-038 | `m-modernsuits2.jpeg` | existing public display preserved | unverified | review_required |
 | MS-039 | `m-modernsuits3.jpeg` | existing public display preserved | unverified | review_required |

@@ -61,6 +61,27 @@
       "assetStatus": "owner-approved reference available"
     },
     {
+      "id": "men-kaunda",
+      "gender": "men",
+      "slug": "kaunda",
+      "title": "Kaunda Suits",
+      "description": "Explore Kaunda suit design references for your custom-tailored garment.",
+      "route": "/mensuits/kaunda/",
+      "designIds": [
+        "MS-029",
+        "MS-030",
+        "MS-031",
+        "MS-032",
+        "MS-033",
+        "MS-034",
+        "MS-035",
+        "MS-036"
+      ],
+      "coverDesignId": "MS-031",
+      "assetStatus": "Owner-approved historical photographs,12 November2026",
+      "homepagePreview": false
+    },
+    {
       "id": "women-single-breasted",
       "gender": "women",
       "slug": "single-breasted",
@@ -221,6 +242,46 @@
       "label": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
       "publicationEvidence": "Owner direct production update,7November2026; inspected original GitHub upload7daf846. Approved design/enquiry photograph only, not stock, prices or completed-work evidence.",
       "classificationEvidence": "Visible garment construction reviewed in owner-supplied photograph; category follows explicit owner description."
+    },
+    "MS-029": {
+      "label": "Kaunda suit — MS-029",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-030": {
+      "label": "Kaunda suit — MS-030",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-031": {
+      "label": "Kaunda suit — MS-031",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-032": {
+      "label": "Kaunda suit — MS-032",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-033": {
+      "label": "Kaunda suit — MS-033",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-034": {
+      "label": "Kaunda suit — MS-034",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-035": {
+      "label": "Kaunda suit — MS-035",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
+    },
+    "MS-036": {
+      "label": "Kaunda suit — MS-036",
+      "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
+      "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
     }
   }
 }

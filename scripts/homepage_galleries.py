@@ -7,7 +7,7 @@ def collection_items(gender):
  from suit_references import categories,references,model
  designs=load()[0];labels=model()['references'];items=[];seen=set()
  for category in categories():
-  if category['gender']!=gender:continue
+  if category['gender']!=gender or category.get('homepagePreview') is False:continue
   for design in references(category,designs):
    for photo in design['images']:
     if photo['src'] in seen:continue

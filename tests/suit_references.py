@@ -1,32 +1,34 @@
 #!/usr/bin/env python3
-"""R39: approved categories, current indexing and exact two-page preservation contract."""
+"""R40 publication scope and preservation of existing categories/visuals."""
 from pathlib import Path
-import sys,json,subprocess,re
+import sys,json,subprocess,re,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from suit_references import model,categories,references
 from build_collections import load
 from build_public_routes import public_routes
-BASE='2c8b2fa062adc4a97d1dd095ea37e994b18f18c8'
-m=model();cats=categories();pool=load()[0]
-assert len(cats)==8 and len({c['id'] for c in cats})==8 and len({c['route'] for c in cats})==8
-assert [c['title'] for c in cats if c['gender']=='men']==['Single-Breasted Suits','Double-Breasted Suits','Tuxedos & Formalwear','Three-Piece Suits']
-assert [c['title'] for c in cats if c['gender']=='women']==['Single-Breasted Suits','Double-Breasted Suits','Skirt Suits','Three-Piece Suits']
-assert len(m['references'])==19 and set(m['references']).issubset({d['id'] for d in pool})
-assert all(r['publicationEvidence'] and r['classificationEvidence'] for r in m['references'].values())
+BASE='33d23e3472691e566efac65743a03eab993c9713'
+def old(f):return subprocess.check_output(['git','show',BASE+':'+f],cwd=ROOT,text=True)
+def visible(s):return re.sub(r'<script id="(?:designSelectionData|requestDesignMedia|requestSuitCategories|requestDesigns)".*?</script>','',s,flags=re.S)
+m=model();cats=categories();pool=load()[0];ids=[f'MS-{n:03}' for n in range(29,37)]
+assert len(cats)==9 and len(m['references'])==27
+assert [c['title'] for c in cats if c['gender']=='men']==['Single-Breasted Suits','Double-Breasted Suits','Tuxedos & Formalwear','Three-Piece Suits','Kaunda Suits']
+before=json.loads(old('_data/suit-reference-categories.json'))
+assert [c for c in cats if c['id']!='men-kaunda']==before['categories']
+assert {k:v for k,v in m['references'].items() if k not in ids}==before['references']
+assert cats[4]['designIds']==ids
 for c in cats:
- rows=references(c,pool);file=c['route'].strip('/')+'/index.html';page=(ROOT/file).read_text();assert rows
- # R29 explicitly made populated, approved browsing categories indexable.
- assert c['route'] in public_routes() and 'content="index, follow"' in page and 'data-publication-hold' not in page
- assert all(d['id'] in page for d in rows)
- assert (ROOT/file).read_bytes()==subprocess.check_output(['git','show',BASE+':'+file],cwd=ROOT),file
-for gender in ['men','women']:
- file=('mensuits' if gender=='men' else 'womensuits')+'/index.html';p=(ROOT/file).read_text();old=subprocess.check_output(['git','show',BASE+':'+file],cwd=ROOT,text=True)
- assert p.count('class="suit-category-card"')==4 and 'Explore Suit Styles' in p
- assert 'Special Order — Send Your Own Design' not in p and 'class="home-button home-button-gold suit-special"' not in p
- assert old.split('<div class="suit-category-grid">',1)[1].split('</section>',1)[0]==p.split('<div class="suit-category-grid">',1)[1].split('</section>',1)[0]
- for pattern in [r'<header\b.*?</header>',r'<footer\b.*?</footer>',r'<title>.*?</title>',r'<script type="application/ld\+json">.*?</script>']:
-  assert re.search(pattern,p,re.S).group()==re.search(pattern,old,re.S).group(),file
- assert re.findall(r'<meta\b[^>]*>',p)==re.findall(r'<meta\b[^>]*>',old)
-for file in ['_data/collection-designs.json','_data/collection-id-registry.json','_data/suit-reference-categories.json','_data/customer-projects.json','_data/measurement-guide-images.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','assets/suit-references.css','assets/customer-site.js','services/custom-tailoring/index.html','services/custom-tailoring/special-order/index.html','index.html']:
- assert (ROOT/file).read_bytes()==subprocess.check_output(['git','show',BASE+':'+file],cwd=ROOT),file
-print('PASS8approved/indexable categories19references/cardmarkup/header/footer/meta/galleryfiles/data/styles/CustomTailoringSpecial/form/home preserved;landingSpecialOrderremoved')
+ rows=references(c,pool);f=c['route'].strip('/')+'/index.html';page=(ROOT/f).read_text();assert rows and c['route'] in public_routes()
+ assert 'content="index, follow"' in page and all(d['id'] in page for d in rows)
+ if c['id']!='men-kaunda':assert visible(page)==visible(old(f)),f
+for f in ['womensuits/index.html','womensuits.html','services/custom-tailoring/index.html','services/custom-tailoring/special-order/index.html','index.html']:
+ assert visible((ROOT/f).read_text())==visible(old(f)),f
+for f in ['_data/collection-id-registry.json','_data/customer-projects.json','_data/measurement-guide-images.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','assets/suit-references.css','_templates/announcement-bar.css']:
+ assert (ROOT/f).read_text()==old(f),f
+now=json.loads((ROOT/'_data/collection-designs.json').read_text())['designs'];prior=json.loads(old('_data/collection-designs.json'))['designs']
+assert [x for x,y in zip(now,prior) if x!=y]==[x for x in now if x['id'] in ids]
+for a in json.loads((ROOT/'.github/customer-content-reference/KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json').read_text())['images']:
+ x=next(x for x in now if x['id']==a['designId']);assert x['rightsStatus']=='approved' and x['provenance']=='unverified'
+ assert hashlib.sha256((ROOT/a['originalImagePath']).read_bytes()).hexdigest()==a['sha256']
+allowed=json.loads((ROOT/'_data/request-reference-allowlist.json').read_text());assert all(i in allowed for i in ids)
+assert all(f'MS-{n}' not in allowed for n in range(120,125))
+print('PASS9categories27references;exact8approvals/originalbytes;existing8galleries/women/home/CustomSpecialvisuals/prices/styles/header/footer unchanged;unapproveds1–5 excluded')

@@ -1,0 +1,88 @@
+{
+  "rule": "R40",
+  "source": "Owner: MR SEWING FASHION — RESTORE MEN'S KAUNDA SUITS CATEGORY,12 November2026; explicit permission to publish these eight historical photographs",
+  "deployment": "STAGING ONLY",
+  "excluded": "s1.jpeg through s5.jpeg; all women’s Kaunda photographs; no creator/stock/completed-work assertions",
+  "images": [
+    {
+      "designId": "MS-029",
+      "originalImagePath": "m-kaundasuits1.jpeg",
+      "width": 716,
+      "height": 715,
+      "sha256": "b74a69382b7a0658ca385db7c1d14300cbcbc3e887dcb91618e346f5410272ce",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-030",
+      "originalImagePath": "m-kaundasuits2.jpeg",
+      "width": 542,
+      "height": 658,
+      "sha256": "9c358bd17b733623445fee97014c08b87855134a1ce277aa7ea9ee777012aa25",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-031",
+      "originalImagePath": "m-kaundasuits3.jpeg",
+      "width": 657,
+      "height": 658,
+      "sha256": "980da40e5b9a7fb67d7d1da9916779588beb4374bc6ca16f28ffe861b1f0f335",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-032",
+      "originalImagePath": "m-kaundasuits4.jpeg",
+      "width": 528,
+      "height": 658,
+      "sha256": "c929ee5ff65acb448d7a28ee4d3351531d28fb8aa84c7f6e6fa4ec62d817fad1",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-033",
+      "originalImagePath": "m-kaundasuits5.jpeg",
+      "width": 476,
+      "height": 658,
+      "sha256": "06520e7870d237960ca7a01c8df77f16a5d87430f78728bbe392d0ad04b46f72",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-034",
+      "originalImagePath": "m-kaundasuits6.jpeg",
+      "width": 461,
+      "height": 658,
+      "sha256": "22bbe6239af6852041f13f7388db22c225d9a80d0ceaa831ecf6d9f8ddf295ac",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-035",
+      "originalImagePath": "m-kaundasuits7.jpeg",
+      "width": 658,
+      "height": 658,
+      "sha256": "7458b24e0090cb766a6e11b262cbd1ea0bca9b4c20824641b20401f72487e238",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    },
+    {
+      "designId": "MS-036",
+      "originalImagePath": "m-kaundasuits8.jpeg",
+      "width": 566,
+      "height": 658,
+      "sha256": "c202524fc2dbc470ed02729a4e5712c7f51286852662eaa03e713b379b57d1bb",
+      "priorRightsStatus": "review_required",
+      "rightsStatus": "approved",
+      "provenance": "unverified"
+    }
+  ]
+}
