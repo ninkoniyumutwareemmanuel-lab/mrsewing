@@ -175,7 +175,8 @@ def render_design(d,designs):
         trail=trail.replace('href="'+c['route']+'"','class="design-back" href="'+c['route']+'"')
         html=re.sub(r'<a class="design-back"[^>]*>.*?</a>',lambda _:trail,html,count=1)
         html=html.replace('<p class="design-note">','<p class="design-reference-category">'+escape(category_label(c))+' · Reference '+d['id']+'</p><p class="design-note">',1)
-    return html
+    from announcement_bar import decorate as with_offer
+    return with_offer(html)
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()

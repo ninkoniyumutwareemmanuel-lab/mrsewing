@@ -16,3 +16,5 @@
 /* The existing header wrapper holds the brand header and offer bar as one sticky stack. */
 html.has-sticky-offer{scroll-padding-top:calc(var(--offer-header-height,140px) + 16px)}
 html.has-sticky-offer .custom-tailoring-mobile .release-section,html.has-sticky-offer .custom-tailoring-mobile .tailoring-disclosure,html.has-sticky-offer .custom-tailoring-mobile .tailoring-disclosure summary{scroll-margin-top:0}
+html.has-sticky-offer .suit-reference-view [id],html.has-sticky-offer .design-main [id]{scroll-margin-top:0}
+@media(max-width:1099px){html.js.has-sticky-offer #home-navigation{top:var(--offer-header-height,140px);max-height:calc(100dvh - var(--offer-header-height,140px) - 12px)}}

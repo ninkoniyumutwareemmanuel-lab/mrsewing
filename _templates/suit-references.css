@@ -3,6 +3,9 @@
 
 .suit-design-card img{object-fit:contain;background:#e8e0d2}
 
+/* R42: compact gallery copy only; category landing cards and photo dimensions stay intact. */
+.suit-gallery-view{padding-top:24px}.suit-gallery-view .suit-intro{margin-bottom:26px}.suit-gallery-view .suit-intro>p:not(.suit-breadcrumb){margin-top:14px;line-height:1.65}.suit-gallery-view .suit-intro>.suit-reference-note{font-size:14px;margin-top:10px}.suit-gallery-view section>h2{margin-bottom:12px}.suit-gallery-view .suit-design-grid{margin-top:20px}.suit-design-card .suit-category-copy{padding:18px 20px}.suit-design-card .suit-category-copy h3{margin:0;font-size:clamp(22px,3vw,29px);overflow-wrap:anywhere}
+
 .customer-breadcrumb ol{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1rem 0;font-size:.85rem}.customer-breadcrumb li+li:before{content:"/";margin-right:.5rem;color:#98866c}.customer-breadcrumb a{color:#79530b}.suit-reference-view .customer-breadcrumb a{color:#ddb956}.customer-breadcrumb [aria-current]{color:inherit}
 
 /* New category covers retain the whole approved garment, including composite views. */

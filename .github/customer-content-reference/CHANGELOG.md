@@ -120,3 +120,6 @@ Explicit owner approval resolves precisely MS-029–036 publication hold. Retain
 
 ## 2026-11-12-07 — R41 mandatory two-level SEO
 Record owner’s website-wide preservation and page-specific search-intent rule. Audit64canonical pages, preserve public content and stagingnoindex; no production change.
+
+## 2026-11-12-08 — R42 suitgallery refinement and sharedOFFER
+Latest owner approves compact image/name gallerylinks,category-specific intro/H2 and shared75sstickyOFFER on suitlandings/categories/approveddetails. Detailjourney/SEO/catalogue/commercialfacts preserved. Stagingonly; knowncontinuousmotionlimitation retained.

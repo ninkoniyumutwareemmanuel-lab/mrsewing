@@ -45,11 +45,7 @@ def content(service,hero,section,link):
     return body
 
 def decorate(source):
-    styles=(ROOT/'_templates/custom-tailoring-mobile.css').read_text()+'\n'+(ROOT/'_templates/announcement-bar.css').read_text()
+    from announcement_bar import decorate as with_offer
+    styles=(ROOT/'_templates/custom-tailoring-mobile.css').read_text()+'\n'
     source=source.replace('</style>',styles+'</style>',1).replace('class="tailoring-page customer-site"','class="tailoring-page customer-site custom-tailoring-mobile"')
-    offer=json.loads((ROOT/'_data/custom-tailoring-page.json').read_text())['announcement']
-    messages=''.join('<span class="announcement-message">'+escape(message)+'</span>' for message in offer['messages'])
-    bar=(ROOT/'_templates/announcement-bar.html').read_text().replace('{{offer_messages}}',messages)
-    assert source.count('</div><main id="main-content"')==1
-    source=source.replace('</div><main id="main-content"',bar+'</div><main id="main-content"',1)
-    return source.replace('</body>','<script>'+ (ROOT/'_templates/announcement-bar.js').read_text()+'</script></body>',1)
+    return with_offer(source)

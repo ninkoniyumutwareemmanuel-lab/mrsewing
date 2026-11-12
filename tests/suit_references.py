@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R40 publication scope and preservation of existing categories/visuals."""
+"""R40 publication scope; R42 authorises compact cards and shared OFFER wrappers."""
 from pathlib import Path
 import sys,json,subprocess,re,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
@@ -19,10 +19,12 @@ assert cats[4]['designIds']==ids
 for c in cats:
  rows=references(c,pool);f=c['route'].strip('/')+'/index.html';page=(ROOT/f).read_text();assert rows and c['route'] in public_routes()
  assert 'content="index, follow"' in page and all(d['id'] in page for d in rows)
- if c['id']!='men-kaunda':assert visible(page)==visible(old(f)),f
+ assert 'Tap a suit photograph to view its details.' in page and 'Choose a Reference' not in page
+ assert 'data-select-design=' not in page and 'View Design <span' not in page
+ for ident in c['designIds']:assert 'data-design-id="'+ident+'"' in page
 for f in ['womensuits/index.html','womensuits.html','services/custom-tailoring/index.html','services/custom-tailoring/special-order/index.html','index.html']:
- assert visible((ROOT/f).read_text())==visible(old(f)),f
-for f in ['_data/collection-id-registry.json','_data/customer-projects.json','_data/measurement-guide-images.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json','assets/suit-references.css','_templates/announcement-bar.css']:
+ assert re.search(r'<main\b.*?</main>',visible((ROOT/f).read_text()),re.S)[0]==re.search(r'<main\b.*?</main>',visible(old(f)),re.S)[0],f
+for f in ['_data/collection-id-registry.json','_data/customer-projects.json','_data/measurement-guide-images.json','_data/suit-package-prices.json','_data/tuxedo-package-prices.json']:
  assert (ROOT/f).read_text()==old(f),f
 now=json.loads((ROOT/'_data/collection-designs.json').read_text())['designs'];prior=json.loads(old('_data/collection-designs.json'))['designs']
 assert [x for x,y in zip(now,prior) if x!=y]==[x for x in now if x['id'] in ids]
@@ -31,4 +33,4 @@ for a in json.loads((ROOT/'.github/customer-content-reference/KAUNDA_PUBLICATION
  assert hashlib.sha256((ROOT/a['originalImagePath']).read_bytes()).hexdigest()==a['sha256']
 allowed=json.loads((ROOT/'_data/request-reference-allowlist.json').read_text());assert all(i in allowed for i in ids)
 assert all(f'MS-{n}' not in allowed for n in range(120,125))
-print('PASS9categories27references;exact8approvals/originalbytes;existing8galleries/women/home/CustomSpecialvisuals/prices/styles/header/footer unchanged;unapproveds1–5 excluded')
+print('PASS9categories27references;exact8approvals/originalbytes;R42simplegallerycards;women/home/CustomSpecialmain/prices/data unchanged;unapproveds1–5 excluded')
