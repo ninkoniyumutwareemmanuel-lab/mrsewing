@@ -111,3 +111,6 @@ Authoritativeordinarytierpricing/sitewideconsistency;fourbenefittables;FabricGui
 
 ## 2026-11-12-04 — R38
 Stickyexistingoffer/75scycle/SpecialTailoringbuttons+description. Kaundalegacyimagesinspected;allpermission-gated,nowomenapproved,noemptycategoryornewrightsapproval. PreserveR37facts/journeys/main.
+
+## 2026-11-12-05 — R39
+Two suit-category landing intros shortened;landingSpecialOrderbuttonremoved. Cards/gallerydestinations/CustomTailoringSpecial/form/approvedfactsandKaundagatepreserved. Stagingonly.

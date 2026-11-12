@@ -29,8 +29,8 @@ def wrap(route,title,description,body,pending=False):
 def landing(gender,designs):
  from build_collections import picture,SIZES
  title=label(gender);route=landing_route(gender)
- description="Explore suit styles and find inspiration for your custom-made garment. These photographs are design references, not guarantees of ready-made stock or exact fabric availability. Your selected style, fabric and final quotation will be confirmed before production." if gender=='men' else "Explore tailored styles and choose a design reference for your garment. Photographs illustrate possible designs, not confirmed ready-made stock. Your preferred style and fabric will be reviewed before a quotation is confirmed."
- body='<header class="suit-intro">'+breadcrumb([('Custom Tailoring & Suits',BASE),(title,None)])+'<h1>'+escape(title)+'</h1><p>'+escape(description)+'</p><a class="home-button home-button-gold suit-special" href="'+BASE+'special-order/?category='+gender+'&amp;order=special">Special Order — Send Your Own Design</a></header><section aria-labelledby="suit-styles-heading"><h2 id="suit-styles-heading">Explore Suit Styles</h2><div class="suit-category-grid">'
+ description="Explore our men's suit styles. Choose a category to discover designs for your custom-tailored garment." if gender=='men' else "Explore our women's tailored suit styles. Choose a category to discover designs for your preferred look."
+ body='<header class="suit-intro">'+breadcrumb([('Custom Tailoring & Suits',BASE),(title,None)])+'<h1>'+escape(title)+'</h1><p>'+escape(description)+'</p></header><section aria-labelledby="suit-styles-heading"><h2 id="suit-styles-heading">Explore Suit Styles</h2><div class="suit-category-grid">'
  for c in [c for c in categories() if c['gender']==gender]:
   refs=references(c,designs);cover=next((r for r in refs if r['id']==c['coverDesignId']),None)
   photo=picture({**cover['images'][0],'position':'50% 0%'}).replace(SIZES,'(min-width: 700px) 560px, 100vw') if cover else '<div class="suit-photo-pending"><span>Reference photograph pending</span></div>'
