@@ -142,13 +142,36 @@ def render(name,gender,title,designs):
     return html
 
 def recommendations(d,designs):
-    def score(other):
-        # Empty/unclassified metadata is never evidence of similarity.
-        return (3*len(set(d['styles'])&set(other['styles']))+2*len(set(d['occasions'])&set(other['occasions']))+int(d['gender']!='unclassified' and d['gender']==other['gender']))
-    candidates=[other for other in designs if other['id']!=d['id'] and (d['gender']=='unclassified' or other['gender']==d['gender'])]
-    similar=sorted([other for other in candidates if score(other)>0],key=lambda other:-score(other))[:4]
-    used={d['id'],*(other['id'] for other in similar)}
-    more=[other for other in candidates if other['id'] not in used][:4]
+    from suit_references import assignment,categories
+    current=assignment(d['id'])
+    # Publication alone is not evidence of category or gender.
+    if not current:return [],[]
+    pool={other['id']:other for other in designs}
+    # Existing R4 classification identifies these as two views of one garment.
+    garment=lambda ident:'MS-005' if ident=='MS-006' else ident
+    used={garment(d['id'])};photos={image['src'] for image in d['images']}
+    def take(ident):
+        other=pool.get(ident)
+        if not other or garment(ident) in used:return None
+        image_paths={image['src'] for image in other['images']}
+        if photos.intersection(image_paths):return None
+        used.add(garment(ident));photos.update(image_paths)
+        return other
+    similar=[]
+    for ident in current['designIds']:
+        other=take(ident)
+        if other:similar.append(other)
+        if len(similar)==4:break
+    more=[]
+    for category in categories():
+        if category['gender']!=current['gender'] or category['id']==current['id']:continue
+        # One approved representative per other category, in stable collection order.
+        ordered=[category['coverDesignId'],*[i for i in category['designIds'] if i!=category['coverDesignId']]]
+        for ident in ordered:
+            if ident not in category['designIds']:continue
+            other=take(ident)
+            if other:more.append(other);break
+        if len(more)==4:break
     return similar,more
 
 def render_design(d,designs):
@@ -163,7 +186,7 @@ def render_design(d,designs):
     image=d['images'][0]
     # No unsupported Product/offers/ownership claims.
     schema={'@context':'https://schema.org','@type':'WebPage','name':name+' | Mr Sewing','url':url,'description':design_description(d),'primaryImageOfPage':{'@type':'ImageObject','contentUrl':'https://mrsewingfashion.com'+image['src']}}
-    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'/services/custom-tailoring/fabric/?'+urlencode({'service':'custom-tailoring','order':'standard','design':d['id'],'experience':'standard'}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">Explore the full collection for more inspiration.</p>','more':''.join(card(other) for other in more),'thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
+    values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'/services/custom-tailoring/fabric/?'+urlencode({'service':'custom-tailoring','order':'standard','design':d['id'],'experience':'standard'}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">'+('There are no other approved designs in this category yet.' if assigned else 'Explore the suit categories for more design inspiration.')+'</p>','more':''.join(card(other) for other in more) or '<p class="related-empty">Explore the suit categories for more design inspiration.</p>','thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
     html=fill('collection-design.html',values)
     from suit_references import assignment,category_label
     c=assignment(d['id'])
@@ -171,10 +194,13 @@ def render_design(d,designs):
         html=html.replace('</head>','<link rel="stylesheet" href="/assets/suit-references.css"></head>')
         html=html.replace('href="/services/custom-tailoring/">← Custom Tailoring &amp; Suits','href="'+c['route']+'">← Back')
         from customer_navigation import breadcrumb
-        trail=breadcrumb([('Custom Tailoring & Suits','/services/custom-tailoring/'),("Men's Suits" if c['gender']=='men' else "Women's Suits",'/mensuits/' if c['gender']=='men' else '/womensuits/'),(c['title'],c['route']),(name,None)])
+        crumbs=[('Custom Tailoring & Suits','/services/custom-tailoring/'),("Men's Suits" if c['gender']=='men' else "Women's Suits",'/mensuits/' if c['gender']=='men' else '/womensuits/'),(c['title'],c['route']),(name,None)]
+        trail=breadcrumb(crumbs)
         trail=trail.replace('href="'+c['route']+'"','class="design-back" href="'+c['route']+'"')
         html=re.sub(r'<a class="design-back"[^>]*>.*?</a>',lambda _:trail,html,count=1)
         html=html.replace('<p class="design-note">','<p class="design-reference-category">'+escape(category_label(c))+' · Reference '+d['id']+'</p><p class="design-note">',1)
+        breadcrumb_schema={'@context':'https://schema.org','@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':i+1,'name':label,'item':'https://mrsewingfashion.com'+(href or route)} for i,(label,href) in enumerate(crumbs)]}
+        html=html.replace('</head>','<script type="application/ld+json">'+json_script(breadcrumb_schema)+'</script></head>',1)
     from announcement_bar import decorate as with_offer
     return with_offer(html)
 

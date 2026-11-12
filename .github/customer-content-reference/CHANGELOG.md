@@ -126,3 +126,6 @@ Latest owner approves compact image/name gallerylinks,category-specific intro/H2
 
 ## 2026-11-12-09 — R43 selectionreview andsharing
 Owner authorises actionablewholebarlink, actualphoto review, optionalWhatsApp/native/copysharing andpreservedfabricquotation. Stageonly;noauto messages/uploads/newforms/production.
+
+## 2026-11-12-10 — R44 detailrefinement
+Owner approvescategory-aware recommendations,scopedbreadcrumb/mobilepolish,matchingBreadcrumbList andbrowsing-onlyfloatinglinkwithoutselectionloss. ExistingSEO/fabrictiers/quotation/sharing/OFFER preserved;stagingonly.
