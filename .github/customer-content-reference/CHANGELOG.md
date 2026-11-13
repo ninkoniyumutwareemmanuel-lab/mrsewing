@@ -135,3 +135,6 @@ OwnerapprovesdirectWhatsApp,compactdesignsummary,requiredKigalideadline/contactf
 
 ## 2026-11-13-01 — R46 selection lifetime
 Owner-approved 12 November 2026 technical rule: persisted 120-second departure grace, closed browsing handoff into independent quotation snapshots, history/stale-URL guards and graceful storage failure. Staging only; R45 customer information and all protected SEO/forms/fabric functionality retained. Previous dated snapshots preserved.
+
+## 2026-11-13-02 — R47 priority technical SEO
+Record13November owner instruction, source-vs-HTTP audit distinction, approved Kaunda-only sitemap delta and deliberate Services directory exclusion. Add square/conventional favicon and explicit404 host boundary; preserve all commercial content and journeys. Network-blocked live checks and unresolved Search Console URLs documented. Staging only; production release proposal isolates technical changes.

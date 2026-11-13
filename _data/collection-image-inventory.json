@@ -6379,6 +6379,18 @@
       "missing": false,
       "excludedReason": "Owner-approved parent-company About hero logo, not a garment reference",
       "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/images/favicon-192.png",
+      "sourceOriginal": "assets/images/logo-icon.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Technical favicon derivative of the existing approved logo; not a suit photograph or merchandise. Owner technical SEO repair13November2026.",
+      "legacyReferences": []
     }
   ],
   "missingLegacyReferences": [],

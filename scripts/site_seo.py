@@ -48,6 +48,8 @@ def route_for(path):
     return '/'+(str(rel.parent) if rel.name=='index.html' else str(rel.with_suffix(''))) .strip('/')+'/'
 def finalize(source,path):
     route=route_for(path)
+    # Use a square favicon while preserving the approved non-square logo asset.
+    source=re.sub(r'<link\b[^>]*\brel=["\'](?:icon|shortcut icon)["\'][^>]*>',lambda m:re.sub(r'\btype=["\'][^"\']*["\']','type="image/png"',re.sub(r'\bhref=["\'][^"\']*["\']','href="/assets/images/favicon-192.png"',m[0])),source,flags=re.I)
     override=json.loads((ROOT/'_data/public-page-seo.json').read_text()).get(route)
     if override:
         from sync_page_seo import apply

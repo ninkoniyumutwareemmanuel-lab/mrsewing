@@ -1,0 +1,28 @@
+{
+  "approval": "Owner technical SEO repair instruction, 13 November 2026",
+  "source": "assets/images/logo-icon.png",
+  "sourceSha256": "043507bde8da49eab3a94c5e854335561a89758dd3d3cf0c09cea797ed50bb3a",
+  "sourceDimensions": [
+    192,
+    124
+  ],
+  "treatment": "Unchanged artwork, centered on transparent square padding; aspect ratio preserved",
+  "squareDimensions": [
+    192,
+    192
+  ],
+  "icoSizes": [
+    16,
+    32,
+    48,
+    64,
+    96,
+    128,
+    144,
+    192
+  ],
+  "outputs": {
+    "assets/images/favicon-192.png": "862296f22109e09753fab8a6aeed418cfca2f93963ac98c42d33d85b1f531f2b",
+    "favicon.ico": "702e06ae70d1d696acd28f3078794180b81d4f362e6200316d25d47c27901a9d"
+  }
+}
