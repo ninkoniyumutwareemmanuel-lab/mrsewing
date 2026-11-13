@@ -1,0 +1,144 @@
+{
+  "approval": "Owner complete Custom Tailoring journey instruction,13 November2026",
+  "purpose": "Illustrative enquiry colour preferences; not stock or exact fabric shade records",
+  "colours": [
+    {
+      "id": "black",
+      "name": "Black",
+      "hex": "#151515",
+      "group": "neutral"
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "hex": "#FFFFFF",
+      "group": "neutral"
+    },
+    {
+      "id": "grey",
+      "name": "Grey",
+      "hex": "#93969B",
+      "group": "neutral"
+    },
+    {
+      "id": "charcoal",
+      "name": "Charcoal / Dark Grey",
+      "hex": "#3F434A",
+      "group": "neutral"
+    },
+    {
+      "id": "beige",
+      "name": "Beige",
+      "hex": "#D9C7A3",
+      "group": "neutral"
+    },
+    {
+      "id": "khaki",
+      "name": "Khaki",
+      "hex": "#B4A46D",
+      "group": "neutral"
+    },
+    {
+      "id": "tan",
+      "name": "Tan",
+      "hex": "#C58C58",
+      "group": "neutral"
+    },
+    {
+      "id": "navy-blue",
+      "name": "Navy Blue",
+      "hex": "#142A4A",
+      "group": "blue"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "hex": "#2459A7",
+      "group": "blue"
+    },
+    {
+      "id": "royal-blue",
+      "name": "Royal Blue",
+      "hex": "#4169E1",
+      "group": "blue"
+    },
+    {
+      "id": "sky-blue",
+      "name": "Sky Blue",
+      "hex": "#87CEEB",
+      "group": "blue"
+    },
+    {
+      "id": "ocean-blue",
+      "name": "Ocean Blue",
+      "hex": "#087E9C",
+      "group": "blue"
+    },
+    {
+      "id": "red",
+      "name": "Red",
+      "hex": "#C52D35",
+      "group": "red-purple"
+    },
+    {
+      "id": "wine-red",
+      "name": "Wine Red",
+      "hex": "#722F45",
+      "group": "red-purple"
+    },
+    {
+      "id": "burgundy",
+      "name": "Burgundy",
+      "hex": "#800020",
+      "group": "red-purple"
+    },
+    {
+      "id": "purple",
+      "name": "Purple",
+      "hex": "#7440A0",
+      "group": "red-purple"
+    },
+    {
+      "id": "brown",
+      "name": "Brown",
+      "hex": "#8B5A35",
+      "group": "earth-green"
+    },
+    {
+      "id": "chocolate-brown",
+      "name": "Chocolate Brown",
+      "hex": "#492A1C",
+      "group": "earth-green"
+    },
+    {
+      "id": "green",
+      "name": "Green",
+      "hex": "#278448",
+      "group": "earth-green"
+    },
+    {
+      "id": "dark-green",
+      "name": "Dark Green",
+      "hex": "#173F2B",
+      "group": "earth-green"
+    },
+    {
+      "id": "army-green",
+      "name": "Army Green",
+      "hex": "#4B5320",
+      "group": "earth-green"
+    },
+    {
+      "id": "olive-green",
+      "name": "Olive Green",
+      "hex": "#808000",
+      "group": "earth-green"
+    },
+    {
+      "id": "other",
+      "name": "Other Colour / Ask About a Colour",
+      "hex": null,
+      "group": "other"
+    }
+  ]
+}

@@ -1,2 +1,46 @@
 /* R45 selected-suit form only; service forms and the fabric page are unchanged. */
 .selected-suit-quote .selected-quote-hidden{display:none!important}.selected-quote-block{margin:18px 0 22px;min-width:0}.selected-quote-block h2,.selected-quote-block h3,.selected-quote-block h4{color:#2b251a!important}.selected-quote-block>h2{font:400 25px/1.3 Georgia,serif;margin:0 0 12px}.selected-quote-block>h3{font-size:21px;margin:0 0 12px}.selected-quote-summary{border:1px solid #ac9665;border-radius:5px;background:#fffdf7;min-width:0;white-space:normal}.selected-quote-summary>summary{cursor:pointer;min-height:52px;padding:12px 14px;font-size:14px;line-height:1.55;color:#32291a}.selected-quote-count{font-weight:600}.selected-quote-view{display:block;color:#674910;text-decoration:underline;text-underline-offset:3px;font-size:13px;margin-top:2px}.selected-quote-summary .batch-design-summary{display:grid;grid-template-columns:1fr;gap:10px;margin:0;padding:0 10px 12px}.selected-quote-summary .batch-design-summary article{display:grid;grid-template-columns:76px minmax(0,1fr);align-items:start;gap:12px;min-width:0;padding:10px;margin:0;border:1px solid #d1c2a1;border-radius:4px;background:#f8f3e9;overflow-wrap:anywhere}.selected-quote-summary .selected-quote-photo{display:block;width:76px;min-height:96px;background:#eee5d5}.selected-quote-summary img{display:block;width:76px;height:96px;object-fit:contain}.selected-quote-summary h3,.selected-quote-summary h4{font:600 15px/1.4 Arial,sans-serif!important;margin:0}.selected-quote-summary p{font-size:13px!important;line-height:1.5!important;color:#584a31!important;margin:6px 0 0!important}.selected-quote-edit{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:10px}.selected-quote-edit a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;color:#654610!important;text-decoration:underline;text-underline-offset:3px}.selected-quote-block :focus-visible{outline:3px solid #795b1c;outline-offset:3px}#customerRequestForm .selected-quote-deadline{grid-column:1/-1;min-width:0;margin:4px 0 0;padding:16px 14px;border:1px solid #b29b68;border-radius:5px;background:#f8f2e7}#customerRequestForm .selected-quote-deadline legend{font:400 22px/1.4 Georgia,serif;max-width:100%;padding:0 3px;margin-bottom:10px}#customerRequestForm .selected-deadline-controls{display:grid;grid-template-columns:1fr;gap:16px}.selected-quote-deadline .request-note{margin-top:12px!important}.selected-quote-block .selected-quote-fabric{margin-top:7px!important}#requestReview .selected-quote-block{margin:0}#requestReview .selected-quote-block>h3{display:none}@media(min-width:700px){.selected-quote-summary .batch-design-summary{grid-template-columns:repeat(2,minmax(0,1fr))}#customerRequestForm .selected-deadline-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* R48: compact shared-preference cards; selectors apply only to selected-suit quotations. */
+.selected-suit-quotation-page .release-intro{padding-block:28px 20px}
+.selected-suit-quotation-page .release-intro h1{max-width:22ch}
+.selected-suit-quotation-page .release-intro>p:last-child{max-width:44rem}
+.selected-suit-quotation-page .request-progress{margin:0 0 22px;gap:8px 20px;line-height:1.6}
+.selected-suit-quotation-page .customer-breadcrumb ol{align-items:baseline;gap:4px 8px;margin-block:16px 8px;line-height:1.55}
+.selected-suit-quotation-page .customer-breadcrumb li{display:inline-flex;align-items:baseline;max-width:100%;min-width:0}
+.selected-suit-quotation-page .customer-breadcrumb li+li:before{flex:0 0 auto;margin-right:8px}
+.selected-suit-quotation-page .customer-breadcrumb a,.selected-suit-quotation-page .customer-breadcrumb span{min-width:0;overflow-wrap:anywhere}
+.selected-suit-quotation-page .customer-breadcrumb a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none!important}
+.selected-suit-quotation-page .customer-breadcrumb a:focus-visible{outline:3px solid #e0b84c;outline-offset:3px;border-radius:2px}
+.selected-suit-quote [data-selected-quote-holder]{display:grid;gap:18px;min-width:0;margin-bottom:24px}
+.selected-suit-quote [data-selected-quote-holder]>.selected-quote-block{margin:0}
+.selected-suit-quote .selected-quote-block>h2{font-size:23px;margin-bottom:10px}
+.selected-suit-quote .selected-quote-system{margin:0!important;padding:0!important;border:0!important}
+.selected-suit-quote .selected-quote-preference{padding:16px;border:1px solid #b29b68;border-radius:5px;background:#f8f2e7}
+.selected-suit-quote .selected-quote-preference dl{display:grid;grid-template-columns:1fr;gap:3px 16px;margin:0}
+.selected-suit-quote .selected-quote-preference dt{font-size:13px;font-weight:700;line-height:1.6;color:#4d3a1d;margin:10px 0 0}
+.selected-suit-quote .selected-quote-preference dt:first-child{margin-top:0}
+.selected-suit-quote .selected-quote-preference dd{margin:0;font-size:15px;line-height:1.6;overflow-wrap:anywhere;color:#2b251a}
+.selected-suit-quote .selected-preference-note{font-size:13px!important;line-height:1.6!important;color:#665438!important;margin:12px 0 0!important}
+.selected-suit-quote .selected-form-heading{grid-column:1/-1;font:400 24px/1.35 Georgia,serif;color:#2b251a;margin:0}
+.selected-suit-quote .request-fields{gap:18px;margin-bottom:24px}
+.selected-suit-quote .request-fields>div:has(#requestLocation){grid-column:1/-1}
+.selected-suit-quote .selected-quote-additional{margin-bottom:22px}
+.selected-suit-quote .selected-quote-additional .selected-form-heading{margin-bottom:12px}
+.selected-suit-quote #reviewRequest{min-height:50px;margin-top:4px;white-space:normal;line-height:1.4}
+.selected-suit-quotation-page #customerRequestForm{padding:22px 16px}
+.selected-suit-quotation-page #requestReview{padding:22px 16px}
+.selected-suit-quotation-page #requestReview .selected-quote-block{white-space:normal;min-width:0}
+.selected-suit-quotation-page #requestReview .selected-quote-preference dl{display:grid;grid-template-columns:1fr;gap:3px 12px;margin:0}
+.selected-suit-quotation-page #requestReview .selected-quote-preference dt{font-size:13px;line-height:1.6;margin:10px 0 0;color:#4d3a1d}
+.selected-suit-quotation-page #requestReview .selected-quote-preference dt:first-child{margin-top:0}
+.selected-suit-quotation-page #requestReview .selected-quote-preference dd{margin:0;white-space:pre-wrap;font-size:15px;line-height:1.6}
+.selected-suit-quotation-page #requestReview .selected-preference-note{font-size:13px;line-height:1.6;margin-top:12px}
+.selected-suit-quotation-page #requestReview .selected-quote-summary{margin-top:8px}
+.selected-suit-quotation-page #requestReview .request-actions>button{min-height:48px}
+@media(min-width:700px){
+ .selected-suit-quote .selected-quote-preference dl{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:8px 18px}
+ .selected-suit-quote .selected-quote-preference dt{margin:0}
+ .selected-suit-quotation-page #customerRequestForm,.selected-suit-quotation-page #requestReview{padding:28px}
+ .selected-suit-quotation-page #requestReview .selected-quote-preference dl{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:8px 18px}
+ .selected-suit-quotation-page #requestReview .selected-quote-preference dt{margin:0}
+}

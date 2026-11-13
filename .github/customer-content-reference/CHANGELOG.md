@@ -138,3 +138,6 @@ Owner-approved 12 November 2026 technical rule: persisted 120-second departure g
 
 ## 2026-11-13-02 — R47 priority technical SEO
 Record13November owner instruction, source-vs-HTTP audit distinction, approved Kaunda-only sitemap delta and deliberate Services directory exclusion. Add square/conventional favicon and explicit404 host boundary; preserve all commercial content and journeys. Network-blocked live checks and unresolved Search Console URLs documented. Staging only; production release proposal isolates technical changes.
+
+## 2026-11-13-03 — R48 shared fabric and colour journey
+Record13November owner authorization for one enquiry-wide fabric/colour preference, compact Fabric Guide/quotation, validated22-colour+Other palette and complete selected-photo payload. Preserve R46lifetime/R47technicalSEO and unrelated business content/forms. Staging only; prior dated references retained.

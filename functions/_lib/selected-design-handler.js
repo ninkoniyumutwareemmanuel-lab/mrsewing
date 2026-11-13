@@ -1,12 +1,39 @@
 /* Email-only selected-design validation. No files, private records, payments or reservations. */
 import {validateFields} from '../../scripts/edge/customer-requests.mjs';
 import {fabrics} from '../../scripts/edge/request-data.mjs';
+import {colours} from './fabric-preferences.js';
 const TIME_ZONE='Africa/Kigali (UTC+02:00)';
 const friendly=name=>String(name).replace(/\s*[—·-]\s*MS-\d+\b/g,'').trim();
 const reply=(status,body)=>new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow','X-Content-Type-Options':'nosniff'}});
 function checkFabric(fields){
  if(fields['Fabric Choice']==='Customer fabric choice'){const f=Object.hasOwn(fabrics,fields['Fabric Reference']||'')?fabrics[fields['Fabric Reference']]:null;if(!f||fields['Suit Audience']&&f.category!==fields['Suit Audience'])throw Error('Choose an approved fabric for this suit category or request advice.');fields['Selected Fabric']=f.name;fields['Fabric Category']=f.category==='women'?'Women’s Suits':'Men’s Suits';fields['Fabric Tier']='Tier '+f.tier;fields['Fabric Availability']='Availability and final quotation require confirmation';}
  else if(fields['Fabric Choice']==='Help Me Choose Fabric'){for(const k of ['Fabric Reference','Selected Fabric','Fabric Category','Fabric Tier'])delete fields[k];fields['Fabric Assistance']='Requested';}else if(fields['Fabric Choice']==='Customer-Supplied Fabric'){for(const k of ['Fabric Reference','Selected Fabric','Fabric Category','Fabric Tier','Fabric Assistance'])delete fields[k];fields['Fabric Preference']='Customer-Supplied Fabric';fields['Fabric Availability']='Customer-supplied fabric suitability requires assessment';}else throw Error('Complete fabric selection or request fabric advice.');
+ return fields;
+}
+function sharedPreference(raw){
+ if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!['choice','fabricRef','colour','colourDescription'].includes(k)))throw Error('Review your shared fabric and colour preference.');
+ const value={};for(const key of ['choice','fabricRef','colour','colourDescription']){if(raw[key]!==undefined&&(typeof raw[key]!=='string'||raw[key].length>({choice:8,fabricRef:64,colour:40,colourDescription:80})[key]||/[\u0000-\u001f\u007f]/.test(raw[key])))throw Error('Review your shared fabric and colour preference.');value[key]=(raw[key]||'').trim();}
+ if(!['now','advice','own'].includes(value.choice))throw Error('Choose one fabric preference for your enquiry.');
+ if(value.choice!=='now'){if(value.fabricRef||value.colour||value.colourDescription)throw Error('Clear the selected fabric and colour when requesting advice or supplying your own fabric.');return value;}
+ if(!Object.hasOwn(fabrics,value.fabricRef))throw Error('Choose an approved fabric reference.');
+ if(!Object.hasOwn(colours,value.colour))throw Error('Choose a preferred colour.');
+ if(value.colour==='other'){
+  if(!value.colourDescription||raw.colourDescription.length>80||!/^[\p{L}\p{N} .,'’()/+#-]{1,80}$/u.test(value.colourDescription))throw Error('Describe your preferred colour using up to 80 letters, numbers and basic colour punctuation.');
+ }else if(value.colourDescription)throw Error('Use Other Colour for a custom colour description.');
+ return value;
+}
+function applySharedPreference(fields,value){
+ // Server-owned labels replace every untrusted/redundant legacy fabric field.
+ for(const key of ['Fabric Reference','Selected Fabric','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Fabric Preference','Preferred Colour','Preferred Colour Reference','Colour Description'])delete fields[key];
+ fields['Fabric Preference Scope']='Whole selected-design enquiry; suitability assessed for each garment';
+ fields['Shared Fabric Preference']=value.choice==='now'?'I Want to Choose a Fabric':value.choice==='own'?'I Have My Own Fabric':'Help Me Choose a Fabric';
+ fields['Fabric Choice']=value.choice==='now'?'Customer fabric choice':value.choice==='own'?'Customer-Supplied Fabric':'Help Me Choose Fabric';
+ if(value.choice==='now'){
+  const fabric=fabrics[value.fabricRef],colour=colours[value.colour];fields['Fabric Reference']=value.fabricRef;fields['Selected Fabric']=fabric.name;fields['Fabric Category']=fabric.category==='women'?'Women’s collection reference':'Men’s collection reference';fields['Fabric Tier']='Tier '+fabric.tier+' / Quality '+fabric.tier;
+  fields['Preferred Colour Reference']=value.colour;fields['Preferred Colour']=colour.name+(value.colour==='other'?' — '+value.colourDescription:'');if(value.colour==='other')fields['Colour Description']=value.colourDescription;
+  fields['Fabric Availability']='Exact material, suitability, colour and availability require confirmation. Swatches are illustrative and may differ from actual fabric shades.';
+ }else if(value.choice==='own'){fields['Fabric Preference']='Customer-Supplied Fabric';fields['Fabric Availability']='Customer-supplied fabric suitability requires assessment';}
+ else fields['Fabric Assistance']='Requested';
  return fields;
 }
 function customerRequirements(raw){
@@ -33,25 +60,29 @@ export async function handleSelected(request,key,fetcher=fetch){
  if(request.headers.get('Content-Type')?.split(';')[0]!=='application/json')return reply(415,{success:false,error:'Only a text-based JSON request is supported. No photograph files are accepted.'});
  let fields;try{const reader=request.body?.getReader();if(!reader)throw Error('Request required.');let total=0;const parts=[];while(true){const chunk=await reader.read();if(chunk.done)break;total+=chunk.value.length;if(total>30000){await reader.cancel();return reply(413,{success:false,error:'Request too large.'});}parts.push(chunk.value);}const bytes=new Uint8Array(total);let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.length;}const body=JSON.parse(new TextDecoder().decode(bytes));if(!body||typeof body!=='object'||Array.isArray(body))throw Error('Invalid request.');if(body.termsAccepted!==true||body.botcheck)throw Error('Terms acceptance and valid request required.');
  if(body.fields?.Service!=='Custom Tailoring & Suits'||body.fields?.['Design Order Type']!=='Standard Order'||!body.fields?.['Design Reference']||!body.fields?.['Selected Photograph URL'])throw Error('Choose a website design photograph and fabric preference.');
- const raw=customerRequirements(body.fields);
- fields=selectedFields(raw);
+ const raw=customerRequirements(body.fields),shared=body.fabricPreference===undefined?null:sharedPreference(body.fabricPreference);
+ // Shared choices are validated once, independently of a reference photograph's audience.
+ const validateSelected=data=>selectedFields(shared?{...data,'Fabric Choice':'Help Me Choose Fabric','Fabric Reference':''}:data);
+ fields=validateSelected(raw);
  if(body.selections!==undefined){
   if(!Array.isArray(body.selections)||!body.selections.length||body.selections.length>50)throw Error('Select between one and fifty approved design references.');
   const seen=new Set(),rows=[];let quantity=0;
   for(const item of body.selections){
-   if(!item||typeof item!=='object'||Array.isArray(item)||!Number.isInteger(item.quantity)||item.quantity<1||item.quantity>9999||!['now','advice','own'].includes(item.fabricChoice))throw Error('Review the design quantities and fabric preferences.');
+   if(!item||typeof item!=='object'||Array.isArray(item)||!Number.isInteger(item.quantity)||item.quantity<1||item.quantity>9999||!shared&&!['now','advice','own'].includes(item.fabricChoice))throw Error('Review the design quantities and fabric preferences.');
    const choice=item.fabricChoice==='now'?'Customer fabric choice':item.fabricChoice==='own'?'Customer-Supplied Fabric':'Help Me Choose Fabric';
-   const row=selectedFields({...raw,'Design Reference':item.design,'Selected Photograph URL':item.photo,'Design Image':item.photo,'Portfolio Reference':item.project||'',Quantity:String(item.quantity),'Fabric Choice':choice,'Fabric Reference':item.fabricRef||''});
+   const row=validateSelected({...raw,'Design Reference':item.design,'Selected Photograph URL':item.photo,'Design Image':item.photo,'Portfolio Reference':item.project||'',Quantity:String(item.quantity),'Fabric Choice':choice,'Fabric Reference':item.fabricRef||''});
    if(seen.has(row['Selected Photograph URL']))throw Error('Remove duplicate photographs and adjust the garment quantity instead.');seen.add(row['Selected Photograph URL']);quantity+=item.quantity;rows.push(row);
   }
   if(quantity>9999)throw Error('Contact Customer Support to discuss this garment quantity.');
+  if(shared)fields={...rows[0]};
   fields.Quantity=String(quantity);fields['Total Garments']=String(quantity);fields['Selected Design Count']=String(rows.length);
   fields['Selected Design IDs']=rows.map((r,i)=>(i+1)+'. '+r['Design Reference']).join('\n');
   fields['Selected Photograph URLs']=rows.map(r=>r['Selected Photograph URL']).join('\n');
-  fields['Selected Designs']=rows.map((r,i)=>(i+1)+'. '+friendly(r['Design Name'])+' | Quantity: '+r.Quantity+' | Photograph: '+r['Selected Photograph URL']+' | Page: '+r['Design Link']+' | Fabric: '+(r['Selected Fabric']||r['Fabric Preference']||r['Fabric Choice'])).join('\n');
+  fields['Selected Designs']=rows.map((r,i)=>(i+1)+'. '+friendly(r['Design Name'])+' | Quantity: '+r.Quantity+' | Photograph: '+r['Selected Photograph URL']+' | Page: '+r['Design Link']+(shared?'':' | Fabric: '+(r['Selected Fabric']||r['Fabric Preference']||r['Fabric Choice']))).join('\n');
  }else{
-  fields['Total Garments']=fields.Quantity;fields['Selected Design Count']='1';fields['Selected Design IDs']='1. '+fields['Design Reference'];fields['Selected Photograph URLs']=fields['Selected Photograph URL'];fields['Selected Designs']='1. '+friendly(fields['Design Name'])+' | Quantity: '+fields.Quantity+' | Photograph: '+fields['Selected Photograph URL']+' | Page: '+fields['Design Link']+' | Fabric: '+(fields['Selected Fabric']||fields['Fabric Preference']||fields['Fabric Choice']);
+  fields['Total Garments']=fields.Quantity;fields['Selected Design Count']='1';fields['Selected Design IDs']='1. '+fields['Design Reference'];fields['Selected Photograph URLs']=fields['Selected Photograph URL'];fields['Selected Designs']='1. '+friendly(fields['Design Name'])+' | Quantity: '+fields.Quantity+' | Photograph: '+fields['Selected Photograph URL']+' | Page: '+fields['Design Link']+(shared?'':' | Fabric: '+(fields['Selected Fabric']||fields['Fabric Preference']||fields['Fabric Choice']));
  }
+ if(shared)applySharedPreference(fields,shared);
  fields['Design Name']=friendly(fields['Design Name']);fields['Requested Completion Deadline']=fields['Requested Completion Date']+' '+fields['Requested Completion Time']+' '+TIME_ZONE;fields['Deadline Status']='Requested only; feasibility and completion date/time require business confirmation.';
  fields.Consent='Terms accepted; request for human review only';
  }catch(error){return reply(400,{success:false,error:error instanceof SyntaxError?'Invalid request.':error.message});}

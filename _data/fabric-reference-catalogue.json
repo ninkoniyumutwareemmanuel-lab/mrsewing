@@ -9,8 +9,9 @@
       "tier": 1,
       "image": "fabric-super",
       "colourStatus": "Ask us about available colours.",
-      "description": "Super is the existing Tier 1 fabric reference. Confirm the exact fabric and its suitability with our team.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 1 reference for men's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric."
     },
     {
       "id": "men-wool",
@@ -19,8 +20,9 @@
       "tier": 2,
       "image": "fabric-wool",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Wool with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 2 reference for men's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric."
     },
     {
       "id": "men-polyester",
@@ -29,8 +31,11 @@
       "tier": 3,
       "image": "fabric-polyester",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Polyester with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 3 reference for men's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric.",
+      "generalBackground": "Polyesters are polymers that can be manufactured into clothing fibres.",
+      "sourceRef": "openstax-polyester-polymers"
     },
     {
       "id": "men-cotton",
@@ -39,8 +44,11 @@
       "tier": 4,
       "image": "fabric-cotton",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Cotton / Dubai with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 4 reference for men's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric.",
+      "generalBackground": "Cotton fibre is made mainly of cellulose.",
+      "sourceRef": "openstax-cotton-cellulose"
     },
     {
       "id": "women-americano",
@@ -49,8 +57,9 @@
       "tier": 1,
       "image": "fabric-americano",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Americano with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 1 reference for women's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric."
     },
     {
       "id": "women-star",
@@ -59,8 +68,9 @@
       "tier": 2,
       "image": "fabric-star",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Star with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 2 reference for women's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric."
     },
     {
       "id": "women-polyester",
@@ -69,8 +79,11 @@
       "tier": 3,
       "image": "fabric-polyester",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Polyester with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 3 reference for women's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric.",
+      "generalBackground": "Polyesters are polymers that can be manufactured into clothing fibres.",
+      "sourceRef": "openstax-polyester-polymers"
     },
     {
       "id": "women-cotton",
@@ -79,8 +92,11 @@
       "tier": 4,
       "image": "fabric-cotton",
       "colourStatus": "Ask us about available colours.",
-      "description": "Discuss Cotton with our team to choose a fabric suited to your garment and preferences.",
-      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation."
+      "description": "A Tier 4 reference for women's custom-tailored suits.",
+      "availability": "Illustrative reference only. Fabric, colour availability and final quotation require business confirmation.",
+      "specificationNote": "Exact fibre composition, texture, weight and care requirements need confirmation for your chosen fabric.",
+      "generalBackground": "Cotton fibre is made mainly of cellulose.",
+      "sourceRef": "openstax-cotton-cellulose"
     }
   ],
   "classificationModel": "Each fabric independently refers to audience and tier; several fabric IDs may share a tier. No per-fabric suit prices."
