@@ -132,3 +132,6 @@ Owner approvescategory-aware recommendations,scopedbreadcrumb/mobilepolish,match
 
 ## 2026-11-12-11 — R45 selected-suit form refinement
 OwnerapprovesdirectWhatsApp,compactdesignsummary,requiredKigalideadline/contactfields,nopriorityclassification/repeatedfabriccontrols. Existingper-designfabricpage andotherforms retained;completepayloadmocktests/noinboxclaim;stagingonly.
+
+## 2026-11-13-01 — R46 selection lifetime
+Owner-approved 12 November 2026 technical rule: persisted 120-second departure grace, closed browsing handoff into independent quotation snapshots, history/stale-URL guards and graceful storage failure. Staging only; R45 customer information and all protected SEO/forms/fabric functionality retained. Previous dated snapshots preserved.
