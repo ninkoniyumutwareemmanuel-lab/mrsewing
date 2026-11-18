@@ -1,15 +1,16 @@
 {
-  "currentVersion": "2026-11-18-01",
-  "implementationBaseline": "663c8f5d5f4fde2afa693201e11ab108ff95adff",
+  "currentVersion": "2026-11-18-02",
+  "implementationBaseline": "e4951002297df5551b03acddf76933e37c92a918",
   "ownerApprovalDate": "2026-11-13",
   "implementationResumedDate": "2026-11-18",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R49 exact owner-approved facts and complete R35\u2013R49 release authorized after critical staging verification; no production publication claimed; unrelated unresolved policies remain held",
+  "customerPolicyPublication": "R50 owner directs publication of reviewed R35\u2013R49 candidate after disclosed proxy verification limitation; no new business policy; actual production deployment and rendering status require separate evidence",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "3a92c654f3ba115876013e58eaba08edad54556bb268764b78f1ef23aec7ba1a",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "f62edcc499eaa0de1588c1126d4ecc2382fe39e1cc5d25b5a26e80f8c27b0d49",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "36e24f15f0051788174bd45abfa200e7397ace67c68d2b23c3a638636be91869",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "a8d68c4f485aa524f193ea726c0c54f572be139ff8de96828d59ec88a963683f",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "41f9839c0e432c1a6c8522fb7fb03239d7d6ead03d0f2e7e7b13854a888085a4"
-  }
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "911f1341309f8ba5d038b51b2d19a018721acbf4d2286670b6079b14d26c7386",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "412cf5278a90add14ea25f2629562ec7d2ce024654b8849cd48f1d488f7f6654",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "63ae8cc1d10aeca465c940752c7122a2ada508635837d799b4cd32b8c8f475ef",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "051a7da33617824d425f7c231138388fc958e14ad65491e9231a5c3e02f3d48e",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "acee65a2a1437d293f4962f0637f366e84816362b12df6d56919752f991c368c"
+  },
+  "ownerPublicationInstructionDate": "2026-11-18"
 }
