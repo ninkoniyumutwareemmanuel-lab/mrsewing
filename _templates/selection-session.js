@@ -35,12 +35,14 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  }
  function url(path,rows=read(),edit=false){const u=new URL(path,location.origin);u.searchParams.set('selection',pack(rows));for(const key of ['selectionFlow','selectionEdit','selectionSession'])u.searchParams.delete(key);if(mode==='quote'&&flow)u.searchParams.set(edit?'selectionEdit':'selectionFlow',flow);else if(meta?.id)u.searchParams.set('selectionSession',meta.id);const pref=packPreference(preference);if(pref)u.searchParams.set('sharedFabric',pref);else u.searchParams.delete('sharedFabric');return u.pathname+u.search+u.hash;}
  function fabricPreference(value){if(arguments.length){preference=cleanPreference(value);persist();}else sync();return cleanPreference(preference);}
+ function restoreSnapshot(snapshot){const rows=clean(snapshot?.items);if(!rows.length)return false;flow=identifier();mode='quote';preference=cleanPreference(snapshot.fabricPreference);setItems(rows);setFlow(flow,{sessionId:null,items:rows,fabricPreference:preference});clearTimeout(timer);return true;}
  function complete(){if(mode==='quote'&&flow){const old=storedFlow(flow);setFlow(flow,{sessionId:old?.sessionId||null,items:[],completed:true});setItems([]);preference=null;}}
  meta=metadata();expire();
  const incomingPreference=unpackPreference(params.get('sharedFabric'));
  const incoming=unpack(params.get('selection')),session=params.get('selectionSession'),edit=params.get('selectionEdit');
  const quotePage=location.pathname==='/services/custom-tailoring/fabric/'&&params.get('multiple')==='1'||location.pathname==='/guides/fabrics/'&&(params.has('fabricFor')||params.get('fabricSelect')==='1')||location.pathname==='/request/'&&params.get('multiple')==='1';
- if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
+ if(params.has('expressRecovery')&&!browsing()){mode='quote';setItems([]);preference=null;}
+ else if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
  else{
   const requestedFlow=!browsing()&&(params.get('selectionFlow')||(review&&meta?.status==='closed'&&session===meta.id?meta.quoteId:null));
   if(requestedFlow){mode='quote';flow=requestedFlow;let saved=storedFlow(flow);if(!saved&&incoming.length){saved={sessionId:session||null,items:incoming,fabricPreference:incomingPreference};setFlow(flow,saved);}setItems(saved&&!saved.completed?clean(saved.items):[]);preference=saved&&!saved.completed?cleanPreference(saved.fabricPreference):null;}
@@ -57,5 +59,5 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]');if(!a||e.defaultPrevented||a.target==='_blank'||a.hasAttribute('download')||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;const u=new URL(a.href,location.href);if(u.origin!==location.origin||!browsing(u.pathname)){departing=true;leave();}});
  window.addEventListener('pageshow',e=>{departing=false;sync(true);if(e.persisted&&mode==='quote'&&quotePage&&location.pathname!=='/request/'){location.reload();return;}document.dispatchEvent(new Event('mrsewing:selectionlifetime'));});
  document.addEventListener('visibilitychange',()=>{if(!document.hidden){sync();document.dispatchEvent(new Event('mrsewing:selectionlifetime'));}});
- return{read,persist,startAdd,close,url,complete,sync,fabricPreference,isQuote:()=>mode==='quote',storageOK:()=>storageOK};
+ return{read,persist,startAdd,close,url,complete,sync,fabricPreference,restoreSnapshot,isQuote:()=>mode==='quote',storageOK:()=>storageOK};
 };

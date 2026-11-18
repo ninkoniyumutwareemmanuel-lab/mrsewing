@@ -51,7 +51,7 @@
   const row=document.createElement('div'),caption=document.createElement('label'),input=document.createElement('input');caption.htmlFor=id;caption.textContent=label+' (required)';input.id=id;input.name=name;input.type=type;input.required=true;input.addEventListener('input',()=>input.setCustomValidity(''));row.append(caption,input);return row;
  }
  function refresh(){
-  if(!active())return;const form=get('customerRequestForm');if(!form)return;
+  if(!active())return;const form=get('customerRequestForm');if(!form)return;if(form.dataset.customQuotationReady==='true'){window.MrCustomQuotation?.refreshOrder?.();return;}
   let holder=form.querySelector('[data-selected-quote-holder]');if(!holder){holder=document.createElement('div');holder.dataset.selectedQuoteHolder='';const anchor=form.querySelector('fieldset');if(anchor)anchor.before(holder);else form.prepend(holder);}
   const existingEdit=form.querySelector('[data-edit-designs]'),existingFabric=form.querySelector('[data-selected-fabric-edit]');
   const wasOpen=holder.querySelector('.selected-quote-summary')?.open||false;holder.replaceChildren();const block=summary(holder);block.querySelector('.selected-quote-summary').open=wasOpen;
@@ -61,7 +61,7 @@
   const quantity=get('requestQuantity');if(quantity){quantity.value=rows().reduce((n,row)=>n+Number(row.quantity||row.qty||1),0);quantity.readOnly=true;hide(quantity.closest('.request-fields>div')||quantity);}
  }
  function apply(){
-  if(!active())return;const form=get('customerRequestForm');if(!form)return;
+  if(!active())return;const form=get('customerRequestForm');if(!form)return;if(form.dataset.customQuotationReady==='true'){window.MrCustomQuotation?.apply();return;}
   const first=form.dataset.selectedSuitReady!=='true';form.classList.add('selected-suit-quote');document.body.classList.add('selected-suit-quotation-page');
   const intro=document.querySelector('main .release-intro');if(intro){const heading=intro.querySelector('h1'),copy=intro.querySelector('p:last-child');if(heading)heading.textContent='Your Quotation Request';if(copy&&copy!==intro.querySelector('.home-eyebrow'))copy.textContent='Review your selections and tell us when you need your garments.';}
   const progress=document.querySelector('.request-progress');if(progress&&first){progress.replaceChildren(...['Your selections','Contact details & deadline','Review & submit'].map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));}
@@ -89,10 +89,10 @@
   const message=get('requestMessage');if(message){message.required=false;message.rows=3;message.setCustomValidity('');labelFor('requestMessage','Additional garment requirements (optional)');if(!get('selected-additional-heading')){const container=message.parentElement,heading=document.createElement('h2');heading.id='selected-additional-heading';heading.className='selected-form-heading';heading.textContent='Additional Requirements';container.classList.add('selected-quote-additional');container.prepend(heading);}}
   const reviewButton=get('reviewRequest');if(reviewButton)reviewButton.textContent='Review Quotation Request';
   refresh();form.dataset.selectedSuitReady='true';
-  if(first)window.MrQuotationDraft?.restore?.();
+  if(first)window.MrQuotationDraft?.restore?.();window.MrCustomQuotation?.apply();
  }
  function valid(){
-  if(!active())return true;
+  if(!active())return true;if(window.MrCustomQuotation?.active())return window.MrCustomQuotation.valid();
   if(window.MrDesignSelections?.fabricPreferenceValid?.()===false){const status=get('requestStatus');if(status)status.textContent='Review your fabric and preferred colour, or choose fabric advice before continuing.';get('customerRequestForm')?.querySelector('[data-selected-fabric-edit]')?.focus();return false;}
   for(const id of['requestCountry','requestLocation']){const field=get(id);if(field)field.setCustomValidity(field.value.trim()?'':'Please complete this field.');}
   const date=get('requestDate'),time=get('requestCompletionTime');

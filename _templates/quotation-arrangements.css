@@ -1,0 +1,42 @@
+/* R49: six concise sections shared only by Suit and Special Tailoring quotations. */
+.custom-quotation-page .release-intro{padding-block:20px 16px}
+.custom-quotation-page .release-intro h1{font-size:clamp(2rem,5vw,3.3rem);max-width:24ch;line-height:1.2}
+.custom-quotation-page .release-intro p:last-child{max-width:47rem;margin-bottom:0}
+.custom-quotation-page .customer-breadcrumb a{text-decoration:none!important;min-height:44px;display:inline-flex;align-items:center}
+.custom-quotation-page .customer-breadcrumb ol{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;line-height:1.5}
+.custom-quotation-page .customer-breadcrumb li{display:inline-flex;align-items:baseline;max-width:100%;min-width:0;overflow-wrap:anywhere}
+.custom-quotation-page .customer-breadcrumb li+li:before{flex:none;margin-right:8px}
+.custom-quotation-form .custom-quotation-hidden,.custom-quotation-page [hidden]{display:none!important}
+.custom-quotation-form .custom-quotation-layout{display:grid;gap:20px;min-width:0}
+.custom-quotation-form .custom-quotation-section{min-width:0;margin:0;padding:18px 15px;border:1px solid #ad9561;border-radius:7px;background:#fffdf7;color:#2b251a}
+.custom-quotation-form .custom-quotation-section>legend{font:400 clamp(21px,3vw,25px)/1.35 Georgia,serif;padding-inline:5px;max-width:100%;color:#2b251a}
+.custom-quotation-form .custom-quotation-field{min-width:0;margin:0 0 16px}
+.custom-quotation-form .custom-quotation-field:last-child{margin-bottom:0}
+.custom-quotation-form .custom-quotation-field label{display:block;font-weight:600;line-height:1.5;margin:0 0 7px;color:#352b1c}
+.custom-quotation-form input:not([type=checkbox]):not([type=hidden]),.custom-quotation-form select,.custom-quotation-form textarea{min-height:46px;width:100%;max-width:100%;margin:0;padding:11px 12px;border:1px solid #9d8860;border-radius:4px;background:#fff;color:#211d16;font:inherit;font-size:16px;line-height:1.45}
+.custom-quotation-form textarea{resize:vertical;min-height:95px}
+.custom-quotation-form .custom-quotation-section p{font-size:14px;line-height:1.65;color:#594a33;margin-block:10px}
+.custom-quotation-form .custom-quotation-section .request-note{font-size:13px!important;line-height:1.65!important;color:#5d4c31!important}
+.custom-quotation-form .custom-quotation-link,.custom-quotation-form .selected-quote-edit a{display:inline-flex;align-items:center;min-height:44px;color:#65450c!important;text-decoration:underline;text-underline-offset:3px;line-height:1.5}
+.custom-quotation-form a:focus-visible,.custom-quotation-form button:focus-visible,.custom-quotation-form select:focus-visible,.custom-quotation-form input:focus-visible,.custom-quotation-form textarea:focus-visible{outline:3px solid #8a6416;outline-offset:3px}
+.custom-quotation-form .custom-fabric-summary{margin:14px 0;padding:12px;border-radius:5px;background:#f4eddf;border:1px solid #c3ad7f}
+.custom-quotation-form .custom-fabric-summary p{margin-block:6px}
+.custom-quotation-form .selected-quote-block{margin:0 0 12px}
+.custom-quotation-form .selected-quote-block>h2{font-size:21px;margin:0 0 10px}
+.custom-quotation-form .selected-quote-summary{background:#fffdf7}
+.custom-quotation-form .selected-quote-summary>summary{font-size:14px}
+.custom-quotation-form .custom-conditional,.custom-quotation-form .custom-appointment-grid{min-width:0;margin-top:14px}
+.custom-quotation-form .custom-express-assessment:not(:empty){margin-top:15px;padding:14px;border:1px solid #b18934;border-radius:5px;background:#f6edda}
+.custom-quotation-form .custom-express-assessment h2,.custom-quotation-form .custom-express-assessment h3{font:600 20px/1.35 Georgia,serif;margin:0 0 8px;color:#2b251a}
+.custom-quotation-form .custom-express-assessment .request-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.custom-quotation-form .custom-express-assessment .request-actions>*{min-height:44px;white-space:normal}
+.custom-quotation-form [data-quotation-section=review] .request-check{display:flex;align-items:flex-start;gap:10px;line-height:1.6;color:#2b251a}
+.custom-quotation-form [data-quotation-section=review] .request-check input{margin-top:5px;min-width:20px;width:20px;height:20px;accent-color:#8a6416}
+.custom-quotation-form #reviewRequest{min-height:50px;white-space:normal;line-height:1.4}
+.custom-quotation-page #requestReview dl{white-space:normal;overflow-wrap:anywhere}
+.custom-quotation-page #requestReview dt{font-weight:700;color:#3f301b;margin-top:16px}
+.custom-quotation-page #requestReview dd{margin:4px 0 0;white-space:pre-wrap;color:#32291a}
+.custom-quotation-page #requestReview .batch-design-summary{white-space:normal}
+.custom-quotation-page #requestReview .request-actions button{min-height:48px}
+@media(min-width:700px){.custom-quotation-form [data-quotation-section=information]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.custom-quotation-form [data-quotation-section=information] .custom-quotation-field{margin:0}.custom-quotation-form .custom-appointment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.custom-quotation-form .custom-appointment-grid>p{grid-column:1/-1}.custom-quotation-form .custom-quotation-section{padding:20px}}
+@media(max-width:430px){.custom-quotation-page #customerRequestForm{padding:16px 10px}.custom-quotation-form .custom-quotation-section{padding:16px 12px}.custom-quotation-form .custom-express-assessment .request-actions>*{width:100%}.custom-quotation-form .selected-quote-summary .batch-design-summary article{grid-template-columns:64px minmax(0,1fr);gap:10px}.custom-quotation-form .selected-quote-summary img,.custom-quotation-form .selected-quote-summary .selected-quote-photo{width:64px}.custom-quotation-form #reviewRequest{width:100%}}

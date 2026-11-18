@@ -17,7 +17,7 @@
           "id": "2",
           "title": "From enquiry to production",
           "paragraphs": [
-            "The sequence is: customer enquiry; quotation; customer acceptance; required payment; availability and final sourcing checks; official order confirmation; a separate official production-start notice; production and fitting; final balance; collection or delivery.",
+            "The sequence is: customer enquiry; quotation; customer acceptance; required payment; availability and final sourcing checks; official order confirmation; a separate official production-start notice; production and fitting; final balance; collection or delivery. {{policyProductionStart}}",
             "Standard order-confirmation target: 24 hours after the required steps are complete. Express order-confirmation target: 2 hours after the required steps are complete. These are confirmation targets, not garment-completion promises."
           ]
         },
@@ -34,8 +34,9 @@
           "id": "4",
           "title": "Standard and Express Priority",
           "paragraphs": [
-            "{{policyCharges}}",
-            "{{policyChargeExample}}"
+            "{{policyDeadlineAssessment}}",
+            "{{policyCustomerDelays}}",
+            "{{policyCharges}}"
           ]
         },
         {
@@ -49,6 +50,7 @@
           "id": "6",
           "title": "Your communications and updates",
           "paragraphs": [
+            "{{policyQuotationTargets}}",
             "Customer Support operates Monday–Friday, 09:00–17:00 Kigali time, excluding Rwandan public holidays. The first-response target is within 24 support working hours, not 24 consecutive clock hours and not a refund-payment deadline.",
             "The team communicates about quotations, payment confirmation, fabric availability, official production start, important changes, fittings, garment readiness, final payment and delivery or collection. If an interruption arises, its effect on the agreed completion date is assessed before a delay is announced. Confirmed issues and realistic revised arrangements are then discussed. This website does not provide live order tracking."
           ]
@@ -164,7 +166,7 @@
           "id": "1",
           "title": "Included and separately agreed arrangements",
           "paragraphs": [
-            "The documented standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Included services are not charged again. Additional delivery and outside-Kigali arrangements require an agreed quotation where applicable; no shipping cost or delivered-by deadline is assumed.",
+            "{{policyCustomDelivery}}",
             "{{policyTransport}}"
           ]
         },
@@ -172,7 +174,7 @@
           "id": "2",
           "title": "Before dispatch",
           "paragraphs": [
-            "The team confirms the delivery address and time, verifies required payment and records delivery completion. Customers should provide accurate contact and address details and be available for the agreed arrangements."
+            "A delivery address is optional at enquiry stage only for eligible initial Kigali custom-suit delivery. It must be confirmed before dispatch. Outside-Kigali and international delivery require the address in the enquiry; collection uses the chosen location instead. The team confirms readiness, time, required payment and handover arrangements."
           ]
         },
         {
@@ -186,6 +188,7 @@
           "id": "4",
           "title": "Collection and authorised collectors",
           "paragraphs": [
+            "{{policyCustomerCollection}}",
             "Collection requires full payment where applicable and appropriate identity or collection verification. Another collector needs written authorisation. A collection receipt and notification to the original customer are used where applicable. Do not send ID scans through this website form."
           ]
         },
@@ -253,7 +256,7 @@
     "/terms-and-conditions/": {
       "title": "Terms & Conditions",
       "intro": "Read these general customer conditions together with your quotation and official confirmation. Contact us to clarify the arrangements applicable to your request before accepting.",
-      "source": "S-OWNER-2026-11-05 §§14–24,26",
+      "source": "S-OWNER-2026-11-05 §§14–24,26; Owner R49 Final Custom Tailoring Completion & Production Release,13November2026",
       "sections": [
         {
           "id": "1",
@@ -266,7 +269,8 @@
           "id": "2",
           "title": "Enquiries, quotations and acceptance",
           "paragraphs": [
-            "A website enquiry, chosen design or acknowledgement is not a confirmed order. Review the quotation, design, fabric, measurements, price and relevant conditions. Customer acceptance, required payment, availability/sourcing checks and official confirmation are separate steps; production also has a separate official start notice."
+            "{{policySubmissionConfirmation}}",
+            "Review the quotation, garments, design references, fabric/colour preferences, quantities, measurements, price and applicable conditions before accepting. Acceptance, verified required payment, availability/sourcing checks, official order confirmation and the separate production-start notice are distinct steps."
           ]
         },
         {
@@ -289,7 +293,10 @@
           "id": "5",
           "title": "Measurements, fittings and changes",
           "paragraphs": [
-            "Provide accurate information and follow the agreed measurement guidance. Clarify incomplete information and arrange fittings where applicable. Customer-requested changes are assessed for feasibility, quotation and scheduling before agreement; no universal change penalty is published."
+            "{{policyMeasurementAppointments}}",
+            "{{policyMeasurementLocations}}",
+            "{{policyOnlineMeasurements}}",
+            "Provide accurate information and follow agreed measurement guidance. Customer-requested changes are assessed for feasibility, quotation and scheduling before agreement; no universal change penalty is introduced."
           ]
         },
         {
@@ -297,26 +304,31 @@
           "title": "Timing and priorities",
           "paragraphs": [
             "{{policyTailoringTime}}",
+            "{{policyDeadlineAssessment}}",
+            "{{policyCustomerDelays}}",
             "{{policyAlterationTime}}",
             "{{policyCareTime}}",
             "{{policyCharges}}",
             "{{policyChargeExample}}",
-            "Standard 24-hour and Express 2-hour order-confirmation targets apply only after required steps are complete. These are separate from production completion."
+            "The existing Standard 24-hour and Express 2-hour order-confirmation targets apply only after required steps are complete. They are separate from quotation-response targets and production completion."
           ]
         },
         {
           "id": "7",
           "title": "Communication and production",
           "paragraphs": [
-            "Customer Support operates Monday–Friday 09:00–17:00 Kigali time excluding Rwandan public holidays, with a first-response target within 24 support working hours. Keep official contact details and relevant order information available. The team provides confirmed updates; interruptions are assessed for their effect on the agreed date before a delay is communicated."
+            "{{policyProductionStart}}",
+            "{{policyQuotationTargets}}",
+            "Customer Support operates Monday–Friday 09:00–17:00 Kigali time excluding Rwandan public holidays, with a first-human-response target within 24 support working hours. This is distinct from provider acknowledgement, quotation delivery, order confirmation and production start. Confirmed changes to the agreed completion arrangements are discussed with the customer."
           ]
         },
         {
           "id": "8",
           "title": "Delivery, collection and storage",
           "paragraphs": [
+            "{{policyCustomDelivery}}",
             "{{policyTransport}}",
-            "The standard Kigali custom-suit package includes initial standard cleaning, protective packaging and initial Kigali delivery. Additional/outside-Kigali arrangements are agreed separately. Confirm address, time and payment before dispatch. Reschedule with at least one hour’s notice; later/failed delivery may involve justified approved costs where applicable. Collection verification, written third-party authority, receipt and notification apply. Free storage is seven calendar days from the ready notification; written approval is needed for an extension. No forfeiture, resale or unapproved daily penalty is imposed."
+            "Confirm address, time and required payment before actual dispatch. Reschedule with at least one hour’s notice; later or unsuccessful delivery may involve justified approved costs where applicable. Collection verification, written third-party authority, receipt and notification apply. Free storage is seven calendar days from the ready notification; written approval is needed for an extension. No forfeiture, resale or unapproved daily penalty is introduced."
           ]
         },
         {
@@ -437,7 +449,7 @@
           "id": "2",
           "title": "Information you provide",
           "paragraphs": [
-            "Quotation, support and refund forms collect the name, phone and optional email needed to respond, relevant location, selected service/preferences and your message. Design, measurement, address, order-reference and payment-related evidence may be discussed with the team as relevant. Do not enter payment PINs, full card details or identity scans in these forms."
+            "Quotation, consultation, support and refund forms collect your name, phone, optional email and the relevant request information needed to respond. Custom Tailoring collects country/city, garment preferences and a requested deadline. A requested measurement visit or delivery arrangement may need an address; collection does not require a delivery address. Appointment, design, measurement and relevant order details help the team assess the enquiry. Do not enter payment PINs, full card details, identity scans or unnecessary sensitive information."
           ]
         },
         {
@@ -460,6 +472,7 @@
           "title": "Selections, cookies and analytics",
           "paragraphs": [
             "The website keeps service/design/fabric choices in per-tab browser session storage. Quotation forms also keep a temporary per-tab draft of contact and request fields so navigation or editing need not lose your work. The code checks for a draft older than 30 minutes when reopening the form and clears it after an accepted submission; this is not a server or email-retention period. Browser storage can be unavailable, and a saved draft is not a submitted request.",
+            "{{policyExpressRecovery}}",
             "Existing cart code can save product selections, not payment credentials, in browser local storage. Current enquiry-only Shop products do not activate a purchasing cart. No new analytics, advertising tracker or cookie-consent system is introduced by these changes. Legacy pages may load Font Awesome from cdnjs.cloudflare.com. Actual deployed cookies and external-provider practices require separate verification."
           ]
         },
@@ -538,7 +551,7 @@
           "id": "1",
           "title": "Location",
           "paragraphs": [
-            "Main workshop: KN 441 St, Norvège, Nyarugenge, Kigali, Rwanda. The existing MIC Building, Downtown consultation location is by appointment; confirm arrangements with the team. These are retained repository contact records, not a new branch or staffed-location claim."
+            "{{policyMeasurementLocations}} Confirm visit arrangements with the team before travelling."
           ]
         },
         {
@@ -567,7 +580,7 @@
       "sections": [
         [
           "Your style, your fit",
-          "Discuss design preferences, fabric selection, measurements, consultation, quotation, production, fitting and delivery arrangements. Browse Men’s or Women’s Suits and select a website design, or use the Special Order alternative for your own inspiration. Fabric preferences or advice and Standard/Express Priority follow."
+          "Discuss design preferences, fabric, measurements, quotation, fittings and delivery. Browse Men’s or Women’s Suits and select one or more designs, or use Special Tailoring for your own garment idea. Choose a shared fabric preference and provide a requested completion date and time. Ordinary suit deadlines receive provisional Standard or Express screening; Special Tailoring requires human assessment."
         ],
         [
           "Suits and garment scope",

@@ -11,7 +11,7 @@ window.MrFabricPreferences=function(source){
   }
   return out;
  }
- function valid(value){const p=clean(value);return !!p&&(p.choice!=='now'||!!p.fabricRef&&!!p.colour&&(p.colour!=='other'||!!p.colourDescription));}
+ function valid(value){const p=clean(value);return !!p&&(p.choice!=='now'||!!p.fabricRef&&!!p.colour);}
  function details(value){const p=clean(value);return p?{...p,label:labels[p.choice],fabricName:source.fabrics[p.fabricRef]?.name||'',colourName:source.colours?.[p.colour]?.name||''}:null;}
  function pack(value){const p=clean(value);return p?JSON.stringify([p.choice,p.fabricRef,p.colour,p.colourDescription]):'';}
  function unpack(value){try{if(typeof value!=='string'||value.length>600)return null;const a=JSON.parse(value);return Array.isArray(a)&&a.length===4?clean({choice:a[0],fabricRef:a[1],colour:a[2],colourDescription:a[3]}):null;}catch{return null;}}

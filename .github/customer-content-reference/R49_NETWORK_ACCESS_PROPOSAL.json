@@ -1,0 +1,18 @@
+{
+  "purpose": "Enable the owner's mandatory actual staging and production HTTP/browser verification for the already-authorized R49 release.",
+  "change": "Append these specific sites to the existing managed execution-environment outbound allowlist; preserve existing package-manager presets and other permissions.",
+  "additional_allowed_domains": [
+    "mrsewingfashion.com",
+    "www.mrsewingfashion.com",
+    "mrsewing-staging.pages.dev",
+    "*.mrsewing-staging.pages.dev"
+  ],
+  "preserve_network_mode": "restricted",
+  "preserve_presets": [
+    "package_managers"
+  ],
+  "observed_blocker": "Managed proxy rejects CONNECT with403 before reaching these origins; Chromium reports ERR_TUNNEL_CONNECTION_FAILED.",
+  "supported_update_attempt": "onboarding_update_environment_config_draft returned CONFLICT / draft_not_editable; no access change applied.",
+  "production_authorization": "Already granted13November2026, subject to successful critical staging checks; no second production approval is requested.",
+  "security": "Do not disable the proxy or Cloudflare security. This is an execution-environment access proposal, not a production configuration change."
+}

@@ -2,15 +2,17 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-13-03**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+Current reviewed reference: **versions/2026-11-18-01**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+
+**Current R49 release authority:** The owner's13November2026 instruction authorizes the complete approved R35–R49 release after critical staging verification. Earlier staging-only paragraphs below are historical for that verified scope; unresolved/private/unapproved features and future unfinished work remain held. This reference does not claim production has been deployed. See [R49 release brief](R49_RELEASE_BRIEF_2026-11-13.md), [full branch reconciliation](R49_RELEASE_RECONCILIATION_2026-11-13.md) and [policy reconciliation](R49_POLICY_RECONCILIATION_2026-11-13.md).
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-13-03/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-13-03/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-13-03/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-13-03/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-13-03/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-18-01/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-18-01/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-18-01/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-18-01/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-18-01/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules
@@ -62,3 +64,6 @@ Latest staging-only lifecycle correction: [R46 brief](SELECTION_EXPIRATION_BRIEF
 Latest priority staging audit and repairs: [R47 technical SEO audit](TECHNICAL_SEO_AUDIT_2026-11-13.md), [release proposal](TECHNICAL_SEO_RELEASE_PLAN_2026-11-13.md). Production remains unchanged pending separate owner approval.
 
 Latest scoped staging journey: [R48 shared fabric and colour report](SHARED_FABRIC_JOURNEY_REPORT_2026-11-13.md). Prior technical SEO repairs and production hold remain intact.
+
+
+Latest approved completion and conditional complete release: **R49**, owner13November2026, implementation resumed18November2026. Current version records six-section Suit/Special forms, provisional deadline assessment, isolated24-hour Express recovery, expanded illustrative colour preferences,35,000RWF independent consultation, unchanged10,000RWF eligible order visit and5,000RWF-per-garment eligible domestic CustomTailoring delivery outsideKigali. Actual staging/live verification and release evidence remain separate.

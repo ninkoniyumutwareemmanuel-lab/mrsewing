@@ -152,7 +152,8 @@
         "after-hours",
         "overnight",
         "express-cost",
-        "after-hours-cost"
+        "after-hours-cost",
+        "urgent-deadline-assessment"
       ],
       "related": [
         "production-delivery",
@@ -232,7 +233,11 @@
         "measure-options",
         "measure-send",
         "measure-ease",
-        "measure-concern"
+        "measure-concern",
+        "measurement-appointments",
+        "independent-consultation-cost",
+        "order-measurement-visit",
+        "online-measurements"
       ],
       "related": [
         "mobile-fitting",
@@ -332,7 +337,13 @@
         "outside-kigali",
         "international-shipping",
         "kigali-round-trip",
-        "deadline-not-accepted"
+        "deadline-not-accepted",
+        "standard-tailoring",
+        "customer-delays",
+        "quotation-response-times",
+        "kigali-delivery",
+        "customer-collection",
+        "submission-confirmation"
       ],
       "related": [
         "express-tailoring",
@@ -401,8 +412,11 @@
   "questions": {
     "start-order": {
       "question": "How do I place a suit order?",
-      "answer": "Choose <a href=\"/services/custom-tailoring/\">Custom Tailoring &amp; Suits</a>, then Men’s or Women’s Suits. Choose an approved website design or the Special Order alternative for your own inspiration, indicate fabric preferences or request advice, and choose Standard or Express Priority. Review your details before submitting an enquiry; no order is automatically confirmed.",
-      "keywords": []
+      "answer": "Choose <a href=\"/services/custom-tailoring/\">Custom Tailoring &amp; Suits</a>, then Men’s or Women’s Suits. Select one or more approved designs, review quantities and choose one fabric preference for the enquiry. Provide your requested completion date and time; the ordinary-suit form provisionally assesses Standard or Express rather than asking you to choose a priority. Use Special Tailoring for your own garment idea and human deadline assessment. Review your details before submitting; an enquiry does not confirm an order.",
+      "keywords": [],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#6"
     },
     "garment-options": {
       "question": "What clothing can I discuss with Mr Sewing?",
@@ -506,17 +520,17 @@
       "keywords": []
     },
     "mobile-fees": {
-      "question": "What is the difference between the 10,000, 25,000 and 50,000 RWF mobile services?",
+      "question": "What is the difference between the 10,000, 35,000 and 50,000 RWF mobile services?",
       "answer": "{{policyMobileMeasurement}} {{policyMobileConsultation}} {{policyMobileAssistance}}",
       "keywords": [
         "measurement visit",
         "consultation",
         "50000",
-        "25000",
-        "10000"
+        "10000",
+        "35000"
       ],
-      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
-      "approvalDate": "2026-11-07",
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
       "source": "/services/mobile-fitting/#service-info-mobile"
     },
     "mobile-confirm": {
@@ -561,16 +575,17 @@
       "keywords": []
     },
     "express-request": {
-      "question": "How fast is Express tailoring?",
-      "answer": "{{policyTailoringTime}} {{policyCharges}}",
+      "question": "What is Express Tailoring?",
+      "answer": "{{policyExpressTailoring}} {{policyTailoringTime}}",
       "keywords": [
         "urgent",
         "days",
-        "rush"
+        "rush",
+        "Express"
       ],
-      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
-      "approvalDate": "2026-11-07",
-      "source": "/services/custom-tailoring/#service-info-timing"
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#6"
     },
     "express-details": {
       "question": "What details are needed to assess an urgent request?",
@@ -680,9 +695,12 @@
       "keywords": []
     },
     "measure-options": {
-      "question": "Can I visit for measurements or request a mobile fitting?",
-      "answer": "Discuss a workshop appointment or request customer-location fitting support in Kigali. Mobile coverage, timing and charges require direct confirmation. See the <a href=\"/measurements/\">Measurement Guide</a> and <a href=\"/services/mobile-fitting/\">Mobile Fitting</a>.",
-      "keywords": []
+      "question": "How can my measurements be taken?",
+      "answer": "Choose a visit to Mr Sewing, request a visit to your location, or provide measurements online. {{policyMeasurementAppointments}}",
+      "keywords": [],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#5"
     },
     "measure-send": {
       "question": "Can I send a standard size or my own measurements?",
@@ -759,12 +777,18 @@
       "source": "/terms-and-conditions/#3"
     },
     "locations": {
-      "question": "Where is Mr Sewing based?",
-      "answer": "The main workshop is in Karama, Norvège, KN 441 St, Nyarugenge, Kigali. The Downtown consultation location is in MIC Building, Downtown Kigali, by appointment. See the <a href=\"/contact/#locations-heading\">Contact page</a> for the workshop map and the appropriate visit arrangements.",
-      "keywords": [],
+      "question": "Can I visit the main workshop or Downtown location?",
+      "answer": "{{policyMeasurementLocations}} See the <a href=\"/contact/#locations-heading\">Contact page</a> for directions and confirm visit arrangements with the team.",
+      "keywords": [
+        "location",
+        "main workshop",
+        "Downtown",
+        "MIC",
+        "KN 441 St"
+      ],
       "source": "/contact/#locations-heading",
-      "approvalSource": "Owner7November2026 corrections plus existing approved contact/operating-hour implementation and observed form code",
-      "approvalDate": "2026-11-07"
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13"
     },
     "appointment-needed": {
       "question": "Do I need an appointment?",
@@ -790,9 +814,16 @@
       "keywords": []
     },
     "production-start": {
-      "question": "When does production start?",
-      "answer": "An enquiry is not an accepted production order. Quotation, customer acceptance, required payment, availability/sourcing checks and official order confirmation precede the separate official production-start notice. For the documented custom-suit model, the advance is 70%; confirm any applicable authorised exception with the team.",
-      "keywords": []
+      "question": "When does production time begin?",
+      "answer": "{{policyProductionStart}}",
+      "keywords": [
+        "production start",
+        "official notice",
+        "countdown"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#7"
     },
     "tailoring-timing": {
       "question": "How long does a custom suit take?",
@@ -808,8 +839,11 @@
     },
     "delivery-arrangements": {
       "question": "How do delivery and collection work?",
-      "answer": "{{delivery}} Full payment is required before release. Confirm readiness and handover arrangements with the team.",
-      "keywords": []
+      "answer": "{{policyCustomDelivery}} {{policyTransport}} Full payment is required before release.",
+      "keywords": [],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#8"
     },
     "ready-notice": {
       "question": "When should I arrange to collect or receive my suit?",
@@ -822,9 +856,17 @@
       "keywords": []
     },
     "outside-kigali": {
-      "question": "Who pays for delivery outside Kigali?",
-      "answer": "Additional or outside-Kigali delivery arrangements require an individually agreed quotation where applicable. Confirm the address, provider and handover arrangements; no universal shipping price or delivery deadline is promised. Initial Kigali delivery is included in the documented standard custom-suit package.",
-      "keywords": []
+      "question": "How much is Custom Tailoring delivery outside Kigali?",
+      "answer": "{{policyOutsideKigaliDelivery}}",
+      "keywords": [
+        "5000",
+        "5,000",
+        "per garment",
+        "Rwanda delivery"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#8"
     },
     "cancel-before": {
       "question": "Can I cancel before production starts?",
@@ -946,15 +988,15 @@
       "source": "/terms-and-conditions/#3"
     },
     "international-shipping": {
-      "question": "Is international shipping included?",
-      "answer": "International shipping and other applicable charges are clearly quoted before agreement. Do not assume that initial Kigali delivery in an eligible suit package includes international shipping. No fixed international shipping price or deadline is promised without verified arrangements.",
+      "question": "How is international shipping quoted?",
+      "answer": "International shipping is assessed and quoted for the specific order. Provide a complete delivery address outside Rwanda so the team can review the arrangements. No fixed shipping fee or delivery deadline is promised. {{policyInternationalPayment}}",
       "keywords": [
         "shipping",
         "international"
       ],
-      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
-      "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#3"
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#8"
     },
     "kigali-round-trip": {
       "question": "How much is Kigali collection and return?",
@@ -971,16 +1013,17 @@
     },
     "workplace-measurement": {
       "question": "Can someone visit my workplace for measurements?",
-      "answer": "{{policyMobileMeasurement}} If you have not confirmed a garment order, the separately purchased 25,000 RWF Consultation & Fitting service may suit your needs. Share your Kigali location; timing, scope, feasibility and any travel arrangements require confirmation.",
+      "answer": "{{policyMobileMeasurement}} If you have not confirmed a garment order, the separately purchased 35,000 RWF Independent Consultation & Fitting service may suit your needs. Share your visit address and preferred date/time; the team must confirm location eligibility, feasibility and arrangements.",
       "keywords": [
         "office",
         "workplace",
         "hotel",
-        "home"
+        "home",
+        "measurements"
       ],
-      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
-      "approvalDate": "2026-11-07",
-      "source": "/services/mobile-fitting/#service-info-mobile"
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#mobile-fees"
     },
     "vip-price": {
       "question": "How are VIP services priced?",
@@ -998,14 +1041,14 @@
     },
     "deadline-not-accepted": {
       "question": "What happens if my requested deadline cannot be accepted?",
-      "answer": "A requested date is not automatically confirmed. The team assesses the garment, materials, measurements, fittings and capacity before acceptance. Agree a feasible completion date and quotation before proceeding; do not assume that selecting Express guarantees the deadline.",
+      "answer": "The team must review feasibility and agree a workable completion arrangement before accepting the order. Provisional Standard or Express screening is not a confirmed production schedule. {{policyCustomerDelays}}",
       "keywords": [
         "deadline",
         "capacity"
       ],
-      "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
-      "approvalDate": "2026-11-07",
-      "source": "/customer-information/#service-estimates"
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#6"
     },
     "suit-starting-cost": {
       "question": "How much does a suit cost?",
@@ -1318,6 +1361,133 @@
       ],
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12"
+    },
+    "standard-tailoring": {
+      "question": "What is Standard Tailoring?",
+      "answer": "{{policyStandardTailoring}}",
+      "keywords": [
+        "standard"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#6"
+    },
+    "urgent-deadline-assessment": {
+      "question": "How is an urgent suit deadline assessed?",
+      "answer": "{{policyDeadlineAssessment}}",
+      "keywords": [
+        "deadline",
+        "seven days",
+        "24 hours"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#6"
+    },
+    "customer-delays": {
+      "question": "What if I delay confirming the order requirements?",
+      "answer": "{{policyCustomerDelays}}",
+      "keywords": [
+        "delay",
+        "reply",
+        "measurements",
+        "quotation acceptance"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#6"
+    },
+    "quotation-response-times": {
+      "question": "How quickly can I expect a quotation?",
+      "answer": "{{policyQuotationTargets}} <a href=\"https://wa.me/250787411501\" data-whatsapp-modal>WhatsApp Mr Sewing</a> or <a href=\"tel:+250787411501\">call +250 787 411 501</a> for follow-up.",
+      "keywords": [
+        "quotation response",
+        "24 hours",
+        "48 hours"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#7"
+    },
+    "measurement-appointments": {
+      "question": "How can I request a measurement appointment?",
+      "answer": "{{policyMeasurementAppointments}} {{policyMobileMeasurement}} {{policyMobileConsultation}}",
+      "keywords": [
+        "appointment",
+        "measurement visit"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#5"
+    },
+    "independent-consultation-cost": {
+      "question": "How much does an independent consultation and fitting cost?",
+      "answer": "{{policyMobileConsultation}}",
+      "keywords": [
+        "35000",
+        "35,000",
+        "consultation"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#mobile-fees"
+    },
+    "order-measurement-visit": {
+      "question": "How much does an order-related measurement visit cost?",
+      "answer": "{{policyMobileMeasurement}}",
+      "keywords": [
+        "10000",
+        "10,000",
+        "order measurement"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#mobile-fees"
+    },
+    "online-measurements": {
+      "question": "Can I provide measurements online before a quotation?",
+      "answer": "{{policyOnlineMeasurements}} Use the <a href=\"/measurements/\">Measurements Guide</a> when preparing your information.",
+      "keywords": [
+        "online measurements",
+        "guide"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#5"
+    },
+    "kigali-delivery": {
+      "question": "Is initial delivery within Kigali free?",
+      "answer": "{{policyKigaliDelivery}}",
+      "keywords": [
+        "free delivery",
+        "Kigali"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#8"
+    },
+    "customer-collection": {
+      "question": "Can I collect my garments?",
+      "answer": "{{policyCustomerCollection}}",
+      "keywords": [
+        "collect",
+        "collection location"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#8"
+    },
+    "submission-confirmation": {
+      "question": "Does submitting a form confirm an order or appointment?",
+      "answer": "{{policySubmissionConfirmation}}",
+      "keywords": [
+        "submitted",
+        "acknowledgement",
+        "appointment"
+      ],
+      "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
+      "approvalDate": "2026-11-13",
+      "source": "/terms-and-conditions/#2"
     }
   },
   "synonyms": [

@@ -1,0 +1,152 @@
+{
+  "notice": "Synthetic data; actual validator and mocked provider only. No real enquiry or inbox delivery.",
+  "submittedEnvelope": {
+    "fields": {
+      "Service": "Custom Tailoring & Suits",
+      "Design Order Type": "Standard Order",
+      "Design Reference": "MS-117",
+      "Selected Photograph URL": "https://mrsewingfashion.com/r7.jpeg",
+      "Quantity": "1",
+      "Fabric Choice": "Customer fabric choice",
+      "Full Name": "Fictional Release QA",
+      "Phone Number": "+250780000000",
+      "Email Address": "qa@example.invalid",
+      "Country": "Rwanda",
+      "Requested Completion Date": "2026-12-20",
+      "Requested Completion Time": "14:30",
+      "Additional Information": "Synthetic example only. Never sent to a real provider."
+    },
+    "selections": [
+      {
+        "design": "MS-117",
+        "photo": "https://mrsewingfashion.com/r7.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-030",
+        "photo": "https://mrsewingfashion.com/m-kaundasuits2.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-031",
+        "photo": "https://mrsewingfashion.com/m-kaundasuits3.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-032",
+        "photo": "https://mrsewingfashion.com/m-kaundasuits4.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-029",
+        "photo": "https://mrsewingfashion.com/m-kaundasuits1.jpeg",
+        "quantity": 3
+      },
+      {
+        "design": "MS-096",
+        "photo": "https://mrsewingfashion.com/r4.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-005",
+        "photo": "https://mrsewingfashion.com/h1.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-006",
+        "photo": "https://mrsewingfashion.com/h2.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-083",
+        "photo": "https://mrsewingfashion.com/r3.jpeg",
+        "quantity": 1
+      },
+      {
+        "design": "MS-143",
+        "photo": "https://mrsewingfashion.com/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+        "quantity": 1
+      }
+    ],
+    "fabricPreference": {
+      "choice": "now",
+      "fabricRef": "men-wool",
+      "colour": "navy-blue",
+      "colourDescription": ""
+    },
+    "quotationDetails": {
+      "version": 2,
+      "mode": "suit",
+      "city": "Huye",
+      "measurement": {
+        "method": "online"
+      },
+      "delivery": {
+        "method": "delivery",
+        "address": "Fictional Huye delivery address, Rwanda"
+      }
+    },
+    "termsAccepted": true,
+    "botcheck": ""
+  },
+  "validatedProviderPayload": {
+    "subject": "Selected Design Quotation Request - Mr Sewing",
+    "from_name": "Mr Sewing Website",
+    "Selected Photograph URL": "https://mrsewingfashion.com/r7.jpeg",
+    "Design Image": "https://mrsewingfashion.com/r7.jpeg",
+    "Portfolio Reference": "",
+    "Full Name": "Fictional Release QA",
+    "Phone Number": "+250780000000",
+    "Email Address": "qa@example.invalid",
+    "Location": "Huye, Rwanda",
+    "Quantity": "12",
+    "Service": "Custom Tailoring & Suits",
+    "Design Order Type": "Standard Order",
+    "Design Reference": "MS-117",
+    "Fabric Choice": "Customer fabric choice",
+    "Country": "Rwanda",
+    "Requested Completion Date": "2026-12-20",
+    "Requested Completion Time": "14:30",
+    "Requested Completion Time Zone": "Africa/Kigali (UTC+02:00)",
+    "Design Name": "Grey double-breasted tailoring",
+    "Design Link": "https://mrsewingfashion.com/collections/designs/ms-117/",
+    "Suit Category": "Men's Double-Breasted Suits",
+    "Suit Audience": "men",
+    "Total Garments": "12",
+    "Selected Design Count": "10",
+    "Selected Design IDs": "1. MS-117\n2. MS-030\n3. MS-031\n4. MS-032\n5. MS-029\n6. MS-096\n7. MS-005\n8. MS-006\n9. MS-083\n10. MS-143",
+    "Selected Photograph URLs": "https://mrsewingfashion.com/r7.jpeg\nhttps://mrsewingfashion.com/m-kaundasuits2.jpeg\nhttps://mrsewingfashion.com/m-kaundasuits3.jpeg\nhttps://mrsewingfashion.com/m-kaundasuits4.jpeg\nhttps://mrsewingfashion.com/m-kaundasuits1.jpeg\nhttps://mrsewingfashion.com/r4.jpeg\nhttps://mrsewingfashion.com/h1.jpeg\nhttps://mrsewingfashion.com/h2.jpeg\nhttps://mrsewingfashion.com/r3.jpeg\nhttps://mrsewingfashion.com/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+    "Selected Designs": "1. Grey double-breasted tailoring | Quantity: 1 | Photograph: https://mrsewingfashion.com/r7.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-117/\n2. Kaunda suit | Quantity: 1 | Photograph: https://mrsewingfashion.com/m-kaundasuits2.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-030/\n3. Kaunda suit | Quantity: 1 | Photograph: https://mrsewingfashion.com/m-kaundasuits3.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-031/\n4. Kaunda suit | Quantity: 1 | Photograph: https://mrsewingfashion.com/m-kaundasuits4.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-032/\n5. Kaunda suit | Quantity: 3 | Photograph: https://mrsewingfashion.com/m-kaundasuits1.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-029/\n6. Light single-breasted tailoring | Quantity: 1 | Photograph: https://mrsewingfashion.com/r4.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-096/\n7. Off-white tailoring — front view | Quantity: 1 | Photograph: https://mrsewingfashion.com/h1.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-005/\n8. Off-white tailoring — side view | Quantity: 1 | Photograph: https://mrsewingfashion.com/h2.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-006/\n9. Blue single-breasted separates | Quantity: 1 | Photograph: https://mrsewingfashion.com/r3.jpeg | Page: https://mrsewingfashion.com/collections/designs/ms-083/\n10. Burgundy Grace Women's Single-Breasted Suit | Quantity: 1 | Photograph: https://mrsewingfashion.com/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp | Page: https://mrsewingfashion.com/collections/designs/ms-143/",
+    "Fabric Preference Scope": "Whole selected-design enquiry; suitability assessed for each garment",
+    "Shared Fabric Preference": "I Want to Choose a Fabric",
+    "Fabric Reference": "men-wool",
+    "Selected Fabric": "Wool",
+    "Fabric Category": "Men’s collection reference",
+    "Fabric Tier": "Tier 2 / Quality 2",
+    "Preferred Colour Reference": "navy-blue",
+    "Preferred Colour": "Navy Blue",
+    "Fabric Availability": "Exact material, suitability, colour and availability require confirmation. Swatches are illustrative and may differ from actual fabric shades.",
+    "Additional Information": "Synthetic example only. Never sent to a real provider.",
+    "City": "Huye",
+    "Provisional Service Assessment": "Standard",
+    "Deadline Status": "Requested only; feasibility and completion date/time require business confirmation.",
+    "Production Start": "The production period begins with the official production-start notification, not the initial enquiry.",
+    "Deadline Assessment": "Provisional screening: requested deadline minus current time minus 24 hours; at least seven days of planning time is Standard, otherwise Express. Availability and charges require assessment and customer agreement.",
+    "Quotation Response Target": "Target quotation within 24–48 hours, subject to operating hours, sufficient information and assessment requirements.",
+    "Measurement Preference": "I Will Provide Measurements Online",
+    "Measurement Arrangement Status": "Requested only; appointment, scope and any applicable fee require confirmation. Selecting a preference does not require payment.",
+    "Measurements Guide": "https://mrsewingfashion.com/measurements/",
+    "Garment Receipt Preference": "Deliver to Me",
+    "Delivery Country": "Rwanda",
+    "Delivery City": "Huye",
+    "Delivery Location / Address": "Fictional Huye delivery address, Rwanda",
+    "Calculated Delivery Charge RWF": "60000",
+    "Delivery Charge Calculation": "12 garments × 5,000 RWF = 60,000 RWF",
+    "Delivery Charge Status": "Calculated domestic outside-Kigali delivery amount for an eligible Custom Tailoring order; not a final accepted quotation.",
+    "Requested Completion Deadline": "2026-12-20 14:30 Africa/Kigali (UTC+02:00)",
+    "Consent": "Terms & Conditions and Privacy Policy accepted; request for human review only",
+    "replyto": "qa@example.invalid",
+    "botcheck": ""
+  },
+  "payloadBytes": 1737
+}
