@@ -575,8 +575,8 @@
     {
       "id": "custom-tailoring",
       "route": "/services/custom-tailoring/",
-      "title": "Custom Tailoring & Suits",
-      "intro": "Personalised garment design, fabric preferences, measurements and fitting arrangements for your individual tailoring request.",
+      "title": "Tailoring Services",
+      "intro": "Custom suits, special tailoring and clothing alterations in Kigali. Share your design for assessment, discuss fabric options and request a personalized quotation.",
       "sections": [
         [
           "Your style, your fit",

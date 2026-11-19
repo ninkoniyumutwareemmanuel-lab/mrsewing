@@ -2,9 +2,11 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-19-01**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+Current reviewed reference: **versions/2026-11-19-02**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
-**Current R51 task, owner instruction18November2026 / implementation19November2026:** Universal Showroom, reusable media, quotation-first public service presentation and document-based Terms preparation are approved on staging only. Main/production are not authorized for this new work; R50 is historical release authority. Read the [R51 brief](R51_RESTRUCTURING_BRIEF_2026-11-19.md), [architecture audit](../../docs/R51_ARCHITECTURE_AUDIT.md) and [developer source map](../../docs/WEBSITE_SOURCE_MAP.md). No approved Terms PDF or clothing-video permission was supplied.
+**Current R52 additive direction, owner19November2026:** tailoring-first homepage/service positioning, public “Tailoring Services” at the existing URL, Suit/Special/Alterations overview and primary existing Terms-gated WhatsApp design sharing. R51 architecture/Showroom/quotation-first/document work remains in place. Current baseline `749b21d99f0dacf21d260b1adfc3ebca52a76447`; staging only. No approved video/PDF or production permission is inferred. Read the [R52 brief](R52_TAILORING_FIRST_BRIEF_2026-11-19.md) and [fit/audit](../../docs/R52_TAILORING_FIRST_AUDIT.md).
+
+**Previous R51 master task, owner instruction18November2026 / implementation19November2026:** Universal Showroom, reusable media, quotation-first public service presentation and document-based Terms preparation are approved on staging only. Main/production are not authorized for this new work; R50 is historical release authority. Read the [R51 brief](R51_RESTRUCTURING_BRIEF_2026-11-19.md), [architecture audit](../../docs/R51_ARCHITECTURE_AUDIT.md) and [developer source map](../../docs/WEBSITE_SOURCE_MAP.md). No approved Terms PDF or clothing-video permission was supplied.
 
 **Historical R49 release authority:** The owner's13November2026 instruction authorizes the complete approved R35–R49 release after critical staging verification. Earlier staging-only paragraphs below are historical for that verified scope; unresolved/private/unapproved features and future unfinished work remain held. This reference does not claim production has been deployed. See [R49 release brief](R49_RELEASE_BRIEF_2026-11-13.md), [full branch reconciliation](R49_RELEASE_RECONCILIATION_2026-11-13.md) and [policy reconciliation](R49_POLICY_RECONCILIATION_2026-11-13.md).
 
@@ -12,11 +14,11 @@ Current reviewed reference: **versions/2026-11-19-01**. Policy approval remains 
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-19-01/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-19-01/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-19-01/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-19-01/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-19-01/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-19-02/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-19-02/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-19-02/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-19-02/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-19-02/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules

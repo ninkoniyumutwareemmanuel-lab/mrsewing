@@ -1,7 +1,7 @@
 {
   "/": {
-    "title": "Mr Sewing Fashion | Tailoring & Alterations in Kigali",
-    "description": "Mr Sewing Fashion in Kigali, Rwanda offers custom tailoring, suits, clothing alterations and garment care. Explore our services and book a consultation."
+    "title": "Professional Tailor in Kigali, Rwanda | Mr Sewing Fashion",
+    "description": "Professional tailoring in Kigali, Rwanda: custom suits, special tailoring and alterations. Share your design with Mr Sewing Fashion for assessment and a quotation."
   },
   "/about/": {
     "title": "About Mr Sewing Fashion | Bespoke Tailoring in Kigali",
@@ -28,8 +28,8 @@
     "description": "Follow the suit measurement guide from Mr Sewing Fashion in Kigali, Rwanda. Learn which measurements to take, review sizing guidance or arrange a fitting."
   },
   "/services/custom-tailoring/": {
-    "title": "Custom Tailoring & Suits in Kigali, Rwanda | Mr Sewing Fashion",
-    "description": "Plan custom suits and made-to-measure tailoring in Kigali, Rwanda. Explore men’s and women’s suit references, fabric preferences and a personal quotation."
+    "title": "Tailoring Services in Kigali | Mr Sewing Fashion",
+    "description": "Explore suit tailoring, special tailoring and alterations in Kigali. Discuss your design, fabric options and fittings with Mr Sewing Fashion for a quotation."
   },
   "/services/alterations/": {
     "title": "Clothing Alterations & Repairs in Kigali | Mr Sewing Fashion",
@@ -58,5 +58,9 @@
   "/showroom/": {
     "title": "Clothing Showroom in Kigali | Mr Sewing Fashion",
     "description": "Explore approved clothing design references and completed Mr Sewing Fashion work in Kigali, Rwanda. Filter styles, view photographs and request custom tailoring."
+  },
+  "/services/custom-tailoring/special-order/": {
+    "title": "Special Tailoring Request in Kigali | Mr Sewing Fashion",
+    "description": "Request custom shirts, trousers, dresses, jackets, coats or other approved garments. Share your idea for feasibility, fabric advice and a personal quotation."
   }
 }

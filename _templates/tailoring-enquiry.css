@@ -1,0 +1,7 @@
+.tailoring-whatsapp-action{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:44px;max-width:100%;white-space:normal;text-align:center;overflow-wrap:anywhere;text-decoration:none}
+.tailoring-whatsapp-action:focus-visible{outline:3px solid #d5b266;outline-offset:4px}
+
+.design-actions .tailoring-whatsapp-action{background:#d4a43b;color:#15120c;padding:13px 18px;border:1px solid #bd963d;border-radius:5px;font:600 14px/1.5 Arial,sans-serif}
+.design-whatsapp-note,.showroom-enquiry-action p{font-size:14px;line-height:1.65;margin-block:14px;color:inherit}
+.whatsapp-handoff-help{font-size:14px;line-height:1.6;margin-block:12px;max-width:65ch;overflow-wrap:anywhere}
+.whatsapp-handoff-help a{display:inline-flex;align-items:center;min-height:44px;margin-left:6px;color:inherit;text-decoration:underline;text-underline-offset:3px}

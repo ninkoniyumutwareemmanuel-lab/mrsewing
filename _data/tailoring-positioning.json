@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "approvalSource": "Owner tailoring-first follow-up instruction, 19 November 2026 (R52); staging only",
+  "whatsapp": {
+    "label": "Send Your Design on WhatsApp",
+    "message": "Hello Mr Sewing Fashion, I have a clothing design I'd like you to make. I'd like to share a photo and request a quotation.",
+    "designIntroduction": "Hello Mr Sewing Fashion, I'd like to discuss making this design, fabric options and a personalized quotation.",
+    "manualPhotoNote": "I can attach any additional reference photographs in WhatsApp.",
+    "previewNotice": "Staging preview links: these open the current preview website, not the live production website."
+  },
+  "measurement": {
+    "eventName": "mrsewing:enquiry-action",
+    "meaning": "A customer clicked a website action. This is not proof that WhatsApp opened, a message was sent, an enquiry was received or a sale occurred.",
+    "collection": "No analytics provider, network request, personal data or persistent tracking is introduced."
+  },
+  "serviceLabelSource": "_data/customer-release.json#/services/custom-tailoring/title"
+}

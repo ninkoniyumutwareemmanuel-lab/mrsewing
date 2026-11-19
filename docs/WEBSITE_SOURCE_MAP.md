@@ -189,3 +189,27 @@ Showroom is the primary discovery destination in shared navigation, homepage pre
 Local browser QA uses a localhost-only server, for example `python -m http.server 8020 --bind 127.0.0.1`. Do not expose the repository through a network-wide static server. Actual deployed staging verification remains distinct from these local checks.
 
 The approved document must itself be readable and accessible; PDF header/checksum validation cannot certify legal sufficiency, tagged text or assistive-technology compatibility. No real approved PDF is supplied yet. The viewer offers separate open/download paths when a genuine version is activated, and the existing online Terms remain readable until then.
+
+
+## R52 — Tailoring-first positioning and design sharing
+
+Owner follow-up19November2026 builds on R51 on staging only. The established `/services/custom-tailoring/` URL and `custom-tailoring` request ID remain; its public label is **Tailoring Services**, owned by `_data/customer-release.json` → services/title. Suit Tailoring, Special Tailoring and Alterations & Repairs are overview groups with their existing destinations and separate policies. No service or Shop was removed.
+
+- Homepage introduction, two curated media cards, larger genuine-work feature and design-sharing card: `scripts/showroom.py:homepage_showcase()` with `_templates/homepage-showcase.css`. Existing lower homepage: `_templates/homepage-sections.html`; it now uses a supporting brand H2 under the sole tailoring H1.
+- Reusable WhatsApp wording: `_data/tailoring-positioning.json`; safe markup/public label helper: `scripts/tailoring_positioning.py`. The official number still comes from `_data/business.json` through `business_settings`; never add a second contact source here.
+- Exact design enquiry links: `scripts/build_collections.py` adds a separate action alongside the unchanged design-selection action. `_templates/tailoring-enquiry.js` checks the approved design/photo data, updates the current photograph and uses current-preview links before the existing consent controller. Generated assets come from `tailoring_positioning.outputs()` in the existing customer builder.
+- Consent/manual handoff: `_templates/customer-interactions.js` remains the only modal controller. A new tailoring action also offers the existing standalone consent route in the same tab after the handoff attempt, for blocked popups. No photo is uploaded and no WhatsApp message is sent automatically. Full selected-list sharing remains its existing separate complete-message implementation.
+- Service grouping: `scripts/custom_tailoring_mobile.py` and `_templates/custom-tailoring-mobile.css`; Special form remains in `customer_site.request_page(True)`, Suit Tailoring uses existing `standard-order` / `design-choice` routes.
+- Metadata: `_data/public-page-seo.json`, homepage source `_data/page-seo.json`, editorial topics `_data/seo-search-intent.json`. Stable URLs/canonicals/indexing and redirects remain.
+
+### Change a design-sharing message
+
+Edit the approved wording in `_data/tailoring-positioning.json`, rebuild with `python scripts/build_site.py`, then run the R52 CTA/browser and SEO checks. Keep messages short, make manual photograph attachment clear and do not claim an order, message delivery, stock or feasibility. Exact design actions obtain names/photos from approved records, not edited message examples.
+
+### Analytics and Google Business Profile
+
+No active analytics collector was verified, and no paid service or new telemetry was introduced. The local DOM event `mrsewing:enquiry-action` exposes only an action/context and whether a design was involved; it sends no network request or personal data. It is an optional integration hook, not a count of enquiries, orders or sales. Existing submission-provider acceptance remains distinct from business receipt.
+
+For a separately authorized Google Business Profile review, compare the actual listing with the verified name, telephone, main workshop address and operating hours in the sources above. Confirm a suitable tailoring business category and accurate service descriptions in the real account; this task did not access or edit a listing or verify search volumes/rankings.
+
+No publication-approved clothing videos were supplied. The initial approved-photo features remain; video support and poster/reduced-motion behavior already exist. Set video feature IDs only after the existing rights/classification gates accept genuine approval.

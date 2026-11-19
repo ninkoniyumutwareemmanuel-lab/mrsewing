@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate the centralized design registry and build three V3 showrooms and eligible static garment pages."""
 from site_seo import finalize
+from tailoring_positioning import service_label,whatsapp_action
 import argparse,csv,io,json,re
 from html import escape
 from pathlib import Path
@@ -131,7 +132,7 @@ def render(name,gender,title,designs):
     selected=[d for d in designs if gender=='all' or d['gender']==gender]
     header,footer=chrome(route)
     options=lambda key:''.join('<option value="'+escape(v,quote=True)+'">'+escape(v.replace('-',' ').title())+'</option>' for v in sorted({v for d in selected for v in d[key]} | ({'graduation','wedding','civil-wedding'} if key=='occasions' else set())))
-    nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/services/custom-tailoring/','Custom Tailoring & Suits'),('/mensuits/','Men'),('/womensuits/','Women')])
+    nav=''.join('<a href="'+path+'"'+(' aria-current="page"' if path==route else '')+'>'+label+'</a>' for path,label in [('/services/custom-tailoring/',service_label()),('/mensuits/','Men'),('/womensuits/','Women')])
     values={'header':header,'footer':footer,'title':escape(title),'page_title':escape(seo['title'],quote=True),'description':escape(seo['description'],quote=True),'route':route,'legacy_redirect':legacy_script(name),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'cards':''.join(card(d,i<4) for i,d in enumerate(selected[:12])),'styles_options':options('styles'),'occasions_options':options('occasions'),'data':json_script({'designs':[public_data(d) for d in selected],'defaultGender':gender}),'fallback':''.join('<li><a href="'+design_route(d)+'">'+escape(design_name(d))+'</a></li>' for d in selected),'count':str(len(selected)),'collection_nav':nav}
     schema={'@context':'https://schema.org','@type':'CollectionPage','@id':'https://mrsewingfashion.com'+route+'#webpage','url':'https://mrsewingfashion.com'+route,'name':seo['title'],'description':seo['description'],'about':{'@id':'https://mrsewingfashion.com/#organization'},'mainEntity':{'@type':'ItemList','numberOfItems':len(selected),'itemListElement':[{'@type':'ListItem','position':i+1,'name':design_name(d),'url':'https://mrsewingfashion.com'+design_route(d)} for i,d in enumerate(selected)]}}
     values['schema']=json_script(schema)
@@ -188,13 +189,17 @@ def render_design(d,designs):
     schema={'@context':'https://schema.org','@type':'WebPage','name':name+' | Mr Sewing','url':url,'description':design_description(d),'primaryImageOfPage':{'@type':'ImageObject','contentUrl':'https://mrsewingfashion.com'+image['src']}}
     values={'header':header,'footer':footer,'route':route,'name':escape(name),'meta_title':escape(name+' · '+d['id']+' | Mr Sewing',quote=True),'meta_description':escape('Explore '+name.lower()+', design reference '+d['id']+', in Mr Sewing’s Kigali collection. View the photograph and discuss your custom outfit.',quote=True),'description':escape(design_description(d),quote=True),'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/collections.css').read_text(),'photo':picture(image,True),'image':image['src'],'image_alt':escape(image['alt'],quote=True),'whatsapp':'/services/custom-tailoring/fabric/?'+urlencode({'service':'custom-tailoring','order':'standard','design':d['id'],'experience':'standard'}),'schema':json_script(schema),'data':json_script({'design':public_data(d)}),'similar':''.join(card(other) for other in similar) or '<p class="related-empty">'+('There are no other approved designs in this category yet.' if assigned else 'Explore the suit categories for more design inspiration.')+'</p>','more':''.join(card(other) for other in more) or '<p class="related-empty">Explore the suit categories for more design inspiration.</p>','thumbnails':''.join('<button type="button" data-photo="'+str(i)+'" aria-label="View photograph '+str(i+1)+'">'+picture(photo)+'</button>' for i,photo in enumerate(d['images'])) if len(d['images'])>1 else ''}
     html=fill('collection-design.html',values)
+    action=whatsapp_action(context='design-detail',design={'id':d['id'],'name':name},photo=image['src'],detail=route)
+    html=html.replace('<div class="design-actions">','<div class="design-actions">'+action,1)
+    html=html.replace('<p id="share-status"','<p class="design-whatsapp-note">Discuss this reference, fabric options and feasibility in WhatsApp, or select it to continue on the website. Additional photographs are attached manually in WhatsApp.</p><p id="share-status"',1)
+    html=html.replace('← Custom Tailoring &amp; Suits','← '+escape(service_label()))
     from suit_references import assignment,category_label
     c=assignment(d['id'])
     if c:
         html=html.replace('</head>','<link rel="stylesheet" href="/assets/suit-references.css"></head>')
         html=html.replace('href="/services/custom-tailoring/">← Custom Tailoring &amp; Suits','href="'+c['route']+'">← Back')
         from customer_navigation import breadcrumb
-        crumbs=[('Custom Tailoring & Suits','/services/custom-tailoring/'),("Men's Suits" if c['gender']=='men' else "Women's Suits",'/mensuits/' if c['gender']=='men' else '/womensuits/'),(c['title'],c['route']),(name,None)]
+        crumbs=[(service_label(),'/services/custom-tailoring/'),("Men's Suits" if c['gender']=='men' else "Women's Suits",'/mensuits/' if c['gender']=='men' else '/womensuits/'),(c['title'],c['route']),(name,None)]
         trail=breadcrumb(crumbs)
         trail=trail.replace('href="'+c['route']+'"','class="design-back" href="'+c['route']+'"')
         html=re.sub(r'<a class="design-back"[^>]*>.*?</a>',lambda _:trail,html,count=1)

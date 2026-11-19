@@ -4,6 +4,7 @@ from html import escape
 from urllib.parse import urlencode
 import json,re
 from customer_navigation import breadcrumb
+from tailoring_positioning import service_label,whatsapp_action
 ROOT=Path(__file__).resolve().parents[1]
 BASE='/services/custom-tailoring/'
 def model():return json.loads((ROOT/'_data/suit-reference-categories.json').read_text())
@@ -32,18 +33,18 @@ def landing(gender,designs):
  from build_collections import picture,SIZES
  title=label(gender);route=landing_route(gender)
  description="Explore our men's suit styles. Choose a category to discover designs for your custom-tailored garment." if gender=='men' else "Explore our women's tailored suit styles. Choose a category to discover designs for your preferred look."
- body='<header class="suit-intro">'+breadcrumb([('Custom Tailoring & Suits',BASE),(title,None)])+'<h1>'+escape(title)+'</h1><p>'+escape(description)+'</p></header><section aria-labelledby="suit-styles-heading"><h2 id="suit-styles-heading">Explore Suit Styles</h2><div class="suit-category-grid">'
+ body='<header class="suit-intro">'+breadcrumb([(service_label(),BASE),(title,None)])+'<h1>'+escape(title)+'</h1><p>'+escape(description)+'</p></header><section aria-labelledby="suit-styles-heading"><h2 id="suit-styles-heading">Explore Suit Styles</h2><div class="suit-category-grid">'
  for c in [c for c in categories() if c['gender']==gender]:
   refs=references(c,designs);cover=next((r for r in refs if r['id']==c['coverDesignId']),None)
   photo=picture({**cover['images'][0],'position':'50% 0%'}).replace(SIZES,'(min-width: 700px) 560px, 100vw') if cover else '<div class="suit-photo-pending"><span>Reference photograph pending</span></div>'
   body+='<a class="suit-category-card" href="'+c['route']+'?category='+gender+'&amp;suitCategory='+c['id']+'">'+photo+'<div class="suit-category-copy"><h3>'+escape(c['title'])+'</h3><p>'+escape(c['description'])+'</p><span class="suit-open">Open category <span aria-hidden="true">→</span></span>'+('<small>Approved photographs are not yet available.</small>' if not refs else '')+'</div></a>'
- return wrap(route,title,description,body+'</div></section>')
+ return wrap(route,title,description,body+'</div></section><section class="release-section"><h2>Have Your Own Suit Design?</h2><p>Share your photograph for assessment and discuss fabric, measurements and a quotation.</p>'+whatsapp_action(context='suit-'+gender)+'</section>')
 def gallery(c,designs):
  from build_collections import picture,SIZES
  topics={'single-breasted':('single-breasted suit','Single-Breasted Suit'),'double-breasted':('double-breasted suit','Double-Breasted Suit'),'tuxedos-formalwear':('tuxedo and formalwear','Tuxedo & Formalwear'),'three-piece':('three-piece suit','Three-Piece Suit'),'skirt-suits':('skirt suit','Skirt Suit'),'kaunda':('Kaunda suit','Kaunda Suit')}
  topic,heading=topics[c['slug']]
  intro='Explore our '+topic+' designs and choose your preferred style. Each design can be custom-tailored to your requirements.'
- refs=references(c,designs);title=category_label(c);body='<header class="suit-intro">'+breadcrumb([('Custom Tailoring & Suits',BASE),(label(c['gender']),landing_route(c['gender'])),(c['title'],None)])+'<h1>'+escape(title)+'</h1><p>'+escape(intro)+'</p><p class="suit-reference-note">Photographs are design references, not a guarantee of ready-made stock or fabric availability.</p></header>'
+ refs=references(c,designs);title=category_label(c);body='<header class="suit-intro">'+breadcrumb([(service_label(),BASE),(label(c['gender']),landing_route(c['gender'])),(c['title'],None)])+'<h1>'+escape(title)+'</h1><p>'+escape(intro)+'</p><p class="suit-reference-note">Photographs are design references, not a guarantee of ready-made stock or fabric availability.</p></header>'
  if refs:
   body+='<section aria-labelledby="reference-heading"><h2 id="reference-heading">Explore '+escape(heading)+' Designs</h2><p class="suit-instructions">Tap a suit photograph to view its details.</p><div class="suit-design-grid">'
   for d in refs:

@@ -5,12 +5,11 @@
   "pages": [
     {
       "route": "/",
-      "primaryTopic": "tailoring and alterations in Kigali",
+      "primaryTopic": "Professional tailor in Kigali, Rwanda",
       "secondaryTopics": [
-        "Mr Sewing Fashion",
-        "Mr Sewing",
-        "tailor shop in Kigali",
-        "custom tailoring in Rwanda"
+        "tailoring shop Kigali",
+        "custom suits Kigali",
+        "clothing alterations Kigali"
       ],
       "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
     },
@@ -39,8 +38,13 @@
     },
     {
       "route": "/services/custom-tailoring/",
-      "primaryTopic": "Custom Tailoring & Suits in Kigali, Rwanda",
-      "secondaryTopics": [],
+      "primaryTopic": "Tailoring services in Kigali",
+      "secondaryTopics": [
+        "suit tailoring Kigali",
+        "made-to-measure suits",
+        "special tailoring",
+        "fabric selection and fittings"
+      ],
       "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
     },
     {
@@ -93,7 +97,7 @@
     },
     {
       "route": "/guides/fabrics/",
-      "primaryTopic": "Suit Fabrics & Starting Prices in Kigali",
+      "primaryTopic": "Suit fabric guide and quality tiers in Kigali",
       "secondaryTopics": [],
       "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
     },

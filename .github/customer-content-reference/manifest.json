@@ -1,17 +1,17 @@
 {
-  "currentVersion": "2026-11-19-01",
-  "implementationBaseline": "b2b8946882929da4ce7e0e01de4ba1511eed818a",
-  "ownerApprovalDate": "2026-11-18",
+  "currentVersion": "2026-11-19-02",
+  "implementationBaseline": "749b21d99f0dacf21d260b1adfc3ebca52a76447",
+  "ownerApprovalDate": "2026-11-19",
   "implementationResumedDate": "2026-11-19",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R51 master restructuring approved for staging only; no new production authorization. Public service-price presentation becomes quotation-first; approved internal rates/Shop gates/history retained. PDF authority pending supplied approved document.",
+  "customerPolicyPublication": "R52 tailoring-first positioning and existing WhatsApp enquiry refinements approved for staging only, additive to R51. Stable routes/scoped policies/internal prices/Shop and media/document approval gates preserved; no production authorization.",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "561e8e595b284003b08579b1482e7f3adefe990866c8d40c43a4266e01363d1a",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "84cb2639eec0b6d39b7ade1fb6a6ee0da776a80b8ad3274bc877bb46c7148a11",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "2acc3f42f33a0805b95fb0728e2756275f308ac19a9e467012ba7aac54c7b55a",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "14bab3bc3993dbb498b3970fa36d6522d0b79492a4fc3f199200617079c39877",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "2cccca8b16bc8a20ccadf380d999dbcd010c43123bdd0e3e113b304eea842032"
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "570a10727863c44220f456d8f576925a1c3cee56fe10c5b6297d006d4021a101",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "b9ce21a59ab2868c414e5952577d37c95bd4801d749629ad38edc6d5b81989fa",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "065a91c161ddfa333a3362b4e7d4d498d6b2fa2b98004ef07f10ab5d783a2de3",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "bdb55560bc62fb64f5d352137cb5c3d8fd2c8e8ad81240daa77176e98b9a6bb6",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "67967e6f21690820dfaa87dd2f6b787eb4a45af77e836e3da66dcce08ccf4346"
   },
-  "ownerPublicationInstructionDate": "2026-11-18",
-  "ownerPublicationInstructionScope": "R50 historical reviewed release only; no R51 production authorization"
+  "ownerPublicationInstructionDate": "2026-11-19",
+  "ownerPublicationInstructionScope": "R52 permits staging implementation/deployment only; historical R50 production authority does not apply."
 }

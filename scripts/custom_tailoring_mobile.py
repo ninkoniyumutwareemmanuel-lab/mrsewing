@@ -1,4 +1,4 @@
-"""R37: Custom Tailoring presentation using shared approved tier prices and benefits."""
+"""Tailoring Services overview with scoped suit information and shared enquiries."""
 import json
 from html import escape
 from pathlib import Path
@@ -30,12 +30,31 @@ def payments():
 def disclosure(ident,title,paragraphs):
     return '<details class="tailoring-disclosure" id="service-info-'+ident+'"><summary>'+escape(title)+'</summary><div class="tailoring-detail-content">'+''.join('<p>'+escape(p)+'</p>' for p in paragraphs)+'</div></details>'
 
+def service_categories(link):
+    """An overview, not a merger of the services' eligibility or order rules."""
+    cards = [
+        ('suits', 'Suit Tailoring', 'Custom-made men’s and women’s suits, with guidance on fabric, measurements, construction and fittings. Share a reference design for assessment or explore the Showroom.', '/services/custom-tailoring/design-choice/', 'Choose a Suit Design Online'),
+        ('special', 'Special Tailoring', 'Discuss shirts, trousers, dresses, coats, special-occasion garments or tuxedo requirements. We assess your design, feasibility and quotation; tuxedos retain their separate package conditions.', '/services/custom-tailoring/special-order/', 'Request Special Tailoring'),
+        ('alterations', 'Alterations & Repairs', 'Adjustments, resizing, repairs and fitting improvements for clothing you already own. Visit the dedicated service page for garment assessment and its applicable conditions.', '/services/alterations/', 'Explore Alterations & Repairs'),
+    ]
+    body = '<section class="release-section tailoring-categories" aria-labelledby="tailoring-categories-title"><h2 id="tailoring-categories-title">Find the Right Tailoring Service</h2><div class="tailoring-category-grid">'
+    for ident, title, text, destination, action in cards:
+        body += '<article class="tailoring-category-card tailoring-category-'+ident+'">'
+        if ident == 'suits':
+            body += '<p class="home-eyebrow">Custom suits</p>'
+        body += '<h3>'+escape(title)+'</h3><p>'+escape(text)+'</p>'+link(destination, action, 'home-button'+(' home-button-gold' if ident == 'suits' else ''))+'</article>'
+    return body + '</div></section>'
+
 def content(service,hero,section,link):
     from customer_policies import facts,sections
-    f=facts();body=hero('custom-tailoring').replace(escape(service['intro']),'Tailoring shaped around your style, with guidance on fabrics, measurements and fit.',1)
-    body+='<section class="release-section tailoring-special-intro" aria-labelledby="special-tailoring-heading"><h2 id="special-tailoring-heading">Special Tailoring &amp; Custom Garments</h2><p>Need something beyond a standard suit? We tailor shirts, trousers, dresses, coats and other custom garments. Share your requirements or design idea, and our team will review your request and prepare a quotation.</p></section>'
+    from tailoring_positioning import whatsapp_action
+    f=facts();body=hero('custom-tailoring')
+    body=body.replace('<div class="service-hero-actions">','<div class="service-hero-actions">'+whatsapp_action(context='tailoring-services',css='home-button home-button-gold'),1)
+    body=body.replace('</div><ul class="service-features">','</div><p class="tailoring-design-note">Attach your photograph in WhatsApp. We’ll assess the design and discuss fabric, measurements and your quotation.</p><ul class="service-features">',1)
+    body+=service_categories(link)
+    body+='<section class="release-section tailoring-fabric-intro" id="suit-tailoring" aria-labelledby="tailoring-fabric-title"><p class="home-eyebrow">Suit Tailoring</p><h2 id="tailoring-fabric-title">Choose Your Design. We’ll Help With the Fabric and Tailoring.</h2><p>Explore men’s and women’s suit references or share your own design for assessment. Discuss fabric options supplied by Mr Sewing, request help choosing, or bring your own fabric under the applicable conditions. We confirm suitability, colours and availability before accepting the order.</p><p>For a website quotation, select your designs in the Showroom, choose one shared fabric preference, and tell us about measurements, fittings and your requested completion deadline.</p><p>'+link('/guides/fabrics/','Explore Fabric Options')+' · '+link('/faq/custom-tailoring/#own-fabric','Customer-supplied fabric information')+'</p></section>'
     body+=pricing()+children()+payments()+disclosure('bulk','Bulk-order discount',[f['texts']['policyBulk']])
-    body+='''<section class="release-section" id="service-info-timing"><h2>Tailoring Around Your Order</h2><div class="tailoring-service-grid"><article><h3>Standard Tailoring</h3><p>We agree your completion date after reviewing your order, design, fabric availability and production capacity.</p></article><article><h3>Express Service</h3><p>Priority tailoring is subject to availability, feasibility and an individually confirmed completion date.</p></article></div><details class="tailoring-disclosure"><summary>Turnaround estimates &amp; additional charges</summary><div class="tailoring-detail-content"><p>'''+escape(f['texts'][f['services']['custom-tailoring']['timingTextKey']])+'''</p><div id="service-info-charges"><p>'''+escape(f['texts']['policyCharges'])+'''</p></div></div></details></section>'''
+    body+='''<section class="release-section" id="service-info-timing"><h2>Planning Your Tailoring Order</h2><div class="tailoring-service-grid"><article><h3>Standard Tailoring</h3><p>We agree your completion date after reviewing your order, design, fabric availability and production capacity.</p></article><article><h3>Express Service</h3><p>Priority tailoring is subject to availability, feasibility and an individually confirmed completion date.</p></article></div><details class="tailoring-disclosure"><summary>Turnaround estimates &amp; additional charges</summary><div class="tailoring-detail-content"><p>'''+escape(f['texts'][f['services']['custom-tailoring']['timingTextKey']])+'''</p><div id="service-info-charges"><p>'''+escape(f['texts']['policyCharges'])+'''</p></div></div></details></section>'''
     body+='<section class="release-section" id="tailoring-inclusions"><h2>Included with Your Standard Suit</h2><p>'+escape(f['texts']['policyAllSuitBenefits'])+'</p></section>'
     body+='<section class="release-section" id="tailoring-details"><h2>Helpful Order Information</h2>'
     body+=disclosure('fabric','Your design & customer-supplied fabric',[f['texts']['policyOwnFabric'],'Use the Showroom to explore approved references for men’s and women’s garments. Select one or more designs, then choose a shared fabric preference or request advice before your quotation. Special Tailoring remains available for other custom garments.'])

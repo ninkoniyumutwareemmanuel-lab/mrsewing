@@ -109,6 +109,13 @@
       "owns": "Approved legal operating company name only; rule paragraphs in this compatibility file are derived placeholders",
       "scope": "shared identity/footer/policy document metadata",
       "approval": "Existing approved NINKONIYUMUTWARE NEXUS LTD identity"
+    },
+    {
+      "id": "tailoring-enquiry-presentation",
+      "path": "_data/tailoring-positioning.json",
+      "owns": "Approved WhatsApp action wording and non-tracking event hook description; public service label remains customer-release service title and phone remains business.json",
+      "scope": "Tailoring-first public presentation",
+      "approval": "R52 owner19November2026, staging only"
     }
   ],
   "derivedOutputs": [

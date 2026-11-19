@@ -131,6 +131,8 @@ def render():
             if parser.markup is None:
                 raise ValueError(f'Missing homepage section: {filename}')
             markup = parser.markup
+        from tailoring_positioning import service_label,whatsapp_action
+        markup=markup.replace('{{tailoring_service_label}}',__import__('html').escape(service_label())).replace('{{tailoring_design_action}}',whatsapp_action(context='homepage-footer',css='home-text-link'))
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':

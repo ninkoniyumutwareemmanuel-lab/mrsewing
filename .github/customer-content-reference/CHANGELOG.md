@@ -155,3 +155,8 @@ Recorded the owner's latest direct main/live publication instruction after the r
 ## 2026-11-19-01 — R51 staging restructuring reference
 
 Owner master task18November2026; implementation resumed19November2026 on baselineb2b8946. Added exact R51 staging-only scope, single-source ownership, public quotation-first service presentation with internal-price/Shop preservation, universal permission-gated Showroom/media/homepage direction, PDF registry/viewer preparation and repository document workflow. Existing Terms remain the transitional fallback because no approved PDF is supplied. Old URLs/media/policy history remain. Recorded cost-percentage presentation interpretation and unresolved PDF/video/stock/deployed-access evidence rather than inventing facts. Earlier five dated documents remain byte-prefixes. This update records scope, not test/deployment completion or main authorization.
+
+
+## 2026-11-19-02 — R52 additive tailoring-first direction
+
+Record19November owner follow-up on baseline749b21d: professional-tailor homepage position; Tailoring Services name at the retained custom-tailoring route with Suit/Special/Alterations overview; prominent reusable Terms-gated Send Your Design on WhatsApp/manual-photo action; clear assessed fabric support; natural page-specific SEO and staging-only tests/review. Preserve R51 architecture/Showroom/quotation-first sources, scoped business policies, complete selections, Shop and all media/PDF approval gates. No video rights, numerical customer-research claim, new legal/payment policy, analytics activation or production permission is inferred. Previous five snapshots remain exact prefixes; pointers/hashes synchronized. This is an approval/implementation brief, not test or deployment evidence.

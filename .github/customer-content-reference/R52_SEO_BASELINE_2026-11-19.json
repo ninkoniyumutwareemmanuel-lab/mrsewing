@@ -1,0 +1,2211 @@
+{
+  "baselineCommit": "749b21d99f0dacf21d260b1adfc3ebca52a76447",
+  "evidence": "Initial HTML from immutable Git baseline; not live HTTP or browser evidence.",
+  "pages": {
+    "/": {
+      "title": "Mr Sewing Fashion | Tailoring & Alterations in Kigali",
+      "description": "Mr Sewing Fashion in Kigali, Rwanda offers custom tailoring, suits, clothing alterations and garment care. Explore our services and book a consultation.",
+      "canonical": "https://mrsewingfashion.com/",
+      "robots": [
+        "index, follow"
+      ],
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Men's Fashion"
+        },
+        {
+          "level": "h2",
+          "text": "Women's Fashion"
+        },
+        {
+          "level": "h2",
+          "text": "Made by Mr Sewing"
+        },
+        {
+          "level": "h1",
+          "text": "Mr Sewing Fashion"
+        },
+        {
+          "level": "h2",
+          "text": "What We Offer"
+        },
+        {
+          "level": "h3",
+          "text": "Custom Tailoring & Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Clothing Alterations & Repairs"
+        },
+        {
+          "level": "h3",
+          "text": "Garment Care & Cleaning"
+        },
+        {
+          "level": "h3",
+          "text": "Mobile Tailoring, Styling & Event Assistance"
+        },
+        {
+          "level": "h3",
+          "text": "VIP Services"
+        },
+        {
+          "level": "h2",
+          "text": "Customer Information Highlights"
+        },
+        {
+          "level": "h3",
+          "text": "Delivery & Shipping"
+        },
+        {
+          "level": "h3",
+          "text": "Express Service"
+        },
+        {
+          "level": "h3",
+          "text": "VIP Assistance"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Assistance"
+        },
+        {
+          "level": "h2",
+          "text": "Six Simple Steps"
+        },
+        {
+          "level": "h3",
+          "text": "Tell Us What You Need"
+        },
+        {
+          "level": "h3",
+          "text": "Receive Your Quotation"
+        },
+        {
+          "level": "h3",
+          "text": "Confirm & Pay"
+        },
+        {
+          "level": "h3",
+          "text": "Consultation & Measurements"
+        },
+        {
+          "level": "h3",
+          "text": "Production or Service"
+        },
+        {
+          "level": "h3",
+          "text": "Final Review & Delivery"
+        },
+        {
+          "level": "h2",
+          "text": "Explore Our Suit Collections"
+        },
+        {
+          "level": "h3",
+          "text": "Men's Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Women's Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Shop Suit Styles"
+        },
+        {
+          "level": "h3",
+          "text": "Men's Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Women's Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion?"
+        },
+        {
+          "level": "h3",
+          "text": "Quality Craftsmanship"
+        },
+        {
+          "level": "h3",
+          "text": "Made for You"
+        },
+        {
+          "level": "h3",
+          "text": "Attention to Detail"
+        },
+        {
+          "level": "h3",
+          "text": "Professional Service"
+        },
+        {
+          "level": "h3",
+          "text": "Clear Communication"
+        },
+        {
+          "level": "h3",
+          "text": "Careful Finishing"
+        },
+        {
+          "level": "h2",
+          "text": "Explore Your Order Options"
+        },
+        {
+          "level": "h3",
+          "text": "Standard Order"
+        },
+        {
+          "level": "h3",
+          "text": "Express Order"
+        },
+        {
+          "level": "h3",
+          "text": "VIP Order"
+        },
+        {
+          "level": "h2",
+          "text": "Personal Style. Meaningful Moments."
+        },
+        {
+          "level": "h2",
+          "text": "Loyalty Program"
+        },
+        {
+          "level": "h2",
+          "text": "Referral Program"
+        },
+        {
+          "level": "h2",
+          "text": "Complimentary Photoshoot"
+        },
+        {
+          "level": "h2",
+          "text": "Your Next Special Outfit Starts Here."
+        },
+        {
+          "level": "h2",
+          "text": "Payment Methods"
+        },
+        {
+          "level": "h2",
+          "text": "Customer Support"
+        },
+        {
+          "level": "h3",
+          "text": "How can we help?"
+        },
+        {
+          "level": "h3",
+          "text": "Support Request Submitted"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        },
+        {
+          "src": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/r7-480.webp",
+          "alt": "Person wearing a light jacket with navy trousers"
+        },
+        {
+          "src": "assets/homepage-corrective/tailoring-hero.jpg",
+          "alt": "AI-generated tailoring illustration with a navy suit and sewing tools"
+        },
+        {
+          "src": "/assets/images/sky-blue-elegance-suit-480.webp",
+          "alt": "Sky Blue Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Garment photograph shown for design inspiration"
+        },
+        {
+          "src": "/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp",
+          "alt": "Ivory Elegance One-Button Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/r7-480.webp",
+          "alt": "Person wearing a light jacket with navy trousers"
+        },
+        {
+          "src": "/Skyline%20Double-Breasted%20Suit.webp",
+          "alt": "Skyline Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+          "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp",
+          "alt": "Royal Ivory Tuxedo shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/rose-elegance-suit-480.webp",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Ivory%20Three-Piece%20Suit.webp",
+          "alt": "Royal Ivory Three-Piece Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/sky-blue-elegance-suit-480.webp",
+          "alt": "Sky Blue Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Garment photograph shown for design inspiration"
+        },
+        {
+          "src": "/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp",
+          "alt": "Ivory Elegance One-Button Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/r7-480.webp",
+          "alt": "Person wearing a light jacket with navy trousers"
+        },
+        {
+          "src": "/Skyline%20Double-Breasted%20Suit.webp",
+          "alt": "Skyline Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+          "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp",
+          "alt": "Royal Ivory Tuxedo shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/rose-elegance-suit-480.webp",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Ivory%20Three-Piece%20Suit.webp",
+          "alt": "Royal Ivory Three-Piece Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/h1-480.webp",
+          "alt": "Person wearing an off-white suit"
+        },
+        {
+          "src": "/assets/images/h2-480.webp",
+          "alt": "Side view of a person in an off-white suit"
+        },
+        {
+          "src": "/assets/images/r3-480.webp",
+          "alt": "Garment photograph shown for design inspiration"
+        },
+        {
+          "src": "/assets/images/r4-480.webp",
+          "alt": "Person wearing a light jacket and matching trousers"
+        },
+        {
+          "src": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+          "alt": "Burgundy Grace Women's Single-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
+          "alt": "Midnight Elegance Women's Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
+          "alt": "Burgundy Royale Women's Skirt Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        },
+        {
+          "src": "/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp",
+          "alt": "Camel Grace Women's Three-Piece Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/h1-480.webp",
+          "alt": "Person wearing an off-white suit"
+        },
+        {
+          "src": "/assets/images/h2-480.webp",
+          "alt": "Side view of a person in an off-white suit"
+        },
+        {
+          "src": "/assets/images/r3-480.webp",
+          "alt": "Garment photograph shown for design inspiration"
+        },
+        {
+          "src": "/assets/images/r4-480.webp",
+          "alt": "Person wearing a light jacket and matching trousers"
+        },
+        {
+          "src": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+          "alt": "Burgundy Grace Women's Single-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
+          "alt": "Midnight Elegance Women's Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
+          "alt": "Burgundy Royale Women's Skirt Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        },
+        {
+          "src": "/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp",
+          "alt": "Camel Grace Women's Three-Piece Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/rose-pink%20three%20piecsuit.webp",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Blue%20Executive%20Women%27s%20Three-Piece%20Pantsuit%20%E2%80%93%20Signature%20Collection.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        },
+        {
+          "src": "/h1.jpeg",
+          "alt": "Off-white suit with an asymmetric jacket and matching trousers, shown with graduation regalia"
+        },
+        {
+          "src": "/h2.jpeg",
+          "alt": "Side view of the off-white graduation suit and fitted jacket"
+        },
+        {
+          "src": "/h3.jpeg",
+          "alt": "Front view of the off-white outfit beneath a graduation gown"
+        },
+        {
+          "src": "/r7.jpeg",
+          "alt": "Finished light grey double-breasted jacket paired with navy trousers"
+        },
+        {
+          "src": "/r4.jpeg",
+          "alt": "Finished light ivory jacket and matching trousers with a pale top"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Completed cobalt blue suit with a patterned tie and lapel accessories"
+        },
+        {
+          "src": "/r3.jpeg",
+          "alt": "Completed bright blue jacket worn with a black top and dark trousers"
+        },
+        {
+          "src": "/h1.jpeg",
+          "alt": "Off-white suit with an asymmetric jacket and matching trousers, shown with graduation regalia"
+        },
+        {
+          "src": "/h2.jpeg",
+          "alt": "Side view of the off-white graduation suit and fitted jacket"
+        },
+        {
+          "src": "/h3.jpeg",
+          "alt": "Front view of the off-white outfit beneath a graduation gown"
+        },
+        {
+          "src": "/r7.jpeg",
+          "alt": "Finished light grey double-breasted jacket paired with navy trousers"
+        },
+        {
+          "src": "/r4.jpeg",
+          "alt": "Finished light ivory jacket and matching trousers with a pale top"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Completed cobalt blue suit with a patterned tie and lapel accessories"
+        },
+        {
+          "src": "/r3.jpeg",
+          "alt": "Completed bright blue jacket worn with a black top and dark trousers"
+        },
+        {
+          "src": "/h1.jpeg",
+          "alt": "Off-white suit with an asymmetric jacket and matching trousers, shown with graduation regalia"
+        },
+        {
+          "src": "/h2.jpeg",
+          "alt": "Side view of the off-white graduation suit and fitted jacket"
+        },
+        {
+          "src": "/h3.jpeg",
+          "alt": "Front view of the off-white outfit beneath a graduation gown"
+        },
+        {
+          "src": "/r7.jpeg",
+          "alt": "Finished light grey double-breasted jacket paired with navy trousers"
+        },
+        {
+          "src": "/r4.jpeg",
+          "alt": "Finished light ivory jacket and matching trousers with a pale top"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Completed cobalt blue suit with a patterned tie and lapel accessories"
+        },
+        {
+          "src": "/r3.jpeg",
+          "alt": "Completed bright blue jacket worn with a black top and dark trousers"
+        },
+        {
+          "src": "/h1.jpeg",
+          "alt": "Off-white suit with an asymmetric jacket and matching trousers, shown with graduation regalia"
+        },
+        {
+          "src": "/h2.jpeg",
+          "alt": "Side view of the off-white graduation suit and fitted jacket"
+        },
+        {
+          "src": "/h3.jpeg",
+          "alt": "Front view of the off-white outfit beneath a graduation gown"
+        },
+        {
+          "src": "/r7.jpeg",
+          "alt": "Finished light grey double-breasted jacket paired with navy trousers"
+        },
+        {
+          "src": "/r4.jpeg",
+          "alt": "Finished light ivory jacket and matching trousers with a pale top"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Completed cobalt blue suit with a patterned tie and lapel accessories"
+        },
+        {
+          "src": "/r3.jpeg",
+          "alt": "Completed bright blue jacket worn with a black top and dark trousers"
+        },
+        {
+          "src": "fabric.jpeg",
+          "alt": "Discussing fabric swatches for a tailoring request"
+        }
+      ],
+      "links": [
+        "#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/showroom/?audience=men",
+        "/showroom/?audience=women",
+        "/our-work/light-grey-and-navy/",
+        "/showroom/",
+        "/services/custom-tailoring/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/booking/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/our-process/",
+        "/showroom/?audience=men",
+        "/showroom/?audience=women",
+        "/shop/category/mens-suits/",
+        "/shop/category/womens-suits/",
+        "/our-work/",
+        "/loyalty-program/",
+        "/referral-program/",
+        "/whatsapp/?text=Hello+Mr+Sewing%2C+I+would+like+to+share+an+outfit+design+for+a+custom+order.+May+I+send+you+my+inspiration+photo%3F",
+        "tel:+250787411501",
+        "mailto:mrsewingfashiondesigner@gmail.com",
+        "/whatsapp/",
+        "/contact/#locations-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/whatsapp/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://mrsewingfashion.com/#website",
+              "url": "https://mrsewingfashion.com/",
+              "name": "Mr Sewing Fashion",
+              "alternateName": [
+                "Mr Sewing Fashion",
+                "Mr Sewing",
+                "mr_sewing_fashion",
+                "mrsewingfashion"
+              ],
+              "publisher": {
+                "@type": "ClothingStore",
+                "@id": "https://mrsewingfashion.com/#organization",
+                "name": "Mr Sewing Fashion",
+                "url": "https://mrsewingfashion.com/",
+                "image": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+                "telephone": "+250787411501",
+                "areaServed": [
+                  "Kigali",
+                  "Rwanda"
+                ],
+                "address": [
+                  {
+                    "@type": "PostalAddress",
+                    "streetAddress": "MIC Building, Downtown",
+                    "addressLocality": "Nyarugenge, Kigali",
+                    "addressCountry": "RW"
+                  },
+                  {
+                    "@type": "PostalAddress",
+                    "streetAddress": "KN 441 St, Norvège",
+                    "addressLocality": "Nyarugenge, Kigali",
+                    "addressCountry": "RW"
+                  }
+                ],
+                "sameAs": [
+                  "https://www.instagram.com/mr_sewing_fashion",
+                  "https://www.facebook.com/share/19tDCGATYj/",
+                  "https://www.tiktok.com/@mrsewingfashion",
+                  "https://youtube.com/@mr.sewingfashion"
+                ],
+                "email": "mrsewingfashiondesigner@gmail.com",
+                "logo": "https://mrsewingfashion.com/MR%20LOGO.jpeg",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "https://schema.org/Monday",
+                      "https://schema.org/Tuesday",
+                      "https://schema.org/Wednesday",
+                      "https://schema.org/Thursday",
+                      "https://schema.org/Friday",
+                      "https://schema.org/Saturday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "17:00"
+                  }
+                ],
+                "disambiguatingDescription": "Monday–Saturday: 09:00–17:00. Ordinary Saturday visits do not require an appointment. On the last Saturday of every month (Umuganda), hours are 12:00–17:00, strictly by advance appointment. Sunday: by appointment only; no fixed Sunday hours are published.",
+                "specialOpeningHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-01-31",
+                    "validThrough": "2026-01-31",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-02-28",
+                    "validThrough": "2026-02-28",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-03-28",
+                    "validThrough": "2026-03-28",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-04-25",
+                    "validThrough": "2026-04-25",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-05-30",
+                    "validThrough": "2026-05-30",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-06-27",
+                    "validThrough": "2026-06-27",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-07-25",
+                    "validThrough": "2026-07-25",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-08-29",
+                    "validThrough": "2026-08-29",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-09-26",
+                    "validThrough": "2026-09-26",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-10-31",
+                    "validThrough": "2026-10-31",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-11-28",
+                    "validThrough": "2026-11-28",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2026-12-26",
+                    "validThrough": "2026-12-26",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-01-30",
+                    "validThrough": "2027-01-30",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-02-27",
+                    "validThrough": "2027-02-27",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-03-27",
+                    "validThrough": "2027-03-27",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-04-24",
+                    "validThrough": "2027-04-24",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-05-29",
+                    "validThrough": "2027-05-29",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-06-26",
+                    "validThrough": "2027-06-26",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-07-31",
+                    "validThrough": "2027-07-31",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-08-28",
+                    "validThrough": "2027-08-28",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-09-25",
+                    "validThrough": "2027-09-25",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-10-30",
+                    "validThrough": "2027-10-30",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-11-27",
+                    "validThrough": "2027-11-27",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "validFrom": "2027-12-25",
+                    "validThrough": "2027-12-25",
+                    "opens": "12:00",
+                    "closes": "17:00",
+                    "description": "Umuganda (last Saturday): strictly by advance appointment."
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "@id": "https://mrsewingfashion.com/#navigation",
+              "name": [
+                "Home",
+                "Showroom",
+                "Our Work",
+                "About Us",
+                "Contact Us",
+                "FAQs"
+              ],
+              "url": [
+                "https://mrsewingfashion.com/",
+                "https://mrsewingfashion.com/showroom/",
+                "https://mrsewingfashion.com/our-work/",
+                "https://mrsewingfashion.com/about/",
+                "https://mrsewingfashion.com/contact/",
+                "https://mrsewingfashion.com/faq/"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/services/custom-tailoring/": {
+      "title": "Custom Tailoring & Suits in Kigali, Rwanda | Mr Sewing Fashion",
+      "description": "Plan custom suits and made-to-measure tailoring in Kigali, Rwanda. Explore men’s and women’s suit references, fabric preferences and a personal quotation.",
+      "canonical": "https://mrsewingfashion.com/services/custom-tailoring/",
+      "robots": [
+        "index, follow"
+      ],
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Custom Tailoring & Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Special Tailoring & Custom Garments"
+        },
+        {
+          "level": "h2",
+          "text": "Suit Quality Options & Included Benefits"
+        },
+        {
+          "level": "h3",
+          "text": "Tuxedos & Special Garments"
+        },
+        {
+          "level": "h2",
+          "text": "Children’s Tailoring & Family Benefits"
+        },
+        {
+          "level": "h2",
+          "text": "Payment and Order Confirmation"
+        },
+        {
+          "level": "h3",
+          "text": "70% Advance Payment"
+        },
+        {
+          "level": "h3",
+          "text": "30% Final Balance"
+        },
+        {
+          "level": "h2",
+          "text": "Tailoring Around Your Order"
+        },
+        {
+          "level": "h3",
+          "text": "Standard Tailoring"
+        },
+        {
+          "level": "h3",
+          "text": "Express Service"
+        },
+        {
+          "level": "h2",
+          "text": "Included with Your Standard Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Helpful Order Information"
+        },
+        {
+          "level": "h2",
+          "text": "Find Your Next Design"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        },
+        {
+          "src": "/hero-custom-tailoring.webp",
+          "alt": "Ivory suit jacket on a black mannequin in a light room"
+        }
+      ],
+      "links": [
+        "/services/custom-tailoring/#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/",
+        "/services/",
+        "/showroom/?audience=men",
+        "/showroom/?audience=women",
+        "/services/custom-tailoring/special-order/",
+        "/showroom/?style=tuxedos-formalwear",
+        "/services/custom-tailoring/special-order/",
+        "/faq/prices-packages-payments/#children-cost",
+        "/faq/prices-packages-payments/#domestic-deposit",
+        "/faq/prices-packages-payments/#international-payment",
+        "/faq/prices-packages-payments/#payment-verification",
+        "/showroom/?audience=men",
+        "/showroom/?audience=women",
+        "/services/custom-tailoring/special-order/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://mrsewingfashion.com/services/custom-tailoring/#page",
+              "name": "Custom Tailoring & Suits | Mr Sewing Fashion, Kigali",
+              "url": "https://mrsewingfashion.com/services/custom-tailoring/",
+              "description": "Personalised garment design, fabric preferences, measurements and fitting arrangements for your individual tailoring request.",
+              "isPartOf": {
+                "@id": "https://mrsewingfashion.com/#website"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://mrsewingfashion.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Custom Tailoring & Suits",
+                  "item": "https://mrsewingfashion.com/services/custom-tailoring/"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "name": "Custom Tailoring & Suits",
+              "serviceType": "Custom Tailoring & Suits",
+              "url": "https://mrsewingfashion.com/services/custom-tailoring/",
+              "provider": {
+                "@id": "https://mrsewingfashion.com/#organization"
+              },
+              "areaServed": "Kigali, Rwanda"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/alterations/": {
+      "title": "Clothing Alterations & Repairs in Kigali | Mr Sewing Fashion",
+      "description": "Request clothing alterations and garment repairs in Kigali, Rwanda. Describe the garment and changes needed for assessment, fitting arrangements and a quotation.",
+      "canonical": "https://mrsewingfashion.com/services/alterations/",
+      "robots": [
+        "index, follow"
+      ],
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Clothing Alterations & Repairs"
+        },
+        {
+          "level": "h2",
+          "text": "Describe the garment and work"
+        },
+        {
+          "level": "h2",
+          "text": "Fitting and handover"
+        },
+        {
+          "level": "h2",
+          "text": "Choose your assistance"
+        },
+        {
+          "level": "h2",
+          "text": "Service Turnaround"
+        },
+        {
+          "level": "h2",
+          "text": "Express, after-hours and overnight"
+        },
+        {
+          "level": "h2",
+          "text": "Fitting and workmanship concerns"
+        },
+        {
+          "level": "h2",
+          "text": "Payment and garment assessment"
+        },
+        {
+          "level": "h2",
+          "text": "Collection and delivery"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        },
+        {
+          "src": "/hero-alterations.webp",
+          "alt": "Tailor adjusting a dark jacket on a mannequin"
+        }
+      ],
+      "links": [
+        "/services/alterations/#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/",
+        "/services/",
+        "/request/alterations/",
+        "/faq/express-tailoring/#express-charge",
+        "/faq/prices-packages-payments/#standalone-payment",
+        "/faq/production-delivery/#delivery-arrangements",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://mrsewingfashion.com/services/alterations/#page",
+              "name": "Clothing Alterations & Repairs | Mr Sewing Fashion, Kigali",
+              "url": "https://mrsewingfashion.com/services/alterations/",
+              "description": "Discuss adjustments to fit and repairs to clothing, assessed against the garment’s condition and the change you need.",
+              "isPartOf": {
+                "@id": "https://mrsewingfashion.com/#website"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://mrsewingfashion.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Clothing Alterations & Repairs",
+                  "item": "https://mrsewingfashion.com/services/alterations/"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "name": "Clothing Alterations & Repairs",
+              "serviceType": "Clothing Alterations & Repairs",
+              "url": "https://mrsewingfashion.com/services/alterations/",
+              "provider": {
+                "@id": "https://mrsewingfashion.com/#organization"
+              },
+              "areaServed": "Kigali, Rwanda"
+            }
+          ]
+        }
+      ]
+    },
+    "/services/custom-tailoring/special-order/": {
+      "title": "Special Order Design Enquiry | Mr Sewing Fashion, Kigali",
+      "description": "Review design, fabric preferences, priority and contact details before sending a quotation enquiry.",
+      "canonical": "https://mrsewingfashion.com/services/custom-tailoring/special-order/",
+      "robots": [
+        "noindex, follow"
+      ],
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Special Tailoring Request"
+        },
+        {
+          "level": "h2",
+          "text": "Tell Us About Your Design"
+        },
+        {
+          "level": "h2",
+          "text": "Review Your Request"
+        },
+        {
+          "level": "h2",
+          "text": "Request Submitted for Review"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        }
+      ],
+      "links": [
+        "/services/custom-tailoring/special-order/#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/custom-tailoring/",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://mrsewingfashion.com/services/custom-tailoring/special-order/#page",
+              "name": "Special Order Design Enquiry | Mr Sewing Fashion, Kigali",
+              "url": "https://mrsewingfashion.com/services/custom-tailoring/special-order/",
+              "description": "Review design, fabric preferences, priority and contact details before sending a quotation enquiry.",
+              "isPartOf": {
+                "@id": "https://mrsewingfashion.com/#website"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://mrsewingfashion.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Special Order Design Enquiry",
+                  "item": "https://mrsewingfashion.com/services/custom-tailoring/special-order/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/showroom/": {
+      "title": "Clothing Showroom in Kigali | Mr Sewing Fashion",
+      "description": "Explore approved clothing design references and completed Mr Sewing Fashion work in Kigali, Rwanda. Filter styles, view photographs and request custom tailoring.",
+      "canonical": "https://mrsewingfashion.com/showroom/",
+      "robots": [
+        "index, follow"
+      ],
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Clothing Showroom"
+        },
+        {
+          "level": "h2",
+          "text": "Light single-breasted tailoring"
+        },
+        {
+          "level": "h2",
+          "text": "Grey double-breasted tailoring"
+        },
+        {
+          "level": "h2",
+          "text": "Off-white tailoring — front view"
+        },
+        {
+          "level": "h2",
+          "text": "Off-white tailoring — side view"
+        },
+        {
+          "level": "h2",
+          "text": "Off-White Graduation Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Kaunda suit"
+        },
+        {
+          "level": "h2",
+          "text": "Blue single-breasted tailoring"
+        },
+        {
+          "level": "h2",
+          "text": "Blue single-breasted separates"
+        },
+        {
+          "level": "h2",
+          "text": "Ivory Elegance One-Button Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Skyline Double-Breasted Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Royal Ivory Three-Piece Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Royal Ivory Tuxedo"
+        },
+        {
+          "level": "h2",
+          "text": "Burgundy Grace Women's Single-Breasted Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Midnight Elegance Women's Double-Breasted Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Burgundy Royale Women's Skirt Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Camel Grace Women's Three-Piece Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Midnight Black Double-Breasted Suit – Gold Edition"
+        },
+        {
+          "level": "h2",
+          "text": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition"
+        },
+        {
+          "level": "h2",
+          "text": "Sky Blue Elegance Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Rose Elegance Suit"
+        },
+        {
+          "level": "h2",
+          "text": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        },
+        {
+          "src": "/assets/images/r4-480.webp",
+          "alt": "Person wearing a light jacket and matching trousers"
+        },
+        {
+          "src": "/assets/images/r7-480.webp",
+          "alt": "Person wearing a light jacket with navy trousers"
+        },
+        {
+          "src": "/assets/images/h1-480.webp",
+          "alt": "Person wearing an off-white suit"
+        },
+        {
+          "src": "/assets/images/h2-480.webp",
+          "alt": "Side view of a person in an off-white suit"
+        },
+        {
+          "src": "/assets/images/h3-480.webp",
+          "alt": "Person holding a diploma scroll"
+        },
+        {
+          "src": "/assets/images/m-kaundasuits1-480.webp",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/m-kaundasuits2.jpeg",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/assets/images/m-kaundasuits3-480.webp",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/m-kaundasuits4.jpeg",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/m-kaundasuits5.jpeg",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/m-kaundasuits6.jpeg",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/assets/images/m-kaundasuits7-480.webp",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/m-kaundasuits8.jpeg",
+          "alt": "Men’s Kaunda suit"
+        },
+        {
+          "src": "/r2.jpeg",
+          "alt": "Garment photograph shown for design inspiration"
+        },
+        {
+          "src": "/assets/images/r3-480.webp",
+          "alt": "Garment photograph shown for design inspiration"
+        },
+        {
+          "src": "/Ivory%20Elegance%20%E2%80%94%20Single-Breasted%20Suit.webp",
+          "alt": "Ivory Elegance One-Button Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Skyline%20Double-Breasted%20Suit.webp",
+          "alt": "Skyline Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Ivory%20Three-Piece%20Suit.webp",
+          "alt": "Royal Ivory Three-Piece Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Royal%20Ivory%20Shawl-Lapel%20Tuxedo.webp",
+          "alt": "Royal Ivory Tuxedo shown as a tailoring design reference"
+        },
+        {
+          "src": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+          "alt": "Burgundy Grace Women's Single-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
+          "alt": "Midnight Elegance Women's Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
+          "alt": "Burgundy Royale Women's Skirt Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Camel%20Grace%20Women%27s%20Three-Piece%20Suit.webp",
+          "alt": "Camel Grace Women's Three-Piece Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+          "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/sky-blue-elegance-suit-480.webp",
+          "alt": "Sky Blue Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/rose-elegance-suit-480.webp",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        }
+      ],
+      "links": [
+        "/showroom/#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/",
+        "/collections/designs/ms-096/?design=MS-096&photo=https%3A%2F%2Fmrsewingfashion.com%2Fr4.jpeg",
+        "/our-work/soft-ivory-tailoring/",
+        "/collections/designs/ms-117/?design=MS-117&photo=https%3A%2F%2Fmrsewingfashion.com%2Fr7.jpeg",
+        "/our-work/light-grey-and-navy/",
+        "/collections/designs/ms-005/?design=MS-005&photo=https%3A%2F%2Fmrsewingfashion.com%2Fh1.jpeg",
+        "/our-work/off-white-graduation-suit/",
+        "/collections/designs/ms-006/?design=MS-006&photo=https%3A%2F%2Fmrsewingfashion.com%2Fh2.jpeg",
+        "/our-work/off-white-graduation-suit/",
+        "/collections/designs/ms-007/?design=MS-007&photo=https%3A%2F%2Fmrsewingfashion.com%2Fh3.jpeg",
+        "/our-work/off-white-graduation-suit/",
+        "/collections/designs/ms-029/?design=MS-029&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits1.jpeg",
+        "/collections/designs/ms-030/?design=MS-030&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits2.jpeg",
+        "/collections/designs/ms-031/?design=MS-031&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits3.jpeg",
+        "/collections/designs/ms-032/?design=MS-032&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits4.jpeg",
+        "/collections/designs/ms-033/?design=MS-033&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits5.jpeg",
+        "/collections/designs/ms-034/?design=MS-034&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits6.jpeg",
+        "/collections/designs/ms-035/?design=MS-035&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits7.jpeg",
+        "/collections/designs/ms-036/?design=MS-036&photo=https%3A%2F%2Fmrsewingfashion.com%2Fm-kaundasuits8.jpeg",
+        "/collections/designs/ms-069/?design=MS-069&photo=https%3A%2F%2Fmrsewingfashion.com%2Fr2.jpeg",
+        "/our-work/cobalt-blue-suit/",
+        "/collections/designs/ms-083/?design=MS-083&photo=https%3A%2F%2Fmrsewingfashion.com%2Fr3.jpeg",
+        "/our-work/blue-jacket-black-trousers/",
+        "/collections/designs/ms-139/?design=MS-139&photo=https%3A%2F%2Fmrsewingfashion.com%2FIvory%2520Elegance%2520%25E2%2580%2594%2520Single-Breasted%2520Suit.webp",
+        "/shop/ivory-elegance-single-breasted-suit/",
+        "/collections/designs/ms-140/?design=MS-140&photo=https%3A%2F%2Fmrsewingfashion.com%2FSkyline%2520Double-Breasted%2520Suit.webp",
+        "/shop/skyline-double-breasted-suit/",
+        "/collections/designs/ms-141/?design=MS-141&photo=https%3A%2F%2Fmrsewingfashion.com%2FRoyal%2520Ivory%2520Three-Piece%2520Suit.webp",
+        "/shop/royal-ivory-three-piece-suit/",
+        "/collections/designs/ms-142/?design=MS-142&photo=https%3A%2F%2Fmrsewingfashion.com%2FRoyal%2520Ivory%2520Shawl-Lapel%2520Tuxedo.webp",
+        "/shop/royal-ivory-shawl-lapel-tuxedo/",
+        "/collections/designs/ms-143/?design=MS-143&photo=https%3A%2F%2Fmrsewingfashion.com%2FBurgundy%2520Grace%2520Women%2527s%2520Single-Breasted%2520Suit.webp",
+        "/shop/burgundy-grace-women-s-single-breasted-suit/",
+        "/collections/designs/ms-144/?design=MS-144&photo=https%3A%2F%2Fmrsewingfashion.com%2FMidnight%2520Elegance%2520Women%2527s%2520Double-Breasted%2520Suit.webp",
+        "/shop/midnight-elegance-women-s-double-breasted-suit/",
+        "/collections/designs/ms-145/?design=MS-145&photo=https%3A%2F%2Fmrsewingfashion.com%2FBurgundy%2520Royale%2520Women%2527s%2520Skirt%2520Suit.webp",
+        "/shop/burgundy-royale-women-s-skirt-suit/",
+        "/collections/designs/ms-146/?design=MS-146&photo=https%3A%2F%2Fmrsewingfashion.com%2FCamel%2520Grace%2520Women%2527s%2520Three-Piece%2520Suit.webp",
+        "/shop/camel-grace-women-s-three-piece-suit/",
+        "/collections/designs/midnight-black-double-breasted-gold/?design=MS-147&photo=https%3A%2F%2Fmrsewingfashion.com%2FMidnight%2520Black%2520Double-Breasted%2520Suit%2520%25E2%2580%2593%2520Gold%2520Edition.webp",
+        "/shop/midnight-black-double-breasted-gold/",
+        "/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/?design=MS-148&photo=https%3A%2F%2Fmrsewingfashion.com%2FIvory%2520Elegance%2520Shawl-Lapel%2520Tuxedo%2520%25E2%2580%2593%2520Black%2520Tie%2520Edition.webp",
+        "/shop/ivory-elegance-shawl-tuxedo-black-tie/",
+        "/collections/designs/sky-blue-elegance-suit/?design=MS-149&photo=https%3A%2F%2Fmrsewingfashion.com%2FThe%2520blue%2520suit%2520two%2520piece.webp",
+        "/shop/sky-blue-elegance-suit/",
+        "/collections/designs/rose-elegance-suit/?design=MS-150&photo=https%3A%2F%2Fmrsewingfashion.com%2Frose-pink%2520three%2520piecsuit.webp",
+        "/shop/rose-elegance-suit/",
+        "/collections/designs/royal-blue-executive-womens-three-piece/?design=MS-151&photo=https%3A%2F%2Fmrsewingfashion.com%2FRoyal%2520Blue%2520Executive%2520Women%2527s%2520Three-Piece%2520Pantsuit%2520%25E2%2580%2593%2520Signature%2520Collection.webp",
+        "/shop/royal-blue-executive-womens-three-piece/",
+        "/services/custom-tailoring/",
+        "/services/custom-tailoring/selected-designs/",
+        "/services/custom-tailoring/special-order/",
+        "/shop/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "@id": "https://mrsewingfashion.com/showroom/#page",
+              "name": "Clothing Showroom | Mr Sewing Fashion, Kigali",
+              "url": "https://mrsewingfashion.com/showroom/",
+              "description": "Explore approved clothing photographs, custom suit references and genuine Mr Sewing work in Kigali, Rwanda. Filter by audience, garment and style, then request a personal quotation.",
+              "isPartOf": {
+                "@id": "https://mrsewingfashion.com/#website"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://mrsewingfashion.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Clothing Showroom",
+                  "item": "https://mrsewingfashion.com/showroom/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Mr Sewing Fashion clothing Showroom",
+          "numberOfItems": 28,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Light single-breasted tailoring",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-096/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Grey double-breasted tailoring",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-117/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Off-white tailoring — front view",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-005/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Off-white tailoring — side view",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-006/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Off-White Graduation Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-007/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-029/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-030/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-031/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-032/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-033/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-034/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-035/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 13,
+              "name": "Kaunda suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-036/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 14,
+              "name": "Blue single-breasted tailoring",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-069/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 15,
+              "name": "Blue single-breasted separates",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-083/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 16,
+              "name": "Ivory Elegance One-Button Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-139/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 17,
+              "name": "Skyline Double-Breasted Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-140/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 18,
+              "name": "Royal Ivory Three-Piece Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-141/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 19,
+              "name": "Royal Ivory Tuxedo",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-142/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 20,
+              "name": "Burgundy Grace Women's Single-Breasted Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-143/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 21,
+              "name": "Midnight Elegance Women's Double-Breasted Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-144/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 22,
+              "name": "Burgundy Royale Women's Skirt Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-145/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 23,
+              "name": "Camel Grace Women's Three-Piece Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/ms-146/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 24,
+              "name": "Midnight Black Double-Breasted Suit – Gold Edition",
+              "url": "https://mrsewingfashion.com/collections/designs/midnight-black-double-breasted-gold/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 25,
+              "name": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition",
+              "url": "https://mrsewingfashion.com/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 26,
+              "name": "Sky Blue Elegance Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/sky-blue-elegance-suit/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 27,
+              "name": "Rose Elegance Suit",
+              "url": "https://mrsewingfashion.com/collections/designs/rose-elegance-suit/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 28,
+              "name": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection",
+              "url": "https://mrsewingfashion.com/collections/designs/royal-blue-executive-womens-three-piece/"
+            }
+          ]
+        }
+      ]
+    },
+    "/mensuits/": {
+      "title": "Men's Suits in Kigali | Mr Sewing Fashion",
+      "description": "Explore men’s suit design references by style at Mr Sewing Fashion in Kigali. Choose a category, view a reference or send your own design for assessment.",
+      "canonical": "https://mrsewingfashion.com/mensuits/",
+      "robots": [
+        "index, follow"
+      ],
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Men's Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Explore Suit Styles"
+        },
+        {
+          "level": "h3",
+          "text": "Single-Breasted Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Double-Breasted Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Tuxedos & Formalwear"
+        },
+        {
+          "level": "h3",
+          "text": "Three-Piece Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Kaunda Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        },
+        {
+          "src": "/assets/images/sky-blue-elegance-suit-480.webp",
+          "alt": "Sky Blue Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/midnight-black-double-breasted-gold-480.webp",
+          "alt": "Midnight Black Double-Breasted Suit – Gold Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/ivory-elegance-shawl-tuxedo-black-tie-480.webp",
+          "alt": "Ivory Elegance Shawl-Lapel Tuxedo – Black Tie Edition shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/rose-elegance-suit-480.webp",
+          "alt": "Rose Elegance Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/m-kaundasuits3-480.webp",
+          "alt": "Men’s Kaunda suit"
+        }
+      ],
+      "links": [
+        "/mensuits/#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/services/custom-tailoring/",
+        "/showroom/",
+        "/mensuits/single-breasted/?category=men&suitCategory=men-single-breasted",
+        "/mensuits/double-breasted/?category=men&suitCategory=men-double-breasted",
+        "/mensuits/tuxedos-formalwear/?category=men&suitCategory=men-tuxedos-formalwear",
+        "/mensuits/three-piece/?category=men&suitCategory=men-three-piece",
+        "/mensuits/kaunda/?category=men&suitCategory=men-kaunda",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "@id": "https://mrsewingfashion.com/mensuits/#page",
+              "name": "Men's Suits in Kigali | Mr Sewing Fashion",
+              "url": "https://mrsewingfashion.com/mensuits/",
+              "description": "Explore men’s suit design references by style at Mr Sewing Fashion in Kigali. Choose a category, view a reference or send your own design for assessment.",
+              "isPartOf": {
+                "@id": "https://mrsewingfashion.com/#website"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://mrsewingfashion.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Men's Suits in Kigali",
+                  "item": "https://mrsewingfashion.com/mensuits/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/womensuits/": {
+      "title": "Women's Suits in Kigali | Mr Sewing Fashion",
+      "description": "Explore women’s suit design references at Mr Sewing Fashion in Kigali. Browse tailoring categories or send your own inspiration for a quotation enquiry.",
+      "canonical": "https://mrsewingfashion.com/womensuits/",
+      "robots": [
+        "index, follow"
+      ],
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Women's Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Explore Suit Styles"
+        },
+        {
+          "level": "h3",
+          "text": "Single-Breasted Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Double-Breasted Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Skirt Suits"
+        },
+        {
+          "level": "h3",
+          "text": "Three-Piece Suits"
+        },
+        {
+          "level": "h2",
+          "text": "Mr Sewing Fashion information"
+        },
+        {
+          "level": "h3",
+          "text": "Service Links"
+        },
+        {
+          "level": "h3",
+          "text": "Customer Guides"
+        },
+        {
+          "level": "h3",
+          "text": "Quick Information"
+        }
+      ],
+      "images": [
+        {
+          "src": "MR LOGO.jpeg",
+          "alt": "Mr Sewing official MS logo"
+        },
+        {
+          "src": "/Burgundy%20Grace%20Women%27s%20Single-Breasted%20Suit.webp",
+          "alt": "Burgundy Grace Women's Single-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Midnight%20Elegance%20Women%27s%20Double-Breasted%20Suit.webp",
+          "alt": "Midnight Elegance Women's Double-Breasted Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/Burgundy%20Royale%20Women%27s%20Skirt%20Suit.webp",
+          "alt": "Burgundy Royale Women's Skirt Suit shown as a tailoring design reference"
+        },
+        {
+          "src": "/assets/images/royal-blue-executive-womens-three-piece-480.webp",
+          "alt": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection shown as a tailoring design reference"
+        }
+      ],
+      "links": [
+        "/womensuits/#main-content",
+        "/contact/#hours-heading",
+        "/",
+        "/",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/showroom/",
+        "/our-work/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/about/",
+        "/contact/",
+        "/faq/",
+        "/shop/",
+        "/services/custom-tailoring/",
+        "/showroom/",
+        "/womensuits/single-breasted/?category=women&suitCategory=women-single-breasted",
+        "/womensuits/double-breasted/?category=women&suitCategory=women-double-breasted",
+        "/womensuits/skirt-suits/?category=women&suitCategory=women-skirt-suits",
+        "/womensuits/three-piece/?category=women&suitCategory=women-three-piece",
+        "/services/custom-tailoring/",
+        "/services/alterations/",
+        "/services/garment-care/",
+        "/services/mobile-fitting/",
+        "/services/vip/",
+        "/measurements/",
+        "/guides/fabrics/",
+        "/showroom/",
+        "/faq/",
+        "/contact/#locations-heading",
+        "/contact/#hours-heading",
+        "/terms-and-conditions/",
+        "/privacy-policy/",
+        "/refund-policy/",
+        "https://www.facebook.com/share/19tDCGATYj/",
+        "https://www.instagram.com/mr_sewing_fashion",
+        "https://www.tiktok.com/@mrsewingfashion",
+        "https://youtube.com/@mr.sewingfashion"
+      ],
+      "structuredData": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "@id": "https://mrsewingfashion.com/womensuits/#page",
+              "name": "Women's Suits in Kigali | Mr Sewing Fashion",
+              "url": "https://mrsewingfashion.com/womensuits/",
+              "description": "Explore women’s suit design references at Mr Sewing Fashion in Kigali. Browse tailoring categories or send your own inspiration for a quotation enquiry.",
+              "isPartOf": {
+                "@id": "https://mrsewingfashion.com/#website"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://mrsewingfashion.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Women's Suits in Kigali",
+                  "item": "https://mrsewingfashion.com/womensuits/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

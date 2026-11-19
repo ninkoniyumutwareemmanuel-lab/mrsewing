@@ -56,3 +56,19 @@
 .custom-tailoring-mobile .tuxedo-price-table{margin-top:28px;max-width:700px}
 .custom-tailoring-mobile #service-info-bulk{margin:24px 0}
 @media(min-width:1100px){.custom-tailoring-mobile .tailoring-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* R52: Tailoring-first overview; service rules remain scoped to their pages. */
+.custom-tailoring-mobile .service-hero-actions .home-button{max-width:100%;white-space:normal;text-align:center;line-height:1.5}
+.custom-tailoring-mobile .service-hero-copy>.tailoring-design-note{font-size:14px;line-height:1.6;margin:18px 0}
+.custom-tailoring-mobile .tailoring-category-grid{display:grid;gap:18px;margin-top:24px;min-width:0}
+.custom-tailoring-mobile .tailoring-category-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:24px 20px;border:1px solid #66512c;border-radius:8px;background:#151411}
+.custom-tailoring-mobile .tailoring-category-suits{border-color:#b99754;background:#1b1812}
+.custom-tailoring-mobile .tailoring-category-card .home-eyebrow{font-size:11px;color:#d4b36b;margin-bottom:12px}
+.custom-tailoring-mobile .tailoring-category-card h3{font:400 27px/1.2 Georgia,serif;color:#f3e8cf;overflow-wrap:break-word}
+.custom-tailoring-mobile .tailoring-category-card>p:not(.home-eyebrow){font-size:16px;line-height:1.75;color:#d4cfc4;margin:16px 0 22px}
+.custom-tailoring-mobile .tailoring-category-card .home-button{margin-top:auto;display:flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:13px 16px;font-size:14px;line-height:1.5;white-space:normal;text-align:center;text-decoration:none}
+.custom-tailoring-mobile .tailoring-category-card .home-button:focus-visible{outline:3px solid #efcb72;outline-offset:4px}
+.custom-tailoring-mobile .tailoring-fabric-intro>.home-eyebrow{color:#d4b36b;font-size:11px;margin-bottom:14px}
+.custom-tailoring-mobile .tailoring-fabric-intro>h2{max-width:26ch}
+.custom-tailoring-mobile .tailoring-fabric-intro>p:last-child a{display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:700px){.custom-tailoring-mobile .tailoring-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.custom-tailoring-mobile .tailoring-category-suits{grid-column:1/-1}}
+@media(min-width:1100px){.custom-tailoring-mobile .tailoring-category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.custom-tailoring-mobile .tailoring-category-suits{grid-column:auto}}

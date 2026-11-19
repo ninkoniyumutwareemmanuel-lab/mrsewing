@@ -1,5 +1,10 @@
-/* R51 additive showcase; existing homepage below remains unchanged. */
+/* R52 tailoring-first showcase; existing approved media and lower homepage retained. */
 .home-fashion-showcase{padding:24px 0 36px;background:#0b0b0c;color:#f5efe3}
+.home-tailoring-intro{max-width:960px;padding:10px 0 30px}
+.home-tailoring-intro h1{margin:12px 0 20px;max-width:900px;font:400 clamp(36px,5.2vw,68px)/1.08 Georgia,serif;color:#f7f0e4;letter-spacing:-.025em;overflow-wrap:break-word}
+.home-tailoring-intro>p:not(.home-eyebrow){font-size:clamp(17px,1.7vw,20px);line-height:1.65;max-width:760px;color:#e0d7c7;margin:10px 0}
+.home-tailoring-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.home-tailoring-actions .home-button{min-height:48px;white-space:normal;text-align:center}
 .home-showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .home-showcase-card{min-width:0;border:1px solid #6f572c;background:#141311;border-radius:10px;overflow:hidden}
 .home-showcase-card>a{display:block;color:inherit;text-decoration:none}
@@ -18,5 +23,20 @@
 .home-showcase-feature-copy .home-button{margin:12px 10px 0 0;min-height:46px;white-space:normal}
 .home-fashion-showcase a:focus-visible,.home-fashion-showcase video:focus-visible{outline:3px solid #f1c95f;outline-offset:-4px}
 .home-fashion-showcase video{max-width:100%}
+.home-design-sharing{padding:4px 0 40px;background:#0b0b0c;color:#f5efe3}
+.home-design-sharing-card{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;padding:32px;border:1px solid #6f572c;border-radius:10px;background:#18150f}
+.home-design-sharing-card>div{min-width:0}
+.home-design-sharing-card h2{margin:10px 0 16px;font:400 clamp(28px,3.5vw,40px)/1.15 Georgia,serif;color:#f7f0e4}
+.home-design-sharing-card h3{margin:22px 0 10px;font:600 19px/1.4 Arial,sans-serif;color:#e7c56d}
+.home-design-sharing-card p{font-size:16px;line-height:1.7;color:#e0d7c7;margin:12px 0}
+.home-design-sharing-action{align-self:center}
+.home-design-sharing-action .home-button{min-height:50px;white-space:normal;text-align:center;width:100%;padding-inline:16px}
+.home-design-sharing-action>p{font-size:14px;line-height:1.6}
+.home-design-sharing-action>a:last-child{display:inline-flex;align-items:center;min-height:44px;font-size:15px;line-height:1.5;color:#e7c56d;text-underline-offset:4px}
+.home-design-sharing a:focus-visible{outline:3px solid #f1c95f;outline-offset:4px}
+/* The retained brand hero is now a supporting H2 rather than a second H1. */
+.hero-content #hero-title{font:400 clamp(48px,7vw,100px)/1.04 Georgia,serif;letter-spacing:-.04em}
+.hero-content #hero-title em{font-weight:400}
 @media(max-width:699px){.home-fashion-showcase{padding:16px 0 26px}.home-showcase-grid{gap:12px}.home-showcase-copy{padding:14px 12px}.home-showcase-copy h2{font-size:24px}.home-showcase-copy p{font-size:14px}.home-showcase-card img,.home-showcase-card video{height:clamp(220px,56vw,370px)}.home-showcase-feature{grid-template-columns:1fr;margin-top:16px}.home-showcase-feature-photo img,.home-showcase-feature-photo video{height:390px}.home-showcase-feature-copy{padding:24px 18px}}
+@media(max-width:699px){.home-tailoring-intro{padding:8px 0 24px}.home-tailoring-intro h1{font-size:clamp(34px,8.4vw,48px)}.home-tailoring-actions{gap:10px;margin-top:20px}.home-tailoring-actions .home-button{flex:1 1 180px}.home-tailoring-actions .home-button:first-child{flex-basis:100%}.home-design-sharing{padding-bottom:26px}.home-design-sharing-card{grid-template-columns:1fr;gap:12px;padding:24px 18px}.home-design-sharing-card p{font-size:16px}.home-design-sharing-card h3{font-size:18px}.hero-content #hero-title{font-size:clamp(44px,13vw,70px)}}
 @media(max-width:374px){.home-showcase-grid{grid-template-columns:1fr}.home-showcase-card img,.home-showcase-card video{height:320px}.home-showcase-feature-photo img,.home-showcase-feature-photo video{height:340px}}

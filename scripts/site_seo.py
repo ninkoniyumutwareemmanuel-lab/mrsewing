@@ -62,7 +62,7 @@ def finalize(source,path):
     source=re.sub(r'<script src="/assets/public-api[.]js[^"]*" defer></script>','',source)
     if 'customerRequestForm' in source or 'data-commerce-form' in source or 'shopData' in source:source=source.replace('</head>','<script src="/assets/public-api.js?v=staging-r32" defer></script></head>',1)
     source=source.replace('src="/assets/faq-help.js"','src="/assets/faq-help.js?v=staging-r32"').replace('src="/assets/faq-actions.js"','src="/assets/faq-actions.js?v=staging-r32"').replace('src="/assets/request-context.js"','src="/assets/request-context.js?v=staging-r32"').replace('src="/assets/customer-site.js"','src="/assets/customer-site.js?v=staging-r51"').replace('src="/assets/request-draft.js"','src="/assets/request-draft.js?v=staging-r51"').replace('src="/assets/commerce.js"','src="/assets/commerce.js?v=staging-r32"').replace('src="/assets/homepage.js"','src="/assets/homepage.js?v=mobile-motion-r24"')
-    for asset in ['customer-site.js','request-draft.js','customer-refinements.js','request-context.js','faq-help.js','customer-interactions.js','whatsapp-consent.js']:
+    for asset in ['customer-site.js','request-draft.js','customer-refinements.js','request-context.js','faq-help.js','whatsapp-consent.js']:
         source=re.sub(r'src="/assets/'+re.escape(asset)+r'(?:\?v=[^"]*)?"','src="/assets/'+asset+'?v=staging-r51"',source)
     source=re.sub(r'<script id="designSelectionData".*?</script>|<script src="/assets/design-selections.js[^"]*" defer></script>|<link rel="stylesheet" href="/assets/design-selections.css[^\"]*">','',source,flags=re.S)
     if route.startswith(('/showroom/','/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
@@ -88,5 +88,9 @@ def finalize(source,path):
     from whatsapp_consent import protect
     source=protect(source)
     source=re.sub(r'<script src="/assets/customer-interactions[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions[.]css(?:\?[^"]*)?">','',source)
-    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css?v=staging-r51"><script src="/assets/customer-interactions.js?v=staging-r51" defer></script></head>',1)
+    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css?v=staging-r51"><script src="/assets/customer-interactions.js?v=staging-r52" defer></script></head>',1)
+    # R52: one small enhancement for existing Terms-gated enquiry links only.
+    source=re.sub(r'<script src="/assets/tailoring-enquiry[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/tailoring-enquiry[.]css(?:\?[^"]*)?">','',source)
+    if 'data-tailoring-whatsapp' in source:
+        source=source.replace('</head>','<link rel="stylesheet" href="/assets/tailoring-enquiry.css?v=r52"><script src="/assets/tailoring-enquiry.js?v=r52" defer></script></head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'
