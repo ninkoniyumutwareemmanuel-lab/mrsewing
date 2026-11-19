@@ -24,7 +24,7 @@ from project_catalog import projects
 
 def enquiry(name,route):
     text='Hello Mr Sewing! I would like to enquire about '+name+'.\n'+DOMAIN+route
-    return '<a class="journey-enquiry" target="_blank" rel="noopener" href="https://wa.me/250787411501?'+escape(urlencode({'text':text}),quote=True)+'">Enquire with Mr Sewing <span class="home-arrow" aria-hidden="true"></span></a>'
+    return '<a class="journey-enquiry" target="_blank" rel="noopener" href="https://wa.me/'+__import__('business_settings').settings()['phoneDigits']+'?'+escape(urlencode({'text':text}),quote=True)+'">Enquire with Mr Sewing <span class="home-arrow" aria-hidden="true"></span></a>'
 
 def page(route,title,description,content,schema_type='WebPage',schema_extra=None):
     schema={'@context':'https://schema.org','@type':schema_type,'name':title,'description':description,'url':DOMAIN+route,**(schema_extra or {})}
@@ -108,7 +108,7 @@ def care_page(service,category=None):
     else:content+='<p>Tell us about your garment and its care label. We will confirm which care options are available and suitable before accepting a request.</p><div class="care-details"><section><h3>The garment</h3><p>Share the garment type, care label and any condition concerns. A photograph can help begin the conversation.</p></section><section><h3>The conversation</h3><p>Ask which options and conditions apply. The standard suit package includes one initial standard professional cleaning. Separately requested care needs its own quotation and confirmation.</p></section><section><h3>The agreement</h3><p>Confirm suitability, any charges and the estimated timing directly with the team before proceeding.</p></section></div>'
     content+='</section><section id="care-pricing" class="care-section"><p class="home-eyebrow">Clear details, before you proceed</p><h2>Quotes &amp; timing</h2>'
     rows=[r for r in category['pricing']['rows'] if r.get('approved')] if category else []
-    if rows:
+    if rows and __import__('public_content').service_prices_visible():
         content+='<div class="care-price-scroll"><table class="care-price-table"><caption>Approved care prices in Rwandan francs (RWF)</caption><thead><tr><th scope="col">Garment</th><th scope="col">Service</th><th scope="col">Standard price</th></tr></thead><tbody>'+''.join('<tr><td>'+escape(r['garmentType'])+'</td><td>'+escape(r['serviceType'])+'</td><td>RWF '+format(r['standardPriceRwf'],',')+'</td></tr>' for r in rows)+'</tbody></table></div>'
         for row in rows:
             for charge in row.get('additionalCharges',[]):
@@ -118,7 +118,7 @@ def care_page(service,category=None):
     if category:
         timing=category['pricing']['standardTurnaround'];express=category['pricing']['express']
         if timing['approved']:content+='<p class="care-rate-notes">Standard turnaround estimate: '+str(timing['minimum'])+'–'+str(timing['maximum'])+' '+escape(timing['unit'].replace('_',' '))+'. Confirm the timing for your garment before proceeding.</p>'
-        if express['approved'] and express['available']:content+='<p class="care-rate-notes">Express service may be requested, subject to confirmation.'+(' Additional charge: RWF '+format(express['additionalChargeRwf'],',')+'.' if express.get('additionalChargeRwf') else '')+'</p>'
+        if express['approved'] and express['available']:content+='<p class="care-rate-notes">Express service may be requested, subject to confirmation.'+(' Additional charge: RWF '+format(express['additionalChargeRwf'],',')+'.' if express.get('additionalChargeRwf') and __import__('public_content').service_prices_visible() else '')+'</p>'
     content+='</section><section class="care-section"><h2>Payment and included suit care</h2><p>'+customer_text('{{standalonePayment}} {{balance}}')+'</p><p>'+customer_text('{{suitPayment}} {{package}}')+'</p></section>'
     content+='<section class="care-section"><h2>Before you enquire</h2><p>Have your garment details, care-label information, any condition concerns and preferred completion date ready. The team must confirm what is possible. Do not assume that a particular treatment, collection visit or delivery arrangement is available.</p></section><section id="care-request" class="care-request"><h2>A considered next step.</h2><p>Ask about '+escape(category['title'] if category else 'care for your garment')+'. Opening a conversation does not confirm a service, order or appointment.</p>'+enquiry(title,route)+'</section></div>'
     out=page(route,title+' | Mr Sewing Fashion, Kigali',description,content)

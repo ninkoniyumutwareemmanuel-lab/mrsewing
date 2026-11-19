@@ -199,7 +199,7 @@
     {
       "slug": "collections-designs",
       "title": "Collections & Design Requests",
-      "description": "Find inspiration, share an individual design and distinguish it from completed work.",
+      "description": "Explore the Showroom, choose design references and distinguish them from genuine completed work.",
       "destination": "/services/custom-tailoring/",
       "icon": "grid",
       "questions": [
@@ -253,11 +253,12 @@
     },
     {
       "slug": "prices-packages-payments",
-      "title": "Prices, Suit Packages & Payments",
-      "description": "Cotton base prices, standard contents, included items, quotations and payment stages.",
+      "title": "Quotations, Suit Packages & Payments",
+      "description": "Individual quotations, standard garment contents, included benefits and payment stages.",
       "destination": "/services/custom-tailoring/",
       "icon": "receipt",
       "questions": [
+        "quotation-request",
         "cotton-prices",
         "suit-contents",
         "suit-package",
@@ -304,6 +305,7 @@
       "icon": "calendar",
       "questions": [
         "locations",
+        "workplace-visits",
         "appointment-needed",
         "request-appointment",
         "reschedule",
@@ -466,7 +468,7 @@
     },
     "wedding-inspiration": {
       "question": "Where can I browse wedding inspiration?",
-      "answer": "Explore <a href=\"/services/wedding-tailoring/\">wedding and civil-wedding tailoring</a>, then browse <a href=\"/mensuits/\">Men’s Suits</a> or <a href=\"/womensuits/\">Women’s Suits</a> and discuss the occasion and design with the team. Reference pictures do not confirm fabric or stock availability.",
+      "answer": "Explore <a href=\"/services/wedding-tailoring/\">wedding and civil-wedding tailoring</a>, then browse <a href=\"/showroom/?audience=men\">Men’s Suits</a> or <a href=\"/showroom/?audience=women\">Women’s Suits</a> and discuss the occasion and design with the team. Reference pictures do not confirm fabric or stock availability.",
       "keywords": []
     },
     "wedding-quote": {
@@ -520,18 +522,20 @@
       "keywords": []
     },
     "mobile-fees": {
-      "question": "What is the difference between the 10,000, 35,000 and 50,000 RWF mobile services?",
+      "question": "How do the different mobile services work?",
       "answer": "{{policyMobileMeasurement}} {{policyMobileConsultation}} {{policyMobileAssistance}}",
       "keywords": [
         "measurement visit",
-        "consultation",
-        "50000",
-        "10000",
-        "35000"
+        "consultation"
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/services/mobile-fitting/#service-info-mobile"
+      "source": "/services/mobile-fitting/#service-info-mobile",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Public service rates replaced with quotation guidance"
+      }
     },
     "mobile-confirm": {
       "question": "When is my requested visit confirmed?",
@@ -612,14 +616,16 @@
       "question": "How much is Express and can after-hours fees apply too?",
       "answer": "{{policyCharges}} {{policyChargeExample}}",
       "keywords": [
-        "35%",
-        "25%",
-        "60%",
         "fees"
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/#6",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Public service rates replaced with quotation guidance"
+      }
     },
     "care-enquiry": {
       "question": "How do I enquire about cleaning?",
@@ -671,7 +677,7 @@
     },
     "collections-browse": {
       "question": "How do I find a design?",
-      "answer": "Browse <a href=\"/mensuits/\">Men’s Suits</a> or <a href=\"/womensuits/\">Women’s Suits</a>, choose a style category and open a reference design. Continue to fabric selection or fabric advice before reviewing a quotation request. Photographs are design references, not confirmed stock.",
+      "answer": "Browse <a href=\"/showroom/?audience=men\">Men’s Suits</a> or <a href=\"/showroom/?audience=women\">Women’s Suits</a>, filter the Showroom by style and open a reference design. Continue to fabric selection or fabric advice before reviewing a quotation request. Photographs are design references, not confirmed stock.",
       "keywords": []
     },
     "collections-share": {
@@ -718,8 +724,8 @@
       "keywords": []
     },
     "cotton-prices": {
-      "question": "What are the starting prices for suits?",
-      "answer": "{{policySuitPrices}} See the <a href=\"/guides/fabrics/\">Fabric Guide</a> for the approved fabric tiers and photographs.",
+      "question": "How do I get a suit quotation?",
+      "answer": "{{policySuitPrices}} Explore the <a href=\"/showroom/\">Showroom</a> for design references and the <a href=\"/guides/fabrics/\">Fabric Guide</a> for approved fabric tiers and photographs.",
       "keywords": [
         "prices",
         "tiers",
@@ -727,7 +733,12 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/guides/fabrics/#fabric-references-title"
+      "source": "/guides/fabrics/#fabric-references-title",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "suit-contents": {
       "question": "What is included in a two-piece or three-piece suit?",
@@ -859,14 +870,17 @@
       "question": "How much is Custom Tailoring delivery outside Kigali?",
       "answer": "{{policyOutsideKigaliDelivery}}",
       "keywords": [
-        "5000",
-        "5,000",
         "per garment",
         "Rwanda delivery"
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#8"
+      "source": "/terms-and-conditions/#8",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Public service rates replaced with quotation guidance"
+      }
     },
     "cancel-before": {
       "question": "Can I cancel before production starts?",
@@ -1002,18 +1016,21 @@
       "question": "How much is Kigali collection and return?",
       "answer": "{{policyTransport}}",
       "keywords": [
-        "10,000",
-        "10000",
         "round trip",
         "transport"
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/delivery-and-collection/#1"
+      "source": "/delivery-and-collection/#1",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Public service rates replaced with quotation guidance"
+      }
     },
     "workplace-measurement": {
       "question": "Can someone visit my workplace for measurements?",
-      "answer": "{{policyMobileMeasurement}} If you have not confirmed a garment order, the separately purchased 35,000 RWF Independent Consultation & Fitting service may suit your needs. Share your visit address and preferred date/time; the team must confirm location eligibility, feasibility and arrangements.",
+      "answer": "{{policyMobileMeasurement}} {{policyMobileConsultation}} Share your visit address and preferred date/time; the team must confirm location eligibility, feasibility and arrangements.",
       "keywords": [
         "office",
         "workplace",
@@ -1023,7 +1040,12 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#mobile-fees"
+      "source": "/terms-and-conditions/#mobile-fees",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "vip-price": {
       "question": "How are VIP services priced?",
@@ -1076,18 +1098,23 @@
     },
     "tuxedo-cost": {
       "question": "How much does a tuxedo cost?",
-      "answer": "Men’s tuxedo starting prices are separate from ordinary suits: Tier 1 two-piece 800,000 RWF and three-piece 1,000,000 RWF; Tier 2 two-piece 600,000 RWF and three-piece 800,000 RWF. Confirm the design, accessories, fabric and final quotation.",
+      "answer": "Men’s tuxedos are individually quoted for the design, quality tier, fabric, accessories and package requirements. Their package eligibility is separate from ordinary suits. Request a quotation before accepting an order.",
       "source": "/services/custom-tailoring/#tuxedo-prices",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
       "keywords": [
         "how much",
         "tuxedo"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "express-cost": {
       "question": "How much is the Express fee?",
-      "answer": "Express adds 35% of the eligible quoted base service. For a 100,000 RWF eligible base, the surcharge is 35,000 RWF and the total is 135,000 RWF. Feasibility and capacity must be confirmed; it is not one flat Express fee.",
+      "answer": "{{policyCharges}} Feasibility and capacity must be confirmed before an Express request can be accepted.",
       "source": "/terms-and-conditions/#6",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1095,22 +1122,32 @@
         "how much",
         "express fee",
         "rush"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "after-hours-cost": {
       "question": "How much is after-hours service?",
-      "answer": "Necessary and agreed work from 17:00 to 22:00 adds 25% of the eligible quoted base. For a 100,000 RWF base this is 25,000 RWF extra. Express plus after-hours is additive 60% of the same base, not compounded. After 22:00 is individually quoted.",
+      "answer": "{{policyCharges}} After-hours work is not charged automatically when it is not required and agreed.",
       "source": "/terms-and-conditions/#6",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
         "how much",
         "after hours"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "alterations-cost": {
       "question": "How much do clothing alterations and repairs cost?",
-      "answer": "The price is quoted after assessing the garment, requested adjustment or repair, condition and complexity. Standard work is estimated at 12–15 working hours. Express requests require acceptance and add 35% of the eligible quoted base; eligible Kigali collection and return is 10,000 RWF total round trip.",
+      "answer": "The price is quoted after assessing the garment, requested adjustment or repair, condition and complexity. {{policyAlterationTime}} {{policyTransport}}",
       "source": "/services/alterations/#service-info-payment",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1118,11 +1155,16 @@
         "how much",
         "standard price",
         "repair cost"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "washing-suit-cost": {
       "question": "How much does washing or cleaning my suit cost?",
-      "answer": "The garment-care price is quoted after the garment, care label, condition and requested treatment are assessed. Standard care takes approximately three days. Express care takes 2–12 hours subject to confirmation, with the eligible 35% Express surcharge. Eligible Kigali collection and return costs 10,000 RWF total round trip, charged once when the same order combines alterations and cleaning.",
+      "answer": "The garment-care price is quoted after the garment, care label, condition and requested treatment are assessed. {{policyCareTime}} {{policyTransport}}",
       "source": "/services/garment-care/#service-info-payment",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1131,18 +1173,28 @@
         "washing",
         "wash my suit",
         "cleaning price"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "standard-service-cost": {
       "question": "How much is Standard service?",
-      "answer": "For ordinary suits, use the approved Tier / Quality and two-piece or three-piece schedule. {{policyMensStarting}} Alterations and garment care are priced for the actual assessed work. Standard priority does not itself add an Express surcharge; mobile services have their own scope-based fees.",
+      "answer": "Standard service is individually quoted for the assessed garment, materials and requirements. Standard priority does not itself add an Express charge. Alterations, garment care and mobile assistance keep their own service scope and quotation conditions.",
       "source": "/terms-and-conditions/#starting-prices",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
         "how much",
         "standard"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "children-tailoring": {
       "question": "Do you make clothes for young children?",
@@ -1158,7 +1210,7 @@
     },
     "children-cost": {
       "question": "How much does children’s tailoring cost?",
-      "answer": "Children’s ordinary suit starting prices follow the corresponding Tier / Quality schedule. {{policyParentChild}} Special designs and the final quotation depend on the confirmed requirements.",
+      "answer": "Children’s tailoring is individually quoted for the garment, quality tier and requirements. {{policyParentChild}} Special designs and the final quotation depend on the confirmed requirements.",
       "source": "/terms-and-conditions/#childrens-tailoring",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
@@ -1166,7 +1218,12 @@
         "how much",
         "child",
         "children"
-      ]
+      ],
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "parent-child-offer": {
       "question": "How does the children’s 50% discount work?",
@@ -1320,7 +1377,7 @@
     },
     "fabric-tier-pricing": {
       "question": "Do all fabric types have different prices?",
-      "answer": "Ordinary suit starting prices are categorised by Tier / Quality and two-piece or three-piece garments. Each fabric has an assigned tier, and several fabrics may share a tier. The Fabric Guide explains references rather than listing a separate suit price for every fabric. Your final quotation still accounts for special design and order requirements.",
+      "answer": "Each approved fabric has an assigned Tier / Quality, and several fabrics may share a tier. The Fabric Guide explains reference materials rather than maintaining an independent suit-price list. Your individual quotation considers the selected tier, garment, fabric, design and order requirements.",
       "source": "/guides/fabrics/#fabric-references-title",
       "keywords": [
         "fabric",
@@ -1329,7 +1386,12 @@
         "quality"
       ],
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
-      "approvalDate": "2026-11-12"
+      "approvalDate": "2026-11-12",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Quotation-first public service information; original approvals and internal prices preserved"
+      }
     },
     "bulk-order-discount": {
       "question": "What is the bulk-order discount?",
@@ -1399,7 +1461,7 @@
     },
     "quotation-response-times": {
       "question": "How quickly can I expect a quotation?",
-      "answer": "{{policyQuotationTargets}} <a href=\"https://wa.me/250787411501\" data-whatsapp-modal>WhatsApp Mr Sewing</a> or <a href=\"tel:+250787411501\">call +250 787 411 501</a> for follow-up.",
+      "answer": "{{policyQuotationTargets}} <a href=\"{{officialWhatsApp}}\" data-whatsapp-modal>WhatsApp Mr Sewing</a> or <a href=\"{{officialTelephone}}\">call {{officialPhone}}</a> for follow-up.",
       "keywords": [
         "quotation response",
         "24 hours",
@@ -1424,25 +1486,31 @@
       "question": "How much does an independent consultation and fitting cost?",
       "answer": "{{policyMobileConsultation}}",
       "keywords": [
-        "35000",
-        "35,000",
         "consultation"
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#mobile-fees"
+      "source": "/terms-and-conditions/#mobile-fees",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Public service rates replaced with quotation guidance"
+      }
     },
     "order-measurement-visit": {
       "question": "How much does an order-related measurement visit cost?",
       "answer": "{{policyMobileMeasurement}}",
       "keywords": [
-        "10000",
-        "10,000",
         "order measurement"
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#mobile-fees"
+      "source": "/terms-and-conditions/#mobile-fees",
+      "presentationDecision": {
+        "rule": "R51",
+        "date": "2026-11-18",
+        "scope": "Public service rates replaced with quotation guidance"
+      }
     },
     "online-measurements": {
       "question": "Can I provide measurements online before a quotation?",
@@ -1488,6 +1556,35 @@
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
       "source": "/terms-and-conditions/#2"
+    },
+    "quotation-request": {
+      "question": "How do I request a quotation?",
+      "answer": "Choose the relevant service and use its existing enquiry form. Describe the garment or work, your requested completion deadline and any requirements. For custom designs, the <a href=\"/showroom/\">Showroom</a> can supply an exact reference; alterations and garment care require the garment and work to be assessed. Review the request and required consent before submitting. {{policySubmissionConfirmation}}",
+      "source": "/terms-and-conditions/#2",
+      "keywords": [
+        "quotation",
+        "quote",
+        "request",
+        "enquiry",
+        "assessment"
+      ],
+      "approvalSource": "Owner Complete Website Restructuring and Quotation-First Experience,18November2026",
+      "approvalDate": "2026-11-18"
+    },
+    "workplace-visits": {
+      "question": "Can Mr Sewing visit my home or workplace?",
+      "answer": "Describe the assistance and location you need in the relevant service enquiry. The team must confirm whether a visit is available for that service, its scope, location, date and any separately quoted charges. Measurement visits and garment collection are distinct arrangements; a tailoring visit condition must not be assumed to apply to every service. Read the <a href=\"/faq/measurements-fittings/#measurement-appointments\">measurement appointment guidance</a> or <a href=\"/faq/production-delivery/#delivery-arrangements\">collection and delivery information</a> for the relevant scope.",
+      "source": "/terms-and-conditions/#mobile-fees",
+      "keywords": [
+        "home",
+        "workplace",
+        "office",
+        "visit",
+        "collection",
+        "mobile"
+      ],
+      "approvalSource": "Owner Complete Website Restructuring and Quotation-First Experience,18November2026",
+      "approvalDate": "2026-11-18"
     }
   },
   "synonyms": [

@@ -1,0 +1,25 @@
+{
+  "approvalSource": "Owner complete website restructuring instruction,18November2026",
+  "scope": "Shared navigation presentation; destination services retain their own policies",
+  "main": [
+    {"label": "Home", "href": "/"},
+    {"type": "services", "label": "Services"},
+    {"label": "Showroom", "href": "/showroom/"},
+    {"label": "Our Work", "href": "/our-work/"},
+    {"type": "guides"},
+    {"label": "About Us", "href": "/about/"},
+    {"label": "Contact Us", "href": "/contact/"},
+    {"label": "FAQs", "href": "/faq/"}
+  ],
+  "quickInformation": [
+    {"label": "Showroom", "href": "/showroom/"},
+    {"label": "FAQs", "href": "/faq/"},
+    {"label": "Location", "href": "/contact/#locations-heading"},
+    {"label": "Opening Hours", "href": "/contact/#hours-heading"}
+  ],
+  "policies": [
+    {"label": "Terms & Conditions", "href": "/terms-and-conditions/"},
+    {"label": "Privacy Policy", "href": "/privacy-policy/"},
+    {"label": "Refund Policy", "href": "/refund-policy/"}
+  ]
+}

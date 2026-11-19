@@ -32,4 +32,4 @@ def script():return '<script id="fabricReferenceData" type="application/json">'+
 def fabric_request_notes():
  from customer_policies import facts
  f=facts()
- return '<section id="fabric-service-notes"><h2>Express and children’s tailoring</h2><p>Express custom tailoring is estimated at 2–3 days, subject to feasibility, capacity and acceptance. The eligible Express surcharge is 35% of the quoted base. Necessary and agreed after-hours work adds 25% of the same base; together the surcharge is additive 60%. Confirm the final quotation and completion date before acceptance.</p><p>'+escape(f['texts']['policyChildren'])+'</p><p>'+escape(f['texts']['policyParentChild'])+'</p></section>'
+ return '<section id="fabric-service-notes"><h2>Express and children’s tailoring</h2><p>'+escape(f['texts']['policyTailoringTime']+' '+f['texts']['policyCharges'])+'</p><p>'+escape(f['texts']['policyChildren'])+'</p><p>'+escape(f['texts']['policyParentChild'])+'</p></section>'

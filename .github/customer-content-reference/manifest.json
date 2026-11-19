@@ -1,16 +1,17 @@
 {
-  "currentVersion": "2026-11-18-02",
-  "implementationBaseline": "e4951002297df5551b03acddf76933e37c92a918",
-  "ownerApprovalDate": "2026-11-13",
-  "implementationResumedDate": "2026-11-18",
+  "currentVersion": "2026-11-19-01",
+  "implementationBaseline": "b2b8946882929da4ce7e0e01de4ba1511eed818a",
+  "ownerApprovalDate": "2026-11-18",
+  "implementationResumedDate": "2026-11-19",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R50 owner directs publication of reviewed R35\u2013R49 candidate after disclosed proxy verification limitation; no new business policy; actual production deployment and rendering status require separate evidence",
+  "customerPolicyPublication": "R51 master restructuring approved for staging only; no new production authorization. Public service-price presentation becomes quotation-first; approved internal rates/Shop gates/history retained. PDF authority pending supplied approved document.",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "911f1341309f8ba5d038b51b2d19a018721acbf4d2286670b6079b14d26c7386",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "412cf5278a90add14ea25f2629562ec7d2ce024654b8849cd48f1d488f7f6654",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "63ae8cc1d10aeca465c940752c7122a2ada508635837d799b4cd32b8c8f475ef",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "051a7da33617824d425f7c231138388fc958e14ad65491e9231a5c3e02f3d48e",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "acee65a2a1437d293f4962f0637f366e84816362b12df6d56919752f991c368c"
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "561e8e595b284003b08579b1482e7f3adefe990866c8d40c43a4266e01363d1a",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "84cb2639eec0b6d39b7ade1fb6a6ee0da776a80b8ad3274bc877bb46c7148a11",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "2acc3f42f33a0805b95fb0728e2756275f308ac19a9e467012ba7aac54c7b55a",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "14bab3bc3993dbb498b3970fa36d6522d0b79492a4fc3f199200617079c39877",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "2cccca8b16bc8a20ccadf380d999dbcd010c43123bdd0e3e113b304eea842032"
   },
-  "ownerPublicationInstructionDate": "2026-11-18"
+  "ownerPublicationInstructionDate": "2026-11-18",
+  "ownerPublicationInstructionScope": "R50 historical reviewed release only; no R51 production authorization"
 }

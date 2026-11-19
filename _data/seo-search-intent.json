@@ -401,6 +401,16 @@
       "primaryTopic": "Women's Suits",
       "secondaryTopics": [],
       "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+    },
+    {
+      "route": "/showroom/",
+      "primaryTopic": "clothing showroom and tailoring design references Kigali",
+      "secondaryTopics": [
+        "Mr Sewing Fashion clothing designs",
+        "men’s and women’s tailoring inspiration",
+        "verified completed tailoring work"
+      ],
+      "basis": "R51 owner universal Showroom instruction,18November2026; reference imagery distinguished from genuine work and Shop stock."
     }
   ]
 }

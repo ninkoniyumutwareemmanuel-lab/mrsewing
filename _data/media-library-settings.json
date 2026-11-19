@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "authority": "Feature selection only. Publication rights remain in collection-designs/customer-projects and video-only records. IDs resolve against the effective approved library.",
+  "homepage": {
+    "cards": [
+      {
+        "audience": "men",
+        "mediaId": "MEDIA-64017f76ab663d78eff17919"
+      },
+      {
+        "audience": "women",
+        "mediaId": "MEDIA-cfa7bf326e070da47149203f"
+      }
+    ],
+    "featuredMediaId": "MEDIA-e3f071d6aa9dd697dde84cd5"
+  }
+}

@@ -22,14 +22,10 @@ def static_header(source):
     return source.replace('{{header}}',header).replace('</head>','<style data-static-navigation>'+nav+'</style></head>',1)
 
 def outputs():
- meta=json.loads((ROOT/'_data/page-seo.json').read_text());pages=json.loads((ROOT/'_data/policy-pages.json').read_text());out={}
- for slug,data in pages.items():
-  path=ROOT/(slug+'.html');data={**data,'route':slug};source=(ROOT/'_templates'/(slug+'.html')).read_text().replace('{{content}}',policy_main(data))
-  # Keep the existing restrained policy style and provide a responsive price table.
-  source=source.replace('</style>','.tw{overflow-x:auto}.price-table{width:100%;border-collapse:collapse}.price-table th,.price-table td{padding:12px;text-align:left;border-bottom:1px solid #444}.price-table caption{text-align:left;padding:12px 0;color:#d4af37}section{scroll-margin-top:90px}</style>',1)
-  from customer_site import information
-  out[path]=finalize(information('/'+slug+'/'),path)
+ # One active renderer; old templates/anchor records remain recoverable history.
  from customer_site import information
+ pages=json.loads((ROOT/'_data/policy-pages.json').read_text())
+ out={ROOT/(slug+'.html'):finalize(information('/'+slug+'/'),ROOT/(slug+'.html')) for slug in pages}
  out[ROOT/'measurements.html']=finalize(information('/measurements/'),ROOT/'measurements.html')
  out.update(faq_outputs())
  return out

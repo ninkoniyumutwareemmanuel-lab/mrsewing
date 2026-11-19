@@ -1,0 +1,15 @@
+{
+  "rule": "R51",
+  "source": "Owner Complete Website Restructuring, Universal Showroom, Document-Based Policies and Quotation-First Experience",
+  "approvalDate": "2026-11-18",
+  "implementationDate": "2026-11-19",
+  "approvalStatus": "APPROVED FOR STAGING ONLY",
+  "servicePricesVisible": false,
+  "serviceSurchargeRatesVisible": false,
+  "shopProductPricesVisible": true,
+  "paymentObligationsVisible": true,
+  "benefitEligibilityVisible": true,
+  "existingIndividualQuotationsUnaffected": true,
+  "scope": "Public service information only. Internal approved schedules, individual quotations and Shop pricing remain authoritative. Percentage payment obligations and approved customer benefit eligibility are not service prices.",
+  "interpretation": "Quotation-first service presentation includes service surcharge rates. No reply was received to the optional clarification; approved internal surcharge calculations remain unchanged and disclosed through individual quotations."
+}

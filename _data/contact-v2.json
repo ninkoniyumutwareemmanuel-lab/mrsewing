@@ -4,7 +4,8 @@
     "streetAddress": "Karama, Norvege, KN 441 St",
     "addressLocality": "Nyarugenge, Kigali",
     "addressCountry": "RW",
-    "mapsUrl": "https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac"
+    "mapsUrl": "https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac",
+    "shortAddress": "KN 441 St, Norvège"
   },
   "consultationLocation": {
     "name": "Downtown Consultation Location",

@@ -1,0 +1,17 @@
+/* Dedicated policy-document reading; native PDF controls remain optional. */
+.policy-document-panel{margin:22px 0 30px;padding:clamp(16px,3vw,28px);border:1px solid #8c713b;border-radius:12px;background:#151410;color:#f3ead9;min-width:0}
+.policy-document-heading h2{margin:0 0 10px;color:#e1c17d;font-size:clamp(1.35rem,3vw,1.8rem)}
+.policy-document-meta,.policy-document-help{max-width:76ch;font-size:14px;line-height:1.7;color:#e1d4bb}
+.policy-document-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+.policy-document-actions a{display:inline-flex;justify-content:center;align-items:center;min-height:46px;padding:12px 18px;white-space:normal;text-align:center;line-height:1.4}
+.policy-document-actions a:focus-visible,.policy-document-panel object:focus-visible,.policy-document-heading h2:focus-visible{outline:3px solid #f0ce7d;outline-offset:4px}
+.policy-document-viewport{height:clamp(360px,72vh,900px);min-height:360px;max-width:100%;overflow:auto;border-radius:6px;background:#fff;color:#211b12}
+.policy-document-viewport object{display:block;width:100%;height:100%;min-height:360px;border:0}
+.policy-document-viewport object p{padding:20px;line-height:1.7;color:#211b12}
+.policy-document-viewport object a{color:#684809;text-decoration:underline}
+.policy-document-pending{border-left:4px solid #c7a24d;padding:15px 18px;margin:20px 0;background:#1a1812;color:#f1e6cd;line-height:1.7}
+.policy-document-pending p{margin:0}
+.policy-document-anchor{display:block;position:relative;scroll-margin-top:calc(var(--offer-header-height,100px) + 64px)}
+.policy-document-panel{scroll-margin-top:calc(var(--offer-header-height,100px) + 64px)}
+@media(max-width:430px){.policy-document-actions a{width:100%}.policy-document-panel{padding:15px 12px}.policy-document-viewport{height:65vh;min-height:360px}}
+@media(prefers-reduced-motion:reduce){.policy-document-panel{scroll-behavior:auto}}

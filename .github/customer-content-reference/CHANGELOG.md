@@ -150,3 +150,8 @@ Owner approval13November2026, implementation resumed18November2026. Preserve pri
 ## 2026-11-18-02 — R50 owner-directed reviewed release publication
 
 Recorded the owner's latest direct main/live publication instruction after the report disclosed managed-proxy inability to render staging/live. The approved e495100 R35–R49 candidate and completed local/provider evidence remain the release scope. This supersedes the earlier publication hold for this specific release without claiming rendered checks passed, waiving all tests, bypassing branch protections or approving unfinished/private/payment features. No business policy, product, page, form, SEO or deployment setting changed in this documentation update. Previous five snapshots preserved verbatim as prefixes, current pointer/hash manifest synchronized. Actual main/deployment/live-verification evidence remains the release executor's responsibility.
+
+
+## 2026-11-19-01 — R51 staging restructuring reference
+
+Owner master task18November2026; implementation resumed19November2026 on baselineb2b8946. Added exact R51 staging-only scope, single-source ownership, public quotation-first service presentation with internal-price/Shop preservation, universal permission-gated Showroom/media/homepage direction, PDF registry/viewer preparation and repository document workflow. Existing Terms remain the transitional fallback because no approved PDF is supplied. Old URLs/media/policy history remain. Recorded cost-percentage presentation interpretation and unresolved PDF/video/stock/deployed-access evidence rather than inventing facts. Earlier five dated documents remain byte-prefixes. This update records scope, not test/deployment completion or main authorization.

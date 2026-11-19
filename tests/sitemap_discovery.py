@@ -1,11 +1,13 @@
 """Owner-approved public discovery; never index private/request/draft merchandise pages."""
-import sys,xml.etree.ElementTree as E
+import sys,subprocess,xml.etree.ElementTree as E
 from pathlib import Path
 R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
 from site_seo import DOMAIN,INDEXABLE_ROUTES
 from build_public_routes import public_routes,candidates
 urls=[x.text for x in E.parse(R/'sitemap.xml').findall('.//{*}loc')]
-assert len(urls)==len(set(urls))==64
+baseline=E.fromstring(subprocess.check_output(['git','show','b2b8946882929da4ce7e0e01de4ba1511eed818a:sitemap.xml'],cwd=R))
+approved={x.text for x in baseline.findall('.//{*}loc')}|{DOMAIN+'/showroom/'}
+assert len(urls)==len(set(urls))==65 and set(urls)==approved
 assert set(urls)=={DOMAIN+r for r in public_routes()}
 assert INDEXABLE_ROUTES.issubset(set(candidates()))
 assert 'Sitemap: '+DOMAIN+'/sitemap.xml' in (R/'robots.txt').read_text()
@@ -17,4 +19,4 @@ for u in urls:
 for p in ['request/index.html','staff/customer-requests/index.html','shop/sky-blue-elegance-suit/index.html']:
  assert 'name="robots" content="noindex' in (R/p).read_text()
 assert 'X-Robots-Tag: noindex, nofollow, noarchive' in (R/'_headers').read_text()
-print('PASS64uniqueXML/canonical/indexableURLs;allapprovedroutesdiscovered;productionrobots;private/request/draftproducts excluded;stagingnoindex')
+print('PASS65uniqueXML/canonical/indexableURLs;allapprovedroutesdiscovered;productionrobots;private/request/draftproducts excluded;stagingnoindex')

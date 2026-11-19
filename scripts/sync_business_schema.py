@@ -31,6 +31,8 @@ def update(node, business):
         for key in ('geo', 'openingHours', 'specialOpeningHoursSpecification'):
             result.pop(key, None)
         result.update(deepcopy(business))
+        from public_content import service_prices_visible
+        if not service_prices_visible():result.pop('priceRange',None)
     elif result.get('@type') == 'WebSite':
         if result.get('@id') == 'https://mrsewingfashion.com/#website':
             result['name'] = business['name']

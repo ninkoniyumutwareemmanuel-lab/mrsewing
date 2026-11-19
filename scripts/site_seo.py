@@ -31,6 +31,7 @@ INDEXABLE_ROUTES = {
     '/contact/',
     '/faq/',
     '/guides/fabrics/',
+    '/showroom/',
     '/mensuits/',
     '/womensuits/',
     '/measurements/',
@@ -48,6 +49,8 @@ def route_for(path):
     return '/'+(str(rel.parent) if rel.name=='index.html' else str(rel.with_suffix(''))) .strip('/')+'/'
 def finalize(source,path):
     route=route_for(path)
+    from business_settings import expand
+    source=expand(source,route)
     # Use a square favicon while preserving the approved non-square logo asset.
     source=re.sub(r'<link\b[^>]*\brel=["\'](?:icon|shortcut icon)["\'][^>]*>',lambda m:re.sub(r'\btype=["\'][^"\']*["\']','type="image/png"',re.sub(r'\bhref=["\'][^"\']*["\']','href="/assets/images/favicon-192.png"',m[0])),source,flags=re.I)
     override=json.loads((ROOT/'_data/public-page-seo.json').read_text()).get(route)
@@ -58,17 +61,17 @@ def finalize(source,path):
     # These tags are regenerated, so repeated builds never duplicate them.
     source=re.sub(r'<script src="/assets/public-api[.]js[^"]*" defer></script>','',source)
     if 'customerRequestForm' in source or 'data-commerce-form' in source or 'shopData' in source:source=source.replace('</head>','<script src="/assets/public-api.js?v=staging-r32" defer></script></head>',1)
-    source=source.replace('src="/assets/faq-help.js"','src="/assets/faq-help.js?v=staging-r32"').replace('src="/assets/faq-actions.js"','src="/assets/faq-actions.js?v=staging-r32"').replace('src="/assets/request-context.js"','src="/assets/request-context.js?v=staging-r32"').replace('src="/assets/customer-site.js"','src="/assets/customer-site.js?v=staging-r49"').replace('src="/assets/request-draft.js"','src="/assets/request-draft.js?v=staging-r49"').replace('src="/assets/commerce.js"','src="/assets/commerce.js?v=staging-r32"').replace('src="/assets/homepage.js"','src="/assets/homepage.js?v=mobile-motion-r24"')
-    for asset in ['customer-site.js','request-draft.js','customer-refinements.js']:
-        source=re.sub(r'src="/assets/'+re.escape(asset)+r'(?:\?v=[^"]*)?"','src="/assets/'+asset+'?v=staging-r49"',source)
+    source=source.replace('src="/assets/faq-help.js"','src="/assets/faq-help.js?v=staging-r32"').replace('src="/assets/faq-actions.js"','src="/assets/faq-actions.js?v=staging-r32"').replace('src="/assets/request-context.js"','src="/assets/request-context.js?v=staging-r32"').replace('src="/assets/customer-site.js"','src="/assets/customer-site.js?v=staging-r51"').replace('src="/assets/request-draft.js"','src="/assets/request-draft.js?v=staging-r51"').replace('src="/assets/commerce.js"','src="/assets/commerce.js?v=staging-r32"').replace('src="/assets/homepage.js"','src="/assets/homepage.js?v=mobile-motion-r24"')
+    for asset in ['customer-site.js','request-draft.js','customer-refinements.js','request-context.js','faq-help.js','customer-interactions.js','whatsapp-consent.js']:
+        source=re.sub(r'src="/assets/'+re.escape(asset)+r'(?:\?v=[^"]*)?"','src="/assets/'+asset+'?v=staging-r51"',source)
     source=re.sub(r'<script id="designSelectionData".*?</script>|<script src="/assets/design-selections.js[^"]*" defer></script>|<link rel="stylesheet" href="/assets/design-selections.css[^\"]*">','',source,flags=re.S)
-    if route.startswith(('/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
+    if route.startswith(('/showroom/','/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
         refs=json.loads((ROOT/'_data/request-reference-allowlist.json').read_text());slugs={d['id']:d['slug'] for d in json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']}
         for id,d in refs.items():d['id']=id;d['route']='/collections/designs/'+slugs[id]+'/'
         from customer_policies import facts as _facts
         fabrics={f['id']:f for f in json.loads((ROOT/'_data/fabric-reference-catalogue.json').read_text())['fabrics']}
         selection_data={'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics,'colours':{c['id']:c for c in json.loads((ROOT/'_data/fabric-colours.json').read_text())['colours']},'colourGroups':json.loads((ROOT/'_data/fabric-colours.json').read_text()).get('groups',[])}
-        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=staging-r49" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r49"></head>',1)
+        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=staging-r51" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r51"></head>',1)
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
@@ -84,6 +87,6 @@ def finalize(source,path):
     source=source.replace('</head>','<meta name="robots" content="'+robots+'">'+STAGING+'</head>',1)
     from whatsapp_consent import protect
     source=protect(source)
-    source=re.sub(r'<script src="/assets/customer-interactions.js" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
-    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
+    source=re.sub(r'<script src="/assets/customer-interactions[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions[.]css(?:\?[^"]*)?">','',source)
+    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css?v=staging-r51"><script src="/assets/customer-interactions.js?v=staging-r51" defer></script></head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'

@@ -94,7 +94,7 @@
         },
         {
           "id": "4",
-          "title": "Fabric tiers and package prices",
+          "title": "Fabric tiers and individual quotations",
           "paragraphs": [
             "Ask for the confirmed fabric category, garment composition, package inclusions and quotation. Men’s tuxedos have separate packages and quotations; ordinary suit inclusions must not be assumed."
           ]
@@ -375,7 +375,7 @@
         },
         {
           "id": "starting-prices",
-          "title": "Two-piece and three-piece starting prices",
+          "title": "Suit quotations and quality options",
           "paragraphs": [
             "{{policySuitPrices}}"
           ]
@@ -580,7 +580,7 @@
       "sections": [
         [
           "Your style, your fit",
-          "Discuss design preferences, fabric, measurements, quotation, fittings and delivery. Browse Men’s or Women’s Suits and select one or more designs, or use Special Tailoring for your own garment idea. Choose a shared fabric preference and provide a requested completion date and time. Ordinary suit deadlines receive provisional Standard or Express screening; Special Tailoring requires human assessment."
+          "Discuss design preferences, fabric, measurements, quotation, fittings and delivery. Explore the Showroom with men’s and women’s filters and select one or more designs, or use Special Tailoring for your own garment idea. Choose a shared fabric preference and provide a requested completion date and time. Ordinary suit deadlines receive provisional Standard or Express screening; Special Tailoring requires human assessment."
         ],
         [
           "Suits and garment scope",

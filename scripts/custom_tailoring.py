@@ -10,23 +10,9 @@ STANDARD=BASE+'standard-order/'
 SPECIAL=BASE+'special-order/'
 
 def component(name,current=None):
+    from business_settings import expand
     markup=(ROOT/f'_templates/homepage-{name}.html').read_text()
-    items=[]
-    for g in json.loads((ROOT/'_data/homepage-guides.json').read_text()):
-        label=escape(g['label'])
-        if g['label']=='Fabric Guide':g={**g,'href':'/guides/fabrics/'}
-        if g['href']:
-            assert g['href']=='/guides/fabrics/' or (ROOT/g['href'].strip('/')/'index.html').is_file()
-            items.append('<li><a href="'+escape(g['href'],quote=True)+'">'+label+'</a></li>')
-        else:
-            cls='footer-guide-pending' if name=='footer' else 'nav-guide-pending'
-            span='pending-guide' if name=='footer' else 'home-nav-pending'
-            items.append(f'<li class="{cls}"><span class="{span}" title="This guide will be developed separately">{label}</span></li>')
-    markup=markup.replace('{{customer_guides}}',''.join(items))
-    if name=='header':
-        markup=markup.replace(' href="/" aria-current="page"',' href="/"')
-        markup=markup.replace('href="'+(current or BASE)+'"','href="'+(current or BASE)+'" aria-current="page"',1)
-    return delivery(markup,name)
+    return delivery(expand(markup,current or '/'),name)
 
 def render(kind='landing'):
     import customer_site as release

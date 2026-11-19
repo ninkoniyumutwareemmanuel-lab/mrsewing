@@ -23,6 +23,7 @@ def href(c,design):
 def wrap(route,title,description,body,pending=False,gallery=False):
  from customer_site import frame
  from announcement_bar import decorate as with_offer
+ body=body.replace('</header>','<p class="suit-reference-note"><a href="/showroom/">Explore the universal clothing Showroom</a> for audience, garment and style filters.</p></header>',1)
  html=frame(route,title,description,'<div class="suit-reference-view'+(' suit-gallery-view' if gallery else '')+'">'+body+'</div>',kind='CollectionPage')
  html=html.replace('</head>','<link rel="stylesheet" href="/assets/suit-references.css"></head>')
  if pending:html=html.replace('<main ','<main data-publication-hold ',1)

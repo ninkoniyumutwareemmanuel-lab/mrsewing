@@ -9,8 +9,10 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
 BLOCK = re.compile(r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.S | re.I)
 BUSINESS_ID = 'https://mrsewingfashion.com/#organization'
 
@@ -107,7 +109,10 @@ def main():
                     assert 'https://youtube.com/@mr.sewingfashion' in node['sameAs']
                     continue
                 assert node['@type'] == 'ClothingStore', path.name
-                assert all(node.get(key) == value for key, value in common.items()), path.name
+                from public_content import service_prices_visible
+                public_common={key:value for key,value in common.items() if key!='priceRange' or service_prices_visible()}
+                assert all(node.get(key) == value for key, value in public_common.items()), path.name
+                if not service_prices_visible():assert 'priceRange' not in node, path.name
                 assert 'geo' not in node and 'review' not in node and 'aggregateRating' not in node, path.name
                 days = {}
                 for hours in node['openingHoursSpecification']:

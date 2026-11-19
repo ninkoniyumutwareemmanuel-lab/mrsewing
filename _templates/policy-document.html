@@ -1,0 +1,17 @@
+<section class="policy-document-panel" data-policy-document-current="{{version}}" aria-labelledby="policy-document-heading">
+  <div class="policy-document-heading">
+    <h2 id="policy-document-heading" tabindex="-1">Read the official document</h2>
+    <p class="policy-document-meta">Version {{version}} · Effective {{effective_date}}{{updated_date}}</p>
+  </div>
+  <div class="policy-document-actions" aria-label="Document options">
+    <a class="home-button home-button-gold" href="{{pdf_url}}" target="_blank" rel="noopener">Open PDF separately<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <a class="home-button" href="{{pdf_url}}" download="{{filename}}">Download PDF</a>
+  </div>
+  <p id="policy-document-help" class="policy-document-help">Scroll through the document below. Use your PDF reader’s controls to zoom, search or follow its contents. On a phone, opening the PDF separately may be easier.</p>
+  <div class="policy-document-viewport">
+    <object data="{{pdf_url}}#view=FitH" type="application/pdf" aria-label="{{title}} — version {{version}}" aria-describedby="policy-document-help" title="{{title}} — version {{version}}" tabindex="0">
+      <p>This browser cannot display the PDF here. <a href="{{pdf_url}}" target="_blank" rel="noopener">Open the Terms and Conditions PDF</a> or use Download PDF above.</p>
+    </object>
+  </div>
+  <p class="policy-document-help">The open and download links remain available if the embedded reader does not work. Existing section links open this document; use its contents or search to locate the relevant terms.</p>
+</section>

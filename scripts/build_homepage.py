@@ -108,29 +108,29 @@ def reserve_image_space(match):
 
 def render():
     template = (ROOT / '_templates/homepage.html').read_text().replace('{{agent_discovery}}', DISCOVERY_LINKS)
-    styles = []
+    from showroom import homepage_showcase,homepage_css
+    from business_settings import navigation_schema
+    import json
+    nav=navigation_schema()
+    template=template.replace('{{fashion_showcase}}',homepage_showcase())
+    def navigation_json(match):
+        data=json.loads(match[2])
+        for node in data.get('@graph',[]):
+            if node.get('@type')=='SiteNavigationElement':node.update(name=nav['names'],url=nav['urls'])
+        return match[1]+json.dumps(data,ensure_ascii=False,indent=2).replace('<','\\u003c')+match[3]
+    template=re.sub(r'(<script[^>]*type="application/ld\+json"[^>]*>)(.*?)(</script>)',navigation_json,template,flags=re.S)
+    styles = [homepage_css()]
     for key, (filename, tag, identifier) in SECTIONS.items():
         source = (ROOT / filename).read_text()
-        parser = Section(source, tag, identifier)
-        parser.feed(source)
-        if parser.markup is None:
-            raise ValueError(f'Missing homepage section: {filename}')
-        markup = parser.markup
-        if key in ('header', 'footer'):
-            from html import escape
-            import json
-            guides = json.loads((ROOT/'_data/homepage-guides.json').read_text())
-            items = []
-            for guide in guides:
-                label = escape(guide['label'])
-                if guide['href']:
-                    assert (ROOT/guide['href'].strip('/')/'index.html').is_file(), 'Missing customer guide route'
-                    items.append('<li><a href="'+escape(guide['href'], quote=True)+'">'+label+'</a></li>')
-                else:
-                    pending_class = 'footer-guide-pending' if key == 'footer' else 'nav-guide-pending'
-                    span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
-                    items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
-            markup = markup.replace('{{customer_guides}}', ''.join(items))
+        if key in ('header','footer'):
+            from custom_tailoring import component
+            markup=component(key,'/')
+        else:
+            parser = Section(source, tag, identifier)
+            parser.feed(source)
+            if parser.markup is None:
+                raise ValueError(f'Missing homepage section: {filename}')
+            markup = parser.markup
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':

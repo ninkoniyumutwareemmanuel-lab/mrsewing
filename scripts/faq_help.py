@@ -10,6 +10,7 @@ from build_homepage import reserve_image_space
 from homepage_resources import delivery,CSS as ICON_CSS
 from build_clean_urls import DISCOVERY_LINKS,legacy_script
 import shared_components as shared
+from business_settings import settings
 class Plain(HTMLParser):
  def __init__(self,text):super().__init__();self.parts=[];self.feed(text)
  def handle_data(self,s):self.parts.append(s)
@@ -50,7 +51,7 @@ def icon(name):
  assert name in paths,name
  return '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'+paths[name]+'</svg>'
 def contact(title,path):
- return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/250787411501?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
+ return '<a class="faq-primary" data-whatsapp-modal href="https://wa.me/'+settings()['phoneDigits']+'?'+escape(urlencode({'text':'Hello Mr Sewing! I have a question about '+title+'.\n'+DOMAIN+path}),quote=True)+'" target="_blank" rel="noopener">Ask Mr Sewing <span aria-hidden="true">↗</span></a>'
 def search_data():
  data,topics,qs,_=catalogue()
  entries=[{'id':id,'question':qs[id]['question'],'topic':t['title'],'url':route(t)+'#'+id,'source':DOMAIN+qs[id].get('source',route(t)+'#'+id),'answer':plain(expand(qs[id]['answer'])),'keywords':t.get('keywords',[])+qs[id].get('keywords',[])} for t in topics for id in t['questions']]
@@ -58,7 +59,7 @@ def search_data():
  for path in ['/terms-and-conditions/','/refund-policy/','/privacy-policy/','/customer-information/','/delivery-and-collection/']:
   page=release['pages'][path]
   for row in page['sections']:
-   entries.append({'id':path.strip('/')+'-'+row['id'],'question':row['title'],'topic':page['title'],'url':path+'#'+row['id'],'source':DOMAIN+path+'#'+row['id'],'answer':plain(expand(' '.join(row['paragraphs']))),'keywords':[]})
+   entries.append({'id':path.strip('/')+'-'+row['id'],'question':row['title'],'topic':page['title'],'url':path+'#'+row['id'],'source':DOMAIN+path+'#'+row['id'],'answer':('Read the current Terms and Conditions for this section. Related operational explanations are available in the FAQ; no independent contractual text is maintained in search results.' if path=='/terms-and-conditions/' else plain(expand(' '.join(row['paragraphs'])))),'keywords':[]})
  from customer_policies import sections
  for service in release['services']:
   for ident,title,answer in sections(service['id']):
@@ -68,7 +69,7 @@ def search_data():
  return {'synonyms':data['synonyms'],'entries':entries}
 
 def hub(topics,data):
- out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">Welcome to the Mr Sewing Help Centre</h1><p>Find answers about our services, prices and your request.</p></section>'
+ out='<section class="faq-intro" aria-labelledby="faq-heading"><p class="home-eyebrow">Mr Sewing help centre</p><h1 id="faq-heading">Welcome to the Mr Sewing Help Centre</h1><p>Find answers about our services, individual quotations and your request.</p></section>'
  out+='<form class="faq-search" id="faq-search" role="search" aria-label="Search all FAQ topics" action="/faq/" method="get"><label for="faq-query">Search every topic and answer</label><div class="faq-search-box">'+icon('search')+'<input type="search" id="faq-query" name="q" placeholder="Search for answers…" autocomplete="off" maxlength="160" aria-controls="faq-results" aria-describedby="faq-search-hint"><button type="button" id="faq-clear" aria-label="Clear FAQ search" hidden>'+icon('close')+'</button></div><p id="faq-search-hint" class="faq-search-hint">Search questions, service topics and practical customer guidance.</p></form><noscript><p>Choose a topic below to browse its answers. Search is available when JavaScript is enabled.</p></noscript>'
  out+='<section id="faq-results" aria-labelledby="faq-results-title" hidden><h2 id="faq-results-title">Search results</h2><p id="faq-search-status" class="faq-search-status" role="status" aria-live="polite" aria-atomic="true"></p><ol class="faq-result-list" id="faq-result-list"></ol><div class="faq-empty" id="faq-empty" hidden><p>No answers match your search. Try another word or ask us about your request.</p>'+contact('a customer enquiry','/faq/')+'</div></section>'
  common=['suit-starting-cost','express-cost','locations']
@@ -77,8 +78,8 @@ def hub(topics,data):
  for t in topics:
   old=''.join('<span id="'+id+'" aria-hidden="true"></span>' for id,dest in data['legacyFragments'].items() if dest.split('#')[0]==t['slug'])
   out+='<a class="faq-card" href="'+route(t)+'">'+old+'<span class="faq-icon">'+icon(t['icon'])+'</span><h2>'+escape(t['title'])+'</h2><p>'+escape(t['description'])+'</p><small>'+str(len(t['questions']))+' answers <span aria-hidden="true">↗</span></small></a>'
- maps=json.loads((ROOT/'_data/contact-v2.json').read_text())['mainWorkshop']['mapsUrl']
- out+='</nav><aside class="faq-contact"><h2>More Questions?</h2><p>Email <a href="mailto:mrsewingfashiondesigner@gmail.com">mrsewingfashiondesigner@gmail.com</a> or use our official WhatsApp. Our first-response target is within 24 support working hours, Monday–Friday, 09:00–17:00 Kigali time, excluding Rwandan public holidays.</p>'+contact('a customer enquiry','/faq/')+'<p><a class="faq-google-link" href="'+escape(maps,quote=True)+'" target="_blank" rel="noopener">'+icon('pin')+'Find Mr Sewing on Google Maps</a></p></aside>'
+ maps=settings()['locations']['mainWorkshop']['mapsUrl']
+ out+='</nav><aside class="faq-contact"><h2>More Questions?</h2><p>Email <a href="mailto:'+escape(settings()['email'],quote=True)+'">'+escape(settings()['email'])+'</a> or use our official WhatsApp. Our first-response target is within 24 support working hours, Monday–Friday, 09:00–17:00 Kigali time, excluding Rwandan public holidays.</p>'+contact('a customer enquiry','/faq/')+'<p><a class="faq-google-link" href="'+escape(maps,quote=True)+'" target="_blank" rel="noopener">'+icon('pin')+'Find Mr Sewing on Google Maps</a></p></aside>'
  out+='<script type="application/json" id="faq-search-data">'+json.dumps(search_data(),ensure_ascii=False).replace('<','\\u003c')+'</script><script type="application/json" id="faq-legacy-data">'+json.dumps({id:'/faq/'+dest.split('#')[0]+'/'+('#'+dest.split('#')[1] if '#' in dest else '') for id,dest in data['legacyFragments'].items()}).replace('<','\\u003c')+'</script>'
  return out
 

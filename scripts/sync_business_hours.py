@@ -22,7 +22,8 @@ def main():
     hours=json.loads((ROOT/'_data/business-hours.json').read_text())
     business=json.loads((ROOT/'_data/business.json').read_text())
     business['openingHoursSpecification']=[{'@type':'OpeningHoursSpecification','dayOfWeek':['https://schema.org/'+d for d in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']],'opens':hours['regularOpen'],'closes':hours['regularClose']}]
-    business['disambiguatingDescription']='Monday–Saturday: 09:00–17:00. Ordinary Saturday visits do not require an appointment. On the last Saturday of every month (Umuganda), hours are 12:00–17:00, strictly by advance appointment. Sunday: by appointment only; no fixed Sunday hours are published.'
+    business['disambiguatingDescription']='Monday–Saturday: '+hours['regularOpen']+'–'+hours['regularClose']+'. Ordinary Saturday visits do not require an appointment. On the last Saturday of every month (Umuganda), hours are '+hours['umugandaOpen']+'–'+hours['umugandaClose']+', strictly by advance appointment. Sunday: by appointment only; no fixed Sunday hours are published.'
+    business['sameAs']=list(json.loads((ROOT/'_data/contact-v2.json').read_text())['social'].values())
     exceptions=[]
     kigali_year = datetime.now(ZoneInfo('Africa/Kigali')).year
     for year in [kigali_year, kigali_year+1]:

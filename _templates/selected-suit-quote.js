@@ -56,7 +56,7 @@
   const existingEdit=form.querySelector('[data-edit-designs]'),existingFabric=form.querySelector('[data-selected-fabric-edit]');
   const wasOpen=holder.querySelector('.selected-quote-summary')?.open||false;holder.replaceChildren();const block=summary(holder);block.querySelector('.selected-quote-summary').open=wasOpen;
   const nav=document.createElement('nav');nav.className='selected-quote-edit';nav.setAttribute('aria-label','Edit selected designs');
-  let edit=existingEdit;if(!edit){edit=document.createElement('a');edit.dataset.editDesigns='';edit.textContent='Add or Change Designs';}edit.href=selectionURL('/services/custom-tailoring/');nav.append(edit);block.append(nav);
+  let edit=existingEdit;if(!edit){edit=document.createElement('a');edit.dataset.editDesigns='';edit.textContent='Add or Change Designs';}edit.href=selectionURL('/showroom/');nav.append(edit);block.append(nav);
   const fabric=existingFabric||document.createElement('a');preferenceSummary(holder,{edit:fabric});
   const quantity=get('requestQuantity');if(quantity){quantity.value=rows().reduce((n,row)=>n+Number(row.quantity||row.qty||1),0);quantity.readOnly=true;hide(quantity.closest('.request-fields>div')||quantity);}
  }

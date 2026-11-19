@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "authority": "Video-only publication and classification records. Existing image approvals remain in collection-designs.json and customer-projects.json.",
+  "instructions": "A recovered file is not permission. Only an owner-reviewed record with separate usage-rights and metadata approval may be published. No videos currently have that approval.",
+  "videos": []
+}

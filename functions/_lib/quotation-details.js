@@ -1,4 +1,5 @@
 /* R49: approved Custom Tailoring enquiry arrangements, not confirmed appointments/orders. */
+import {operationalFacts} from './operational-facts.js';
 export const KIGALI_TIME_ZONE='Africa/Kigali (UTC+02:00)';
 const DAY=86400000;
 const placeLabels={workshop:'Main Workshop: KN 441 St, Norvège, Kigali',downtown:'Downtown Consultation Location: MIC Building, by appointment'};
@@ -57,7 +58,7 @@ export function applyQuotationDetails(fields,value,quantity){
   else{
    fields['Measurement Visit Address']=m.address;fields['Measurement Visit City']=value.city;fields['Measurement Visit Country']=value.country;if(m.details)fields['Measurement Location Details']=m.details;
    fields['Measurement Visit Purpose']=m.purpose==='independent'?'Independent Consultation & Fitting':'Order-related measurement visit';
-   fields['Measurement Visit Fee Guidance']=m.purpose==='independent'?'Independent Consultation & Fitting: 35,000 RWF. Location, scope and appointment require confirmation. Selecting a preference does not require payment.':'An eligible order-related Kigali measurement visit is 10,000 RWF after quotation acceptance and the required garment advance. Location, scope, eligibility and appointment require confirmation. Selecting a preference does not require payment.';
+   fields['Measurement Visit Fee Guidance']=m.purpose==='independent'?'Independent Consultation & Fitting: '+operationalFacts.consultationAndFittingRwf.toLocaleString('en-US')+' RWF. Location, scope and appointment require confirmation. Selecting a preference does not require payment.':'An eligible order-related Kigali measurement visit is '+operationalFacts.confirmedOrderMeasurementVisitRwf.toLocaleString('en-US')+' RWF after quotation acceptance and the required garment advance. Location, scope, eligibility and appointment require confirmation. Selecting a preference does not require payment.';
    fields['Measurement Fee Distinction']='Independent consultation and order-related measurement visits are distinct services; do not charge both fees for the same approved measurement service.';
   }
  }
@@ -69,7 +70,7 @@ export function applyQuotationDetails(fields,value,quantity){
   if(value.kigali&&value.mode==='suit'){
    fields['Calculated Delivery Charge RWF']='0';fields['Delivery Charge Status']='Initial eligible custom-suit delivery within Kigali is included. The team must confirm the full address before dispatch.';
   }else if(value.domestic&&!value.kigali){
-   const fee=quantity*5000;fields['Calculated Delivery Charge RWF']=String(fee);fields['Delivery Charge Calculation']=quantity+' garment'+(quantity===1?'':'s')+' × 5,000 RWF = '+fee.toLocaleString('en-US')+' RWF';fields['Delivery Charge Status']='Calculated domestic outside-Kigali delivery amount for an eligible Custom Tailoring order; not a final accepted quotation.';
+   const fee=quantity*operationalFacts.outsideKigaliRwandaPerGarmentRwf;fields['Calculated Delivery Charge RWF']=String(fee);fields['Delivery Charge Calculation']=quantity+' garment'+(quantity===1?'':'s')+' × '+operationalFacts.outsideKigaliRwandaPerGarmentRwf.toLocaleString('en-US')+' RWF = '+fee.toLocaleString('en-US')+' RWF';fields['Delivery Charge Status']='Calculated domestic outside-Kigali delivery amount for an eligible Custom Tailoring order; not a final accepted quotation.';
   }else if(!value.domestic)fields['Delivery Charge Status']='International shipping and applicable charges require an individual quotation; no shipping rate or transit time is confirmed.';
   else fields['Delivery Charge Status']='Special Tailoring delivery arrangements and any applicable charge require quotation confirmation; included ordinary-suit delivery is not automatically extended.';
  }

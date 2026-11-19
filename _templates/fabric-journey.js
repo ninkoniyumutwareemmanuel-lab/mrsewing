@@ -8,7 +8,7 @@ window.MrFabricJourney=function({api,source,resolve,friendly,url,ensureQuote,pre
   window.MrSelectedSuitQuote?.renderDesignSummary(parent);
   const edit=document.createElement('a');edit.className='home-text-link';edit.textContent='Add or Change Designs';edit.href=api.editSelectionsURL();parent.append(edit);
  }
- function empty(parent){const note=document.createElement('p');note.className='guide-notice';note.textContent='No designs selected. Choose a suit design to continue with fabric preferences.';const link=document.createElement('a');link.href='/services/custom-tailoring/';link.className='home-button home-button-gold';link.textContent='Explore Suit Designs';parent.append(note,link);}
+ function empty(parent){const note=document.createElement('p');note.className='guide-notice';note.textContent='No designs selected. Choose a suit design to continue with fabric preferences.';const link=document.createElement('a');link.href='/showroom/';link.className='home-button home-button-gold';link.textContent='Explore the Showroom';parent.append(note,link);}
  if(form){
   document.body.classList.add('fabric-preference-page');const summary=document.querySelector('[data-shared-design-summary]');
   if(!rows.length){form.hidden=true;empty(summary);return;}designs(summary);

@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "rule": "R51",
+  "decisionDate": "2026-11-18",
+  "note": "Paths designate ownership, not confidentiality. This public repository must not contain confidential company or customer information. Historical approvals remain preserved.",
+  "sources": [
+    {
+      "id": "business-identity",
+      "path": "_data/business.json",
+      "owns": "Brand identity and primary business contact",
+      "scope": "all",
+      "approval": "Approved existing company identity; verify contact map before edits"
+    },
+    {
+      "id": "business-locations",
+      "path": "_data/contact-v2.json",
+      "owns": "Verified workshop and appointment-only consultation location",
+      "scope": "all",
+      "approval": "Approved current location records"
+    },
+    {
+      "id": "business-hours",
+      "path": "_data/business-hours.json",
+      "owns": "Operating hours and Umuganda distinctions",
+      "scope": "all",
+      "approval": "Approved current hours"
+    },
+    {
+      "id": "service-conditions",
+      "path": "_data/customer-policy-facts.json",
+      "owns": "Service timing, fees, payments and eligibility; preserve scoped exceptions",
+      "scope": "service-specific",
+      "approval": "Latest R49 owner facts13November2026"
+    },
+    {
+      "id": "ordinary-suit-prices",
+      "path": "_data/suit-package-prices.json",
+      "owns": "Approved internal ordinary suit tiers and benefit eligibility",
+      "scope": "ordinary custom suits",
+      "approval": "Latest men ordinary prices12November2026; unchanged by R51"
+    },
+    {
+      "id": "tuxedo-prices",
+      "path": "_data/tuxedo-package-prices.json",
+      "owns": "Internal tuxedo schedule and separate eligibility",
+      "scope": "men tuxedos",
+      "approval": "Existing approved schedule; unchanged by R51"
+    },
+    {
+      "id": "public-price-visibility",
+      "path": "_data/public-content-policy.json",
+      "owns": "Public quotation-first presentation; no internal price change",
+      "scope": "public service information",
+      "approval": "R51owner18November2026 staging only"
+    },
+    {
+      "id": "shared-public-explanations",
+      "path": "scripts/public_content.py",
+      "owns": "Scope-preserving public projection from approved policy texts",
+      "scope": "all with named service exceptions",
+      "approval": "R51 presentation adapter; not independent policy authority"
+    },
+    {
+      "id": "faq-questions",
+      "path": "_data/customer-faqs.json",
+      "owns": "Questions/topic ownership/anchors; answers consume authoritative placeholders",
+      "scope": "published FAQ topics",
+      "approval": "Existing approvals plus R51 quote-first display"
+    },
+    {
+      "id": "page-composition",
+      "path": "_data/customer-release.json",
+      "owns": "Page titles/sections/reference tokens; business facts belong to policy source",
+      "scope": "customer information and service pages",
+      "approval": "Existing page approvals plus R51 structure"
+    },
+    {
+      "id": "shop-products",
+      "path": "_data/shop-products.json",
+      "owns": "Product price/stock/checkout/publication are independent of service-price hiding",
+      "scope": "Shop only",
+      "approval": "Existing publication gate; no new stock or sale approval"
+    },
+    {
+      "id": "terms-document",
+      "path": "_data/policy-documents.json",
+      "owns": "Official approved PDF version/publication and transitional fallback state",
+      "scope": "Terms and Conditions",
+      "approval": "Activation requires approved real PDF; no document supplied"
+    },
+    {
+      "id": "business-settings-projection",
+      "path": "scripts/business_settings.py",
+      "owns": "Shared settings/nav/footer projection only; identity, contact, location and hours retain their named JSON owners",
+      "scope": "all generated pages",
+      "approval": "R51 reuse of existing approved settings"
+    },
+    {
+      "id": "shared-navigation",
+      "path": "_data/site-navigation.json",
+      "owns": "Navigation labels and ordering; not an independent business contact source",
+      "scope": "shared header and footer",
+      "approval": "R51 universal Showroom and existing approved navigation"
+    },
+    {
+      "id": "legal-operator",
+      "path": "_data/customer-information.json",
+      "jsonPointer": "/company",
+      "owns": "Approved legal operating company name only; rule paragraphs in this compatibility file are derived placeholders",
+      "scope": "shared identity/footer/policy document metadata",
+      "approval": "Existing approved NINKONIYUMUTWARE NEXUS LTD identity"
+    }
+  ],
+  "derivedOutputs": [
+    "HTML pages",
+    "FAQ search JSON",
+    "FAQ structured data",
+    "functions/_lib/operational-facts.js"
+  ],
+  "deprecatedIndependentFacts": {
+    "_data/customer-information.json": "Composition/compatibility placeholders plus the approved legal operator field. Policy rules resolve through customer-policy-facts and suit-pricing helpers; do not independently rewrite duplicate payment/delivery facts here."
+  },
+  "ruleScopes": [
+    {
+      "id": "domestic-custom-payment",
+      "source": "_data/customer-policy-facts.json#/payments",
+      "appliesTo": [
+        "applicable domestic custom garment orders"
+      ],
+      "exceptions": [
+        "international custom orders use separate approved advance",
+        "standalone other services use accepted quotation"
+      ],
+      "publicAnswer": "/faq/prices-packages-payments/#domestic-deposit"
+    },
+    {
+      "id": "payment-verification",
+      "source": "_data/customer-policy-facts.json#/texts/policyPaymentVerification",
+      "appliesTo": [
+        "domestic and international customer payments"
+      ],
+      "exceptions": [
+        "preserve owner-authorized exception procedures",
+        "verification does not itself start production"
+      ],
+      "publicAnswer": "/faq/prices-packages-payments/#payment-verification"
+    },
+    {
+      "id": "order-measurement-visit",
+      "source": "_data/customer-policy-facts.json#/texts/policyMobileMeasurement",
+      "appliesTo": [
+        "eligible order-related Kigali measurement visits"
+      ],
+      "exceptions": [
+        "quotation acceptance and required garment advance precede visit",
+        "not a fee automatically imposed on every other service",
+        "do not charge independent consultation for same approved measurement service"
+      ],
+      "publicAnswer": "/faq/measurements-fittings/#order-measurement-visit"
+    },
+    {
+      "id": "independent-consultation",
+      "source": "_data/customer-policy-facts.json#/texts/policyMobileConsultation",
+      "appliesTo": [
+        "independent professional consultation and fitting without confirmed garment order"
+      ],
+      "exceptions": [
+        "scope/location/appointment require confirmation",
+        "selecting a preference does not require payment"
+      ],
+      "publicAnswer": "/faq/measurements-fittings/#independent-consultation-cost"
+    },
+    {
+      "id": "kigali-round-trip",
+      "source": "_data/customer-policy-facts.json#/transport",
+      "appliesTo": [
+        "eligible Kigali alterations and garment-care collection and return"
+      ],
+      "exceptions": [
+        "combined alteration and cleaning order not charged twice",
+        "separate from professional visits and included initial custom-suit delivery"
+      ],
+      "publicAnswer": "/faq/production-delivery/#kigali-round-trip"
+    },
+    {
+      "id": "custom-tailoring-delivery",
+      "source": "_data/customer-policy-facts.json#/customTailoringDelivery",
+      "appliesTo": [
+        "eligible Custom Tailoring deliveries"
+      ],
+      "exceptions": [
+        "included initial Kigali delivery is for qualifying suits",
+        "outside-Kigali domestic rate not extended to alterations or care",
+        "international shipping individually quoted"
+      ],
+      "publicAnswer": "/faq/production-delivery/#delivery-arrangements"
+    },
+    {
+      "id": "service-timing",
+      "source": "_data/customer-policy-facts.json#/services",
+      "appliesTo": [
+        "each named service separately"
+      ],
+      "exceptions": [
+        "working hours differ from calendar days",
+        "no automatic deadline acceptance",
+        "custom tailoring estimates do not become care/alteration estimates"
+      ],
+      "publicAnswer": "/faq/production-delivery/#tailoring-timing"
+    }
+  ]
+}
