@@ -12,6 +12,30 @@
         "mediaId": "MEDIA-cfa7bf326e070da47149203f"
       }
     ],
-    "featuredMediaId": "MEDIA-e3f071d6aa9dd697dde84cd5"
+    "featuredMediaId": "MEDIA-e3f071d6aa9dd697dde84cd5",
+    "pendingVideoShowcase": {
+      "status": "held_awaiting_approvals",
+      "source": "Owner corrective media integration instruction19November2026",
+      "cards": [
+        {
+          "assetPath": "/1024X768VIDEO.mp4",
+          "audience": "men",
+          "fallbackMediaId": "MEDIA-64017f76ab663d78eff17919",
+          "activationStatus": "held"
+        },
+        {
+          "assetPath": "/1024X768black.mp4",
+          "audience": "men",
+          "fallbackMediaId": "MEDIA-64017f76ab663d78eff17919",
+          "activationStatus": "held"
+        }
+      ],
+      "compositionNote": "Both reviewed videos depict men’s suits. They are not assigned to the current women’s slot. The active approved men’s/women’s photograph cards remain unchanged until a reviewed two-card composition and all video/poster/publication gates are satisfied.",
+      "activationRequirements": [
+        "Video record must pass separate usage-rights, publication and metadata approval gates.",
+        "Exact poster must be approved and registered.",
+        "Choose a truthful two-card composition without classifying a men’s video as women’s tailoring."
+      ]
+    }
   }
 }

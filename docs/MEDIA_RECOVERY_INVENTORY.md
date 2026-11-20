@@ -2,7 +2,7 @@
 
 Generated from the existing media and permission records; do not edit this report. No original file is moved, deleted or duplicated.
 
-402 image assets and 7 video files retained. Only the effective publication gates can activate an item.
+427 image assets and 9 video files retained. Only the effective publication gates can activate an item.
 
 | ID | Original filename | Stored path | Status | SHA256 |
 | --- | --- | --- | --- | --- |
@@ -408,6 +408,33 @@ Generated from the existing media and permission records; do not edit this repor
 | MEDIA-96b2788dd6babfaf89ae1840 | nexus-logo-480.webp | assets/images/nexus-logo-480.webp | held | 3f4edc50695ce8c70f1accf94b86843aaceaeee73a89c020887382f3aee7db9a |
 | MEDIA-966d3c7d6c5aa6996a960623 | nexus-logo-960.webp | assets/images/nexus-logo-960.webp | held | 8df117ffb710c078908b7553e7566ed8889e05e8b5d01365f0d7771204f6d4da |
 | MEDIA-417be7f3c331feaea4f87c2a | favicon-192.png | assets/images/favicon-192.png | held | 862296f22109e09753fab8a6aeed418cfca2f93963ac98c42d33d85b1f531f2b |
+| MEDIA-097c19bec6dc790219efb8bb | stone-regent-chain-brooch-double-breasted-suit-01.webp | stone-regent-chain-brooch-double-breasted-suit-01.webp | held | 2a29cc941946456a61d22fc200462122438fe4e3edfd5e01bff531f60862fbbe |
+| MEDIA-ebdd0b90e1b2058996c724d0 | steel-grey-signature-three-piece-womens-suit.webp | steel-grey-signature-three-piece-womens-suit.webp | held | cfeb4180cb2435b02a8b357ee517e36c7b8c5a9c39b118c03fa2558206d86ef7 |
+| MEDIA-6f865bf748203c7b8ac7afa4 | sovereign-gold-button-double-breasted-suit-04-black.webp | sovereign-gold-button-double-breasted-suit-04-black.webp | held | 5cabe60dbe5fdae3508cd28b574c297538781392e5cedd5556bf202f7b2e8c5f |
+| MEDIA-0b94f63a470b89ee7765dbab | sovereign-gold-button-double-breasted-suit-03-navy.webp | sovereign-gold-button-double-breasted-suit-03-navy.webp | held | 2a589fb278130ce7341317e593d751edbe4fd967e313d0709870a6362f606025 |
+| MEDIA-0d58b1844d68daa018267ffa | sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp | sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp | held | fef87f3c752c1720fd77946157a3b3cd81c37533fb29fdd64a7c3dd2ff3a4b52 |
+| MEDIA-aca626eba6ebd6aa9d3e9fc0 | sovereign-gold-button-double-breasted-suit-01-olive.webp | sovereign-gold-button-double-breasted-suit-01-olive.webp | held | 1b95dced17e03e818daf4a2f9d4c7157bd97c5480e0aa3ddc9595cba463c9d53 |
+| MEDIA-88d1daebd0edeec688ec2d38 | olive-sovereign-gold-button-double-breasted-suit-01.webp | olive-sovereign-gold-button-double-breasted-suit-01.webp | held | 844d2d99e73ba4303e2adcdd23e9f014eb742eb9de597c9917b24ff352ccced5 |
+| MEDIA-e10a3f8c1181ffe0c199014c | scarlet-crest-chain-brooch-double-breasted-suit-01.webp | scarlet-crest-chain-brooch-double-breasted-suit-01.webp | held | aecacf7c5ba3336b7818bee5438240ee21612598f834e3aeda32ec1fa70285a6 |
+| MEDIA-e16698cd27057423c9ab279a | sandstone-navy-gold-button-double-breasted-suit-01.webp | sandstone-navy-gold-button-double-breasted-suit-01.webp | held | 0ae47fbee230cdf2aaee44ca00b2925309698f0ef74cacbc1225e740e8ad7f70 |
+| MEDIA-51e05a465d90eb0ee3423a9b | pink-admiral-chain-brooch-double-breasted-suit-02.webp | pink-admiral-chain-brooch-double-breasted-suit-02.webp | held | 13c91d680d367146a7bffca84eac5c763b646bb042459c74c2208981d6916247 |
+| MEDIA-d1a2651f870c0397126bce04 | pearl-gold-executive-womens-suit.webp | pearl-gold-executive-womens-suit.webp | held | 424d87bc5280a5fef852cfa082b0035ec3655f4d6ade0364d33a485e76b438a6 |
+| MEDIA-211ccd290f9bdf2e4c9da6df | onyx-silver-chain-asymmetric-suit-01.webp | onyx-silver-chain-asymmetric-suit-01.webp | held | 93d7c3104b6a8190605cc12a0b29daa797c0649128024f6a6b0b04bc5e2231b8 |
+| MEDIA-e7deaf699f4b8c36a943f248 | navy-atelier-tailored-skirt-suit.webp | navy-atelier-tailored-skirt-suit.webp | held | 133927d17256958344b47bee110d29ae04978714eecb87de372d2109d7e30ae5 |
+| MEDIA-c1d8b58bd7cf40e28108ba4c | mahogany-paisley-asymmetric-double-breasted-suit-01.webp | mahogany-paisley-asymmetric-double-breasted-suit-01.webp | held | e4195cdd6f42e911bd3645ba03ce983129e03e0661dfee7b26e4e76d87c2e753 |
+| MEDIA-fcef4dd62c9684c25e8bd853 | ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp | ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp | held | 58343da4e74c87cf29306e5d4fd33f61a9f18ea9b41c7ab540ba7184e9bc5339 |
+| MEDIA-fbd94174915260e6cb21958f | ivory-noir-elegance-womens-suit.webp | ivory-noir-elegance-womens-suit.webp | held | 8e327b692a7be609864dc3e491339b038804c1a535f6de14348ac15e904a1188 |
+| MEDIA-b9e5780d77aefc5a311e01db | ivory-nocturne-sash-waist-formal-suit-01.webp | ivory-nocturne-sash-waist-formal-suit-01.webp | held | 4e11912178d3edede086256ec8309f799882b2b8af775bc1ed62f077a9cc8868 |
+| MEDIA-a191add22c62ff20b91c2740 | ivory-midnight-speckled-tuxedo-jacket.webp | ivory-midnight-speckled-tuxedo-jacket.webp | held | 3da4f756fdf7f390b5291898f6016e123bf45c7af5008c3c66662767162e713c |
+| MEDIA-8f88dd6a123140912baae96e | ivory-heritage-patch-pocket-suit-01.webp | ivory-heritage-patch-pocket-suit-01.webp | held | 89fefc3ba67b38d3bc678c4c9aeac3025db2c5737f1984b13ce1b8973d6bc088 |
+| MEDIA-953d88f819d7661f633b591e | ivory-heritage-patch-pocket-suit-03.webp | ivory-heritage-patch-pocket-suit-03.webp | held | 7ed8a1653035f23df8e8cfeda4fc03896d27aa34ea863e1b4d696068d32123e8 |
+| MEDIA-28fa3558aeebd0f66bb1cd97 | ivory-heritage-patch-pocket-suit-02.webp | ivory-heritage-patch-pocket-suit-02.webp | held | ff018f11c9ada73e192b18c6a1caa030cd58e3dcba6d197516b1b1d313e282c5 |
+| MEDIA-3de0f9265e15795646ea35cd | ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp | ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp | held | 9c83a5d8c6dfed121609a952e037bb5fdff1385fadbffcde0dfedf249cc5f5d6 |
+| MEDIA-27461fa09401d5608b1be462 | crimson-admiral-chain-brooch-double-breasted-suit-03.webp | crimson-admiral-chain-brooch-double-breasted-suit-03.webp | held | 6b9cbb24a75eb8c561b32296f46e6ef319742fb1472725501b2154a257c39c54 |
+| MEDIA-e71ed5f4cd6c57f5e91729f2 | champagne-cocoa-peak-lapel-double-breasted-suit-01.webp | champagne-cocoa-peak-lapel-double-breasted-suit-01.webp | held | f1c9d6809e38bf994f68d453e3e0b22c8ff9e06cc31bdae3f4321401049119f3 |
+| MEDIA-1559d43becd959718138ad91 | burgundy-admiral-chain-brooch-double-breasted-suit-01.webp | burgundy-admiral-chain-brooch-double-breasted-suit-01.webp | held | 527ff38d997bec294a71abb06393c846e573204127c7de4a4f47c6747a2c15eb |
+| MEDIA-7ed703e1635655381f0a3300 | 1024X768VIDEO.mp4 | 1024X768VIDEO.mp4 | held | 787bb40456b856e67995bd3444ffe21bc40ac465c0a0ed9ad671e4f21cb87756 |
+| MEDIA-e345c24dd5b28d8f24de9d9f | 1024X768black.mp4 | 1024X768black.mp4 | held | 56dfbf5dc08bd27f6965eaa3a7ec6269419a8f107461161b63f2ab47a3a6763a |
 | MEDIA-57ba6603c6db2df54cf33bf3 | consultation-discussion.mp4 | consultation-discussion.mp4 | held | af6ec844d31a9c75a9274bfee057c0159dee0f0a72b3cfad296f6f47d7a17753 |
 | MEDIA-f524d023075917d34d92dbde | express-clock.mp4 | express-clock.mp4 | held | 2b09b680852b593d5357b07edd97978c730dd84a2266b74cbbd2d70b664ca2d5 |
 | MEDIA-bb7d357e389a3c9e628daffa | r20.2.mp4 | r20.2.mp4 | held | 35968329720ec432dab486f7e5b40c0151d38fba275aed127ee6ccc3b6b5a37c |

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R51 approved-PDF workflow tests using temporary synthetic documents only."""
+"""Approved-PDF workflow and received-review gates; mutations use temporary fixtures."""
 from copy import deepcopy
 from hashlib import sha256
 import json
@@ -54,27 +54,44 @@ def write_registry(root, value):
 
 def main():
     actual = policy.validate_registry()
-    assert actual['documents'][policy.DOCUMENT_ID]['currentVersion'] is None, 'No actual approved PDF was supplied for R51'
-    assert not list(ROOT.glob('.github/policy-documents/**/*.pdf')), 'This test must not add a pretend company PDF'
+    document = actual['documents'][policy.DOCUMENT_ID]
+    assert document['currentVersion'] is None, 'Official activation awaits its real publication date and operational reconciliation'
+    received = document.get('receivedVersions', [])
+    assert len(received) == 1 and received[0]['approvalStatus'] == 'approved'
+    assert received[0]['effectiveDate'] is None and received[0]['effectiveDateBasis'] == 'official-website-publication'
+    assert received[0]['preparedDate'] == '2026-11-19'
+    assert received[0]['technicalInspection']['companyRegistrationDate'] is None
     body = '<nav aria-label="Breadcrumb">Home / Terms</nav><section class="release-intro"><h1>Terms &amp; Conditions</h1></section><section id="2"><h2>Existing online conditions</h2><p>Existing approved explanation stays readable while PDF is pending.</p></section><section id="5"><p>Appointment conditions</p></section>'
     pending = policy.wrap_terms(body)
-    assert 'PDF edition is not available yet' in pending
+    assert 'owner-approved PDF' in pending
     assert 'Existing approved explanation stays readable' in pending
     assert '<section id="2">' in pending and '<section id="5">' in pending
     assert '<h1>Terms and Conditions</h1>' in pending
-    assert 'type="application/pdf"' not in pending and 'Download PDF' not in pending
-    assert not any(path.suffix == '.pdf' for path in policy.outputs())
+    assert 'type="application/pdf"' in pending and 'Download PDF' in pending
+    assert 'data-policy-document-review="1.0"' in pending
+    assert 'data-policy-document-current' not in pending
+    assert 'date not yet set' in pending
+    for record in received:
+        uploaded = (ROOT / record['originalUploadPath']).read_bytes()
+        assert sha256(uploaded).hexdigest() == record['sha256']
+        assert policy.outputs()[ROOT / record['publishedPath'].lstrip('/')] == uploaded
 
     with TemporaryDirectory(prefix='mrsewing-policy-fixture-') as directory:
         base = Path(directory)
         root = base / 'repository'
         (root / '_data').mkdir(parents=True)
         registry = deepcopy(actual)
+        registry['documents'][policy.DOCUMENT_ID]['receivedVersions'] = []
+        registry['documents'][policy.DOCUMENT_ID]['pendingNotice'] = 'The PDF edition is not available yet. You can read the current Terms and Conditions below.'
         for name in registry['documents'][policy.DOCUMENT_ID]['operationalSources']:
             target = root / name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes((ROOT / name).read_bytes())
         write_registry(root, registry)
+        plain_pending = policy.wrap_terms(body, root)
+        assert 'PDF edition is not available yet' in plain_pending
+        assert 'type="application/pdf"' not in plain_pending and 'Download PDF' not in plain_pending
+        assert not any(path.suffix == '.pdf' for path in policy.outputs(root))
         source = base / 'fictional-v1.pdf'
         source.write_bytes(fixture_pdf('one'))
         review = policy.review_template(source, 'fixture-v1', '2026-11-19', root)
@@ -160,6 +177,108 @@ def main():
         current_source.write_bytes(saved)
         policy.validate_registry(root)
 
+        # A received PDF with genuine content-approval metadata can be reviewed
+        # without assigning a fake effective date or replacing current Terms.
+        received_root = base / 'received-repository'
+        (received_root / '_data').mkdir(parents=True)
+        for name in registry['documents'][policy.DOCUMENT_ID]['operationalSources']:
+            target = received_root / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes((ROOT / name).read_bytes())
+        write_registry(received_root, registry)
+        uploaded_source = base / 'received-fixture.pdf'
+        uploaded_source.write_bytes(fixture_pdf('received'))
+        (received_root / uploaded_source.name).write_bytes(uploaded_source.read_bytes())
+        received_review = deepcopy(received[0])
+        for key in ['sourcePath', 'publishedPath', 'sha256', 'sourceFilename']:
+            received_review.pop(key, None)
+        received_review.update(version='received-fixture', originalUploadPath=uploaded_source.name,
+                               documentSha256=sha256(uploaded_source.read_bytes()).hexdigest(),
+                               approvedBy='Fictional test owner', sourceReference='Synthetic received-content approval; not company publication')
+        received_review['reconciliation']['sourceFingerprints'] = policy.operational_fingerprints(received_root, registry['documents'][policy.DOCUMENT_ID])
+        wrong = deepcopy(received_review)
+        wrong['approvalStatus'] = 'pending'
+        rejects(lambda: policy.receive_document(uploaded_source, wrong, received_root), 'content approval')
+        wrong = deepcopy(received_review)
+        wrong['effectiveDate'] = '2026-11-19'
+        rejects(lambda: policy.receive_document(uploaded_source, wrong, received_root), 'effective date')
+        before = (received_root / policy.REGISTRY).read_bytes()
+        plan = policy.receive_document(uploaded_source, received_review, received_root)
+        assert (received_root / policy.REGISTRY).read_bytes() == before
+        record_received = policy.receive_document(uploaded_source, received_review, received_root, write=True)
+        assert record_received == plan
+        assert policy.current_document(received_root) is None
+        view_received = policy.wrap_terms(body, received_root)
+        assert 'data-policy-document-review="received-fixture"' in view_received
+        assert 'Existing approved explanation stays readable' in view_received
+        assert 'Open PDF separately' in view_received and 'Download PDF' in view_received
+        assert policy.outputs(received_root)[received_root / record_received['publishedPath'].lstrip('/')] == uploaded_source.read_bytes()
+        wrong_registry = deepcopy(policy.read_registry(received_root))
+        wrong_registry['documents'][policy.DOCUMENT_ID]['currentVersion'] = 'received-fixture'
+        rejects(lambda: policy.validate_registry(received_root, wrong_registry), 'authoritative current')
+        (received_root / uploaded_source.name).write_bytes(fixture_pdf('tampered received upload'))
+        rejects(lambda: policy.validate_registry(received_root), 'content checksum')
+        (received_root / uploaded_source.name).write_bytes(uploaded_source.read_bytes())
+        rejects(lambda: policy.receive_document(uploaded_source, received_review, received_root), 'immutable received version')
+        stray_received = received_root / 'unapproved.pdf'
+        stray_received.write_bytes(fixture_pdf('stray'))
+        rejects(lambda: policy.validate_registry(received_root), 'unregistered PDF')
+        stray_received.unlink()
+        policy.validate_registry(received_root)
+        activation = policy.activation_review_template('received-fixture', policy.date.today().isoformat(), received_root)
+        assert 'approvalStatus' not in activation, 'Received content approval does not need to be requested again'
+        rejects(lambda: policy.activate_received_document('received-fixture', activation, received_root), 'confirmed actual')
+        activation['officialPublication'].update(status='confirmed', reference='Synthetic official-publication event for fixture only')
+        activation['reconciliation'].update(status='approved', reference='Synthetic activation reconciliation only', reviewedBy='Fictional test reviewer', reviewedOn=policy.date.today().isoformat())
+        wrong = deepcopy(activation)
+        wrong['documentSha256'] = '0' * 64
+        rejects(lambda: policy.activate_received_document('received-fixture', wrong, received_root), 'exact owner-approved')
+        wrong = deepcopy(activation)
+        future = policy.date(policy.date.today().year + 1, 1, 1).isoformat()
+        wrong['effectiveDate'] = wrong['officialPublication']['date'] = future
+        rejects(lambda: policy.activate_received_document('received-fixture', wrong, received_root), 'future planned')
+        wrong = deepcopy(activation)
+        wrong['reconciliation']['sourceFingerprints']['_data/business.json'] = '0' * 64
+        rejects(lambda: policy.activate_received_document('received-fixture', wrong, received_root), 'new human reconciliation')
+        wrong = deepcopy(activation)
+        wrong['effectiveDate'] = wrong['officialPublication']['date'] = '2026-11-18'
+        rejects(lambda: policy.activate_received_document('received-fixture', wrong, received_root), 'cannot precede')
+        before = (received_root / policy.REGISTRY).read_bytes()
+        unchanged_files = {p: p.read_bytes() for p in received_root.rglob('*.pdf')}
+        active_plan = policy.activate_received_document('received-fixture', activation, received_root)
+        assert (received_root / policy.REGISTRY).read_bytes() == before
+        replace = policy.os.replace
+        try:
+            policy.os.replace = lambda *_args: (_ for _ in ()).throw(OSError('Synthetic activation-write failure'))
+            try:
+                policy.activate_received_document('received-fixture', activation, received_root, write=True)
+            except OSError as error:
+                assert 'Synthetic' in str(error)
+            else:
+                raise AssertionError('Expected synthetic activation write failure')
+        finally:
+            policy.os.replace = replace
+        assert (received_root / policy.REGISTRY).read_bytes() == before
+        assert not list((received_root / '_data').glob('.policy-registry-*.tmp'))
+        activated = policy.activate_received_document('received-fixture', activation, received_root, write=True)
+        assert activated == active_plan and activated['version'] == 'received-fixture'
+        assert activated['approvalDate'] == received_review['approvalDate'] and activated['sourceReference'] == received_review['sourceReference']
+        activated_document = policy.validate_registry(received_root)['documents'][policy.DOCUMENT_ID]
+        assert activated_document['currentVersion'] == 'received-fixture'
+        assert activated_document['receivedVersions'] == []
+        assert activated_document['receiptHistory'] == [record_received]
+        assert all(p.read_bytes() == data for p, data in unchanged_files.items()), 'Activation must reuse exact immutable PDF paths and bytes'
+        assert 'data-policy-document-current="received-fixture"' in policy.wrap_terms(body, received_root)
+        assert 'Existing approved explanation stays readable' not in policy.wrap_terms(body, received_root)
+        replacement = base / 'after-received-fixture.pdf'
+        replacement.write_bytes(fixture_pdf('after received'))
+        replacement_review = approval(policy.review_template(replacement, 'after-received', '2026-11-20', received_root))
+        policy.publish_document(replacement, replacement_review, received_root, write=True)
+        replaced_document = policy.validate_registry(received_root)['documents'][policy.DOCUMENT_ID]
+        assert replaced_document['receiptHistory'] == [record_received]
+        assert replaced_document['currentVersion'] == 'after-received'
+        assert all(p.read_bytes() == data for p, data in unchanged_files.items())
+
         # A failed final registry write keeps the old published pointer and
         # removes the new immutable files rather than leaving a partial update.
         fourth = base / 'fictional-v4.pdf'
@@ -184,7 +303,7 @@ def main():
         policy.validate_registry(root)
 
     assert policy.current_document() is None
-    print('PASS: pending/no-fake-PDF fallback, approved-only dry-run/publication, immutable replacement/history, exact anchors, open/download/embed fallback, fingerprints/conflicts, checksum/path/stray-PDF guards; temporary fixtures only')
+    print('PASS: actual approved received-PDF review with unset official effective date/current Terms preserved; pending fallback, approved-only publication, immutable history, exact anchors, viewer/open/download, fingerprints/conflicts/checksum/path/stray-PDF guards; all mutations temporary fixtures')
 
 
 if __name__ == '__main__':

@@ -1,6 +1,8 @@
 # Terms and Conditions document workflow
 
-The website is ready for an approved PDF, but **no official PDF has been supplied**. `_data/policy-documents.json` therefore has `currentVersion: null`. The existing Terms remain readable at `/terms-and-conditions/`, with a clear PDF-availability notice. The site does not offer a fake download or present a draft as approved.
+**R53 current state,19 November2026:** the owner supplied and explicitly approved `Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf` in upload commit `ce98ee3`. Its actual five-page content has been inspected and registered in `_data/policy-documents.json` → `receivedVersions`, with an immutable approved archive, public review copy and exact checksum. The Terms page embeds that real document and offers Open PDF separately / Download PDF. No content reapproval is requested.
+
+`currentVersion` remains null because the PDF takes effect on publication on the official website, and this task authorizes staging only. Its preparation date is not its effective date or company registration date. The existing readable online Terms remain below a clearly marked review viewer until official activation and the operational source transition are reconciled. Approved document section5 establishes a future standalone-service default70%/30%, while current operational guidance defers standalone payments to each accepted quotation. Section7's approved contractual surcharge disclosure also needs a scoped mapping against the existing public service-rate presentation policy. See [actual reconciliation](R53_PDF_RECONCILIATION.md). These are activation requirements, not missing content approval. Other arbitrary PDFs remain rejected.
 
 This is a repository workflow. There is no browser upload screen, CMS or automatic legal approval service. The owner replaces the document and approves its version; a developer records that approval and runs the existing build. Viewer code does not need to be rewritten for each replacement.
 
@@ -97,10 +99,37 @@ Until an approved PDF exists, the current online Terms remain the readable fallb
 
 ## Current verification boundary
 
-Temporary tests verify approval gates, checksum/path safety, stray-PDF rejection, current-reference replacement, historical files, conflict detection, write rollback and generated viewer/fallback links. No real official PDF is included in these tests. Final legal approval, supplied-document accessibility and actual device/native-reader behavior require the real approved document and owner review.
+Temporary tests verify approval gates, checksum/path safety, stray-PDF rejection, current-reference replacement, historical files, conflict detection, write rollback and generated viewer/fallback links. The actual received owner-approved PDF is checked read-only; all test mutations use temporary synthetic fixtures. Content approval is already supplied. Legal review is not claimed, and device/native-reader or assistive-technology behavior requires actual testing rather than an integrity assertion.
 
 ## Accessibility and reviewed scope
 
 Use a searchable, readable and appropriately accessible approved PDF. The publication helper checks integrity and recorded approval; it cannot certify legal sufficiency or PDF tagging. Review the actual document with assistive technology where appropriate. Separate open/download links remain available even when a browser cannot embed the file.
 
 Operational reconciliation also covers the ordinary-suit benefit/pricing source, tuxedo schedule and public presentation policy. Changing benefits or service-price visibility must not leave an activated document silently out of sync. Source fingerprints prompt human review rather than extracting or guessing replacement policy wording.
+
+
+## Register an approved upload for staging review without a false effective date
+
+Use `receive` only when the owner has actually approved the supplied content and the original uploaded file already exists in the repository. It records that approval separately from official activation. Keep a byte-identical review copy and review JSON outside the repository; the original filename must match `originalUploadPath` in the root, and all three upload/archive/public checksums must agree. The command validates the full candidate registry, including stray-PDF protections, before writing immutable copies and updating the pointer metadata last.
+
+The actual R53 commands were:
+
+```sh
+python scripts/publish_policy_document.py receive --pdf /workspace/review/r53-media-pdf-2026-11-19/Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf --review /workspace/review/r53-media-pdf-2026-11-19/approved-received-review.json
+python scripts/publish_policy_document.py receive --pdf /workspace/review/r53-media-pdf-2026-11-19/Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf --review /workspace/review/r53-media-pdf-2026-11-19/approved-received-review.json --write
+python scripts/publish_policy_document.py check
+```
+
+The received record uses `approvalStatus: approved`, `publicationStatus: staging-review`, `activationStatus: awaiting-official-publication`, `effectiveDate: null` and `effectiveDateBasis: official-website-publication`. It cannot be assigned as `currentVersion`; checks reject that attempted bypass. Owner approval evidence, preparation date, technical inspection and the explicit remaining activation requirements are recorded. Reviewed source fingerprints are snapshots, not independent policy values. A changed source while this is the active staging review requires a new technical comparison.
+
+For later separately authorized official publication, activate this same approved version1.0 rather than overwriting its PDF or inventing a new document version. The new `prepare-activation` / `activate` workflow preserves the owner's existing content approval and reuses the exact immutable archive/public paths. It moves the original receipt metadata unchanged into `receiptHistory`, records the actual official publication event/date and fresh operational reconciliation, then atomically changes only the registry. A failed write leaves all prior metadata and PDFs intact.
+
+```sh
+python scripts/publish_policy_document.py prepare-activation --version 1.0 --official-publication-date YYYY-MM-DD --review-out /tmp/review/activation.json
+python scripts/publish_policy_document.py activate --version 1.0 --review /tmp/review/activation.json
+python scripts/publish_policy_document.py activate --version 1.0 --review /tmp/review/activation.json --write
+```
+
+`YYYY-MM-DD` is a placeholder for the actual separately authorized official publication date, not an assigned date. The pending template cannot activate anything: record `officialPublication.status: confirmed`, the real event evidence and date, and the completed operational reconciliation. A future planned date, missing evidence, stale source fingerprints or changed PDF checksum is rejected. No second content approval is requested. After activation the full HTML fallback is replaced by the authoritative PDF, with the received history retained; normal future `prepare` / `publish` replacements continue to work.
+
+Do not change agreed historical quotations, set the preparation date as a company registration date, or infer completed legal review. This task did not run official activation or authorize production publication.

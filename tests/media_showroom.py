@@ -71,7 +71,8 @@ assert {card['audience'] for card in home['cards']} == {'men', 'women'}
 assert home['featuredMediaId'] in {item['mediaId'] for item in items if item['classification'] == 'our-work'}
 
 inv = inventory()
-assert len(inv['images']) == 402 and len(inv['videos']) == 7
+# R53 owner upload commit adds exactly25photos and2videos; originals stay intact.
+assert len(inv['images']) == 427 and len(inv['videos']) == 9
 assert all(video['publicationStatus'] == 'held' for video in inv['videos'])
 assert any(image['publicationStatus'] == 'supporting-derivative' for image in inv['images'])
 assert sum(image['publicationStatus'] == 'published' for image in inv['images']) == 28
@@ -81,8 +82,19 @@ assert ['neck.jepg.webp', 'neck.webp'] in inv['duplicateGroups']
 for asset in inv['images'] + inv['videos']:
     path = ROOT / asset['storedAssetPath']
     assert path.is_file() and asset['bytes'] == path.stat().st_size
-changed = subprocess.check_output(['git', 'diff', '--name-only', 'b2b8946882929da4ce7e0e01de4ba1511eed818a'], cwd=ROOT, text=True).splitlines()
-assert not [name for name in changed if Path(name).suffix.lower() in ['.jpg', '.jpeg', '.png', '.webp', '.avif', '.mp4', '.webm']], 'No original media edits are authorized'
+UPLOAD_COMMIT = 'ce98ee3991a43483357304b5fe9f2f0a83f7ae27'
+MEDIA_SUFFIXES = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.mp4', '.webm'}
+uploaded = [name for name in subprocess.check_output(['git', 'diff-tree', '--no-commit-id', '--name-only', '-r', '--diff-filter=A', UPLOAD_COMMIT], cwd=ROOT, text=True).splitlines() if Path(name).suffix.lower() in MEDIA_SUFFIXES]
+assert len(uploaded) == 27 and sum(Path(name).suffix.lower() == '.webp' for name in uploaded) == 25
+# The precise owner-uploaded bytes are authorized additions, never permission to
+# modify originals or promote the held records into customer-facing content.
+for name in uploaded:
+    assert (ROOT / name).read_bytes() == subprocess.check_output(['git', 'show', UPLOAD_COMMIT + ':' + name], cwd=ROOT), ('Uploaded original changed', name)
+changes = subprocess.check_output(['git', 'diff', '--name-status', 'b2b8946882929da4ce7e0e01de4ba1511eed818a'], cwd=ROOT, text=True).splitlines()
+for change in changes:
+    status, name = change.split('\t', 1)
+    if Path(name).suffix.lower() in MEDIA_SUFFIXES:
+        assert status == 'A' and name in uploaded, ('Unauthorized original media change', status, name)
 
 
 # Eligible Shop-only clothing is reusable without creating another Shop or
@@ -179,4 +191,4 @@ assert '<video' not in showcase and 'Reference Design' in showcase and 'Our Work
 assert '/showroom/?audience=men' in showcase and '/showroom/?audience=women' in showcase
 assert 'home-fashion-showcase' in homepage_css()
 assert ROOT / 'showroom/index.html' in outputs()
-print('PASS effective28media/7genuine21reference/rightsheldlegacy/402images7heldvideos/hashrecovery/duplicatefilenames/nonemptyfacets/manualvideogates/eligibleShopclothingfixtures/no2ndShop/homefeatures/exactdesignphotos/nooriginalchanges')
+print('PASS effective28media/7genuine21reference/rightsheldlegacy/427images9heldvideos/hashrecovery/duplicatefilenames/nonemptyfacets/manualvideogates/eligibleShopclothingfixtures/no2ndShop/homefeatures/exactdesignphotos/nooriginalchanges')

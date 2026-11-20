@@ -102,3 +102,18 @@ Known clothing category labels are mapped conservatively to garment tags. Unknow
 ## New garment enquiry scope
 
 Current selected-design quotation references are approved suits/tuxedos. New non-suit reference collections need a reviewed garment-appropriate enquiry mapping before publication; do not apply the ordinary-suit seven-day deadline screen to shirts or dresses by assumption. The existing Special Tailoring form provides human assessment for those requests. Published Shop-only clothing uses its actual Shop destination rather than being assigned a fabricated ordinary-suit identity. Generic filters alone do not establish new production commitments.
+
+
+## R53 — Owner uploads integrated19November2026
+
+The actual upload commit is `ce98ee3991a43483357304b5fe9f2f0a83f7ae27`, fetched before integration. It adds25named fashion photographs and two videos. The25files are prepared as22new stable design/variant records MS-152–MS-173 across17families. No original was resized, renamed, deleted or replaced. Actual dimensions are stored; the catalogue's1200×1500standard is not fabricated as the source size. See [R53_IMAGE_MATCHING.md](R53_IMAGE_MATCHING.md) for every filename, catalogue number, ID, category and exact blocker.
+
+- New records remain `published:false`, `rightsStatus:review_required`. Upload/catalogue text is metadata evidence, not a licence. The existing28eligible photographs remain the public Showroom.
+- `family` and `family.variant` belong to existing collection records. `catalogueNumbers`, each image's `viewLabel`/`catalogueNo`, and prepared category assignments retain exact identities. No second image or quotation database was added.
+- Sovereign has four colour-reference records; Admiral has three. Ivory Heritage has one record with angled/front/detail photos. The file labelled Olive for catalogue12actually shows Burgundy, different from actual Olive6; it is prepared with Burgundy5pending the explicit correction. Pearl Gold10has completed individual visual review; the owner-provided name is retained without claiming gold hardware, and its rights hold remains.
+- Held assignments live under `suit-reference-categories.json:preparedAssignments`. After actual rights and metadata approval, move a reviewed assignment into its existing category's published `designIds`/`references`, record actual permission evidence, clear resolved blockers and approve the record. The loader refuses a family publication without these steps. Never clear a blocker merely to make a build pass.
+- `scripts/design_families.py` renders same-family/same-audience colour-reference links from effective published records only. Existing detail components show each design's multiple views and retain exact photo selection through WhatsApp/fabric/quotation. Its optional metadata is preserved by the loader.
+
+Both `1024X768VIDEO.mp4` and `1024X768black.mp4` are actually720×1280portrait men's suit videos. They are registered draft records with verified hash, bytes, codecs, durations, fast-start and successful full-decode results; no filename-derived resolution claim is made. Explicit video/audio rights, publication/classification approval and an approved exact poster remain missing. Extracted poster candidates stay outside the deployed tree.
+
+`homepage.pendingVideoShowcase` describes the two proposed video cards with truthful men's audiences and approved image fallbacks. It cannot activate media: the build validates its hashes/status/fallbacks while rendering only `homepage.cards`/`featuredMediaId`. Existing approved men's/women's image cards and the genuine large suit photograph remain active. See [R53_VIDEO_REVIEW.md](R53_VIDEO_REVIEW.md).

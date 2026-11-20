@@ -1,6 +1,147 @@
 {
   "schemaVersion": 1,
   "authority": "Video-only publication and classification records. Existing image approvals remain in collection-designs.json and customer-projects.json.",
-  "instructions": "A recovered file is not permission. Only an owner-reviewed record with separate usage-rights and metadata approval may be published. No videos currently have that approval.",
-  "videos": []
+  "instructions": "Uploaded videos are registered with verified technical metadata. Both remain draft/held pending actual usage-rights, publication, classification and poster approvals; upload alone is not permission.",
+  "videos": [
+    {
+      "assetPath": "/1024X768VIDEO.mp4",
+      "title": "Light double-breasted suit reference video",
+      "alternativeText": "A light ivory-coloured double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "description": "A light ivory-coloured double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "audience": "men",
+      "garmentType": "suit",
+      "styleTags": [
+        "double-breasted"
+      ],
+      "classification": "reference-design",
+      "publicationStatus": "draft",
+      "sourceOrCreator": null,
+      "durationSeconds": 22.845578,
+      "posterMediaId": null,
+      "usageRights": {
+        "approved": false,
+        "evidenceRef": null,
+        "date": null
+      },
+      "metadataApproval": {
+        "approved": false,
+        "evidenceRef": null,
+        "date": null
+      },
+      "technicalReview": {
+        "status": "verified",
+        "reviewedOn": "2026-11-19",
+        "method": "ffprobe; full ffmpeg decode; ISO BMFF box inspection; visual samples at five-second intervals and frame20s for black video",
+        "sourceCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "sha256": "787bb40456b856e67995bd3444ffe21bc40ac465c0a0ed9ad671e4f21cb87756",
+        "bytes": 3017971,
+        "width": 720,
+        "height": 1280,
+        "displayAspectRatio": "9:16",
+        "framesPerSecond": 30,
+        "videoCodec": "h264",
+        "videoProfile": "High",
+        "pixelFormat": "yuv420p",
+        "videoDurationSeconds": 22.733333,
+        "audioCodec": "aac",
+        "audioProfile": "HE-AAC",
+        "audioChannels": 2,
+        "audioSampleRateHz": 44100,
+        "containerBitRate": 1056824,
+        "fastStart": true,
+        "decodeCheck": "passed; no decode errors",
+        "audioReview": "Audio stream exists; spoken/music content and recording or music rights are not established."
+      },
+      "posterPreparation": {
+        "status": "prepared_for_review_outside_public_tree",
+        "sourceTimeSeconds": 1,
+        "width": 720,
+        "height": 1280,
+        "sha256": "05f6fdfd82386ac26c7a218d05c43208d6449f202aabdbd041a614befcd2becc",
+        "publicationApproved": false,
+        "note": "Exact extracted video-frame candidate is retained only in review artifacts; no unapproved poster was copied into public assets."
+      },
+      "publicationBlockers": [
+        "Explicit usage-rights and publication permission for the uploaded video, including any audio and third-party imagery, is not recorded.",
+        "Owner approval of the reviewed reference-video classification, descriptive metadata and exact poster is not recorded.",
+        "A publication-approved exact poster photograph is not registered in the reusable image library."
+      ],
+      "uploadMetadata": {
+        "originalFilename": "1024X768VIDEO.mp4",
+        "repositoryCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "source": "Owner-uploaded branch files; corrective implementation instruction19November2026",
+        "rightsImplication": "Upload and technical preparation do not establish publication rights or Mr Sewing workmanship."
+      }
+    },
+    {
+      "assetPath": "/1024X768black.mp4",
+      "title": "Black double-breasted suit reference video",
+      "alternativeText": "A black double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "description": "A black double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "audience": "men",
+      "garmentType": "suit",
+      "styleTags": [
+        "double-breasted"
+      ],
+      "classification": "reference-design",
+      "publicationStatus": "draft",
+      "sourceOrCreator": null,
+      "durationSeconds": 21.94,
+      "posterMediaId": null,
+      "usageRights": {
+        "approved": false,
+        "evidenceRef": null,
+        "date": null
+      },
+      "metadataApproval": {
+        "approved": false,
+        "evidenceRef": null,
+        "date": null
+      },
+      "technicalReview": {
+        "status": "verified",
+        "reviewedOn": "2026-11-19",
+        "method": "ffprobe; full ffmpeg decode; ISO BMFF box inspection; visual samples at five-second intervals and frame20s for black video",
+        "sourceCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "sha256": "56dfbf5dc08bd27f6965eaa3a7ec6269419a8f107461161b63f2ab47a3a6763a",
+        "bytes": 2681007,
+        "width": 720,
+        "height": 1280,
+        "displayAspectRatio": "9:16",
+        "framesPerSecond": 30,
+        "videoCodec": "h264",
+        "videoProfile": "High",
+        "pixelFormat": "yuv420p",
+        "videoDurationSeconds": 21.833333,
+        "audioCodec": "aac",
+        "audioProfile": "HE-AAC",
+        "audioChannels": 2,
+        "audioSampleRateHz": 44100,
+        "containerBitRate": 977577,
+        "fastStart": true,
+        "decodeCheck": "passed; no decode errors",
+        "audioReview": "Audio stream exists; spoken/music content and recording or music rights are not established."
+      },
+      "posterPreparation": {
+        "status": "prepared_for_review_outside_public_tree",
+        "sourceTimeSeconds": 1,
+        "width": 720,
+        "height": 1280,
+        "sha256": "d387086a3d92341218600864331cc160f67b26d99ac759200779f972fbadc8e7",
+        "publicationApproved": false,
+        "note": "Exact extracted video-frame candidate is retained only in review artifacts; no unapproved poster was copied into public assets."
+      },
+      "publicationBlockers": [
+        "Explicit usage-rights and publication permission for the uploaded video, including any audio and third-party imagery, is not recorded.",
+        "Owner approval of the reviewed reference-video classification, descriptive metadata and exact poster is not recorded.",
+        "A publication-approved exact poster photograph is not registered in the reusable image library."
+      ],
+      "uploadMetadata": {
+        "originalFilename": "1024X768black.mp4",
+        "repositoryCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "source": "Owner-uploaded branch files; corrective implementation instruction19November2026",
+        "rightsImplication": "Upload and technical preparation do not establish publication rights or Mr Sewing workmanship."
+      }
+    }
+  ]
 }

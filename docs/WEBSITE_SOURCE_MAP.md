@@ -213,3 +213,23 @@ No active analytics collector was verified, and no paid service or new telemetry
 For a separately authorized Google Business Profile review, compare the actual listing with the verified name, telephone, main workshop address and operating hours in the sources above. Confirm a suitable tailoring business category and accurate service descriptions in the real account; this task did not access or edit a listing or verify search volumes/rankings.
 
 No publication-approved clothing videos were supplied. The initial approved-photo features remain; video support and poster/reduced-motion behavior already exist. Set video feature IDs only after the existing rights/classification gates accept genuine approval.
+
+
+## R53 — Actual uploaded photographs, videos and approved PDF
+
+The actual owner-upload commit `ce98ee3` follows reviewed staging812aaca. Fetch the requested development branch explicitly before concluding assets are absent. This checkout's remote fetch refspec tracks main only, so `origin/phase1/customer-journey-repairs` can be stale: inspect `FETCH_HEAD` and `git ls-remote` after `git fetch origin phase1/customer-journey-repairs`. Reconcile by a normal fast-forward only when ancestry/local changes permit; never reset/overwrite or touch main.
+
+The corrective owner instruction19November2026 authorizes implementation and staging, not invented rights or production. Current references are2026-11-19-03.
+
+| Integration | Actual authority and implementation |
+| --- | --- |
+|25uploaded photographs /22records | Existing `_data/collection-designs.json`, registry/inventory and prepared suit-category assignments; see `docs/R53_IMAGE_MATCHING.md` |
+| Family/colour/view presentation | `scripts/design_families.py`, `scripts/build_collections.py`, `_templates/collections.css`; effective-published records only |
+| Two uploaded videos | `_data/media-video-records.json`; verified technical metadata and explicit holds, no new automatic rights |
+| Pending two-card proposal | `_data/media-library-settings.json` → homepage.pendingVideoShowcase; current approved card/feature IDs remain active |
+| Approved uploaded PDF | Root `Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf`, immutable `.github/policy-documents/terms-and-conditions/1.0.pdf`, generated `assets/policy-documents/terms-and-conditions/1.0.pdf` |
+| Approved-content staging review | `_data/policy-documents.json` receivedVersions; actual embedded review PDF/open/download plus preserved current Terms while official effective-date/operational activation remains pending |
+| PDF tools and audit | Existing `scripts/publish_policy_document.py`, `scripts/policy_documents.py`; updated `docs/POLICY_DOCUMENT_WORKFLOW.md` and `docs/R53_PDF_RECONCILIATION.md` |
+| Regression checks | `tests/r53_uploaded_integration.py`, `tests/r53-uploaded-integration.spec.cjs`, existing media/document/SEO suites |
+
+Preparation19November2026 is not a registration or invented effective date. The uploaded PDF content is already owner-approved; do not ask for the same content approval again. Record actual official-publication activation and reconcile its standalone70/30default with current quote-defined standalone guidance when that approved future-effective document is formally activated. The document's surcharge figures match internal facts; their contractual disclosure is separate from the current public service-price presentation. Never claim completed legal review.

@@ -283,5 +283,206 @@
       "classificationEvidence": "Original m-kaundasuits.html record and owner-confirmed Men’s Kaunda category,12 November2026; original photographs visually reviewed.",
       "publicationEvidence": "Owner R40 explicit eight-photograph approval,12 November2026; KAUNDA_PUBLICATION_APPROVAL_2026-11-12.json"
     }
+  },
+  "preparedAssignments": {
+    "MS-152": {
+      "categoryId": "men-double-breasted",
+      "label": "Stone Regent Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-153": {
+      "categoryId": "women-three-piece",
+      "label": "Steel Grey Signature",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-154": {
+      "categoryId": "men-double-breasted",
+      "label": "Sovereign Gold-Button Elegance — Black",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-155": {
+      "categoryId": "men-double-breasted",
+      "label": "Sovereign Gold-Button Elegance — Navy Blue",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-156": {
+      "categoryId": "men-double-breasted",
+      "label": "Sovereign Gold-Button Elegance — Burgundy",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication_and_editorial_correction",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display.",
+        "Owner metadata confirmation is needed for catalogue12: its filename/catalogue says Olive but the actual image is Burgundy. Technical grouping with5 is prepared, not publication approval."
+      ]
+    },
+    "MS-157": {
+      "categoryId": "men-double-breasted",
+      "label": "Sovereign Gold-Button Elegance — Olive Green",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-158": {
+      "categoryId": "men-double-breasted",
+      "label": "Scarlet Crest Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-159": {
+      "categoryId": "men-double-breasted",
+      "label": "Sandstone Navy Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-160": {
+      "categoryId": "men-double-breasted",
+      "label": "Admiral Chain-Brooch Elegance — Pink",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-161": {
+      "categoryId": "women-double-breasted",
+      "label": "Pearl Gold Executive",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-162": {
+      "categoryId": "men-tuxedos-formalwear",
+      "label": "Onyx Silver-Chain Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-163": {
+      "categoryId": "women-skirt-suits",
+      "label": "Navy Atelier Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-164": {
+      "categoryId": "men-double-breasted",
+      "label": "Mahogany Paisley Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-165": {
+      "categoryId": "men-tuxedos-formalwear",
+      "label": "Ivory Noir Shawl Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-166": {
+      "categoryId": "women-double-breasted",
+      "label": "Ivory Noir Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-167": {
+      "categoryId": "men-tuxedos-formalwear",
+      "label": "Ivory Nocturne Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-168": {
+      "categoryId": "men-tuxedos-formalwear",
+      "label": "Ivory Midnight Speckled Tuxedo",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-169": {
+      "categoryId": "men-single-breasted",
+      "label": "Ivory Heritage Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-170": {
+      "categoryId": "men-tuxedos-formalwear",
+      "label": "Ivory Diamond Lattice Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-171": {
+      "categoryId": "men-double-breasted",
+      "label": "Admiral Chain-Brooch Elegance — Crimson Red",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-172": {
+      "categoryId": "men-double-breasted",
+      "label": "Champagne Cocoa Elegance",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    },
+    "MS-173": {
+      "categoryId": "men-double-breasted",
+      "label": "Admiral Chain-Brooch Elegance — Burgundy",
+      "classificationEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Visible construction supports the prepared category; Formalwear11/17 are not represented as new categories or standard tuxedo packages.",
+      "approvalStatus": "held_pending_usage_rights_and_publication",
+      "publicationBlockers": [
+        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+      ]
+    }
   }
 }

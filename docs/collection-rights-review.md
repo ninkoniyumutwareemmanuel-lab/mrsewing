@@ -3,9 +3,9 @@
 No publication licence or provenance proof is inferred from repository presence.
 Existing-public photographs are carried into staging pending owner rights review.
 Unreferenced originals are inventoried but excluded from showroom publication.
-No different photographs have been grouped by visual similarity.
+R53 uploaded views are technically grouped from the owner catalogue and direct image review; all new records remain held until their rights and metadata approvals are recorded. Original files and old identities remain intact.
 
-28 existing-public designs; 151 original garment records; 402 total image assets inventoried.
+28 existing-public designs; 173 original garment records; 427 total image assets inventoried.
 
 | ID | Original | Showroom | Provenance | Rights |
 | --- | --- | --- | --- | --- |
@@ -160,3 +160,25 @@ No different photographs have been grouped by visual similarity.
 | MS-149 | `The blue suit two piece.webp` | existing public display preserved | design_inspiration | approved |
 | MS-150 | `rose-pink three piecsuit.webp` | existing public display preserved | design_inspiration | approved |
 | MS-151 | `Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp` | existing public display preserved | design_inspiration | approved |
+| MS-152 | `stone-regent-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-153 | `steel-grey-signature-three-piece-womens-suit.webp` | excluded pending review | design_inspiration | review_required |
+| MS-154 | `sovereign-gold-button-double-breasted-suit-04-black.webp` | excluded pending review | design_inspiration | review_required |
+| MS-155 | `sovereign-gold-button-double-breasted-suit-03-navy.webp` | excluded pending review | design_inspiration | review_required |
+| MS-156 | `sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp` | excluded pending review | design_inspiration | review_required |
+| MS-157 | `olive-sovereign-gold-button-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-158 | `scarlet-crest-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-159 | `sandstone-navy-gold-button-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-160 | `pink-admiral-chain-brooch-double-breasted-suit-02.webp` | excluded pending review | design_inspiration | review_required |
+| MS-161 | `pearl-gold-executive-womens-suit.webp` | excluded pending review | design_inspiration | review_required |
+| MS-162 | `onyx-silver-chain-asymmetric-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-163 | `navy-atelier-tailored-skirt-suit.webp` | excluded pending review | design_inspiration | review_required |
+| MS-164 | `mahogany-paisley-asymmetric-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-165 | `ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-166 | `ivory-noir-elegance-womens-suit.webp` | excluded pending review | design_inspiration | review_required |
+| MS-167 | `ivory-nocturne-sash-waist-formal-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-168 | `ivory-midnight-speckled-tuxedo-jacket.webp` | excluded pending review | design_inspiration | review_required |
+| MS-169 | `ivory-heritage-patch-pocket-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-170 | `ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-171 | `crimson-admiral-chain-brooch-double-breasted-suit-03.webp` | excluded pending review | design_inspiration | review_required |
+| MS-172 | `champagne-cocoa-peak-lapel-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-173 | `burgundy-admiral-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |

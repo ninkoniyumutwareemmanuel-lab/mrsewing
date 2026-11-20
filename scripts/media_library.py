@@ -278,6 +278,23 @@ def settings(items=None):
     for card in home['cards']:
         assert card['mediaId'] in available and available[card['mediaId']]['audience'] == card['audience'], 'Home feature requires an eligible media item for the selected audience'
     assert home['featuredMediaId'] in available, 'Home feature must remain publication-approved'
+    pending=home.get('pendingVideoShowcase')
+    if pending is not None:
+        assert pending.get('status')=='held_awaiting_approvals', 'Pending videos cannot silently activate'
+        registered={record['assetPath']:record for record in _read('media-video-records.json')['videos']}
+        cards=pending.get('cards',[])
+        assert len(cards)==2 and len({card['assetPath'] for card in cards})==2
+        for card in cards:
+            assert card.get('activationStatus')=='held' and card['assetPath'] in registered
+            record=registered[card['assetPath']]
+            assert record['publicationStatus']=='draft' and card['audience']==record['audience']
+            assert card['fallbackMediaId'] in available and available[card['fallbackMediaId']]['mediaType']=='photograph'
+            assert available[card['fallbackMediaId']]['audience']==card['audience'], 'Fallback must retain the actual audience'
+            path=_local(record['assetPath']);review=record.get('technicalReview',{})
+            assert review.get('status')=='verified' and review.get('bytes')==path.stat().st_size
+            assert review.get('sha256')==hashlib.sha256(path.read_bytes()).hexdigest(), 'Prepared video bytes changed after review'
+            assert all(type(review.get(key)) is int and review[key]>0 for key in ['width','height'])
+            assert record.get('publicationBlockers'), 'Held video needs a precise activation blocker'
     return data
 
 
