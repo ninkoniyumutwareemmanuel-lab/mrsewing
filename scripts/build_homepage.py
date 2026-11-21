@@ -21,7 +21,15 @@ HOMEPAGE_VISUAL_REVIEW = False
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
     'header': ('_templates/homepage-header.html', 'header', None),
-    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section r56-hero')),
+    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
+    'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
+    'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
+    'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
+    'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
+    'information': ('_templates/homepage-sections.html', 'section', ('id', 'customer-information')),
+    'options': ('_templates/homepage-sections.html', 'section', ('id', 'order-options')),
+    'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
+    'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
     'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
@@ -87,19 +95,10 @@ def reserve_image_space(match):
     src = re.search(r'\bsrc="([^"]+)"', tag)
     if not src:
         raise ValueError('Homepage image needs an explicit src')
-    path = ROOT / unescape(src[1]).lstrip('/')
-    if not path.resolve().is_relative_to(ROOT) or not path.is_file():
-        raise ValueError('Image must be an existing asset inside this repository')
-    if path.suffix.lower() == '.webp':
-        # Owner-approved source hero has verified explicit natural dimensions.
-        # Do not use the legacy JPEG-only parser for a WebP file.
-        width_match = re.search(r'\bwidth="(\d+)"', tag)
-        height_match = re.search(r'\bheight="(\d+)"', tag)
-        if not width_match or not height_match:
-            raise ValueError('WebP image must have approved explicit dimensions')
-        width, height = int(width_match[1]), int(height_match[1])
-    else:
-        width, height = image_size(path)
+    path = ROOT / unescape(src[1])
+    if not path.resolve().is_relative_to(ROOT):
+        raise ValueError('Image must belong to this repository')
+    width, height = image_size(path)
     if not re.search(r'\bwidth=', tag):
         tag = tag[:-1] + f' width="{width}" height="{height}">'
     if not re.search(r'\bdecoding=', tag):
@@ -132,9 +131,6 @@ def render():
                     span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
                     items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
             markup = markup.replace('{{customer_guides}}', ''.join(items))
-        if key == 'contact':
-            # R55 PDF is still staging review, so forms must offer effective Terms.
-            markup = markup.replace('href="/terms-and-conditions/"', 'href="/terms-and-conditions/current/"')
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
@@ -148,15 +144,20 @@ def render():
         template = template.replace('{{' + key + '}}', markup)
         section_styles = re.findall(r'<style[^>]*>(.*?)</style>', source, re.S)
         styles.extend(section_styles)
-    from homepage_redesign import render as render_redesign
-    template=template.replace('{{homepage_redesign}}', render_redesign())
+    from payment_methods import payment_methods
+    template=template.replace('{{payment_methods}}','<section id="payment-methods" class="home-section home-payments"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Pay with confidence</p><h2>Payment Methods</h2><p>We accept Mobile Money, Bank Transfer and Cryptocurrency. Our team provides payment instructions after reviewing your request.</p></div>'+payment_methods()+'</div></section>')
+    styles.append((ROOT/'_templates/payment-methods.css').read_text())
+    from homepage_galleries import suit_section,moments_gallery,shop_category_section
+    template=template.replace('{{suit_collections}}',suit_section()+shop_category_section()).replace('{{moments_gallery}}',moments_gallery())
     styles.append((ROOT/'_templates/homepage-galleries.css').read_text())
+    styles.append((ROOT/'_templates/homepage-r57-additions.css').read_text())
+    from homepage_r57_additions import portrait_showcase, featured_photo
+    template=template.replace('{{homepage_portrait_media}}',portrait_showcase()).replace('{{homepage_feature_photo}}',featured_photo())
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
     styles.append((ROOT/'_templates/homepage-motion.css').read_text())
     styles.append((ROOT/'_templates/homepage-phase1.css').read_text())
-    styles.append((ROOT/'_templates/homepage-redesign.css').read_text())
-    template = template.replace('{{hero_preloads}}', '<link rel="preload" as="image" href="/hero-custom-tailoring.webp" fetchpriority="high">')
+    template = template.replace('{{hero_preloads}}', hero_preloads())
     template = template.replace('{{section_styles}}', '\n'.join(styles))
     if re.search(r'{{\w+}}', template):
         raise ValueError('Unexpanded homepage template placeholder')
@@ -173,7 +174,7 @@ def main():
     args = parser.parse_args()
     output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
-    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text() + (ROOT/'_templates/homepage-galleries.js').read_text() + (ROOT/'_templates/homepage-redesign.js').read_text())
+    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text() + (ROOT/'_templates/homepage-galleries.js').read_text() + (ROOT/'_templates/homepage-r57-additions.js').read_text())
     navigation_path = ROOT / 'assets/homepage.js'
     if args.check:
         if navigation_path.read_text() != navigation:
