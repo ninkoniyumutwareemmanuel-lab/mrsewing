@@ -85,27 +85,31 @@ document.addEventListener('visibilitychange',reset);motion.addEventListener('cha
 window.addEventListener('pagehide',stop);window.addEventListener('pageshow',reset);
 reorder();root.dataset.enhanced='true';root.querySelector('.carousel-controls').hidden=false;reset();
 })();
-/* Continuous source-driven motion. Normal phone scrolling never stops a gallery. */
-(()=>{'use strict';document.documentElement.setAttribute('data-galleries-ready','');document.addEventListener('keydown',e=>{if(e.key==='Escape')document.documentElement.setAttribute('data-galleries-paused','');});})();
-/* R56 paired galleries: explicit pause/resume plus keyboard, with no-JS static fallback. */
+/* Existing gallery motion and Escape pause preserved; add per-gallery pause controls. */
 (()=>{'use strict';
- const rows=[...document.querySelectorAll('.r56-gallery-panel')];
- if(!rows.length)return;
- const set=(panel,paused)=>{
-  const strip=panel.querySelector('.r56-gallery'),button=panel.querySelector('[data-r56-pause]');
-  if(!strip||!button)return;
-  strip.setAttribute('data-paused',String(paused));
-  button.setAttribute('aria-pressed',String(paused));
-  button.textContent=paused?'Resume motion':'Pause motion';
- };
- rows.forEach(panel=>{
-  const button=panel.querySelector('[data-r56-pause]');
-  if(!button)return;
+ document.documentElement.setAttribute('data-galleries-ready','');
+ for(const region of document.querySelectorAll('[data-moving-gallery]')){
+  const button=region.previousElementSibling;
+  if(!button||!button.matches('[data-gallery-toggle]'))continue;
   button.hidden=false;
-  set(panel,false);
-  button.addEventListener('click',()=>set(panel,panel.querySelector('.r56-gallery').getAttribute('data-paused')!=='true'));
- });
- document.addEventListener('keydown',e=>{
-  if(e.key==='Escape')rows.forEach(panel=>set(panel,true));
+  button.addEventListener('click',()=>{
+   const paused=region.dataset.galleryPaused!=='true';
+   region.dataset.galleryPaused=String(paused);
+   button.setAttribute('aria-pressed',String(paused));
+   button.textContent=paused?'Resume photos':'Pause photos';
+  });
+ }
+ document.addEventListener('keydown',event=>{
+  if(event.key!=='Escape')return;
+  document.documentElement.setAttribute('data-galleries-paused','');
+  for(const region of document.querySelectorAll('[data-moving-gallery]')){
+   region.dataset.galleryPaused='true';
+   const button=region.previousElementSibling;
+   if(button&&button.matches('[data-gallery-toggle]')){
+    button.setAttribute('aria-pressed','true');
+    button.textContent='Resume photos';
+   }
+  }
  });
 })();
+/* No new forms or contacts. Homepage extras are intentionally static. */
