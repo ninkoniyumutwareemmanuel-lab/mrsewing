@@ -22,3 +22,8 @@ Owner attested rights to the newer photos, with authorship and independent licen
 Compare committed homepage source components to R55 historical SHA to verify original page structure restored. Run full builder/build --check, focused original-section preservation and media-gate tests, SEO, sitemap and Terms tests, browser widths 320/390/768/1440, reduced-motion and pause. Staging only; never touch production main.
 
 **Staging noindex** remains preserved by the existing SEO build and `_headers` policy; it does not authorize main/production indexing changes.
+
+## R57 actual test result (21 November 2026)
+GitHub Actions run [44930603290](https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930603290) **PASS**: original section-preservation tests (5), full Python build and --check, SEO/sitemap, retained R55 Terms reader checks (5), Chromium mobile 320px/390px, tablet 768px and desktop 1440px, existing-support-form and two extra media cards, three original media galleries, pause/resume, no horizontal overflow, reduced-motion static fallback. [Actual screenshots](https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930603290/artifacts/14717108579). The original R56 replacement was rejected by the owner; this R57 change preserves the earlier R55 section list/order and original template/header.
+
+The R57 test environment used a local CI-hosted browser, not a user-phone or independently verified Cloudflare-deployed browser. The two video cards still display owner-authorized photographs until video posters and separate publication approval are complete. No merge to main or live release is authorized.

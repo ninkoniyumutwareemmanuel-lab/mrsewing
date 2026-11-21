@@ -3,9 +3,20 @@ on:
   push:
     branches:
       - work/r57-preserve-existing-homepage-2026-11-21
+      - phase1/customer-journey-repairs
+    paths:
+      - 'scripts/build_homepage.py'
+      - 'scripts/homepage_galleries.py'
+      - 'scripts/homepage_r57_additions.py'
+      - '_templates/homepage*'
+      - 'index.html'
+      - 'assets/homepage.js'
+      - 'tests/homepage_r57.py'
+      - 'tests/homepage_r57_browser.cjs'
+      - '.github/workflows/r56-homepage.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   check-original-and-additions:
     runs-on: ubuntu-24.04
@@ -43,15 +54,6 @@ jobs:
           name: r57-original-homepage-with-surgical-additions
           path: artifacts/r57-preserved-homepage/*.png
           if-no-files-found: ignore
-      - name: Commit only the homepage's generated HTML and JS
-        if: success()
+      - name: Check committed homepage generated files match their preserved sources
         run: |
-          git add -- index.html assets/homepage.js
-          if ! git diff --cached --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "R57: synchronize generated original-layout homepage with requested additions"
-            git push origin HEAD:work/r57-preserve-existing-homepage-2026-11-21
-          else
-            echo "PASS: generated homepage matches committed source."
-          fi
+          git diff --exit-code -- index.html assets/homepage.js
