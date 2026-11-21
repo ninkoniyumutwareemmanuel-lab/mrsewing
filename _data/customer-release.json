@@ -435,60 +435,63 @@
     },
     "/privacy-policy/": {
       "title": "Privacy Policy",
-      "intro": "Learn how Mr Sewing Fashion uses information provided through this website and how to contact us about your privacy.",
-      "source": "S-OWNER-2026-11-05 §22; observed repository integration",
+      "intro": "Find out what personal information we collect, how we use it and how you can manage your privacy.",
+      "source": "S-OWNER-2026-11-05 §22; observed repository integration; owner-approved simplification 21 November 2026",
       "sections": [
         {
           "id": "1",
-          "title": "Who operates the website",
+          "title": "Who we are",
           "paragraphs": [
-            "Mr Sewing Fashion is the public brand of NINKONIYUMUTWARE NEXUS LTD, Kigali, Rwanda. Contact the business through the official email, phone or WhatsApp listed on the Contact page for privacy questions or requests."
+            "Mr Sewing Fashion is the public brand of NINKONIYUMUTWARE NEXUS LTD, based in Kigali, Rwanda. You can contact us about your personal information through our Contact page, by email at mrsewingfashiondesigner@gmail.com, or by phone at +250 787 411 501."
           ]
         },
         {
           "id": "2",
-          "title": "Information you provide",
+          "title": "What information we collect",
           "paragraphs": [
-            "Quotation, consultation, support and refund forms collect your name, phone, optional email and the relevant request information needed to respond. Custom Tailoring collects country/city, garment preferences and a requested deadline. A requested measurement visit or delivery arrangement may need an address; collection does not require a delivery address. Appointment, design, measurement and relevant order details help the team assess the enquiry. Do not enter payment PINs, full card details, identity scans or unnecessary sensitive information."
+            "When you contact us or request a quotation, consultation, service, support or refund review, we may collect your name, phone number, email address (if supplied) and details of your request. Depending on the service, this may include garment designs, fabric preferences, measurements, preferred dates, or fitting, collection and delivery details.",
+            "If you share photographs, design references or measurements through WhatsApp, email or another official channel, we may use them to review your enquiry. Required information is identified on the relevant form; other information is optional. Please do not send payment PINs, full card details, identity scans or unnecessary sensitive information."
           ]
         },
         {
           "id": "3",
-          "title": "Forms, hosting and messaging",
+          "title": "Why we use your information",
           "paragraphs": [
-            "The website uses GitHub Pages for public-page deployment and Cloudflare Pages for text-enquiry validation and staging. Text enquiries are processed through Web3Forms, either directly or after validation. A successful provider response does not prove mailbox receipt. Hosting and network services process requests needed to operate the site. Choosing a WhatsApp, email, social or external link uses the relevant provider; its processing is separate from this website."
+            "We use relevant information to respond to enquiries, discuss and prepare quotations, arrange requested services and appointments, communicate about work, and handle customer support, complaints and refund requests. An enquiry does not automatically confirm an order, appointment, payment or refund.",
+            "Requests for quotations and refunds are reviewed by our team. We do not use website enquiry forms to make automatic decisions to accept an order or approve a refund."
           ]
         },
         {
           "id": "4",
-          "title": "Reference files and measurements",
+          "title": "Cookies and advertising",
           "paragraphs": [
-            "Website file uploads are disabled in the public forms. No reference files are attached to text enquiries. Customers may arrange reference or measurement sharing with the team through official communication channels.",
-            "The public forms do not use private website request or file storage in this release. A submission acknowledgement does not confirm a privately stored website record. Contact the business about the retention and deletion arrangements applicable to information shared through its providers and communication channels."
+            "Our website may use browser storage to remember service and design selections and help you return to an unfinished enquiry. You can manage stored website information in your browser settings.",
+            "If you choose Allow for optional advertising cookies, we use advertising technology provided by Meta (Facebook and Instagram) to measure website visits and assess our advertising. Meta may receive information about pages visited, basic browser and device details, and online identifiers. This information may be processed outside Rwanda, and Meta may use it for advertising measurement and audience selection under its own policies.",
+            "You can choose Reject without losing access to our services, or change your choice later through Cookie preferences in our website footer. Withdrawing permission stops future advertising events from this browser after the page reload, but does not undo information already processed. For further information about Meta, see https://www.facebook.com/privacy/policy/."
           ]
         },
         {
           "id": "5",
-          "title": "Selections, cookies and analytics",
+          "title": "How we share and protect information",
           "paragraphs": [
-            "The website keeps service/design/fabric choices in per-tab browser session storage. Quotation forms also keep a temporary per-tab draft of contact and request fields so navigation or editing need not lose your work. The code checks for a draft older than 30 minutes when reopening the form and clears it after an accepted submission; this is not a server or email-retention period. Browser storage can be unavailable, and a saved draft is not a submitted request.",
-            "{{policyExpressRecovery}}",
-            "Existing cart code can save product selections, not payment credentials, in browser local storage. Current enquiry-only Shop products do not activate a purchasing cart. We use optional marketing cookies and Meta Pixel to understand visits from our advertisements and improve how we reach customers interested in our services. This optional advertising measurement is available only after a visitor chooses Allow. Meta Pixel helps us measure website PageView activity and assess Facebook and Instagram advertising. When enabled by the visitor, Meta Platforms may receive the page address, technical browser and device information, online identifiers and cookie information, and may process information outside Rwanda. We do not intentionally send quotation-form contents, customer contact information or measurements as Pixel event parameters. Visitors can decline without affecting website services or withdraw their preference using Cookie preferences in the footer. A withdrawn preference prevents future Pixel events from this website browser after the page reload; it cannot undo earlier processing. Consent for advertising measurement is separate from agreement to the website Terms and Conditions. For Meta's own processing practices, see https://www.facebook.com/privacy/policy/. Legacy pages may load Font Awesome from cdnjs.cloudflare.com. Actual deployed cookies and external-provider practices require separate verification."
+            "We use service providers to help operate our website and handle customer requests, including hosting, form-submission, email and messaging providers. They may receive information needed to provide their part of the service. If you contact us through WhatsApp or another outside service, that provider processes information under its own privacy terms.",
+            "We ask for information relevant to your request and encourage you not to share unnecessary sensitive details. Online communication and external providers carry security risks, and no online service can promise absolute security. An enquiry is not permission to publish your photograph, design or testimonial."
           ]
         },
         {
           "id": "6",
-          "title": "Purposes and sharing",
+          "title": "How long we keep information",
           "paragraphs": [
-            "Information is used to assess requests, prepare quotations, communicate with you, arrange services, review complaints and provide requested follow-up. Hosting, form-submission, email and messaging providers process information needed for their part of these communications. A website enquiry is not permission to publish your photograph or testimonial."
+            "How long we keep information depends on the type of request or service, why the information was provided, applicable requirements and the communication provider involved. Website enquiries, emails and messaging services may have different retention arrangements.",
+            "Contact us to ask about information linked to your enquiry and available deletion options. We cannot promise immediate or automatic deletion of copies already handled by independent messaging or other providers."
           ]
         },
         {
           "id": "7",
-          "title": "Privacy questions and requests",
+          "title": "Your privacy rights and contact",
           "paragraphs": [
-            "Contact Mr Sewing Fashion through the official contact details for questions about access, correction, deletion or other applicable privacy rights. Explain the request and relevant enquiry reference without sending passwords, payment PINs or unnecessary identity documents.",
-            "Data retention, provider processing and any international-transfer arrangements depend on the systems actually used and applicable requirements. This policy does not promise an unverified retention period, security certification or automatic deletion across email and messaging providers."
+            "You may contact us to ask for access to your personal information, correction, restriction, deletion or to object to processing, including direct marketing. Where processing relies on consent, you may withdraw that consent; withdrawal does not undo earlier processing.",
+            "For privacy requests, use our Contact page, email mrsewingfashiondesigner@gmail.com or call +250 787 411 501. Explain your request without sending payment PINs or unnecessary identity documents. You may also raise concerns with Rwanda's Data Protection & Privacy Office at https://dpo.gov.rw/."
           ]
         }
       ]
