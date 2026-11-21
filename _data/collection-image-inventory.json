@@ -6691,6 +6691,66 @@
       "missing": false,
       "excludedReason": "Held: Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display.",
       "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.0-01.png",
+      "sourceOriginal": ".github/policy-documents/terms-and-conditions/1.0.pdf#page=1",
+      "designId": "PDF-TERMS-1.0",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner-approved document rendering",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Technical page render of the owner-approved Terms PDF; staging review only, not an effective contract or garment design, Shop item, or customer photograph.",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.0-02.png",
+      "sourceOriginal": ".github/policy-documents/terms-and-conditions/1.0.pdf#page=2",
+      "designId": "PDF-TERMS-1.0",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner-approved document rendering",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Technical page render of the owner-approved Terms PDF; staging review only, not an effective contract or garment design, Shop item, or customer photograph.",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.0-03.png",
+      "sourceOriginal": ".github/policy-documents/terms-and-conditions/1.0.pdf#page=3",
+      "designId": "PDF-TERMS-1.0",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner-approved document rendering",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Technical page render of the owner-approved Terms PDF; staging review only, not an effective contract or garment design, Shop item, or customer photograph.",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.0-04.png",
+      "sourceOriginal": ".github/policy-documents/terms-and-conditions/1.0.pdf#page=4",
+      "designId": "PDF-TERMS-1.0",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner-approved document rendering",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Technical page render of the owner-approved Terms PDF; staging review only, not an effective contract or garment design, Shop item, or customer photograph.",
+      "legacyReferences": []
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.0-05.png",
+      "sourceOriginal": ".github/policy-documents/terms-and-conditions/1.0.pdf#page=5",
+      "designId": "PDF-TERMS-1.0",
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "owner-approved document rendering",
+      "rightsStatus": "approved",
+      "missing": false,
+      "excludedReason": "Technical page render of the owner-approved Terms PDF; staging review only, not an effective contract or garment design, Shop item, or customer photograph.",
+      "legacyReferences": []
     }
   ],
   "missingLegacyReferences": [],
