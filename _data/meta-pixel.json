@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "pixelId": "29683883327873735",
+  "productionEnabled": false,
+  "status": "live-code-installed-tracking-held-pending-privacy-approval",
+  "ownerSource": "Owner live placement instruction 21 November 2026",
+  "trackingPurposes": [
+    "Optional Meta ad measurement on consented public browsing pages"
+  ],
+  "activationPrerequisites": [
+    "Owner review and approval of revised Privacy Policy and consent notice",
+    "Verification of applicable Rwanda controller, data processing and cross-border transfer requirements",
+    "Positive automated/browser check of consent, withdrawal and network tracking",
+    "Separate explicit approval to switch from installed-but-disabled to active data transmission"
+  ]
+}

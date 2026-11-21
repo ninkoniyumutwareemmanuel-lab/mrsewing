@@ -5,3 +5,22 @@ function openTerms(text,trigger){if(!terms){terms=dialog('serviceTermsDialog','T
 window.MrSewingWhatsApp={open:openTerms};
 document.addEventListener('click',e=>{const a=e.target.closest?.('[data-whatsapp-modal]');if(a){const u=new URL(a.href,location.href);if((u.origin===location.origin&&u.pathname==='/whatsapp/')||(u.origin==='https://wa.me'&&u.pathname==='/250787411501')){e.preventDefault();e.stopImmediatePropagation();openTerms(u.searchParams.get('text')||'',a);}return;}const link=e.target.closest?.('[data-enlarge]');if(!link)return;const u=new URL(link.href,location.href);if(u.origin!==location.origin||!/^https?:$/.test(u.protocol))return;e.preventDefault();if(!photo){photo=dialog('measurementPhotoDialog','Measurement illustration');const i=document.createElement('img');photo.append(i);}opener=link;const image=photo.querySelector('img');image.src=u.href;image.alt=link.querySelector('img').alt;photo.querySelector('h2').textContent=link.getAttribute('aria-label').replace(/^Enlarge /,'');photo.showModal();photo.querySelector('button').focus();},true);
 })();
+
+
+/* Optional Meta Pixel integration. Owner authorised placement on main.
+   Current production flag is FALSE; no tracking can start without a reviewed
+   privacy notice, legal transfer review and explicit activation. */
+(function () {
+  "use strict";
+  var config = /*meta-pixel-config*/null;
+  if (!config || !config.productionEnabled || config.status !== "owner-approved-production") return;
+  if (window.__mrSewingMetaPixelLoader) return;
+  window.__mrSewingMetaPixelLoader = true;
+  var tag = document.createElement("script");
+  tag.src = "/assets/meta-pixel.js?v=20261121";
+  tag.async = true;
+  tag.setAttribute("data-mr-meta-pixel", "");
+  tag.dataset.pixelId = String(config.pixelId);
+  tag.dataset.productionEnabled = "true";
+  document.head.appendChild(tag);
+})();

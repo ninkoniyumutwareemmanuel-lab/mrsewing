@@ -197,7 +197,7 @@ def outputs():
  out[ROOT/'staff/customer-requests/index.html']=frame('/staff/customer-requests/','Customer Requests','Authorised staff review of privately submitted enquiries.',intro('Customer Requests','Authorised Mr Sewing Fashion staff only.')+'<p id="staffStatus" role="status">Loading secure request service…</p><div id="staffRequests"></div><script src="/assets/staff-requests.js" defer></script>')
  out[ROOT/'assets/staff-requests.js']=(ROOT/'_templates/staff-requests.js').read_text()
  out[ROOT/'assets/request-uploads.js']=(ROOT/'_templates/request-uploads.js').read_text()
- out[ROOT/'assets/customer-interactions.js']=(ROOT/'_templates/customer-interactions.js').read_text()
+ out[ROOT/'assets/customer-interactions.js']=(ROOT/'_templates/customer-interactions.js').read_text().replace('/*meta-pixel-config*/null',json.dumps(json.loads((ROOT/'_data/meta-pixel.json').read_text()),separators=(',',':')))
  out[ROOT/'assets/customer-interactions.css']=(ROOT/'_templates/customer-interactions.css').read_text()
  out[ROOT/'assets/consultation.js']=(ROOT/'_templates/consultation.js').read_text()
  out[ROOT/'assets/request-storage.js']=(ROOT/'_templates/request-storage.js').read_text()
