@@ -104,7 +104,7 @@ class HomepageR56Tests(unittest.TestCase):
         self.assertIn('r56-move-right',css)
         self.assertIn('data-paused',js)
         self.assertIn('Resume motion',js)
-        self.assertIn('e.key===\\'Escape\\'',js)
+        self.assertIn("e.key==='Escape'",js)
 
 if __name__=='__main__':
     unittest.main()
