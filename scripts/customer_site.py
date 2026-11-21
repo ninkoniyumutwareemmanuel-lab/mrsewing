@@ -48,6 +48,7 @@ def frame(route,title,description,content,kind='WebPage',service=None):
  values={'title':escape(title,quote=False),'title_attr':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':'<div class="home-shell release-main">'+content+'</div>','header':component('header',route),'footer':component('footer')+'<script src="/assets/request-context.js" defer></script>','schema':json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c'),'styles':shared.site_css()+'\n'+(ROOT/'_templates/homepage-phase1.css').read_text()+'\n'+ICON_CSS}
  for key,value in values.items():source=source.replace('{{'+key+'}}',value)
  source=source.replace('class="tailoring-page"','class="tailoring-page customer-site"').replace('/assets/custom-tailoring.js','/assets/customer-site.js').replace('</head>','<link rel="stylesheet" href="/assets/customer-site.css"></head>')
+ if route=='/terms-and-conditions/':source=source.replace('</head>','<link rel="stylesheet" href="/assets/terms-reader.css"></head>',1)
  assert not re.search(r'{{\w+}}',source)
  if route==BASE:source=__import__('custom_tailoring_mobile').decorate(source)
  return source
@@ -147,6 +148,10 @@ def request_page(special=False):
  return frame(route,'Special Order Design Enquiry' if special else 'Your Service Quotation Request','Review design, fabric preferences, priority and contact details before sending a quotation enquiry.',body)
 
 def information(route):
+ if route=='/terms-and-conditions/':
+  from terms_reader import render
+  d=data()['pages'][route]
+  return frame(route,d['title'],d['intro'],render())
  d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],'Compare fabric references and their quality tiers.' if route=='/guides/fabrics/' else d['intro'])
  if route=='/guides/fabrics/':
   body+=guides.fabric_guide()
@@ -231,6 +236,8 @@ def outputs():
  out[ROOT/'assets/public-api.js']=(ROOT/'_templates/public-api.js').read_text().replace('/* public-api-config */{}',json.dumps(config))
  out[ROOT/'functions/_lib/public-api-config.js']='// Non-secret public intake routing.\nexport const config='+json.dumps(config)+';\n'
  out[ROOT/'assets/customer-site.css']=(ROOT/'_templates/customer-site.css').read_text()
+ out[ROOT/'assets/terms-reader.css']=(ROOT/'_templates/terms-reader.css').read_text()
+ out[ROOT/'assets/terms-reader.js']=(ROOT/'_templates/terms-reader.js').read_text()
  import shared_components as shared
  from suit_references import categories,category_label
  out[ROOT/'assets/customer-site.js']=shared.menu_script()+'\n'+(ROOT/'_templates/customer-site.js').read_text().replace('/* suit-category-labels */{}',json.dumps({c['id']:category_label(c) for c in categories()}))

@@ -1,0 +1,19 @@
+/* R54 — minimal document-first Terms staging presentation. */
+.terms-document-shell{width:min(1600px,100%);margin:0 auto;padding:clamp(8px,1.2vw,18px)}
+.terms-document-shell *{box-sizing:border-box}
+.terms-document-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:8px 4px 12px}
+.terms-document-state{min-width:0;flex:1 1 320px;font-size:clamp(12px,1.5vw,14px);line-height:1.55;color:#d6c8a8}
+.terms-document-state strong{color:#f4e7c8;font-weight:600}
+.terms-document-state a{color:#f0d38d;text-decoration:underline;text-underline-offset:3px}
+.terms-document-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.terms-document-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border:1px solid #c5a059;border-radius:4px;text-decoration:none;font-weight:600;font-size:13px;line-height:1.3;color:#17130b;background:#d4af37}
+.terms-document-actions a:last-child{color:#f4ead9;background:#191914}
+.terms-document-actions a:hover{background:#f0ce70;color:#17130b}
+.terms-document-actions a:focus-visible,.terms-document-state a:focus-visible,.terms-document-viewport:focus-visible{outline:3px solid #f0ce70;outline-offset:3px}
+.terms-document-viewport{display:block;width:100%;height:clamp(520px,calc(100dvh - 165px),1300px);min-height:520px;border:1px solid #444033;border-radius:6px;background:white;overflow:hidden}
+.terms-document-viewport object{width:100%;height:100%;display:block;border:0}
+.terms-document-fallback{padding:20px;color:#29221a;background:#fff;font-size:16px}
+.terms-document-fallback a{color:#61440d;text-decoration:underline}
+.terms-document-a11y{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:680px){.terms-document-shell{padding:8px}.terms-document-toolbar{gap:10px}.terms-document-state{flex-basis:100%}.terms-document-actions{width:100%}.terms-document-actions a{flex:1 1 44%}.terms-document-viewport{height:max(64dvh,470px);min-height:470px}}
+@media(prefers-reduced-motion:reduce){.terms-document-shell{scroll-behavior:auto}}

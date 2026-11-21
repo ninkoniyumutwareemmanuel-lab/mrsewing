@@ -7,7 +7,7 @@ function addTermsFooterLink(){
  const footer=document.querySelector('#site-footer footer, footer.homepage-footer, footer');
  if(!footer||footer.querySelector('.footer-terms-quicklink'))return;
  const parent=footer.querySelector('.footer-bottom-copy')||footer.querySelector('.footer-bottom')||footer;
- const a=document.createElement('a');a.href='/terms-and-conditions/';a.className='footer-terms-quicklink';a.textContent='Terms & Conditions';parent.appendChild(a);
+ const a=document.createElement('a');a.href='/terms-and-conditions/current/';a.className='footer-terms-quicklink';a.textContent='Terms & Conditions';parent.appendChild(a);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addTermsFooterLink,{once:true});else addTermsFooterLink();
 document.addEventListener('click',e=>{
