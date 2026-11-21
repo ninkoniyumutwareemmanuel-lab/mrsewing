@@ -17,7 +17,7 @@ document.addEventListener('click',e=>{const a=e.target.closest?.('[data-whatsapp
   if (window.__mrSewingMetaPixelLoader) return;
   window.__mrSewingMetaPixelLoader = true;
   var tag = document.createElement("script");
-  tag.src = "/assets/meta-pixel.js?v=20261121";
+  tag.src = "/assets/meta-pixel.js?v=compact-20261121";
   tag.async = true;
   tag.setAttribute("data-mr-meta-pixel", "");
   tag.dataset.pixelId = String(config.pixelId);
