@@ -13,3 +13,8 @@ The approved document remains staging-review only (currentVersion null, effectiv
 
 ## Testing and release
 Run pdf page rendering; python scripts/build_site.py; python scripts/build_site.py --check; python scripts/render_terms_page_images.py --check; python tests/terms_reader_main_base.py; SEO and sitemap regressions. Report any browser verification limitations explicitly; GitHub/Cloudflare build success does not equal viewed-screen confirmation. No live/main changes.
+
+## Actual verified test execution — 21 November 2026
+GitHub Actions work-branch run 44927046343 PASS with Python site build, site --check, exact five PNG-render/checksum checks, five focused Terms regression tests, existing SEO and sitemap tests. Chromium/Playwright 1.56.1 on Ubuntu 24.04 PASS at 320, 390, 768 and 1440 CSS pixels: modal fills the viewport; real page1 loads; all five pages scroll; zoom-in/out and close work; no native PDF object, no browser errors. Mobile and desktop browser screenshots captured in GitHub Actions artifact: https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44927046343/artifacts/14716282007.
+
+These are local CI-hosted browser tests, not independent Cloudflare deployed-browser confirmation or evidence of legal activation. Original R53 policy_documents.py and media_showroom.py scripts do not exist in the main-derived copy; their original R53 run history remains protected. The approved PDF contents are unchanged. No real customer submission or consent is made.

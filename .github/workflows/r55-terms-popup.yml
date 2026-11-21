@@ -2,10 +2,25 @@ name: R55 full-screen Terms popup staging integration
 on:
   push:
     branches:
-      - work/r55-terms-fullscreen-popup-2026-11-21
+      - phase1/customer-journey-repairs
+    paths:
+      - 'scripts/terms_reader.py'
+      - 'scripts/render_terms_page_images.py'
+      - 'scripts/customer_site.py'
+      - '_templates/terms-reader.css'
+      - '_templates/terms-reader.js'
+      - 'assets/terms-reader.css'
+      - 'assets/terms-reader.js'
+      - 'assets/policy-documents/terms-and-conditions/**'
+      - 'terms-and-conditions.html'
+      - 'terms-and-conditions/**'
+      - 'tests/terms_reader_main_base.py'
+      - 'tests/terms_popup_browser.cjs'
+      - '.github/workflows/r55-terms-popup.yml'
+      - '_data/policy-documents.json'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   render-and-verify:
     runs-on: ubuntu-24.04
@@ -52,14 +67,6 @@ jobs:
           name: r55-terms-popup-browser-screenshots
           path: artifacts/r55-terms/*.png
           if-no-files-found: ignore
-      - name: Commit only PDF page renders and generated Terms HTML
+      - name: Verify generated Terms page files match committed staging outputs
         run: |
-          git add -- assets/policy-documents/terms-and-conditions/pages/ terms-and-conditions.html terms-and-conditions/index.html
-          if ! git diff --cached --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "R55: verified five approved PDF page renders and synchronized Terms popup"
-            git push origin HEAD:work/r55-terms-fullscreen-popup-2026-11-21
-          else
-            echo "PASS: PDF pages and committed Terms routes are synchronized."
-          fi
+          git diff --exit-code -- terms-and-conditions.html terms-and-conditions/index.html assets/policy-documents/terms-and-conditions/pages/

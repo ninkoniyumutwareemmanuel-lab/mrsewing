@@ -2,6 +2,8 @@
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
+**R55 owner-approved Terms viewer (21 November 2026, staging only):** Full-screen scrollable popup showing the five real pages of the existing owner-approved PDF. The Android native PDF embed failed; the new image-based reader retains the original document and provides a close control, zoom, page counter, and original download. This is a visual customer-experience approval, **not** a new legal content approval or activation. Current online Terms remain authoritative for consent until the separately authorised official publication event and fresh operational reconciliation. See [R55 implementation and verification](../../docs/R55_TERMS_FULLSCREEN_POPUP_2026-11-21.md).
+
 Current reviewed reference: **versions/2026-11-18-02**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 **Current R49 release authority:** The owner's13November2026 instruction authorizes the complete approved R35–R49 release after critical staging verification. Earlier staging-only paragraphs below are historical for that verified scope; unresolved/private/unapproved features and future unfinished work remain held. This reference does not claim production has been deployed. See [R49 release brief](R49_RELEASE_BRIEF_2026-11-13.md), [full branch reconciliation](R49_RELEASE_RECONCILIATION_2026-11-13.md) and [policy reconciliation](R49_POLICY_RECONCILIATION_2026-11-13.md).
