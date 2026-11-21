@@ -1,0 +1,47 @@
+name: R55 full-screen Terms popup staging integration
+on:
+  push:
+    branches:
+      - work/r55-terms-fullscreen-popup-2026-11-21
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF rasterizer only if missing
+        run: |
+          if ! command -v pdftoppm >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Render the five original approved PDF pages
+        run: |
+          python scripts/render_terms_page_images.py
+          python scripts/render_terms_page_images.py --check
+      - name: Rebuild and check the existing site
+        run: |
+          python scripts/build_site.py
+          python scripts/build_site.py --check
+      - name: R55 Terms and existing site regressions
+        run: |
+          python tests/terms_reader_main_base.py
+          python tests/seo_preservation.py
+          python tests/sitemap_discovery.py
+          python -m py_compile scripts/terms_reader.py scripts/render_terms_page_images.py scripts/customer_site.py
+      - name: Commit only PDF page renders and generated Terms HTML
+        run: |
+          git add -- assets/policy-documents/terms-and-conditions/pages/ terms-and-conditions.html terms-and-conditions/index.html
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "R55: verified five approved PDF page renders and synchronized Terms popup"
+            git push origin HEAD:work/r55-terms-fullscreen-popup-2026-11-21
+          else
+            echo "PASS: PDF pages and committed Terms routes are synchronized."
+          fi
