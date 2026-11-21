@@ -237,36 +237,65 @@ h1,h2{letter-spacing:-.025em}h2{font-size:clamp(32px,4vw,48px);line-height:1.15}
 .homepage-icon svg { height:1em; fill:currentColor; vertical-align:-.125em; overflow:visible; }
 picture.homepage-picture { display:contents; }
 
-/* Contact-only layout. Common typography/header/footer come from the approved homepage. */
-.contact-hero{padding-block:64px 56px;max-width:1100px}
-.contact-hero h1{max-width:900px;font-size:clamp(2.55rem,6.3vw,5.6rem);line-height:1.04;letter-spacing:-.04em}
+/* Contact page V3: compact, action-first and mobile-led; other pages keep their shared theme. */
+.contact-hero{padding-block:44px 36px;max-width:1100px}
+.contact-hero .customer-breadcrumb{margin-bottom:22px}
+.contact-hero h1{max-width:790px;font:400 clamp(2.65rem,6.6vw,5.5rem)/1.05 Georgia,'Times New Roman',serif;letter-spacing:-.035em;text-wrap:balance}
 .contact-hero h1 em{color:var(--gold,#d4af37);font-weight:inherit}
-.contact-intro{max-width:670px;margin-block:26px 0;color:#bdb9b1;font-size:1.08rem;line-height:1.75}
-
-.contact-section{padding-block:48px;border-top:1px solid #292720}
-.contact-section-title{margin-bottom:28px}.contact-section h2,.contact-final h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.15}
-.contact-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.contact-options>a{display:flex;flex-direction:column;align-items:flex-start;padding:24px 0;color:inherit;text-decoration:none;border-top:1px solid #615431;min-width:0}
-.contact-number{display:block;color:#d4af37;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:20px;line-height:1.6}
-.contact-options h3,.contact-locations h3{font-family:Georgia,serif;font-size:1.65rem;font-weight:400;line-height:1.3;margin-bottom:14px}
-.contact-options p,.contact-locations p,.contact-before p,.contact-final p{color:#bdb9b1;line-height:1.7}
-.contact-options p{margin-bottom:24px}.contact-detail{margin-top:auto;font-size:.95rem;line-height:1.7;color:#e9d79b}.contact-email{overflow-wrap:anywhere}
-.contact-options>a:hover .contact-detail{text-decoration:underline;text-underline-offset:5px}
-.contact-locations{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
-.contact-locations article{padding:30px;background:#141310;border:1px solid #302b20;min-width:0}
-.contact-locations address{font-style:normal;line-height:1.8;margin-bottom:20px;color:#eee8db}
-.contact-locations p{margin-bottom:20px}.contact-locations .contact-note{font-size:.88rem;color:#aaa69e}
-.contact-locations .contact-appointment{color:#e9d79b;font-size:.83rem;letter-spacing:.05em}
-.contact-locations .home-text-link{margin-top:8px}.contact-locations .contact-note:last-child{margin-top:20px;margin-bottom:0}
-.contact-visit{display:grid;grid-template-columns:1.2fr 1fr;gap:78px}.contact-note{color:#bdb9b1;font-size:.94rem;line-height:1.7;margin-block:16px}
-.contact-hours{margin-block:24px}.contact-hours>div{display:flex;justify-content:space-between;gap:20px;padding-block:13px;border-bottom:1px solid #302b20;font-size:.95rem;line-height:1.6}.contact-hours dd{color:#e6d8b8;text-align:right}
-.contact-exception{padding-left:18px;border-left:2px solid #d4af37;font-size:.9rem;line-height:1.7}.contact-exception strong{font-weight:500;color:#e9d79b}.contact-exception p{color:#bdb9b1;margin-top:7px}
-.contact-before ul{padding-left:20px;color:#bdb9b1;line-height:1.9;margin-block:20px 24px}
-.contact-final{padding-block:52px 58px;border-block:1px solid #302b20;text-align:center}.contact-final h2{max-width:750px;margin-inline:auto}.contact-final p{margin:20px auto 26px;max-width:560px}.contact-final .home-button{display:inline-flex}
-
-
-@media(max-width:767px){.contact-hero{padding-block:38px 34px}.contact-hero h1{font-size:clamp(2.65rem,10.3vw,4.4rem)}.contact-intro{font-size:1rem;line-height:1.7;margin-block:21px 0}.contact-section{padding-block:32px}.contact-section-title{margin-bottom:22px}.contact-options,.contact-locations,.contact-visit{grid-template-columns:1fr;gap:22px}.contact-options{gap:0}.contact-options>a{padding-block:23px}.contact-number{margin-bottom:12px}.contact-options h3{margin-bottom:9px}.contact-options p{margin-bottom:14px}.contact-locations article{padding:25px 22px}.contact-visit{gap:36px}.contact-final{padding-block:36px 40px}.contact-hours>div{font-size:.9rem;gap:12px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.contact-intro{max-width:690px;margin:18px 0 0;color:#ccc6bb;font-size:clamp(1rem,1.7vw,1.12rem);line-height:1.62}
+.contact-hero-actions,.contact-final-actions{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px;margin-top:24px}
+.contact-hero-actions .home-button,.contact-final-actions .home-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 20px;font-weight:600;text-decoration:none;border-radius:6px;max-width:100%;text-align:center}
+.contact-outline{color:#f6f0e3!important;background:transparent!important;border:1px solid #b18d43!important}
+.contact-outline:hover{background:#201a10!important}
+.contact-hero-email{display:inline-flex;align-items:center;gap:12px;margin-top:17px;color:#e6c475;text-decoration:underline;text-underline-offset:4px;font-size:.88rem;min-height:36px}
+.contact-section{padding-block:32px;border-top:1px solid #373128}
+.contact-section-title{margin-bottom:18px}
+.contact-section h2,.contact-final h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,4vw,3.05rem);font-weight:400;line-height:1.16;letter-spacing:-.02em}
+.contact-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.contact-options>a{display:flex;flex-direction:column;min-width:0;padding:19px 18px;border:1px solid #57472f;border-radius:9px;background:#141310;color:#f3eee5;text-decoration:none;transition:background .2s,border-color .2s}
+.contact-options>a:hover,.contact-options>a:focus-visible{border-color:#d4af37;background:#201a12}
+.contact-number{display:block;color:#d8b45f;font-size:.73rem;letter-spacing:.095em;text-transform:uppercase;margin-bottom:9px;line-height:1.4}
+.contact-options h3,.contact-locations h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2.3vw,1.75rem);font-weight:400;line-height:1.22;margin:0 0 8px}
+.contact-options p,.contact-locations p,.contact-before p,.contact-final p,.contact-service-links p{color:#c8c3bb;line-height:1.57;font-size:.94rem}
+.contact-options p{margin:0 0 15px}
+.contact-detail{margin-top:auto;display:inline-block;color:#eed28f;font-size:.85rem;line-height:1.55;font-weight:550;overflow-wrap:anywhere}
+.contact-detail span{white-space:nowrap}
+.contact-email{overflow-wrap:anywhere;word-break:break-word}
+.contact-locations{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-locations article{padding:22px;background:#151411;border:1px solid #403626;border-radius:9px;min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.contact-locations address{font-style:normal;font-size:.95rem;line-height:1.6;margin:0 0 11px;color:#eee8db}
+.contact-locations p{margin:0 0 11px}
+.contact-locations .contact-appointment{color:#e9d79b;font-size:.82rem;letter-spacing:.045em;font-weight:600}
+.contact-locations .home-text-link{margin-top:auto;min-height:42px;display:inline-flex;align-items:center;gap:9px;color:#f4ddb0}
+.contact-locations .contact-note{font-size:.84rem}
+.contact-visit{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.contact-visit h2{margin:0 0 6px}
+.contact-note{color:#c6c0b5;font-size:.86rem;line-height:1.55;margin:12px 0}
+.contact-hours{margin:14px 0 18px}
+.contact-hours>div{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid #3d3427;font-size:.87rem;line-height:1.45}
+.contact-hours dt{min-width:0}
+.contact-hours dd{margin:0;text-align:right;color:#e7d7ab}
+.contact-exception{border-left:2px solid #d4af37;padding:3px 0 3px 13px;font-size:.82rem}
+.contact-exception strong{color:#e9d79b;font-weight:600}
+.contact-exception p{margin:5px 0 0;color:#c6c0b5;line-height:1.55}
+.contact-before ul{padding-left:20px;margin:11px 0 13px;color:#cbc5b9;line-height:1.65;font-size:.9rem}
+.contact-before .home-text-link{display:inline-flex;min-height:44px;align-items:center;gap:8px;color:#ead49d}
+.contact-service-links>p:not(.home-eyebrow){margin:10px 0 16px;max-width:720px}
+.contact-service-row{display:flex;flex-wrap:wrap;gap:10px}
+.contact-service-row a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 13px;border:1px solid #635137;border-radius:6px;color:#ead6a8;font-size:.86rem;text-decoration:none}
+.contact-service-row a:hover{border-color:#d4af37;text-decoration:underline}
+.contact-final{padding-block:37px 42px;border-block:1px solid #453926;text-align:center}
+.contact-final h2{margin:0}
+.contact-final p:not(.home-eyebrow){margin:13px auto 0;max-width:550px}
+.contact-final-actions{justify-content:center;margin-top:21px}
+.contact-support{padding-block:24px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.contact-support h2{font:400 1.4rem/1.3 Georgia,serif;margin:0;color:#eee8dc}
+.contact-support p{flex:1 1 360px;color:#bfb9ad;font-size:.82rem;line-height:1.6;margin:0}
+.contact-support .home-text-link{font-size:.85rem;min-height:44px;display:inline-flex;align-items:center;gap:5px}
+.contact-page a:focus-visible,.contact-hero a:focus-visible,.contact-section a:focus-visible,.contact-final a:focus-visible,.contact-support a:focus-visible{outline:3px solid #e1b85b;outline-offset:3px}
+@media(max-width:850px){.contact-options{grid-template-columns:1fr}.contact-options>a{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:14px 17px}.contact-options .contact-number,.contact-options h3,.contact-options p{grid-column:1}.contact-options h3{margin-bottom:2px}.contact-options p{margin:0}.contact-options .contact-detail{grid-column:1/-1;margin-top:8px}.contact-visit{gap:24px}}
+@media(max-width:640px){.contact-hero{padding-block:28px 25px}.contact-hero .customer-breadcrumb{margin-bottom:14px}.contact-hero h1{font-size:clamp(2.55rem,10vw,3.65rem)}.contact-intro{font-size:.97rem;line-height:1.6;margin-top:13px}.contact-hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:19px}.contact-hero-actions .home-button{padding:10px 8px;font-size:.86rem;min-height:48px}.contact-section{padding-block:25px}.contact-section-title{margin-bottom:13px}.contact-section h2{font-size:clamp(1.85rem,7.5vw,2.5rem)}.contact-locations,.contact-visit{grid-template-columns:1fr;gap:11px}.contact-locations article{padding:17px}.contact-visit{gap:25px}.contact-service-row{display:grid;grid-template-columns:1fr}.contact-final{padding-block:32px}.contact-final-actions{display:grid;grid-template-columns:1fr;gap:10px}.contact-final-actions .home-button{width:100%}.contact-support{padding-block:21px 32px}.contact-support p{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.contact-options>a{transition:none}}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -553,24 +582,43 @@ picture.homepage-picture { display:contents; }
 <header id="home" class="homepage-header"><div class="home-info-bar"><div class="home-shell"><span>Kigali Main Workshop · KN 441 St, Norvège</span><a href="/contact/#hours-heading">Mon–Sat 09:00–17:00 · Umuganda: 12:00–17:00 by advance appointment · Sunday: by appointment only</a></div></div><div class="header-inner home-shell"><a class="home-brand" href="/" aria-label="Mr Sewing Fashion home"><img class="header-logo" src="MR LOGO.jpeg" width="1244" height="802" alt="Mr Sewing official MS logo" decoding="async" srcset="assets/homepage/mr-logo-96.3598d62e35.webp 96w, assets/homepage/mr-logo-192.2f306066cd.webp 192w, assets/homepage/mr-logo-320.b753282e38.webp 320w" sizes="(min-width: 1100px) 66px, 72px"><span class="brand-name">MR SEWING <small>FASHION</small></span></a><nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li class="services-dropdown"><details><summary>Services <span aria-hidden="true">⌄</span></summary><ul><li><a href="/services/custom-tailoring/">Custom Tailoring &amp; Suits</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></details></li><li><a href="/our-work/">Our Work</a></li><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/guides/fabrics/">Fabric Guide</a></li><li><a href="/about/">About Us</a></li><li><a href="/contact/" aria-current="page">Contact Us</a></li><li><a href="/faq/">FAQs</a></li></ul></nav><a class="header-shop" href="/shop/" aria-label="Online Shop">Shop</a><button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" aria-hidden="true"><path d="M1 1h22M1 9h22M1 17h22" stroke="currentColor" stroke-width="1.5"/></svg></button></div></header>
 
 <main id="main-content" tabindex="-1">
-<section class="contact-hero home-shell" aria-labelledby="contact-heading"><nav class="customer-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Contact Us</span></li></ol></nav>
+<section class="contact-hero home-shell" aria-labelledby="contact-heading">
+<nav class="customer-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Contact Us</span></li></ol></nav>
 <p class="home-eyebrow">Contact Mr Sewing · Kigali, Rwanda</p>
-<h1 id="contact-heading">Let's Create Something <em>Exceptional.</em></h1>
-<p class="contact-intro">Have a design in mind or a special occasion approaching? Get in touch with Mr Sewing to discuss your outfit, explore your options, and take the first step towards something made just for you.</p>
+<h1 id="contact-heading">Let's Talk About Your <em>Clothing.</em></h1>
+<p class="contact-intro">Looking for custom tailoring in Kigali, suit alterations, or professional garment care? Tell Mr Sewing Fashion what you need. We can discuss design ideas, fittings, and the next steps for a quotation.</p>
+<div class="contact-hero-actions" aria-label="Quick contact options">
+<a class="home-button home-button-gold contact-primary" href="/whatsapp/?text=Hello%20Mr%20Sewing%20Fashion%2C%20I%20would%20like%20to%20discuss%20a%20tailoring%20service%20or%20request%20a%20quotation.">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
+<a class="home-button contact-outline" href="tel:+250787411501">Call Us <span aria-hidden="true">↗</span></a>
+</div>
+<a class="contact-hero-email" href="mailto:mrsewingfashiondesigner@gmail.com">Prefer email? Write to our team <span aria-hidden="true">↗</span></a>
 </section>
-<section class="home-shell contact-section" aria-labelledby="direct-heading"><div class="contact-section-title"><p class="home-eyebrow">A conversation starts here</p><h2 id="direct-heading">Contact Mr Sewing</h2></div>
+<section class="home-shell contact-section contact-direct" aria-labelledby="direct-heading">
+<div class="contact-section-title"><p class="home-eyebrow">A conversation starts here</p><h2 id="direct-heading">How Can We Help?</h2></div>
 <div class="contact-options">
-<a href="/whatsapp/?text=Hello+Mr+Sewing%2C+I%27d+like+to+discuss+an+outfit."><span class="contact-number">01 / WhatsApp</span><h3>Share your inspiration.</h3><p>Send outfit photographs, ask questions, and discuss your order.</p><span class="contact-detail">+250 787 411 501 <span class="home-arrow" aria-hidden="true">↗</span></span></a>
-<a href="tel:+250787411501"><span class="contact-number">02 / Call Us</span><h3>Let's talk it through.</h3><p>Speak with us about your tailoring requirements or next visit.</p><span class="contact-detail">+250 787 411 501 <span class="home-arrow" aria-hidden="true">↗</span></span></a>
-<a href="mailto:mrsewingfashiondesigner@gmail.com"><span class="contact-number">03 / Email Us</span><h3>A little more detail.</h3><p>Write to us about your design, occasion, or fitting needs.</p><span class="contact-detail contact-email">mrsewingfashiondesigner@gmail.com <span class="home-arrow" aria-hidden="true">↗</span></span></a>
+<a href="/whatsapp/?text=Hello%20Mr%20Sewing%20Fashion%2C%20I%20have%20a%20question%20about%20your%20tailoring%20services.">
+<span class="contact-number">01 / WhatsApp</span><h3>Share your idea</h3><p>Ask a question or send an outfit photograph directly in WhatsApp.</p><span class="contact-detail">Start a chat <span aria-hidden="true">↗</span></span>
+</a>
+<a href="tel:+250787411501"><span class="contact-number">02 / Call</span><h3>Talk to our team</h3><p>Discuss fitting arrangements, services, or your next visit.</p><span class="contact-detail">+250 787 411 501 <span aria-hidden="true">↗</span></span></a>
+<a href="mailto:mrsewingfashiondesigner@gmail.com"><span class="contact-number">03 / Email</span><h3>Send the details</h3><p>Explain your garment, occasion, or request in your own words.</p><span class="contact-detail contact-email">mrsewingfashiondesigner@gmail.com <span aria-hidden="true">↗</span></span></a>
+</div>
+</section>
+<section class="home-shell contact-section contact-locations-section" aria-labelledby="locations-heading">
+<div class="contact-section-title"><p class="home-eyebrow">Find us in Kigali</p><h2 id="locations-heading">Our Locations</h2></div>
+<div class="contact-locations">
+<article><span class="contact-number">01 / Main workshop</span><h3>Mr Sewing Main Workshop</h3><address>Karama, Norvege, KN 441 St<br>Nyarugenge, Kigali, Rwanda</address><p>Visit during normal workshop hours. Contact us beforehand so we can prepare to assist you.</p><a class="home-text-link" href="https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac" target="_blank" rel="noopener">Get Directions <span aria-hidden="true">↗</span></a></article>
+<article><span class="contact-number">02 / Downtown consultation</span><h3>Meet us downtown</h3><address>MIC Building<br>Downtown Kigali, Rwanda</address><p class="contact-appointment">By appointment only</p><p>Arrange your consultation before visiting. Ask us for directions when booking.</p><a class="home-text-link" href="/booking/">Book an Appointment <span aria-hidden="true">↗</span></a><p class="contact-note">Please contact us for directions when arranging your appointment.</p></article>
 </div></section>
-<section class="home-shell contact-section" aria-labelledby="locations-heading"><div class="contact-section-title"><p class="home-eyebrow">Find us in Kigali</p><h2 id="locations-heading">Visit Our Locations</h2></div>
-<div class="contact-locations"><article><span class="contact-number">01 / Main Workshop</span><h3>Mr Sewing Main Workshop</h3><address>Karama, Norvege, KN 441 St,<br>Nyarugenge, Kigali, Rwanda.</address><p>You're welcome to visit during our regular working hours. We recommend contacting us before coming so we can prepare to assist you.</p><p class="contact-note">See the Umuganda and Sunday appointment arrangements below before visiting.</p><a class="home-text-link" href="https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac" target="_blank" rel="noopener">Get Directions <span class="home-arrow" aria-hidden="true">↗</span></a></article>
-<article><span class="contact-number">02 / Downtown Consultation Location</span><h3>Meet us downtown.</h3><address>MIC Building,<br>Downtown Kigali, Rwanda.</address><p class="contact-appointment">By Appointment Only</p><p>Arrange your consultation before visiting this location.</p><a class="home-text-link" href="/booking/">Book an Appointment <span class="home-arrow" aria-hidden="true">↗</span></a><p class="contact-note">Please contact us for directions when arranging your appointment.</p></article></div></section>
-<section class="home-shell contact-section contact-visit" aria-labelledby="hours-heading"><div><p class="home-eyebrow">Plan your visit</p><h2 id="hours-heading">Opening Hours</h2><p class="contact-note">Main workshop schedule. MIC Building consultations are always by appointment.</p><dl class="contact-hours"><div><dt>Monday–Friday</dt><dd>9:00 AM–5:00 PM</dd></div><div><dt>Saturday</dt><dd>9:00 AM–5:00 PM</dd></div><div><dt>Sunday</dt><dd>By appointment only</dd></div></dl><div class="contact-exception"><strong>Last Saturday of each month · Umuganda</strong><p>12:00 PM–5:00 PM, by advance appointment only.</p></div></div>
-<div class="contact-before"><p class="home-eyebrow">A little preparation</p><h2>Before Your Visit</h2><p>Contact us beforehand to discuss what you have in mind:</p><ul><li>Outfit inspiration or design photographs</li><li>Tailoring requirements</li><li>Your special occasion</li><li>Fabric preferences</li><li>Measurements or fitting needs</li></ul><a class="home-text-link" href="tel:+250787411501">Call Us Before Your Visit <span class="home-arrow" aria-hidden="true">↗</span></a></div></section>
-<section class="home-shell contact-final" aria-labelledby="final-heading"><p class="home-eyebrow">Made around you</p><h2 id="final-heading">Ready to Visit Mr Sewing?</h2><p>Schedule your consultation and let us help bring your vision to life.</p><a class="home-button home-button-gold" href="/booking/">Book a Consultation <span class="home-arrow" aria-hidden="true">↗</span></a></section>
-<section class="home-shell contact-section" aria-labelledby="support-schedule"><h2 id="support-schedule">Customer Support</h2><p>Monday–Friday, 9:00 AM–5:00 PM Kigali time, excluding Rwandan public holidays. Our first-response target is within 24 support working hours.</p><p>After-hours assistance from 5:00 PM–10:00 PM is subject to availability and quotation. Requests after 10:00 PM are individually assessed.</p><a class="home-text-link" href="/customer-support/">Customer Support</a></section></main>
+<section class="home-shell contact-section contact-visit" aria-labelledby="hours-heading">
+<div class="contact-visit-panel"><p class="home-eyebrow">Plan your visit</p><h2 id="hours-heading">Opening Hours</h2><p class="contact-note">Main workshop schedule. Downtown consultations are by appointment only.</p>
+<dl class="contact-hours"><div><dt>Monday–Friday</dt><dd>9:00 AM–5:00 PM</dd></div><div><dt>Saturday</dt><dd>9:00 AM–5:00 PM</dd></div><div><dt>Sunday</dt><dd>By appointment only</dd></div></dl>
+<div class="contact-exception"><strong>Umuganda · last Saturday of the month</strong><p>12:00 PM–5:00 PM, by advance appointment only.</p></div>
+</div>
+<div class="contact-before"><p class="home-eyebrow">A little preparation</p><h2>Before Your Visit</h2><p>Let us know what you want to discuss:</p><ul><li>Outfit inspiration or photos</li><li>Garment and tailoring requirements</li><li>Event date and preferred timing</li><li>Fabric, measurements, or fitting needs</li></ul><a class="home-text-link" href="/whatsapp/?text=Hello%20Mr%20Sewing%20Fashion%2C%20I%20would%20like%20to%20discuss%20my%20visit%20before%20coming.">Message Us Before Your Visit <span aria-hidden="true">↗</span></a></div>
+</section>
+<nav class="home-shell contact-section contact-service-links" aria-label="Find the right tailoring service"><p class="home-eyebrow">Explore our services</p><p>Interested in bespoke tailoring in Kigali, Rwanda, or an adjustment to a favourite suit? Find the right service before you contact us.</p><div class="contact-service-row"><a href="/services/custom-tailoring/">Custom suit tailoring in Rwanda <span aria-hidden="true">↗</span></a><a href="/services/alterations/">Suit alterations in Kigali <span aria-hidden="true">↗</span></a><a href="/services/garment-care/">Garment care &amp; cleaning <span aria-hidden="true">↗</span></a></div></nav>
+<section class="home-shell contact-final" aria-labelledby="final-heading"><p class="home-eyebrow">Made around you</p><h2 id="final-heading">Ready to Get Started?</h2><p>Share your idea for a quotation, or request an appointment for your garment and fitting needs.</p><div class="contact-final-actions"><a class="home-button home-button-gold" href="/whatsapp/?text=Hello%20Mr%20Sewing%20Fashion%2C%20I%20would%20like%20to%20share%20a%20design%20and%20discuss%20a%20quotation.">Send Your Design on WhatsApp <span aria-hidden="true">↗</span></a><a class="home-button contact-outline" href="/booking/">Book a Consultation <span aria-hidden="true">↗</span></a></div></section>
+<section class="home-shell contact-support" aria-labelledby="support-schedule"><h2 id="support-schedule">Customer Support</h2><p>Support enquiries are normally reviewed Monday–Friday, 9:00 AM–5:00 PM Kigali time, excluding Rwandan public holidays. First-response target: within 24 support working hours. After-hours assistance between 5:00 PM and 10:00 PM is subject to availability and quotation; later requests are individually assessed.</p><a class="home-text-link" href="/customer-support/">Customer Support Details <span aria-hidden="true">↗</span></a></section></main>
 <footer class="homepage-footer support-footer" aria-labelledby="footer-title"><div class="home-shell"><h2 id="footer-title" class="visually-hidden">Mr Sewing Fashion information</h2><div class="support-footer-columns"><div class="footer-col"><h3>Service Links</h3><ul><li><a href="/services/custom-tailoring/">Custom Tailoring &amp; Suits</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></div><div class="footer-col"><h3>Customer Guides</h3><ul><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/guides/fabrics/">Fabric Guide</a></li></ul></div><div class="footer-col"><h3>Quick Information</h3><ul><li><a href="/faq/">FAQs</a></li><li><a href="/contact/#locations-heading">Location</a></li><li><a href="/contact/#hours-heading">Opening Hours</a></li><li><details class="footer-policy-list"><summary>Policies</summary><ul><li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/refund-policy/">Refund Policy</a></li></ul></details></li></ul></div></div><div class="footer-bottom"><div class="footer-bottom-copy"><p>&copy; 2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.</p></div><div class="social-icons" aria-label="Social media"><a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.625em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></i></a>
             <a href="https://www.instagram.com/mr_sewing_fashion" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.875em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></i></a>
             <a href="https://www.tiktok.com/@mrsewingfashion" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.875em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></i></a>
