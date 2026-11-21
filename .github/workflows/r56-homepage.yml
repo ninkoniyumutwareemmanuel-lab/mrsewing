@@ -3,9 +3,24 @@ on:
   push:
     branches:
       - work/r56-tailoring-first-homepage-2026-11-21
+      - phase1/customer-journey-repairs
+    paths:
+      - 'scripts/build_homepage.py'
+      - 'scripts/homepage_redesign.py'
+      - 'scripts/prepare_silent_homepage_videos.py'
+      - '_templates/homepage*'
+      - '_data/collection-designs.json'
+      - '_data/collection-id-registry.json'
+      - '_data/collection-image-inventory.json'
+      - '_data/media-video-records.json'
+      - 'index.html'
+      - 'assets/homepage.js'
+      - 'tests/homepage_r56.py'
+      - 'tests/homepage_r56_browser.cjs'
+      - '.github/workflows/r56-homepage.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   homepage:
     runs-on: ubuntu-24.04
@@ -18,6 +33,9 @@ jobs:
         run: |
           python scripts/build_site.py
           python scripts/build_site.py --check
+      - name: Prepare/check two nonpublic zero-audio R53 video derivatives
+        run: |
+          python scripts/prepare_silent_homepage_videos.py
       - name: R56 image/photo authorization and homepage source tests
         run: |
           python tests/homepage_r56.py
@@ -42,14 +60,6 @@ jobs:
           name: r56-homepage-mobile-desktop-screenshots
           path: artifacts/r56-homepage/*.png
           if-no-files-found: ignore
-      - name: Commit only generated homepage artefacts after tests
+      - name: Check committed homepage HTML and JS match source build
         run: |
-          git add -- index.html assets/homepage.js
-          if ! git diff --cached --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "R56: synchronize generated tailor-first homepage"
-            git push origin HEAD:work/r56-tailoring-first-homepage-2026-11-21
-          else
-            echo "PASS: generated homepage matches committed source."
-          fi
+          git diff --exit-code -- index.html assets/homepage.js
