@@ -1,0 +1,56 @@
+name: R56 tailoring-first homepage staging verification
+on:
+  push:
+    branches:
+      - work/r56-tailoring-first-homepage-2026-11-21
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  homepage:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build full existing site
+        run: |
+          python scripts/build_site.py
+          python scripts/build_site.py --check
+      - name: R56 image/photo authorization and homepage source tests
+        run: |
+          python tests/homepage_r56.py
+          python tests/seo_preservation.py
+          python tests/sitemap_discovery.py
+          python tests/collections_data.py
+          python -m py_compile scripts/homepage_redesign.py scripts/build_homepage.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install supported Chromium QA tooling
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Verify mobile/desktop homepage and reduced motion in browser
+        run: |
+          python -m http.server 8020 --bind 127.0.0.1 >/tmp/r56-server.log 2>&1 &
+          node tests/homepage_r56_browser.cjs
+      - name: Preserve homepage QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r56-homepage-mobile-desktop-screenshots
+          path: artifacts/r56-homepage/*.png
+          if-no-files-found: ignore
+      - name: Commit only generated homepage artefacts after tests
+        run: |
+          git add -- index.html assets/homepage.js
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "R56: synchronize generated tailor-first homepage"
+            git push origin HEAD:work/r56-tailoring-first-homepage-2026-11-21
+          else
+            echo "PASS: generated homepage matches committed source."
+          fi
