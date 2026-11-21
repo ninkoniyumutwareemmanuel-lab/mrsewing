@@ -87,10 +87,19 @@ def reserve_image_space(match):
     src = re.search(r'\bsrc="([^"]+)"', tag)
     if not src:
         raise ValueError('Homepage image needs an explicit src')
-    path = ROOT / unescape(src[1])
-    if not path.resolve().is_relative_to(ROOT):
-        raise ValueError('Image must belong to this repository')
-    width, height = image_size(path)
+    path = ROOT / unescape(src[1]).lstrip('/')
+    if not path.resolve().is_relative_to(ROOT) or not path.is_file():
+        raise ValueError('Image must be an existing asset inside this repository')
+    if path.suffix.lower() == '.webp':
+        # Owner-approved source hero has verified explicit natural dimensions.
+        # Do not use the legacy JPEG-only parser for a WebP file.
+        width_match = re.search(r'\bwidth="(\d+)"', tag)
+        height_match = re.search(r'\bheight="(\d+)"', tag)
+        if not width_match or not height_match:
+            raise ValueError('WebP image must have approved explicit dimensions')
+        width, height = int(width_match[1]), int(height_match[1])
+    else:
+        width, height = image_size(path)
     if not re.search(r'\bwidth=', tag):
         tag = tag[:-1] + f' width="{width}" height="{height}">'
     if not re.search(r'\bdecoding=', tag):
