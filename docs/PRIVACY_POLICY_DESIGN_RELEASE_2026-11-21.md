@@ -1,0 +1,3 @@
+# Privacy Policy redesign | 21 November 2026
+
+Owner approved the complete desktop/mobile preview and instructed publication. Only Privacy Policy presentation is updated. Seven existing sections and their disclosure text remain unchanged; headings, navigation, cards, accessibility and contact links are improved. Last updated reflects this publication. `scripts/privacy_page.py` formats the source driven by `_data/privacy-layout.json`; `scripts/customer_site.py` applies it only to `/privacy-policy/`. Both root HTML and clean URL HTML are regenerated in this change. No change to Meta tracking consent, other policies, forms, refunds, or FAQs. A successful code build is not independent legal review.
