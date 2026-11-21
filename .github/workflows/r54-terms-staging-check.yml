@@ -24,6 +24,10 @@ jobs:
         run: |
           python scripts/build_site.py
           python scripts/build_site.py --check
+      - name: Inspect generated file differences
+        run: |
+          git status --short
+          git diff --name-only
       - name: Terms/PDF tests
         run: |
           python tests/terms_reader_main_base.py
