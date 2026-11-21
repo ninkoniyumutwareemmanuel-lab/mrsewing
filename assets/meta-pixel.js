@@ -70,7 +70,7 @@
     var title = document.createElement("h2");
     title.textContent = "Optional website tracking";
     var description = document.createElement("p");
-    description.textContent = "May we use Meta Pixel to measure website visits after Facebook and Instagram advertising? You can decline or change your choice later.";
+    description.textContent = "May we use Meta Pixel for Facebook and Instagram advertising measurement? If you allow, Meta may receive website visits and technical browser information. You can decline or withdraw your choice later.";
     var policy = document.createElement("a");
     policy.href = "/privacy-policy/";
     policy.textContent = "Read our Privacy Policy";

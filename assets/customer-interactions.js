@@ -12,7 +12,7 @@ document.addEventListener('click',e=>{const a=e.target.closest?.('[data-whatsapp
    privacy notice, legal transfer review and explicit activation. */
 (function () {
   "use strict";
-  var config = {"schemaVersion":1,"pixelId":"29683883327873735","productionEnabled":false,"status":"live-code-installed-tracking-held-pending-privacy-approval","ownerSource":"Owner live placement instruction 21 November 2026","trackingPurposes":["Optional Meta ad measurement on consented public browsing pages"],"activationPrerequisites":["Owner review and approval of revised Privacy Policy and consent notice","Verification of applicable Rwanda controller, data processing and cross-border transfer requirements","Positive automated/browser check of consent, withdrawal and network tracking","Separate explicit approval to switch from installed-but-disabled to active data transmission"]};
+  var config = {"schemaVersion":1,"pixelId":"29683883327873735","productionEnabled":true,"status":"owner-approved-production","ownerSource":"Owner explicit instruction to activate live Meta Pixel 21 November 2026","trackingPurposes":["Optional Meta ad measurement on consented public browsing pages"],"activationNotes":"Owner expressly requested immediate activation; only consented PageView tracking enabled. No advertising spending or additional events authorised."};
   if (!config || !config.productionEnabled || config.status !== "owner-approved-production") return;
   if (window.__mrSewingMetaPixelLoader) return;
   window.__mrSewingMetaPixelLoader = true;
