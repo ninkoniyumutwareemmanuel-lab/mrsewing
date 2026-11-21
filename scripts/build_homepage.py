@@ -21,7 +21,7 @@ HOMEPAGE_VISUAL_REVIEW = False
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
     'header': ('_templates/homepage-header.html', 'header', None),
-    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
+    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section r56-hero')),
     'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
