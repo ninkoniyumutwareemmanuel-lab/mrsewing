@@ -1,0 +1,36 @@
+name: R54 staging Terms validation
+on:
+  push:
+    branches:
+      - work/terms-pdf-main-base-2026-11-21
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terms-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python dependencies
+        run: |
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
+      - name: Rebuild generated site and verify consistency
+        run: |
+          python scripts/build_site.py
+          python scripts/build_site.py --check
+      - name: Terms/PDF tests
+        run: |
+          python tests/terms_reader_main_base.py
+          if [ -f tests/policy_documents.py ]; then python tests/policy_documents.py; else echo "NOT TESTED: R53 policy_documents.py tests are not present in main copy"; fi
+      - name: Relevant existing guards
+        run: |
+          for t in tests/seo_preservation.py tests/sitemap_discovery.py tests/media_showroom.py; do if [ -f "$t" ]; then python "$t"; else echo "NOT TESTED: $t not in main copy"; fi; done
+      - name: Verify Python syntax
+        run: |
+          python -m py_compile scripts/terms_reader.py scripts/customer_site.py
