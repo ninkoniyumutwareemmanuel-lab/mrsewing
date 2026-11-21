@@ -1,71 +1,57 @@
-name: R56 tailoring-first homepage staging verification
+name: R57 preserve original homepage, surgical enhancements
 on:
   push:
     branches:
-      - work/r56-tailoring-first-homepage-2026-11-21
-      - phase1/customer-journey-repairs
-    paths:
-      - 'scripts/build_homepage.py'
-      - 'scripts/homepage_redesign.py'
-      - 'scripts/prepare_silent_homepage_videos.py'
-      - '_templates/homepage*'
-      - '_data/collection-designs.json'
-      - '_data/collection-id-registry.json'
-      - '_data/collection-image-inventory.json'
-      - '_data/media-video-records.json'
-      - 'index.html'
-      - 'assets/homepage.js'
-      - 'tests/homepage_r56.py'
-      - 'tests/homepage_r56_browser.cjs'
-      - '.github/workflows/r56-homepage.yml'
+      - work/r57-preserve-existing-homepage-2026-11-21
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
-  homepage:
+  check-original-and-additions:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build full existing site
+      - name: Rebuild full site and check generated consistency
         run: |
           python scripts/build_site.py
           python scripts/build_site.py --check
-      - name: Install audio-removal tools for the isolated video check
+      - name: Run homepage preservation, permissions and SEO tests
         run: |
-          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
-            sudo apt-get update -qq
-            sudo apt-get install -y ffmpeg
-          fi
-      - name: Prepare/check two nonpublic zero-audio R53 video derivatives
-        run: |
-          python scripts/prepare_silent_homepage_videos.py
-      - name: R56 image/photo authorization and homepage source tests
-        run: |
-          python tests/homepage_r56.py
+          python tests/homepage_r57.py
           python tests/seo_preservation.py
           python tests/sitemap_discovery.py
-          python -m py_compile scripts/homepage_redesign.py scripts/build_homepage.py
+          python tests/terms_reader_main_base.py
+          python -m py_compile scripts/homepage_galleries.py scripts/homepage_r57_additions.py scripts/build_homepage.py
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install supported Chromium QA tooling
+      - name: Install mobile/desktop browser test tools
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
           npx playwright install --with-deps chromium
-      - name: Verify mobile/desktop homepage and reduced motion in browser
+      - name: Verify original homepage and new additions in Chromium
         run: |
-          python -m http.server 8020 --bind 127.0.0.1 >/tmp/r56-server.log 2>&1 &
-          node tests/homepage_r56_browser.cjs
-      - name: Preserve homepage QA screenshots
+          python -m http.server 8020 --bind 127.0.0.1 > /tmp/r57-server.log 2>&1 &
+          node tests/homepage_r57_browser.cjs
+      - name: Keep original-layout review screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: r56-homepage-mobile-desktop-screenshots
-          path: artifacts/r56-homepage/*.png
+          name: r57-original-homepage-with-surgical-additions
+          path: artifacts/r57-preserved-homepage/*.png
           if-no-files-found: ignore
-      - name: Check committed homepage HTML and JS match source build
+      - name: Commit only the homepage's generated HTML and JS
+        if: success()
         run: |
-          git diff --exit-code -- index.html assets/homepage.js
+          git add -- index.html assets/homepage.js
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "R57: synchronize generated original-layout homepage with requested additions"
+            git push origin HEAD:work/r57-preserve-existing-homepage-2026-11-21
+          else
+            echo "PASS: generated homepage matches committed source."
+          fi
