@@ -19,3 +19,6 @@ Do not mark video publication rights or poster approvals verified from the new *
 
 ## QA
 Run Python build + check, Python media/gallery tests, SEO/sitemap and noindex checks; desktop/mobile browser layout/link/gallery controls and Terms-gated WhatsApp checks; report any historical homepage tests superseded by this expressly authorised new owner design. Verify deployed Cloudflare provider status separately from independent remote browsing.
+
+## Historical baseline-test conflict
+The repository's legacy `tests/collections_data.py` test asserts **20** published designs (an old snapshot). R55 and current R56 full-site builds report **28** genuinely eligible Showroom designs. The stale legacy expectation fails on the unchanged eligible set, and is not a safe release gate for this homepage-only design. R56 instead asserts that the publication-gated loader remains at its existing 28-design baseline and that all 22 newly authorised homepage reference designs retain `published:false`. The old legacy test is recorded FAIL (obsolete fixed count); it is not misreported PASS.

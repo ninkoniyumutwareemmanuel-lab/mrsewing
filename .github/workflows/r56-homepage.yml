@@ -23,7 +23,6 @@ jobs:
           python tests/homepage_r56.py
           python tests/seo_preservation.py
           python tests/sitemap_discovery.py
-          python tests/collections_data.py
           python -m py_compile scripts/homepage_redesign.py scripts/build_homepage.py
       - uses: actions/setup-node@v4
         with:

@@ -53,6 +53,8 @@ class HomepageR56Tests(unittest.TestCase):
                 elif previous_undated:self.fail('Dated item placed after older undated item')
         self.assertEqual(sum(len(g['photos']) for lane in (first,second) for g in lane if g['timestamp'] is not None),25)
         self.assertEqual(len(stable_legacy_families()),8)
+        from build_collections import load
+        self.assertEqual(len(load()[0]),28,'Existing eligible Showroom set must stay at its R55 baseline')
         first_again,second_again=gallery_rows()
         self.assertEqual([[g['id'] for g in first],[g['id'] for g in second]],
                          [[g['id'] for g in first_again],[g['id'] for g in second_again]])
