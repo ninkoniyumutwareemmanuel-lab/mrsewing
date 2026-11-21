@@ -34,6 +34,24 @@ jobs:
           python tests/seo_preservation.py
           python tests/sitemap_discovery.py
           python -m py_compile scripts/terms_reader.py scripts/render_terms_page_images.py scripts/customer_site.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated browser QA tooling
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test actual full-screen modal on mobile and desktop Chromium
+        run: |
+          python -m http.server 8020 --bind 127.0.0.1 > /tmp/r55-http.log 2>&1 &
+          node tests/terms_popup_browser.cjs
+      - name: Preserve actual mobile and desktop QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r55-terms-popup-browser-screenshots
+          path: artifacts/r55-terms/*.png
+          if-no-files-found: ignore
       - name: Commit only PDF page renders and generated Terms HTML
         run: |
           git add -- assets/policy-documents/terms-and-conditions/pages/ terms-and-conditions.html terms-and-conditions/index.html
