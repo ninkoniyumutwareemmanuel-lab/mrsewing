@@ -1,15 +1,26 @@
-/* Native dialogs: per-use acceptance, keyboard focus and no automatic message sending. */
-(()=>{'use strict';let terms,photo,opener,message='';
-function dialog(id,title){const d=document.createElement('dialog');d.id=id;d.className='customer-dialog';d.setAttribute('aria-labelledby',id+'-title');d.innerHTML='<button type="button" class="dialog-close" aria-label="Close dialog">Close</button><h2 id="'+id+'-title">'+title+'</h2>';d.querySelector('button').addEventListener('click',()=>d.close());d.addEventListener('close',()=>{message='';opener?.focus({preventScroll:true});});document.body.append(d);return d;}
-function openTerms(text,trigger){if(!terms){terms=dialog('serviceTermsDialog','Terms & Conditions');const form=document.createElement('form');form.innerHTML='<p>Please read the <a href="/terms-and-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a> before continuing.</p><label><input type="checkbox" required autocomplete="off"><span>I agree to the Terms &amp; Conditions.</span></label><button type="button" data-terms-cancel>Cancel</button><button type="submit" disabled>Continue to WhatsApp</button><p>Opening WhatsApp does not send a message or confirm an order.</p>';terms.append(form);const check=form.querySelector('input'),button=form.querySelector('[type=submit]');form.querySelector('[data-terms-cancel]').addEventListener('click',()=>terms.close());check.addEventListener('change',()=>button.disabled=!check.checked);form.addEventListener('submit',e=>{e.preventDefault();if(!check.checked||!form.reportValidity())return;const u=new URL('https://wa.me/250787411501');if(message)u.searchParams.set('text',message);window.open(u.href,'_blank','noopener');terms.close();});}opener=trigger;message=String(text||'').slice(0,6000);const check=terms.querySelector('input');check.checked=false;terms.querySelector('button[type=submit]').disabled=true;terms.showModal();check.focus();}
-window.MrSewingWhatsApp={open:openTerms};
-document.addEventListener('click',e=>{const a=e.target.closest?.('[data-whatsapp-modal]');if(a){const u=new URL(a.href,location.href);if((u.origin===location.origin&&u.pathname==='/whatsapp/')||(u.origin==='https://wa.me'&&u.pathname==='/250787411501')){e.preventDefault();e.stopImmediatePropagation();openTerms(u.searchParams.get('text')||'',a);}return;}const link=e.target.closest?.('[data-enlarge]');if(!link)return;const u=new URL(link.href,location.href);if(u.origin!==location.origin||!/^https?:$/.test(u.protocol))return;e.preventDefault();if(!photo){photo=dialog('measurementPhotoDialog','Measurement illustration');const i=document.createElement('img');photo.append(i);}opener=link;const image=photo.querySelector('img');image.src=u.href;image.alt=link.querySelector('img').alt;photo.querySelector('h2').textContent=link.getAttribute('aria-label').replace(/^Enlarge /,'');photo.showModal();photo.querySelector('button').focus();},true);
+/* WhatsApp chat opens directly; Terms are accessible in the site footer. */
+(()=>{'use strict';let photo,opener;
+function dialog(id,title){const d=document.createElement('dialog');d.id=id;d.className='customer-dialog';d.setAttribute('aria-labelledby',id+'-title');d.innerHTML='<button type="button" class="dialog-close" aria-label="Close dialog">Close</button><h2 id="'+id+'-title">'+title+'</h2>';d.querySelector('button').addEventListener('click',()=>d.close());d.addEventListener('close',()=>{opener?.focus({preventScroll:true});});document.body.append(d);return d;}
+function openWhatsApp(text){const u=new URL('https://wa.me/250787411501');if(text)u.searchParams.set('text',String(text).slice(0,6000));window.open(u.href,'_blank','noopener');}
+window.MrSewingWhatsApp={open:openWhatsApp};
+function addTermsFooterLink(){
+ const footer=document.querySelector('#site-footer footer, footer.homepage-footer, footer');
+ if(!footer||footer.querySelector('.footer-terms-quicklink'))return;
+ const parent=footer.querySelector('.footer-bottom-copy')||footer.querySelector('.footer-bottom')||footer;
+ const a=document.createElement('a');a.href='/terms-and-conditions/';a.className='footer-terms-quicklink';a.textContent='Terms & Conditions';parent.appendChild(a);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addTermsFooterLink,{once:true});else addTermsFooterLink();
+document.addEventListener('click',e=>{
+ const link=e.target.closest?.('[data-enlarge]');if(!link)return;const u=new URL(link.href,location.href);
+ if(u.origin!==location.origin||!/^https?:$/.test(u.protocol))return;
+ e.preventDefault();if(!photo){photo=dialog('measurementPhotoDialog','Measurement illustration');photo.append(document.createElement('img'));}
+ opener=link;const img=photo.querySelector('img');img.src=u.href;img.alt=link.querySelector('img').alt;
+ photo.querySelector('h2').textContent=link.getAttribute('aria-label').replace(/^Enlarge /,'');photo.showModal();photo.querySelector('button').focus();
+},true);
 })();
 
-
 /* Optional Meta Pixel integration. Owner authorised placement on main.
-   Current production flag is FALSE; no tracking can start without a reviewed
-   privacy notice, legal transfer review and explicit activation. */
+   The owner-approved production flag and visitor consent system remain unchanged. */
 (function () {
   "use strict";
   var config = /*meta-pixel-config*/null;
