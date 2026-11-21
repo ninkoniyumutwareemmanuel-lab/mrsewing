@@ -131,6 +131,10 @@ def render():
                     span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
                     items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
             markup = markup.replace('{{customer_guides}}', ''.join(items))
+        if key == 'contact':
+            # The approved PDF is staging review only. Customer consent must
+            # continue to open the currently effective online Terms.
+            markup = markup.replace('href="/terms-and-conditions/"', 'href="/terms-and-conditions/current/"')
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
