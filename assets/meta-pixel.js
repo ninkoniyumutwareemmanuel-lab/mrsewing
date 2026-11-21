@@ -66,21 +66,30 @@
     banner = document.createElement("section");
     banner.className = "ms-meta-consent";
     banner.setAttribute("role", "region");
-    banner.setAttribute("aria-label", "Optional marketing tracking preferences");
+    banner.setAttribute("aria-label", "Cookie consent preferences");
+    var identity = document.createElement("div");
+    identity.className = "ms-meta-identity";
+    var icon = document.createElement("span");
+    icon.className = "ms-meta-icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 13.3A8.7 8.7 0 0 1 10.7 3.5a8.7 8.7 0 1 0 9.8 9.8Z"/><circle cx="8" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="13" cy="16" r=".9" fill="currentColor" stroke="none"/><circle cx="11" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>';
     var title = document.createElement("h2");
-    title.textContent = "Optional website tracking";
+    title.textContent = "Cookies & Privacy";
+    identity.appendChild(icon);
+    identity.appendChild(title);
     var description = document.createElement("p");
-    description.textContent = "May we use Meta Pixel for Facebook and Instagram advertising measurement? If you allow, Meta may receive website visits and technical browser information. You can decline or withdraw your choice later.";
+    description.className = "ms-meta-description";
+    description.appendChild(document.createTextNode("This website uses optional cookies to improve your experience and measure our advertising. "));
     var policy = document.createElement("a");
     policy.href = "/privacy-policy/";
-    policy.textContent = "Read our Privacy Policy";
+    policy.textContent = "Privacy Policy";
+    description.appendChild(policy);
     var controls = document.createElement("div");
     controls.className = "ms-meta-actions";
-    controls.appendChild(button("Decline", "ms-meta-no", function () { choose("declined"); }));
-    controls.appendChild(button("Allow tracking", "ms-meta-yes", function () { choose("accepted"); }));
-    banner.appendChild(title);
+    controls.appendChild(button("Reject", "ms-meta-no", function () { choose("declined"); }));
+    controls.appendChild(button("Allow", "ms-meta-yes", function () { choose("accepted"); }));
+    banner.appendChild(identity);
     banner.appendChild(description);
-    banner.appendChild(policy);
     if (preview) {
       var note = document.createElement("p");
       note.textContent = "Staging demonstration only. No tracking data is sent to Meta.";
@@ -92,10 +101,10 @@
   }
   function ready() {
     var style = document.createElement("style");
-    style.textContent = ".ms-meta-consent{position:fixed;z-index:7000;left:12px;right:12px;bottom:12px;max-width:440px;margin-left:auto;background:#191815;color:#f7f4ed;padding:18px;border:1px solid #c9a14e;border-radius:12px;box-shadow:0 10px 30px #0009;font:15px/1.5 system-ui,sans-serif}.ms-meta-consent h2{font:600 19px/1.3 system-ui,sans-serif;color:#fff;margin:0 0 9px}.ms-meta-consent p{color:#f0eee9;margin:0 0 9px}.ms-meta-consent a{color:#f1ce7b;text-decoration:underline}.ms-meta-actions{display:flex;gap:10px;margin-top:14px}.ms-meta-actions button{flex:1;min-height:44px;border:1px solid #c9a14e;border-radius:6px;padding:9px 10px;font:600 14px system-ui;cursor:pointer}.ms-meta-no{color:#fff;background:#191815}.ms-meta-yes{color:#111;background:#d7a83a}.ms-meta-consent .ms-meta-preview{font-size:13px;color:#edca7b;margin-top:9px}.ms-meta-manage{display:inline-block;min-height:44px;border:0;background:transparent;color:inherit;cursor:pointer;text-decoration:underline;padding:9px;font:inherit}";
+    style.textContent = ".ms-meta-consent{position:fixed;z-index:7000;left:50%;bottom:12px;transform:translateX(-50%);display:grid;grid-template-columns:max-content minmax(0,1fr) auto;align-items:center;column-gap:16px;row-gap:8px;box-sizing:border-box;width:calc(100% - 24px);max-width:1120px;padding:11px 15px;background:#111111;color:#f6f1e7;border:1px solid #c9a14e;border-radius:13px;box-shadow:0 8px 24px #0008;font:13px/1.4 system-ui,sans-serif}.ms-meta-identity{display:flex;align-items:center;gap:10px;padding-right:16px;border-right:1px solid #816a3d;white-space:nowrap;min-width:0}.ms-meta-icon{display:inline-flex;align-items:center;justify-content:center;color:#d8ad4c;flex-shrink:0}.ms-meta-consent h2{font:600 15px/1.35 system-ui,sans-serif;margin:0;color:#f6e6c5}.ms-meta-consent .ms-meta-description{margin:0;color:#f2ede4;font-size:13px;line-height:1.4}.ms-meta-consent a{color:#edc56d;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}.ms-meta-actions{display:flex;align-items:center;gap:9px;min-width:188px}.ms-meta-actions button{min-width:83px;min-height:40px;border:1px solid #c9a14e;border-radius:7px;padding:8px 14px;font:600 13px/1.2 system-ui,sans-serif;cursor:pointer}.ms-meta-no{color:#fff;background:#111}.ms-meta-yes{color:#15120d;background:#e4b756}.ms-meta-consent button:focus-visible,.ms-meta-consent a:focus-visible,.ms-meta-manage:focus-visible{outline:3px solid #f0ce7e;outline-offset:3px}.ms-meta-consent button:hover{filter:brightness(1.09)}.ms-meta-consent .ms-meta-preview{grid-column:1/-1;margin:0;color:#edca7b;font-size:12px}.ms-meta-manage{display:inline-block;min-height:44px;border:0;background:transparent;color:inherit;cursor:pointer;text-decoration:underline;padding:9px;font:inherit}@media(max-width:780px){.ms-meta-consent{grid-template-columns:1fr auto;padding:11px 13px;column-gap:10px;row-gap:5px}.ms-meta-identity{border-right:0;padding-right:0}.ms-meta-consent .ms-meta-description{grid-column:1/-1;grid-row:2}.ms-meta-actions{grid-column:2;grid-row:1;min-width:0}.ms-meta-actions button{min-width:65px;padding:7px 12px;min-height:38px}.ms-meta-consent h2{font-size:14px}}@media(max-width:480px){.ms-meta-consent{bottom:8px;width:calc(100% - 16px);grid-template-columns:1fr;padding:10px 12px;row-gap:7px}.ms-meta-identity{grid-column:1;grid-row:1}.ms-meta-consent .ms-meta-description{grid-column:1;grid-row:2;font-size:12px}.ms-meta-actions{grid-column:1;grid-row:3;width:100%;gap:8px}.ms-meta-actions button{flex:1;min-height:40px}.ms-meta-consent .ms-meta-preview{grid-column:1}}";
     document.head.appendChild(style);
     var footer = document.querySelector("#site-footer, footer, .homepage-footer");
-    (footer || document.body).appendChild(button("Tracking preferences", "ms-meta-manage", openBanner));
+    (footer || document.body).appendChild(button("Cookie preferences", "ms-meta-manage", openBanner));
     if (getChoice() === null || preview) openBanner();
     if (getChoice() === "accepted") initPixel();
   }
