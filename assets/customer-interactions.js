@@ -35,3 +35,6 @@ document.addEventListener('click',e=>{
   tag.dataset.productionEnabled = "true";
   document.head.appendChild(tag);
 })();
+
+/* Until activation, consent links use the currently effective HTML Terms. */
+(()=>{'use strict';const fix=()=>document.querySelectorAll('form a[href="/terms-and-conditions/"],[data-terms-consent] a[href="/terms-and-conditions/"]').forEach(a=>{a.href='/terms-and-conditions/current/';});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix();})();
