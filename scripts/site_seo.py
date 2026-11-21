@@ -93,4 +93,7 @@ def finalize(source,path):
     source=re.sub(r'<script src="/assets/tailoring-enquiry[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/tailoring-enquiry[.]css(?:\?[^"]*)?">','',source)
     if 'data-tailoring-whatsapp' in source:
         source=source.replace('</head>','<link rel="stylesheet" href="/assets/tailoring-enquiry.css?v=r52"><script src="/assets/tailoring-enquiry.js?v=r52" defer></script></head>',1)
+    # Meta Pixel is consent gated and has a separate production approval flag.
+    from meta_pixel import script_tag as meta_pixel_script_tag
+    source=source.replace('</head>',meta_pixel_script_tag()+'</head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'

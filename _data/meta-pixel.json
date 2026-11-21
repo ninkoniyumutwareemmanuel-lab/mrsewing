@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "pixelId": "29683883327873735",
+  "productionEnabled": false,
+  "status": "staging-integration-awaiting-privacy-review-and-owner-release",
+  "ownerSource": "Meta Pixel base code provided by business owner 21 November 2026",
+  "events": [
+    "PageView"
+  ],
+  "remainingApprovals": [
+    "Owner review of marketing consent and Privacy Policy disclosures",
+    "Verification of applicable Rwanda data protection obligations",
+    "Browser and Meta Events Manager tests",
+    "Separate owner authorisation to enable production tracking"
+  ]
+}
