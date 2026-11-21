@@ -359,7 +359,7 @@ picture.homepage-picture { display:contents; }
 .privacy-v2 .privacy-sidebar-note{padding:19px 12px;color:#c9c0b1;font-size:12px;line-height:1.65}
 .privacy-v2 .privacy-sidebar-note a{display:block;font-weight:650;margin-top:7px}
 .privacy-v2 .privacy-mobile-toc{display:none}
-.privacy-v2 .privacy-content{min-width:0}
+.privacy-v2 .privacy-content{min-width:0;counter-reset:pp-section}
 .privacy-v2 .privacy-summary{background:linear-gradient(120deg,#202020,#131517);border:1px solid #8a703f;border-radius:14px;padding:31px;margin-bottom:25px}
 .privacy-v2 .privacy-kicker{color:var(--pgold);text-transform:uppercase;font-size:11px;letter-spacing:.16em;font-weight:700;margin:0 0 12px}
 .privacy-v2 .privacy-summary h2{font:500 clamp(26px,3vw,35px)/1.25 Georgia,serif;color:var(--ppaper);margin:0 0 22px}
@@ -367,9 +367,9 @@ picture.homepage-picture { display:contents; }
 .privacy-v2 .privacy-summary-item{border:1px solid #514736;border-radius:9px;background:#141414;padding:16px 13px}
 .privacy-v2 .privacy-summary-item strong{display:block;color:#e7c179;font-size:13px;margin:0 0 8px;font-weight:700}
 .privacy-v2 .privacy-summary-item p{color:#d4cfc7;font-size:12px;line-height:1.65;margin:0}
-.privacy-v2 .privacy-card{margin:0 0 17px;padding:31px 34px;background:#141517;border:1px solid #3b362f;border-radius:12px;scroll-margin-top:94px}
+.privacy-v2 .privacy-card{counter-increment:pp-section;margin:0 0 17px;padding:31px 34px;background:#141517;border:1px solid #3b362f;border-radius:12px;scroll-margin-top:94px}
 .privacy-v2 .privacy-card h2{font:500 clamp(25px,3vw,34px)/1.25 Georgia,serif;color:var(--ppaper);letter-spacing:-.018em;display:flex;align-items:baseline;gap:15px;margin:0 0 18px}
-.privacy-v2 .privacy-card h2:before{content:attr(data-number);font:700 12px/1.6 system-ui,sans-serif;letter-spacing:.08em;color:var(--pgold)}
+.privacy-v2 .privacy-card h2:before{content:counter(pp-section,decimal-leading-zero);font:700 12px/1.6 system-ui,sans-serif;letter-spacing:.08em;color:var(--pgold)}
 .privacy-v2 .privacy-card p{font:400 14px/1.9 system-ui,-apple-system,"Segoe UI",sans-serif;color:#d2cbc0;margin:0 0 13px;max-width:78ch}
 .privacy-v2 .privacy-card p:last-child{margin-bottom:0}
 .privacy-v2 .privacy-card h3{font:700 15px/1.5 system-ui,sans-serif;color:#ead7af;margin:21px 0 7px}
