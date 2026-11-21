@@ -20,3 +20,5 @@ Owner attested rights to the newer photos, with authorship and independent licen
 
 ## Verification and deployment
 Compare committed homepage source components to R55 historical SHA to verify original page structure restored. Run full builder/build --check, focused original-section preservation and media-gate tests, SEO, sitemap and Terms tests, browser widths 320/390/768/1440, reduced-motion and pause. Staging only; never touch production main.
+
+**Staging noindex** remains preserved by the existing SEO build and `_headers` policy; it does not authorize main/production indexing changes.
