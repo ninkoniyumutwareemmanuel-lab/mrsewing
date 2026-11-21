@@ -174,6 +174,10 @@ def information(route):
  if route=='/customer-support/':body+=request_form('support')
  if route=='/contact/' or route=='/customer-support/':body+='<section class="release-section"><h2>Official Contacts</h2>'+link('tel:+250787411501','+250 787 411 501')+link('mailto:mrsewingfashiondesigner@gmail.com','mrsewingfashiondesigner@gmail.com')+link('https://wa.me/250787411501','WhatsApp Mr Sewing')+'</section>'
  if route=='/about/':body+='<div class="release-logo"><img src="/assets/images/mr-logo-480.webp" width="1244" height="802" alt="Official Mr Sewing Fashion logo" decoding="async"></div>'
+ if route=='/refund-policy/':
+  from refund_page import decorate as refund_decorate
+  html=frame(route,d['title'],d['intro'],refund_decorate(body+related()))
+  return html.replace('class="home-shell release-main"','class="refund-v2"',1)
  if route=='/privacy-policy/':
   from privacy_page import decorate
   html=frame(route,d['title'],d['intro'],decorate(body+related()))
