@@ -104,5 +104,5 @@ def render():
         '<span data-terms-page-number>1</span> / ' + str(pages) + '</div>'
         '<noscript><a href="' + href + '">Open the PDF directly</a></noscript>'
         '</dialog></section>'
-        '<script src="/assets/terms-reader.js" defer></script>'
+        '<script src="/assets/terms-reader.js?v=r55-20261121" defer></script>'
     )

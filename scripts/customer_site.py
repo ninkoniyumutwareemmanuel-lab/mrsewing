@@ -48,7 +48,7 @@ def frame(route,title,description,content,kind='WebPage',service=None):
  values={'title':escape(title,quote=False),'title_attr':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':'<div class="home-shell release-main">'+content+'</div>','header':component('header',route),'footer':component('footer')+'<script src="/assets/request-context.js" defer></script>','schema':json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c'),'styles':shared.site_css()+'\n'+(ROOT/'_templates/homepage-phase1.css').read_text()+'\n'+ICON_CSS}
  for key,value in values.items():source=source.replace('{{'+key+'}}',value)
  source=source.replace('class="tailoring-page"','class="tailoring-page customer-site"').replace('/assets/custom-tailoring.js','/assets/customer-site.js').replace('</head>','<link rel="stylesheet" href="/assets/customer-site.css"></head>')
- if route=='/terms-and-conditions/':source=source.replace('</head>','<link rel="stylesheet" href="/assets/terms-reader.css"></head>',1)
+ if route=='/terms-and-conditions/':source=source.replace('</head>','<link rel="stylesheet" href="/assets/terms-reader.css?v=r55-20261121"></head>',1)
  assert not re.search(r'{{\w+}}',source)
  if route==BASE:source=__import__('custom_tailoring_mobile').decorate(source)
  return source
