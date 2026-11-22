@@ -130,6 +130,9 @@ def render():
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
+        if key == 'services':
+            from homepage_video_cards import render as render_tailoring_media
+            markup = markup.replace('{{tailoring_media_cards}}', render_tailoring_media())
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
             raise ValueError(f'Unexpected document metadata/script in section: {filename}')
         markup = re.sub(r'<img\b[^>]*>', reserve_image_space, markup)
