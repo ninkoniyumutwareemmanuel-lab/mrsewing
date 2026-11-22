@@ -99,7 +99,7 @@ export function validate(body, products) {
           "Recorded stock has changed. Review your cart before submitting.",
         );
       total += p.priceRwf * x.quantity;
-    } else if (p.availability !== "Available on Orders")
+    } else if (p.availability !== "Available on Backorder")
       throw Error("This product is not available for a quotation request.");
     return {
       productId: p.id,

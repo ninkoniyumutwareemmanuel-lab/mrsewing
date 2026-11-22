@@ -178,7 +178,7 @@
           "Choose a valid variation and quantity.",
         );
       if (p.availability === "Out of Stock") return;
-      if (p.availability === "Available on Orders") {
+      if (p.availability === "Available on Backorder") {
         quote = { productId: p.id, variationId: v.id, quantity: q };
         $("#quoteContext").textContent =
           p.name + " — " + v.size + " / " + v.colour + " — quantity " + q;
