@@ -1,0 +1,77 @@
+name: Terms PDF reader release regression
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - release/terms-reader-only-2026-11-22
+      - main
+      - phase1/customer-journey-repairs
+    paths:
+      - 'scripts/terms_reader.py'
+      - 'scripts/render_terms_page_images.py'
+      - 'scripts/customer_site.py'
+      - '_templates/terms-reader.css'
+      - '_templates/terms-reader.js'
+      - 'assets/terms-reader.css'
+      - 'assets/terms-reader.js'
+      - 'assets/policy-documents/terms-and-conditions/**'
+      - 'terms-and-conditions.html'
+      - 'terms-and-conditions/**'
+      - 'tests/terms_reader_main_base.py'
+      - 'tests/terms_popup_browser.cjs'
+      - '.github/workflows/r55-terms-popup.yml'
+      - '_data/policy-documents.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render-and-verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF rasterizer only if missing
+        run: |
+          if ! command -v pdftoppm >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Render the five original approved PDF pages
+        run: |
+          python scripts/render_terms_page_images.py
+          python scripts/render_terms_page_images.py --check
+      - name: Rebuild and check the existing site
+        run: |
+          python scripts/build_site.py
+          python scripts/build_site.py --check
+      - name: R55 Terms and existing site regressions
+        run: |
+          python tests/terms_reader_main_base.py
+          python tests/seo_preservation.py
+          python tests/sitemap_discovery.py
+          python -m py_compile scripts/terms_reader.py scripts/render_terms_page_images.py scripts/customer_site.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated browser QA tooling
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test actual full-screen modal on mobile and desktop Chromium
+        run: |
+          python -m http.server 8020 --bind 127.0.0.1 > /tmp/r55-http.log 2>&1 &
+          node tests/terms_popup_browser.cjs
+      - name: Preserve actual mobile and desktop QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r55-terms-popup-browser-screenshots
+          path: artifacts/r55-terms/*.png
+          if-no-files-found: ignore
+      - name: Verify generated Terms page files match committed staging outputs
+        run: |
+          git diff --exit-code -- terms-and-conditions.html terms-and-conditions/index.html assets/policy-documents/terms-and-conditions/pages/
