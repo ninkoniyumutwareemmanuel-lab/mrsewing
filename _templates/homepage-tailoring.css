@@ -30,3 +30,47 @@
 /* Future approved silent video retains identical portrait layout. */
 .tailoring-photo-duo video{display:block;width:100%;height:100%;object-fit:cover;background:#111}
 .tailoring-photo-duo video:focus-visible{outline:3px solid #f0d48f;outline-offset:-3px}
+
+
+/* R60 staging customer guidance: responsive and accessible, tailoring first. */
+.tailor-essentials,.tailor-benefits,.tailor-programs{background:#f5f0e8;color:#231e16}
+.tailor-process,.tailor-options,.tailor-final{background:#11100f;color:#f7f1e7}
+.tailor-essentials .home-eyebrow,.tailor-benefits .home-eyebrow,.tailor-programs .home-eyebrow{color:#785510}
+.tailor-essentials h2,.tailor-benefits h2,.tailor-programs h2{color:#231e16}
+.tailor-essentials .section-heading>p:not(.home-eyebrow),.tailor-benefits .section-heading>p:not(.home-eyebrow),.tailor-programs .section-heading>p:not(.home-eyebrow){color:#50483d}
+.tailor-info-grid,.tailor-benefit-grid,.tailor-options-grid,.tailor-programs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:34px}
+.tailor-info-grid>a,.tailor-programs-grid>a{display:flex;flex-direction:column;text-decoration:none;color:#272118;background:#fffdfa;border:1px solid #d3c29d;border-radius:10px;padding:23px;min-width:0}
+.tailor-info-grid strong,.tailor-benefit-grid strong,.tailor-programs-grid strong{font:600 clamp(18px,2vw,23px)/1.3 Georgia,serif}
+.tailor-info-grid span,.tailor-programs-grid span{display:block;margin-top:11px;color:#50483f;font-size:14px;line-height:1.65}
+.tailor-info-grid small{display:block;margin-top:auto;padding-top:18px;color:#765310;font-size:13px;font-weight:700}
+.tailor-benefit-grid article{border-left:3px solid #bc933d;padding:16px 20px;background:#fffaf1;min-width:0}
+.tailor-benefit-grid article p{font-size:14px;line-height:1.65;color:#514739;margin-top:10px}
+.tailor-process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:34px 0 0;padding:0;list-style:none}
+.tailor-process-grid li{border:1px solid #75603c;border-radius:10px;padding:23px;min-width:0}
+.tailor-process-grid li>span{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#d5a43a;color:#17130b;font-weight:700;font-size:14px;margin-bottom:15px}
+.tailor-process-grid strong{display:block;font:600 20px/1.35 Georgia,serif}
+.tailor-process-grid li p{color:#ddd0ba;font-size:14px;line-height:1.6;margin-top:10px}
+.tailor-text-link{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid currentColor;border-radius:6px;padding:11px 18px;text-decoration:none;color:inherit;font-size:14px;font-weight:600}
+.tailor-options-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tailor-options-grid>a{display:flex;flex-direction:column;background:linear-gradient(145deg,#282119,#0e0d0c);border:1px solid #96733b;border-radius:10px;color:#f7f1e7;text-decoration:none;padding:25px;min-width:0}
+.tailor-options-grid .tailor-option-label{color:#e3bd6a;letter-spacing:.12em;text-transform:uppercase;font-size:10px;font-weight:700}
+.tailor-options-grid h3{font:500 clamp(24px,2.8vw,32px)/1.2 Georgia,serif;color:#f2d38d;margin:16px 0 12px}
+.tailor-options-grid p{color:#dfd3c3;font-size:14px;line-height:1.65}
+.tailor-options-grid a>span:last-child{margin-top:auto;padding-top:22px;color:#e5c27c;font-size:13px;font-weight:700}
+.tailor-programs-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tailor-final{text-align:center;border-top:1px solid #554122}
+.tailor-final .home-shell{max-width:850px}
+.tailor-final h2{color:#fff;font:500 clamp(31px,5vw,52px)/1.14 Georgia,serif;margin:16px auto}
+.tailor-final p:not(.home-eyebrow){color:#e0d6c9;font-size:16px;line-height:1.7;max-width:650px;margin:0 auto}
+.tailor-final-actions{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:28px}
+.tailor-final-actions .home-button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none}
+.tailor-essentials a:focus-visible,.tailor-benefits a:focus-visible,.tailor-process a:focus-visible,.tailor-options a:focus-visible,.tailor-programs a:focus-visible,.tailor-final a:focus-visible{outline:3px solid #d5a43a;outline-offset:4px}
+.tailoring-video-card{position:relative}.tailoring-video-card figcaption{position:absolute;bottom:0;left:0;right:0;padding:18px 12px 12px;background:linear-gradient(transparent,#000e);font-size:13px;color:#fff;pointer-events:none}
+.tailoring-video-card video{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){
+ .tailor-info-grid,.tailor-benefit-grid,.tailor-process-grid,.tailor-options-grid,.tailor-programs-grid{grid-template-columns:1fr;gap:12px;margin-top:25px}
+ .tailor-info-grid>a,.tailor-options-grid>a,.tailor-programs-grid>a,.tailor-process-grid li{padding:21px}
+ .tailor-final-actions{flex-direction:column}
+ .tailor-final-actions .home-button{width:100%}
+}
+@media(max-width:390px){.header-shop{min-width:0;padding:10px 9px;font-size:11px}}

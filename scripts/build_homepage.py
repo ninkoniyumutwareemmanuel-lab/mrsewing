@@ -23,6 +23,12 @@ SECTIONS = {
     'header': ('_templates/homepage-header.html', 'header', None),
     'hero': ('_templates/homepage-tailoring.html', 'section', ('class', 'hero-section tailoring-first-hero')),
     'services': ('_templates/homepage-tailoring.html', 'section', ('id', 'services')),
+    'information': ('_templates/homepage-tailoring.html', 'section', ('id', 'customer-information')),
+    'process': ('_templates/homepage-tailoring.html', 'section', ('id', 'tailoring-process')),
+    'benefits': ('_templates/homepage-tailoring.html', 'section', ('id', 'tailoring-benefits')),
+    'options': ('_templates/homepage-tailoring.html', 'section', ('id', 'order-options')),
+    'programs': ('_templates/homepage-tailoring.html', 'section', ('id', 'customer-programs')),
+    'final': ('_templates/homepage-tailoring.html', 'section', ('id', 'tailoring-final')),
     'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
@@ -101,7 +107,7 @@ def reserve_image_space(match):
 
 def render():
     template = (ROOT / '_templates/homepage.html').read_text().replace('{{agent_discovery}}', DISCOVERY_LINKS)
-    for retired_section in ('information','process','benefits','options','customers','programs','final'):
+    for retired_section in ('customers',):
         template = template.replace('{{'+retired_section+'}}', '')
     styles = []
     for key, (filename, tag, identifier) in SECTIONS.items():
