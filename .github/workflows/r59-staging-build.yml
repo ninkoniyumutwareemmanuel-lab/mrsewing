@@ -32,6 +32,7 @@ jobs:
           python tests/terms_reader_main_base.py
           python tests/media_sorting_r59.py
           python tests/homepage_video_gate_r59.py
+          python tests/held_media_redirects_r59.py
           python tests/shop_status_r59.py
           python scripts/prepare_silent_homepage_videos.py
           python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py scripts/customer_site.py
