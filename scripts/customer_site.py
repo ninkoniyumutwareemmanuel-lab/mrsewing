@@ -56,8 +56,8 @@ def frame(route,title,description,content,kind='WebPage',service=None):
 def service_page(ident):
  s=service_map()[ident]
  if ident=='custom-tailoring':
-  body=__import__('custom_tailoring_mobile').content(s,hero,section,link)
-  return frame(s['route'],s['title'],s['intro'],body,service=s)
+  body=__import__('tailoring_services_hub').content(s,hero,section,link)
+  return frame(s['route'],'Tailoring & Clothing Services','Professional tailoring in Kigali: choose clothing categories, discuss your own design and arrange fittings, quotations or garment services.',body,service=s)
  body=hero(ident)
  for title,text in s['sections']:
   if ident=='custom-tailoring':text=text.replace('Choose Standard Service or individually assessed VIP Service before choosing a website design (Standard Order) or your own inspiration (Special Order).','Browse Men’s or Women’s Suits, or use the Special Order alternative to describe your own inspiration.')

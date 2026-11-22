@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "source": "Owner 22 November 2026 R59 staging-only clothing hub and Showroom entry approval; photo and design visibility remain governed by the existing collection publication gate.",
+  "categories": [
+    {
+      "id": "mens-suits",
+      "name": "Men’s Suits",
+      "description": "Explore approved men's suit and formalwear references, then discuss your fit, fabric and quotation.",
+      "filterField": "gender",
+      "filterValue": "men",
+      "coverDesignId": "MS-149"
+    },
+    {
+      "id": "womens-suits",
+      "name": "Women’s Suits",
+      "description": "Explore approved women's tailored suits and outfit references for work and special occasions.",
+      "filterField": "gender",
+      "filterValue": "women",
+      "coverDesignId": "MS-151"
+    }
+  ]
+}
