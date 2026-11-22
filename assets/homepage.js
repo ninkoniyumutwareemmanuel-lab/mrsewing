@@ -59,58 +59,60 @@ function setupEnquiry(prefix,formId){
 setupEnquiry('support','supportForm');
 })();
 
-/* R63: viewport-aware silent suit-video loops, with independent pause and reduced-motion respect. */
+/* R64: silent automatic suit videos with clean visuals; tap video or use Enter/Space to pause. */
 (()=>{'use strict';
- const figures=[...document.querySelectorAll('.tailoring-video-card')];
- if(!figures.length)return;
+ const videos=[...document.querySelectorAll('.tailoring-video-card video[data-tailoring-loop]')];
+ if(!videos.length)return;
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
- const userPaused=new WeakSet(),visible=new WeakMap(),items=[];
- function reflect(v,b){
+ const manualPause=new WeakSet(),visible=new WeakMap();
+ function reflect(v){
    const playing=!v.paused;
-   b.setAttribute('aria-pressed',String(playing));
-   b.setAttribute('aria-label',(playing?'Pause ':'Play ')+(v.dataset.videoTitle||'suit')+' video');
-   b.querySelector('span').textContent=playing?'Ⅱ':'▶';
+   v.setAttribute('aria-pressed',String(playing));
+   v.setAttribute('aria-label',(playing?'Pause ':'Play ')+(v.dataset.videoTitle||'suit reference')+' video; tap or press Enter');
  }
- function pause(v,b){v.pause();reflect(v,b);}
- function start(v,b,manual=false){
+ function stop(v){v.pause();reflect(v);}
+ function play(v,manual=false){
    if(document.hidden||!visible.get(v))return;
-   if(!manual&&(reduce.matches||userPaused.has(v)))return;
+   if(!manual&&(reduce.matches||manualPause.has(v)))return;
    v.muted=true;
-   try{const task=v.play();if(task&&typeof task.catch==='function')task.catch(()=>reflect(v,b));}
-   catch(_){/* Autoplay restriction leaves a manual Play button. */}
-   reflect(v,b);
+   try{
+     const task=v.play();
+     if(task&&typeof task.catch==='function')task.catch(()=>reflect(v));
+   }catch(_){/* Browser policy may block autoplay; the poster remains. */}
+   reflect(v);
  }
- figures.forEach(fig=>{
-   const v=fig.querySelector('video[data-tailoring-loop]'),b=fig.querySelector('[data-video-toggle]');
-   if(!v||!b)return;
-   v.muted=true;v.loop=true;v.playsInline=true;
-   v.controls=false;b.hidden=false;
-   visible.set(v,false);items.push([v,b,fig]);
-   v.addEventListener('play',()=>reflect(v,b));
-   v.addEventListener('pause',()=>reflect(v,b));
-   b.addEventListener('click',()=>{
-     if(v.paused){userPaused.delete(v);start(v,b,true);}
-     else{userPaused.add(v);pause(v,b);}
+ function toggle(v){
+   if(v.paused){manualPause.delete(v);play(v,true);}
+   else{manualPause.add(v);stop(v);}
+ }
+ videos.forEach(v=>{
+   v.controls=false;v.muted=true;v.loop=true;v.playsInline=true;
+   v.setAttribute('role','button');v.tabIndex=0;
+   visible.set(v,false);
+   v.addEventListener('play',()=>reflect(v));
+   v.addEventListener('pause',()=>reflect(v));
+   v.addEventListener('click',()=>toggle(v));
+   v.addEventListener('keydown',e=>{
+     if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(v);}
    });
-   reflect(v,b);
+   reflect(v);
  });
- if(!items.length)return;
  const observer=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{
    entries.forEach(entry=>{
-     const pair=items.find(([, ,fig])=>fig===entry.target);
-     if(!pair)return;
-     const [v,b]=pair;
+     const v=entry.target;
      const canPlay=entry.isIntersecting&&entry.intersectionRatio>=.35;
      visible.set(v,canPlay);
-     if(canPlay)start(v,b);else pause(v,b);
+     if(canPlay)play(v);else stop(v);
    });
  },{threshold:[0,.35,.65]}):null;
- if(observer)items.forEach(([, ,fig])=>observer.observe(fig));
- else items.forEach(([v,b])=>{visible.set(v,true);start(v,b);});
- function reconcile(){items.forEach(([v,b])=>{if(document.hidden||reduce.matches)pause(v,b);else start(v,b);});}
+ if(observer)videos.forEach(v=>observer.observe(v));
+ else videos.forEach(v=>{visible.set(v,true);play(v);});
+ function reconcile(){videos.forEach(v=>{
+   if(document.hidden||reduce.matches)stop(v);else play(v);
+ });}
  document.addEventListener('visibilitychange',reconcile);
  reduce.addEventListener('change',reconcile);
- window.addEventListener('pagehide',()=>items.forEach(([v,b])=>pause(v,b)));
+ window.addEventListener('pagehide',()=>videos.forEach(stop));
 })();
 /* Three original text slides; four-second rotation with passive touch hold and transient focus/hover pause. */
 (()=>{'use strict';
@@ -139,13 +141,25 @@ document.addEventListener('visibilitychange',reset);motion.addEventListener('cha
 window.addEventListener('pagehide',stop);window.addEventListener('pageshow',reset);
 reorder();root.dataset.enhanced='true';root.querySelector('.carousel-controls').hidden=false;reset();
 })();
-/* Staging R59: each row has an accessible pause; Escape pauses all. */
+/* R64: whole-gallery tap/keyboard motion toggle; no visible pause button. */
 (()=>{'use strict';
- const rows=[...document.querySelectorAll('[data-moving-gallery]')];if(!rows.length)return;
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+ const rows=[...document.querySelectorAll('[data-moving-gallery]')];
+ if(!rows.length)return;
  document.documentElement.setAttribute('data-galleries-ready','');
- const state=(row,paused)=>{row.setAttribute('data-gallery-paused',String(paused));const button=row.previousElementSibling;if(button?.matches('[data-gallery-pause]')){button.setAttribute('aria-pressed',String(paused));button.textContent=paused?'Resume motion':'Pause motion';}};
- rows.forEach(row=>{const button=row.previousElementSibling;if(!button?.matches('[data-gallery-pause]'))return;button.hidden=reduce.matches;state(row,false);button.addEventListener('click',()=>state(row,row.getAttribute('data-gallery-paused')!=='true'));});
- reduce.addEventListener('change',()=>rows.forEach(row=>{const button=row.previousElementSibling;if(button?.matches('[data-gallery-pause]'))button.hidden=reduce.matches;}));
- document.addEventListener('keydown',e=>{if(e.key==='Escape')rows.forEach(row=>state(row,true));});
+ const state=(row,paused)=>{
+   row.setAttribute('data-gallery-paused',String(paused));
+   row.setAttribute('aria-pressed',String(paused));
+   row.setAttribute('aria-label',(row.dataset.galleryTitle||'Suit gallery')+'; tap or press Enter to '+(paused?'resume':'pause')+' moving photographs');
+ };
+ rows.forEach(row=>{
+   state(row,false);
+   const toggle=()=>state(row,row.getAttribute('data-gallery-paused')!=='true');
+   row.addEventListener('click',toggle);
+   row.addEventListener('keydown',e=>{
+     if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}
+   });
+ });
+ document.addEventListener('keydown',e=>{
+   if(e.key==='Escape')rows.forEach(row=>state(row,true));
+ });
 })();
