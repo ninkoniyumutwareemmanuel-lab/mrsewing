@@ -80,6 +80,8 @@ def load():
     priorities={'m1.jpeg':0,'w-classicsuittwo1.jpeg':1,'r4.jpeg':2,'r7.jpeg':3,'h1.jpeg':4}
     path_by_id=registry
     published.sort(key=lambda d:(priorities.get(path_by_id[d['id']],10),d['id']))
+    from media_sorting import newest_first
+    published=newest_first(published, evidence=source_records)
     return published,inventory
 
 def picture(image,eager=False):

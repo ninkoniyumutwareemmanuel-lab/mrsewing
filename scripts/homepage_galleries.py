@@ -5,18 +5,24 @@ import math,re
 def collection_items(gender):
  from build_collections import load
  from suit_references import categories,references,model
- designs=load()[0];labels=model()['references'];items=[];seen=set()
+ designs=load()[0];labels=model()['references'];items=[];seen=set();eligible={}
  for category in categories():
   if category['gender']!=gender or category.get('homepagePreview') is False:continue
   for design in references(category,designs):
-   for photo in design['images']:
-    if photo['src'] in seen:continue
-    seen.add(photo['src']);items.append({'id':design['id'],'photo':photo,'caption':labels.get(design['id'],{}).get('label') or design['name'],'category':category['title'],'kind':'design'})
+   eligible.setdefault(design['id'],category['title'])
+ # Maintain the one source-driven verified-date order across categories. Photos within a design remain grouped.
+ for design in designs:
+  if design['id'] not in eligible:continue
+  for photo in design['images']:
+   if photo['src'] in seen:continue
+   seen.add(photo['src']);items.append({'id':design['id'],'photo':photo,'caption':labels.get(design['id'],{}).get('label') or design['name'],'category':eligible[design['id']],'kind':'design'})
  return items
 
 def project_items():
  from build_journey import projects
- return [{'id':p['slug'],'photo':photo,'caption':p['title'],'category':'Completed Mr Sewing project','kind':'project'} for p in projects() for photo in p['images']]
+ from media_sorting import newest_first
+ eligible=newest_first(projects())
+ return [{'id':p['slug'],'photo':photo,'caption':p['title'],'category':'Completed Mr Sewing project','kind':'project'} for p in eligible for photo in p['images']]
 
 def gallery(items,name):
  from build_collections import picture
