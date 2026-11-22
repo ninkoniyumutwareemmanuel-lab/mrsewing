@@ -25,6 +25,20 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
+      - name: Create owner-authorized silent video files and matching still posters
+        run: |
+          mkdir -p assets/videos "$RUNNER_TEMP/mrsewing-silent"
+          python scripts/prepare_silent_homepage_videos.py --output-dir "$RUNNER_TEMP/mrsewing-silent"
+          cp "$RUNNER_TEMP/mrsewing-silent/1024X768VIDEO-silent.mp4" assets/videos/suit-light-silent.mp4
+          cp "$RUNNER_TEMP/mrsewing-silent/1024X768black-silent.mp4" assets/videos/suit-black-silent.mp4
+          ffmpeg -hide_banner -loglevel error -nostdin -y -ss 1 -i 1024X768VIDEO.mp4 -frames:v 1 -q:v 3 assets/videos/suit-light-poster.jpg
+          ffmpeg -hide_banner -loglevel error -nostdin -y -ss 1 -i 1024X768black.mp4 -frames:v 1 -q:v 3 assets/videos/suit-black-poster.jpg
+          test -s assets/videos/suit-light-silent.mp4
+          test -s assets/videos/suit-black-silent.mp4
+          test -s assets/videos/suit-light-poster.jpg
+          test -s assets/videos/suit-black-poster.jpg
+          python scripts/build_site.py
+          python scripts/build_site.py --check
       - name: Check metadata, routes, media, and Terms
         run: |
           python tests/seo_preservation.py
@@ -59,6 +73,7 @@ jobs:
           git config user.name "mrsewing-staging-builder"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
+          git add assets/videos/suit-light-silent.mp4 assets/videos/suit-black-silent.mp4 assets/videos/suit-light-poster.jpg assets/videos/suit-black-poster.jpg
           if ! git diff --cached --quiet; then
             git commit -m "R59 staging generated page and asset sync [generated]"
             git push origin HEAD:phase1/customer-journey-repairs

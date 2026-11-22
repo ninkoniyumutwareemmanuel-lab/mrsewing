@@ -1,9 +1,10 @@
-"""Owner-authorised R60 staging suit-video cards with verified source hashes and muted initial playback."""
+"""R61 owner-authorised suit media, SHA-verified originals, silent clips and matching posters."""
 from pathlib import Path
 from html import escape
 import hashlib,json,re
 ROOT=Path(__file__).resolve().parents[1]
-FALLBACK=[('r7.jpeg','Light suit styling reference',2048,2056),('h2.jpeg','Tailoring styling reference',750,938)]
+FALLBACK=[('r7.jpeg','Light suit styling reference'),('h2.jpeg','Tailoring styling reference')]
+PUBLISHED=[('assets/videos/suit-light-silent.mp4','assets/videos/suit-light-poster.jpg'),('assets/videos/suit-black-silent.mp4','assets/videos/suit-black-poster.jpg')]
 def eligible(v):
  if v.get('publicationStatus')!='published':return False
  rights=v.get('usageRights') or {};meta=v.get('metadataApproval') or {}
@@ -18,10 +19,13 @@ def render():
  records=json.loads((ROOT/'_data/media-video-records.json').read_text())['videos']
  if len(records)!=2:raise ValueError('Owner review required for changed video count')
  cards=[]
- for record,(poster,alt,w,h) in zip(records,FALLBACK):
-  if not (ROOT/poster).is_file():raise ValueError('Missing reviewed image poster')
+ for record,(fallback,alt),(clip,poster) in zip(records,FALLBACK,PUBLISHED):
+  if not (ROOT/fallback).is_file():raise ValueError('Missing reviewed fallback poster')
   if eligible(record):
+   derived=(ROOT/clip).is_file() and (ROOT/poster).is_file()
+   video_path='/'+clip if derived else record['assetPath']
+   poster_path='/'+poster if derived else '/'+fallback
    label=record.get('alternativeText') or alt
-   cards.append('<figure class="tailoring-video-card"><video controls muted playsinline preload="none" poster="/'+escape(poster,quote=True)+'" aria-label="'+escape(label,quote=True)+'"><source src="'+escape(record['assetPath'],quote=True)+'" type="video/mp4">Your browser cannot play this video.</video><figcaption>'+escape(record.get('title') or 'Suit design reference')+'</figcaption></figure>')
-  else:cards.append('<figure><img src="'+escape(poster,quote=True)+'" alt="'+escape(alt,quote=True)+'" width="'+str(w)+'" height="'+str(h)+'" loading="lazy" decoding="async"></figure>')
+   cards.append('<figure class="tailoring-video-card"><video controls muted playsinline preload="none" poster="'+escape(poster_path,quote=True)+'" aria-label="'+escape(label,quote=True)+'"><source src="'+escape(video_path,quote=True)+'" type="video/mp4">Your browser cannot play this video.</video><figcaption>'+escape(record.get('title') or 'Suit design reference')+'</figcaption></figure>')
+  else:cards.append('<figure><img src="/'+escape(fallback,quote=True)+'" alt="'+escape(alt,quote=True)+'" loading="lazy" decoding="async"></figure>')
  return ''.join(cards)

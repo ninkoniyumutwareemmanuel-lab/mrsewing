@@ -1,11 +1,19 @@
-"""R60: two owner-authorised videos render with muted default controls."""
-import sys
+"""R61: two published silent suit videos have matching frame posters in generated staging."""
+import sys,json,subprocess
 from pathlib import Path
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+R=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(R/'scripts'))
 from homepage_video_cards import render
 html=render()
 assert html.count('<figure')==2 and html.count('<video')==2
 assert html.count('controls muted playsinline preload="none"')==2
-assert '/1024X768VIDEO.mp4' in html and '/1024X768black.mp4' in html
-assert 'poster="/r7.jpeg"' in html and 'poster="/h2.jpeg"' in html
-print('PASS: two authorized videos, muted default, posters and controls')
+for name in ('suit-light','suit-black'):
+ clip=R/'assets/videos'/(name+'-silent.mp4')
+ poster=R/'assets/videos'/(name+'-poster.jpg')
+ assert clip.is_file() and poster.is_file() and clip.stat().st_size>1000 and poster.stat().st_size>1000
+ assert '/assets/videos/'+name+'-silent.mp4' in html and '/assets/videos/'+name+'-poster.jpg' in html
+ probe=subprocess.run(['ffprobe','-v','error','-show_streams','-of','json',str(clip)],capture_output=True,text=True,check=True)
+ streams=json.loads(probe.stdout)['streams']
+ assert len([s for s in streams if s.get('codec_type')=='video'])==1
+ assert not [s for s in streams if s.get('codec_type')=='audio']
+print('PASS: both matching video posters and playable video streams without audio')
