@@ -131,10 +131,6 @@ def render():
                     span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
                     items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
             markup = markup.replace('{{customer_guides}}', ''.join(items))
-        if key == 'contact':
-            # The approved PDF is staging review only. Customer consent must
-            # continue to open the currently effective online Terms.
-            markup = markup.replace('href="/terms-and-conditions/"', 'href="/terms-and-conditions/current/"')
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
@@ -154,9 +150,6 @@ def render():
     from homepage_galleries import suit_section,moments_gallery,shop_category_section
     template=template.replace('{{suit_collections}}',suit_section()+shop_category_section()).replace('{{moments_gallery}}',moments_gallery())
     styles.append((ROOT/'_templates/homepage-galleries.css').read_text())
-    styles.append((ROOT/'_templates/homepage-r57-additions.css').read_text())
-    from homepage_r57_additions import portrait_showcase, featured_photo
-    template=template.replace('{{homepage_portrait_media}}',portrait_showcase()).replace('{{homepage_feature_photo}}',featured_photo())
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
     styles.append((ROOT/'_templates/homepage-motion.css').read_text())
@@ -178,7 +171,7 @@ def main():
     args = parser.parse_args()
     output = finalize(render(), ROOT/'index.html')
     destination = ROOT / 'index.html'
-    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text() + (ROOT/'_templates/homepage-galleries.js').read_text() + (ROOT/'_templates/homepage-r57-additions.js').read_text())
+    navigation = (shared.menu_script() + (ROOT/'_templates/homepage-preview.js').read_text() if HOMEPAGE_VISUAL_REVIEW else shared.menu_script() + (ROOT/'_templates/homepage-corrective.js').read_text() + (ROOT/'_templates/order-carousel.js').read_text() + (ROOT/'_templates/homepage-galleries.js').read_text())
     navigation_path = ROOT / 'assets/homepage.js'
     if args.check:
         if navigation_path.read_text() != navigation:

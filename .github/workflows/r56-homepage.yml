@@ -1,59 +1,47 @@
-name: R57 preserve original homepage, surgical enhancements
+name: R58 original homepage parity to main (staging only)
 on:
   push:
     branches:
-      - work/r57-preserve-existing-homepage-2026-11-21
+      - work/r58-restore-main-homepage-2026-11-22
       - phase1/customer-journey-repairs
     paths:
-      - 'scripts/build_homepage.py'
-      - 'scripts/homepage_galleries.py'
-      - 'scripts/homepage_r57_additions.py'
-      - '_templates/homepage*'
       - 'index.html'
       - 'assets/homepage.js'
-      - 'tests/homepage_r57.py'
-      - 'tests/homepage_r57_browser.cjs'
+      - '_templates/homepage*'
+      - 'scripts/build_homepage.py'
+      - 'scripts/homepage_galleries.py'
       - '.github/workflows/r56-homepage.yml'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  check-original-and-additions:
+  homepage-main-parity:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Rebuild full site and check generated consistency
+      - name: Ensure staged homepage files are byte-identical to approved main snapshot
         run: |
-          python scripts/build_site.py
+          git fetch --no-tags --depth=1 origin main
+          test "$(git rev-parse FETCH_HEAD)" = "f07e3b3839b0faf133af77f3aca62779b3369be5"
+          for p in \
+            index.html \
+            assets/homepage.js \
+            _templates/homepage.html \
+            _templates/homepage-sections.html \
+            _templates/homepage-galleries.css \
+            _templates/homepage-galleries.js \
+            scripts/build_homepage.py \
+            scripts/homepage_galleries.py; do
+            git show "FETCH_HEAD:$p" | cmp - "$p"
+            echo "PASS: exactly main — $p"
+          done
+      - name: Verify unchanged generated site and current Terms functionality
+        run: |
           python scripts/build_site.py --check
-      - name: Run homepage preservation, permissions and SEO tests
-        run: |
-          python tests/homepage_r57.py
+          python tests/terms_reader_main_base.py
           python tests/seo_preservation.py
           python tests/sitemap_discovery.py
-          python tests/terms_reader_main_base.py
-          python -m py_compile scripts/homepage_galleries.py scripts/homepage_r57_additions.py scripts/build_homepage.py
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install mobile/desktop browser test tools
-        run: |
-          npm install --no-save --no-package-lock playwright@1.56.1
-          npx playwright install --with-deps chromium
-      - name: Verify original homepage and new additions in Chromium
-        run: |
-          python -m http.server 8020 --bind 127.0.0.1 > /tmp/r57-server.log 2>&1 &
-          node tests/homepage_r57_browser.cjs
-      - name: Keep original-layout review screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: r57-original-homepage-with-surgical-additions
-          path: artifacts/r57-preserved-homepage/*.png
-          if-no-files-found: ignore
-      - name: Check committed homepage generated files match their preserved sources
-        run: |
-          git diff --exit-code -- index.html assets/homepage.js
+          python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py
