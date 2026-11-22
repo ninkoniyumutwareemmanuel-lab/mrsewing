@@ -73,6 +73,11 @@ def render():
         ' stroke-width="1.7"><path d="M6 2h8l5 5v15H6z"/><path d="M14 2v6h5"/>'
         '<path d="M9 14h7M9 17h5"/></svg></span>'
         '<span class="terms-popup-filename" title="' + filename + '">' + filename + '</span>'
+        '<a class="terms-popup-icon" href="' + href + '" target="_blank" rel="noopener noreferrer"'
+        ' aria-label="Open the approved PDF in a new tab" title="Open PDF">'
+        '<svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor"'
+        ' stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'
+        '<path d="M14 3h7v7M10 14L21 3M21 13v8H3V3h8"/></svg></a>'
         '<a class="terms-popup-icon" href="' + href + '" download="' + filename
         + '" aria-label="Download the original approved PDF" title="Download PDF">'
         '<svg viewBox="0 0 24 24" width="23" height="23" fill="none"'

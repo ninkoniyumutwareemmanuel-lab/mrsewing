@@ -28,6 +28,7 @@ class TermsReaderTests(unittest.TestCase):
         self.assertIn('data-terms-zoom-in',html)
         self.assertIn('data-terms-zoom-out',html)
         self.assertIn('download=',html)
+        self.assertIn('Open the approved PDF in a new tab',html)
         self.assertEqual(html.count('class="terms-popup-page"'),5)
         self.assertNotIn('<object',html)
         self.assertNotIn('This browser cannot display',html)
