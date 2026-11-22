@@ -21,6 +21,10 @@ jobs:
         run: |
           python scripts/build_site.py
           python scripts/build_site.py --check
+      - name: Install verified silent-video preparation dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
       - name: Check metadata, routes, media, and Terms
         run: |
           python tests/seo_preservation.py
