@@ -1,10 +1,10 @@
 {
-  "currentVersion": "2026-11-18-02",
+  "currentVersion": "2026-11-22-01",
   "implementationBaseline": "e4951002297df5551b03acddf76933e37c92a918",
   "ownerApprovalDate": "2026-11-13",
   "implementationResumedDate": "2026-11-18",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R50 owner directs publication of reviewed R35\u2013R49 candidate after disclosed proxy verification limitation; no new business policy; actual production deployment and rendering status require separate evidence",
+  "customerPolicyPublication": "R50 owner directs publication of reviewed R35–R49 candidate after disclosed proxy verification limitation; no new business policy; actual production deployment and rendering status require separate evidence",
   "files": {
     "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "911f1341309f8ba5d038b51b2d19a018721acbf4d2286670b6079b14d26c7386",
     "MR_SEWING_POLICY_SOURCE_MATRIX.md": "412cf5278a90add14ea25f2629562ec7d2ce024654b8849cd48f1d488f7f6654",
@@ -12,5 +12,10 @@
     "MR_SEWING_PAGE_CONTENT_MAP.md": "051a7da33617824d425f7c231138388fc958e14ad65491e9231a5c3e02f3d48e",
     "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "acee65a2a1437d293f4962f0637f366e84816362b12df6d56919752f991c368c"
   },
-  "ownerPublicationInstructionDate": "2026-11-18"
+  "ownerPublicationInstructionDate": "2026-11-18",
+  "previousPolicyReferenceVersion": "2026-11-18-02",
+  "ownerDesignDecisionDate": "2026-11-22",
+  "stagingOnlyScope": "R59 tailoring-first homepage, central Tailoring & Clothing Services hub, Showroom, Shop wording/links, accessible media projection and tested dates; no new business/legal approval",
+  "designAddendumFile": "R59_TAILORING_FIRST_OWNER_DIRECTIVE.md",
+  "policySourceFilesCarriedForwardUnmodified": true
 }
