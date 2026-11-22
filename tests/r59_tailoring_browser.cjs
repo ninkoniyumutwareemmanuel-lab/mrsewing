@@ -24,6 +24,38 @@ const dest='artifacts/r59-browser';
    assert.equal(await page.locator('.tailoring-photo-duo figcaption').count(),0,'no video captions visible');
    assert.equal(await page.locator('.tailoring-photo-duo video[controls]').count(),0,'no native video controls');
    assert.equal(await page.locator('.tailoring-photo-duo video[role="button"][tabindex="0"]').count(),2,'videos remain tap/keyboard controllable');
+
+   if(width===390){
+     const quoteLink=page.locator('#tailoring-final a[href^="/request/"]').first();
+     assert.equal(await quoteLink.count(),1,'quotation CTA remains on homepage');
+     await quoteLink.click();
+     const modal=page.locator('#mrCustomerFormPopup');
+     await modal.waitFor({state:'visible'});
+     const quote=page.frameLocator('#mrCustomerFormFrame');
+     await quote.locator('form#customerRequestForm').waitFor();
+     assert.equal(await quote.locator('form#customerRequestForm').getAttribute('data-kind'),'quotation','existing quotation form loaded');
+     assert.equal(await quote.locator('#site-header').evaluate(el=>getComputedStyle(el).display),'none','no inner page header');
+     assert.equal(await quote.locator('footer').first().evaluate(el=>getComputedStyle(el).display),'none','no inner footer');
+     assert(await quote.locator('#requestReview').count()===1,'existing review step preserved');
+     assert(await quote.locator('#requestConsent').count()===1,'existing consent preserved');
+     await page.screenshot({path:path.join(dest,'quotation-popup-390.png')});
+     await page.locator('.mr-customer-popup-close').click();
+     assert.equal(await modal.isVisible(),false,'quotation popup closed');
+     await page.goto(base+'/contact/',{waitUntil:'domcontentloaded'});
+     await page.getByRole('link',{name:/Book a Consultation/}).click();
+     const consultationPopup=page.locator('#mrCustomerFormPopup');
+     await consultationPopup.waitFor({state:'visible'});
+     const consult=page.frameLocator('#mrCustomerFormFrame');
+     await consult.locator('form#customerRequestForm').waitFor();
+     assert.equal(await consult.locator('form#customerRequestForm').getAttribute('data-kind'),'consultation');
+     assert.equal(await consult.locator('#site-header').evaluate(el=>getComputedStyle(el).display),'none','no consultation header');
+     assert.equal(await consult.locator('footer').first().evaluate(el=>getComputedStyle(el).display),'none','no consultation footer');
+     assert(await consult.locator('#consultationMethod').count()===1,'existing visit/phone methods intact');
+     assert(await consult.locator('#requestDate').count()===1,'existing date selection intact');
+     assert(await consult.locator('#requestTime').count()===1,'existing time selection intact');
+     await page.screenshot({path:path.join(dest,'consultation-popup-390.png')});
+     await page.locator('.mr-customer-popup-close').click();
+   }
    assert.equal(await page.locator('.homepage-header .header-shop').innerText(),'Shop');
    assert.equal(await page.locator('.homepage-header .header-shop').getAttribute('href'),'/shop/');
    assert.equal(await page.locator('.homepage-footer a[href="/terms-and-conditions/"]').count(),1);
