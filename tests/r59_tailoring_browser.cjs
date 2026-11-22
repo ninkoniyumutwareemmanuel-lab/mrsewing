@@ -55,6 +55,8 @@ const dest='artifacts/r59-browser';
      assert(await consult.locator('#requestTime').count()===1,'existing time selection intact');
      await page.screenshot({path:path.join(dest,'consultation-popup-390.png')});
      await page.locator('.mr-customer-popup-close').click();
+     // Return to the homepage before the existing gallery and layout assertions.
+     await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    }
    assert.equal(await page.locator('.homepage-header .header-shop').innerText(),'Shop');
    assert.equal(await page.locator('.homepage-header .header-shop').getAttribute('href'),'/shop/');
