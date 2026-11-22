@@ -21,15 +21,8 @@ HOMEPAGE_VISUAL_REVIEW = False
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
     'header': ('_templates/homepage-header.html', 'header', None),
-    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
-    'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
-    'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
-    'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
-    'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
-    'information': ('_templates/homepage-sections.html', 'section', ('id', 'customer-information')),
-    'options': ('_templates/homepage-sections.html', 'section', ('id', 'order-options')),
-    'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
-    'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
+    'hero': ('_templates/homepage-tailoring.html', 'section', ('class', 'hero-section')),
+    'services': ('_templates/homepage-tailoring.html', 'section', ('id', 'services')),
     'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
@@ -108,6 +101,8 @@ def reserve_image_space(match):
 
 def render():
     template = (ROOT / '_templates/homepage.html').read_text().replace('{{agent_discovery}}', DISCOVERY_LINKS)
+    for retired_section in ('information','process','benefits','options','customers','programs','final'):
+        template = template.replace('{{'+retired_section+'}}', '')
     styles = []
     for key, (filename, tag, identifier) in SECTIONS.items():
         source = (ROOT / filename).read_text()
@@ -148,8 +143,9 @@ def render():
     template=template.replace('{{payment_methods}}','<section id="payment-methods" class="home-section home-payments"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Pay with confidence</p><h2>Payment Methods</h2><p>We accept Mobile Money, Bank Transfer and Cryptocurrency. Our team provides payment instructions after reviewing your request.</p></div>'+payment_methods()+'</div></section>')
     styles.append((ROOT/'_templates/payment-methods.css').read_text())
     from homepage_galleries import suit_section,moments_gallery,shop_category_section
-    template=template.replace('{{suit_collections}}',suit_section()+shop_category_section()).replace('{{moments_gallery}}',moments_gallery())
+    template=template.replace('{{suit_collections}}',suit_section()).replace('{{moments_gallery}}',moments_gallery())
     styles.append((ROOT/'_templates/homepage-galleries.css').read_text())
+    styles.append((ROOT/'_templates/homepage-tailoring.css').read_text())
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
     styles.append((ROOT/'_templates/homepage-motion.css').read_text())

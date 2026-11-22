@@ -1,0 +1,28 @@
+/* R59: tailoring-first staging presentation; existing site-wide black/gold components retained. */
+.tailoring-first-hero{position:relative;min-height:min(760px,90svh);display:flex;align-items:center;isolation:isolate}
+.tailoring-first-hero .hero-content{max-width:800px}
+.tailoring-first-hero h1{font-size:clamp(39px,6.3vw,78px);line-height:1.08;max-width:790px;letter-spacing:-.035em}
+.tailoring-first-hero h1 em{font-style:normal;color:#dbb65e}
+.tailoring-first-hero .hero-description{max-width:610px;font-size:clamp(17px,2vw,22px);line-height:1.58;color:#f6f0e4}
+.tailoring-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.tailoring-hero-actions .home-button{width:auto;min-height:48px;display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:13px 19px;line-height:1.35}
+.tailoring-hero-actions .tailoring-outline{background:rgba(15,15,15,.64);color:#f6f0e4;border:1px solid #d3b36b}
+.tailoring-first-showcase{padding-block:clamp(34px,6vw,82px);background:#11100f;color:#f7f2e9}
+.tailoring-first-showcase .section-heading{margin:clamp(36px,5vw,58px) auto 30px;max-width:690px}
+.tailoring-photo-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,22px);max-width:960px;margin:0 auto}
+.tailoring-photo-duo figure{min-width:0;margin:0;border:1px solid #52452f;border-radius:12px;overflow:hidden;background:#252420;aspect-ratio:9/12}
+.tailoring-photo-duo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.tailoring-primary-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px}
+.tailoring-primary-card{display:flex;flex-direction:column;min-width:0;min-height:260px;text-align:left;text-decoration:none;color:#f5eee3;padding:clamp(22px,3.8vw,42px);background:linear-gradient(140deg,#282014,#0e0d0d 65%);border:1px solid #9e7836;border-radius:12px}
+.tailoring-primary-card h3{font:500 clamp(27px,4vw,47px)/1.18 Georgia,serif;color:#f3d38b;letter-spacing:-.025em;margin:12px 0 14px}
+.tailoring-primary-card p{font-size:clamp(14px,1.4vw,17px);line-height:1.65;color:#eee6d8;max-width:47ch}
+.tailoring-card-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:#eac77e;font-weight:700}
+.tailoring-card-link{margin-top:auto;padding-top:25px;color:#eac77e;font-size:14px;font-weight:600}
+.tailoring-vip-card{background:linear-gradient(145deg,#202020,#0d0d0d 68%);border-color:#6e5a38}
+.tailoring-feature-photo{display:block;position:relative;margin-top:clamp(22px,4vw,40px);min-height:230px;max-height:490px;overflow:hidden;border-radius:12px;border:1px solid #695435;background:#1c1c1c;color:#fff}
+.tailoring-feature-photo img{display:block;width:100%;height:clamp(230px,45vw,490px);object-fit:cover;object-position:center}
+.tailoring-feature-photo:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#000b);pointer-events:none}
+.tailoring-feature-photo>span{position:absolute;z-index:1;bottom:clamp(18px,3vw,34px);left:clamp(18px,3vw,34px);font:500 clamp(22px,3.5vw,42px)/1.2 Georgia,serif}
+.tailoring-primary-card:focus-visible,.tailoring-feature-photo:focus-visible,.tailoring-outline:focus-visible{outline:3px solid #f2d385;outline-offset:4px}
+@media(max-width:760px){.tailoring-first-hero{min-height:580px;padding-block:64px}.tailoring-hero-actions .home-button{flex:1 1 100%}.tailoring-primary-grid{grid-template-columns:1fr}.tailoring-primary-card{min-height:225px}.tailoring-photo-duo figure{aspect-ratio:9/13}}
+@media(max-width:390px){.tailoring-first-hero h1{font-size:clamp(35px,10vw,42px)}.tailoring-primary-card{padding:20px}.tailoring-photo-duo{gap:8px}}

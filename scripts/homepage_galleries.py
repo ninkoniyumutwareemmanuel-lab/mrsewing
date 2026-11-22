@@ -31,13 +31,13 @@ def gallery(items,name):
    html=re.sub(r'sizes="[^"]*"','sizes="(max-width:600px) 174px,260px"',html)
    cards.append('<figure class="moving-gallery-card" data-photo-source="'+escape(photo['src'],quote=True)+'" data-reference="'+escape(item['id'],quote=True)+'"'+(' aria-hidden="true"' if duplicate else '')+'>'+html+'<figcaption>'+escape(item['caption'])+'</figcaption></figure>')
   groups.append('<div class="moving-gallery-group"'+(' aria-hidden="true"' if group else '')+'>'+''.join(cards)+'</div>')
- return '<div class="moving-gallery" data-moving-gallery aria-label="'+escape(name,quote=True)+'"><div class="moving-gallery-track" style="--gallery-duration:'+str(len(tiles)*10)+'s">'+''.join(groups)+'</div></div>'
+ return '<button type="button" class="gallery-motion-control" data-gallery-pause aria-pressed="false" hidden>Pause motion</button><div class="moving-gallery" data-moving-gallery aria-label="'+escape(name,quote=True)+'"><div class="moving-gallery-track" style="--gallery-duration:'+str(len(tiles)*10)+'s">'+''.join(groups)+'</div></div>'
 
 def suit_section():
- result='<section id="suit-collections" class="home-section suit-collections"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Find your inspiration</p><h2>Explore Our <em>Suit Collections</em></h2><p>Discover men\'s and women\'s suit styles and find inspiration for your next outfit.</p></div><p class="gallery-motion-note">Motion follows your device preferences. Press Escape to stop gallery movement.</p>'
+ result='<section id="suit-collections" class="home-section suit-collections"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Find your inspiration</p><h2>Explore Our <em>Suit Collections</em></h2><p>Discover men\'s and women\'s suit styles and find inspiration for your next outfit.</p></div><p class="gallery-motion-note">Slow, continuous design photographs. Pause a row when needed or press Escape to stop all movement.</p>'
  for gender,title in [('men',"Men's Suits"),('women',"Women's Suits")]:
   text="Explore men's suits in Kigali, from single-breasted styles to three-piece tailoring and formalwear." if gender=='men' else "Find inspiration for women's suits in Kigali, including tailored trousers, skirt suits and three-piece styles."
-  result+='<section class="collection-preview" aria-labelledby="'+gender+'-gallery-heading"><h3 id="'+gender+'-gallery-heading">'+escape(title)+'</h3><p>'+text+'</p>'+gallery(collection_items(gender),title)+'<div class="section-action"><a class="home-button home-button-gold" href="/'+('mensuits' if gender=='men' else 'womensuits')+'/">View All '+escape(title)+'</a></div></section>'
+  result+='<section class="collection-preview" aria-labelledby="'+gender+'-gallery-heading"><h3 id="'+gender+'-gallery-heading">'+escape(title)+'</h3><p>'+text+'</p>'+gallery(collection_items(gender),title)+'<div class="section-action"><a class="home-button home-button-gold" href="/collections/?gender='+gender+'">View All '+escape(title)+'</a></div></section>'
  return result+'</div></section>'
 def moments_gallery():
  return gallery(project_items(),'Completed Mr Sewing tailoring projects')+'<div class="section-action"><a class="home-button home-button-gold" href="/our-work/">Explore Our Work</a></div>'
