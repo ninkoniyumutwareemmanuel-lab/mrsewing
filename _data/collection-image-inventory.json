@@ -6836,6 +6836,36 @@
       "legacyReferences": [
         "scripts/render_terms_page_images.py"
       ]
+    },
+    {
+      "originalImagePath": "assets/videos/suit-light-poster.jpg",
+      "sourceOriginal": "1024X768VIDEO.mp4",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "generated_owner_authorized_video_poster",
+      "rightsStatus": "owner_authorized_staging",
+      "missing": false,
+      "excludedReason": "Exact frame poster generated from owner-authorized video, not an independent design or completed client project.",
+      "legacyReferences": [
+        "scripts/homepage_video_cards.py",
+        "docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md"
+      ]
+    },
+    {
+      "originalImagePath": "assets/videos/suit-black-poster.jpg",
+      "sourceOriginal": "1024X768black.mp4",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "generated_owner_authorized_video_poster",
+      "rightsStatus": "owner_authorized_staging",
+      "missing": false,
+      "excludedReason": "Exact frame poster generated from owner-authorized video, not an independent design or completed client project.",
+      "legacyReferences": [
+        "scripts/homepage_video_cards.py",
+        "docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md"
+      ]
     }
   ],
   "missingLegacyReferences": [],
