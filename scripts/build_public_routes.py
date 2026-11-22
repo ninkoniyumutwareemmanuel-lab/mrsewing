@@ -58,7 +58,8 @@ def outputs():
     aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
     redirects='# Generated exact aliases. Cloudflare Pages preserves query strings.\n'+'\n'.join('/'+name+' '+aliases.get(name,'/' if name=='index.html' else '/'+name[:-5]+'/')+' 301' for name in json.loads((ROOT/'_data/page-seo.json').read_text()))+'\n/views.html /our-work/ 301\n/views/ /our-work/ 301\n/views /our-work/ 301\n/our-work.html /our-work/ 301\n'
     redirects+=''.join('/'+name[:-5]+'/ '+target+' 301\n/'+name[:-5]+' '+target+' 301\n' for name,target in aliases.items())
-    redirects+='/happy-customers.html /our-work/ 301\n/happy-customers /our-work/ 301\n'    redirects+='# Staging-only R59 held R53 photo/video originals: temporary redirect to 404. Do not merge to main.\n'
+    redirects+='/happy-customers.html /our-work/ 301\n/happy-customers /our-work/ 301\n'
+    redirects+='# Staging-only R59 held R53 photo/video originals: temporary redirect to 404. Do not merge to main.\n'
     redirects+=''.join(quote(path,safe='/-._~')+' /404.html 302\n' for path in held_r53_media_paths())
 
     headers='# Staging only: never apply these noindex rules to the production hostname.\nhttps://mrsewing-staging.pages.dev/*\n  X-Robots-Tag: noindex, nofollow, noarchive\nhttps://:preview.mrsewing-staging.pages.dev/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n'
