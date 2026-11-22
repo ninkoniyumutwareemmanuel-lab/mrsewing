@@ -50,8 +50,6 @@
 /happy-customers.html /our-work/ 301
 /happy-customers /our-work/ 301
 # Staging-only R59 held R53 photo/video originals: temporary redirect to 404. Do not merge to main.
-/1024X768VIDEO.mp4 /404.html 302
-/1024X768black.mp4 /404.html 302
 /burgundy-admiral-chain-brooch-double-breasted-suit-01.webp /404.html 302
 /champagne-cocoa-peak-lapel-double-breasted-suit-01.webp /404.html 302
 /crimson-admiral-chain-brooch-double-breasted-suit-03.webp /404.html 302
