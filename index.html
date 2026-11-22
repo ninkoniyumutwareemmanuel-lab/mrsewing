@@ -372,6 +372,10 @@
 @media(max-width:760px){.tailoring-first-hero{min-height:580px;padding-block:64px}.tailoring-hero-actions .home-button{flex:1 1 100%}.tailoring-primary-grid{grid-template-columns:1fr}.tailoring-primary-card{min-height:225px}.tailoring-photo-duo figure{aspect-ratio:9/13}}
 @media(max-width:390px){.tailoring-first-hero h1{font-size:clamp(35px,10vw,42px)}.tailoring-primary-card{padding:20px}.tailoring-photo-duo{gap:8px}}
 
+/* Future approved silent video retains identical portrait layout. */
+.tailoring-photo-duo video{display:block;width:100%;height:100%;object-fit:cover;background:#111}
+.tailoring-photo-duo video:focus-visible{outline:3px solid #f0d48f;outline-offset:-3px}
+
 
 /* Original licensed SVG paths; no icon font or third-party stylesheet requests. */
 .homepage-icon { display:inline-block; font-style:normal; line-height:1; }
@@ -743,8 +747,7 @@ h1,h2{letter-spacing:-.025em}h2{font-size:clamp(32px,4vw,48px);line-height:1.15}
     <div id="services-section" class="site-component"><section class="home-services home-section tailoring-first-showcase" id="services" aria-labelledby="services-title">
   <div class="home-shell">
     <div class="tailoring-photo-duo" role="group" aria-label="Tailoring inspiration photographs; video publication pending rights and poster approval">
-      <figure><img src="r7.jpeg" alt="Tailoring reference photograph featuring a light jacket and navy trousers" width="2048" height="2056" loading="lazy" decoding="async"></figure>
-      <figure><img src="h2.jpeg" alt="Tailoring reference photograph of an off-white outfit" width="750" height="938" loading="lazy" decoding="async"></figure>
+      <figure><img src="r7.jpeg" alt="Tailoring reference photograph featuring a light jacket and navy trousers" width="2048" height="2056" loading="lazy" decoding="async"></figure><figure><img src="h2.jpeg" alt="Tailoring reference photograph of an off-white outfit" width="750" height="938" loading="lazy" decoding="async"></figure>
     </div>
     <div class="section-heading centered"><p class="home-eyebrow">Made for your measurements</p><h2 id="services-title">Professional Tailoring &amp; Personal Service</h2><p>Start with your clothing design, explore suit references, or discuss the support your garment needs.</p></div>
     <div class="tailoring-primary-grid">
