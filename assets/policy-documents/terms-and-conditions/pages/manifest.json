@@ -1,0 +1,44 @@
+{
+  "sourcePdfSha256": "9b35d9384cf4d06dec88e92cfcde4c30d687ea1b126b6e0a8164784f5ee057c0",
+  "version": "1.0",
+  "publicationStatus": "staging-review",
+  "effectiveDate": null,
+  "dpi": 160,
+  "pages": [
+    {
+      "page": 1,
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-01.png",
+      "width": 1360,
+      "height": 1760,
+      "sha256": "0026915d977cacbfe4446fc25a4e2bcb3a308494c24dc654b5379410ec1c0689"
+    },
+    {
+      "page": 2,
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-02.png",
+      "width": 1360,
+      "height": 1760,
+      "sha256": "abb88b3b59ff58f410675d7b443f7bf36199a33f1032fae42e0464c5e5fee458"
+    },
+    {
+      "page": 3,
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-03.png",
+      "width": 1360,
+      "height": 1760,
+      "sha256": "b3b0eaf65519de74ef0ec921f404c90a6f4d43f7e2886cd95a0f54c5ce80b1ae"
+    },
+    {
+      "page": 4,
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-04.png",
+      "width": 1360,
+      "height": 1760,
+      "sha256": "c263a1aac19c40aab2a8ef99c3177697266f2041bf83a912355da394c5b5770c"
+    },
+    {
+      "page": 5,
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-05.png",
+      "width": 1360,
+      "height": 1760,
+      "sha256": "065d2f7e10e451be921f1ec173b49485103e1154dfbbc7e4d77e0041002cf0f2"
+    }
+  ]
+}

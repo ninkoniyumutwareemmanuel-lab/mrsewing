@@ -36,7 +36,7 @@ def frame(route,title,description,content,kind='WebPage',service=None):
  seo=json.loads((ROOT/'_data/page-seo.json').read_text()).get(route.strip('/')+'.html')
  if seo:title,description=seo['title'],seo['description']
  else:title=title+' | Mr Sewing Fashion, Kigali'
- if 'aria-label="Breadcrumb"' not in content and 'service-hero' not in content:content=breadcrumb([('Home','/'),(title.split(' | ')[0],None)])+content
+ if route!='/terms-and-conditions/' and 'aria-label="Breadcrumb"' not in content and 'service-hero' not in content:content=breadcrumb([('Home','/'),(title.split(' | ')[0],None)])+content
  graph=[{'@type':kind,'@id':DOMAIN+route+'#page','name':title,'url':DOMAIN+route,'description':description,'isPartOf':{'@id':DOMAIN+'/#website'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':DOMAIN+'/'},{'@type':'ListItem','position':2,'name':title.split(' | ')[0],'item':DOMAIN+route}]}]
  if route=='/about/':
   business=json.loads((ROOT/'_data/business.json').read_text());graph.append({'@type':'Organization','@id':business['@id'],**{k:business[k] for k in ['name','url','telephone','email','logo']},'alternateName':'Mr Sewing','parentOrganization':{'@type':'Organization','name':'NINKONIYUMUTWARE NEXUS LTD'}})
@@ -48,6 +48,7 @@ def frame(route,title,description,content,kind='WebPage',service=None):
  values={'title':escape(title,quote=False),'title_attr':escape(title,quote=True),'description':escape(description,quote=True),'route':route,'content':'<div class="home-shell release-main">'+content+'</div>','header':component('header',route),'footer':component('footer')+'<script src="/assets/request-context.js" defer></script>','schema':json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c'),'styles':shared.site_css()+'\n'+(ROOT/'_templates/homepage-phase1.css').read_text()+'\n'+ICON_CSS}
  for key,value in values.items():source=source.replace('{{'+key+'}}',value)
  source=source.replace('class="tailoring-page"','class="tailoring-page customer-site"').replace('/assets/custom-tailoring.js','/assets/customer-site.js').replace('</head>','<link rel="stylesheet" href="/assets/customer-site.css"></head>')
+ if route=='/terms-and-conditions/':source=source.replace('</head>','<link rel="stylesheet" href="/assets/terms-reader.css?v=r55-20261121"></head>',1)
  assert not re.search(r'{{\w+}}',source)
  if route==BASE:source=__import__('custom_tailoring_mobile').decorate(source)
  return source
@@ -124,7 +125,7 @@ def request_form(kind='quotation',special=False,service_id=None):
  if special:body=body.replace('<p data-standard-design><a class="request-back" href="/services/custom-tailoring/fabric/">Edit Fabric Selection</a></p>','')
  if kind=='quotation' and special:body+='<p>After reviewing your request, our team may contact you on WhatsApp to discuss your design and request reference pictures if needed. No photograph upload is required to submit.</p>'
  if kind=='quotation' and not special:body+='<aside id="designPictureSharing" hidden><button type="button" id="shareDesignPictures" class="home-button home-button-gold">Send Your Design Pictures on WhatsApp</button><p>Attach your photographs in WhatsApp and press Send. Pictures are not sent automatically. You can submit the quotation details first.</p></aside>'
- body+=fields(kind,service_id)+'<label class="request-check"><input id="requestConsent" name="Consent" type="checkbox" value="Read and requested review" required><span>'+('I agree to the '+link('/terms-and-conditions/','Terms & Conditions','')+' and have read the '+link('/privacy-policy/','Privacy Policy','') if kind in ['quotation','consultation'] else 'I have read the '+link('/privacy-policy/','Privacy Policy',''))+'. I am requesting human review, not automatic acceptance.</span></label><button type="button" id="reviewRequest" class="home-button home-button-gold" disabled>Continue</button></form><section id="requestReview" hidden aria-labelledby="review-title"><h2 id="review-title" tabindex="-1">Review Your Request</h2><dl id="reviewDetails"></dl><p>No order, appointment, payment or refund is confirmed by submitting.</p><div class="request-actions"><button id="editRequest" type="button" class="home-button">Back</button><button id="sendRequest" type="submit" disabled form="customerRequestForm" class="home-button home-button-gold">Submit '+('Refund Request' if kind=='refund' else 'Quotation Request' if kind=='quotation' else 'Consultation Request' if kind=='consultation' else 'Support Request')+'</button></div></section><p id="requestStatus" role="status" aria-live="polite"></p><section id="requestSuccess" hidden tabindex="-1" role="status"><h2>Request Submitted for Review</h2><p>The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details.</p></section></section>'
+ body+=fields(kind,service_id)+'<label class="request-check"><input id="requestConsent" name="Consent" type="checkbox" value="Read and requested review" required><span>'+('I agree to the '+link('/terms-and-conditions/current/','Terms & Conditions','')+' and have read the '+link('/privacy-policy/','Privacy Policy','') if kind in ['quotation','consultation'] else 'I have read the '+link('/privacy-policy/','Privacy Policy',''))+'. I am requesting human review, not automatic acceptance.</span></label><button type="button" id="reviewRequest" class="home-button home-button-gold" disabled>Continue</button></form><section id="requestReview" hidden aria-labelledby="review-title"><h2 id="review-title" tabindex="-1">Review Your Request</h2><dl id="reviewDetails"></dl><p>No order, appointment, payment or refund is confirmed by submitting.</p><div class="request-actions"><button id="editRequest" type="button" class="home-button">Back</button><button id="sendRequest" type="submit" disabled form="customerRequestForm" class="home-button home-button-gold">Submit '+('Refund Request' if kind=='refund' else 'Quotation Request' if kind=='quotation' else 'Consultation Request' if kind=='consultation' else 'Support Request')+'</button></div></section><p id="requestStatus" role="status" aria-live="polite"></p><section id="requestSuccess" hidden tabindex="-1" role="status"><h2>Request Submitted for Review</h2><p>The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details.</p></section></section>'
  if kind=='consultation':body=body.replace('No order, appointment, payment or refund is confirmed by submitting.','No appointment, service, order or quotation is confirmed by submitting.').replace('The submission service accepted your request. This is not confirmation of an order, appointment, production start, payment or refund approval. Our team will review the details.','The submission service accepted your consultation request for review. This does not confirm an appointment, service, order or quotation. Our team will review your preferences.')
  # Only publication-authorised references may be included in an enquiry.
  from build_collections import load,design_name,design_route
@@ -147,6 +148,10 @@ def request_page(special=False):
  return frame(route,'Special Order Design Enquiry' if special else 'Your Service Quotation Request','Review design, fabric preferences, priority and contact details before sending a quotation enquiry.',body)
 
 def information(route):
+ if route=='/terms-and-conditions/':
+  from terms_reader import render
+  d=data()['pages'][route]
+  return frame(route,d['title'],d['intro'],render())
  d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],'Compare fabric references and their quality tiers.' if route=='/guides/fabrics/' else d['intro'])
  if route=='/guides/fabrics/':
   body+=guides.fabric_guide()
@@ -231,6 +236,8 @@ def outputs():
  out[ROOT/'assets/public-api.js']=(ROOT/'_templates/public-api.js').read_text().replace('/* public-api-config */{}',json.dumps(config))
  out[ROOT/'functions/_lib/public-api-config.js']='// Non-secret public intake routing.\nexport const config='+json.dumps(config)+';\n'
  out[ROOT/'assets/customer-site.css']=(ROOT/'_templates/customer-site.css').read_text()
+ out[ROOT/'assets/terms-reader.css']=(ROOT/'_templates/terms-reader.css').read_text()
+ out[ROOT/'assets/terms-reader.js']=(ROOT/'_templates/terms-reader.js').read_text()
  import shared_components as shared
  from suit_references import categories,category_label
  out[ROOT/'assets/customer-site.js']=shared.menu_script()+'\n'+(ROOT/'_templates/customer-site.js').read_text().replace('/* suit-category-labels */{}',json.dumps({c['id']:category_label(c) for c in categories()}))

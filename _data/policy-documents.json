@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "documents": {
+    "terms-and-conditions": {
+      "id": "terms-and-conditions",
+      "title": "Terms and Conditions",
+      "route": "/terms-and-conditions/",
+      "currentVersion": null,
+      "versions": [],
+      "operationalSources": [
+        "_data/customer-policy-facts.json",
+        "_data/customer-information.json",
+        "_data/customer-faqs.json",
+        "_data/customer-release.json",
+        "_data/business.json",
+        "_data/business-hours.json",
+        "_data/suit-package-prices.json",
+        "_data/tuxedo-package-prices.json",
+        "_data/public-content-policy.json"
+      ],
+      "legacyAnchors": [
+        "2",
+        "5",
+        "6",
+        "7",
+        "8",
+        "mobile-fees"
+      ],
+      "pendingNotice": "An owner-approved PDF is available for staging review below. Its official effective date is the date of publication on the official website; the current online Terms remain available during operational reconciliation.",
+      "authority": "Owner R53 corrective instruction,19 November2026: supplied PDF content is approved. Staging review is not official production publication; retain the current online Terms until the effective date and operational scope are reconciled.",
+      "replacementWorkflow": "docs/POLICY_DOCUMENT_WORKFLOW.md",
+      "receivedVersions": [
+        {
+          "documentId": "terms-and-conditions",
+          "version": "1.0",
+          "approvalStatus": "approved",
+          "approvedBy": "Business owner",
+          "approvalDate": "2026-11-19",
+          "sourceReference": "Owner corrective implementation instruction19November2026 explicitly confirms the content of Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf is already approved.",
+          "publicationStatus": "staging-review",
+          "activationStatus": "awaiting-official-publication",
+          "effectiveDate": null,
+          "effectiveDateBasis": "official-website-publication",
+          "preparedDate": "2026-11-19",
+          "originalUploadPath": "Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf",
+          "technicalInspection": {
+            "pages": 5,
+            "bytes": 87547,
+            "pdfVersion": "1.7",
+            "encrypted": false,
+            "javascript": false,
+            "forms": "none",
+            "tagged": true,
+            "selectableText": true,
+            "legalReviewClaim": "No completed legal review is asserted.",
+            "companyRegistrationDate": null,
+            "preparationDateIsNotRegistrationDate": true
+          },
+          "reconciliation": {
+            "status": "reviewed-awaiting-activation",
+            "reviewedBy": "Codex technical consistency review",
+            "reviewedOn": "2026-11-19",
+            "reference": "docs/R53_PDF_RECONCILIATION.md; actual PDF text/render and nine current operational records compared. Owner content approval is preserved; this is not a claim of legal review.",
+            "sourceFingerprints": {
+              "_data/customer-policy-facts.json": "f3de159e051c18e51633b3877f19e3d0f0eba25a994d411fdcad8c6d37bef7a9",
+              "_data/customer-information.json": "bb5021f3321b51c0fe29da26b16a2cf83b836624ede4e47e48e2e45731a910a3",
+              "_data/customer-faqs.json": "669607c18ebfd4bedcb0fc51e143de0d7a2edb0ba2fae6dff2f4347fc0b21b22",
+              "_data/customer-release.json": "fa69d204f99ea5fd31f3397d7ad9f8d6854ac6835927765dcc01c51a505e0f74",
+              "_data/business.json": "6bfc64176e23891b66ad7c83761a4853e2dfd7a871f43104d4025cd246150105",
+              "_data/business-hours.json": "0351beadad0894ae9153d226cb42af50c308dbfa7512ee75b262f6b1d7537d40",
+              "_data/suit-package-prices.json": "dffc7708cd13c7066a72603a3f2de24a50ba640547e199008266c9ebaed934e9",
+              "_data/tuxedo-package-prices.json": "52dbeebc7c8c45301b58dc69114aeec7cf91d04821670987457e0c50d08125ae",
+              "_data/public-content-policy.json": "62979014885b5e71e87113f041fffc9eb0d3b8f3d65e703104328a90c72f37af"
+            },
+            "activationRequirements": [
+              "Record the actual publication date on the official Mr Sewing Fashion website when an authorized official release occurs;19November2026 is the preparation date and is not invented as an effective or company-registration date.",
+              "On official activation, reconcile the approved PDF section5 standalone-service default70%/30% with current operational guidance that leaves standalone payment percentages to each accepted quotation. Preserve existing agreed quotations and service exceptions.",
+              "On official activation, document the approved contractual PDF section7 surcharge disclosure as the scoped exception to current R51 public service-rate presentation. Its35%/25%/60% figures match approved internal facts; no internal rate change is required."
+            ]
+          },
+          "sourceFilename": "Mr_Sewing_Fashion_Terms_and_Conditions_v1_Approved.pdf",
+          "sourcePath": ".github/policy-documents/terms-and-conditions/1.0.pdf",
+          "publishedPath": "/assets/policy-documents/terms-and-conditions/1.0.pdf",
+          "sha256": "9b35d9384cf4d06dec88e92cfcde4c30d687ea1b126b6e0a8164784f5ee057c0"
+        }
+      ],
+      "mainBaselineReview": {
+        "status": "pending-fresh-technical-comparison",
+        "baselineMainCommit": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+        "note": "R53's dated operational-source fingerprints document the reviewed R53 staging state, not this newer main-derived baseline. No new rule reconciliation, legal verification or official PDF activation is claimed."
+      }
+    }
+  }
+}
