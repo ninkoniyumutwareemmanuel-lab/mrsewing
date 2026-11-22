@@ -6,8 +6,10 @@ sys.path.insert(0,str(R/'scripts'))
 from homepage_video_cards import render
 html=render()
 assert html.count('<figure')==2 and html.count('<video')==2
-assert html.count('controls muted loop playsinline preload="none"')==2
-assert html.count('data-tailoring-loop')==2 and html.count('data-video-toggle hidden')==2
+assert html.count('data-tailoring-loop muted loop playsinline preload="none"')==2
+assert html.count('role="button"')==2 and html.count('tabindex="0"')==2
+assert '<figcaption>' not in html and 'data-video-toggle' not in html
+assert ' controls ' not in html
 for name in ('suit-light','suit-black'):
  clip=R/'assets/videos'/(name+'-silent.mp4')
  poster=R/'assets/videos'/(name+'-poster.jpg')

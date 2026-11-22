@@ -65,7 +65,7 @@
 .tailor-final-actions{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:28px}
 .tailor-final-actions .home-button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none}
 .tailor-essentials a:focus-visible,.tailor-benefits a:focus-visible,.tailor-process a:focus-visible,.tailor-options a:focus-visible,.tailor-programs a:focus-visible,.tailor-final a:focus-visible{outline:3px solid #d5a43a;outline-offset:4px}
-.tailoring-video-card{position:relative}.tailoring-video-card figcaption{position:absolute;bottom:0;left:0;right:0;padding:18px 12px 12px;background:linear-gradient(transparent,#000e);font-size:13px;color:#fff;pointer-events:none}
+.tailoring-video-card{position:relative}
 .tailoring-video-card video{display:block;width:100%;height:100%;object-fit:cover}
 @media(max-width:760px){
  .tailor-info-grid,.tailor-benefit-grid,.tailor-process-grid,.tailor-options-grid,.tailor-programs-grid{grid-template-columns:1fr;gap:12px;margin-top:25px}
@@ -83,8 +83,12 @@
 @media(min-width:761px){.tailoring-photo-duo{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .tailoring-video-card{position:relative;isolation:isolate}
 .tailoring-video-card video{width:100%;height:100%;display:block;object-fit:cover;background:#151311}
-.tailoring-video-card figcaption{bottom:0;left:0;right:0;padding:36px 72px 17px 18px;background:linear-gradient(0deg,rgba(0,0,0,.84),transparent);font-size:clamp(13px,2vw,16px);line-height:1.35;font-weight:600;letter-spacing:.015em;color:#fff;pointer-events:none}
-.tailoring-video-toggle{position:absolute;z-index:2;bottom:13px;right:13px;display:grid;place-items:center;width:48px;height:48px;padding:0;border-radius:50%;border:1px solid #e7c984;background:rgba(12,11,10,.83);color:#f6deb0;cursor:pointer;font:600 18px/1 Arial,sans-serif}
-.tailoring-video-toggle:hover{background:rgba(39,29,13,.94)}
-.tailoring-video-toggle:focus-visible{outline:3px solid #f5da92;outline-offset:3px}
-.tailoring-video-toggle[hidden]{display:none!important}
+
+
+
+
+
+
+/* R64: moving portraits have no visible captions or controls; direct video tap/keyboard can pause. */
+.tailoring-video-card video{cursor:pointer}
+.tailoring-video-card video:focus-visible{outline:3px solid #f0d48f;outline-offset:-3px}
