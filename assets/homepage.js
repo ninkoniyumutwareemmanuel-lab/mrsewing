@@ -58,6 +58,60 @@ function setupEnquiry(prefix,formId){
 }
 setupEnquiry('support','supportForm');
 })();
+
+/* R63: viewport-aware silent suit-video loops, with independent pause and reduced-motion respect. */
+(()=>{'use strict';
+ const figures=[...document.querySelectorAll('.tailoring-video-card')];
+ if(!figures.length)return;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+ const userPaused=new WeakSet(),visible=new WeakMap(),items=[];
+ function reflect(v,b){
+   const playing=!v.paused;
+   b.setAttribute('aria-pressed',String(playing));
+   b.setAttribute('aria-label',(playing?'Pause ':'Play ')+(v.dataset.videoTitle||'suit')+' video');
+   b.querySelector('span').textContent=playing?'Ⅱ':'▶';
+ }
+ function pause(v,b){v.pause();reflect(v,b);}
+ function start(v,b,manual=false){
+   if(document.hidden||!visible.get(v))return;
+   if(!manual&&(reduce.matches||userPaused.has(v)))return;
+   v.muted=true;
+   try{const task=v.play();if(task&&typeof task.catch==='function')task.catch(()=>reflect(v,b));}
+   catch(_){/* Autoplay restriction leaves a manual Play button. */}
+   reflect(v,b);
+ }
+ figures.forEach(fig=>{
+   const v=fig.querySelector('video[data-tailoring-loop]'),b=fig.querySelector('[data-video-toggle]');
+   if(!v||!b)return;
+   v.muted=true;v.loop=true;v.playsInline=true;
+   v.controls=false;b.hidden=false;
+   visible.set(v,false);items.push([v,b,fig]);
+   v.addEventListener('play',()=>reflect(v,b));
+   v.addEventListener('pause',()=>reflect(v,b));
+   b.addEventListener('click',()=>{
+     if(v.paused){userPaused.delete(v);start(v,b,true);}
+     else{userPaused.add(v);pause(v,b);}
+   });
+   reflect(v,b);
+ });
+ if(!items.length)return;
+ const observer=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{
+     const pair=items.find(([, ,fig])=>fig===entry.target);
+     if(!pair)return;
+     const [v,b]=pair;
+     const canPlay=entry.isIntersecting&&entry.intersectionRatio>=.35;
+     visible.set(v,canPlay);
+     if(canPlay)start(v,b);else pause(v,b);
+   });
+ },{threshold:[0,.35,.65]}):null;
+ if(observer)items.forEach(([, ,fig])=>observer.observe(fig));
+ else items.forEach(([v,b])=>{visible.set(v,true);start(v,b);});
+ function reconcile(){items.forEach(([v,b])=>{if(document.hidden||reduce.matches)pause(v,b);else start(v,b);});}
+ document.addEventListener('visibilitychange',reconcile);
+ reduce.addEventListener('change',reconcile);
+ window.addEventListener('pagehide',()=>items.forEach(([v,b])=>pause(v,b)));
+})();
 /* Three original text slides; four-second rotation with passive touch hold and transient focus/hover pause. */
 (()=>{'use strict';
 const root=document.querySelector('[data-order-carousel]');if(!root)return;
