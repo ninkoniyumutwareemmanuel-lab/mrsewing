@@ -74,3 +74,17 @@
  .tailor-final-actions .home-button{width:100%}
 }
 @media(max-width:390px){.header-shop{min-width:0;padding:10px 9px;font-size:11px}}
+
+/* R63: portrait videos stack on mobile and become adjacent desktop motion cards. */
+@media(max-width:760px){
+ .tailoring-photo-duo{grid-template-columns:minmax(0,1fr);max-width:460px;gap:18px}
+ .tailoring-photo-duo figure{aspect-ratio:4/5;max-height:560px}
+}
+@media(min-width:761px){.tailoring-photo-duo{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tailoring-video-card{position:relative;isolation:isolate}
+.tailoring-video-card video{width:100%;height:100%;display:block;object-fit:cover;background:#151311}
+.tailoring-video-card figcaption{bottom:0;left:0;right:0;padding:36px 72px 17px 18px;background:linear-gradient(0deg,rgba(0,0,0,.84),transparent);font-size:clamp(13px,2vw,16px);line-height:1.35;font-weight:600;letter-spacing:.015em;color:#fff;pointer-events:none}
+.tailoring-video-toggle{position:absolute;z-index:2;bottom:13px;right:13px;display:grid;place-items:center;width:48px;height:48px;padding:0;border-radius:50%;border:1px solid #e7c984;background:rgba(12,11,10,.83);color:#f6deb0;cursor:pointer;font:600 18px/1 Arial,sans-serif}
+.tailoring-video-toggle:hover{background:rgba(39,29,13,.94)}
+.tailoring-video-toggle:focus-visible{outline:3px solid #f5da92;outline-offset:3px}
+.tailoring-video-toggle[hidden]{display:none!important}

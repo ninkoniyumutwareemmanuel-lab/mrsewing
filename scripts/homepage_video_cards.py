@@ -26,6 +26,6 @@ def render():
    video_path='/'+clip if derived else record['assetPath']
    poster_path='/'+poster if derived else '/'+fallback
    label=record.get('alternativeText') or alt
-   cards.append('<figure class="tailoring-video-card"><video controls muted playsinline preload="none" poster="'+escape(poster_path,quote=True)+'" aria-label="'+escape(label,quote=True)+'"><source src="'+escape(video_path,quote=True)+'" type="video/mp4">Your browser cannot play this video.</video><figcaption>'+escape(record.get('title') or 'Suit design reference')+'</figcaption></figure>')
+   cards.append('<figure class="tailoring-video-card"><video data-tailoring-loop controls muted loop playsinline preload="none" poster="'+escape(poster_path,quote=True)+'" aria-label="'+escape(label,quote=True)+'" data-video-title="'+escape(record.get('title') or 'Suit design',quote=True)+'"><source src="'+escape(video_path,quote=True)+'" type="video/mp4">Your browser cannot play this video.</video><figcaption>'+escape(record.get('title') or 'Suit design reference')+'</figcaption><button type="button" class="tailoring-video-toggle" data-video-toggle hidden aria-label="Play '+escape(record.get('title') or 'suit',quote=True)+' video" aria-pressed="false"><span aria-hidden="true">▶</span></button></figure>')
   else:cards.append('<figure><img src="/'+escape(fallback,quote=True)+'" alt="'+escape(alt,quote=True)+'" loading="lazy" decoding="async"></figure>')
  return ''.join(cards)
