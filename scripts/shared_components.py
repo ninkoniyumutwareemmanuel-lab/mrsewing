@@ -78,7 +78,7 @@ def services_picker(label='Explore Our Services'):
     """Reuse exactly the header's service links; there is no second navigation list."""
     from html import escape
     source=(ROOT/'_templates/homepage-header.html').read_text()
-    match=re.search(r'<li class="services-dropdown">\s*(<details(?:\s[^>]*)?>.*?</details>)\s*</li>',source,re.S)
+    match=re.search(r'<li class="services-dropdown"(?:\s[^>]*)?>\s*(<details(?:\s[^>]*)?>.*?</details>)\s*</li>',source,re.S)
     if not match:raise ValueError('The approved header Services component was not found')
     fragment=match[1]
     if len(re.findall(r'<a\b',fragment))!=5:raise ValueError('Expected the five approved Services destinations')
