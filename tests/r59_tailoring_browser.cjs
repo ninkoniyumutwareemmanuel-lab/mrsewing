@@ -58,6 +58,8 @@ const dest='artifacts/r59-browser';
      // Return to the homepage before the existing gallery and layout assertions.
      await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    }
+   assert.equal(await page.locator('#home-navigation > ul > li.services-dropdown').evaluate(el=>el.hidden),true,'redundant Services menu hidden');
+   assert.equal(await page.locator('.tailoring-primary-card[href="/services/custom-tailoring/"]').count(),1,'Tailoring & Clothing Services remains available from home');
    assert.equal(await page.locator('.homepage-header .header-shop').innerText(),'Shop');
    assert.equal(await page.locator('.homepage-header .header-shop').getAttribute('href'),'/shop/');
    assert.equal(await page.locator('.homepage-footer a[href="/terms-and-conditions/"]').count(),1);
