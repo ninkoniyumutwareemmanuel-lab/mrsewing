@@ -20,3 +20,56 @@
 .tailoring-hub-service .home-button{margin-top:auto;align-self:flex-start;padding:12px 20px;min-height:44px}
 .tailoring-hub-category:focus-visible,.tailoring-hub-service .home-button:focus-visible{outline:3px solid #f0d48f;outline-offset:4px}
 @media(max-width:660px){.tailoring-hub-info,.tailoring-hub-service-grid,.tailoring-hub-category-grid{grid-template-columns:1fr}.tailoring-hub-category picture img,.tailoring-hub-category>img{height:clamp(240px,68vw,370px)}}
+
+
+/* R67 staging: compact policy facts, fabric decisions and readable customer journeys. */
+.tailoring-hub-essentials>p,
+.tailoring-hub-fabric>p,
+.tailoring-hub-faq>p,
+.tailoring-hub-final>p{max-width:76ch;line-height:1.7;color:#e3ded3}
+.tailoring-hub-essentials .home-eyebrow,
+.tailoring-hub-fabric .home-eyebrow,
+.tailoring-hub-faq .home-eyebrow{color:#dfb85f;font-size:12px;letter-spacing:.14em}
+.tailoring-hub-fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:24px 0}
+.tailoring-hub-fact{min-width:0;padding:clamp(16px,2.4vw,25px);border:1px solid #63512c;border-radius:10px;background:#191714}
+.tailoring-hub-fact h3{margin:0 0 9px;color:#e9dfcd;font:600 13px/1.45 Arial,Helvetica,sans-serif}
+.tailoring-hub-fact strong{display:block;margin-bottom:10px;color:#f3d68d;font:500 clamp(21px,2.7vw,31px)/1.2 Georgia,serif}
+.tailoring-hub-fact p{color:#e6dfd3;font-size:14px;line-height:1.65;margin:0}
+.tailoring-hub-small-note{margin:18px 0 9px!important;font-size:14px;line-height:1.65}
+.tailoring-hub-small-note a,.tailoring-hub-fabric a,.tailoring-hub-faq a,.tailoring-hub-combined a{color:#f0d48f;text-underline-offset:3px}
+.tailoring-hub-policy-details{margin:0 0 16px;padding:14px 18px;border:1px solid #655331;border-radius:8px;background:#161613}
+.tailoring-hub-policy-details summary,.tailoring-hub-faq-list summary{min-height:44px;display:list-item;padding:10px 0;cursor:pointer;color:#f2d792;font-weight:600;line-height:1.5}
+.tailoring-hub-policy-details p,.tailoring-hub-faq-list p{margin:4px 0 10px;font-size:14px;line-height:1.7;color:#e3ded3}
+.tailoring-hub-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;padding:0;margin:25px 0;list-style:none}
+.tailoring-hub-steps li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;padding:19px 16px;background:#191714;border:1px solid #55482f;border-radius:9px}
+.tailoring-hub-step-number{font:500 20px/1.3 Georgia,serif;color:#f0d48f}
+.tailoring-hub-steps h3{margin:0 0 8px;font:500 21px/1.35 Georgia,serif;color:#f0d48f}
+.tailoring-hub-steps p{margin:0;color:#e6dfd3;font-size:14px;line-height:1.65}
+.tailoring-hub-fabric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:26px 0 10px}
+.tailoring-hub-fabric-card{display:flex;flex-direction:column;min-width:0;padding:clamp(18px,2.5vw,28px);background:#191714;border:1px solid #63512c;border-radius:10px}
+.tailoring-hub-fabric-card h3,.tailoring-hub-combined h3{margin:0 0 10px;color:#f0d48f;font:500 clamp(20px,2.5vw,27px)/1.3 Georgia,serif}
+.tailoring-hub-fabric-card p,.tailoring-hub-combined p{margin:0;color:#e6dfd3;font-size:15px;line-height:1.7}
+.tailoring-hub-fabric-card .home-text-link{margin-top:auto;padding-top:19px}
+.tailoring-hub-combined{margin:8px 0 19px;padding:23px 25px;border:1px solid #8b7041;border-radius:10px;background:#201b13}
+.tailoring-hub-combined .home-text-link{margin-top:12px}
+.tailoring-hub-faq-list{margin:25px 0 16px;border-top:1px solid #55482f}
+.tailoring-hub-faq-list details{border-bottom:1px solid #55482f;padding:6px 4px}
+.tailoring-hub-final{border-top:1px solid #655331}
+.tailoring-hub-final p{margin:17px 0 23px}
+.tailoring-hub-essentials a:focus-visible,.tailoring-hub-fabric a:focus-visible,
+.tailoring-hub-faq a:focus-visible,.tailoring-hub-combined a:focus-visible,
+.tailoring-hub-policy-details summary:focus-visible,.tailoring-hub-faq-list summary:focus-visible,
+.tailoring-hub-final a:focus-visible{outline:3px solid #f0d48f;outline-offset:4px}
+@media(max-width:660px){
+ .tailoring-hub-steps,.tailoring-hub-fabric-grid{grid-template-columns:1fr}
+ .tailoring-hub-fact-grid{gap:9px}
+ .tailoring-hub-fact{padding:15px 12px}
+ .tailoring-hub-fact h3{font-size:12px}
+ .tailoring-hub-fact strong{font-size:21px;overflow-wrap:break-word}
+ .tailoring-hub-fact p{font-size:13px}
+ .tailoring-hub-steps li{padding:17px 15px}
+ .tailoring-hub-combined{padding:20px 17px}
+}
+@media(max-width:350px){
+ .tailoring-hub-fact-grid{grid-template-columns:1fr}
+}
