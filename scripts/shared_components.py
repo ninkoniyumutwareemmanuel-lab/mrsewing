@@ -77,7 +77,7 @@ at-rules fail explicitly so a future design change cannot silently corrupt CSS.
 def services_picker(label='Explore Our Services'):
     """Use the preserved five service destinations in the About Us picker."""
     from html import escape
-    source=(ROOT/'_templates/homepage-header.html').read_text()
+    source=(ROOT/'_templates/services-picker-source.html').read_text()
     match=re.search(r'<li class="services-dropdown"(?:\s[^>]*)?>\s*(<details(?:\s[^>]*)?>.*?</details>)\s*</li>',source,re.S)
     if not match:raise ValueError('The approved header Services component was not found')
     fragment=match[1]
