@@ -39,7 +39,7 @@ def content(service, hero, section, link):
         ("Standard tailoring", standard,
          "Usually for custom suits. Your completion date is confirmed for your order."),
         ("Express tailoring", express,
-         "Subject to feasibility and capacity; an eligible express surcharge applies."),
+         f"Subject to feasibility and capacity; +{express_rate}% on the eligible quoted base."),
         ("Domestic custom advance", f"{advance}%",
          f"Before production; the remaining {balance}% is due before final cleaning and delivery."),
         ("Customer-supplied fabric", "Assessment first",
