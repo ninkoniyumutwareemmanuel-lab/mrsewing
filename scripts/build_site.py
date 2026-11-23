@@ -12,3 +12,4 @@ for script in ['build_technical_assets.py', 'build_customer_release.py', 'build_
     subprocess.run([sys.executable, str(ROOT/'scripts'/script), *(['--check'] if args.check else [])], cwd=ROOT, check=True)
 # Fail staging builds if legacy URL redirects point to the wrong page or leak to canonical URLs.
 subprocess.run([sys.executable, str(ROOT/'tests'/'seo_legacy_redirects.py')], cwd=ROOT, check=True)
+subprocess.run([sys.executable, str(ROOT/'tests'/'seo_core_services.py')], cwd=ROOT, check=True)
