@@ -10,3 +10,5 @@ p.add_argument('--check', action='store_true')
 args = p.parse_args()
 for script in ['build_technical_assets.py', 'build_customer_release.py', 'build_customer_information.py', 'build_source_seo.py', 'build_homepage.py', 'build_contact.py', 'build_about.py', 'build_collections.py', 'build_journey.py', 'build_completion.py', 'build_commerce.py', 'build_clean_urls.py', 'build_public_routes.py', 'build_release_marker.py']:
     subprocess.run([sys.executable, str(ROOT/'scripts'/script), *(['--check'] if args.check else [])], cwd=ROOT, check=True)
+# Fail staging builds if legacy URL redirects point to the wrong page or leak to canonical URLs.
+subprocess.run([sys.executable, str(ROOT/'tests'/'seo_legacy_redirects.py')], cwd=ROOT, check=True)
