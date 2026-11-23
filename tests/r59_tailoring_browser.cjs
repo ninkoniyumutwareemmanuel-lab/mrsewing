@@ -96,6 +96,16 @@ const dest='artifacts/r59-browser';
    assert((await categories.nth(0).getAttribute('href')).includes('gender=men'));
    assert((await categories.nth(1).getAttribute('href')).includes('gender=women'));
    assert.equal(await page.locator('.tailoring-hub-service').count(),4);
+   assert.equal(await page.locator('.tailoring-hub-fact').count(),4,'four customer policy facts');
+   assert.equal(await page.locator('.tailoring-hub-steps li').count(),4,'four actual customer journey steps');
+   assert.equal(await page.locator('.tailoring-hub-fabric-card').count(),2,'fabric supplied by us or customer');
+   assert.equal(await page.locator('.tailoring-hub-faq-list details').count(),3,'three customer questions');
+   assert(await page.locator('.tailoring-hub-essentials').innerText().then(t=>t.includes('1–3 weeks')&&t.includes('2–3 days')&&t.includes('70%')&&t.includes('35%')),'approved tailoring estimates and deposit are visible');
+   for(const href of ['/guides/fabrics/','/measurements/','/customer-information/','/services/custom-tailoring/special-order/','/services/alterations/','/services/garment-care/','/services/mobile-fitting/']){
+    assert(await page.locator('a[href="'+href+'"]').count()>0,'missing customer guidance/service route '+href);
+   }
+   const factsColumns=await page.locator('.tailoring-hub-fact-grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length);
+   assert.equal(factsColumns,width<=320?1:2,'policy card layout '+width);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'hub horizontal overflow '+width);
    if(width===390||width===1440)await page.screenshot({path:path.join(dest,'tailoring-services-'+width+'.png'),fullPage:true});
    await page.goto(base+'/collections/?gender=men',{waitUntil:'domcontentloaded'});
