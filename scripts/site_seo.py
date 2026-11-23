@@ -86,4 +86,13 @@ def finalize(source,path):
     source=protect(source)
     source=re.sub(r'<script src="/assets/customer-interactions.js" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
     source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
+    # GitHub Pages serves legacy .html files without interpreting Cloudflare _redirects.
+    # An instant HTML refresh is a crawler-readable canonical redirect fallback;
+    # existing data-legacy-url JavaScript still preserves query strings and hashes.
+    # Do not put a refresh on root index.html: it also serves the homepage at /.
+    source=re.sub(r'<meta\s+data-legacy-canonical-redirect\b[^>]*>', '', source, flags=re.I)
+    if rel.parent==Path('.') and rel.suffix=='.html' and rel.name!='index.html':
+        redirect='<meta data-legacy-canonical-redirect http-equiv="refresh" content="0;url='+escape(route,quote=True)+'">'
+        if source.count('</head>')!=1:raise ValueError('Expected one head on legacy page: '+rel.name)
+        source=source.replace('</head>',redirect+'</head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'
