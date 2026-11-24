@@ -152,7 +152,7 @@ def information(route):
   from terms_reader import render
   d=data()['pages'][route]
   return frame(route,d['title'],d['intro'],render())
- d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],'Compare fabric references and their quality tiers.' if route=='/guides/fabrics/' else d['intro'])
+ d=data()['pages'][route];body=breadcrumb([('Home','/'),(d['title'],None)])+intro(d['title'],'Discover materials, textures, patterns and colours for your next custom-made garment.' if route=='/guides/fabrics/' else d['intro'])
  if route=='/guides/fabrics/':
   body+=guides.fabric_guide()
   from selected_designs import design_media
@@ -197,6 +197,12 @@ def extra_routes():return ['/request/vip-subscription/','/media-kit/','/services
 def outputs():
  from whatsapp_consent import page as whatsapp_page
  out={ROOT/r.strip('/')/'index.html':information(r) for r in extra_routes() if r in data()['pages']}
+ for slug in guides.showroom_routes():
+  route='/guides/fabrics/'+slug+'/'
+  title=slug.capitalize()+' Collection'
+  desc='Explore '+title+' fabric types, characteristics, patterns and colours at Mr Sewing Fashion in Kigali.'
+  content=breadcrumb([('Home','/'),('Fabric Guide','/guides/fabrics/'),(title,None)])+intro(title,desc)+(ROOT/'_templates/fabric-showroom-'+slug+'.html').read_text()
+  out[ROOT/route.strip('/')/'index.html']=frame(route,title,desc,content)
  out[ROOT/'whatsapp/index.html']=whatsapp_page()
  from build_collections import load,design_route
  from suit_references import assignment,category_label,model

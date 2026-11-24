@@ -19,8 +19,15 @@ def cards(category,selectable=False):
   if f.get('generalBackground'):out+='<dt>General textile background</dt><dd>'+escape(f['generalBackground'])+'</dd><dd class="fabric-reference-scope">This does not verify the composition of this fabric reference.</dd>'
   out+='</dl></details></div></article>'
  return out+'</div>'
+def legacy_fabric_guide():
+ return '<section class="guide-collection" aria-labelledby="fabric-references-title"><h2 id="fabric-references-title">Compare Fabric References</h2><p>Explore the fabric photographs, reference names and assigned Tier / Quality in each collection.</p><p class="guide-notice">These are reference labels. Exact material, suitability, colours and availability require confirmation; photographs may differ from actual fabric shades.</p><h2>Suit fabric references</h2>'+cards('men')+'<h2>Additional suit fabric references</h2>'+cards('women')+'</section>'
+
 def fabric_guide():
- return '<section class="guide-collection" aria-labelledby="fabric-references-title"><h2 id="fabric-references-title">Compare Fabric References</h2><p>Explore the fabric photographs, reference names and assigned Tier / Quality in each collection.</p><p class="guide-notice">These are reference labels. Exact material, suitability, colours and availability require confirmation; photographs may differ from actual fabric shades.</p><h2>Men’s suit fabrics</h2>'+cards('men')+'<h2>Women’s suit fabrics</h2>'+cards('women')+'</section>'
+ return (ROOT/'_templates/fabric-showroom-home.html').read_text()+'<div class="fg-legacy" hidden>'+legacy_fabric_guide()+'</div>'+"<script>(function(){var p=new URLSearchParams(location.search),pick=p.get('fabricSelect')==='1'||p.has('fabricFor');if(pick){document.querySelector('.fg-showroom').hidden=true;document.querySelector('.fg-legacy').hidden=false;}})();</script>"
+
+def showroom_routes():
+ return ["super","americano","wool","star","polyester","cotton","linen"]
+
 def measurements():
  d=json.loads((ROOT/'_data/measurement-guide-images.json').read_text());out='<section class="guide-collection" aria-labelledby="measurement-photos-title"><h2 id="measurement-photos-title">Measurement Illustrations</h2><p class="guide-notice">Use these pictures to identify measurement areas. Illustrated tape numbers are not your measurements or a calibrated scale. Follow the instructions confirmed for your garment and ask for assistance if the starting point, path or endpoint is unclear.</p><div class="measurement-photo-grid">'
  for m in d['measurements']:out+='<figure class="measurement-photo" id="measure-'+m['id']+'">'+'<a class="measurement-enlarge" data-enlarge href="'+quote(photos()[m['image']]['src'],safe='/')+'" aria-label="Enlarge '+escape(m['title'])+' measurement illustration">'+image(m['image'])+'</a><figcaption><h3>'+escape(m['title'])+'</h3><p>'+escape(m['caption'])+'</p></figcaption></figure>'

@@ -34,3 +34,6 @@ catch(error){status.textContent=error.selectedSubmission?error.message:window.Mr
 finally{clearTimeout(timer);pending=false;send.disabled=false;edit.disabled=false;send.textContent=kind==='refund'?'Submit Refund Request':kind==='support'?'Submit Support Request':kind==='subscription'?'Submit Subscription Enquiry':kind==='consultation'?'Submit Consultation Request':'Submit Quotation Request';}
 });
 });
+
+/* Fabric Guide selection is a customer preference, not a confirmed stock or price. */
+(()=>{function apply(){const p=new URLSearchParams(location.search),value=p.get('fabricPreference');if(location.pathname!=='/request/'||p.get('general')!=='1'||!value||value.length>200)return;const field=document.getElementById('requestFabric'),message=document.getElementById('requestMessage');if(field&&!field.value){field.value=value;field.dispatchEvent(new Event('input',{bubbles:true}));}if(message&&!message.value){message.value='I would like a quotation using this fabric preference: '+value+'.';message.dispatchEvent(new Event('input',{bubbles:true}));}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();})();
