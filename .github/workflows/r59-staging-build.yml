@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          # Scoped preservation tests compare against the recorded recovery baseline.
+          fetch-depth: 0
           # Default checkout is the event commit, not a moving branch tip.
       - uses: actions/setup-python@v5
         with:

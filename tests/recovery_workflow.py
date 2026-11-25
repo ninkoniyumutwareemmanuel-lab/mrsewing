@@ -7,6 +7,7 @@ assert 'branches: [phase1/customer-journey-repairs]' in s
 assert "if: github.ref == 'refs/heads/phase1/customer-journey-repairs'" in s
 assert 'contents: read' in s and 'contents: write' not in s
 assert 'persist-credentials: false' in s
+assert 'fetch-depth: 0' in s,'Historical preservation baseline must be available in CI'
 assert not re.search(r'^\s+ref: phase1/',s,re.M),'Checkout must use event SHA'
 assert not re.search(r'\bgit (?:push|commit|reset|merge)\b',s),'CI is verification-only'
 assert 'run: python scripts/import_owner_terms_v1_1.py' not in s
