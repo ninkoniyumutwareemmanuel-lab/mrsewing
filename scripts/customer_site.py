@@ -201,7 +201,7 @@ def outputs():
   route='/guides/fabrics/'+slug+'/'
   title=slug.capitalize()+' Collection'
   desc='Explore '+title+' fabric types, characteristics, patterns and colours at Mr Sewing Fashion in Kigali.'
-  content=breadcrumb([('Home','/'),('Fabric Guide','/guides/fabrics/'),(title,None)])+intro(title,desc)+(ROOT/'_templates/fabric-showroom-'+slug+'.html').read_text()
+  content=breadcrumb([('Home','/'),('Fabric Guide','/guides/fabrics/'),(title,None)])+intro(title,desc)+(ROOT / ('_templates/fabric-showroom-'+slug+'.html')).read_text()
   out[ROOT/route.strip('/')/'index.html']=frame(route,title,desc,content)
  out[ROOT/'whatsapp/index.html']=whatsapp_page()
  from build_collections import load,design_route
