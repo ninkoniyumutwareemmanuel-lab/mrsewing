@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render five pages of the immutable approved Terms PDF for mobile WebViews.
+"""Render every page of the registered staging-review Terms PDF for mobile WebViews.
 
 Manual build prerequisite for an R55 release: install poppler-utils (pdftoppm).
 PNG image pixels are derived only from the verified approved PDF. The original
@@ -55,7 +55,7 @@ def render_images(check=False):
             files.append({'page':number,'path':'/assets/policy-documents/terms-and-conditions/pages/'+name,
                           'width':width,'height':height,'sha256':hashlib.sha256(raw).hexdigest()})
         manifest={'sourcePdfSha256':entry['sha256'],'version':entry['version'],'publicationStatus':'staging-review',
-                  'effectiveDate':None,'dpi':RENDER_DPI,'pages':files}
+                  'effectiveDate':None,'rendering':{'dpi':RENDER_DPI} if entry['version']=='1.0' else {'widthPixels':1360},'pages':files}
         text=json.dumps(manifest,ensure_ascii=False,indent=2)+'\n'
         target=destination/'manifest.json'
         if check:
@@ -64,7 +64,13 @@ def render_images(check=False):
         else:
             if not target.is_file() or target.read_text()!=text:
                 target.write_text(text)
-    print('PASS: %d PDF-derived pages from immutable approved version %s; not activated' %(count,entry['version']))
+        archived=destination/('manifest-'+entry['version']+'.json')
+        if check:
+            if not archived.is_file() or archived.read_text()!=text:
+                raise ValueError('Stale version-specific Terms page manifest')
+        elif not archived.is_file() or archived.read_text()!=text:
+            archived.write_text(text)
+    print('PASS: %d PDF-derived pages from registered staging-review version %s; not activated' %(count,entry['version']))
 
 
 if __name__=='__main__':

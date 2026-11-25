@@ -154,3 +154,6 @@ Recorded the owner's latest direct main/live publication instruction after the r
 ## 2026-11-22-01 — R59 tailoring-first customer experience, staging only
 
 Owner's 22 November 2026 final customer-experience redesign authorizes homepage, custom-tailoring hub, two eligible clothing-category cards, shared Showroom filtering, documented date-backed ordering, tailoring-oriented Shop discovery and the visible Backorder label. Keep the original policy references and earlier version history byte-identical; this is a design/journey addendum, **not** approval of new prices, rates, media rights, Shop sale stock, video posters or PDF Terms legal activation. Terms reader was previously approved and merged as a separate release; R59 does not change its content. Rights-held R53 photographs/videos are registered but not activated. The present staging release is isolated from main; check the R59 brief for exact routes, tests and release status. Source authority: owner prompt and explicit staging-only final instruction, 22 November 2026.
+
+##25November2026—website recovery
+Newdatedreference2026-11-25-01preserves precedingfilesandaddslatestownerrecovery/scope/evidenceboundaries. Implementation/deploymentoutcomesremaininprogresspendingactualchecks; noMainorofficialsiteauthority. See masterregister.

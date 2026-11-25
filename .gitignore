@@ -1,0 +1,6 @@
+# Local development and browser evidence; approved website assets stay tracked.
+__pycache__/
+*.py[cod]
+.wrangler/
+node_modules/
+artifacts/

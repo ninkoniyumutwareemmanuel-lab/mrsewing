@@ -1,44 +1,53 @@
 {
-  "sourcePdfSha256": "9b35d9384cf4d06dec88e92cfcde4c30d687ea1b126b6e0a8164784f5ee057c0",
-  "version": "1.0",
+  "sourcePdfSha256": "d12476d31e6ac6d2943a6f18c2577774b5905f985ca9d8d5521624a5f4a77cb0",
+  "version": "1.2",
   "publicationStatus": "staging-review",
   "effectiveDate": null,
-  "dpi": 160,
+  "rendering": {
+    "widthPixels": 1360
+  },
   "pages": [
     {
       "page": 1,
-      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-01.png",
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.2-01.png",
       "width": 1360,
-      "height": 1760,
-      "sha256": "0026915d977cacbfe4446fc25a4e2bcb3a308494c24dc654b5379410ec1c0689"
+      "height": 1924,
+      "sha256": "eec74cdef3128dbeddcf38cab2845f259903cb0f7f4b44bbc6e36ef3c3c4060b"
     },
     {
       "page": 2,
-      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-02.png",
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.2-02.png",
       "width": 1360,
-      "height": 1760,
-      "sha256": "abb88b3b59ff58f410675d7b443f7bf36199a33f1032fae42e0464c5e5fee458"
+      "height": 1924,
+      "sha256": "61d721eb33fb64e12bef00c34cf3a5c2626bb1b0cdbece33a4650a10371be515"
     },
     {
       "page": 3,
-      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-03.png",
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.2-03.png",
       "width": 1360,
-      "height": 1760,
-      "sha256": "b3b0eaf65519de74ef0ec921f404c90a6f4d43f7e2886cd95a0f54c5ce80b1ae"
+      "height": 1924,
+      "sha256": "0b27950ce7357e17942f7804310488e0ec950f090e9eeedd981044f00ed27087"
     },
     {
       "page": 4,
-      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-04.png",
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.2-04.png",
       "width": 1360,
-      "height": 1760,
-      "sha256": "c263a1aac19c40aab2a8ef99c3177697266f2041bf83a912355da394c5b5770c"
+      "height": 1924,
+      "sha256": "ad0f4a975b4d787811ffdfceac1edae6d5a1c654b7ede179b4446f1ce559aa56"
     },
     {
       "page": 5,
-      "path": "/assets/policy-documents/terms-and-conditions/pages/1.0-05.png",
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.2-05.png",
       "width": 1360,
-      "height": 1760,
-      "sha256": "065d2f7e10e451be921f1ec173b49485103e1154dfbbc7e4d77e0041002cf0f2"
+      "height": 1924,
+      "sha256": "c1730e66304ae906e8cfb9f82b0c51f763bbe5d66a2e0aaecd759c82ccc9b1b4"
+    },
+    {
+      "page": 6,
+      "path": "/assets/policy-documents/terms-and-conditions/pages/1.2-06.png",
+      "width": 1360,
+      "height": 1924,
+      "sha256": "19f4a6244289189928d587afc691c67605eaa502bc6605d1c1d94fcccbe0a4f0"
     }
   ]
 }

@@ -40,7 +40,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  meta=metadata();expire();
  const incomingPreference=unpackPreference(params.get('sharedFabric'));
  const incoming=unpack(params.get('selection')),session=params.get('selectionSession'),edit=params.get('selectionEdit');
- const quotePage=location.pathname==='/services/custom-tailoring/fabric/'&&params.get('multiple')==='1'||location.pathname==='/guides/fabrics/'&&(params.has('fabricFor')||params.get('fabricSelect')==='1')||location.pathname==='/request/'&&params.get('multiple')==='1';
+ const quotePage=location.pathname==='/services/custom-tailoring/fabric/'&&params.get('multiple')==='1'||location.pathname.startsWith('/guides/fabrics/')&&(params.has('fabricFor')||params.get('fabricSelect')==='1')||location.pathname==='/request/'&&params.get('multiple')==='1';
  if(params.has('expressRecovery')&&!browsing()){mode='quote';setItems([]);preference=null;}
  else if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
  else{

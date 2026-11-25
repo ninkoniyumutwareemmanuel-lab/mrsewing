@@ -23,7 +23,11 @@ def legacy_fabric_guide():
  return '<section class="guide-collection" aria-labelledby="fabric-references-title"><h2 id="fabric-references-title">Compare Fabric References</h2><p>Compare fabric names and descriptions to find a suitable tailoring option.</p><p class="guide-notice">Exact material, suitability, colours and availability are confirmed with our team.</p><h2>Suit fabric references</h2>'+cards('men',show_images=False)+'<h2>Additional suit fabric references</h2>'+cards('women',show_images=False)+'</section>'
 
 def fabric_guide():
- return (ROOT/'_templates/fabric-showroom-home.html').read_text()+'<div class="fg-legacy" hidden>'+legacy_fabric_guide()+'</div>'+"<script>(function(){var p=new URLSearchParams(location.search),pick=p.get('fabricSelect')==='1'||p.has('fabricFor');if(pick){document.querySelector('.fg-showroom').hidden=true;document.querySelector('.fg-legacy').hidden=false;}})();</script>"
+ return (ROOT/'_templates/fabric-showroom-home.html').read_text().replace('/assets/fabric-showroom.js','/assets/fabric-showroom.js?v=recovery-20261125')
+
+def request_fabrics():
+ from fabric_collections import fabrics as collections
+ return {**{f['id']:f for f in fabrics()},**collections()}
 
 def showroom_routes():
  return ["super","americano","wool","star","polyester","cotton","linen"]

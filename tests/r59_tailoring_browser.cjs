@@ -1,6 +1,6 @@
 /* R59 staging browser QA: no real customer enquiries or external requests. */
 'use strict';
-const {chromium}=require('playwright');
+const {chromium}=(()=>{try{return require('playwright');}catch(e){if(e.code!=='MODULE_NOT_FOUND')throw e;return require('playwright-core');}})();
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
@@ -8,7 +8,7 @@ const base='http://127.0.0.1:8020';
 const dest='artifacts/r59-browser';
 (async()=>{
  fs.mkdirSync(dest,{recursive:true});
- const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_BINARY?{executablePath:process.env.CHROMIUM_BINARY}:{}),args:['--no-sandbox']});
  try{
   for(const width of [320,390,768,1440]){
    const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'no-preference',hasTouch:width<600,isMobile:width<600});

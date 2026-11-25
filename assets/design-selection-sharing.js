@@ -38,7 +38,7 @@
    if(!window.MrSewingWhatsApp?.open){fallback('WhatsApp is unavailable here. Copy the complete design list below and use the official contact link.',get()?.text||text);return;}
    // Existing Terms controller has a 6000-character cap; never pass an oversized message.
    if(!fits(text)){fallback('This design list is too long for a safe WhatsApp link. Copy the complete text below into WhatsApp.',get()?.text||text);return;}
-   say('Review the Terms before continuing. WhatsApp opens a draft; review it and press Send there. No message has been sent by the website.');
+   say('WhatsApp opens a draft; review it and press Send there. No message has been sent by the website.');
    window.MrSewingWhatsApp.open(text,trigger);
   }
   whatsapp.addEventListener('click',()=>{
@@ -54,7 +54,7 @@
    }
    if(group.length)chunks.push(group);
    manual.value=bundle.text;manual.hidden=false;
-   say('Your complete list is prepared in '+chunks.length+' WhatsApp parts. Open each numbered part, accept the Terms, then review and send it in WhatsApp. No designs have been omitted and nothing has been sent automatically.');
+   say('Your complete list is prepared in '+chunks.length+' WhatsApp parts. Open each numbered part, then review and send it in WhatsApp. No designs have been omitted and nothing has been sent automatically.');
    for(const[part,entries]of chunks.entries()){
     const button=document.createElement('button');button.type='button';button.className='home-button home-button-gold';button.textContent='Open WhatsApp Part '+(part+1)+' of '+chunks.length;button.dataset.whatsappPart=String(part+1);button.dataset.partIndex=String(part);
     const text=compose(entries,part+1,chunks.length);

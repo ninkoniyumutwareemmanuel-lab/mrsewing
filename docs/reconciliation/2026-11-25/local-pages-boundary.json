@@ -1,0 +1,55 @@
+[
+  {
+    "host": "mrsewing-staging.pages.dev",
+    "path": "/_data/suit-package-prices.json",
+    "status": 404,
+    "robots": "noindex, nofollow, noarchive"
+  },
+  {
+    "host": "mrsewing-staging.pages.dev",
+    "path": "/assets/policy-documents/terms-and-conditions/1.2.pdf",
+    "status": 200,
+    "robots": "noindex, nofollow, noarchive",
+    "bytes": 1264717
+  },
+  {
+    "host": "mrsewing-staging.pages.dev",
+    "path": "/services/custom-tailoring/",
+    "status": 200,
+    "robots": "noindex, nofollow, noarchive",
+    "bytes": 128341
+  },
+  {
+    "host": "mrsewing-staging.pages.dev",
+    "path": "/api/selected-design-request",
+    "status": 405,
+    "robots": "noindex, nofollow"
+  },
+  {
+    "host": "mrsewingfashion.com",
+    "path": "/_data/suit-package-prices.json",
+    "status": 200,
+    "robots": null,
+    "bytes": 5305
+  },
+  {
+    "host": "mrsewingfashion.com",
+    "path": "/assets/policy-documents/terms-and-conditions/1.2.pdf",
+    "status": 200,
+    "robots": null,
+    "bytes": 1264717
+  },
+  {
+    "host": "mrsewingfashion.com",
+    "path": "/services/custom-tailoring/",
+    "status": 200,
+    "robots": null,
+    "bytes": 128341
+  },
+  {
+    "host": "mrsewingfashion.com",
+    "path": "/api/selected-design-request",
+    "status": 405,
+    "robots": "noindex, nofollow"
+  }
+]

@@ -1,7 +1,7 @@
 /* Email-only selected-design validation. No files, private records, payments or reservations. */
 import {validateFields} from '../../scripts/edge/customer-requests.mjs';
 import {fabrics} from '../../scripts/edge/request-data.mjs';
-import {colours} from './fabric-preferences.js';
+import {colours,patterns} from './fabric-preferences.js';
 import {validateQuotationDetails,applyQuotationDetails,specialOrderFields} from './quotation-details.js';
 const TIME_ZONE='Africa/Kigali (UTC+02:00)';
 const friendly=name=>String(name).replace(/\s*[—·-]\s*MS-\d+\b/g,'').trim();
@@ -12,12 +12,13 @@ function checkFabric(fields){
  return fields;
 }
 function sharedPreference(raw,{special=false}={}){
- if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!['choice','fabricRef','colour','colourDescription'].includes(k)))throw Error('Review your shared fabric and colour preference.');
- const value={};for(const key of ['choice','fabricRef','colour','colourDescription']){if(raw[key]!==undefined&&(typeof raw[key]!=='string'||raw[key].length>({choice:8,fabricRef:64,colour:40,colourDescription:80})[key]||/[\u0000-\u001f\u007f]/.test(raw[key])))throw Error('Review your shared fabric and colour preference.');value[key]=(raw[key]||'').trim();}
+ if(!raw||typeof raw!=='object'||Array.isArray(raw)||Object.keys(raw).some(k=>!['choice','fabricRef','colour','colourDescription','pattern'].includes(k)))throw Error('Review your shared fabric and colour preference.');
+ const value={};for(const key of ['choice','fabricRef','colour','colourDescription','pattern']){if(raw[key]!==undefined&&(typeof raw[key]!=='string'||raw[key].length>({choice:8,fabricRef:64,colour:40,colourDescription:80,pattern:64})[key]||/[\u0000-\u001f\u007f]/.test(raw[key])))throw Error('Review your shared fabric and colour preference.');value[key]=(raw[key]||'').trim();}
  if(!['now','advice','own'].includes(value.choice))throw Error('Choose one fabric preference for your enquiry.');
- if(value.choice!=='now'){if(value.fabricRef||value.colour||value.colourDescription)throw Error('Clear the selected fabric and colour when requesting advice or supplying your own fabric.');return value;}
+ if(value.choice!=='now'){if(value.fabricRef||value.colour||value.colourDescription||value.pattern)throw Error('Clear the selected fabric and colour when requesting advice or supplying your own fabric.');return value;}
  if(value.fabricRef&&!Object.hasOwn(fabrics,value.fabricRef)||!special&&!value.fabricRef)throw Error('Choose an approved fabric reference.');
  if(value.colour&&!Object.hasOwn(colours,value.colour)||!special&&!value.colour)throw Error('Choose a preferred colour.');
+ if(value.pattern&&!Object.hasOwn(patterns,value.pattern))throw Error('Choose an approved pattern reference.');
  if(value.colour==='other'){
   if(value.colourDescription&&!/^[\p{L}\p{N} .,'’()/+#-]{1,80}$/u.test(value.colourDescription))throw Error('Describe your preferred colour using up to 80 letters, numbers and basic colour punctuation.');
  }else if(value.colourDescription)throw Error('Use Other Colour for a custom colour description.');
@@ -25,12 +26,13 @@ function sharedPreference(raw,{special=false}={}){
 }
 function applySharedPreference(fields,value){
  // Server-owned labels replace every untrusted/redundant legacy fabric field.
- for(const key of ['Fabric Reference','Selected Fabric','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Fabric Preference','Preferred Colour','Preferred Colour Reference','Colour Description'])delete fields[key];
+ for(const key of ['Fabric Reference','Selected Fabric','Fabric Category','Fabric Tier','Fabric Availability','Fabric Assistance','Fabric Preference','Preferred Colour','Preferred Colour Reference','Colour Description','Fabric Collection','Pattern & Texture','Pattern Reference'])delete fields[key];
  fields['Fabric Preference Scope']='Whole selected-design enquiry; suitability assessed for each garment';
  fields['Shared Fabric Preference']=value.choice==='now'?'I Want to Choose a Fabric':value.choice==='own'?'I Have My Own Fabric':'Help Me Choose a Fabric';
  fields['Fabric Choice']=value.choice==='now'?'Customer fabric choice':value.choice==='own'?'Customer-Supplied Fabric':'Help Me Choose Fabric';
  if(value.choice==='now'){
-  const fabric=fabrics[value.fabricRef],colour=colours[value.colour];if(fabric){fields['Fabric Reference']=value.fabricRef;fields['Selected Fabric']=fabric.name;fields['Fabric Category']=fabric.category==='women'?'Women’s collection reference':'Men’s collection reference';fields['Fabric Tier']='Tier '+fabric.tier+' / Quality '+fabric.tier;}
+  const fabric=fabrics[value.fabricRef],colour=colours[value.colour];if(fabric){fields['Fabric Reference']=value.fabricRef;fields['Selected Fabric']=fabric.name;if(fabric.collection){fields['Fabric Collection']=fabric.collection;fields['Fabric Category']='All customers; textile reference collection';}else{fields['Fabric Category']=fabric.category==='women'?'Women’s collection reference':'Men’s collection reference';fields['Fabric Tier']='Tier '+fabric.tier+' / Quality '+fabric.tier;}}
+  if(value.pattern){fields['Pattern Reference']=value.pattern;fields['Pattern & Texture']=patterns[value.pattern].name;}
   if(colour){fields['Preferred Colour Reference']=value.colour;fields['Preferred Colour']=colour.name+(value.colour==='other'&&value.colourDescription?' — '+value.colourDescription:'');}if(value.colour==='other'&&value.colourDescription)fields['Colour Description']=value.colourDescription;
   fields['Fabric Availability']='Exact material, suitability, colour and availability require confirmation. Swatches are illustrative and may differ from actual fabric shades.';
  }else if(value.choice==='own'){fields['Fabric Preference']='Customer-Supplied Fabric';fields['Fabric Availability']='Customer-supplied fabric suitability requires assessment';}

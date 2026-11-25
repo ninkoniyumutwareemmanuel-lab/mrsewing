@@ -62,13 +62,13 @@ def finalize(source,path):
     for asset in ['customer-site.js','request-draft.js','customer-refinements.js']:
         source=re.sub(r'src="/assets/'+re.escape(asset)+r'(?:\?v=[^"]*)?"','src="/assets/'+asset+'?v=staging-r49"',source)
     source=re.sub(r'<script id="designSelectionData".*?</script>|<script src="/assets/design-selections.js[^"]*" defer></script>|<link rel="stylesheet" href="/assets/design-selections.css[^\"]*">','',source,flags=re.S)
-    if route.startswith(('/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
+    if route=='/collections/' or route.startswith(('/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
         refs=json.loads((ROOT/'_data/request-reference-allowlist.json').read_text());slugs={d['id']:d['slug'] for d in json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']}
         for id,d in refs.items():d['id']=id;d['route']='/collections/designs/'+slugs[id]+'/'
         from customer_policies import facts as _facts
-        fabrics={f['id']:f for f in json.loads((ROOT/'_data/fabric-reference-catalogue.json').read_text())['fabrics']}
-        selection_data={'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics,'colours':{c['id']:c for c in json.loads((ROOT/'_data/fabric-colours.json').read_text())['colours']},'colourGroups':json.loads((ROOT/'_data/fabric-colours.json').read_text()).get('groups',[])}
-        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=staging-r49" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r49"></head>',1)
+        fabrics=__import__('customer_guides').request_fabrics()
+        selection_data={'patterns':__import__('fabric_collections').patterns(),'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics,'colours':{c['id']:c for c in json.loads((ROOT/'_data/fabric-colours.json').read_text())['colours']},'colourGroups':json.loads((ROOT/'_data/fabric-colours.json').read_text()).get('groups',[])}
+        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=recovery-20261125" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r49"></head>',1)
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())

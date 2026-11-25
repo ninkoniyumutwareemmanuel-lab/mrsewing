@@ -13,6 +13,13 @@ ROOT=Path(__file__).resolve().parents[1]
 PAGES={'collections.html':('all','Design References'),'mensuits.html':('men',"Men's Suits"),'womensuits.html':('women',"Women's Suits")}
 SIZES='(min-width: 1100px) 280px, (min-width: 600px) 30vw, calc((100vw - 52px) / 2)'
 
+def validate_inventory_paths(root,known):
+    """Keep website assets strict; local ignored tooling output is not website media."""
+    for path in root.rglob('*'):
+        parts=path.relative_to(root).parts
+        if path.is_file() and '__pycache__' not in parts and parts[0] not in {'.git','artifacts','node_modules','.wrangler'} and path.suffix.lower() in ['.jpeg','.jpg','.png','.webp','.avif','.gif','.svg']:
+            assert str(path.relative_to(root)) in known, 'Uninventoried asset: '+str(path)
+
 def load():
     content=json.loads((ROOT/'_data/collection-designs.json').read_text());registry=json.loads((ROOT/'_data/collection-id-registry.json').read_text())
     ids=set(); slugs=set(); originals=set();published=[]
@@ -47,12 +54,20 @@ def load():
             avifs=[{'src':'/'+v['src'],'width':v['width']} for v in avif.get(original,{}).get('variants',[]) if v['width']<=960]
             for v in candidates+avifs:assert (ROOT/v['src'].lstrip('/')).is_file(),v
             images.append({**{k:image[k] for k in ['position','width','height']},'alt':({'r4.jpeg':'Person wearing a light jacket and matching trousers','r7.jpeg':'Person wearing a light jacket with navy trousers','h1.jpeg':'Person wearing an off-white suit','h2.jpeg':'Side view of a person in an off-white suit','h3.jpeg':'Person holding a diploma scroll'}.get(image['originalPath']) or ('Garment photograph shown for design inspiration' if image['alt'].lower().startswith('tailoring design') else re.sub(r'\s*[—·-]\s*MS-\d+\s*$','',image['alt']))),'src':quote(image['src'],safe='/'),'thumb':quote(candidates[0]['src'],safe='/'),'srcset':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in candidates),'avif':', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in avifs)})
+            images[-1].update({key:image[key] for key in ['viewLabel','catalogueNo'] if key in image})
         # Existing-public display is not publication permission (owner 5 Nov §28).
         approved_projects=[p for p in json.loads((ROOT/'_data/customer-projects.json').read_text())['projects'] if p.get('published') and p.get('completedWorkEvidence') and p.get('publicationPermission',{}).get('approved') and p['publicationPermission'].get('evidenceRef')]
         evidence={i['src']:p for p in approved_projects for i in p['images'] if i.get('permissionEvidenceRef') and i.get('projectAssociationEvidenceRef')}
         permitted=record['rightsStatus']=='approved' or all(i['src'] in evidence for i in record['images'])
+        if record.get('family') and record['published']:
+            permission=record.get('publicationPermission',{})
+            assert record['rightsStatus']=='approved' and permission.get('approved') is True and permission.get('evidenceRef'), 'Family publication needs recorded permission'
+            assert record.get('metadataReviewStatus')=='approved' and not record.get('publicationBlockers'), 'Family metadata/placement requires final review'
+            category_data=json.loads((ROOT/'_data/suit-reference-categories.json').read_text())
+            assert any(record['id'] in category['designIds'] for category in category_data['categories']), 'Prepared family must have deliberate published category placement'
         if record['published'] and permitted:
             item={k:record[k] for k in ['id','slug','name','gender','styles','occasions','colors','garmentType','description','provenance']}|{'images':images}
+            item.update({key:record[key] for key in ['family','catalogueNumbers','metadataReviewStatus','publicationBlockers','proposedCategoryId'] if key in record})
             project=evidence.get(record['images'][0]['src'])
             if project:item.update(name=project['title'],description=project['context'],provenance='made_by_mr_sewing')
             # These two category assignments were explicitly owner-approved in the homepage brief.
@@ -72,9 +87,7 @@ def load():
         elif row['designId'] in content['retiredIds']:
             row['galleryLocation']=None;row['excludedReason']='Design retired; source asset retained.'
     known={r['originalImagePath'] for r in inventory['images']}
-    for path in ROOT.rglob('*'):
-        if path.is_file() and '.git' not in path.parts and path.suffix.lower() in ['.jpeg','.jpg','.png','.webp','.avif','.gif','.svg']:
-            assert str(path.relative_to(ROOT)) in known, 'Uninventoried asset: '+str(path)
+    validate_inventory_paths(ROOT,known)
     assert all((ROOT/r['originalImagePath']).is_file() for r in inventory['images'])
     # Preserve deterministic existing display order without coupling stable IDs to order.
     priorities={'m1.jpeg':0,'w-classicsuittwo1.jpeg':1,'r4.jpeg':2,'r7.jpeg':3,'h1.jpeg':4}
@@ -90,6 +103,7 @@ def picture(image,eager=False):
     return ('<picture><source type="image/avif" srcset="'+image['avif']+'" sizes="'+(SIZES if not eager else '(min-width: 768px) 680px, 100vw')+'">'+src+'</picture>') if image['avif'] else src
 
 def design_name(d):
+    if d.get('family') and d.get('name'):return d['name']
     # These terms come only from the reviewed V2 category metadata.
     style = ' & '.join(s.replace('-', ' ').title().replace('Double Breasted', 'Double-Breasted') for s in d['styles'])
     if d['gender'] == 'women':return (style+' Women’s Suit').strip()
@@ -204,6 +218,8 @@ def render_design(d,designs):
         html=html.replace('<p class="design-note">','<p class="design-reference-category">'+escape(category_label(c))+' · Reference '+d['id']+'</p><p class="design-note">',1)
         breadcrumb_schema={'@context':'https://schema.org','@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':i+1,'name':label,'item':'https://mrsewingfashion.com'+(href or route)} for i,(label,href) in enumerate(crumbs)]}
         html=html.replace('</head>','<script type="application/ld+json">'+json_script(breadcrumb_schema)+'</script></head>',1)
+    from design_families import family_navigation
+    html=html.replace('<section class="design-related"',family_navigation(d,designs,picture)+'<section class="design-related"',1)
     from announcement_bar import decorate as with_offer
     return with_offer(html)
 
@@ -229,7 +245,7 @@ def main():
     for r in inventory['images']:writer.writerow({k: ('; '.join(r['legacyReferences']) if k=='legacyReferences' else r.get(k)) for k in fields})
     outputs[ROOT/'docs/collection-image-migration.csv']=out.getvalue()
     records=json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']
-    outputs[ROOT/'docs/collection-rights-review.md']='# Collection image rights review\n\nNo publication licence or provenance proof is inferred from repository presence.\nExisting-public photographs are carried into staging pending owner rights review.\nUnreferenced originals are inventoried but excluded from showroom publication.\nNo different photographs have been grouped by visual similarity.\n\n'+f'{len(designs)} existing-public designs; {len(records)} original garment records; {len(inventory["images"])} total image assets inventoried.\n\n| ID | Original | Showroom | Provenance | Rights |\n| --- | --- | --- | --- | --- |\n'+'\n'.join('| '+r['id']+' | `'+r['sourceAnchor']+'` | '+('existing public display preserved' if r['published'] else 'excluded pending review')+' | '+r['provenance']+' | '+r['rightsStatus']+' |' for r in records)+'\n'
+    outputs[ROOT/'docs/collection-rights-review.md']='# Collection image rights review\n\nOwnerR61 explicitly authorises repository media for website use; this records owner-represented permission, not an independent third-party licence audit.\nThe effective loader still requires deliberate publication/category placement. Prepared R53 designs remain unpublished for that reason, not because the owner has not authorised the files.\nReference photographs are not evidence of stock or completed Mr Sewing work.\nVerified family views and variants retain their existing identities and source filenames.\n\n'+f'{len(designs)} existing-public designs; {len(records)} original garment records; {len(inventory["images"])} total image assets inventoried.\n\n| ID | Original | Showroom | Provenance | Rights |\n| --- | --- | --- | --- | --- |\n'+'\n'.join('| '+r['id']+' | `'+r['sourceAnchor']+'` | '+('existing public display preserved' if r['published'] else 'excluded pending review')+' | '+r['provenance']+' | '+r['rightsStatus']+' |' for r in records)+'\n'
     for path,output in outputs.items():
         if path.suffix=='.html':output=finalize(output,path)
         if args.check:

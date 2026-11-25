@@ -1,11 +1,11 @@
 # Collection image rights review
 
-No publication licence or provenance proof is inferred from repository presence.
-Existing-public photographs are carried into staging pending owner rights review.
-Unreferenced originals are inventoried but excluded from showroom publication.
-No different photographs have been grouped by visual similarity.
+OwnerR61 explicitly authorises repository media for website use; this records owner-represented permission, not an independent third-party licence audit.
+The effective loader still requires deliberate publication/category placement. Prepared R53 designs remain unpublished for that reason, not because the owner has not authorised the files.
+Reference photographs are not evidence of stock or completed Mr Sewing work.
+Verified family views and variants retain their existing identities and source filenames.
 
-28 existing-public designs; 173 original garment records; 434 total image assets inventoried.
+28 existing-public designs; 173 original garment records; 440 total image assets inventoried.
 
 | ID | Original | Showroom | Provenance | Rights |
 | --- | --- | --- | --- | --- |
@@ -160,25 +160,25 @@ No different photographs have been grouped by visual similarity.
 | MS-149 | `The blue suit two piece.webp` | existing public display preserved | design_inspiration | approved |
 | MS-150 | `rose-pink three piecsuit.webp` | existing public display preserved | design_inspiration | approved |
 | MS-151 | `Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp` | existing public display preserved | design_inspiration | approved |
-| MS-152 | `stone-regent-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-153 | `steel-grey-signature-three-piece-womens-suit.webp` | excluded pending review | design_inspiration | review_required |
-| MS-154 | `sovereign-gold-button-double-breasted-suit-04-black.webp` | excluded pending review | design_inspiration | review_required |
-| MS-155 | `sovereign-gold-button-double-breasted-suit-03-navy.webp` | excluded pending review | design_inspiration | review_required |
-| MS-156 | `sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp` | excluded pending review | design_inspiration | review_required |
-| MS-157 | `olive-sovereign-gold-button-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-158 | `scarlet-crest-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-159 | `sandstone-navy-gold-button-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-160 | `pink-admiral-chain-brooch-double-breasted-suit-02.webp` | excluded pending review | design_inspiration | review_required |
-| MS-161 | `pearl-gold-executive-womens-suit.webp` | excluded pending review | design_inspiration | review_required |
-| MS-162 | `onyx-silver-chain-asymmetric-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-163 | `navy-atelier-tailored-skirt-suit.webp` | excluded pending review | design_inspiration | review_required |
-| MS-164 | `mahogany-paisley-asymmetric-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-165 | `ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-166 | `ivory-noir-elegance-womens-suit.webp` | excluded pending review | design_inspiration | review_required |
-| MS-167 | `ivory-nocturne-sash-waist-formal-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-168 | `ivory-midnight-speckled-tuxedo-jacket.webp` | excluded pending review | design_inspiration | review_required |
-| MS-169 | `ivory-heritage-patch-pocket-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-170 | `ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-171 | `crimson-admiral-chain-brooch-double-breasted-suit-03.webp` | excluded pending review | design_inspiration | review_required |
-| MS-172 | `champagne-cocoa-peak-lapel-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
-| MS-173 | `burgundy-admiral-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | review_required |
+| MS-152 | `stone-regent-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-153 | `steel-grey-signature-three-piece-womens-suit.webp` | excluded pending review | design_inspiration | approved |
+| MS-154 | `sovereign-gold-button-double-breasted-suit-04-black.webp` | excluded pending review | design_inspiration | approved |
+| MS-155 | `sovereign-gold-button-double-breasted-suit-03-navy.webp` | excluded pending review | design_inspiration | approved |
+| MS-156 | `sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp` | excluded pending review | design_inspiration | approved |
+| MS-157 | `olive-sovereign-gold-button-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-158 | `scarlet-crest-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-159 | `sandstone-navy-gold-button-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-160 | `pink-admiral-chain-brooch-double-breasted-suit-02.webp` | excluded pending review | design_inspiration | approved |
+| MS-161 | `pearl-gold-executive-womens-suit.webp` | excluded pending review | design_inspiration | approved |
+| MS-162 | `onyx-silver-chain-asymmetric-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-163 | `navy-atelier-tailored-skirt-suit.webp` | excluded pending review | design_inspiration | approved |
+| MS-164 | `mahogany-paisley-asymmetric-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-165 | `ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-166 | `ivory-noir-elegance-womens-suit.webp` | excluded pending review | design_inspiration | approved |
+| MS-167 | `ivory-nocturne-sash-waist-formal-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-168 | `ivory-midnight-speckled-tuxedo-jacket.webp` | excluded pending review | design_inspiration | approved |
+| MS-169 | `ivory-heritage-patch-pocket-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-170 | `ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-171 | `crimson-admiral-chain-brooch-double-breasted-suit-03.webp` | excluded pending review | design_inspiration | approved |
+| MS-172 | `champagne-cocoa-peak-lapel-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |
+| MS-173 | `burgundy-admiral-chain-brooch-double-breasted-suit-01.webp` | excluded pending review | design_inspiration | approved |

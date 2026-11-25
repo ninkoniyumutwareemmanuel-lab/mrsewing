@@ -4,7 +4,7 @@
   const payload=JSON.parse(document.getElementById('showroom-data').textContent), designs=payload.designs;
   const $=id=>document.getElementById(id);let params=new URL(location.href).searchParams;
   const legacy=params.get('design') || (/^#design-(MS-\d+)$/.exec(location.hash)||[])[1];
-  if(legacy){const d=designs.find(d=>d.id===legacy);if(d){location.replace(new URL(d.url,location.origin).href);return;}}
+  if(legacy){const d=designs.find(d=>d.id===legacy);if(d){const target=new URL(d.url,location.origin);target.search=location.search;target.hash=location.hash;location.replace(target.href);return;}}
   const normalize=s=>String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const compact=s=>normalize(s).replace(/[^a-z0-9]/g,'');
   let garment=(params.get('garment')||'').slice(0,40);

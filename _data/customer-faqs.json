@@ -424,7 +424,7 @@
       "keywords": [],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "garment-options": {
       "question": "What clothing can I discuss with Mr Sewing?",
@@ -440,7 +440,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/services/custom-tailoring/#service-info-fabric"
+      "source": "/services/custom-tailoring/#tailoring-hub-fabric-title"
     },
     "design-details": {
       "question": "How are design and fabric details agreed?",
@@ -593,7 +593,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "express-details": {
       "question": "What details are needed to assess an urgent request?",
@@ -609,7 +609,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/services/custom-tailoring/#service-info-timing"
+      "source": "/services/custom-tailoring/#tailoring-hub-essentials-title"
     },
     "express-availability": {
       "question": "Does contacting the team reserve express production?",
@@ -627,7 +627,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "care-enquiry": {
       "question": "How do I enquire about cleaning?",
@@ -708,7 +708,7 @@
       "keywords": [],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#5"
+      "source": "/terms-and-conditions/current/#5"
     },
     "measure-send": {
       "question": "Can I send a standard size or my own measurements?",
@@ -735,7 +735,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/guides/fabrics/#fabric-references-title"
+      "source": "/guides/fabrics/#standard-collections"
     },
     "suit-contents": {
       "question": "What is included in a two-piece or three-piece suit?",
@@ -744,9 +744,9 @@
     },
     "suit-package": {
       "question": "What is included in every custom suit?",
-      "answer": "{{policyAllSuitBenefits}} See the <a href=\"/services/custom-tailoring/#service-info-prices\">tier prices and benefits</a>.",
+      "answer": "{{policyAllSuitBenefits}} See the <a href=\"/benefits/#6\">included suit benefits</a>.",
       "keywords": [],
-      "source": "/services/custom-tailoring/#service-info-prices",
+      "source": "/services/custom-tailoring/#tailoring-hub-final-title",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12"
     },
@@ -764,7 +764,7 @@
       "question": "What gifts are included in Tier 1 and Tier 2?",
       "answer": "{{policyGiftBenefits}}",
       "keywords": [],
-      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "source": "/benefits/#6",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12"
     },
@@ -782,7 +782,7 @@
       ],
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
-      "source": "/terms-and-conditions/#3"
+      "source": "/terms-and-conditions/current/#3"
     },
     "locations": {
       "question": "Can I visit the main workshop or Downtown location?",
@@ -831,7 +831,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#7"
+      "source": "/terms-and-conditions/current/#7"
     },
     "tailoring-timing": {
       "question": "How long does a custom suit take?",
@@ -843,7 +843,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/services/custom-tailoring/#service-info-timing"
+      "source": "/services/custom-tailoring/#tailoring-hub-essentials-title"
     },
     "delivery-arrangements": {
       "question": "How do delivery and collection work?",
@@ -851,7 +851,7 @@
       "keywords": [],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#8"
+      "source": "/terms-and-conditions/current/#8"
     },
     "ready-notice": {
       "question": "When should I arrange to collect or receive my suit?",
@@ -874,11 +874,11 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#8"
+      "source": "/terms-and-conditions/current/#8"
     },
     "cancel-before": {
       "question": "Can I cancel before production starts?",
-      "answer": "Before official production begins, the approved baseline for customer cancellation is a refund of amounts paid less genuine, documented, nonrecoverable order-specific costs, where those deductions were lawfully disclosed and are permitted by applicable law. Contact Support promptly with your order details and reason. Refund amount, method and processing timetable are determined under the applicable agreed order conditions, approved refund policy and mandatory legal requirements.",
+      "answer": "{{policyRefundBeforeProduction}} Contact Support promptly with your order details and reason. {{policyRefundAssessment}}",
       "keywords": [],
       "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
       "approvalDate": "2026-11-25",
@@ -886,7 +886,7 @@
     },
     "cancel-after": {
       "question": "What about a cancellation or refund after work starts?",
-      "answer": "Cancellations after work begins, standalone visits, garment-care processing, Shop orders and other special cases require assessment of the accepted order, work already completed, recoverable costs and applicable mandatory rights. No universal automatic forfeiture or non-refundable fee applies. Refund amount, method and processing timetable are determined under the applicable agreed order conditions, approved refund policy and mandatory legal requirements.",
+      "answer": "{{policyRefundAfterProduction}} {{policyRefundAssessment}}",
       "keywords": [],
       "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
       "approvalDate": "2026-11-25",
@@ -904,7 +904,7 @@
       "question": "Can I change my design after payment?",
       "answer": "Contact the team before requesting a change to design, fabric, colour or measurements. Ask whether the change is feasible and how it would affect the quotation, work and schedule before deciding how to proceed.",
       "keywords": [],
-      "source": "/terms-and-conditions/#5",
+      "source": "/terms-and-conditions/current/#5",
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026 §§11–12; existing approved change-assessment procedure",
       "approvalDate": "2026-11-07"
     },
@@ -963,7 +963,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "overnight": {
       "question": "What happens after 22:00?",
@@ -974,7 +974,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "domestic-deposit": {
       "question": "What deposit must I pay and when is the balance due?",
@@ -987,7 +987,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#3"
+      "source": "/terms-and-conditions/current/#3"
     },
     "international-payment": {
       "question": "Do international customers pay in full?",
@@ -999,7 +999,7 @@
       ],
       "approvalSource": "Owner Complete Customer Information & Policy Correction,7November2026",
       "approvalDate": "2026-11-07",
-      "source": "/terms-and-conditions/#3"
+      "source": "/terms-and-conditions/current/#3"
     },
     "international-shipping": {
       "question": "How is international shipping quoted?",
@@ -1010,7 +1010,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#8"
+      "source": "/terms-and-conditions/current/#8"
     },
     "kigali-round-trip": {
       "question": "How much is Kigali collection and return?",
@@ -1027,7 +1027,7 @@
     },
     "workplace-measurement": {
       "question": "Can someone visit my workplace for measurements?",
-      "answer": "{{policyMobileMeasurement}} If you have not confirmed a garment order, the separately purchased 35,000 RWF Independent Consultation & Fitting service may suit your needs. Share your visit address and preferred date/time; the team must confirm location eligibility, feasibility and arrangements.",
+      "answer": "{{policyMobileMeasurement}} If you have not confirmed a garment order, a separately quoted Independent Consultation & Fitting may suit your needs. Share your visit address and preferred date/time; the team must confirm location eligibility, feasibility and arrangements.",
       "keywords": [
         "office",
         "workplace",
@@ -1037,7 +1037,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#mobile-fees"
+      "source": "/terms-and-conditions/current/#mobile-fees"
     },
     "vip-price": {
       "question": "How are VIP services priced?",
@@ -1062,12 +1062,12 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "suit-starting-cost": {
       "question": "How much does a suit cost?",
-      "answer": "{{policyMensStarting}} {{policyWomensStarting}} <a href=\"/services/custom-tailoring/#service-info-prices\">Compare all tiers and included benefits</a>.",
-      "source": "/services/custom-tailoring/#service-info-prices",
+      "answer": "{{policyMensStarting}} {{policyWomensStarting}} <a href=\"/faq/prices-packages-payments/#suit-tier-differences\">Understand tiers and included benefits</a>.",
+      "source": "/services/custom-tailoring/#tailoring-hub-final-title",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
       "keywords": [
@@ -1079,7 +1079,7 @@
     "double-breasted-cost": {
       "question": "How much does a double-breasted suit cost?",
       "answer": "A double-breasted design is quoted according to the quality tier, number of pieces and requested details. {{policyMensStarting}} These are not fixed prices for every double-breasted design; feasibility and the final quotation are confirmed.",
-      "source": "/services/custom-tailoring/#service-info-prices",
+      "source": "/services/custom-tailoring/#tailoring-hub-final-title",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
@@ -1090,8 +1090,8 @@
     },
     "tuxedo-cost": {
       "question": "How much does a tuxedo cost?",
-      "answer": "Men’s tuxedo starting prices are separate from ordinary suits: Tier 1 two-piece 800,000 RWF and three-piece 1,000,000 RWF; Tier 2 two-piece 600,000 RWF and three-piece 800,000 RWF. Confirm the design, accessories, fabric and final quotation.",
-      "source": "/services/custom-tailoring/#tuxedo-prices",
+      "answer": "Men’s tuxedos are individually quoted under their separate package conditions, rather than ordinary-suit prices. Confirm the design, accessories, fabric and final quotation.",
+      "source": "/services/custom-tailoring/#tailoring-hub-final-title",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
       "keywords": [
@@ -1102,7 +1102,7 @@
     "express-cost": {
       "question": "How much is the Express fee?",
       "answer": "Express adds 35% of the eligible quoted base service. For a 100,000 RWF eligible base, the surcharge is 35,000 RWF and the total is 135,000 RWF. Feasibility and capacity must be confirmed; it is not one flat Express fee.",
-      "source": "/terms-and-conditions/#6",
+      "source": "/terms-and-conditions/current/#6",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
@@ -1114,7 +1114,7 @@
     "after-hours-cost": {
       "question": "How much is after-hours service?",
       "answer": "Necessary and agreed work from 17:00 to 22:00 adds 25% of the eligible quoted base. For a 100,000 RWF base this is 25,000 RWF extra. Express plus after-hours is additive 60% of the same base, not compounded. After 22:00 is individually quoted.",
-      "source": "/terms-and-conditions/#6",
+      "source": "/terms-and-conditions/current/#6",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
@@ -1124,7 +1124,7 @@
     },
     "alterations-cost": {
       "question": "How much do clothing alterations and repairs cost?",
-      "answer": "The price is quoted after assessing the garment, requested adjustment or repair, condition and complexity. Standard work is estimated at 12–15 working hours. Express requests require acceptance and add 35% of the eligible quoted base; eligible Kigali collection and return is 10,000 RWF total round trip.",
+      "answer": "The price is quoted after assessing the garment, requested adjustment or repair, condition and complexity. Standard work is estimated at 12–15 working hours. Express requests require acceptance and add 35% of the eligible quoted base; eligible Kigali collection and return is separately quoted for the total round trip.",
       "source": "/services/alterations/#service-info-payment",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1136,7 +1136,7 @@
     },
     "washing-suit-cost": {
       "question": "How much does washing or cleaning my suit cost?",
-      "answer": "The garment-care price is quoted after the garment, care label, condition and requested treatment are assessed. Standard care takes approximately three days. Express care takes 2–12 hours subject to confirmation, with the eligible 35% Express surcharge. Eligible Kigali collection and return costs 10,000 RWF total round trip, charged once when the same order combines alterations and cleaning.",
+      "answer": "The garment-care price is quoted after the garment, care label, condition and requested treatment are assessed. Standard care takes approximately three days. Express care takes 2–12 hours subject to confirmation, with the eligible 35% Express surcharge. Eligible Kigali collection and return is separately quoted for the total round trip, charged once when the same order combines alterations and cleaning.",
       "source": "/services/garment-care/#service-info-payment",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
@@ -1150,7 +1150,7 @@
     "standard-service-cost": {
       "question": "How much is Standard service?",
       "answer": "For ordinary suits, use the approved Tier / Quality and two-piece or three-piece schedule. {{policyMensStarting}} Alterations and garment care are priced for the actual assessed work. Standard priority does not itself add an Express surcharge; mobile services have their own scope-based fees.",
-      "source": "/terms-and-conditions/#starting-prices",
+      "source": "/terms-and-conditions/current/#starting-prices",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
@@ -1161,7 +1161,7 @@
     "children-tailoring": {
       "question": "Do you make clothes for young children?",
       "answer": "{{policyChildren}}",
-      "source": "/terms-and-conditions/#childrens-tailoring",
+      "source": "/terms-and-conditions/current/#childrens-tailoring",
       "approvalSource": "Owner collected staging adjustments,11November2026",
       "approvalDate": "2026-11-11",
       "keywords": [
@@ -1173,7 +1173,7 @@
     "children-cost": {
       "question": "How much does children’s tailoring cost?",
       "answer": "Children’s ordinary suit starting prices follow the corresponding Tier / Quality schedule. {{policyParentChild}} Special designs and the final quotation depend on the confirmed requirements.",
-      "source": "/terms-and-conditions/#childrens-tailoring",
+      "source": "/terms-and-conditions/current/#childrens-tailoring",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
       "keywords": [
@@ -1185,7 +1185,7 @@
     "parent-child-offer": {
       "question": "How does the children’s 50% discount work?",
       "answer": "{{policyParentChild}}",
-      "source": "/terms-and-conditions/#childrens-tailoring",
+      "source": "/terms-and-conditions/current/#childrens-tailoring",
       "approvalSource": "Owner final pricing/benefits/Fabric Guide instruction,12November2026",
       "approvalDate": "2026-11-12",
       "keywords": [
@@ -1220,8 +1220,8 @@
     },
     "mens-suit-cost": {
       "question": "How much is a men’s two-piece or three-piece suit?",
-      "answer": "{{policyMensStarting}} <a href=\"/services/custom-tailoring/#service-info-prices\">See all men’s tiers and benefits</a>. Men’s tuxedos use a separate schedule.",
-      "source": "/services/custom-tailoring/#service-info-prices",
+      "answer": "{{policyMensStarting}} <a href=\"/faq/prices-packages-payments/#suit-tier-differences\">Read about men’s tiers and benefits</a>. Men’s tuxedos use a separate schedule.",
+      "source": "/services/custom-tailoring/#tailoring-hub-final-title",
       "keywords": [
         "how much",
         "men",
@@ -1233,8 +1233,8 @@
     },
     "womens-suit-cost": {
       "question": "How much is a women’s two-piece or three-piece suit?",
-      "answer": "{{policyWomensStarting}} <a href=\"/services/custom-tailoring/#service-info-prices\">See women’s tiers and benefits</a>.",
-      "source": "/services/custom-tailoring/#service-info-prices",
+      "answer": "{{policyWomensStarting}} <a href=\"/faq/prices-packages-payments/#suit-tier-differences\">Read about women’s tiers and benefits</a>.",
+      "source": "/services/custom-tailoring/#tailoring-hub-final-title",
       "keywords": [
         "how much",
         "women",
@@ -1271,7 +1271,7 @@
     "suit-tier-differences": {
       "question": "What is the difference between Tier 1, Tier 2, Tier 3 and Tier 4?",
       "answer": "{{policyTierExplanation}} {{policyAllSuitBenefits}} Tiers 1 and 2 also have the approved follow-up cleaning and collection gifts; Tiers 3 and 4 do not.",
-      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "source": "/benefits/#6",
       "keywords": [
         "quality",
         "tier",
@@ -1284,7 +1284,7 @@
     "suit-complimentary-cleanings": {
       "question": "How many complimentary cleanings do I receive?",
       "answer": "{{policyCleaningBenefits}}",
-      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "source": "/benefits/#6",
       "keywords": [
         "cleaning",
         "three",
@@ -1297,7 +1297,7 @@
     "suit-cleaning-window": {
       "question": "When can I use my additional cleaning benefits?",
       "answer": "The two follow-up standard cleaning sessions for qualifying Tier 1 and Tier 2 suits must be used within three months after you receive the garment. Arrange the follow-up with our team; any collection and delivery transport is customer-paid. These are two follow-up sessions, not unlimited cleaning.",
-      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "source": "/benefits/#6",
       "keywords": [
         "three months",
         "follow up",
@@ -1309,7 +1309,7 @@
     "suit-followup-shirt": {
       "question": "Does complimentary cleaning include a shirt?",
       "answer": "For qualifying Tier 1 and Tier 2 follow-up standard cleaning, the approved coverage is the suit and one shirt. This does not create additional sessions or unlimited garment cleaning; the two follow-ups are within the approved three-month period after garment receipt.",
-      "source": "/services/custom-tailoring/#suit-benefit-conditions",
+      "source": "/benefits/#6",
       "keywords": [
         "shirt",
         "cleaning",
@@ -1321,7 +1321,7 @@
     "suit-benefit-transport": {
       "question": "Is collection and delivery free?",
       "answer": "The initial suit delivery within Kigali is included with the qualifying standard suit package. Transport for later complimentary cleaning is customer-paid. Other collection/delivery, mobile visits, outside-Kigali arrangements and international shipping follow their separate approved quotation; they are not free because a cleaning benefit applies.",
-      "source": "/services/custom-tailoring/#service-info-transport",
+      "source": "/delivery-and-collection/#1",
       "keywords": [
         "free",
         "initial",
@@ -1335,7 +1335,7 @@
     "fabric-tier-pricing": {
       "question": "Do all fabric types have different prices?",
       "answer": "Ordinary suit starting prices are categorised by Tier / Quality and two-piece or three-piece garments. Each fabric has an assigned tier, and several fabrics may share a tier. The Fabric Guide explains references rather than listing a separate suit price for every fabric. Your final quotation still accounts for special design and order requirements.",
-      "source": "/guides/fabrics/#fabric-references-title",
+      "source": "/guides/fabrics/#main-content",
       "keywords": [
         "fabric",
         "price",
@@ -1362,7 +1362,7 @@
     "payment-verification": {
       "question": "How are payments verified?",
       "answer": "{{policyPaymentVerification}} {{policyDomesticPayment}} {{policyInternationalPayment}}",
-      "source": "/terms-and-conditions/#3",
+      "source": "/terms-and-conditions/current/#3",
       "keywords": [
         "cash",
         "workplace",
@@ -1384,7 +1384,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "urgent-deadline-assessment": {
       "question": "How is an urgent suit deadline assessed?",
@@ -1396,7 +1396,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "customer-delays": {
       "question": "What if I delay confirming the order requirements?",
@@ -1409,7 +1409,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#6"
+      "source": "/terms-and-conditions/current/#6"
     },
     "quotation-response-times": {
       "question": "How quickly can I expect a quotation?",
@@ -1421,7 +1421,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#7"
+      "source": "/terms-and-conditions/current/#7"
     },
     "measurement-appointments": {
       "question": "How can I request a measurement appointment?",
@@ -1432,7 +1432,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#5"
+      "source": "/terms-and-conditions/current/#5"
     },
     "independent-consultation-cost": {
       "question": "How much does an independent consultation and fitting cost?",
@@ -1444,7 +1444,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#mobile-fees"
+      "source": "/terms-and-conditions/current/#mobile-fees"
     },
     "order-measurement-visit": {
       "question": "How much does an order-related measurement visit cost?",
@@ -1456,7 +1456,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#mobile-fees"
+      "source": "/terms-and-conditions/current/#mobile-fees"
     },
     "online-measurements": {
       "question": "Can I provide measurements online before a quotation?",
@@ -1467,7 +1467,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#5"
+      "source": "/terms-and-conditions/current/#5"
     },
     "kigali-delivery": {
       "question": "Is initial delivery within Kigali free?",
@@ -1478,7 +1478,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#8"
+      "source": "/terms-and-conditions/current/#8"
     },
     "customer-collection": {
       "question": "Can I collect my garments?",
@@ -1489,7 +1489,7 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#8"
+      "source": "/terms-and-conditions/current/#8"
     },
     "submission-confirmation": {
       "question": "Does submitting a form confirm an order or appointment?",
@@ -1501,11 +1501,11 @@
       ],
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
-      "source": "/terms-and-conditions/#2"
+      "source": "/terms-and-conditions/current/#2"
     },
     "flexible-advance": {
       "question": "Can I request a lower advance than 70%?",
-      "answer": "For eligible domestic Standard custom tailoring orders, customers unable to pay the usual 70% advance may request an individually agreed lower initial payment. This is not an automatic entitlement. Production may begin only when operationally and financially feasible and the applicable order conditions are confirmed. The entire outstanding balance must be paid within three calendar days of the initial payment, even if the garment is not yet finished. The initial amount, remaining balance and exact deadline must be communicated and accepted. This exception is not available for Express orders and does not automatically apply to international orders, mobile assistance, consultations or VIP arrangements.",
+      "answer": "{{policyFlexibleAdvance}}",
       "keywords": [
         "payment",
         "advance",
@@ -1557,7 +1557,7 @@
     },
     "express-advance": {
       "question": "How much advance is required for Express tailoring?",
-      "answer": "For domestic Express tailoring, the normal 70% advance applies to the total agreed quotation, including the 35% Express surcharge and any other charges included in that quotation. The remaining 30% is due at completion, before release, subject to applicable final-cleaning arrangements. Express deadlines are agreed individually; the below-70% exception does not apply.",
+      "answer": "{{policyExpressAdvance}}",
       "keywords": [
         "payment",
         "advance",
@@ -1570,7 +1570,7 @@
     },
     "overdue-advance": {
       "question": "What happens if I miss the three-day exceptional payment deadline?",
-      "answer": "Under an agreed exceptional advance arrangement, production is suspended if the full outstanding balance is not paid by the three-calendar-day deadline. We notify the customer of the overdue amount and its effect on the order. Payment must be settled before work resumes on an order that remains open; the completion date may need reassessment.",
+      "answer": "{{policyOverdueAdvance}}",
       "keywords": [
         "payment",
         "advance",
@@ -1583,7 +1583,7 @@
     },
     "overdue-cancellation": {
       "question": "Does a suspended order automatically become cancelled or non-refundable?",
-      "answer": "Suspension of an overdue exceptional-payment order does not itself mean cancellation or forfeiture. Any cancellation is assessed under the accepted order conditions, communicated to the customer and subject to applicable legal requirements. Work already performed and genuine, documented nonrecoverable order-specific costs may be considered only where lawfully disclosed and permitted. Restarting a cancelled order requires a new agreement.",
+      "answer": "{{policyOverdueCancellation}}",
       "keywords": [
         "payment",
         "advance",

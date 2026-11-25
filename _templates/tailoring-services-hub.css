@@ -73,3 +73,5 @@
 @media(max-width:350px){
  .tailoring-hub-fact-grid{grid-template-columns:1fr}
 }
+/* Recovery25Nov: preserve dark lettering on the existing gold service actions. */
+.tailoring-hub-service .home-button.home-button-gold{color:#17130b}

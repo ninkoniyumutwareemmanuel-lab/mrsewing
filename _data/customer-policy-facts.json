@@ -225,5 +225,13 @@
       "International payment/shipping distinctions",
       "Other service transport and surcharge policies"
     ]
+  },
+  "latestPolicyApproval": {
+    "date": "2026-11-25",
+    "source": "Owner-approved Customer Terms & Conditions Version 1.1 and Master Website Recovery instruction,25November2026",
+    "status": "APPROVED FOR STAGING; official website activation requires separate owner authorization",
+    "scope": "Existing v1.1 domestic Standard/Express payments, individually approved Standard lower-advance exception, three-calendar-day full settlement, notified suspension, case-by-case cancellation/refund and verified receipt; existing service and international exceptions remain",
+    "confirmedAgreements": "Existing customer agreements retain their accepted terms, subject to applicable mandatory law",
+    "legalReview": "No completed legal review asserted"
   }
 }

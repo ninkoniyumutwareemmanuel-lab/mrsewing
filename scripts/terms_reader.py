@@ -1,12 +1,13 @@
 """Full-screen, mobile-readable staged Terms PDF viewer.
 
-Only renders the exact approved R53 PDF as page images derived from its
-checksum-verified bytes. The PDF is NOT yet the legally active online Terms.
+Renders the registered staging-review PDF as page images derived from its
+checksum-verified bytes. Review authorization is not official activation.
 Until official activation, quotation/consultation consent continues pointing
 to the preserved current HTML Terms.
 """
 import hashlib
 import json
+import struct
 from pathlib import Path
 from html import escape
 
@@ -21,10 +22,17 @@ def received_version():
     if document['currentVersion'] is not None:
         raise ValueError('Staging PDF preview must not silently activate Terms')
     versions = document.get('receivedVersions', [])
-    if not versions or [v['version'] for v in versions] not in (['1.0'], ['1.0','1.1']):
-        raise ValueError('Unexpected approved PDF receipt history')
-    entry = versions[-1]
-    if (entry['approvalStatus'] != 'approved'
+    if not versions or [v['version'] for v in versions] not in (['1.0'], ['1.0','1.1'], ['1.0','1.2']):
+        raise ValueError('Unexpected PDF receipt history')
+    for candidate in versions:
+        validate_receipt(candidate)
+    return versions[-1]
+
+
+def validate_receipt(entry):
+    """Validate every retained receipt; a new upload cannot hide a damaged archive."""
+    expected_approval = 'approved-for-staging-review' if entry['version']=='1.2' else 'approved'
+    if (entry['approvalStatus'] != expected_approval
             or entry['publicationStatus'] != 'staging-review'
             or entry['activationStatus'] != 'awaiting-official-publication'
             or entry['effectiveDate'] is not None):
@@ -37,13 +45,33 @@ def received_version():
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != fingerprint:
             raise ValueError('Terms PDF checksum/path mismatch: ' + name)
     pages = entry['technicalInspection']['pages']
-    if pages != {'1.0':5,'1.1':6}[entry['version']]:
+    if pages != {'1.0':5,'1.1':6,'1.2':6}[entry['version']]:
         raise ValueError('Unexpected approved PDF page count')
-    return entry
+    if entry['version']=='1.2' and (entry['technicalInspection'].get('declaredVersion')!='1.2'
+                                  or entry['technicalInspection'].get('numberedSections')!=20):
+        raise ValueError('Uploaded Version 1.2 identity changed unexpectedly')
 
 
 def page_url(version, number):
     return PAGE_DIR + version['version'] + '-%02d.png' % number
+
+
+def page_manifest(entry):
+    manifest = json.loads((ROOT / 'assets/policy-documents/terms-and-conditions/pages/manifest.json').read_text())
+    pages=entry['technicalInspection']['pages']
+    if (manifest.get('sourcePdfSha256')!=entry['sha256'] or manifest.get('version')!=entry['version']
+            or manifest.get('publicationStatus')!='staging-review' or manifest.get('effectiveDate') is not None
+            or len(manifest.get('pages',[]))!=pages):
+        raise ValueError('Terms page manifest does not match the registered PDF')
+    for number,item in enumerate(manifest['pages'],1):
+        if item.get('page')!=number or item.get('path')!=page_url(entry,number):
+            raise ValueError('Terms page order/path mismatch')
+        raw=(ROOT/item['path'].lstrip('/')).read_bytes()
+        if (not raw.startswith(b'\x89PNG\r\n\x1a\n') or raw[12:16]!=b'IHDR'
+                or struct.unpack('>II',raw[16:24])!=(item['width'],item['height'])
+                or hashlib.sha256(raw).hexdigest()!=item['sha256']):
+            raise ValueError('Terms page image checksum/dimensions mismatch')
+    return manifest
 
 
 def render():
@@ -51,9 +79,7 @@ def render():
     href = escape(entry['publishedPath'], quote=True)
     filename = escape(entry['sourceFilename'], quote=True)
     pages = entry['technicalInspection']['pages']
-    manifest = json.loads((ROOT / 'assets/policy-documents/terms-and-conditions/pages/manifest.json').read_text())
-    if manifest['sourcePdfSha256'] != entry['sha256'] or len(manifest['pages']) != pages:
-        raise ValueError('Terms page manifest does not match approved PDF')
+    manifest = page_manifest(entry)
     dimensions = {p['page']:(p['width'],p['height']) for p in manifest['pages']}
     document_pages = ''.join(
         '<li class="terms-popup-page" data-page="' + str(i) + '">'
@@ -69,7 +95,7 @@ def render():
         ' aria-label="Terms and Conditions full-screen PDF reader"'
         ' aria-describedby="termsPopupLegalStatus">'
         '<p class="terms-popup-visually-hidden" id="termsPopupLegalStatus">'
-        'This owner-approved PDF is for staging review, not the officially effective Terms.'
+        'This Version ' + escape(entry['version']) + ' PDF is authorized for staging review, not the officially effective Terms.'
         ' Customer consent continues to use the existing online Terms.</p>'
         '<div class="terms-popup-toolbar" role="toolbar" aria-label="PDF reader controls">'
         '<span class="terms-popup-document-icon" aria-hidden="true">'
@@ -78,12 +104,12 @@ def render():
         '<path d="M9 14h7M9 17h5"/></svg></span>'
         '<span class="terms-popup-filename" title="' + filename + '">' + filename + '</span>'
         '<a class="terms-popup-icon" href="' + href + '" target="_blank" rel="noopener noreferrer"'
-        ' aria-label="Open the approved PDF in a new tab" title="Open PDF">'
+        ' aria-label="Open the staging-review PDF in a new tab" title="Open PDF">'
         '<svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor"'
         ' stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'
         '<path d="M14 3h7v7M10 14L21 3M21 13v8H3V3h8"/></svg></a>'
         '<a class="terms-popup-icon" href="' + href + '" download="' + filename
-        + '" aria-label="Download the original approved PDF" title="Download PDF">'
+        + '" aria-label="Download the original staging-review PDF" title="Download PDF">'
         '<svg viewBox="0 0 24 24" width="23" height="23" fill="none"'
         ' stroke="currentColor" stroke-width="1.9" stroke-linecap="round"'
         ' stroke-linejoin="round"><path d="M12 3v13m-5-5 5 5 5-5"/>'

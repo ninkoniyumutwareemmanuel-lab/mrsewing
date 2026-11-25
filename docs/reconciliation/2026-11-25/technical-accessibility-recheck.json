@@ -1,0 +1,26 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "buttonColor": "rgb(23, 19, 11)",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "buttonColor": "rgb(23, 19, 11)",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "buttonColor": "rgb(23, 19, 11)",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "buttonColor": "rgb(23, 19, 11)",
+    "violations": []
+  }
+]

@@ -5046,11 +5046,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5068,10 +5069,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-153",
@@ -5101,11 +5108,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5123,10 +5131,16 @@
       "proposedCategoryId": "women-three-piece",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-154",
@@ -5156,11 +5170,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5183,10 +5198,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-155",
@@ -5216,11 +5237,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5243,10 +5265,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-156",
@@ -5286,14 +5314,16 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "R54 owner20November2026 explicitly confirms catalogue image12 as Burgundy despite its Olive filename; retained in R59 approved visual direction. Source filename preserved for traceability. Reconciled25November2026."
       ],
       "sourceAnchor": "sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp",
       "classification": "reference-design",
@@ -5312,14 +5342,19 @@
         12
       ],
       "proposedCategoryId": "men-double-breasted",
-      "metadataReviewStatus": "owner_correction_required",
+      "metadataReviewStatus": "visually_reviewed_pending_gallery_placement",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display.",
-        "Owner metadata confirmation is needed for catalogue12: its filename/catalogue says Olive but the actual image is Burgundy. Technical grouping with5 is prepared, not publication approval."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
       "sourceOrCreator": null,
-      "groupingEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Catalogue5 and the actual Burgundy photograph incorrectly named Olive in12 share the gold-button Burgundy design-family variant, with different styling views. This does not prove the same physical garment or approve the source-label correction."
+      "groupingEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Catalogue5 and the actual Burgundy photograph incorrectly named Olive in12 share the gold-button Burgundy design-family variant, with different styling views. This does not prove the same physical garment or approve the source-label correction. R54 owner confirmation resolves the source-label correction; original file and grouped Burgundy views are unchanged.",
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-157",
@@ -5349,11 +5384,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5376,10 +5412,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-158",
@@ -5409,11 +5451,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5431,10 +5474,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-159",
@@ -5464,11 +5513,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5486,10 +5536,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-160",
@@ -5519,11 +5575,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5546,10 +5603,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-161",
@@ -5579,11 +5642,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5601,7 +5665,7 @@
       "proposedCategoryId": "women-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
       "sourceOrCreator": null,
@@ -5609,6 +5673,12 @@
         "status": "completed",
         "reviewedOn": "2026-11-20",
         "finding": "Individual photograph confirms a white two-piece women’s double-breasted pantsuit with four black buttons, notched lapels, flap pockets and black underlayer. Pearl Gold Executive remains the owner-provided design name, not a claim of gold hardware. Separate from Ivory Noir Elegance as instructed. Publication-rights hold remains."
+      },
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
       }
     },
     {
@@ -5640,11 +5710,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5662,10 +5733,16 @@
       "proposedCategoryId": "men-tuxedos-formalwear",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-163",
@@ -5696,11 +5773,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5718,10 +5796,16 @@
       "proposedCategoryId": "women-skirt-suits",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-164",
@@ -5751,11 +5835,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5773,10 +5858,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-165",
@@ -5807,11 +5898,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5829,10 +5921,16 @@
       "proposedCategoryId": "men-tuxedos-formalwear",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-166",
@@ -5862,11 +5960,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5884,10 +5983,16 @@
       "proposedCategoryId": "women-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-167",
@@ -5918,11 +6023,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5940,10 +6046,16 @@
       "proposedCategoryId": "men-tuxedos-formalwear",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-168",
@@ -5974,11 +6086,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -5996,10 +6109,16 @@
       "proposedCategoryId": "men-tuxedos-formalwear",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-169",
@@ -6049,11 +6168,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -6073,11 +6193,17 @@
       "proposedCategoryId": "men-single-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
       "sourceOrCreator": null,
-      "groupingEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Catalogue19/20/21 and matching visible patch pockets, button placement and edge stitching establish three views. Original order: angled21, front19, detail20."
+      "groupingEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Catalogue19/20/21 and matching visible patch pockets, button placement and edge stitching establish three views. Original order: angled21, front19, detail20.",
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-170",
@@ -6108,11 +6234,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -6130,10 +6257,16 @@
       "proposedCategoryId": "men-tuxedos-formalwear",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-171",
@@ -6163,11 +6296,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -6190,10 +6324,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-172",
@@ -6223,11 +6363,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -6245,10 +6386,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     },
     {
       "id": "MS-173",
@@ -6278,11 +6425,12 @@
       ],
       "provenance": "design_inspiration",
       "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
-      "rightsStatus": "review_required",
+      "rightsStatus": "approved",
       "published": false,
-      "publicationBasis": "prepared_owner_catalogue_pending_usage_rights",
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
       "sources": [
-        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
       ],
       "metadataEvidence": [
         "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
@@ -6305,10 +6453,16 @@
       "proposedCategoryId": "men-double-breasted",
       "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
       "publicationBlockers": [
-        "Publication permission and usage-rights evidence for this uploaded third-party fashion reference have not been supplied. Git presence, catalogue wording and technical preparation do not approve website display."
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
       ],
       "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
-      "sourceOrCreator": null
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     }
   ]
 }

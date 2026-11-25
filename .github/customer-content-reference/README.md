@@ -6,7 +6,10 @@ Owner expressly confirmed that photographs and videos placed in this GitHub repo
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-22-01**, carrying the unchanged November 18 policy references plus a November 22 **staging-only visual redesign addendum**. No new customer financial or legal terms are approved by the version change. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+**Current25November2026recovery:** full accessible-source reconciliation and safe staging repairs only. Read [master reconciliation register](../../docs/WEBSITE_RECONCILIATION_2026-11-25.md) and the latest dated sources; preserveR61media/R63–R67design/forms/SEO and text-firstfabric decisions. NewestPDFupload must retain its actualversion/stagingreview distinction. Main/officialwebsite are read-only.
+
+
+Current reviewed reference: **versions/2026-11-25-01**, carrying the unchanged November 18 policy references plus a November 22 **staging-only visual redesign addendum**. No new customer financial or legal terms are approved by the version change. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 **Current R49 release authority:** The owner's13November2026 instruction authorizes the complete approved R35–R49 release after critical staging verification. Earlier staging-only paragraphs below are historical for that verified scope; unresolved/private/unapproved features and future unfinished work remain held. This reference does not claim production has been deployed. See [R49 release brief](R49_RELEASE_BRIEF_2026-11-13.md), [full branch reconciliation](R49_RELEASE_RECONCILIATION_2026-11-13.md) and [policy reconciliation](R49_POLICY_RECONCILIATION_2026-11-13.md).
 
@@ -16,11 +19,11 @@ Current reviewed reference: **versions/2026-11-22-01**, carrying the unchanged N
 
 Read in order:
 
-1. [Customer information master](versions/2026-11-22-01/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-22-01/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-22-01/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-22-01/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-22-01/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+1. [Customer information master](versions/2026-11-25-01/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-25-01/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-25-01/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-25-01/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-25-01/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
 6. [R59 approved design scope](versions/2026-11-22-01/R59_TAILORING_FIRST_OWNER_DIRECTIVE.md)
 7. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 

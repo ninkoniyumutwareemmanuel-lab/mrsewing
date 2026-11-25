@@ -6866,6 +6866,90 @@
         "scripts/homepage_video_cards.py",
         "docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md"
       ]
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.2-01.png",
+      "sourceOriginal": "assets/policy-documents/terms-and-conditions/pages/1.2-01.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Owner-authorized staging-review Version 1.2 PDF page raster; exact uploaded document, not garment media, not officially activated.",
+      "legacyReferences": [
+        "scripts/render_terms_page_images.py"
+      ]
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.2-02.png",
+      "sourceOriginal": "assets/policy-documents/terms-and-conditions/pages/1.2-02.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Owner-authorized staging-review Version 1.2 PDF page raster; exact uploaded document, not garment media, not officially activated.",
+      "legacyReferences": [
+        "scripts/render_terms_page_images.py"
+      ]
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.2-03.png",
+      "sourceOriginal": "assets/policy-documents/terms-and-conditions/pages/1.2-03.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Owner-authorized staging-review Version 1.2 PDF page raster; exact uploaded document, not garment media, not officially activated.",
+      "legacyReferences": [
+        "scripts/render_terms_page_images.py"
+      ]
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.2-04.png",
+      "sourceOriginal": "assets/policy-documents/terms-and-conditions/pages/1.2-04.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Owner-authorized staging-review Version 1.2 PDF page raster; exact uploaded document, not garment media, not officially activated.",
+      "legacyReferences": [
+        "scripts/render_terms_page_images.py"
+      ]
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.2-05.png",
+      "sourceOriginal": "assets/policy-documents/terms-and-conditions/pages/1.2-05.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Owner-authorized staging-review Version 1.2 PDF page raster; exact uploaded document, not garment media, not officially activated.",
+      "legacyReferences": [
+        "scripts/render_terms_page_images.py"
+      ]
+    },
+    {
+      "originalImagePath": "assets/policy-documents/terms-and-conditions/pages/1.2-06.png",
+      "sourceOriginal": "assets/policy-documents/terms-and-conditions/pages/1.2-06.png",
+      "designId": null,
+      "galleryLocation": null,
+      "groupedWithOtherPhotographs": false,
+      "provenance": "not_a_design_record",
+      "rightsStatus": "not_assessed_non_garment",
+      "missing": false,
+      "excludedReason": "Owner-authorized staging-review Version 1.2 PDF page raster; exact uploaded document, not garment media, not officially activated.",
+      "legacyReferences": [
+        "scripts/render_terms_page_images.py"
+      ]
     }
   ],
   "missingLegacyReferences": [],

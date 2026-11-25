@@ -69,7 +69,17 @@
         "source": "Owner-uploaded branch files; corrective implementation instruction19November2026",
         "rightsImplication": "Upload and technical preparation do not establish publication rights or Mr Sewing workmanship."
       },
-      "displayNotes": "Staging displays original verified video, muted by default, with manual controls. This is a reference design and is not labelled completed customer work."
+      "displayNotes": "R61/R64 staging presentation uses only the verified silent derivative and extracted source-frame poster; muted looping playback with keyboard/tap pause and reduced-motion support. Reference design, not verified completed Mr Sewing work.",
+      "playback": {
+        "assetPath": "/assets/videos/suit-light-silent.mp4",
+        "sha256": "0737d9b2749e2d6a492e302713cdc4e54d529d872aca9d2afe42926861049e97",
+        "bytes": 2785145,
+        "sourceSha256": "787bb40456b856e67995bd3444ffe21bc40ac465c0a0ed9ad671e4f21cb87756",
+        "posterPath": "/assets/videos/suit-light-poster.jpg",
+        "posterSha256": "b7590268efc68685b8399cd73936a125a200cdfe390ae62185fddd423356749a",
+        "audioStreams": 0,
+        "verification": "25 November 2026 recovery: ffprobe confirms exactly one video track and zero audio; source identity and existing R61 derived poster retained. Playback is validated separately from original upload rights."
+      }
     },
     {
       "assetPath": "/1024X768black.mp4",
@@ -137,7 +147,17 @@
         "source": "Owner-uploaded branch files; corrective implementation instruction19November2026",
         "rightsImplication": "Upload and technical preparation do not establish publication rights or Mr Sewing workmanship."
       },
-      "displayNotes": "Staging displays original verified video, muted by default, with manual controls. This is a reference design and is not labelled completed customer work."
+      "displayNotes": "R61/R64 staging presentation uses only the verified silent derivative and extracted source-frame poster; muted looping playback with keyboard/tap pause and reduced-motion support. Reference design, not verified completed Mr Sewing work.",
+      "playback": {
+        "assetPath": "/assets/videos/suit-black-silent.mp4",
+        "sha256": "28dd184f147b5c7a37bab94262a8f1a40e74055a81000684e1ec10fe20e1af83",
+        "bytes": 2516804,
+        "sourceSha256": "56dfbf5dc08bd27f6965eaa3a7ec6269419a8f107461161b63f2ab47a3a6763a",
+        "posterPath": "/assets/videos/suit-black-poster.jpg",
+        "posterSha256": "e2d112eada9d81caeaa5b30ee483ba9c523e9e479d53b0a622c22c5c6424b4df",
+        "audioStreams": 0,
+        "verification": "25 November 2026 recovery: ffprobe confirms exactly one video track and zero audio; source identity and existing R61 derived poster retained. Playback is validated separately from original upload rights."
+      }
     }
   ]
 }

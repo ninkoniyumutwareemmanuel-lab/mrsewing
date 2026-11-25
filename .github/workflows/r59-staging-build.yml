@@ -4,16 +4,19 @@ on:
     branches: [phase1/customer-journey-repairs]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
+concurrency:
+  group: staging-verification-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build-and-verify:
-    if: "!contains(github.event.head_commit.message, '[generated]')"
+    if: github.ref == 'refs/heads/phase1/customer-journey-repairs'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
-          ref: phase1/customer-journey-repairs
+          persist-credentials: false
+          # Default checkout is the event commit, not a moving branch tip.
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -21,22 +24,13 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg poppler-utils
-      - name: Verify and import owner-approved Terms 1.1 on staging only
-        run: python scripts/import_owner_terms_v1_1.py
-      - name: Create owner-authorized silent video files and matching still posters
+      # PDF verification/activation is an explicit reviewed operation. A new
+      # arbitrary upload must not mutate the published registry during every build.
+      - name: Verify committed silent media without rewriting approved playback assets
         run: |
-          mkdir -p assets/videos "$RUNNER_TEMP/mrsewing-silent"
-          python scripts/prepare_silent_homepage_videos.py --output-dir "$RUNNER_TEMP/mrsewing-silent"
-          cp "$RUNNER_TEMP/mrsewing-silent/1024X768VIDEO-silent.mp4" assets/videos/suit-light-silent.mp4
-          cp "$RUNNER_TEMP/mrsewing-silent/1024X768black-silent.mp4" assets/videos/suit-black-silent.mp4
-          ffmpeg -hide_banner -loglevel error -nostdin -y -ss 1 -i 1024X768VIDEO.mp4 -frames:v 1 -q:v 3 assets/videos/suit-light-poster.jpg
-          ffmpeg -hide_banner -loglevel error -nostdin -y -ss 1 -i 1024X768black.mp4 -frames:v 1 -q:v 3 assets/videos/suit-black-poster.jpg
-          test -s assets/videos/suit-light-silent.mp4
-          test -s assets/videos/suit-black-silent.mp4
-          test -s assets/videos/suit-light-poster.jpg
-          test -s assets/videos/suit-black-poster.jpg
-          python scripts/build_site.py
-          python scripts/build_site.py --check
+          python scripts/prepare_silent_homepage_videos.py
+          python tests/homepage_video_gate_r59.py
+          # Regeneration and hash changes require a deliberate developer review.
       - name: Build and check customer website
         run: |
           python scripts/build_site.py
@@ -50,6 +44,12 @@ jobs:
           python tests/homepage_video_gate_r59.py
           python tests/held_media_redirects_r59.py
           python tests/shop_status_r59.py
+          python tests/terms_recovery.py
+          python scripts/import_owner_terms_v1_1.py --check
+          python tests/recovery_policies.py
+          python tests/recovery_technical.py
+          python tests/recovery_workflow.py
+          python tests/recovery_links.py
           python scripts/prepare_silent_homepage_videos.py
           python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py scripts/customer_site.py
       - uses: actions/setup-node@v4
@@ -59,28 +59,35 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
           npx playwright install --with-deps chromium
+      - name: Verify selected-design and fabric payload security with mocked providers
+        run: |
+          node tests/multi-design-validation.mjs
+          node tests/shared-fabric-validation.mjs
+          node tests/quotation-completion-validation.mjs
+          node tests/recovery_fabric_validation.mjs
+          node tests/shop-draft-request-gate.mjs
+          node tests/recovery_source_boundary.mjs
       - name: Test staging-designed local browser at four widths
         run: |
           python -m http.server 8020 --bind 127.0.0.1 > /tmp/r59-http.log 2>&1 &
           node tests/r59_tailoring_browser.cjs
           node tests/terms_popup_browser.cjs
+          node tests/recovery-fabric-browser.cjs
+          REVIEW_ARTIFACTS=artifacts/recovery-journeys node tests/recovery_journeys.cjs
       - name: Save browser review screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: r59-staging-browser-screenshots
-          path: artifacts/r59-browser/*.png
+          path: |
+            artifacts/r59-browser/*.png
+            artifacts/r55-terms/*.png
+            artifacts/recovery-fabric/*.png
+            artifacts/recovery-journeys/*.png
+            artifacts/recovery-journeys/results.json
           if-no-files-found: ignore
-      - name: Persist only generated changes already tracked in the staging checkout
+      - name: Verify generated outputs are committed for this exact event
         run: |
-          git config user.name "mrsewing-staging-builder"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -u
-          git add .github/policy-documents/terms-and-conditions/1.1.pdf assets/policy-documents/terms-and-conditions/1.1.pdf assets/policy-documents/terms-and-conditions/pages/1.1-*.png
-          git add assets/videos/suit-light-silent.mp4 assets/videos/suit-black-silent.mp4 assets/videos/suit-light-poster.jpg assets/videos/suit-black-poster.jpg
-          if ! git diff --cached --quiet; then
-            git commit -m "R59 staging generated page and asset sync [generated]"
-            git push origin HEAD:phase1/customer-journey-repairs
-          else
-            echo "All committed pages already synchronized"
-          fi
+          git diff --exit-code
+          # All generation is reviewed and committed by the developer before push.
+          # CI never commits/pushes or races a newer owner upload.

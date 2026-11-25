@@ -18,11 +18,11 @@ def facts():
  data['texts']['policySuitPrices']=' '.join(lines)+' These are complete garment starting prices, not fabric-only prices. Your selected fabric, design, inclusions and service requirements are reviewed before the final quotation is confirmed.'
  return data
 def sections(service):
- f=facts();rows=[]
+ f=facts();f['texts']=__import__('public_content').public_texts(f['texts']);rows=[]
  if service in ['custom-tailoring','alterations','garment-care']:rows.append(('timing','Service Turnaround',f['texts'][f['services'][service]['timingTextKey']]))
  if service in ['custom-tailoring','alterations','garment-care']:rows.append(('charges','Express, after-hours and overnight',f['texts']['policyCharges']))
  if service=='custom-tailoring':
-  rows.append(('prices','Starting Suit Prices',f['texts']['policySuitPrices']))
+  rows.append(('prices','Suit quotations and quality options',f['texts']['policySuitPrices']))
   rows.append(('children','Children’s tailoring',f['texts']['policyChildren']+' '+f['texts']['policyParentChild']))
   rows.extend([('payments','Payments before production and release',' '.join(f['texts'][k] for k in ['policyDomesticPayment','policyInternationalPayment','policyPaymentVerification'])),('fabric','Customer-supplied fabric and design references',f['texts']['policyOwnFabric'])])
  if service in ['custom-tailoring','alterations']:rows.append(('corrections','Fitting and workmanship concerns','Report concerns promptly, preferably through official WhatsApp. The reporting guidance is within 72 hours after receipt or collection without limiting applicable customer rights. Mr Sewing assesses its own errors, corrects feasible errors without an additional tailoring charge and may provide a company-funded remake if proper correction is impossible. Customer-supplied measurement errors require an assessment; a replacement may need a separate quotation.'))
@@ -35,6 +35,6 @@ def sections(service):
 def render(service):
  out=[]
  for id,title,text in sections(service):
-  content=('<ul>'+''.join('<li>'+escape(line)+'</li>' for line in facts()['priceLines'])+'</ul><p>These are complete garment starting prices, not fabric-only prices. The final quotation follows review of your fabric, design and requirements.</p>') if id=='prices' else '<p>'+escape(text)+'</p>'
+  content='<p>'+escape(text)+'</p>'
   out.append('<section class="release-section" id="service-info-'+id+'"><h2>'+escape(title)+'</h2>'+content+'</section>')
  return ''.join(out)

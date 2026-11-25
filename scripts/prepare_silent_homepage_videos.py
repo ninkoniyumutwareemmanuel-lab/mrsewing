@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Prepare/check non-public SILENT derivatives of R53 original homepage videos.
+"""Prepare/check SILENT derivatives of the registered homepage videos.
 
 Original MP4 files stay unchanged. Temporary derivatives are deleted at end
 of a normal check; nothing is emitted into deployed website assets or pages.
-Use --output-dir only for controlled private review outside the public repo.
-Publication additionally requires video rights, exact poster and metadata.
+Use --output-dir for controlled preparation outside the public repo; the build
+workflow explicitly copies verified outputs into approved publication paths.
+Preparation does not grant or change rights, poster or publication approval.
 """
 import argparse
 import hashlib
@@ -58,7 +59,8 @@ def prepare(destination):
             raise ValueError('Original video unexpectedly modified: '+filename)
         outcomes.append({
             'original':filename,'originalSha256':prior,'silentSha256':sha256(output),
-            'audioStreams':0,'videoStreams':1,'publication':'HELD; not uploaded or activated'
+            'audioStreams':0,'videoStreams':1,'publicationStatus':video.get('publicationStatus'),
+            'preparationChangesApproval':False
         })
     return outcomes
 
@@ -70,10 +72,10 @@ if __name__=='__main__':
     if args.output_dir:
         target=Path(args.output_dir).resolve()
         if target.is_relative_to(ROOT):
-            raise SystemExit('Refusing to write held media into the public repository')
+            raise SystemExit('Use an external preparation directory; publication copies belong to the reviewed build workflow')
         result=prepare(target)
     else:
         with tempfile.TemporaryDirectory(prefix='mrsewing-r56-silent-') as folder:
             result=prepare(Path(folder))
     print(json.dumps(result,indent=2))
-    print('PASS: Both videos were converted without audio; derivatives remain OFF the public staging site')
+    print('PASS: Both temporary playback copies contain no audio; original files and publication approvals remain unchanged')

@@ -1,21 +1,23 @@
 {
-  "currentVersion": "2026-11-22-01",
-  "implementationBaseline": "e4951002297df5551b03acddf76933e37c92a918",
+  "currentVersion": "2026-11-25-01",
+  "implementationBaseline": "0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
   "ownerApprovalDate": "2026-11-13",
   "implementationResumedDate": "2026-11-18",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "R50 owner directs publication of reviewed R35–R49 candidate after disclosed proxy verification limitation; no new business policy; actual production deployment and rendering status require separate evidence",
+  "customerPolicyPublication": "Staging only; latest explicitly approved25Novoperational exceptions; no officialPDFactivation or productionrelease",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "911f1341309f8ba5d038b51b2d19a018721acbf4d2286670b6079b14d26c7386",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "412cf5278a90add14ea25f2629562ec7d2ce024654b8849cd48f1d488f7f6654",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "63ae8cc1d10aeca465c940752c7122a2ada508635837d799b4cd32b8c8f475ef",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "051a7da33617824d425f7c231138388fc958e14ad65491e9231a5c3e02f3d48e",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "acee65a2a1437d293f4962f0637f366e84816362b12df6d56919752f991c368c"
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "28c88183a0b38b1d9bb383b803073b7f9fb6aeba3fc7b3001238afbe040fbc9f",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "dedfff176791ab2cc3f4a8dedb948e907ed5ef8f5834481af7780ad553760bee",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "7c03e43a47aa2cf537fc6e7592df32d88f5f9163a43c77be7b49294c1bb17246",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "956b0d2bf877ce744360395d0d59819c8cd5288ced561d773979444aef45638a",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "fff77c7f444a410ad4fc8e294702add37bd6437985f4e92c1291b696b8fb333d"
   },
   "ownerPublicationInstructionDate": "2026-11-18",
-  "previousPolicyReferenceVersion": "2026-11-18-02",
+  "previousPolicyReferenceVersion": "2026-11-22-01",
   "ownerDesignDecisionDate": "2026-11-22",
-  "stagingOnlyScope": "R59 tailoring-first homepage, central Tailoring & Clothing Services hub, Showroom, Shop wording/links, accessible media projection and tested dates; no new business/legal approval",
+  "stagingOnlyScope": "Full accessible-source audit, recovery, reconciliation and tested safe repairs; Main/officialwebsite protected",
   "designAddendumFile": "R59_TAILORING_FIRST_OWNER_DIRECTIVE.md",
-  "policySourceFilesCarriedForwardUnmodified": true
+  "policySourceFilesCarriedForwardUnmodified": false,
+  "ownerRecoveryInstructionDate": "2026-11-25",
+  "implementationStatus": "local-recovery-tested; staging publication pending; permanent verification blocked by network/account access"
 }
