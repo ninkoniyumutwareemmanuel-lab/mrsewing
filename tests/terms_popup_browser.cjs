@@ -4,6 +4,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const {chromium}=require('playwright');
 const base='http://127.0.0.1:8020';
+const expected=require('../_data/policy-documents.json').documents['terms-and-conditions'].receivedVersions.at(-1).technicalInspection.pages;
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
  try{
@@ -21,7 +22,7 @@ const base='http://127.0.0.1:8020';
    const bounds=await modal.boundingBox();
    assert(bounds&&Math.abs(bounds.width-width)<=2,'Popup fills mobile/desktop width: '+width);
    assert(Math.abs(bounds.height-height)<=3,'Popup fills mobile/desktop height: '+width);
-   assert.equal(await page.locator('.terms-popup-page').count(),5,'all original PDF pages are present');
+   assert.equal(await page.locator('.terms-popup-page').count(),expected,'all original PDF pages are present');
    assert.equal(await page.locator('object[type="application/pdf"]').count(),0,'does not rely on unsupported native PDF');
    assert.equal(await page.locator('.terms-document-state').count(),0,'old brochure header has been removed');
    await page.locator('.terms-popup-page img').first().waitFor({state:'visible'});
@@ -37,7 +38,7 @@ const base='http://127.0.0.1:8020';
    if(width===390||width===1440){await page.screenshot({path:path.join('artifacts/r55-terms','terms-'+width+'.png'),fullPage:false});}
    await page.evaluate(()=>{const s=document.querySelector('[data-terms-scroll]');s.scrollTop=s.scrollHeight;});
    await page.waitForTimeout(250);
-   assert.equal(await page.locator('[data-terms-page-number]').textContent(),'5','scroll reaches final PDF page');
+   assert.equal(await page.locator('[data-terms-page-number]').textContent(),String(expected),'scroll reaches final PDF page');
    await page.locator('[data-terms-zoom-in]').click();
    const widthIn=await page.locator('[data-terms-pages]').evaluate(n=>n.clientWidth);
    await page.locator('[data-terms-zoom-out]').click();
@@ -46,7 +47,7 @@ const base='http://127.0.0.1:8020';
    assert.deepEqual(errors,[],'no page JS errors');
    await page.locator('[data-terms-close]').click();
    await page.waitForURL(base+'/',{timeout:15000});
-   console.log('PASS: R55 Chromium popup at '+width+'px, five pages, scroll/zoom/close, no plug-in');
+   console.log('PASS: R55 Chromium popup at '+width+'px, '+expected+' pages, scroll/zoom/close, no plug-in');
    await context.close();
   }
  }finally{await browser.close();}

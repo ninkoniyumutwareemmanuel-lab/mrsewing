@@ -128,7 +128,7 @@ const dest='artifacts/r59-browser';
    if(width===390){
     await page.goto(base+'/terms-and-conditions/',{waitUntil:'domcontentloaded'});
     assert(await page.locator('#termsPdfDialog').isVisible(),'PDF reader stays present');
-    assert.equal(await page.locator('.terms-popup-page').count(),5);
+    assert.equal(await page.locator('.terms-popup-page').count(),require('../_data/policy-documents.json').documents['terms-and-conditions'].receivedVersions.at(-1).technicalInspection.pages);
     await page.screenshot({path:path.join(dest,'terms-390.png')});
    }
    assert.deepEqual(errors,[],'Page JavaScript errors at '+width);

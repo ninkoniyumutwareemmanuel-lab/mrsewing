@@ -29,12 +29,12 @@ class TermsReaderTests(unittest.TestCase):
         self.assertIn('data-terms-zoom-out',html)
         self.assertIn('download=',html)
         self.assertIn('Open the approved PDF in a new tab',html)
-        self.assertEqual(html.count('class="terms-popup-page"'),5)
+        self.assertEqual(html.count('class="terms-popup-page"'),received_version()['technicalInspection']['pages'])
         self.assertNotIn('<object',html)
         self.assertNotIn('This browser cannot display',html)
         self.assertNotIn('Read the current online Terms',html)
         self.assertNotIn('release-section',html)
-        for index in range(1,6):
+        for index in range(1,received_version()['technicalInspection']['pages']+1):
             self.assertIn(page_url(received_version(),index),html)
         for path in ('terms-and-conditions.html','terms-and-conditions/index.html'):
             document=(ROOT/path).read_text()
@@ -50,14 +50,16 @@ class TermsReaderTests(unittest.TestCase):
         self.assertEqual(manifest['sourcePdfSha256'],entry['sha256'])
         self.assertEqual(manifest['effectiveDate'],None)
         self.assertEqual(manifest['publicationStatus'],'staging-review')
-        self.assertEqual(len(manifest['pages']),5)
+        self.assertEqual(len(manifest['pages']),entry['technicalInspection']['pages'])
         for index,item in enumerate(manifest['pages'],1):
             self.assertEqual(item['page'],index)
             self.assertEqual(item['path'],page_url(entry,index))
             raw=(ROOT/item['path'].lstrip('/')).read_bytes()
             self.assertTrue(raw.startswith(b'\x89PNG\r\n\x1a\n'))
             self.assertEqual(hashlib.sha256(raw).hexdigest(),item['sha256'])
-            self.assertEqual((item['width'],item['height']),(1360,1760))
+            self.assertEqual(item['width'],1360)
+            self.assertTrue(1000<=item['height']<=2400)
+            if entry['version']=='1.0':self.assertEqual(item['height'],1760)
 
     def test_mobile_scroll_and_close_js(self):
         css=(ROOT/'_templates/terms-reader.css').read_text()

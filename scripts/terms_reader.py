@@ -21,15 +21,15 @@ def received_version():
     if document['currentVersion'] is not None:
         raise ValueError('Staging PDF preview must not silently activate Terms')
     versions = document.get('receivedVersions', [])
-    if len(versions) != 1:
-        raise ValueError('Expected one owner-approved PDF receipt')
-    entry = versions[0]
+    if not versions or [v['version'] for v in versions] not in (['1.0'], ['1.0','1.1']):
+        raise ValueError('Unexpected approved PDF receipt history')
+    entry = versions[-1]
     if (entry['approvalStatus'] != 'approved'
             or entry['publicationStatus'] != 'staging-review'
             or entry['activationStatus'] != 'awaiting-official-publication'
             or entry['effectiveDate'] is not None):
         raise ValueError('Terms publication state changed unexpectedly')
-    if entry['publishedPath'] != '/assets/policy-documents/terms-and-conditions/1.0.pdf':
+    if entry['publishedPath'] != '/assets/policy-documents/terms-and-conditions/'+entry['version']+'.pdf':
         raise ValueError('Unreviewed Terms PDF source')
     fingerprint = entry['sha256']
     for name in (entry['originalUploadPath'], entry['sourcePath'], entry['publishedPath'].lstrip('/')):
@@ -37,7 +37,7 @@ def received_version():
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != fingerprint:
             raise ValueError('Terms PDF checksum/path mismatch: ' + name)
     pages = entry['technicalInspection']['pages']
-    if pages != 5:
+    if pages != {'1.0':5,'1.1':6}[entry['version']]:
         raise ValueError('Unexpected approved PDF page count')
     return entry
 
@@ -51,10 +51,14 @@ def render():
     href = escape(entry['publishedPath'], quote=True)
     filename = escape(entry['sourceFilename'], quote=True)
     pages = entry['technicalInspection']['pages']
+    manifest = json.loads((ROOT / 'assets/policy-documents/terms-and-conditions/pages/manifest.json').read_text())
+    if manifest['sourcePdfSha256'] != entry['sha256'] or len(manifest['pages']) != pages:
+        raise ValueError('Terms page manifest does not match approved PDF')
+    dimensions = {p['page']:(p['width'],p['height']) for p in manifest['pages']}
     document_pages = ''.join(
         '<li class="terms-popup-page" data-page="' + str(i) + '">'
         '<img src="' + escape(page_url(entry, i), quote=True)
-        + '" width="1360" height="1760" loading="' + ('eager' if i == 1 else 'lazy')
+        + '" width="' + str(dimensions[i][0]) + '" height="' + str(dimensions[i][1]) + '" loading="' + ('eager' if i == 1 else 'lazy')
         + '" decoding="async" alt="Terms and Conditions PDF, page ' + str(i)
         + ' of ' + str(pages) + '">'
         '</li>' for i in range(1, pages + 1))

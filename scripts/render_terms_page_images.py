@@ -30,7 +30,8 @@ def render_images(check=False):
         raise RuntimeError('Install poppler-utils / pdftoppm to generate genuine PDF page renders')
     with tempfile.TemporaryDirectory() as folder:
         prefix=Path(folder)/'terms'
-        subprocess.run([executable,'-f','1','-l',str(count),'-r',str(RENDER_DPI),'-png',str(source),str(prefix)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        size_args=['-r',str(RENDER_DPI)] if entry['version']=='1.0' else ['-scale-to-x','1360','-scale-to-y','-1']
+        subprocess.run([executable,'-f','1','-l',str(count),*size_args,'-png',str(source),str(prefix)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         renders=sorted(Path(folder).glob('terms-*.png'),key=lambda p:int(p.stem.split('-')[-1]))
         if len(renders)!=count:
             raise ValueError('Expected %d original approved PDF pages; got %d' %(count,len(renders)))
@@ -40,7 +41,7 @@ def render_images(check=False):
             if not raw.startswith(b'\x89PNG\r\n\x1a\n') or raw[12:16]!=b'IHDR':
                 raise ValueError('Invalid rendered PNG')
             width,height=struct.unpack('>II',raw[16:24])
-            if (width,height)!=(1360,1760):
+            if width!=1360 or not 1000<=height<=2400 or (entry['version']=='1.0' and height!=1760):
                 raise ValueError('Unexpected PDF page dimensions: %r' % ((width,height),))
             name=Path(page_url(entry,number)).name
             target=destination/name
