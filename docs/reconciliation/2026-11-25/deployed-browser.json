@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://mrsewing-staging.pages.dev/",
+    "width": 390,
+    "rendered": false,
+    "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://mrsewing-staging.pages.dev/\nCall log:\n\u001b[2m  - navigating to \"https://mrsewing-staging.pages.dev/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "url": "https://90b6eb6c.mrsewing-staging.pages.dev/terms-and-conditions/",
+    "width": 390,
+    "rendered": false,
+    "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://90b6eb6c.mrsewing-staging.pages.dev/terms-and-conditions/\nCall log:\n\u001b[2m  - navigating to \"https://90b6eb6c.mrsewing-staging.pages.dev/terms-and-conditions/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "url": "https://mrsewing-staging.pages.dev/",
+    "width": 1440,
+    "rendered": false,
+    "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://mrsewing-staging.pages.dev/\nCall log:\n\u001b[2m  - navigating to \"https://mrsewing-staging.pages.dev/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "url": "https://90b6eb6c.mrsewing-staging.pages.dev/terms-and-conditions/",
+    "width": 1440,
+    "rendered": false,
+    "error": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://90b6eb6c.mrsewing-staging.pages.dev/terms-and-conditions/\nCall log:\n\u001b[2m  - navigating to \"https://90b6eb6c.mrsewing-staging.pages.dev/terms-and-conditions/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  }
+]

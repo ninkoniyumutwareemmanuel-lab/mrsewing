@@ -1,6 +1,6 @@
 # Master website reconciliation register — 25 November 2026
 
-**Status: local recovery and regression tests completed; staging publication evidence is pending. Permanent staging verification remains blocked.** This register records evidence, not a claim that all requested work has been deployed. Final test/deployment fields are updated only after their actual checks.
+**Status: recovery implemented, tested locally and pushed to staging; Cloudflare reports a successful deployment. Permanent staging verification remains blocked. The full task is not complete.** This register records evidence, not a claim that all requested work has been deployed. Final test/deployment fields are updated only after their actual checks.
 
 ## Authority, baseline and recovery protection
 
@@ -114,3 +114,31 @@ FAQ contractual source links now point explicitly to the preserved current Terms
 ## Staging publication checkpoint
 
 The tested recovery implementation was committed and normally pushed to `phase1/customer-journey-repairs` as **800e23e4e5f64f368fb0f5e72dd3861d39b3f7de**. All314source/generated/document/test/evidence files are listed in the changed-file register. No force push or Main update occurred. A subsequent documentation/CI follow-up retains the same tested application and makes the checkout complete enough for preservation tests to read the recorded `0acf34dc` historical baseline; a default shallow checkout cannot supply that evidence. Deployment/provider results and permanent-domain verification are recorded separately after observation.
+
+## Deployment result and final unresolved boundary
+
+Reviewed staging revision **ea945d933855d0fc46d3929e1879e17d44d95ec2** was pushed normally. Cloudflare check [139408608160](https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/139408608160) reports **Deploy successful** for project `mrsewing-staging`, deployment **90b6eb6c-1863-4957-ad5d-e00e56b0327f**, preview **https://90b6eb6c.mrsewing-staging.pages.dev/**. The application is the tested recovery from800e23e4; the later change makes its historical preservation baseline available to CI. A following documentation/CI-only commit records this receipt and avoids unnecessary package-index updates when FFmpeg/Poppler are already installed. The branch's final immutable tip is visible in Git and the owner handoff; a file cannot contain its own commit hash.
+
+The separate Terms workflow at800e23e4 passed ([45671537411](https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45671537411)). The first full recovery run was canceled by the newer same-branch run, not reported as passing. The newer full workflow was observed in progress at package setup; its final outcome must be checked separately. Local27checks, generation/check, browser suites and local Pages compilation are actual passes; they are not substituted for a remote CI result.
+
+Fresh post-deployment HTTP attempts to the permanent staging root/Terms, exact preview and official root all failed at the managed proxy with CONNECT403. Actual Chromium390/1440attempts to permanent Home and deployed Terms failed with `ERR_TUNNEL_CONNECTION_FAILED`. **No deployed-origin rendering, final permanent served commit, cache behavior or branch/build-output setting is claimed verified.** These results establish an environment access limitation, not a Cloudflare origin failure or proof that the permanent site is stale.
+
+Remote Main was re-read after staging publication and remains **33620fe4dc38ec81905fd2556a19db15f5c06db3**. No Main merge/push, production deployment, official-domain setting or production secret change occurred. The official website's actual served content could not be independently checked.
+
+### To finish the infrastructure portion
+
+Allow the required hostnames in this Cloud environment: `mrsewing-staging.pages.dev`, `*.mrsewing-staging.pages.dev`, `mrsewingfashion.com`, `www.mrsewingfashion.com`, `api.cloudflare.com`, `api.github.com`. Provide an authorized Cloudflare Pages account connection/read permission for `mrsewing-staging`, with staging-scoped edit permission only if a verified setting correction is necessary. Do not paste credentials into source or commands.
+
+Inspect the staging project's connected repository, intended production branch `phase1/customer-journey-repairs`, latest production deployment and actual generated output/build command. Do not assume an incorrect value: current settings remain inaccessible. Preserve the existing `main.mrsewing-staging.pages.dev` production enquiry runtime and any official custom-domain dependency. Then open the permanent URL on mobile and desktop, compare exact deployed content/commit, verify host-specific noindex, all repaired journeys and source-boundary responses. The precise owner steps are in [the staging workflow](STAGING_DEVELOPMENT_WORKFLOW.md).
+
+### Important review links
+
+- Permanent intended staging: https://mrsewing-staging.pages.dev/
+- Verified provider preview reference: https://90b6eb6c.mrsewing-staging.pages.dev/
+- Main services hub: https://mrsewing-staging.pages.dev/services/custom-tailoring/
+- Showroom: https://mrsewing-staging.pages.dev/collections/
+- Fabric Guide: https://mrsewing-staging.pages.dev/guides/fabrics/
+- PDF reader: https://mrsewing-staging.pages.dev/terms-and-conditions/
+- Quotation: https://mrsewing-staging.pages.dev/request/
+
+The links use real implemented routes. Their deployed rendering remains unverified here. Exact files, source/approval/branch matrix, tests and deployment JSON are in [the dated evidence directory](reconciliation/2026-11-25/). Continue development from the remote reconciled staging baseline, not the old dirty R54 tree. Production publication requires a new separate owner instruction.

@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://mrsewing-staging.pages.dev/",
+    "verifiedOrigin": false,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://mrsewing-staging.pages.dev/terms-and-conditions/",
+    "verifiedOrigin": false,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://90b6eb6c.mrsewing-staging.pages.dev/",
+    "verifiedOrigin": false,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://mrsewingfashion.com/",
+    "verifiedOrigin": false,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  }
+]

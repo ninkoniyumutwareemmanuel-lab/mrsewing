@@ -193,6 +193,9 @@ docs/reconciliation/2026-11-25/automated-test-results.json
 docs/reconciliation/2026-11-25/branch-inventory.json
 docs/reconciliation/2026-11-25/changed-files.txt
 docs/reconciliation/2026-11-25/cloudflare-observed-deployments.json
+docs/reconciliation/2026-11-25/deployed-browser.json
+docs/reconciliation/2026-11-25/deployed-http.json
+docs/reconciliation/2026-11-25/deployment-record.json
 docs/reconciliation/2026-11-25/fabric-browser-results.json
 docs/reconciliation/2026-11-25/history-audit.json
 docs/reconciliation/2026-11-25/history-audit.md
