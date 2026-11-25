@@ -393,7 +393,7 @@
     "/refund-policy/": {
       "title": "Refund & Cancellation Policy",
       "intro": "Submit a request for human assessment. An enquiry or form acknowledgement is not an approved refund.",
-      "source": "S-OWNER-2026-11-05 §§19–20",
+      "source": "S-OWNER-2026-11-05 §§19–20; Customer Terms & Conditions v1.1, owner-approved 25 November 2026, staging review only",
       "sections": [
         {
           "id": "1",
@@ -428,6 +428,11 @@
           "title": "Cancellation and changes",
           "paragraphs": [
             "Tell us promptly if you wish to cancel or change an order, service or visit. Include whether a quotation has been accepted, payment has been made, materials have been committed or work has started. Changes require feasibility, quotation and scheduling agreement before the team proceeds.",
+            "Before official production begins, the approved baseline for customer cancellation is a refund of amounts paid less genuine, documented, nonrecoverable order-specific costs, where those deductions were lawfully disclosed and are permitted by applicable law.",
+            "Cancellations after work begins, standalone visits, garment-care processing, Shop orders and other special cases require assessment of the accepted order, work already completed, recoverable costs and applicable mandatory rights. No universal automatic forfeiture or non-refundable fee applies.",
+            "Under an agreed exceptional advance arrangement, production is suspended if the full outstanding balance is not paid by the three-calendar-day deadline. We notify the customer of the overdue amount and its effect on the order. Payment must be settled before work resumes on an order that remains open; the completion date may need reassessment.",
+            "Suspension of an overdue exceptional-payment order does not itself mean cancellation or forfeiture. Any cancellation is assessed under the accepted order conditions, communicated to the customer and subject to applicable legal requirements. Work already performed and genuine, documented nonrecoverable order-specific costs may be considered only where lawfully disclosed and permitted. Restarting a cancelled order requires a new agreement.",
+            "Refund amount, method and processing timetable are determined under the applicable agreed order conditions, approved refund policy and mandatory legal requirements.",
             "The team assesses your request and supporting information and communicates its decision. Submitting a request does not itself approve a refund or fix a deduction or payment date. These procedures do not remove applicable customer rights."
           ]
         }
@@ -595,7 +600,7 @@
         ],
         [
           "Payment and confirmation",
-          "{{policyDomesticPayment}} {{policyInternationalPayment}} {{policyPaymentVerification}}"
+          "{{policyDomesticPayment}} {{policyExpressAdvance}} {{policyFlexibleAdvance}} {{policyOverdueAdvance}} {{policyInternationalPayment}} {{policyPaymentVerification}}"
         ]
       ]
     },

@@ -1,0 +1,3 @@
+# Customer Terms & Conditions v1.1 — staging implementation
+
+Owner approved the six-page revised Terms & Conditions on 25 November 2026. Effective date is official website publication; staging is not activation. This commit updates customer-facing payment, refund and FAQ text. The checksum-verified v1.0 PDF viewer and current consent route remain in place pending exact v1.1 PDF and reader asset replacement. No automatic ten-day cancellation or payment forfeiture is approved. Existing confirmed orders retain their agreed terms subject to mandatory law. No completed legal review is asserted. Reconcile the complete site, run regression tests and replace the PDF reader before any release to Main.

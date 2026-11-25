@@ -153,7 +153,8 @@
         "overnight",
         "express-cost",
         "after-hours-cost",
-        "urgent-deadline-assessment"
+        "urgent-deadline-assessment",
+        "express-advance"
       ],
       "related": [
         "production-delivery",
@@ -280,7 +281,11 @@
         "suit-benefit-transport",
         "fabric-tier-pricing",
         "bulk-order-discount",
-        "payment-verification"
+        "payment-verification",
+        "flexible-advance",
+        "exceptional-payment-deadline",
+        "payment-documents",
+        "full-payment-release"
       ],
       "related": [
         "custom-tailoring",
@@ -369,7 +374,10 @@
         "cancel-after",
         "refund-review",
         "order-change",
-        "policy-documents"
+        "policy-documents",
+        "overdue-advance",
+        "overdue-cancellation",
+        "restart-cancelled-order"
       ],
       "related": [
         "prices-packages-payments",
@@ -870,13 +878,19 @@
     },
     "cancel-before": {
       "question": "Can I cancel before production starts?",
-      "answer": "Contact Support promptly with the order details and reason. Cancellation conditions and any refund amount require human assessment under the applicable approved arrangements and customer rights; no automatic deposit forfeiture or deduction is imposed.",
-      "keywords": []
+      "answer": "Before official production begins, the approved baseline for customer cancellation is a refund of amounts paid less genuine, documented, nonrecoverable order-specific costs, where those deductions were lawfully disclosed and are permitted by applicable law. Contact Support promptly with your order details and reason. Refund amount, method and processing timetable are determined under the applicable agreed order conditions, approved refund policy and mandatory legal requirements.",
+      "keywords": [],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/refund-policy/#5"
     },
     "cancel-after": {
       "question": "What about a cancellation or refund after work starts?",
-      "answer": "Submit the order details and concern for human review. A request does not itself approve a refund or determine an amount. No automatic Express-fee retention or unverified processing deadline is imposed.",
-      "keywords": []
+      "answer": "Cancellations after work begins, standalone visits, garment-care processing, Shop orders and other special cases require assessment of the accepted order, work already completed, recoverable costs and applicable mandatory rights. No universal automatic forfeiture or non-refundable fee applies. Refund amount, method and processing timetable are determined under the applicable agreed order conditions, approved refund policy and mandatory legal requirements.",
+      "keywords": [],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/refund-policy/#5"
     },
     "refund-review": {
       "question": "How do I ask for a refund review?",
@@ -1488,6 +1502,110 @@
       "approvalSource": "Owner Final Custom Tailoring Completion & Production Release,13November2026",
       "approvalDate": "2026-11-13",
       "source": "/terms-and-conditions/#2"
+    },
+    "flexible-advance": {
+      "question": "Can I request a lower advance than 70%?",
+      "answer": "For eligible domestic Standard custom tailoring orders, customers unable to pay the usual 70% advance may request an individually agreed lower initial payment. This is not an automatic entitlement. Production may begin only when operationally and financially feasible and the applicable order conditions are confirmed. The entire outstanding balance must be paid within three calendar days of the initial payment, even if the garment is not yet finished. The initial amount, remaining balance and exact deadline must be communicated and accepted. This exception is not available for Express orders and does not automatically apply to international orders, mobile assistance, consultations or VIP arrangements.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/prices-packages-payments/#flexible-advance"
+    },
+    "exceptional-payment-deadline": {
+      "question": "When must I complete an exceptional advance payment?",
+      "answer": "The entire outstanding balance must be paid within three calendar days of the initial payment, even if the garment is not yet finished. The exact deadline and remaining amount are communicated and accepted in your individual agreement. This is only for eligible Standard domestic tailoring.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/prices-packages-payments/#exceptional-payment-deadline"
+    },
+    "payment-documents": {
+      "question": "Will I receive payment confirmation or an invoice?",
+      "answer": "Payments are acknowledged after receipt is verified. A payment screenshot or pending transaction is not confirmation of receipt. A proforma invoice or payment request is not a substitute for an official tax invoice where required under applicable law.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/prices-packages-payments/#payment-documents"
+    },
+    "full-payment-release": {
+      "question": "Can I collect my garment before making the final payment?",
+      "answer": "No. Full payment and any agreed charges must be confirmed before garment release. For standard suits the balance is due after tailoring completion and before final cleaning and delivery.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/prices-packages-payments/#full-payment-release"
+    },
+    "express-advance": {
+      "question": "How much advance is required for Express tailoring?",
+      "answer": "For domestic Express tailoring, the normal 70% advance applies to the total agreed quotation, including the 35% Express surcharge and any other charges included in that quotation. The remaining 30% is due at completion, before release, subject to applicable final-cleaning arrangements. Express deadlines are agreed individually; the below-70% exception does not apply.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/express-tailoring/#express-advance"
+    },
+    "overdue-advance": {
+      "question": "What happens if I miss the three-day exceptional payment deadline?",
+      "answer": "Under an agreed exceptional advance arrangement, production is suspended if the full outstanding balance is not paid by the three-calendar-day deadline. We notify the customer of the overdue amount and its effect on the order. Payment must be settled before work resumes on an order that remains open; the completion date may need reassessment.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/cancellations-changes/#overdue-advance"
+    },
+    "overdue-cancellation": {
+      "question": "Does a suspended order automatically become cancelled or non-refundable?",
+      "answer": "Suspension of an overdue exceptional-payment order does not itself mean cancellation or forfeiture. Any cancellation is assessed under the accepted order conditions, communicated to the customer and subject to applicable legal requirements. Work already performed and genuine, documented nonrecoverable order-specific costs may be considered only where lawfully disclosed and permitted. Restarting a cancelled order requires a new agreement.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/cancellations-changes/#overdue-cancellation"
+    },
+    "restart-cancelled-order": {
+      "question": "Can I restart a cancelled order?",
+      "answer": "Contact Mr Sewing Fashion to discuss a new agreement. Restarting a cancelled order requires a new agreement; the requirements, quotation and schedule must be confirmed.",
+      "keywords": [
+        "payment",
+        "advance",
+        "order",
+        "refund"
+      ],
+      "approvalSource": "Customer Terms & Conditions v1.1 — owner approved 25 November 2026; staging review",
+      "approvalDate": "2026-11-25",
+      "source": "/faq/cancellations-changes/#restart-cancelled-order"
     }
   },
   "synonyms": [
