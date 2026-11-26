@@ -85,16 +85,7 @@ jobs:
       - name: Test staging-designed local browser at four widths
         run: |
           python -m http.server 8020 --bind 127.0.0.1 > /tmp/r59-http.log 2>&1 &
-          node tests/r59_tailoring_browser.cjs
-          node tests/terms_popup_browser.cjs
-          node tests/recovery-fabric-browser.cjs
-          REVIEW_ARTIFACTS=artifacts/recovery-journeys node tests/recovery_journeys.cjs
-          REVIEW_ARTIFACTS=artifacts/tailoring-dialog node tests/tailoring_request_dialog.cjs
-          REVIEW_ARTIFACTS=artifacts/gallery-experience node tests/customer_gallery_browser.cjs
-          REVIEW_ARTIFACTS=artifacts/shop-customer node tests/shop_customer_experience.cjs
-          REVIEW_ARTIFACTS=artifacts/home-about node tests/home_about_customer_experience.cjs
-          REVIEW_ARTIFACTS=artifacts/services node tests/service_landings_browser.cjs
-          BASE_URL=http://127.0.0.1:8020 REVIEW_ARTIFACTS=artifacts/navigation node tests/customer_navigation.spec.cjs
+          python scripts/run_customer_browser_checks.py
       - name: Save browser review screenshots
         if: always()
         uses: actions/upload-artifact@v4
@@ -113,6 +104,7 @@ jobs:
             artifacts/home-about/
             artifacts/services/
             artifacts/navigation/
+            artifacts/browser-checks/
           if-no-files-found: ignore
       - name: Verify generated outputs are committed for this exact event
         run: |
