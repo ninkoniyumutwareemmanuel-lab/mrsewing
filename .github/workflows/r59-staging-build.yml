@@ -59,18 +59,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Record the test Node runtime
+        run: node --version
+      - name: Verify multi-design payload reconstruction
+        run: node tests/multi-design-validation.mjs
+      - name: Verify shared fabric validation and portable evidence output
+        run: node tests/shared-fabric-validation.mjs
+      - name: Verify quotation deadline, measurement and delivery validation
+        run: node tests/quotation-completion-validation.mjs
+      - name: Verify the recovered fabric catalogue payload
+        run: node tests/recovery_fabric_validation.mjs
+      - name: Verify draft Shop request rejection
+        run: node tests/shop-draft-request-gate.mjs
+      - name: Verify the staging source boundary
+        run: node tests/recovery_source_boundary.mjs
       - name: Install Chromium browser QA
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
           npx playwright install --with-deps chromium
-      - name: Verify selected-design and fabric payload security with mocked providers
-        run: |
-          node tests/multi-design-validation.mjs
-          node tests/shared-fabric-validation.mjs
-          node tests/quotation-completion-validation.mjs
-          node tests/recovery_fabric_validation.mjs
-          node tests/shop-draft-request-gate.mjs
-          node tests/recovery_source_boundary.mjs
       - name: Test staging-designed local browser at four widths
         run: |
           python -m http.server 8020 --bind 127.0.0.1 > /tmp/r59-http.log 2>&1 &
@@ -89,6 +95,7 @@ jobs:
             artifacts/recovery-fabric/*.png
             artifacts/recovery-journeys/*.png
             artifacts/recovery-journeys/results.json
+            artifacts/shared-fabric/example-backend-enquiry.json
           if-no-files-found: ignore
       - name: Verify generated outputs are committed for this exact event
         run: |

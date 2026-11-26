@@ -157,3 +157,6 @@ Owner's 22 November 2026 final customer-experience redesign authorizes homepage,
 
 ##25November2026—website recovery
 Newdatedreference2026-11-25-01preserves precedingfilesandaddslatestownerrecovery/scope/evidenceboundaries. Implementation/deploymentoutcomesremaininprogresspendingactualchecks; noMainorofficialsiteauthority. See masterregister.
+
+## 26 November 2026 — technical CI follow-up
+The resumed recovery identified and repaired a workspace-specific synthetic-test artifact path. Security assertions, application code and business approvals remain unchanged. See the master reconciliation register; remote CI and permanent-origin verification remain distinct checks.

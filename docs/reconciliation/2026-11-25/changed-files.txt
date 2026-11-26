@@ -207,6 +207,9 @@ docs/reconciliation/2026-11-25/technical-browser-results.json
 docs/reconciliation/2026-11-25/technical-inventory.json
 docs/reconciliation/2026-11-25/workflow-run-index.json
 docs/reconciliation/2026-11-25/workspace-audit.json
+docs/reconciliation/2026-11-26/ci-portability-report.md
+docs/reconciliation/2026-11-26/node22-security-results.json
+docs/reconciliation/2026-11-26/previous-ci-step-results.json
 faq.html
 faq/alterations/index.html
 faq/custom-tailoring/index.html
@@ -304,6 +307,7 @@ tests/recovery_policies.py
 tests/recovery_source_boundary.mjs
 tests/recovery_technical.py
 tests/recovery_workflow.py
+tests/shared-fabric-validation.mjs
 tests/shop-preview-route.mjs
 tests/terms_popup_browser.cjs
 tests/terms_reader_main_base.py

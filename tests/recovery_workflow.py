@@ -13,4 +13,5 @@ assert not re.search(r'\bgit (?:push|commit|reset|merge)\b',s),'CI is verificati
 assert 'run: python scripts/import_owner_terms_v1_1.py' not in s
 assert 'python scripts/build_site.py --check' in s and 'git diff --exit-code' in s
 assert 'concurrency:' in s and 'cancel-in-progress: true' in s
+assert s.index('node tests/shared-fabric-validation.mjs') < s.index('npm install'),'Backend failures should be identified before browser downloads'
 print('PASS event-commit/staging-only/read-only CI; no automatic PDF activation or generated-push race')
