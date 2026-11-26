@@ -1,0 +1,140 @@
+[
+  {
+    "data-name": "Set up job",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:29:39Z",
+    "data-completed-at": "2026-11-26T04:29:40Z"
+  },
+  {
+    "data-name": "Run actions/checkout@v4",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:29:40Z",
+    "data-completed-at": "2026-11-26T04:29:44Z"
+  },
+  {
+    "data-name": "Run actions/setup-python@v5",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:29:44Z",
+    "data-completed-at": "2026-11-26T04:29:44Z"
+  },
+  {
+    "data-name": "Install verified silent-video preparation dependency",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:29:44Z",
+    "data-completed-at": "2026-11-26T04:30:01Z"
+  },
+  {
+    "data-name": "Verify committed silent media without rewriting approved playback assets",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:01Z",
+    "data-completed-at": "2026-11-26T04:30:01Z"
+  },
+  {
+    "data-name": "Build and check customer website",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:01Z",
+    "data-completed-at": "2026-11-26T04:30:26Z"
+  },
+  {
+    "data-name": "Check metadata, routes, media, and Terms",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:26Z",
+    "data-completed-at": "2026-11-26T04:30:33Z"
+  },
+  {
+    "data-name": "Run actions/setup-node@v4",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:33Z",
+    "data-completed-at": "2026-11-26T04:30:33Z"
+  },
+  {
+    "data-name": "Record the test Node runtime",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:33Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Verify multi-design payload reconstruction",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Verify shared fabric validation and portable evidence output",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Verify quotation deadline, measurement and delivery validation",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Verify the recovered fabric catalogue payload",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Verify draft Shop request rejection",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Verify the staging source boundary",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:34Z"
+  },
+  {
+    "data-name": "Install Chromium browser QA",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:34Z",
+    "data-completed-at": "2026-11-26T04:30:44Z"
+  },
+  {
+    "data-name": "Test staging-designed local browser at four widths",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:30:44Z",
+    "data-completed-at": "2026-11-26T04:31:22Z"
+  },
+  {
+    "data-name": "Save browser review screenshots",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:31:22Z",
+    "data-completed-at": "2026-11-26T04:31:24Z"
+  },
+  {
+    "data-name": "Verify generated outputs are committed for this exact event",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:31:24Z",
+    "data-completed-at": "2026-11-26T04:31:25Z"
+  },
+  {
+    "data-name": "Post Run actions/setup-node@v4",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:31:25Z",
+    "data-completed-at": "2026-11-26T04:31:25Z"
+  },
+  {
+    "data-name": "Post Run actions/setup-python@v5",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:31:25Z",
+    "data-completed-at": "2026-11-26T04:31:25Z"
+  },
+  {
+    "data-name": "Post Run actions/checkout@v4",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:31:25Z",
+    "data-completed-at": "2026-11-26T04:31:25Z"
+  },
+  {
+    "data-name": "Complete job",
+    "data-conclusion": "success",
+    "data-started-at": "2026-11-26T04:31:25Z",
+    "data-completed-at": "2026-11-26T04:31:25Z"
+  }
+]

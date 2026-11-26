@@ -1,0 +1,20 @@
+[
+  {
+    "commit": "9dfa2eac639de70fa588111c3bc41e73c449cd9b",
+    "check": "139693186537",
+    "previews": [],
+    "summary": "",
+    "deploymentIds": []
+  },
+  {
+    "commit": "9dfa2eac639de70fa588111c3bc41e73c449cd9b",
+    "check": "139693297920",
+    "previews": [
+      "https://fac0516a.mrsewing-staging.pages.dev"
+    ],
+    "summary": "Deployed successfully Latest commit: 9dfa2ea Status: \u2705 Deploy successful! Preview URL: https://fac0516a.mrsewing-staging.pages.dev View logs",
+    "deploymentIds": [
+      "fac0516a-57b9-432e-a35c-20e1b1e2df66"
+    ]
+  }
+]

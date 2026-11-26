@@ -208,8 +208,12 @@ docs/reconciliation/2026-11-25/technical-inventory.json
 docs/reconciliation/2026-11-25/workflow-run-index.json
 docs/reconciliation/2026-11-25/workspace-audit.json
 docs/reconciliation/2026-11-26/ci-portability-report.md
+docs/reconciliation/2026-11-26/ci-repair-actions.json
+docs/reconciliation/2026-11-26/ci-repair-provider.json
+docs/reconciliation/2026-11-26/ci-success-steps.json
 docs/reconciliation/2026-11-26/node22-security-results.json
 docs/reconciliation/2026-11-26/previous-ci-step-results.json
+docs/reconciliation/2026-11-26/verified-staging-release.json
 faq.html
 faq/alterations/index.html
 faq/custom-tailoring/index.html
