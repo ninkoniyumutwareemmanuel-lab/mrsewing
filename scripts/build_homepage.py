@@ -118,20 +118,9 @@ def render():
             raise ValueError(f'Missing homepage section: {filename}')
         markup = parser.markup
         if key in ('header', 'footer'):
-            from html import escape
-            import json
-            guides = json.loads((ROOT/'_data/homepage-guides.json').read_text())
-            items = []
-            for guide in guides:
-                label = escape(guide['label'])
-                if guide['href']:
-                    assert (ROOT/guide['href'].strip('/')/'index.html').is_file(), 'Missing customer guide route'
-                    items.append('<li><a href="'+escape(guide['href'], quote=True)+'">'+label+'</a></li>')
-                else:
-                    pending_class = 'footer-guide-pending' if key == 'footer' else 'nav-guide-pending'
-                    span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
-                    items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
-            markup = markup.replace('{{customer_guides}}', ''.join(items))
+            # Same authoritative header/footer expansion as every generated page.
+            from custom_tailoring import component
+            markup = component(key, '/')
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':

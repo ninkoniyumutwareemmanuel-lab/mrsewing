@@ -1,23 +1,25 @@
 {
-  "currentVersion": "2026-11-25-01",
-  "implementationBaseline": "0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+  "currentVersion": "2026-11-26-01",
+  "implementationBaseline": "b388644796fcb24b747bb6818dd211422fab9cff",
   "ownerApprovalDate": "2026-11-13",
   "implementationResumedDate": "2026-11-18",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
-  "customerPolicyPublication": "Staging only; latest explicitly approved25Novoperational exceptions; no officialPDFactivation or productionrelease",
+  "customerPolicyPublication": "Staging only; preserve latest approved scope-specific facts; new Flexible Advance Payment proposal inactive; no official PDF activation or production release",
   "files": {
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "28c88183a0b38b1d9bb383b803073b7f9fb6aeba3fc7b3001238afbe040fbc9f",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "dedfff176791ab2cc3f4a8dedb948e907ed5ef8f5834481af7780ad553760bee",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "7c03e43a47aa2cf537fc6e7592df32d88f5f9163a43c77be7b49294c1bb17246",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "956b0d2bf877ce744360395d0d59819c8cd5288ced561d773979444aef45638a",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "fff77c7f444a410ad4fc8e294702add37bd6437985f4e92c1291b696b8fb333d"
+    "CUSTOMER_EXPERIENCE_OWNER_DIRECTIVE_2026-11-26.md": "9a18e8609f211161e9e263a72a2d1e452182ce97cd5464241f12f4926aba1c3f",
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "fff77c7f444a410ad4fc8e294702add37bd6437985f4e92c1291b696b8fb333d",
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "49bfe932d75baf86d6df6a58962c144ce3be4a659bba7a2b88be9d24d4a57e3e",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "72b64362ac98584dc82a76fc7f6c96198e4eb3e4b06247426f5c89f91cf736d9",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "42acee0da130833a7b8c69ff48ed99162422348320fc02928e7caa8247960bde",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "8c636c1d2a95cb919296c22fb83fc3add3de683d934e79384abb7228a8ce30bc"
   },
   "ownerPublicationInstructionDate": "2026-11-18",
-  "previousPolicyReferenceVersion": "2026-11-22-01",
-  "ownerDesignDecisionDate": "2026-11-22",
-  "stagingOnlyScope": "Full accessible-source audit, recovery, reconciliation and tested safe repairs; Main/officialwebsite protected",
-  "designAddendumFile": "R59_TAILORING_FIRST_OWNER_DIRECTIVE.md",
+  "previousPolicyReferenceVersion": "2026-11-25-01",
+  "ownerDesignDecisionDate": "2026-11-26",
+  "stagingOnlyScope": "Comprehensive customer-experience/SEO/accessibility/integration audit and safe staged improvements; Main/production protected; pending policies inactive",
+  "designAddendumFile": "versions/2026-11-26-01/CUSTOMER_EXPERIENCE_OWNER_DIRECTIVE_2026-11-26.md",
   "policySourceFilesCarriedForwardUnmodified": false,
   "ownerRecoveryInstructionDate": "2026-11-25",
-  "implementationStatus": "recovered/tested locally and full remote CI PASS at9dfa2eac; Cloudflare deployment successful; permanent renderedcontent/configuration still blocked; Main/official release untouched"
+  "implementationStatus": "26 November implementation and scoped local build, regression and browser checks passed; exact CI/provider and permanent-origin results are recorded separately. No Main/production release.",
+  "ownerAssignmentDate": "2026-11-26"
 }

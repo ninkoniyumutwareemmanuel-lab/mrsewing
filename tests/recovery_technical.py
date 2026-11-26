@@ -21,7 +21,9 @@ for record in records:
   p['playback']['assetPath']='/assets/videos/../../private.mp4';assert verified_playback(p,root) is None
 from build_about import render as about
 html=about()
-for text in ['Professional Care.','Company Information','Explore custom tailoring','Explore mobile and event assistance','NINKONIYUMUTWARE NEXUS LTD']:
+#26Nov owner-authorized About redesign replaces the former hero/CTA copy;
+#protect verified business identity, all service destinations and approved values.
+for text in ['Company Information','Our Mission','Our Vision','What We Stand For','NINKONIYUMUTWARE NEXUS LTD','/services/custom-tailoring/','/services/alterations/','/services/garment-care/','/services/mobile-fitting/','/services/vip/']:
  assert text in html,('Owner25NovAbout source lost',text)
 designs=json.loads((R/'_data/collection-designs.json').read_text())['designs'];prepared=[d for d in designs if 152<=int(d['id'].split('-')[1])<=173]
 assert len(prepared)==22 and sum(len(d['images']) for d in prepared)==25

@@ -37,7 +37,7 @@ def gallery(items,name):
    html=re.sub(r'sizes="[^"]*"','sizes="(max-width:600px) 174px,260px"',html)
    cards.append('<figure class="moving-gallery-card" data-photo-source="'+escape(photo['src'],quote=True)+'" data-reference="'+escape(item['id'],quote=True)+'"'+(' aria-hidden="true"' if duplicate else '')+'>'+html+'<figcaption>'+escape(item['caption'])+'</figcaption></figure>')
   groups.append('<div class="moving-gallery-group"'+(' aria-hidden="true"' if group else '')+'>'+''.join(cards)+'</div>')
- return '<div class="moving-gallery" data-moving-gallery data-gallery-title="'+escape(name,quote=True)+'" role="button" tabindex="0" aria-pressed="false" aria-label="'+escape(name,quote=True)+'; tap or press Enter to pause moving photographs"><div class="moving-gallery-track" style="--gallery-duration:'+str(len(tiles)*10)+'s">'+''.join(groups)+'</div></div>'
+ return '<div class="moving-gallery" data-moving-gallery data-gallery-title="'+escape(name,quote=True)+'" role="region" tabindex="0" aria-keyshortcuts="Enter Space Escape" aria-label="'+escape(name,quote=True)+' photograph gallery"><button type="button" class="gallery-motion-control" data-gallery-motion-control aria-pressed="false">Pause moving photographs</button><div class="moving-gallery-track" style="--gallery-duration:'+str(len(tiles)*10)+'s">'+''.join(groups)+'</div></div>'
 
 def suit_section():
  result='<section id="suit-collections" class="home-section suit-collections"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Find your inspiration</p><h2>Explore Our <em>Suit Collections</em></h2><p>Discover men\'s and women\'s suit styles and find inspiration for your next outfit.</p></div>'

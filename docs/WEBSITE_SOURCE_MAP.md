@@ -65,3 +65,13 @@ Main release is a separate owner-authorized process. Do not promote new staging 
 The original dirty R54 workspace remains at `/workspace/mrsewing`. Its binary patch/archive and all-ref Git bundle are under `/workspace/recovery/2026-11-25/`; the active clean recovery implementation is `/workspace/mrsewing-recovery`. Keep these distinct. The local `recovery/staging-before-reconciliation-2026-11-25` reference preserves the initial remote staging tip. Do not reset or copy entire older trees over this baseline.
 
 Every future task should record branch/HEAD, owner instruction, applicable source version, unfinished changes, tests, exact deployment evidence and unresolved decisions in the dated reconciliation register before handing off.
+
+##26November customer experience additions
+
+- Shared labels: `_data/customer-interface-labels.json`, `scripts/customer_interface.py`. Header Services/Guides and keyboard/mobile behavior: `_templates/shared/navigation.js` and `navigation.css`.
+- Guided selected-suit dialog: `_templates/tailoring-request-dialog.js`/`.css`, included by `scripts/customer_site.py` in existing design-selection outputs. Same-origin existing routes and actual validators/provider are reused; no second form backend. Existing standalone bookmarks remain supported.
+- Compact design/quantity review: `_templates/design-selections.js`/`.css`. Explicit Add/Change handoffs inherit only their own unexpired per-tab draft through `_templates/selection-session.js` and `_templates/request-draft.js`; deliberate independent selections do not inherit another enquiry.
+- Service landing renderer: `scripts/service_landings.py`, `_templates/service-landings.css`, `_data/service-contact-actions.json`. WhatsApp number is read from approved business data; existing forms remain available. Legacy unfinished subscription entry routes fall back to VIP, with internal implementation preserved.
+- About profile: `_data/about-leadership.json`, `_templates/about-leadership.html`, `scripts/build_about.py`. Missing/unapproved title/biography/portrait never render.
+- Audit inventory/SEO comparison: `scripts/audit_customer_experience.py`; full internal review package and evidence are outside deployed app assets under `/workspace/review/2026-11-26/`.
+- Regression commands: existing build/check, SEO/sitemap/recovery checks, six backend validation scripts, `tests/analytics_privacy.cjs`, `tests/tailoring_request_dialog.cjs`, `tests/customer_gallery_browser.cjs`, `tests/customer_navigation.spec.cjs`, `tests/home_about_customer_experience.cjs`, `tests/service_landings_browser.cjs`. See the current comprehensive review report for results and limitations.

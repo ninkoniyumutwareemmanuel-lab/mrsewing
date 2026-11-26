@@ -13,7 +13,8 @@ def assignment(ident):return next((c for c in categories() if ident in c['design
 def references(category,designs):
  pool={d['id']:d for d in designs}
  assert all(ident in pool for ident in category['designIds']),'Category must not publish an unapproved photograph'
- return [pool[ident] for ident in category['designIds']]
+ from build_collections import ordered_designs
+ return ordered_designs([pool[ident] for ident in category['designIds']])
 def landing_route(gender):return '/mensuits/' if gender=='men' else '/womensuits/'
 def label(gender):return "Men's Suits" if gender=='men' else "Women's Suits"
 def category_label(c):return ("Men's " if c['gender']=='men' else "Women's ")+c['title']

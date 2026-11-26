@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const crypto=require('node:crypto');
 const {chromium}=(()=>{try{return require('playwright');}catch(e){if(e.code!=='MODULE_NOT_FOUND')throw e;return require('playwright-core');}})();
-const base='http://127.0.0.1:8020';
+const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8020';
 const entry=require('../_data/policy-documents.json').documents['terms-and-conditions'].receivedVersions.at(-1);
 const expected=entry.technicalInspection.pages;
 (async()=>{

@@ -138,7 +138,8 @@
           "position": "center",
           "width": 797,
           "height": 995,
-          "originalPath": "h1.jpeg"
+          "originalPath": "h1.jpeg",
+          "viewLabel": "Front View"
         }
       ],
       "provenance": "unverified",
@@ -176,7 +177,8 @@
           "position": "center",
           "width": 750,
           "height": 938,
-          "originalPath": "h2.jpeg"
+          "originalPath": "h2.jpeg",
+          "viewLabel": "Side View"
         }
       ],
       "provenance": "unverified",
@@ -214,7 +216,8 @@
           "position": "center",
           "width": 750,
           "height": 938,
-          "originalPath": "h3.jpeg"
+          "originalPath": "h3.jpeg",
+          "viewLabel": "Graduation View"
         }
       ],
       "provenance": "unverified",
@@ -1004,7 +1007,7 @@
     {
       "id": "MS-029",
       "slug": "ms-029",
-      "name": "Men’s Kaunda suit",
+      "name": "Kaunda Jacket Style Selection",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1012,11 +1015,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "Eight stand-collar Kaunda jacket references in different colours, shown on dress forms.",
       "images": [
         {
           "src": "/m-kaundasuits1.jpeg",
-          "alt": "Men’s Kaunda suit — MS-029",
+          "alt": "Eight stand-collar Kaunda jacket references in different colours, shown on dress forms.",
           "position": "center",
           "width": 716,
           "height": 715,
@@ -1034,6 +1037,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits1.jpeg",
@@ -1047,7 +1054,7 @@
     {
       "id": "MS-030",
       "slug": "ms-030",
-      "name": "Men’s Kaunda suit",
+      "name": "Black Short-Sleeved Kaunda Suit",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1055,11 +1062,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A black short-sleeved Kaunda jacket with a stand collar, buttoned front and flap pockets, shown with matching trousers.",
       "images": [
         {
           "src": "/m-kaundasuits2.jpeg",
-          "alt": "Men’s Kaunda suit — MS-030",
+          "alt": "A black short-sleeved Kaunda jacket with a stand collar, buttoned front and flap pockets, shown with matching trousers.",
           "position": "center",
           "width": 542,
           "height": 658,
@@ -1077,6 +1084,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits2.jpeg",
@@ -1090,7 +1101,7 @@
     {
       "id": "MS-031",
       "slug": "ms-031",
-      "name": "Men’s Kaunda suit",
+      "name": "Black Stand-Collar Kaunda Suit",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1098,11 +1109,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A black Kaunda jacket with a stand collar, buttoned front and flap pockets, paired with matching trousers.",
       "images": [
         {
           "src": "/m-kaundasuits3.jpeg",
-          "alt": "Men’s Kaunda suit — MS-031",
+          "alt": "A black Kaunda jacket with a stand collar, buttoned front and flap pockets, paired with matching trousers.",
           "position": "center",
           "width": 657,
           "height": 658,
@@ -1120,6 +1131,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits3.jpeg",
@@ -1133,7 +1148,7 @@
     {
       "id": "MS-032",
       "slug": "ms-032",
-      "name": "Men’s Kaunda suit",
+      "name": "Burgundy Stand-Collar Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1141,11 +1156,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A burgundy Kaunda jacket with a stand collar, contrasting buttons and flap pockets, shown on a dress form.",
       "images": [
         {
           "src": "/m-kaundasuits4.jpeg",
-          "alt": "Men’s Kaunda suit — MS-032",
+          "alt": "A burgundy Kaunda jacket with a stand collar, contrasting buttons and flap pockets, shown on a dress form.",
           "position": "center",
           "width": 528,
           "height": 658,
@@ -1163,6 +1178,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits4.jpeg",
@@ -1176,7 +1195,7 @@
     {
       "id": "MS-033",
       "slug": "ms-033",
-      "name": "Men’s Kaunda suit",
+      "name": "Teal Stand-Collar Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1184,11 +1203,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A dark teal Kaunda jacket with a stand collar and contrasting buttons, styled with a pocket square.",
       "images": [
         {
           "src": "/m-kaundasuits5.jpeg",
-          "alt": "Men’s Kaunda suit — MS-033",
+          "alt": "A dark teal Kaunda jacket with a stand collar and contrasting buttons, styled with a pocket square.",
           "position": "center",
           "width": 476,
           "height": 658,
@@ -1206,6 +1225,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits5.jpeg",
@@ -1219,7 +1242,7 @@
     {
       "id": "MS-034",
       "slug": "ms-034",
-      "name": "Men’s Kaunda suit",
+      "name": "Light Blue Four-Pocket Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1227,11 +1250,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A light blue Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown with a tie.",
       "images": [
         {
           "src": "/m-kaundasuits6.jpeg",
-          "alt": "Men’s Kaunda suit — MS-034",
+          "alt": "A light blue Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown with a tie.",
           "position": "center",
           "width": 461,
           "height": 658,
@@ -1249,6 +1272,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits6.jpeg",
@@ -1262,7 +1289,7 @@
     {
       "id": "MS-035",
       "slug": "ms-035",
-      "name": "Men’s Kaunda suit",
+      "name": "Navy Stand-Collar Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1270,11 +1297,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A navy Kaunda jacket with a stand collar, buttoned front and flap pockets, shown against a plain background.",
       "images": [
         {
           "src": "/m-kaundasuits7.jpeg",
-          "alt": "Men’s Kaunda suit — MS-035",
+          "alt": "A navy Kaunda jacket with a stand collar, buttoned front and flap pockets, shown against a plain background.",
           "position": "center",
           "width": 658,
           "height": 658,
@@ -1292,6 +1319,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits7.jpeg",
@@ -1305,7 +1336,7 @@
     {
       "id": "MS-036",
       "slug": "ms-036",
-      "name": "Men’s Kaunda suit",
+      "name": "Cream Four-Pocket Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1313,11 +1344,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A cream Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown on a dress form.",
       "images": [
         {
           "src": "/m-kaundasuits8.jpeg",
-          "alt": "Men’s Kaunda suit — MS-036",
+          "alt": "A cream Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown on a dress form.",
           "position": "center",
           "width": 566,
           "height": 658,
@@ -1335,6 +1366,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits8.jpeg",

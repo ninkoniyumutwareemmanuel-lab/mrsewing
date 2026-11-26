@@ -19,10 +19,10 @@
 .tailoring-card-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:#eac77e;font-weight:700}
 .tailoring-card-link{margin-top:auto;padding-top:25px;color:#eac77e;font-size:14px;font-weight:600}
 .tailoring-vip-card{background:linear-gradient(145deg,#202020,#0d0d0d 68%);border-color:#6e5a38}
-.tailoring-feature-photo{display:block;position:relative;margin-top:clamp(22px,4vw,40px);min-height:230px;max-height:490px;overflow:hidden;border-radius:12px;border:1px solid #695435;background:#1c1c1c;color:#fff}
-.tailoring-feature-photo img{display:block;width:100%;height:clamp(230px,45vw,490px);object-fit:cover;object-position:center}
-.tailoring-feature-photo:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#000b);pointer-events:none}
-.tailoring-feature-photo>span{position:absolute;z-index:1;bottom:clamp(18px,3vw,34px);left:clamp(18px,3vw,34px);font:500 clamp(22px,3.5vw,42px)/1.2 Georgia,serif}
+.tailoring-feature-photo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;position:relative;margin-top:clamp(22px,4vw,40px);overflow:hidden;border-radius:12px;border:1px solid #695435;background:linear-gradient(120deg,#24201b,#151515);color:#fff;text-decoration:none}
+.tailoring-feature-photo img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;object-position:center;min-width:0}
+.tailoring-feature-photo>span{position:relative;padding:clamp(20px,4vw,60px);font:500 clamp(24px,3.5vw,44px)/1.2 Georgia,serif}
+@media(max-width:760px){.tailoring-feature-photo{grid-template-columns:minmax(0,1fr)}.tailoring-feature-photo img{max-height:none;aspect-ratio:1792/2400}.tailoring-feature-photo>span{padding:18px 20px;font-size:26px}}
 .tailoring-primary-card:focus-visible,.tailoring-feature-photo:focus-visible,.tailoring-outline:focus-visible{outline:3px solid #f2d385;outline-offset:4px}
 @media(max-width:760px){.tailoring-first-hero{min-height:580px;padding-block:64px}.tailoring-hero-actions .home-button{flex:1 1 100%}.tailoring-primary-grid{grid-template-columns:1fr}.tailoring-primary-card{min-height:225px}.tailoring-photo-duo figure{aspect-ratio:9/13}}
 @media(max-width:390px){.tailoring-first-hero h1{font-size:clamp(35px,10vw,42px)}.tailoring-primary-card{padding:20px}.tailoring-photo-duo{gap:8px}}
@@ -92,3 +92,14 @@
 /* R64: moving portraits have no visible captions or controls; direct video tap/keyboard can pause. */
 .tailoring-video-card video{cursor:pointer}
 .tailoring-video-card video:focus-visible{outline:3px solid #f0d48f;outline-offset:-3px}
+
+/* Customer-experience refinement: compact editorial sections, not nested panels. */
+.tailor-essentials,.tailor-process,.tailor-benefits,.tailor-options,.tailor-programs,.tailor-final{padding-block:clamp(32px,4.5vw,62px)}
+.tailor-info-grid>a,.tailor-programs-grid>a{background:transparent;border:0;border-left:2px solid #b18b3b;border-radius:0;padding:12px 18px}
+.tailor-process-grid li{border:0;border-top:1px solid #75603c;border-radius:0;padding:18px 4px}
+.tailor-process-grid li>span{width:30px;height:30px;font-size:12px;margin-bottom:12px}
+.tailor-process-grid strong{font-size:18px}
+@media(min-width:360px) and (max-width:760px){.tailor-process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tailor-process-grid li p{font-size:13px}.tailor-process-grid strong{font-size:17px}}
+
+/* Keyboard/screen-reader motion control; photography remains uncluttered. */
+.moving-gallery{position:relative}.gallery-motion-control{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.gallery-motion-control:focus-visible{clip-path:none;width:auto;height:auto;min-height:44px;top:8px;left:8px;padding:10px 14px;z-index:3;background:#151410;color:#f1d795;border:1px solid #c39c46;border-radius:4px;outline:3px solid #e2bc62}

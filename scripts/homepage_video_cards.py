@@ -75,6 +75,6 @@ def render():
   if playback:
    video_path,poster_path=playback
    label=record.get('alternativeText') or alt
-   cards.append('<figure class="tailoring-video-card"><video data-tailoring-loop muted loop playsinline preload="none" tabindex="0" role="button" aria-pressed="false" poster="'+escape(poster_path,quote=True)+'" aria-label="'+escape(label+' video. Tap or press Enter to pause or resume.',quote=True)+'" data-video-title="'+escape(record.get('title') or 'suit video',quote=True)+'"><source src="'+escape(video_path,quote=True)+'" type="video/mp4">Your browser cannot play this video.</video></figure>')
+   cards.append('<figure class="tailoring-video-card"><video data-tailoring-loop muted loop playsinline preload="none" tabindex="0" role="button" aria-pressed="false" poster="'+escape(poster_path,quote=True)+'" aria-label="'+escape(label+' video. Tap or press Enter to pause or resume.',quote=True)+'" data-video-title="'+escape(record.get('title') or 'suit video',quote=True)+'"><source src="'+escape(video_path,quote=True)+'" type="video/mp4"></video></figure>')
   else:cards.append('<figure><img src="/'+escape(fallback,quote=True)+'" alt="'+escape(alt,quote=True)+'" loading="lazy" decoding="async"></figure>')
  return ''.join(cards)

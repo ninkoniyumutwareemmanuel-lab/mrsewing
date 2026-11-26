@@ -69,6 +69,10 @@ def finalize(source,path):
         fabrics=__import__('customer_guides').request_fabrics()
         selection_data={'patterns':__import__('fabric_collections').patterns(),'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics,'colours':{c['id']:c for c in json.loads((ROOT/'_data/fabric-colours.json').read_text())['colours']},'colourGroups':json.loads((ROOT/'_data/fabric-colours.json').read_text()).get('groups',[])}
         source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=recovery-20261125" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r49"></head>',1)
+    #26Nov presentation/controller release: refresh changed assets without
+    #changing approved canonical URLs or environment-specific indexing rules.
+    for asset in ['design-selections.js','design-selections.css','customer-site.js','request-draft.js','commerce.js','homepage.js','about-navigation.js','contact-navigation.js','collections-navigation.js','journey-navigation.js','collections-v3.js','fabric-showroom.js','fabric-showroom.css','service-landings.css']:
+        source=re.sub(r'(?P<attribute>src|href)="/assets/'+re.escape(asset)+r'(?:\?[^"]*)?"',lambda m:m['attribute']+'="/assets/'+asset+'?v=experience-20261126"',source)
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())

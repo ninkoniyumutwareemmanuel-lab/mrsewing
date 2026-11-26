@@ -16,8 +16,20 @@
   var choiceInMemory = null;
   var pixelStarted = false;
   var banner = null;
-  var unsafeRoute = /^\/(?:request|booking|privacy-policy|terms-and-conditions|refund-policy)(?:\/|$)/.test(location.pathname) ||
-    /\/(?:selected-designs|fabric|measurements)(?:\/|$)/.test(location.pathname);
+  // Legacy .html links and clean URLs share the same privacy boundary.
+  var route = location.pathname.toLowerCase().replace(/\.html$/, "/");
+  var unsafeRoute = /^\/(?:request|booking(?:-[a-z-]+)?|privacy-policy|terms-and-conditions|refund-policy|customer-support|measurement-submission|referral-program|staff|whatsapp)(?:\/|$)/.test(route) ||
+    /\/(?:selected-designs|fabric|measurements)(?:\/|$)/.test(route) ||
+    /^\/services\/(?:custom-tailoring\/(?:special-order|standard-order|design-choice)|vip\/subscription)(?:\/|$)/.test(route) ||
+    /^\/shop\/cart(?:\/|$)/.test(route);
+  // Fail closed for actual enquiry documents even when a future route is added.
+  // Search forms and the homepage's ancillary support dialog do not redefine
+  // the purpose of a public browsing page; they never emit conversion events.
+  function hasRequestForm() {
+    try {
+      return !!document.querySelector("#customerRequestForm, #submissionForm, #bookingForm, form[data-commerce-form], form[data-shop-whatsapp-form], form[data-request-form], form[data-quotation-form]");
+    } catch (_) { return true; }
+  }
   // Don't pass query strings or sensitive journey pages to the browser Pixel.
   var canTrack = enabled && !unsafeRoute && !location.search;
 
@@ -30,7 +42,7 @@
     try { localStorage.setItem(key, value); } catch (_) {}
   }
   function initPixel() {
-    if (!canTrack || pixelStarted || getChoice() !== "accepted") return;
+    if (!canTrack || hasRequestForm() || pixelStarted || getChoice() !== "accepted") return;
     pixelStarted = true;
     // Base code supplied by the owner; run only after explicit opt-in.
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');

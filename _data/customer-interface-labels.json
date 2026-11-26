@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "source": "Owner website experience instruction, 26 November 2026; interface terminology only, not commercial policy.",
+  "actions": {
+    "contact": "Contact Us",
+    "whatsapp": "Contact Us on WhatsApp",
+    "selectDesign": "Select This Design",
+    "browseDesigns": "Browse Designs",
+    "continue": "Continue",
+    "back": "Back",
+    "requestQuote": "Request a Quote",
+    "submitRequest": "Submit Request",
+    "shareDesign": "Share Design",
+    "shareDesigns": "Share Designs",
+    "removeDesign": "Remove Design",
+    "loadMore": "Load More",
+    "exploreCollection": "Explore Collection"
+  },
+  "services": {
+    "custom-tailoring": "Tailoring & Clothing Services",
+    "alterations": "Clothing Alterations & Repairs",
+    "garment-care": "Garment Care & Cleaning",
+    "mobile-fitting": "Mobile Tailoring, Styling & Event Assistance",
+    "vip": "VIP Services"
+  }
+}

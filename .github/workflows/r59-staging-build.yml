@@ -54,6 +54,9 @@ jobs:
           python tests/recovery_technical.py
           python tests/recovery_workflow.py
           python tests/recovery_links.py
+          python tests/customer_gallery_experience.py
+          python tests/service_landings.py
+          python tests/about_leadership.py
           python scripts/prepare_silent_homepage_videos.py
           python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py scripts/customer_site.py
       - uses: actions/setup-node@v4
@@ -71,6 +74,8 @@ jobs:
         run: node tests/recovery_fabric_validation.mjs
       - name: Verify draft Shop request rejection
         run: node tests/shop-draft-request-gate.mjs
+      - name: Verify consent and transactional analytics isolation
+        run: node tests/analytics_privacy.cjs
       - name: Verify the staging source boundary
         run: node tests/recovery_source_boundary.mjs
       - name: Install Chromium browser QA
@@ -84,6 +89,12 @@ jobs:
           node tests/terms_popup_browser.cjs
           node tests/recovery-fabric-browser.cjs
           REVIEW_ARTIFACTS=artifacts/recovery-journeys node tests/recovery_journeys.cjs
+          REVIEW_ARTIFACTS=artifacts/tailoring-dialog node tests/tailoring_request_dialog.cjs
+          REVIEW_ARTIFACTS=artifacts/gallery-experience node tests/customer_gallery_browser.cjs
+          REVIEW_ARTIFACTS=artifacts/shop-customer node tests/shop_customer_experience.cjs
+          REVIEW_ARTIFACTS=artifacts/home-about node tests/home_about_customer_experience.cjs
+          REVIEW_ARTIFACTS=artifacts/services node tests/service_landings_browser.cjs
+          BASE_URL=http://127.0.0.1:8020 REVIEW_ARTIFACTS=artifacts/navigation node tests/customer_navigation.spec.cjs
       - name: Save browser review screenshots
         if: always()
         uses: actions/upload-artifact@v4
@@ -96,6 +107,12 @@ jobs:
             artifacts/recovery-journeys/*.png
             artifacts/recovery-journeys/results.json
             artifacts/shared-fabric/example-backend-enquiry.json
+            artifacts/tailoring-dialog/
+            artifacts/gallery-experience/
+            artifacts/shop-customer/
+            artifacts/home-about/
+            artifacts/services/
+            artifacts/navigation/
           if-no-files-found: ignore
       - name: Verify generated outputs are committed for this exact event
         run: |

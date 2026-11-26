@@ -160,3 +160,7 @@ Newdatedreference2026-11-25-01preserves precedingfilesandaddslatestownerrecovery
 
 ## 26 November 2026 — technical CI follow-up
 The resumed recovery identified and repaired a workspace-specific synthetic-test artifact path. Security assertions, application code and business approvals remain unchanged. See the master reconciliation register; remote CI and permanent-origin verification remain distinct checks.
+
+
+## 26 November 2026 — comprehensive customer-experience assignment
+Created2026-11-26-01by preserving each prior five-document snapshot verbatim as a prefix and appending the owner's latest staging-only audit/design/journey/service/SEO scope. Updated current pointer/hash manifest together. Approved existing Standard-only exceptional advance remains distinct from new inactive Flexible Advance Payment proposal; older25kconsultation is not restored over35k; historical service tariffs and fabric imagery require current publication/mapping evidence. Leadership/workmanship truthfulness, exact selection/payload/route compatibility, unchanged Main and actual deployment-verification limits are explicit. Source/brief updates do not claim implementation or test completion.

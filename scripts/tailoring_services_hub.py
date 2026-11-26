@@ -128,8 +128,8 @@ def content(service, hero, section, link):
       <p>Open a service to learn what is assessed and how to request its own quotation. No request automatically confirms acceptance or a booking.</p>
       <div class="tailoring-hub-service-grid">''' + service_cards + '''</div>
       <aside class="tailoring-hub-combined"><h3>Need Both Repairs and Cleaning?</h3>
-        <p>Ask for Garment Repair &amp; Care in one coordinated enquiry. Each service is assessed and quoted separately; there is no automatic bundle discount or approval for extra work.</p>
-        <a class="home-text-link" href="/request/?general=1">Request a Combined Assessment</a>
+        <p>Arrange clothing alterations or repairs and professional garment cleaning through one coordinated enquiry. Each service is assessed and priced individually. There is no automatic discount; additional paid work needs your approval. The same applicable transport service is not charged twice.</p>
+        ''' + __import__('service_landings').contact_link('combined','home-text-link') + '''
       </aside>
       <p class="tailoring-hub-small-note">For complex garments, special events or personalised cross-service assistance, <a href="/services/vip/">explore VIP Services</a>. Each request is assessed individually.</p>
     </section>'''

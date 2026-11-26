@@ -15,7 +15,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  function fresh(rows=[],pref=null){preference=cleanPreference(pref);meta={id:identifier(),status:'active',leftAt:null,expiresAt:null,fabricPreference:preference};mode='browse';flow=null;setItems(clean(rows));put(metaKey,meta);put(browseKey,clean(rows));}
  function expire(){if(meta?.status==='active'&&Number.isFinite(meta.expiresAt)&&Date.now()>=meta.expiresAt){meta={...meta,status:'expired'};put(metaKey,meta);remove(browseKey);if(mode==='browse'){setItems([]);preference=null;}return true;}return false;}
  function schedule(){clearTimeout(timer);if(mode==='browse'&&!browsing()&&meta?.status==='active'&&Number.isFinite(meta.expiresAt))timer=setTimeout(()=>{sync();document.dispatchEvent(new Event('mrsewing:selectionlifetime'));},Math.max(1,meta.expiresAt-Date.now()));}
- function leave(){if(mode!=='browse')return;sync();if(meta?.status==='active'&&!Number.isFinite(meta.expiresAt)){const leftAt=Date.now();meta={...meta,leftAt,expiresAt:leftAt+limit};put(metaKey,meta);}schedule();}
+ function leave(){if(mode!=='browse')return;/* A closed same-origin dialog is background UI, not departure from its browsing parent. */if(window.parent!==window){try{if(window.parent.MrTailoringRequest&&!window.parent.MrTailoringRequest.isOpen())return;}catch{}}sync();if(meta?.status==='active'&&!Number.isFinite(meta.expiresAt)){const leftAt=Date.now();meta={...meta,leftAt,expiresAt:leftAt+limit};put(metaKey,meta);}schedule();}
  function sync(force=false){const latest=metadata();if(mode==='browse'){
   const changed=latest?.id!==meta?.id||latest?.status!==meta?.status;meta=latest;
   if(!meta||meta.status!=='active'){setItems([]);preference=null;return;}
@@ -29,7 +29,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  function close(rows=read()){
   if(mode==='quote'&&flow)return flow;
   rows=clean(rows);if(!rows.length)return null;
-  flow=identifier();setFlow(flow,{sessionId:meta?.id||null,items:rows,fabricPreference:preference});
+  flow=identifier();setFlow(flow,{sessionId:meta?.id||null,items:rows,fabricPreference:preference,draftFrom:meta?.draftFrom||null});
   if(meta?.status==='active'){meta={...meta,status:'closed',leftAt:null,expiresAt:null,quoteId:flow};put(metaKey,meta);remove(browseKey);}
   mode='quote';setItems(rows);clearTimeout(timer);if(review)history.replaceState(null,'',url(location.pathname+location.search+location.hash));return flow;
  }
@@ -42,7 +42,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  const incoming=unpack(params.get('selection')),session=params.get('selectionSession'),edit=params.get('selectionEdit');
  const quotePage=location.pathname==='/services/custom-tailoring/fabric/'&&params.get('multiple')==='1'||location.pathname.startsWith('/guides/fabrics/')&&(params.has('fabricFor')||params.get('fabricSelect')==='1')||location.pathname==='/request/'&&params.get('multiple')==='1';
  if(params.has('expressRecovery')&&!browsing()){mode='quote';setItems([]);preference=null;}
- else if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
+ else if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);if(saved&&!saved.completed){meta.draftFrom=edit;put(metaKey,meta);}const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
  else{
   const requestedFlow=!browsing()&&(params.get('selectionFlow')||(review&&meta?.status==='closed'&&session===meta.id?meta.quoteId:null));
   if(requestedFlow){mode='quote';flow=requestedFlow;let saved=storedFlow(flow);if(!saved&&incoming.length){saved={sessionId:session||null,items:incoming,fabricPreference:incomingPreference};setFlow(flow,saved);}setItems(saved&&!saved.completed?clean(saved.items):[]);preference=saved&&!saved.completed?cleanPreference(saved.fabricPreference):null;}

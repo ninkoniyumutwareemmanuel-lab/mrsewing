@@ -15,7 +15,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  function fresh(rows=[],pref=null){preference=cleanPreference(pref);meta={id:identifier(),status:'active',leftAt:null,expiresAt:null,fabricPreference:preference};mode='browse';flow=null;setItems(clean(rows));put(metaKey,meta);put(browseKey,clean(rows));}
  function expire(){if(meta?.status==='active'&&Number.isFinite(meta.expiresAt)&&Date.now()>=meta.expiresAt){meta={...meta,status:'expired'};put(metaKey,meta);remove(browseKey);if(mode==='browse'){setItems([]);preference=null;}return true;}return false;}
  function schedule(){clearTimeout(timer);if(mode==='browse'&&!browsing()&&meta?.status==='active'&&Number.isFinite(meta.expiresAt))timer=setTimeout(()=>{sync();document.dispatchEvent(new Event('mrsewing:selectionlifetime'));},Math.max(1,meta.expiresAt-Date.now()));}
- function leave(){if(mode!=='browse')return;sync();if(meta?.status==='active'&&!Number.isFinite(meta.expiresAt)){const leftAt=Date.now();meta={...meta,leftAt,expiresAt:leftAt+limit};put(metaKey,meta);}schedule();}
+ function leave(){if(mode!=='browse')return;/* A closed same-origin dialog is background UI, not departure from its browsing parent. */if(window.parent!==window){try{if(window.parent.MrTailoringRequest&&!window.parent.MrTailoringRequest.isOpen())return;}catch{}}sync();if(meta?.status==='active'&&!Number.isFinite(meta.expiresAt)){const leftAt=Date.now();meta={...meta,leftAt,expiresAt:leftAt+limit};put(metaKey,meta);}schedule();}
  function sync(force=false){const latest=metadata();if(mode==='browse'){
   const changed=latest?.id!==meta?.id||latest?.status!==meta?.status;meta=latest;
   if(!meta||meta.status!=='active'){setItems([]);preference=null;return;}
@@ -29,7 +29,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  function close(rows=read()){
   if(mode==='quote'&&flow)return flow;
   rows=clean(rows);if(!rows.length)return null;
-  flow=identifier();setFlow(flow,{sessionId:meta?.id||null,items:rows,fabricPreference:preference});
+  flow=identifier();setFlow(flow,{sessionId:meta?.id||null,items:rows,fabricPreference:preference,draftFrom:meta?.draftFrom||null});
   if(meta?.status==='active'){meta={...meta,status:'closed',leftAt:null,expiresAt:null,quoteId:flow};put(metaKey,meta);remove(browseKey);}
   mode='quote';setItems(rows);clearTimeout(timer);if(review)history.replaceState(null,'',url(location.pathname+location.search+location.hash));return flow;
  }
@@ -42,7 +42,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
  const incoming=unpack(params.get('selection')),session=params.get('selectionSession'),edit=params.get('selectionEdit');
  const quotePage=location.pathname==='/services/custom-tailoring/fabric/'&&params.get('multiple')==='1'||location.pathname.startsWith('/guides/fabrics/')&&(params.has('fabricFor')||params.get('fabricSelect')==='1')||location.pathname==='/request/'&&params.get('multiple')==='1';
  if(params.has('expressRecovery')&&!browsing()){mode='quote';setItems([]);preference=null;}
- else if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
+ else if(browsing()&&edit){const saved=storedFlow(edit);fresh(saved?(saved.completed?[]:saved.items):incoming,saved?(saved.completed?null:saved.fabricPreference):incomingPreference);if(saved&&!saved.completed){meta.draftFrom=edit;put(metaKey,meta);}const u=new URL(location.href);u.searchParams.delete('selectionEdit');u.searchParams.delete('selectionFlow');u.searchParams.set('selectionSession',meta.id);history.replaceState(null,'',u.pathname+u.search+u.hash);}
  else{
   const requestedFlow=!browsing()&&(params.get('selectionFlow')||(review&&meta?.status==='closed'&&session===meta.id?meta.quoteId:null));
   if(requestedFlow){mode='quote';flow=requestedFlow;let saved=storedFlow(flow);if(!saved&&incoming.length){saved={sessionId:session||null,items:incoming,fabricPreference:incomingPreference};setFlow(flow,saved);}setItems(saved&&!saved.completed?clean(saved.items):[]);preference=saved&&!saved.completed?cleanPreference(saved.fabricPreference):null;}
@@ -64,7 +64,7 @@ window.MrSelectionSession=function({clean,unpack,pack,getItems,setItems,browsing
 
 /* Shared enquiry preferences; palette labels are requests, never inventory claims. */
 window.MrFabricPreferences=function(source){
- const labels={now:'I Want to Choose a Fabric',advice:'Help Me Choose a Fabric',own:'I Have My Own Fabric'};
+ const labels={now:'Choose a Fabric',advice:'Help Me Choose',own:'Use My Own Fabric'};
  function clean(value){
   if(!value||typeof value!=='object'||!Object.hasOwn(labels,value.choice))return null;
   const out={choice:value.choice,fabricRef:'',colour:'',colourDescription:'',pattern:''};
@@ -117,8 +117,8 @@ function refresh(){const allowed=browsing();const count=read().length;document.d
 document.addEventListener('mrsewing:selectionlifetime',()=>{refresh();redrawSelectionList?.();if(isSelectedQuote())window.MrSelectedSuitQuote?.refresh();});
 document.addEventListener('DOMContentLoaded',()=>{if(isSelectedQuote())lifetime.close(quoteRows());const current=document.getElementById('design-data');if(current){const d=JSON.parse(current.textContent).design;const button=document.querySelector('.design-enquiry');if(button){button.dataset.selectDesign=d.id;button.setAttribute('role','button');button.addEventListener('keydown',e=>{if(e.key===' '){e.preventDefault();button.click();}});}}
 bar=document.createElement('a');bar.className='selected-design-bar';bar.hidden=true;bar.href='/services/custom-tailoring/selected-designs/';bar.innerHTML='<span data-selected-count></span><span>Review Your Designs <span aria-hidden="true">→</span></span>';announcement=document.createElement('p');announcement.className='visually-hidden';announcement.dataset.selectionAnnouncement='';announcement.setAttribute('role','status');announcement.setAttribute('aria-live','polite');announcement.setAttribute('aria-atomic','true');document.body.append(bar,announcement);refresh();
-for(const b of document.querySelectorAll('[data-select-design]'))b.addEventListener('click',e=>{e.preventDefault();const d=source.designs[b.dataset.selectDesign],u=new URL(b.href||location.href,location.origin),ctx=window.mrRequestContext?.read()||{};const project=u.searchParams.get('project')||(ctx.design===d.id?ctx.project:null);const photo=u.searchParams.get('photo')||(ctx.design===d.id?ctx.photo:null)||d.images[0].url;if(add({design:d.id,photo,project})){announcement.textContent='Added. Keep browsing or review your selections.';if(!storageOK)announcement.textContent='Use Selected Designs to continue with these selections; browser storage is unavailable.';}});
-const list=document.querySelector('[data-selection-list]');if(list){function draw(){list.replaceChildren();if(!read().length){list.textContent='No designs selected yet. Return to the suit galleries to select your designs.';}for(const x of read()){const r=resolve(x),article=document.createElement('article'),h=document.createElement('h2'),a=document.createElement('a'),image=document.createElement('img'),label=document.createElement('label'),q=document.createElement('input'),remove=document.createElement('button');h.textContent=friendly(r.name);a.href=new URL(r.src,location.origin).href;a.target='_blank';a.rel='noopener';a.className='selection-photo';a.setAttribute('aria-label','View selected photograph of '+friendly(r.name));image.src=r.src;image.alt=r.alt;image.width=r.width;image.height=r.height;image.loading='lazy';image.decoding='async';a.append(image);label.textContent='Garment quantity';q.type='number';q.min='1';q.max='9999';q.value=x.quantity;q.required=true;label.append(q);q.addEventListener('change',()=>{if(q.reportValidity()){items.find(y=>y.photo===x.photo).quantity=Number(q.value);save();announcement.textContent='Quantity updated for '+friendly(r.name)+'.';}});remove.type='button';remove.className='home-button';remove.textContent='Remove Design';remove.addEventListener('click',()=>{const index=read().findIndex(y=>y.photo===x.photo);items=items.filter(y=>y.photo!==x.photo);save();draw();announcement.textContent=friendly(r.name)+' removed. '+read().length+' designs selected.';const controls=list.querySelectorAll('button');if(controls.length)controls[Math.min(index,controls.length-1)].focus();else{list.tabIndex=-1;list.focus();}});article.append(a,h,label,remove);list.append(article);}const next=document.querySelector('[data-selected-continue]');next.hidden=!items.length;next.href=url('/services/custom-tailoring/fabric/?multiple=1');const actions=document.querySelector('[data-selection-actions]');if(actions)actions.hidden=!items.length;const browse=document.querySelector('[data-selection-list] + p a');if(browse&&lifetime.isQuote())browse.href=lifetime.url('/services/custom-tailoring/',read(),true);}redrawSelectionList=draw;draw();const next=document.querySelector('[data-selected-continue]');next.addEventListener('click',e=>{const rows=read();if(!rows.length){e.preventDefault();draw();announcement.textContent='Your unfinished selections have expired. Please select your designs again.';return;}lifetime.close(rows);next.href=url('/services/custom-tailoring/fabric/?multiple=1');refresh();});}
+for(const b of document.querySelectorAll('[data-select-design]'))b.addEventListener('click',e=>{e.preventDefault();const d=source.designs[b.dataset.selectDesign],u=new URL(b.href||location.href,location.origin),ctx=window.mrRequestContext?.read()||{};const project=u.searchParams.get('project')||(ctx.design===d.id?ctx.project:null);const photo=u.searchParams.get('photo')||(ctx.design===d.id?ctx.photo:null)||d.images[0].url;if(add({design:d.id,photo,project})){announcement.textContent='Added. Keep browsing or review your selections.';document.dispatchEvent(new CustomEvent('mrsewing:designselected',{detail:{trigger:b}}));if(!storageOK)announcement.textContent='Use Selected Designs to continue with these selections; browser storage is unavailable.';}});
+const list=document.querySelector('[data-selection-list]');if(list){function draw(){list.replaceChildren();let total=document.querySelector('[data-selection-total]');if(!total){total=document.createElement('p');total.dataset.selectionTotal='';total.setAttribute('role','status');list.before(total);}const updateTotal=()=>{const rows=read();total.textContent=rows.length+' '+(rows.length===1?'design':'designs')+' · '+rows.reduce((n,x)=>n+x.quantity,0)+' '+(rows.reduce((n,x)=>n+x.quantity,0)===1?'garment':'garments');};updateTotal();if(!read().length){list.textContent='No designs selected yet. Return to the suit galleries to select your designs.';}for(const x of read()){const r=resolve(x),article=document.createElement('article'),h=document.createElement('h2'),a=document.createElement('a'),image=document.createElement('img'),label=document.createElement('label'),q=document.createElement('input'),remove=document.createElement('button');h.textContent=friendly(r.name);a.href=new URL(r.src,location.origin).href;a.target='_blank';a.rel='noopener';a.className='selection-photo';a.setAttribute('aria-label','View selected photograph of '+friendly(r.name));image.src=r.src;image.alt=r.alt;image.width=r.width;image.height=r.height;image.loading='lazy';image.decoding='async';a.append(image);label.textContent='Garment quantity';q.type='number';q.min='1';q.max='9999';q.value=x.quantity;q.required=true;label.append(q);q.addEventListener('change',()=>{if(q.reportValidity()){items.find(y=>y.photo===x.photo).quantity=Number(q.value);save();announcement.textContent='Quantity updated for '+friendly(r.name)+'.';updateTotal();}});remove.type='button';remove.className='home-button';remove.textContent='Remove Design';remove.addEventListener('click',()=>{const index=read().findIndex(y=>y.photo===x.photo);items=items.filter(y=>y.photo!==x.photo);save();draw();announcement.textContent=friendly(r.name)+' removed. '+read().length+' designs selected.';const controls=list.querySelectorAll('button');if(controls.length)controls[Math.min(index,controls.length-1)].focus();else{list.tabIndex=-1;list.focus();}});const details=document.createElement('div');details.className='selection-design-details';const controls=document.createElement('div');controls.className='selection-quantity';const minus=document.createElement('button'),plus=document.createElement('button');minus.type=plus.type='button';minus.textContent='−';plus.textContent='+';minus.setAttribute('aria-label','Decrease quantity for '+friendly(r.name));plus.setAttribute('aria-label','Increase quantity for '+friendly(r.name));for(const [button,change] of [[minus,-1],[plus,1]])button.addEventListener('click',()=>{q.value=Math.min(9999,Math.max(1,(Number(q.value)||1)+change));q.dispatchEvent(new Event('change'));});q.setAttribute('aria-label','Quantity for '+friendly(r.name));controls.append(minus,label,plus);details.append(h,controls,remove);article.append(a,details);list.append(article);}const next=document.querySelector('[data-selected-continue]');next.hidden=!items.length;next.href=url('/services/custom-tailoring/fabric/?multiple=1');const actions=document.querySelector('[data-selection-actions]');if(actions)actions.hidden=!items.length;const browse=document.querySelector('[data-selection-list] + p a');if(browse&&lifetime.isQuote())browse.href=lifetime.url('/services/custom-tailoring/',read(),true);}redrawSelectionList=draw;draw();const next=document.querySelector('[data-selected-continue]');next.addEventListener('click',e=>{const rows=read();if(!rows.length){e.preventDefault();draw();announcement.textContent='Your unfinished selections have expired. Please select your designs again.';return;}lifetime.close(rows);next.href=url('/services/custom-tailoring/fabric/?multiple=1');refresh();});}
 if(document.getElementById('fabricChoiceForm')||location.pathname==='/guides/fabrics/'&&(params.has('fabricFor')||params.get('fabricSelect')==='1'))ensureQuote();
 window.MrFabricJourney?.({api:window.MrDesignSelections,source,resolve,friendly,url,ensureQuote,preferences});
 for(const a of document.querySelectorAll('[data-edit-designs]')){a.href=isSelectedQuote()?quoteURL('/services/custom-tailoring/'):storageOK?'/services/custom-tailoring/':url('/services/custom-tailoring/');a.addEventListener('click',()=>{if(isSelectedQuote()){a.href=quoteURL('/services/custom-tailoring/');return;}if(!batch()&&!items.length){const s=window.mrRequestContext?.read()||{},d=window.MrSelectedDesign?.resolve(s);if(d)add({design:s.design,photo:d.photoURL,project:s.project});}a.href=storageOK?'/services/custom-tailoring/':url('/services/custom-tailoring/');});}
@@ -143,7 +143,7 @@ window.MrFabricJourney=function({api,source,resolve,friendly,url,ensureQuote,pre
   const button=form.querySelector('[type=submit]'),status=document.getElementById('fabric-choice-status'),current=api.fabricPreference();
   for(const radio of form.querySelectorAll('[name=sharedFabricChoice]'))radio.checked=current?.choice===radio.value;
   function selected(){return form.querySelector('[name=sharedFabricChoice]:checked')?.value;}
-  function sync(){const choice=selected();button.textContent=choice==='now'?'Continue to Fabric Selection':choice?'Continue to Quotation':'Continue';if(choice){const old=api.fabricPreference();api.setFabricPreference({choice,fabricRef:choice==='now'?old?.fabricRef||'':'',colour:choice==='now'?old?.colour||'':'',colourDescription:choice==='now'?old?.colourDescription||'':'',pattern:choice==='now'?old?.pattern||'':''});}status.textContent='';}
+  function sync(){const choice=selected();button.textContent='Continue';if(choice){const old=api.fabricPreference();api.setFabricPreference({choice,fabricRef:choice==='now'?old?.fabricRef||'':'',colour:choice==='now'?old?.colour||'':'',colourDescription:choice==='now'?old?.colourDescription||'':'',pattern:choice==='now'?old?.pattern||'':''});}status.textContent='';}
   form.addEventListener('change',sync);sync();
   form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;sync();location.href=selected()==='now'?url('/guides/fabrics/?fabricSelect=1&multiple=1'):api.quotationURL();});
   return;
@@ -407,4 +407,99 @@ window.MrFabricJourney=function({api,source,resolve,friendly,url,ensureQuote,pre
   if(location.pathname==='/services/custom-tailoring/'){const saved=Object.entries(entries());if(saved.length){const section=document.createElement('section'),h=document.createElement('h2');section.className='release-section express-recovery-list';h.textContent='Continue a Saved Tailoring Enquiry';section.append(h);for(const[id,e]of saved){const a=document.createElement('a');a.className='home-button';a.dataset.expressRecover=id;a.href=recoveryURL(id,e);a.textContent=(e.snapshot.mode==='suit'?'Suit':'Special Tailoring')+' enquiry — '+e.snapshot.date+' '+e.snapshot.time;section.append(a);}document.querySelector('main .home-shell')?.prepend(section);}}
  }
  window.MrExpressEnquiry={save,recover,entries,expire:entries,message:()=>prepared().message,messageParts:()=>prepared().parts,storageKey:KEY};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+
+/* One accessible shell for the existing same-origin selection and request pages.
+ * The iframe retains the actual forms, state, validators and receiving contract.
+ * No personal information is added to the parent URL or local storage. */
+(()=>{'use strict';
+ if(window.parent!==window||!window.HTMLDialogElement)return;
+ const reviewPath='/services/custom-tailoring/selected-designs/';
+ const permitted=p=>[reviewPath,'/services/custom-tailoring/fabric/','/request/'].includes(p)||p.startsWith('/guides/fabrics/');
+ const browsing=p=>p==='/services/custom-tailoring/'||p==='/collections/'||/^\/(men|women)suits\//.test(p)||/^\/collections\/designs\//.test(p);
+ if(!browsing(location.pathname))return;
+ let dialog,frame,title,progress,opener,lastURL='',quoteStep=0,frameHistory=[],resumeButton;
+ const resumeKey='mrsewing-tailoring-dialog-v1',resumeTTL=30*60*1000;
+ function remember(path){try{const u=new URL(path,location.origin);if(u.origin!==location.origin||!permitted(u.pathname))return;const allowed=new Set(['selection','selectionFlow','selectionEdit','selectionSession','sharedFabric','multiple','fabricSelect','fabricFor','design','photo','project','service','order','fabricChoice','fabricRef']);for(const key of [...u.searchParams.keys()])if(!allowed.has(key))u.searchParams.delete(key);sessionStorage.setItem(resumeKey,JSON.stringify({url:u.pathname+u.search,updated:Date.now()}));}catch{}}
+ function resumePath(){try{const saved=JSON.parse(sessionStorage.getItem(resumeKey)||'null');if(!saved||Date.now()-saved.updated>=resumeTTL||saved.updated>Date.now()){sessionStorage.removeItem(resumeKey);return null;}const u=new URL(saved.url,location.origin),meta=JSON.parse(sessionStorage.getItem('mrsewing-design-session-v1')||'null');if(u.origin!==location.origin||!permitted(u.pathname)||(!u.searchParams.has('selectionFlow')&&meta?.status!=='active'))return null;return saved.url;}catch{return null;}}
+ function offerResume(){if(!resumePath())return;if(!resumeButton){resumeButton=document.createElement('button');resumeButton.type='button';resumeButton.className='home-button tailoring-resume-request';resumeButton.textContent='Resume Request';resumeButton.addEventListener('click',()=>open(resumePath(),resumeButton));const main=document.querySelector('main');(main?.querySelector('.home-shell')||main)?.prepend(resumeButton);}if(resumeButton)resumeButton.hidden=false;}
+ const labels=['Selected designs','Fabric preference','Fabric details','Your information','Review request'];
+ function announce(index,text){title.textContent=text||labels[index];progress.textContent='Step '+(index+1)+' of '+labels.length+' · '+labels[index];}
+ function close(){if(!dialog?.open)return;dialog.close();document.documentElement.classList.remove('tailoring-dialog-open');window.MrDesignSelections?.read();if(history.state?.tailoringRequest)history.replaceState(null,'',location.href);offerResume();opener?.focus();}
+ function create(){
+  dialog=document.createElement('dialog');dialog.className='tailoring-request-dialog';dialog.setAttribute('aria-labelledby','tailoring-dialog-title');
+  const head=document.createElement('header');head.className='tailoring-dialog-header';
+  const names=document.createElement('div');progress=document.createElement('p');progress.className='tailoring-dialog-progress';progress.setAttribute('role','status');progress.setAttribute('aria-live','polite');
+  title=document.createElement('h2');title.id='tailoring-dialog-title';names.append(progress,title);
+  const exit=document.createElement('button');exit.type='button';exit.className='tailoring-dialog-close';exit.textContent='Close';exit.setAttribute('aria-label','Close quotation request and keep selections');exit.addEventListener('click',close);head.append(names,exit);
+  frame=document.createElement('iframe');frame.title='Tailoring request steps';frame.className='tailoring-dialog-frame';
+  frame.addEventListener('load',prepare);dialog.append(head,frame);document.body.append(dialog);
+  dialog.addEventListener('cancel',event=>{event.preventDefault();close();});dialog.addEventListener('click',event=>{if(event.target===dialog)close();});
+ }
+ function open(path,trigger,fresh=false){
+  if(!path)return false;
+  const u=new URL(path,location.origin);if(u.origin!==location.origin||!permitted(u.pathname))return false;
+  if(!dialog)create();opener=trigger||document.activeElement;
+  if(!dialog.open){dialog.showModal();document.documentElement.classList.add('tailoring-dialog-open');history.pushState({tailoringRequest:true},'',location.href);}
+  // Reopening on this page keeps the live, unfinished form rather than reloading it.
+  if(!lastURL||fresh){lastURL=u.href;frameHistory=[];frame.src=u.href;announce(0,'Your Selected Designs');}
+  if(resumeButton)resumeButton.hidden=true;
+  dialog.querySelector('.tailoring-dialog-close').focus();return true;
+ }
+ function prepare(){
+  let doc,win,u;try{doc=frame.contentDocument;win=frame.contentWindow;u=new URL(win.location.href);}catch{title.textContent='Open your request separately';return;}
+  if(!doc||!permitted(u.pathname))return;
+  lastURL=u.href;remember(u.href);if(!dialog.open)window.MrDesignSelections?.read();if(frameHistory.at(-1)!==u.href)frameHistory.push(u.href);
+  doc.documentElement.classList.add('request-dialog-embedded');const sheet=doc.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/tailoring-request-dialog.css?v=experience-20261126';doc.head.append(sheet);
+  const stage=u.pathname===reviewPath?0:u.pathname==='/services/custom-tailoring/fabric/'?1:u.pathname.startsWith('/guides/fabrics/')?2:3;
+  announce(stage,stage===0?'Your Selected Designs':undefined);
+  doc.addEventListener('keydown',event=>{const nested=[...doc.querySelectorAll('dialog[open],[role=dialog]')].some(node=>node.open||node.getClientRects().length&&win.getComputedStyle(node).visibility!=='hidden');if(event.key==='Escape'&&!nested){event.preventDefault();close();}});
+  doc.addEventListener('click',event=>{
+   const link=event.target.closest('a[href]');if(!link||event.defaultPrevented||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+   const target=new URL(link.href,u.href);if(target.origin!==location.origin)return;
+   if(browsing(target.pathname)){event.preventDefault();close();location.assign(target.href);}
+   else if(!permitted(target.pathname)&&!target.pathname.startsWith('/assets/')&&!/\.(?:jpe?g|png|webp|pdf)$/i.test(target.pathname)){link.target='_blank';link.rel='noopener';}
+  });
+  const main=doc.querySelector('main');if(main)main.setAttribute('tabindex','-1');
+  if(stage===3)quoteSteps(doc,win);
+  const back=doc.createElement('button');back.type='button';back.className='home-button request-dialog-back';back.textContent='Back';
+  back.addEventListener('click',()=>{if(stage===3&&quoteStep>0){quoteStep--;showQuote(doc);return;}if(frameHistory.length>1){frameHistory.pop();const path=frameHistory.pop();frame.src=path;}else close();});
+  (main?.querySelector('.release-main')||main||doc.body).prepend(back);
+  main?.focus({preventScroll:true});
+ }
+ function quoteSteps(doc,win){
+  const form=doc.getElementById('customerRequestForm'),parts=[...doc.querySelectorAll('[data-quotation-section]')];if(!form||!parts.length)return;
+  quoteStep=0;const nav=doc.createElement('nav');nav.className='request-dialog-step-actions';nav.setAttribute('aria-label','Quotation steps');
+  const next=doc.createElement('button');next.type='button';next.className='home-button home-button-gold';next.textContent='Continue';next.dataset.dialogContinue='';nav.append(next);form.append(nav);
+  next.addEventListener('click',()=>{
+   const section=parts[quoteStep];
+   const invalid=[...section.querySelectorAll('input,select,textarea')].find(input=>!input.disabled&&!input.checkValidity());if(invalid){invalid.reportValidity();return;}
+   if(section.dataset.quotationSection==='deadline'){const assessment=win.MrCustomQuotation?.deadlineAssessment();if(assessment&&!assessment.valid){doc.getElementById('requestCompletionTime').setCustomValidity('Choose a valid completion deadline in the future.');doc.getElementById('requestCompletionTime').reportValidity();return;}}
+   quoteStep=Math.min(parts.length-1,quoteStep+1);showQuote(doc);
+  });
+  // The original validator still checks the complete form. Reveal the section
+  // containing an invalid field so errors are never trapped in a hidden step.
+  form.addEventListener('invalid',event=>{const index=parts.findIndex(part=>part.contains(event.target));if(index>=0){quoteStep=index;showQuote(doc,false);}},true);
+  const refresh=()=>{
+   const success=doc.getElementById('requestSuccess'),review=doc.getElementById('requestReview');
+   if(success&&!success.hidden){announce(4,'Request Submitted for Review');try{sessionStorage.removeItem(resumeKey);}catch{}if(resumeButton)resumeButton.hidden=true;}
+   else if(review&&!review.hidden)announce(4,'Review Your Request');
+   else showQuote(doc,false);
+  };
+  for(const id of['requestReview','requestSuccess']){const node=doc.getElementById(id);if(node)new MutationObserver(refresh).observe(node,{attributes:true,attributeFilter:['hidden']});}
+  doc.getElementById('editRequest')?.addEventListener('click',()=>{quoteStep=parts.length-1;showQuote(doc);});
+  doc.getElementById('sendRequest')?.replaceChildren(doc.createTextNode('Submit Request'));
+  showQuote(doc);
+ }
+ function showQuote(doc,focus=true){
+  const parts=[...doc.querySelectorAll('[data-quotation-section]')];parts.forEach((part,index)=>part.hidden=index!==quoteStep);
+  const next=doc.querySelector('[data-dialog-continue]');if(next)next.hidden=quoteStep===parts.length-1;
+  const caption=parts[quoteStep]?.querySelector('legend')?.textContent||'Your Request';announce(3,caption+' · '+(quoteStep+1)+' of '+parts.length);
+  if(focus){const first=parts[quoteStep]?.querySelector('input:not([type=hidden]),select,textarea,button');first?.focus({preventScroll:true});frame.contentWindow.scrollTo(0,0);}
+ }
+ document.addEventListener('click',event=>{const link=event.target.closest('a.selected-design-bar');if(link&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey&&open(link.href,link))event.preventDefault();});
+ document.addEventListener('mrsewing:designselected',event=>{const path=document.querySelector('.selected-design-bar')?.href||window.MrDesignSelections?.selectionURL(reviewPath)||reviewPath;open(path,event.detail?.trigger,true);});
+ window.addEventListener('popstate',()=>{if(dialog?.open&&!history.state?.tailoringRequest)close();});
+ window.MrTailoringRequest={open,close,isOpen:()=>!!dialog?.open};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',offerResume,{once:true});else offerResume();
 })();

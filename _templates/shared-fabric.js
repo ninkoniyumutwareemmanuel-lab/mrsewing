@@ -1,6 +1,6 @@
 /* Shared enquiry preferences; palette labels are requests, never inventory claims. */
 window.MrFabricPreferences=function(source){
- const labels={now:'I Want to Choose a Fabric',advice:'Help Me Choose a Fabric',own:'I Have My Own Fabric'};
+ const labels={now:'Choose a Fabric',advice:'Help Me Choose',own:'Use My Own Fabric'};
  function clean(value){
   if(!value||typeof value!=='object'||!Object.hasOwn(labels,value.choice))return null;
   const out={choice:value.choice,fabricRef:'',colour:'',colourDescription:'',pattern:''};

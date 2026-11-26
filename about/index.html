@@ -165,6 +165,33 @@ html, * { scroll-behavior:auto!important; }
 .homepage-header nav a {font-size:13px}
 .brand-name {font-size:11px}
 }
+.homepage-header #home-navigation>ul {align-items:stretch}
+.homepage-header #home-navigation summary {min-height:44px;line-height:1.45;cursor:pointer}
+.homepage-header #home-navigation summary:focus-visible {outline:2px solid var(--gold);outline-offset:3px}
+.homepage-header #home-navigation summary[aria-expanded="true"] {color:var(--gold)}
+.homepage-header #home-navigation details:not([open])>ul {display:none!important}
+.homepage-header #home-navigation .services-dropdown li, .homepage-header #home-navigation .header-guides li {min-width:0}
+.homepage-header #home-navigation .services-dropdown a, .homepage-header #home-navigation .header-guides a {white-space:normal;line-height:1.45;padding-block:10px}
+.homepage-header #home-navigation [aria-current="page"] {font-weight:650}
+@media(max-width:1099px) {
+html.home-navigation-open {overflow:hidden;scrollbar-gutter:stable}
+.homepage-header #home-navigation {overscroll-behavior:contain;max-height:calc(100dvh - var(--home-nav-top,110px) - 16px)!important;right:10px!important;width:min(360px,calc(100% - 20px))!important;padding:10px 16px!important}
+.homepage-header #home-navigation a, .homepage-header #home-navigation summary {min-height:44px;padding-block:10px}
+.homepage-header #home-navigation .services-dropdown ul, .homepage-header #home-navigation .header-guides ul {position:static;min-width:0;box-shadow:none;border:0;border-left:1px solid #77632f;border-radius:0;padding:0 0 0 12px!important;margin:0 0 8px}
+.homepage-header #home-navigation .services-dropdown a, .homepage-header #home-navigation .header-guides a {font-size:13px}
+}
+@media(min-width:1100px) {
+.homepage-header #home-navigation>ul {align-items:center}
+.homepage-header #home-navigation .services-dropdown>details>ul, .homepage-header #home-navigation .header-guides>details>ul {max-width:min(300px,calc(100vw - 40px));right:0;left:auto}
+}
+.homepage-header #home-navigation .header-guides {position:relative}
+.homepage-header #home-navigation .header-guides summary {display:flex;align-items:center;gap:8px;list-style:none;font-size:14px}
+.homepage-header #home-navigation .header-guides summary::-webkit-details-marker {display:none}
+.homepage-header #home-navigation .header-guides ul {padding:10px 14px;display:flex;flex-direction:column;gap:0;background:#1a1918;border:1px solid #6d562a;border-radius:4px}
+@media(min-width:1100px) {
+.homepage-header #home-navigation .header-guides summary {font-size:12px;white-space:nowrap}
+.homepage-header #home-navigation .header-guides>details>ul {position:absolute;top:100%;z-index:20;min-width:215px;box-shadow:0 15px 30px #0008}
+}
 /* Corrective homepage visual system. No shared-page styles are changed. */
 :root{--ink:#0b0b0c;--paper:#f5f0e8;--gold:#d4a43b;--muted:#c8c4bc;--line:#5b4927}
 html{scroll-padding-top:145px}body{background:var(--ink);color:var(--paper)}
@@ -233,6 +260,36 @@ h1,h2{letter-spacing:-.025em}h2{font-size:clamp(32px,4vw,48px);line-height:1.15}
 
 .hero-highlights a.hero-highlight{color:inherit;text-decoration:none;position:relative}.hero-highlights a.hero-highlight:hover{border-color:#e2bd65}.hero-highlights a.hero-highlight:focus-visible{outline:3px solid #f5d578;outline-offset:4px}
 
+/* Shared, compact navigation. Native disclosures work without JavaScript. */
+.homepage-header #home-navigation>ul{align-items:stretch}
+.homepage-header #home-navigation summary{min-height:44px;line-height:1.45;cursor:pointer}
+.homepage-header #home-navigation summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.homepage-header #home-navigation summary[aria-expanded="true"]{color:var(--gold)}
+.homepage-header #home-navigation details:not([open])>ul{display:none!important}
+.homepage-header #home-navigation .services-dropdown li,.homepage-header #home-navigation .header-guides li{min-width:0}
+.homepage-header #home-navigation .services-dropdown a,.homepage-header #home-navigation .header-guides a{white-space:normal;line-height:1.45;padding-block:10px}
+.homepage-header #home-navigation [aria-current="page"]{font-weight:650}
+.home-nav-backdrop{position:fixed;inset:0;z-index:990;background:#0008;touch-action:none}
+.home-nav-backdrop[hidden]{display:none!important}
+@media(max-width:1099px){
+ html.home-navigation-open{overflow:hidden;scrollbar-gutter:stable}
+ .homepage-header #home-navigation{overscroll-behavior:contain;max-height:calc(100dvh - var(--home-nav-top,110px) - 16px)!important;right:10px!important;width:min(360px,calc(100% - 20px))!important;padding:10px 16px!important}
+ .homepage-header #home-navigation a,.homepage-header #home-navigation summary{min-height:44px;padding-block:10px}
+ .homepage-header #home-navigation .services-dropdown ul,.homepage-header #home-navigation .header-guides ul{position:static;min-width:0;box-shadow:none;border:0;border-left:1px solid #77632f;border-radius:0;padding:0 0 0 12px!important;margin:0 0 8px}
+ .homepage-header #home-navigation .services-dropdown a,.homepage-header #home-navigation .header-guides a{font-size:13px}
+}
+@media(min-width:1100px){
+ .homepage-header #home-navigation>ul{align-items:center}
+ .homepage-header #home-navigation .services-dropdown>details>ul,.homepage-header #home-navigation .header-guides>details>ul{max-width:min(300px,calc(100vw - 40px));right:0;left:auto}
+ .home-nav-backdrop{display:none}
+}
+
+.homepage-header #home-navigation .header-guides{position:relative}
+.homepage-header #home-navigation .header-guides summary{display:flex;align-items:center;gap:8px;list-style:none;font-size:14px}
+.homepage-header #home-navigation .header-guides summary::-webkit-details-marker{display:none}
+.homepage-header #home-navigation .header-guides ul{padding:10px 14px;display:flex;flex-direction:column;gap:0;background:#1a1918;border:1px solid #6d562a;border-radius:4px}
+@media(min-width:1100px){.homepage-header #home-navigation .header-guides summary{font-size:12px;white-space:nowrap}.homepage-header #home-navigation .header-guides>details>ul{position:absolute;top:100%;z-index:20;min-width:215px;box-shadow:0 15px 30px #0008}}
+
 .request-context-note{background:#151514;color:#ead099;border:1px solid #8d6d2c;padding:14px;font-size:14px;line-height:1.6;margin:20px auto;max-width:1100px}
 
 /* Original licensed SVG paths; no icon font or third-party stylesheet requests. */
@@ -240,19 +297,67 @@ h1,h2{letter-spacing:-.025em}h2{font-size:clamp(32px,4vw,48px);line-height:1.15}
 .homepage-icon svg { height:1em; fill:currentColor; vertical-align:-.125em; overflow:visible; }
 picture.homepage-picture { display:contents; }
 
-/* About-only editorial layouts; all navigation, footer and button styles are shared. */
-.about-hero{padding-block:36px 40px;display:grid;gap:30px}.about-hero h1{font-size:clamp(2.5rem,10vw,4.3rem);line-height:1.08}.about-hero h1 em{font-weight:400;color:var(--gold)}.about-lead{font-size:1rem;line-height:1.8;max-width:580px;margin-top:24px}.about-signature{display:block;margin-top:24px;color:#e0ce93;font-size:.78rem;letter-spacing:.04em}.about-portrait{max-width:440px;width:100%;margin-inline:auto}.about-portrait img{width:100%;height:auto;background:#242222}.about-portrait figcaption{font-size:.75rem;color:var(--muted);padding-top:12px;letter-spacing:.025em}
-.about-section{padding-block:36px;border-top:1px solid var(--line)}.about-section-heading{margin-bottom:26px}.about-section-heading h2{font-size:clamp(2rem,7.5vw,3.15rem)}.about-section-heading>p:not(.home-eyebrow){margin-top:20px;max-width:360px;line-height:1.8}.about-prose{max-width:650px}.about-prose p{font-size:1rem;line-height:1.85}.about-prose p+p{margin-top:20px}.about-prose .about-approach-intro{color:#e8e0ce;font-size:1.12rem;line-height:1.75}
-.about-timeline{list-style:none;padding:0;display:grid;gap:28px}.about-timeline li{display:grid;grid-template-columns:64px 1fr;gap:18px;position:relative}.about-timeline li::before{content:'';position:absolute;top:34px;bottom:-20px;left:0;border-left:1px solid #51472b}.about-timeline li:last-child::before{bottom:0}.about-timeline-date{font-family:Georgia,serif;color:var(--gold);font-size:1.3rem}.about-timeline h3{font-family:Georgia,serif;font-size:1.5rem;font-weight:400;margin-bottom:12px}.about-timeline p{line-height:1.8;max-width:460px}
-.about-purpose{display:grid;gap:32px}.about-purpose h2{font-size:2.1rem;margin-bottom:20px}.about-purpose p:not(.home-eyebrow){line-height:1.85;max-width:560px}.about-purpose article{padding:26px 24px;background:#131310}.about-values{list-style:none;padding:0;display:grid;gap:22px}.about-values li{display:grid;grid-template-columns:28px 1fr;gap:18px;padding-top:20px;border-top:1px solid #383326}.about-values li>span{color:var(--gold);font-size:.76rem;padding-top:4px}.about-values h3{font-family:Georgia,serif;font-size:1.45rem;font-weight:400;margin-bottom:12px}.about-values p{font-size:.95rem;line-height:1.8}
-.about-services{display:grid;gap:0}.about-services article{padding-block:20px;border-top:1px solid #34322a}.about-services h3{font-size:1rem;margin-bottom:8px;font-weight:500}.about-services p{font-size:.94rem;line-height:1.8;max-width:430px}.about-company{border-top:1px solid var(--line);padding-block:23px}.about-company p{font-size:.8rem;line-height:1.8}.about-company span{color:#ddd5c3;overflow-wrap:anywhere}.about-final{padding-block:38px 44px;text-align:center;border-block:1px solid var(--line)}.about-final h2{font-size:clamp(2rem,7.4vw,3.4rem)}.about-final>p:not(.home-eyebrow){max-width:570px;margin:22px auto;line-height:1.8}.about-final-actions{display:flex;justify-content:center;align-items:center;gap:18px 26px;flex-wrap:wrap}.about-final-actions .home-button{gap:16px}
-@media(min-width:768px){.about-hero{grid-template-columns:1.2fr .8fr;align-items:center;gap:48px;padding-block:54px 58px}.about-hero h1{font-size:clamp(3rem,5.4vw,5rem)}.about-hero-copy{padding-block:24px}.about-section{padding-block:48px}.about-story,.about-approach,.about-services-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}.about-section-heading{margin-bottom:0}.about-purpose{grid-template-columns:1fr 1fr;gap:24px}.about-purpose article{padding:32px}.about-timeline{grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}.about-timeline li{grid-template-columns:80px 1fr}.about-values{grid-template-columns:1fr 1fr;margin-top:30px;gap:26px}.about-services{grid-template-columns:1fr 1fr;gap:0 26px}.about-final{padding-block:50px 56px}}
-@media(min-width:1100px){.about-hero{gap:80px}.about-section{padding-block:56px}.about-values{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}.about-values li{display:block}.about-values li>span{display:block;margin-bottom:24px}.about-values h3{font-size:1.45rem;min-height:3.1em}.about-values p{font-size:.9rem}.about-purpose article{padding:36px 40px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-
-.about-portrait{padding:38px 26px 24px;background:#10110e;border-top:1px solid #786332}.about-portrait .about-logo{background:transparent;object-fit:contain;height:auto;max-width:100%;margin:auto}.about-portrait figcaption{text-align:center;margin-top:24px}
-
-.about-final-actions{align-items:flex-start}.about-services-picker{position:relative;max-width:100%;text-align:left}.about-services-picker>summary{list-style:none;cursor:pointer}.about-services-picker>summary::-webkit-details-marker{display:none}.about-services-picker>ul{width:min(340px,calc(100vw - 40px));max-width:100%;margin:10px 0 0;padding:8px;list-style:none;background:#171716;border:1px solid #98762c;border-radius:6px}.about-services-picker>ul a{display:block;padding:12px;min-height:44px;color:#f5f0e8;font-size:14px;line-height:1.5;text-decoration:none;overflow-wrap:anywhere}.about-services-picker>ul a:hover{color:#d4a43b;background:#24221b}.about-services-picker>summary:focus-visible,.about-services-picker>ul a:focus-visible{outline:2px solid #d4a43b;outline-offset:3px}
+/* About-only editorial layout. Header, footer and button primitives are shared. */
+.about-hero{padding-block:30px 38px;max-width:1000px}
+.about-hero-copy{max-width:850px}
+.about-hero h1{font-size:clamp(2.35rem,7vw,4.5rem);line-height:1.12;letter-spacing:-.025em}
+.about-hero h1 em{font-weight:400;color:var(--gold)}
+.about-lead{font-size:clamp(1rem,1.7vw,1.18rem);line-height:1.75;max-width:670px;margin-top:20px}
+.about-hero-actions{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center;margin-top:24px}
+.about-section{padding-block:30px;border-top:1px solid var(--line)}
+.about-section-heading{margin-bottom:20px}
+.about-section-heading h2{font-size:clamp(1.7rem,5.2vw,2.7rem);line-height:1.18}
+.about-section-heading>p:not(.home-eyebrow){margin-top:16px;max-width:360px;line-height:1.7}
+.about-prose{max-width:650px;min-width:0}
+.about-prose p{font-size:.97rem;line-height:1.8}
+.about-prose p+p{margin-top:16px}
+.about-purpose{display:grid;gap:26px}
+.about-purpose h2{font-size:clamp(1.7rem,5.2vw,2.25rem);margin-bottom:14px}
+.about-purpose p:not(.home-eyebrow){line-height:1.8;max-width:560px}
+.about-purpose article{padding:0}
+.about-values{list-style:none;padding:0;display:grid;gap:0}
+.about-values li{display:grid;grid-template-columns:25px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #383326;min-width:0}
+.about-values li>span{color:var(--gold);font-size:.76rem;padding-top:5px}
+.about-values h3{font-family:Georgia,serif;font-size:1.3rem;font-weight:400;margin-bottom:8px}
+.about-values p{font-size:.92rem;line-height:1.7}
+.about-services{display:grid;gap:0}
+.about-services article{padding-block:16px;border-top:1px solid #34322a;min-width:0}
+.about-services h3{font-size:1.02rem;line-height:1.5;margin-bottom:8px;font-weight:500}
+.about-services p{font-size:.94rem;line-height:1.7;max-width:430px}
+.about-services .home-text-link{min-height:44px;display:inline-flex;align-items:center}
+.about-company-details{display:flex;align-items:center;gap:25px;flex-wrap:wrap}
+.about-company-mark{margin:0;width:140px;max-width:100%;flex:none}
+.about-company-mark .about-logo{display:block;width:140px;height:auto;max-width:100%;object-fit:contain}
+.about-company-mark figcaption{font-size:.7rem;color:var(--muted);margin-top:8px;text-align:center}
+.about-final{padding-block:34px 40px;text-align:center;border-block:1px solid var(--line)}
+.about-final h2{font-size:clamp(1.9rem,6vw,3rem);line-height:1.2}
+.about-final>p:not(.home-eyebrow){max-width:570px;margin:18px auto;line-height:1.7}
+.about-final-actions{display:flex;justify-content:center;align-items:flex-start;gap:18px 26px;flex-wrap:wrap}
+.about-final-actions .home-button{gap:16px}
+.about-services-picker{position:relative;max-width:100%;text-align:left}
+.about-services-picker>summary{list-style:none;cursor:pointer}
+.about-services-picker>summary::-webkit-details-marker{display:none}
+.about-services-picker>ul{width:min(340px,calc(100vw - 40px));max-width:100%;margin:10px 0 0;padding:8px;list-style:none;background:#171716;border:1px solid #98762c;border-radius:6px}
+.about-services-picker>ul a{display:block;padding:12px;min-height:44px;color:#f5f0e8;font-size:14px;line-height:1.5;text-decoration:none;overflow-wrap:anywhere}
+.about-services-picker>ul a:hover{color:#d4a43b;background:#24221b}
+.about-services-picker>summary:focus-visible,.about-services-picker>ul a:focus-visible{outline:2px solid #d4a43b;outline-offset:3px}
+.about-leadership{display:grid;gap:24px;align-items:start}
+.about-leadership h2{font-size:clamp(1.8rem,5vw,2.7rem);line-height:1.2}
+.about-leadership p{line-height:1.75;margin-top:14px;max-width:650px}
+.about-leadership-title{color:var(--gold)}
+.about-leadership-photo{margin:0;max-width:300px}
+.about-leadership-photo img{display:block;width:100%;height:auto;object-fit:contain}
+@media(min-width:600px){.about-values{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}}
+@media(min-width:768px){
+ .about-hero{padding-block:42px 46px}.about-section{padding-block:38px}
+ .about-story,.about-approach,.about-services-section,.about-company-section{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px}
+ .about-section-heading{margin-bottom:0}.about-purpose{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
+ .about-services{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+ .about-leadership{grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:36px}
+ .about-final{padding-block:40px 46px}
+}
+@media(min-width:1100px){.about-values{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}.about-values li{display:block}.about-values li>span{display:block;margin-bottom:16px}.about-values h3{font-size:1.25rem;min-height:3em}.about-values p{font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){.about-hero *, .about-section *, .about-final *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -306,31 +411,64 @@ picture.homepage-picture { display:contents; }
     }
   ]
 }</script>
-<script src="/assets/about-navigation.js" defer></script>
+<script src="/assets/about-navigation.js?v=experience-20261126" defer></script>
 <meta name="robots" content="index, follow"><script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector('meta[name="robots"]');if(m)m.content="noindex, nofollow";}</script><script src="/assets/whatsapp-consent.js" defer></script><link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>
 <body>
 <a class="skip-link" href="/about/#main-content">Skip to content</a>
-<header id="home" class="homepage-header"><div class="home-info-bar"><div class="home-shell"><span>Kigali Main Workshop · KN 441 St, Norvège</span><a href="/contact/#hours-heading">Mon–Sat 09:00–17:00 · Umuganda: 12:00–17:00 by advance appointment · Sunday: by appointment only</a></div></div><div class="header-inner home-shell"><a class="home-brand" href="/" aria-label="Mr Sewing Fashion home"><img class="header-logo" src="MR LOGO.jpeg" width="1244" height="802" alt="Mr Sewing official MS logo" decoding="async" srcset="assets/homepage/mr-logo-96.3598d62e35.webp 96w, assets/homepage/mr-logo-192.2f306066cd.webp 192w, assets/homepage/mr-logo-320.b753282e38.webp 320w" sizes="(min-width: 1100px) 66px, 72px"><span class="brand-name">MR SEWING <small>FASHION</small></span></a><nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li><a href="/collections/">Showroom</a></li><li><a href="/our-work/">Our Work</a></li><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/guides/fabrics/">Fabric Guide</a></li><li><a href="/about/" aria-current="page">About Us</a></li><li><a href="/contact/">Contact Us</a></li><li><a href="/faq/">FAQs</a></li></ul></nav><a class="header-shop" href="/shop/" aria-label="Online Shop">Shop</a><button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" aria-hidden="true"><path d="M1 1h22M1 9h22M1 17h22" stroke="currentColor" stroke-width="1.5"/></svg></button></div></header>
+<header id="home" class="homepage-header"><div class="home-info-bar"><div class="home-shell"><span>Kigali Main Workshop · KN 441 St, Norvège</span><a href="/contact/#hours-heading">Mon–Sat 09:00–17:00 · Umuganda: 12:00–17:00 by advance appointment · Sunday: by appointment only</a></div></div><div class="header-inner home-shell"><a class="home-brand" href="/" aria-label="Mr Sewing Fashion home"><img class="header-logo" src="MR LOGO.jpeg" width="1244" height="802" alt="Mr Sewing official MS logo" decoding="async" srcset="assets/homepage/mr-logo-96.3598d62e35.webp 96w, assets/homepage/mr-logo-192.2f306066cd.webp 192w, assets/homepage/mr-logo-320.b753282e38.webp 320w" sizes="(min-width: 1100px) 66px, 72px"><span class="brand-name">MR SEWING <small>FASHION</small></span></a><nav id="home-navigation" aria-label="Main navigation"><ul><li><a href="/">Home</a></li><li class="services-dropdown"><details><summary>Services <span aria-hidden="true">⌄</span></summary><ul><li><a href="/services/custom-tailoring/">Tailoring &amp; Clothing Services</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></details></li><li><a href="/collections/">Showroom</a></li><li><a href="/our-work/">Our Work</a></li><li class="header-guides"><details><summary>Customer Guides <span aria-hidden="true">⌄</span></summary><ul><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/guides/fabrics/">Fabric Guide</a></li><li><a href="/faq/">FAQs</a></li></ul></details></li><li><a href="/about/" aria-current="page">About Us</a></li><li><a href="/contact/">Contact Us</a></li></ul></nav><a class="header-shop" href="/shop/" aria-label="Online Shop">Shop</a><button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation"><svg width="24" height="18" viewBox="0 0 24 18" fill="none" aria-hidden="true"><path d="M1 1h22M1 9h22M1 17h22" stroke="currentColor" stroke-width="1.5"/></svg></button></div></header>
 
 <main id="main-content" tabindex="-1">
 <section class="home-shell about-hero" aria-labelledby="about-title">
-<div class="about-hero-copy"><nav class="customer-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">About Us</span></li></ol></nav><p class="home-eyebrow">Our story · Kigali, Rwanda</p><h1 id="about-title">More Than Tailoring.<br><em>A Reflection of You.</em></h1><p class="about-lead">Mr Sewing Fashion is a professional tailoring and garment-care brand in Kigali, Rwanda, bringing together custom clothing, alterations, garment care and personalised assistance.</p><span class="about-signature">Made in Rwanda. Made around you.</span></div>
-<figure class="about-portrait"><img class="about-hero-image about-logo" src="assets/images/nexus-logo-480.webp" srcset="assets/images/nexus-logo-480.webp 480w, assets/images/nexus-logo-960.webp 960w" sizes="(min-width: 768px) 360px, 80vw" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" alt="Owner-supplied Nexus company logo"><figcaption>NINKONIYUMUTWARE NEXUS LTD</figcaption></figure>
+  <div class="about-hero-copy">
+    <nav class="customer-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">About Us</span></li></ol></nav>
+    <p class="home-eyebrow">Personal tailoring · Kigali, Rwanda</p>
+    <h1 id="about-title">Mr Sewing Fashion.<br><em>Made Around You.</em></h1>
+    <p class="about-lead">Custom clothing, alterations, garment care and personalised assistance, with your design, fit and practical needs at the centre.</p>
+    <div class="about-hero-actions"><a class="home-button home-button-gold" href="/services/custom-tailoring/">Tailoring &amp; Clothing Services</a><a class="home-text-link" href="/contact/">Contact Us</a></div>
+  </div>
 </section>
 <section class="home-shell about-section about-story" aria-labelledby="story-title">
-<div class="about-section-heading"><p class="home-eyebrow">Our Story</p><h2 id="story-title">Our Work Begins<br>with Your Needs</h2></div><div class="about-prose"><p>Mr Sewing Fashion is a Kigali-based fashion brand operated by NINKONIYUMUTWARE NEXUS LTD.</p><p>Our work is centred on the customer: understanding the garment, the occasion and the practical needs behind each request. From custom tailoring to the care of existing clothing, we focus on personal service, fit and craftsmanship.</p><p>We bring a structured approach to each service, from the initial consultation and assessment to the agreed quotation, work and handover.</p></div></section><section class="home-shell about-section about-purpose" aria-label="Our mission and vision"><article><p class="home-eyebrow">What guides our work</p><h2>Our Mission</h2><p>To create exceptional, personalized clothing that combines luxury, quality craftsmanship, and individual expression. Through professional tailoring, thoughtful design, and options for different budgets, we aim to make refined fashion accessible while celebrating the excellence of Made in Rwanda craftsmanship.</p></article><article><p class="home-eyebrow">What we aspire to</p><h2>Our Vision</h2><p>To become one of Rwanda's most trusted and respected fashion houses, recognized for exceptional craftsmanship, personalized luxury, and innovation—demonstrating that world-class fashion can be designed and created right here in Rwanda.</p></article></section>
-<section class="home-shell about-section" aria-labelledby="values-title"><div class="about-section-heading"><p class="home-eyebrow">The details that matter</p><h2 id="values-title">What We Stand For</h2></div><ol class="about-values"><li><span aria-hidden="true">01</span><div><h3>Luxury</h3><p>Refined design and thoughtful details that make every occasion feel exceptional.</p></div></li><li><span aria-hidden="true">02</span><div><h3>Quality Craftsmanship</h3><p>Careful attention to garment construction, fit, and finishing.</p></div></li><li><span aria-hidden="true">03</span><div><h3>Personalized Service</h3><p>Listening to each customer's preferences and tailoring the experience around their needs.</p></div></li><li><span aria-hidden="true">04</span><div><h3>Accessible Luxury</h3><p>Offering thoughtful fabric and design choices across different budgets while maintaining our commitment to quality.</p></div></li><li><span aria-hidden="true">05</span><div><h3>Individuality</h3><p>Helping every customer express their personality, confidence, and personal style.</p></div></li></ol></section>
-<section class="home-shell about-section about-services-section" aria-labelledby="services-title"><div class="about-section-heading"><p class="home-eyebrow">For your life and its occasions</p><h2 id="services-title">What We Do</h2><p>From a milestone outfit to the fit of an everyday favourite, our work begins with you.</p></div><div class="about-services"><article><h3>Custom Tailoring &amp; Suits</h3><p>Personalised garment design, fabric preferences, measurements and fitting arrangements for your individual tailoring request.</p><a class="home-text-link" href="/services/custom-tailoring/">Explore custom tailoring</a></article><article><h3>Clothing Alterations &amp; Repairs</h3><p>Discuss adjustments to fit and repairs to clothing, assessed against the garment’s condition and the change you need.</p><a class="home-text-link" href="/services/alterations/">Explore alterations and repairs</a></article><article><h3>Garment Care &amp; Cleaning</h3><p>Request an assessment of suitable care for your garment, its care label, condition and individual requirements.</p><a class="home-text-link" href="/services/garment-care/">Explore garment care</a></article><article><h3>Mobile Tailoring, Styling &amp; Event Assistance</h3><p>Individually arranged assistance for tailoring consultation, measurements, fitting, styling and garment needs around an event or location.</p><a class="home-text-link" href="/services/mobile-fitting/">Explore mobile and event assistance</a></article><article><h3>VIP Services</h3><p>Personalised assistance, individually assessed and arranged through an agreed quotation.</p><a class="home-text-link" href="/services/vip/">Explore VIP services</a></article></div></section>
-<section class="home-shell about-section about-approach" aria-labelledby="approach-title"><div class="about-section-heading"><p class="home-eyebrow">Our approach</p><h2 id="approach-title">Designed Around You</h2></div><div class="about-prose"><p class="about-approach-intro">Every service begins with a conversation. We take time to understand your requirements, assess the garment or proposed work and explain the options available.</p><p>For custom tailoring, bring an inspiration photograph or describe your preferred outfit. Together, we discuss fabric and styling options, take or confirm measurements and plan the garment. For existing clothing, we assess its condition and the requested alteration, repair or care.</p><p>Before work begins, we confirm the scope, applicable quotation and service arrangements. Throughout the process, we focus on professional care, clear communication and the agreed result.</p></div></section>
-<section class="home-shell about-section about-approach" aria-labelledby="commitment-title">
-<div class="about-section-heading"><p class="home-eyebrow">Our commitment</p><h2 id="commitment-title">Professional Care.<br>Clear Communication.</h2></div>
-<div class="about-prose"><p>We are committed to understanding your needs, explaining the agreed service and treating each garment with professional care. We aim to deliver work consistent with the confirmed specifications and to assess concerns fairly.</p><p>For more information about how orders, services and customer support are handled, read our <a href="/terms-and-conditions/">Terms &amp; Conditions</a>, <a href="/faq/">FAQs</a> and <a href="/refund-policy/">Refund &amp; Cancellation Policy</a>. Our <a href="/privacy-policy/">Privacy Policy</a> explains how customer information is handled.</p></div></section>
-<section class="home-shell about-section about-approach" aria-labelledby="company-title">
-<div class="about-section-heading"><p class="home-eyebrow">Our corporate identity</p><h2 id="company-title">Company Information</h2></div>
-<div class="about-prose"><p><strong>Trading brand:</strong> Mr Sewing Fashion<br><strong>Operating company:</strong> NINKONIYUMUTWARE NEXUS LTD<br><strong>Main workshop:</strong> KN 441 St, Norvège, Nyarugenge, Kigali, Rwanda<br><strong>Telephone:</strong> <a href="tel:+250787411501">+250 787 411 501</a><br><strong>Email:</strong> <a href="mailto:mrsewingfashiondesigner@gmail.com">mrsewingfashiondesigner@gmail.com</a><br><strong>Website:</strong> <a href="https://mrsewingfashion.com/">mrsewingfashion.com</a></p><p>For current locations, opening hours, enquiries and customer support, visit our <a href="/contact/">Contact Us</a> page.</p></div></section>
-<section class="home-shell about-final" aria-labelledby="final-title"><p class="home-eyebrow">Something personal starts here</p><h2 id="final-title">Your Vision. Our Craftsmanship.</h2><p>Whether you have a design in mind or an occasion to prepare for, we're here to help bring your ideas to life.</p><div class="about-final-actions"><details class="about-services-picker" data-service-picker><summary class="home-button home-button-gold" role="button" aria-expanded="false">Explore Our Services <span aria-hidden="true">⌄</span></summary><ul><li><a href="/services/custom-tailoring/">Tailoring &amp; Clothing Services</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></details><a class="home-text-link" href="/contact/">Contact Us <span class="home-arrow" aria-hidden="true">↗</span></a></div></section>
+  <div class="about-section-heading"><p class="home-eyebrow">Our Story</p><h2 id="story-title">Our Work Begins<br>with Your Needs</h2></div>
+  <div class="about-prose"><p>Mr Sewing Fashion is a professional tailoring brand in Kigali, Rwanda, operated by NINKONIYUMUTWARE NEXUS LTD.</p><p>We begin by understanding the garment, the occasion and the person who will wear it. From a custom-made outfit to the care of existing clothing, our work focuses on fit, craftsmanship and personal service.</p></div>
+</section>
+
+<section class="home-shell about-section about-purpose" aria-label="Our mission and vision">
+  <article><p class="home-eyebrow">What guides our work</p><h2>Our Mission</h2><p>To create exceptional, personalized clothing that combines luxury, quality craftsmanship, and individual expression. Through professional tailoring, thoughtful design, and options for different budgets, we aim to make refined fashion accessible while celebrating the excellence of Made in Rwanda craftsmanship.</p></article>
+  <article><p class="home-eyebrow">What we aspire to</p><h2>Our Vision</h2><p>To become one of Rwanda's most trusted and respected fashion houses, recognized for exceptional craftsmanship, personalized luxury, and innovation—demonstrating that world-class fashion can be designed and created right here in Rwanda.</p></article>
+</section>
+<section class="home-shell about-section" aria-labelledby="values-title">
+  <div class="about-section-heading"><p class="home-eyebrow">The details that matter</p><h2 id="values-title">What We Stand For</h2></div>
+  <ol class="about-values">
+    <li><span aria-hidden="true">01</span><div><h3>Luxury</h3><p>Refined design and thoughtful details.</p></div></li>
+    <li><span aria-hidden="true">02</span><div><h3>Quality Craftsmanship</h3><p>Careful garment construction, fit and finishing.</p></div></li>
+    <li><span aria-hidden="true">03</span><div><h3>Personalized Service</h3><p>Listening to your preferences and needs.</p></div></li>
+    <li><span aria-hidden="true">04</span><div><h3>Accessible Luxury</h3><p>Thoughtful fabric and design choices across different budgets.</p></div></li>
+    <li><span aria-hidden="true">05</span><div><h3>Individuality</h3><p>Clothing that expresses your personal style.</p></div></li>
+  </ol>
+</section>
+<section class="home-shell about-section about-services-section" aria-labelledby="services-title">
+  <div class="about-section-heading"><p class="home-eyebrow">For your life and its occasions</p><h2 id="services-title">Our Services</h2><p>Choose the support your garment needs.</p></div>
+  <div class="about-services">
+    <article><h3>Tailoring &amp; Clothing Services</h3><p>Design, fabric preferences, measurements and fittings for custom-made clothing.</p><a class="home-text-link" href="/services/custom-tailoring/">Explore Tailoring Services</a></article>
+    <article><h3>Clothing Alterations &amp; Repairs</h3><p>Fit adjustments and repairs, assessed against your garment's condition.</p><a class="home-text-link" href="/services/alterations/">Explore Alterations &amp; Repairs</a></article>
+    <article><h3>Garment Care &amp; Cleaning</h3><p>Care assessed for the garment, care label and individual requirements.</p><a class="home-text-link" href="/services/garment-care/">Explore Garment Care</a></article>
+    <article><h3>Mobile Tailoring, Styling &amp; Event Assistance</h3><p>Individually arranged measurements, fitting, styling and on-location assistance.</p><a class="home-text-link" href="/services/mobile-fitting/">Explore Mobile Assistance</a></article>
+    <article><h3>VIP Services</h3><p>Personalised assistance assessed through an individual quotation.</p><a class="home-text-link" href="/services/vip/">Explore VIP Services</a></article>
+  </div>
+</section>
+<section class="home-shell about-section about-approach" aria-labelledby="approach-title">
+  <div class="about-section-heading"><p class="home-eyebrow">Our approach</p><h2 id="approach-title">Designed Around You</h2></div>
+  <div class="about-prose"><p>Share your clothing idea or explain what your garment needs. We assess the requirements, discuss suitable options and confirm the quotation and arrangements before work begins.</p><p>Read our <a href="/faq/">FAQs</a>, <a href="/terms-and-conditions/current/">current Terms &amp; Conditions</a>, <a href="/refund-policy/">Refund &amp; Cancellation Policy</a> and <a href="/privacy-policy/">Privacy Policy</a> for more information.</p></div>
+</section>
+<section class="home-shell about-section about-company-section" aria-labelledby="company-title">
+  <div class="about-section-heading"><p class="home-eyebrow">Our corporate identity</p><h2 id="company-title">Company Information</h2></div>
+  <div class="about-company-details"><div class="about-prose"><p><strong>Trading brand:</strong> Mr Sewing Fashion<br><strong>Operating company:</strong> NINKONIYUMUTWARE NEXUS LTD<br><strong>Main workshop:</strong> KN 441 St, Norvège, Nyarugenge, Kigali, Rwanda</p><p>Find verified contact details, current locations and opening hours on our <a href="/contact/">Contact Us</a> page.</p></div><figure class="about-company-mark"><img class="about-hero-image about-logo" src="assets/images/nexus-logo-480.webp" srcset="assets/images/nexus-logo-480.webp 480w, assets/images/nexus-logo-960.webp 960w" sizes="140px" width="1536" height="1024" loading="lazy" decoding="async" alt="NINKONIYUMUTWARE NEXUS LTD operating-company logo"><figcaption>Operating company</figcaption></figure></div>
+</section>
+<section class="home-shell about-final" aria-labelledby="final-title">
+  <p class="home-eyebrow">Something personal starts here</p><h2 id="final-title">Let's Discuss Your Garment</h2><p>Have a design in mind or need help with an existing garment?</p><div class="about-final-actions"><details class="about-services-picker" data-service-picker><summary class="home-button home-button-gold" role="button" aria-expanded="false">Explore Our Services <span aria-hidden="true">⌄</span></summary><ul><li><a href="/services/custom-tailoring/">Tailoring &amp; Clothing Services</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></details><a class="home-text-link" href="/contact/">Contact Us <span class="home-arrow" aria-hidden="true">↗</span></a></div>
+</section>
 </main>
-<footer class="homepage-footer support-footer" aria-labelledby="footer-title"><div class="home-shell"><h2 id="footer-title" class="visually-hidden">Mr Sewing Fashion information</h2><div class="support-footer-columns"><div class="footer-col"><h3>Service Links</h3><ul><li><a href="/services/custom-tailoring/">Custom Tailoring &amp; Suits</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></div><div class="footer-col"><h3>Customer Guides</h3><ul><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/guides/fabrics/">Fabric Guide</a></li></ul></div><div class="footer-col"><h3>Quick Information</h3><ul><li><a href="/faq/">FAQs</a></li><li><a href="/contact/#locations-heading">Location</a></li><li><a href="/contact/#hours-heading">Opening Hours</a></li><li><details class="footer-policy-list"><summary>Policies</summary><ul><li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/refund-policy/">Refund Policy</a></li></ul></details></li></ul></div></div><div class="footer-bottom"><div class="footer-bottom-copy"><p>&copy; 2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.</p></div><div class="social-icons" aria-label="Social media"><a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.625em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></i></a>
+<footer class="homepage-footer support-footer" aria-labelledby="footer-title"><div class="home-shell"><h2 id="footer-title" class="visually-hidden">Mr Sewing Fashion information</h2><div class="support-footer-columns"><div class="footer-col"><h3>Service Links</h3><ul><li><a href="/services/custom-tailoring/">Tailoring &amp; Clothing Services</a></li><li><a href="/services/alterations/">Clothing Alterations &amp; Repairs</a></li><li><a href="/services/garment-care/">Garment Care &amp; Cleaning</a></li><li><a href="/services/mobile-fitting/">Mobile Tailoring, Styling &amp; Event Assistance</a></li><li><a href="/services/vip/">VIP Services</a></li></ul></div><div class="footer-col"><h3>Customer Guides</h3><ul><li><a href="/measurements/">Measurements Guide</a></li><li><a href="/guides/fabrics/">Fabric Guide</a></li></ul></div><div class="footer-col"><h3>Quick Information</h3><ul><li><a href="/faq/">FAQs</a></li><li><a href="/contact/#locations-heading">Location</a></li><li><a href="/contact/#hours-heading">Opening Hours</a></li><li><details class="footer-policy-list"><summary>Policies</summary><ul><li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/refund-policy/">Refund Policy</a></li></ul></details></li></ul></div></div><div class="footer-bottom"><div class="footer-bottom-copy"><p>&copy; 2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.</p></div><div class="social-icons" aria-label="Social media"><a href="https://www.facebook.com/share/19tDCGATYj/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.625em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></i></a>
             <a href="https://www.instagram.com/mr_sewing_fashion" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.875em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></i></a>
             <a href="https://www.tiktok.com/@mrsewingfashion" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:0.875em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></i></a>
             <a href="https://youtube.com/@mr.sewingfashion" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube homepage-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" style="width:1.125em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></i></a></div></div></div></footer>

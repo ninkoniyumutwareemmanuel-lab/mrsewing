@@ -15,7 +15,7 @@ window.MrFabricJourney=function({api,source,resolve,friendly,url,ensureQuote,pre
   const button=form.querySelector('[type=submit]'),status=document.getElementById('fabric-choice-status'),current=api.fabricPreference();
   for(const radio of form.querySelectorAll('[name=sharedFabricChoice]'))radio.checked=current?.choice===radio.value;
   function selected(){return form.querySelector('[name=sharedFabricChoice]:checked')?.value;}
-  function sync(){const choice=selected();button.textContent=choice==='now'?'Continue to Fabric Selection':choice?'Continue to Quotation':'Continue';if(choice){const old=api.fabricPreference();api.setFabricPreference({choice,fabricRef:choice==='now'?old?.fabricRef||'':'',colour:choice==='now'?old?.colour||'':'',colourDescription:choice==='now'?old?.colourDescription||'':'',pattern:choice==='now'?old?.pattern||'':''});}status.textContent='';}
+  function sync(){const choice=selected();button.textContent='Continue';if(choice){const old=api.fabricPreference();api.setFabricPreference({choice,fabricRef:choice==='now'?old?.fabricRef||'':'',colour:choice==='now'?old?.colour||'':'',colourDescription:choice==='now'?old?.colourDescription||'':'',pattern:choice==='now'?old?.pattern||'':''});}status.textContent='';}
   form.addEventListener('change',sync);sync();
   form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;sync();location.href=selected()==='now'?url('/guides/fabrics/?fabricSelect=1&multiple=1'):api.quotationURL();});
   return;

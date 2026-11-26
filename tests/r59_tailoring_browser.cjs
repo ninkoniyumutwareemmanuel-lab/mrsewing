@@ -4,7 +4,7 @@ const {chromium}=(()=>{try{return require('playwright');}catch(e){if(e.code!=='M
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const base='http://127.0.0.1:8020';
+const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8020';
 const dest='artifacts/r59-browser';
 (async()=>{
  fs.mkdirSync(dest,{recursive:true});
@@ -58,7 +58,16 @@ const dest='artifacts/r59-browser';
      // Return to the homepage before the existing gallery and layout assertions.
      await page.goto(base+'/',{waitUntil:'domcontentloaded'});
    }
-   assert.equal(await page.locator('#home-navigation > ul > li.services-dropdown').count(),0,'redundant Services item fully removed');
+   const servicesMenu=page.locator('#home-navigation > ul > li.services-dropdown');
+   assert.equal(await servicesMenu.count(),1,'one shared Services menu');
+   assert.deepEqual(await servicesMenu.locator('a').evaluateAll(a=>a.map(x=>new URL(x.href).pathname)),['/services/custom-tailoring/','/services/alterations/','/services/garment-care/','/services/mobile-fitting/','/services/vip/'],'five approved service destinations');
+   const navToggle=page.locator('.home-menu-toggle'),serviceDisclosure=servicesMenu.locator('details'),serviceSummary=serviceDisclosure.locator('summary');
+   if(width<1100)await navToggle.click();
+   await serviceSummary.focus();await page.keyboard.press('Enter');
+   assert(await serviceDisclosure.evaluate(e=>e.open),'Services opens with keyboard');
+   await page.keyboard.press('ArrowDown');assert(await servicesMenu.locator('a').first().evaluate(e=>e===document.activeElement),'Services keyboard focuses first destination');
+   await page.keyboard.press('Escape');assert(!(await serviceDisclosure.evaluate(e=>e.open)),'Escape closes Services');
+   if(width<1100)await page.keyboard.press('Escape');
    assert.equal(await page.locator('.tailoring-primary-card[href="/services/custom-tailoring/"]').count(),1,'Tailoring & Clothing Services remains available from home');
    assert.equal(await page.locator('.homepage-header .header-shop').innerText(),'Shop');
    assert.equal(await page.locator('.homepage-header .header-shop').getAttribute('href'),'/shop/');
@@ -77,9 +86,11 @@ const dest='artifacts/r59-browser';
    assert.equal(await page.locator('[data-gallery-pause]').count(),0,'gallery pause buttons removed');
    assert.equal(await page.locator('.gallery-motion-note').count(),0,'technical motion instructions removed');
    const gallery=page.locator('[data-moving-gallery]').first();
+   // The earlier keyboard Escape intentionally pauses both rows; resume first.
+   if(await gallery.getAttribute('data-gallery-paused')==='true'){await gallery.focus();await page.keyboard.press('Enter');}
    await gallery.click();
    assert.equal(await gallery.getAttribute('data-gallery-paused'),'true','tap pauses gallery');
-   assert.equal(await gallery.getAttribute('aria-pressed'),'true','accessible gallery state');
+   assert.equal(await gallery.locator('[data-gallery-motion-control]').getAttribute('aria-pressed'),'true','accessible gallery state');
    await gallery.focus();
    await page.keyboard.press('Enter');
    assert.equal(await gallery.getAttribute('data-gallery-paused'),'false','keyboard resumes gallery');
@@ -119,7 +130,7 @@ const dest='artifacts/r59-browser';
    assert.equal(await page.locator('.show-card').count(),Math.min(12,expected.length));
    await page.goto(base+'/collections/',{waitUntil:'domcontentloaded'});
    await page.waitForFunction(()=>document.querySelector('#gallery-status')?.textContent.includes(' designs'));
-   assert.equal((await page.locator('h1').innerText()).trim(),'Showroom — Explore Clothing Designs');
+   assert.equal((await page.locator('h1').innerText()).trim(),'Showroom');
    assert.equal(await page.locator('.show-collection-links a').count(),3);
    await page.goto(base+'/shop/',{waitUntil:'domcontentloaded'});
    assert(await page.locator('#shop-inspiration-title').isVisible());
