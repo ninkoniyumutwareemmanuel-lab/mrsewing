@@ -1,7 +1,7 @@
 /* WhatsApp chat opens directly; Terms are accessible in the site footer. */
 (()=>{'use strict';let photo,opener;
 function dialog(id,title){const d=document.createElement('dialog');d.id=id;d.className='customer-dialog';d.setAttribute('aria-labelledby',id+'-title');d.innerHTML='<button type="button" class="dialog-close" aria-label="Close dialog">Close</button><h2 id="'+id+'-title">'+title+'</h2>';d.querySelector('button').addEventListener('click',()=>d.close());d.addEventListener('close',()=>{opener?.focus({preventScroll:true});});document.body.append(d);return d;}
-function openWhatsApp(text){const u=new URL('https://wa.me/250787411501');if(text)u.searchParams.set('text',String(text).slice(0,6000));window.open(u.href,'_blank','noopener');}
+function openWhatsApp(text){const u=new URL('https://wa.me/250787411501');if(text)u.searchParams.set('text',String(text).slice(0,6000));window.MrEnquiryMeasurement?.whatsappClick();window.open(u.href,'_blank','noopener');}
 window.MrSewingWhatsApp={open:openWhatsApp};
 /* Existing footer Policies menu remains the sole footer Terms navigation. */
 document.addEventListener('click',e=>{

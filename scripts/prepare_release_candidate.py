@@ -57,6 +57,11 @@ def projection(root=ROOT, mode='production'):
         from terms_reader import production_terms_html
         for name in ('terms-and-conditions/index.html','terms-and-conditions.html'):
             if name in out:out[name]=production_terms_html(root=root).encode()
+        from shop_release_hold import holding_page, settings as shop_release_settings
+        if shop_release_settings(root)['productionAccess']=='temporary-holding':
+            for name in list(out):
+                if name.startswith('shop/')and name.endswith('/index.html'):
+                    out[name]=holding_page('/'+name.removesuffix('index.html'),root=root).encode()
     elif mode!='staging':raise ValueError('Unsupported candidate mode')
     for name in ('robots.txt','sitemap.xml','favicon.ico','favicon-16x16.png','favicon-32x32.png','apple-touch-icon.png','site.webmanifest','build-info.json','_headers','_redirects'):
         p=root/name

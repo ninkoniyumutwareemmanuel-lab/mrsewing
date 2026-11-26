@@ -24,6 +24,7 @@ CHECKS = [
     ('home-about', 'tests/home_about_customer_experience.cjs', 'artifacts/home-about'),
     ('services', 'tests/service_landings_browser.cjs', 'artifacts/services'),
     ('navigation', 'tests/customer_navigation.spec.cjs', 'artifacts/navigation'),
+    ('ads-sitelinks', 'tests/final_release_sitelinks.cjs', 'artifacts/ads-sitelinks'),
 ]
 
 

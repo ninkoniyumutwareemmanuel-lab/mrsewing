@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "status": "prepared-first-party-signals-only",
+  "externalEventsEnabled": false,
+  "googleAds": {"conversionId": null, "conversionLabel": null, "enabled": false},
+  "ga4": {"measurementId": null, "enabled": false},
+  "gtm": {"containerId": null, "enabled": false},
+  "primarySignal": "mrsewing:enquiry-accepted",
+  "secondarySignal": "mrsewing:whatsapp-click",
+  "activationRequirements": [
+    "Owner-supplied actual Google Ads conversion destination or chosen GA4/GTM route",
+    "Reviewed consent and privacy-safe URL/referrer/attribution handling",
+    "Synthetic staging isolation tests and authorized external destination verification",
+    "One primary enquiry conversion route; do not double count direct Ads and GA4 imports"
+  ],
+  "meaning": "Provider acceptance is not inbox receipt, human review, an accepted order or a purchase. WhatsApp clicks are secondary interactions, not conversations."
+}

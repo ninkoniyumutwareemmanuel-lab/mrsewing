@@ -50,6 +50,8 @@ def moments_gallery():
 
 
 def shop_category_section():
+ from shop_release_hold import settings
+ if not settings()['publicNavigation']:return ''
  from public_enquiries import approved
  from build_commerce import photo
  from shop_catalog import category_route

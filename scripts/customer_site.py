@@ -210,6 +210,7 @@ def outputs():
  out[ROOT/'assets/request-uploads.js']=(ROOT/'_templates/request-uploads.js').read_text()
  out[ROOT/'assets/customer-interactions.js']=(ROOT/'_templates/customer-interactions.js').read_text().replace('/*meta-pixel-config*/null',json.dumps(json.loads((ROOT/'_data/meta-pixel.json').read_text()),separators=(',',':')))
  out[ROOT/'assets/customer-interactions.css']=(ROOT/'_templates/customer-interactions.css').read_text()
+ out[ROOT/'assets/enquiry-measurement.js']=(ROOT/'_templates/enquiry-measurement.js').read_text()
  out[ROOT/'assets/consultation.js']=(ROOT/'_templates/consultation.js').read_text()
  out[ROOT/'assets/request-storage.js']=(ROOT/'_templates/request-storage.js').read_text()
  out[ROOT/'assets/selected-design.js']=(ROOT/'_templates/selected-design.js').read_text()

@@ -17,14 +17,16 @@ def legacy_header(page='/'):
     markup = (SHARED/'header.html').read_text().rstrip()
     if page != '/':
         markup = markup.replace('href="#customers-section"', 'href="/#customers-section"').replace('href="#services"', 'href="/#services"')
-    return markup.replace(f'<a href="{page}">', f'<a href="{page}" aria-current="page">', 1)
+    from shop_release_hold import public_navigation
+    return public_navigation(markup.replace(f'<a href="{page}">', f'<a href="{page}" aria-current="page">', 1))
 
 def footer():
     from custom_tailoring import component
     return component('footer')+'<script src="/assets/request-context.js" defer></script>'
 
 def legacy_footer():
-    return (SHARED/'footer.html').read_text().rstrip()
+    from shop_release_hold import public_navigation
+    return public_navigation((SHARED/'footer.html').read_text().rstrip())
 
 def site_css():
     return (SHARED/'site.css').read_text()+'\n'+(SHARED/'navigation.css').read_text()

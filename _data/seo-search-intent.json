@@ -80,12 +80,6 @@
       "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
     },
     {
-      "route": "/shop/",
-      "primaryTopic": "Online Shop",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
       "route": "/services/vip/",
       "primaryTopic": "VIP Styling & Garment Assistance in Kigali",
       "secondaryTopics": [],
@@ -365,42 +359,53 @@
       "primaryTopic": "Blue Jacket, Dark Foundation",
       "secondaryTopics": [],
       "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
-      "route": "/shop/category/clothes-hangers/",
-      "primaryTopic": "Clothes Hangers",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
-      "route": "/shop/category/footwear/",
-      "primaryTopic": "Footwear",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
-      "route": "/shop/category/garment-covers/",
-      "primaryTopic": "Garment Covers",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
-      "route": "/shop/category/mens-suits/",
-      "primaryTopic": "Men's Suits",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
-      "route": "/shop/category/shirts/",
-      "primaryTopic": "Shirts",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
-    },
-    {
-      "route": "/shop/category/womens-suits/",
-      "primaryTopic": "Women's Suits",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
     }
-  ]
+  ],
+  "temporarilyExcludedPages": {
+    "decision": "Owner FINAL RELEASE PREPARATION, 26 November 2026: temporarily remove public Shop navigation/indexing; retain prior search intent for future reviewed reactivation.",
+    "pages": [
+      {
+        "route": "/shop/",
+        "primaryTopic": "Online Shop",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      },
+      {
+        "route": "/shop/category/clothes-hangers/",
+        "primaryTopic": "Clothes Hangers",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      },
+      {
+        "route": "/shop/category/footwear/",
+        "primaryTopic": "Footwear",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      },
+      {
+        "route": "/shop/category/garment-covers/",
+        "primaryTopic": "Garment Covers",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      },
+      {
+        "route": "/shop/category/mens-suits/",
+        "primaryTopic": "Men's Suits",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      },
+      {
+        "route": "/shop/category/shirts/",
+        "primaryTopic": "Shirts",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      },
+      {
+        "route": "/shop/category/womens-suits/",
+        "primaryTopic": "Women's Suits",
+        "secondaryTopics": [],
+        "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      }
+    ]
+  }
 }

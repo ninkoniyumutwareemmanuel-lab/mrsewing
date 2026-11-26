@@ -31,7 +31,8 @@ def component(name,current=None):
     if name=='header':
         markup=markup.replace(' href="/" aria-current="page"',' href="/"')
         markup=markup.replace('href="'+(current or BASE)+'"','href="'+(current or BASE)+'" aria-current="page"',1)
-    return delivery(markup,name)
+    from shop_release_hold import public_navigation
+    return delivery(public_navigation(markup),name)
 
 def render(kind='landing'):
     import customer_site as release

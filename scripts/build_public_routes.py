@@ -64,6 +64,8 @@ def outputs():
 
     headers='# Staging only: never apply these noindex rules to the production hostname.\nhttps://mrsewing-staging.pages.dev/*\n  X-Robots-Tag: noindex, nofollow, noarchive\nhttps://:preview.mrsewing-staging.pages.dev/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n'
     alias='<head><meta charset="utf-8"><meta name="robots" content="noindex, follow"><link rel="canonical" href="'+DOMAIN+'/our-work/"><meta http-equiv="refresh" content="0;url=/our-work/"><title>Our Work | Mr Sewing Fashion</title><script>location.replace("/our-work/"+location.search+location.hash)</script></head><body><a href="/our-work/">Continue to Our Work</a></body>\n'
+    from shop_release_hold import http_headers
+    headers+=http_headers()
     return {ROOT/'sitemap.xml':sitemap,ROOT/'_redirects':redirects,ROOT/'_headers':headers,ROOT/'views.html':alias,ROOT/'views/index.html':alias,ROOT/'robots.txt':'User-agent: *\nAllow: /\n\nSitemap: '+DOMAIN+'/sitemap.xml\n'}
 
 def main():

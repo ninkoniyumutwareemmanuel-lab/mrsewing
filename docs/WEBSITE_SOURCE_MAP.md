@@ -72,6 +72,10 @@ See [the pre-launch brief](PRELAUNCH_BRIEF_2026-11-26.md). This is release prepa
 
 `python scripts/prepare_release_candidate.py --output /tmp/mrsewing-candidate-unique` prepares a public-only production projection and separately stored runtime compiler inputs, without deploying. `--check` verifies exact public and runtime bytes. Choose a fresh output path; existing candidates are preserved. Production Terms use the existing effective HTML body while staging retains the actual received PDF reader. No PDF activation or effective date is inferred. The final source must be committed and clean before freezing a candidate. Follow the separately authorized hosting/API verification and rollback procedure before any future Main release.
 
+### Final targeted release preparation
+
+Read [the final release brief](FINAL_RELEASE_PREPARATION_2026-11-26.md) and current source `versions/2026-11-26-02`. `_data/shop-release.json` and `scripts/shop_release_hold.py` control temporary Shop navigation/indexing and production-only holding views; the real staging catalogue/APIs/forms remain intact. Restore only after a reviewed decision and regression checks. `_data/advertising-measurement.json` records unavailable Google configuration; `_templates/enquiry-measurement.js` and existing request/WhatsApp hooks emit non-network, non-PII first-party signals only. Google/Meta conversion transport is not activated by adding a signal or changing a configuration label; genuine destination, consent/privacy and external receipt validation are required.
+
 ##26November customer experience additions
 
 - Shared labels: `_data/customer-interface-labels.json`, `scripts/customer_interface.py`. Header Services/Guides and keyboard/mobile behavior: `_templates/shared/navigation.js` and `navigation.css`.

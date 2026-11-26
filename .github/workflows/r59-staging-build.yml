@@ -59,6 +59,7 @@ jobs:
           python tests/about_leadership.py
           python tests/prelaunch_security_content.py
           python tests/release_candidate.py
+          python tests/shop_release_preparation.py
           python scripts/prepare_silent_homepage_videos.py
           python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py scripts/customer_site.py
       - uses: actions/setup-node@v4
@@ -84,6 +85,7 @@ jobs:
         run: |
           python tests/prelaunch_shop_contract.py
           node tests/prelaunch_tracking_contacts.cjs
+          node tests/enquiry_measurement.cjs
       - name: Install Chromium browser QA
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
@@ -111,6 +113,7 @@ jobs:
             artifacts/services/
             artifacts/navigation/
             artifacts/browser-checks/
+            artifacts/ads-sitelinks/
           if-no-files-found: ignore
       - name: Verify generated outputs are committed for this exact event
         run: |

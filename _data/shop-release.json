@@ -1,0 +1,9 @@
+{
+  "decisionDate": "2026-11-26",
+  "source": "Owner FINAL RELEASE PREPARATION, section 1; staging implementation only",
+  "publicNavigation": false,
+  "publicIndexing": false,
+  "productionAccess": "temporary-holding",
+  "stagingDirectAccess": "development",
+  "note": "Preserve Shop sources, records, APIs and direct staging journeys. Existing production paths receive a temporary noindex holding view only in the prepared production artifact; no production deployment is authorized."
+}

@@ -38,6 +38,9 @@ INDEXABLE_ROUTES = {
     *[shop_product_route(p) for p in shop_products()],
     *[category_route(c) for c in shop_categories()],
 }
+from shop_release_hold import public_indexing, public_page_navigation
+if not public_indexing():
+    INDEXABLE_ROUTES = {route for route in INDEXABLE_ROUTES if not route.startswith('/shop/')}
 STAGING='<script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector(\'meta[name="robots"]\');if(m)m.content="noindex, nofollow";}</script>'
 def route_for(path):
     rel=Path(path).relative_to(ROOT)
@@ -48,6 +51,7 @@ def route_for(path):
     return '/'+(str(rel.parent) if rel.name=='index.html' else str(rel.with_suffix(''))) .strip('/')+'/'
 def finalize(source,path):
     route=route_for(path)
+    source=public_page_navigation(source)
     # Use a square favicon while preserving the approved non-square logo asset.
     source=re.sub(r'<link\b[^>]*\brel=["\'](?:icon|shortcut icon)["\'][^>]*>',lambda m:re.sub(r'\btype=["\'][^"\']*["\']','type="image/png"',re.sub(r'\bhref=["\'][^"\']*["\']','href="/assets/images/favicon-192.png"',m[0])),source,flags=re.I)
     override=json.loads((ROOT/'_data/public-page-seo.json').read_text()).get(route)
@@ -89,7 +93,8 @@ def finalize(source,path):
     from whatsapp_consent import protect
     source=protect(source)
     source=re.sub(r'<script src="/assets/customer-interactions.js" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
-    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
+    source=re.sub(r'<script src="/assets/enquiry-measurement[.]js(?:\?[^"]*)?" defer></script>','',source)
+    source=source.replace('</head>','<script src="/assets/enquiry-measurement.js?v=release-20261126" defer></script><link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
     # GitHub Pages serves legacy .html files without interpreting Cloudflare _redirects.
     # An instant HTML refresh is a crawler-readable canonical redirect fallback;
     # existing data-legacy-url JavaScript still preserves query strings and hashes.
