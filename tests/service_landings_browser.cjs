@@ -69,6 +69,9 @@ const result = {layer: 'local Chromium, external handoffs mocked', widths, pages
         if (width === 320) { await hero.focus(); await page.keyboard.press('Enter'); }
         else await hero.click();
         const whatsappRequest = await opened;
+        // A request event precedes navigation commit. Let the intercepted
+        // handoff settle before testing return navigation in the same tab.
+        await page.waitForURL(url => url.hostname === 'wa.me', {waitUntil:'domcontentloaded'});
         const target = new URL(whatsappRequest.url());
         assert.equal(target.pathname, '/' + phone);
         assert.equal(target.searchParams.get('text'), cfg.messages[id]);
@@ -93,6 +96,7 @@ const result = {layer: 'local Chromium, external handoffs mocked', widths, pages
       const openedCombined = context.waitForEvent('request', {predicate:r=>new URL(r.url()).hostname==='wa.me'});
       await card.locator('a').click();
       const combinedRequest = await openedCombined;
+      await page.waitForURL(url => url.hostname === 'wa.me', {waitUntil:'domcontentloaded'});
       assert.equal(new URL(combinedRequest.url()).searchParams.get('text'), cfg.messages.combined);
       result.pages.push({id:'combined-hub', width, status:'PASS', exactMessage:true, officialDestination:true});
     }

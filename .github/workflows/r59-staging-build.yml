@@ -57,6 +57,8 @@ jobs:
           python tests/customer_gallery_experience.py
           python tests/service_landings.py
           python tests/about_leadership.py
+          python tests/prelaunch_security_content.py
+          python tests/release_candidate.py
           python scripts/prepare_silent_homepage_videos.py
           python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py scripts/customer_site.py
       - uses: actions/setup-node@v4
@@ -78,6 +80,10 @@ jobs:
         run: node tests/analytics_privacy.cjs
       - name: Verify the staging source boundary
         run: node tests/recovery_source_boundary.mjs
+      - name: Verify current Shop contracts and contact tracking safeguards
+        run: |
+          python tests/prelaunch_shop_contract.py
+          node tests/prelaunch_tracking_contacts.cjs
       - name: Install Chromium browser QA
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1

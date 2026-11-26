@@ -7,6 +7,7 @@ to the preserved current HTML Terms.
 """
 import hashlib
 import json
+import re
 import struct
 from pathlib import Path
 from html import escape
@@ -15,6 +16,53 @@ ROOT = Path(__file__).resolve().parents[1]
 CURRENT_PATH = '/terms-and-conditions/current/'
 PAGE_DIR = '/assets/policy-documents/terms-and-conditions/pages/'
 RENDER_DPI = 160
+
+
+def production_terms_html(route='/terms-and-conditions/', root=ROOT):
+    """Return the preserved effective HTML for an unactivated production release.
+
+    This is an export projection, never PDF approval or contractual activation.
+    The staging reader stays unchanged. Only canonical/social/schema route
+    metadata is normalized; the effective document body and its noindex status
+    are preserved verbatim. A later activated document requires its own reviewed
+    publication path rather than silently falling back to old terms.
+    """
+    if route not in ('/terms-and-conditions/', CURRENT_PATH):
+        raise ValueError('Unsupported contractual Terms export route')
+    root = Path(root)
+    document = json.loads((root / '_data/policy-documents.json').read_text())['documents']['terms-and-conditions']
+    if document.get('currentVersion') is not None:
+        raise ValueError('Activated Terms need their explicitly reviewed publication workflow')
+    source = (root / 'terms-and-conditions/current/index.html').read_text()
+    current_url = 'https://mrsewingfashion.com' + CURRENT_PATH
+    target_url = 'https://mrsewingfashion.com' + route
+    canonicals = re.findall(r'<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*\bhref=["\']([^"\']+)["\'][^>]*>', source, re.I)
+    if canonicals != [current_url] or 'Identity and scope' not in source or 'id="1"' not in source:
+        raise ValueError('Current effective HTML Terms source could not be verified')
+    if 'termsPdfDialog' in source or '/terms-and-conditions/1.2.pdf' in source:
+        raise ValueError('A staging-review PDF cannot substitute for effective HTML Terms')
+    source = re.sub(
+        r'(<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*\bhref=["\'])[^"\']+(["\'])',
+        lambda match: match[1] + target_url + match[2], source, flags=re.I)
+    source = re.sub(
+        r'(<meta\b(?=[^>]*\bproperty=["\']og:url["\'])[^>]*\bcontent=["\'])[^"\']+(["\'])',
+        lambda match: match[1] + target_url + match[2], source, flags=re.I)
+
+    def schema(match):
+        def normalize(value):
+            if isinstance(value, dict):
+                return {key: normalize(item) for key, item in value.items()}
+            if isinstance(value, list):
+                return [normalize(item) for item in value]
+            if isinstance(value, str) and value.startswith(current_url):
+                return target_url + value[len(current_url):]
+            return value
+        value = normalize(json.loads(match[2]))
+        return match[1] + json.dumps(value, ensure_ascii=False).replace('<', '\\u003c') + match[3]
+
+    source = re.sub(r'(<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)',
+                    schema, source, flags=re.I | re.S)
+    return source
 
 
 def received_version():

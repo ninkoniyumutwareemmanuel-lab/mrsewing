@@ -30,7 +30,7 @@ Edit the source named below, rebuild, inspect the diff and commit its generated 
 | Business settings | `_data/business.json`, `_data/contact-v2.json`, `_data/business-hours.json`, `scripts/sync_business_hours.py`, `scripts/sync_business_schema.py` | Verified identity/contacts/locations/hours; preserve Downtown appointment qualification |
 | Selected designs and request context | `_templates/design-selections.js`, `_templates/design-selection-sharing.js`, `_templates/request-context.js`, `_templates/quotation-arrangements.js`, `scripts/selected_designs.py` | Selected Designs → shared fabric → quotation; exact photographs/quantities preserved |
 | Quotation / booking / service forms | `scripts/customer_site.py`, `scripts/consultation_form.py`, `_templates/customer-site.js`, relevant request/quotation templates | Existing request/review/explicit-submit journeys and R65 modal wrappers |
-| Staging source boundary | `functions/_middleware.js` | Staging-only 404 for internal source/data roots; public assets/forms/API pass through; public Git history is unaffected |
+| Source boundary / release preparation | `functions/_middleware.js`, `scripts/prepare_release_candidate.py` | Internal source/data 404 on every runtime host. Static hosts require the separate public-only artifact; private compiler inputs are never static assets. Public Git history is unaffected. |
 | Receiving pipeline | `functions/api/`, `functions/_lib/selected-design-handler.js`, `functions/_lib/quotation-details.js`, `functions/_lib/fabric-preferences.js`, `scripts/edge/request-data.mjs` | Validated existing provider; mocked in tests; no automatic order/appointment confirmation |
 | Consent / analytics | `scripts/whatsapp_consent.py`, `_templates/whatsapp-consent.js` where retained, `_data/meta-pixel.json` and shared interactions | Latest direct WhatsApp flow; forms retain consent; opt-in analytics scoped to approved hosts |
 | SEO | `_data/page-seo.json`, `_data/seo-search-intent.json`, `_data/route-aliases.json`, `scripts/site_seo.py`, `scripts/build_public_routes.py` | Canonicals, clean URLs, exact redirects, sitemap, robots, host-scoped staging noindex |
@@ -65,6 +65,12 @@ Main release is a separate owner-authorized process. Do not promote new staging 
 The original dirty R54 workspace remains at `/workspace/mrsewing`. Its binary patch/archive and all-ref Git bundle are under `/workspace/recovery/2026-11-25/`; the active clean recovery implementation is `/workspace/mrsewing-recovery`. Keep these distinct. The local `recovery/staging-before-reconciliation-2026-11-25` reference preserves the initial remote staging tip. Do not reset or copy entire older trees over this baseline.
 
 Every future task should record branch/HEAD, owner instruction, applicable source version, unfinished changes, tests, exact deployment evidence and unresolved decisions in the dated reconciliation register before handing off.
+
+## 26 November pre-launch preparation
+
+See [the pre-launch brief](PRELAUNCH_BRIEF_2026-11-26.md). This is release preparation only; no Main merge or production deployment is authorized. `scripts/audit_release_routes.py` and `tests/prelaunch_routes_browser.cjs` create complete local HTTP/rendered canonical evidence outside the checkout. They do not verify Google indexing or actual Cloudflare/production responses.
+
+`python scripts/prepare_release_candidate.py --output /tmp/mrsewing-candidate-unique` prepares a public-only production projection and separately stored runtime compiler inputs, without deploying. `--check` verifies exact public and runtime bytes. Choose a fresh output path; existing candidates are preserved. Production Terms use the existing effective HTML body while staging retains the actual received PDF reader. No PDF activation or effective date is inferred. The final source must be committed and clean before freezing a candidate. Follow the separately authorized hosting/API verification and rollback procedure before any future Main release.
 
 ##26November customer experience additions
 
