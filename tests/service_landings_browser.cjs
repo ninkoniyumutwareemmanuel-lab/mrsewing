@@ -7,7 +7,7 @@ function library() {
   throw Error('Install the existing Playwright browser test dependency.');
 }
 const {chromium} = library(), root = path.resolve(__dirname, '..');
-const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:3086';
+const base = process.env.REVIEW_BASE_URL || 'http://127.0.0.1:8020';
 const out = process.env.REVIEW_ARTIFACTS || '/tmp/mrsewing-service-landings';
 const cfg = JSON.parse(fs.readFileSync(path.join(root, '_data/service-contact-actions.json')));
 const business = JSON.parse(fs.readFileSync(path.join(root, '_data/business.json')));
