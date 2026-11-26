@@ -92,7 +92,9 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Test staging-designed local browser at four widths
         run: |
-          python -m http.server 8020 --bind 127.0.0.1 > /tmp/r59-http.log 2>&1 &
+          # The Ads checks verify redirects and host-scoped staging headers.
+          # Use the same loopback Pages simulation as local release QA.
+          python tests/preview_server.py --port 8020 > /tmp/r59-http.log 2>&1 &
           python scripts/run_customer_browser_checks.py
       - name: Save browser review screenshots
         if: always()

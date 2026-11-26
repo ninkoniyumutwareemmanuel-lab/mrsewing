@@ -12,6 +12,7 @@ assert not re.search(r'^\s+ref: phase1/',s,re.M),'Checkout must use event SHA'
 assert not re.search(r'\bgit (?:push|commit|reset|merge)\b',s),'CI is verification-only'
 assert 'run: python scripts/import_owner_terms_v1_1.py' not in s
 assert 'python scripts/build_site.py --check' in s and 'git diff --exit-code' in s
+assert 'python tests/preview_server.py --port 8020' in s,'CI must exercise the same redirects/host headers as local Ads sitelink QA'
 assert 'concurrency:' in s and 'cancel-in-progress: true' in s
 assert s.index('node tests/shared-fabric-validation.mjs') < s.index('npm install'),'Backend failures should be identified before browser downloads'
 print('PASS event-commit/staging-only/read-only CI; no automatic PDF activation or generated-push race')
