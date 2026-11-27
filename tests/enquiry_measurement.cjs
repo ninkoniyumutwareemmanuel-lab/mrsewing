@@ -33,10 +33,9 @@ const cross=scenario({iframe:true,crossOrigin:true});assert(cross.api.whatsappCl
 const noCrypto=scenario({cryptoAvailable:false});assert.equal(noCrypto.api.providerAccepted({id:'customerRequestForm'},'quotation','vip'),false);assert.equal(noCrypto.local.length,0);
 const original=main.api;vm.runInNewContext(source,main.context);assert.equal(main.context.window.MrEnquiryMeasurement,original,'idempotent loader');
 const config=JSON.parse(fs.readFileSync('_data/advertising-measurement.json'));
-assert.equal(config.externalEventsEnabled,false);for(const name of['googleAds','ga4','gtm'])assert.equal(config[name].enabled,false);
-assert.equal(config.googleAds.conversionId,null);assert.equal(config.googleAds.conversionLabel,null);
+assert.equal(config.externalEventsEnabled,true);assert.equal(config.googleAds.conversionId,'18587874562');assert.equal(config.gtm.containerId,'GTM-WHR49M4D');assert.equal(config.ga4.enabled,false);assert.equal(config.googleAds.enhancedConversions,false);
 const request=fs.readFileSync('_templates/customer-site.js','utf8');
 assert(request.indexOf('result.success!==true')<request.indexOf('MrEnquiryMeasurement?.providerAccepted'));
 assert.equal((request.match(/MrEnquiryMeasurement\?\.providerAccepted/g)||[]).length,1);
 assert(request.includes('if(!window.MrRequestUploads?.configured)window.MrEnquiryMeasurement?.providerAccepted'),'disabled/private storage never masquerades as verified public provider acceptance');
-console.log('PASS first-party accepted-enquiry/secondary WhatsApp signals, in-memory deduplication, same-origin top-frame dispatch, allowlisted non-PII fields, no network/storage/vendor events, missing transport stays inactive. Actual Ads receipt NOT TESTED.');
+console.log('PASS first-party accepted-enquiry/secondary WhatsApp signals, in-memory deduplication, same-origin top-frame dispatch, allowlisted non-PII fields, no network/storage/vendor events, signal layer remains non-network; unified transport tested separately. Actual Ads receipt NOT TESTED.');

@@ -1,27 +1,3 @@
-/* Synthetic DOM checks. No tracker/network requests are executed. */
-const assert=require('node:assert/strict');
-const fs=require('node:fs');const vm=require('node:vm');const path=require('node:path');
-const root=path.resolve(__dirname,'..');const source=fs.readFileSync(path.join(root,'assets/meta-pixel.js'),'utf8');
-function scenario({host='mrsewing-staging.pages.dev',pathname='/',query='',choice=null,enabled=true,requestForm=false,selectorFailure=false}={}){
- const nodes=[],callbacks={},store=new Map(choice===null?[]:[['mrsewing:meta-marketing-consent:v1',choice]]);
- function element(tag){const n={tag,children:[],dataset:{},style:{},textContent:'',attrs:{},listeners:{},setAttribute(k,v){this.attrs[k]=v;},appendChild(x){this.children.push(x);return x;},append(...xs){this.children.push(...xs);},addEventListener(k,fn){this.listeners[k]=fn;},remove(){this.removed=true;},insertBefore(x){this.children.push(x);}};nodes.push(n);return n;}
- const first=element('script');first.parentNode=element('head');const loader={dataset:{productionEnabled:String(enabled),pixelId:'111111111111111'}};
- const body=element('body'),head=element('head'),footer=element('footer');
- const document={readyState:'loading',body,head,querySelector(selector){if(selector==='script[data-mr-meta-pixel]')return loader;if(selector.includes('#customerRequestForm')){if(selectorFailure)throw new Error('Synthetic DOM failure');return requestForm?{}:null;}if(selector.includes('footer'))return footer;return null;},createElement:element,createTextNode:s=>({text:s}),getElementsByTagName:()=>[first],addEventListener(k,fn){callbacks[k]=fn;}};
- const location={hostname:host,pathname,search:query,reload(){this.reloaded=true;}};const window={location};
- const context={document,window,location,URLSearchParams,localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v)}};
- vm.runInNewContext(source,context);callbacks.DOMContentLoaded?.();
- return{nodes,window,body,head,store,events:()=>Array.from(window.fbq?.queue||[],x=>Array.from(x)),external:()=>nodes.filter(n=>n.src?.startsWith('https://'))};
-}
-for(const host of ['mrsewing-staging.pages.dev','test.mrsewing-staging.pages.dev','localhost','unrelated.example']){const s=scenario({host,choice:'accepted'});assert.equal(s.events().length,0);assert.equal(s.external().length,0);}
-const preview=scenario({host:'mrsewing-staging.pages.dev',choice:'accepted',query:'?meta_pixel_preview=1'});assert.equal(preview.events().length,0);assert.equal(preview.external().length,0);assert(preview.nodes.some(n=>n.textContent==='Staging demonstration only. No tracking data is sent to Meta.'));
-for(const choice of [null,'declined']){const s=scenario({host:'mrsewingfashion.com',choice});assert.equal(s.external().length,0);assert.equal(s.events().length,0);}
-const active=scenario({host:'mrsewingfashion.com',choice:'accepted'});assert.equal(active.external().length,1);assert.deepEqual(active.events().map(x=>x[0]),['init','track']);assert.deepEqual(active.events()[1],['track','PageView']);assert.equal(active.events().flat().includes('Purchase'),false);
-for(const pathname of ['/request/','/request/alterations/','/booking/','/privacy-policy/','/terms-and-conditions/','/refund-policy/','/services/custom-tailoring/selected-designs/','/services/custom-tailoring/fabric/','/services/custom-tailoring/special-order/','/services/custom-tailoring/special-order.html','/services/custom-tailoring/standard-order/','/services/custom-tailoring/design-choice/','/services/vip/subscription/','/booking-housecall/','/booking-workplace/','/booking-adjustment/','/customer-support/','/measurement-submission/','/referral-program/','/shop/cart/','/staff/customer-requests/','/whatsapp/','/request.html','/booking.html']){const s=scenario({host:'mrsewingfashion.com',pathname,choice:'accepted'});assert.equal(s.events().length,0,pathname);assert.equal(s.external().length,0,pathname);}
-const query=scenario({host:'mrsewingfashion.com',choice:'accepted',query:'?design=fictional'});assert.equal(query.events().length,0);assert.equal(query.external().length,0);
-const optin=scenario({host:'mrsewingfashion.com'});const allow=optin.nodes.find(n=>n.tag==='button'&&n.textContent==='Allow');assert(allow);allow.listeners.click();allow.listeners.click();assert.equal(optin.external().length,1);assert.equal(optin.events().filter(x=>x[0]==='track').length,1);
-for(const extra of [{requestForm:true},{selectorFailure:true}]){const s=scenario({host:'mrsewingfashion.com',pathname:'/future-enquiry/',choice:'accepted',...extra});assert.equal(s.events().length,0);assert.equal(s.external().length,0);}
-const searchPage=scenario({host:'mrsewingfashion.com',pathname:'/faq/',choice:'accepted'});assert.equal(searchPage.events().filter(x=>x[0]==='track').length,1);
-const disabled=scenario({host:'mrsewingfashion.com',enabled:false,choice:'accepted'});assert.equal(disabled.events().length,0);assert.equal(disabled.external().length,0);
-const loader=fs.readFileSync(path.join(root,'_templates/customer-interactions.js'),'utf8');assert(loader.includes('__mrSewingMetaPixelLoader'));assert(source.includes('getChoice() !== "accepted"'));
-console.log('PASS Meta synthetic consent/host/query/request-path isolation; staging/demo sends zero events; production PageView only after opt-in, one initialization; no real network or conversion events. Actual Meta receipt/account diagnostics NOT TESTED.');
+/* Compatibility entry point: current unified consent and existing-dataset tests. */
+require('./tracking_privacy.cjs');
+require('./meta_event_adapter.cjs');

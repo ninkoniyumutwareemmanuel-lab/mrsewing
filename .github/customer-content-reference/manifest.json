@@ -1,27 +1,29 @@
 {
-  "currentVersion": "2026-11-26-02",
-  "implementationBaseline": "7808a5a1d96389a40b925b87f4172974ba41704f",
+  "currentVersion": "2026-11-27-01",
+  "implementationBaseline": "869b909a72299433be86166a3a5c060b7f30fa80",
   "ownerApprovalDate": "2026-11-13",
-  "implementationResumedDate": "2026-11-18",
+  "implementationResumedDate": "2026-11-27",
   "sourceCoverage": "INCOMPLETE: original named company Sources unavailable",
   "customerPolicyPublication": "Staging only; preserve latest approved scope-specific facts; new Flexible Advance Payment proposal inactive; no official PDF activation or production release",
   "files": {
     "CUSTOMER_EXPERIENCE_OWNER_DIRECTIVE_2026-11-26.md": "9a18e8609f211161e9e263a72a2d1e452182ce97cd5464241f12f4926aba1c3f",
     "FINAL_RELEASE_PREPARATION_OWNER_DIRECTIVE_2026-11-26.md": "40cb1625d1f6f0dabef8928f63343779f7e13c3911fe192dc176c2ddfc58d58b",
-    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "5f54e740918ab1bbee60c743e58c47995c814e7cdbdd4a75c41e353b3c7c42ee",
-    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "4c50c81bbc5990b4492e0ba13dfbe57f02ab048e0c3e6621d83f09c78f998c82",
-    "MR_SEWING_PAGE_CONTENT_MAP.md": "08f4a989099deb9fd318af9ffcb43e050370902f479e4fed076ac07689b97051",
-    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "202f1987a5e5582a4e902a622cadc517492aa33c1520f73c6ea00790ada29ece",
-    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "5ab481dd1d8c5a67ba7308d082a6d6fc74f44eb7fc4cca30b54b06fe8fe30e84"
+    "MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md": "c0727d8606a779c0bd9cfc8069e073f31cf231f33187a04ba68217536058bac7",
+    "MR_SEWING_CUSTOMER_INFORMATION_MASTER.md": "2aa98f01e6a05e7afa6bd27ca5ab30cf2e37e6c6330006611ed7751aa256c032",
+    "MR_SEWING_PAGE_CONTENT_MAP.md": "49ac4f393c67f34529ae8455545d7941e042a05af0c4cce3bf8cffe78e5079eb",
+    "MR_SEWING_POLICY_SOURCE_MATRIX.md": "a766448351620a896e8f829d3c3effdae4abe989bb40c76a1f7f9a94f80d4009",
+    "MR_SEWING_UNRESOLVED_POLICY_REGISTER.md": "eae9921183076a40fcb0ddaab3cea77c8062944118bfe9eaf00824f5e6ab2a70",
+    "TRACKING_RELEASE_OWNER_DIRECTIVE_2026-11-26.md": "b0e7b2bbf8fade6309980c6ee3e1ff343df26c6e10aff91ba995e5149fc46b3e"
   },
   "ownerPublicationInstructionDate": "2026-11-18",
-  "previousPolicyReferenceVersion": "2026-11-26-01",
+  "previousPolicyReferenceVersion": "2026-11-26-02",
   "ownerDesignDecisionDate": "2026-11-26",
-  "stagingOnlyScope": "Targeted final release preparation: temporary Shop navigation/public projection hold; Ads sitelinks, essential enquiry and measurement preparation; preserve reviewed hero/current Terms; Main protected",
-  "designAddendumFile": "versions/2026-11-26-02/FINAL_RELEASE_PREPARATION_OWNER_DIRECTIVE_2026-11-26.md",
+  "stagingOnlyScope": "Implement and verify on staging; conditional Main release only after mandatory actual website/provider/hosting gates. Advertising accounts/spend unchanged.",
+  "designAddendumFile": "versions/2026-11-27-01/TRACKING_RELEASE_OWNER_DIRECTIVE_2026-11-26.md",
   "policySourceFilesCarriedForwardUnmodified": false,
   "ownerRecoveryInstructionDate": "2026-11-25",
-  "implementationStatus": "Targeted sources and generation complete; local27checks and11browser suites passed, final artifact/current commit/CI/provider evidence recorded separately. No Main/production or external tracking activation.",
+  "implementationStatus": "Website tracking implemented and locally tested; GTM account publication, platform receipt and mandatory actual origin/provider/hosting gates remain unverified",
   "ownerAssignmentDate": "2026-11-26",
-  "ownerFinalReleasePreparationInstructionDate": "2026-11-26"
+  "ownerFinalReleasePreparationInstructionDate": "2026-11-26",
+  "ownerTrackingReleaseInstructionDate": "2026-11-26"
 }

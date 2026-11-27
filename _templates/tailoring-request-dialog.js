@@ -64,6 +64,7 @@
    const section=parts[quoteStep];
    const invalid=[...section.querySelectorAll('input,select,textarea')].find(input=>!input.disabled&&!input.checkValidity());if(invalid){invalid.reportValidity();return;}
    if(section.dataset.quotationSection==='deadline'){const assessment=win.MrCustomQuotation?.deadlineAssessment();if(assessment&&!assessment.valid){doc.getElementById('requestCompletionTime').setCustomValidity('Choose a valid completion deadline in the future.');doc.getElementById('requestCompletionTime').reportValidity();return;}}
+   win.MrEnquiryMeasurement?.support(form,'request_step_completed',quoteStep+1);
    quoteStep=Math.min(parts.length-1,quoteStep+1);showQuote(doc);
   });
   // The original validator still checks the complete form. Reveal the section

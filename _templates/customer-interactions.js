@@ -13,22 +13,7 @@ document.addEventListener('click',e=>{
 },true);
 })();
 
-/* Optional Meta Pixel integration. Owner authorised placement on main.
-   The owner-approved production flag and visitor consent system remain unchanged. */
-(function () {
-  "use strict";
-  var config = /*meta-pixel-config*/null;
-  if (!config || !config.productionEnabled || config.status !== "owner-approved-production") return;
-  if (window.__mrSewingMetaPixelLoader) return;
-  window.__mrSewingMetaPixelLoader = true;
-  var tag = document.createElement("script");
-  tag.src = "/assets/meta-pixel.js?v=privacy-20261126";
-  tag.async = true;
-  tag.setAttribute("data-mr-meta-pixel", "");
-  tag.dataset.pixelId = String(config.pixelId);
-  tag.dataset.productionEnabled = "true";
-  document.head.appendChild(tag);
-})();
+/* Unified customer-tracking.js now owns optional Google/Meta consent and loading. */
 
 /* Until activation, consent links use the currently effective HTML Terms. */
 (()=>{'use strict';const fix=()=>document.querySelectorAll('form a[href="/terms-and-conditions/"],[data-terms-consent] a[href="/terms-and-conditions/"]').forEach(a=>{a.href='/terms-and-conditions/current/';});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix();})();

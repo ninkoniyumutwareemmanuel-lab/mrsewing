@@ -168,3 +168,7 @@ Created2026-11-26-01by preserving each prior five-document snapshot verbatim as 
 
 ## 2026-11-26-02 — targeted final release preparation
 Preserved previous snapshots as exact prefixes. Recorded temporary Shop navigation/public-projection hold, six exact Google Ads sitelink routes, essential release/manual checks and honest first-party enquiry versus conversion/receipt distinctions. Current contract, prices, reviewed hero/services and pending proposals unchanged. Main/production remain protected; no invented Google destination or vendor activation. Updated pointer/manifest/source matrix/unresolved/page map together.
+
+
+##2026-11-27-01 — owner26Nov finaltracking/conditionalrelease
+Preservepriorprefixes;recordexactGoogleIDs,supportedminimaltracking,freshconsent,privacy/attribution,existingMeta/noinventedCAPI andconditionalMaingates. No commercialpolicy/PDF/Shopactivation/spend change. Account/origin/isolatedreceipt remains separate evidence.

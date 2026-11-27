@@ -427,6 +427,7 @@
             result.error ||
               "We could not confirm your request. Your entries are preserved; please review and retry.",
           );
+        window.MrEnquiryMeasurement?.productAccepted(form,kind);
         fields.hidden = true;
         review.hidden = true;
         success.replaceChildren();

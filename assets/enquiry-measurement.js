@@ -32,5 +32,16 @@
   const eventId=id();if(!eventId)return false;
   return emit('mrsewing:whatsapp-click',{eventId,interaction:'whatsapp_contact_click'});
  }
- window.MrEnquiryMeasurement=Object.freeze({providerAccepted,whatsappClick,externalTracking:false});
+ function support(form,eventName,step){
+  if(!form||form.id!=='customerRequestForm'||!kinds.has(form.dataset?.kind)||
+    !['request_step_completed','request_submission_failed'].includes(eventName))return false;
+  const eventId=id();if(!eventId)return false;
+  return emit('mrsewing:measurement-input',{eventName,eventId,...(Number.isInteger(step)&&step>=1&&step<=6?{step}:{})});
+ }
+ function productAccepted(form,kind){
+  if(!form?.matches?.('form[data-commerce-form]')||!['quote','purchase'].includes(kind)||forms.has(form))return false;
+  const eventId=id();if(!eventId)return false;forms.set(form,eventId);
+  return emit('mrsewing:enquiry-accepted',{eventId,kind:'product',service:'shop',outcome:'provider_accepted'});
+ }
+ window.MrEnquiryMeasurement=Object.freeze({providerAccepted,whatsappClick,support,productAccepted,externalTracking:false});
 })();

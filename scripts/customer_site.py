@@ -211,6 +211,15 @@ def outputs():
  out[ROOT/'assets/customer-interactions.js']=(ROOT/'_templates/customer-interactions.js').read_text().replace('/*meta-pixel-config*/null',json.dumps(json.loads((ROOT/'_data/meta-pixel.json').read_text()),separators=(',',':')))
  out[ROOT/'assets/customer-interactions.css']=(ROOT/'_templates/customer-interactions.css').read_text()
  out[ROOT/'assets/enquiry-measurement.js']=(ROOT/'_templates/enquiry-measurement.js').read_text()
+ tracking=json.loads((ROOT/'_data/advertising-measurement.json').read_text())
+ public_tracking={k:tracking[k] for k in ['externalEventsEnabled','attribution','contact','publicReferrerPaths']}
+ public_tracking['gtm']={k:tracking['gtm'][k] for k in ['containerId','productionEnabled']}
+ public_tracking['googleAds']={'enabled':tracking['googleAds']['enabled']}
+ public_tracking['conversions']=[{k:c[k] for k in ['event','enabled']} for c in tracking['conversions']]
+ out[ROOT/'assets/customer-tracking.js']=(ROOT/'_templates/customer-tracking.js').read_text().replace('/*customer-tracking-config*/null',json.dumps(public_tracking,separators=(',',':')))
+ out[ROOT/'assets/customer-tracking.css']=(ROOT/'_templates/customer-tracking.css').read_text()
+ meta_source=json.loads((ROOT/'_data/meta-pixel.json').read_text())
+ out[ROOT/'assets/meta-event-adapter.js']=(ROOT/'_templates/meta-event-adapter.js').read_text().replace('/*meta-event-config*/null',json.dumps({k:meta_source[k] for k in ['productionEnabled','pixelId']},separators=(',',':')))
  out[ROOT/'assets/consultation.js']=(ROOT/'_templates/consultation.js').read_text()
  out[ROOT/'assets/request-storage.js']=(ROOT/'_templates/request-storage.js').read_text()
  out[ROOT/'assets/selected-design.js']=(ROOT/'_templates/selected-design.js').read_text()

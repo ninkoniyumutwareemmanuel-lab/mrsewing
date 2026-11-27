@@ -92,9 +92,10 @@ def finalize(source,path):
     source=source.replace('</head>','<meta name="robots" content="'+robots+'">'+STAGING+'</head>',1)
     from whatsapp_consent import protect
     source=protect(source)
-    source=re.sub(r'<script src="/assets/customer-interactions.js" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
+    source=re.sub(r'<script src="/assets/customer-interactions[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
     source=re.sub(r'<script src="/assets/enquiry-measurement[.]js(?:\?[^"]*)?" defer></script>','',source)
-    source=source.replace('</head>','<script src="/assets/enquiry-measurement.js?v=release-20261126" defer></script><link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
+    source=re.sub(r'<script src="/assets/(?:customer-tracking|meta-event-adapter)[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/customer-tracking[.]css(?:\?[^"]*)?">','',source)
+    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-tracking.css?v=20261127"><script src="/assets/meta-event-adapter.js?v=20261127" defer></script><script src="/assets/customer-tracking.js?v=20261127" defer></script><script src="/assets/enquiry-measurement.js?v=release-20261126" defer></script><link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js?v=tracking-20261127" defer></script></head>',1)
     # GitHub Pages serves legacy .html files without interpreting Cloudflare _redirects.
     # An instant HTML refresh is a crawler-readable canonical redirect fallback;
     # existing data-legacy-url JavaScript still preserves query strings and hashes.
