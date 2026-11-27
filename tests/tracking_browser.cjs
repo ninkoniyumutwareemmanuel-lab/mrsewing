@@ -18,7 +18,7 @@ const result={scope:'Actual browser with local pages under synthetic official ho
  const page=await ctx.newPage();page.on('pageerror',e=>result.errors.push(e.message));
  await page.goto('https://mrsewingfashion.com/',{waitUntil:'load'});assert.equal(vendor.length,0);
  await page.getByRole('button',{name:'Reject',exact:true}).click();assert.equal(vendor.length,0);result.checks.push({name:'fresh consent rejects without SDK and essential page remains',status:'PASS'});
- await page.getByRole('button',{name:'Cookie preferences',exact:true}).click();await page.getByRole('button',{name:'Allow Measurement',exact:true}).click();await page.waitForFunction(()=>__gtmStubLoaded&&__metaStubLoaded);
+ await page.getByRole('button',{name:'Cookie preferences',exact:true}).click();await page.getByRole('button',{name:'Accept',exact:true}).click();await page.waitForFunction(()=>__gtmStubLoaded&&__metaStubLoaded);
  assert.equal(vendor.filter(x=>x.kind==='google').length,1);assert.equal(vendor.filter(x=>x.kind==='meta').length,1);
  assert(vendor.some(x=>x.url.includes('GTM-WHR49M4D')));await page.screenshot({path:path.join(OUT,'consented-home-390.png')});
  await page.evaluate(()=>{document.addEventListener('click',e=>{if(e.target.closest('a[href^="tel:"],a[href*="maps.app.goo.gl"]'))e.preventDefault();});});

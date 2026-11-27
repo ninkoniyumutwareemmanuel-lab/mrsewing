@@ -167,11 +167,11 @@
  }
  function openPreferences(){
   close();banner=document.createElement('section');banner.className='mr-tracking-consent';banner.setAttribute('role','region');banner.setAttribute('aria-label','Advertising cookie preferences');
-  const title=document.createElement('h2');title.textContent='Your Privacy Choices';
-  const p=document.createElement('p');p.textContent='Allow optional Google and Meta advertising measurement? Your choice does not affect our services. ';
+  const title=document.createElement('h2');title.textContent='We use cookies';
+  const p=document.createElement('p');p.textContent='Optional cookies help us measure our advertising. ';
   const link=document.createElement('a');link.href='/privacy-policy/';link.textContent='Privacy Policy';p.append(link);
   const controls=document.createElement('div');controls.className='mr-tracking-controls';
-  for(const[label,value]of[['Reject','declined'],['Allow Measurement','accepted']]){
+  for(const[label,value]of[['Reject','declined'],['Accept','accepted']]){
    const button=document.createElement('button');button.type='button';button.textContent=label;button.addEventListener('click',()=>choose(value));controls.append(button);
   }
   banner.append(title,p,controls);document.body.append(banner);

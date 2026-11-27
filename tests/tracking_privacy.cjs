@@ -29,8 +29,8 @@ for(const host of['mrsewing-staging.pages.dev','test.mrsewing-staging.pages.dev'
  const s=scenario({host,choice:'accepted'});assert.equal(s.head.children.filter(x=>x.src).length,0);assert.equal(s.events().length,0);assert.equal(s.meta.length,0);for(const c of s.window.dataLayer.filter(x=>x[0]==='consent'))assert.equal(c[2].ad_storage,'denied');
 }
 for(const choice of[null,'declined']){const s=scenario({choice});assert.equal(s.head.children.filter(x=>x.src).length,0);assert.equal(s.events().length,0);}
-const old=scenario({oldChoice:'accepted'});assert.equal(old.head.children.filter(x=>x.src).length,0);assert(old.nodes.some(n=>n.textContent==='Allow Measurement'));
-const opted=scenario();opted.choose('Allow Measurement');assert.equal(opted.head.children.filter(x=>x.src).length,1);assert.equal(opted.head.children.find(x=>x.src).src,'https://www.googletagmanager.com/gtm.js?id=GTM-WHR49M4D');
+const old=scenario({oldChoice:'accepted'});assert.equal(old.head.children.filter(x=>x.src).length,0);assert(old.nodes.some(n=>n.textContent==='Accept'));
+const opted=scenario();opted.choose('Accept');assert.equal(opted.head.children.filter(x=>x.src).length,1);assert.equal(opted.head.children.find(x=>x.src).src,'https://www.googletagmanager.com/gtm.js?id=GTM-WHR49M4D');
 const commands=opted.window.dataLayer.filter(x=>!x.event).map(x=>Array.from(x));assert.equal(commands[0][0],'consent');assert.equal(commands[0][1],'default');for(const v of Object.values(commands[0][2]))assert.equal(v,'denied');
 const update=commands.find(x=>x[1]==='update');assert.equal(update[2].ad_storage,'granted');assert.equal(update[2].ad_user_data,'granted');assert.equal(update[2].ad_personalization,'denied');assert.equal(update[2].analytics_storage,'denied');
 assert.equal(opted.events().filter(x=>x.event==='page_view').length,1);
