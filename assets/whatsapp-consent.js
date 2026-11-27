@@ -12,10 +12,24 @@
  document.addEventListener('click',e=>{
    const a=e.target.closest?.('a[href]');if(!a||a.getAttribute('aria-disabled')==='true')return;
    const url=destination(a.href);if(!url)return;
-   window.MrEnquiryMeasurement?.whatsappClick(e);
    e.preventDefault();e.stopImmediatePropagation();
-   if(e.ctrlKey||e.metaKey||e.shiftKey||a.target==='_blank')window.open(url,'_blank','noopener');
-   else location.assign(url);
+   if(e.ctrlKey||e.metaKey||e.shiftKey||a.target==='_blank'){
+     window.MrEnquiryMeasurement?.whatsappClick(e);
+     window.open(url,'_blank','noopener');
+     return;
+   }
+   // Preserve same-tab handoff; wait briefly only for consented, eligible Google measurement.
+   // An independent fallback keeps WhatsApp usable if GTM is slow, blocked or unavailable.
+   const measurement=window.MrEnquiryMeasurement;
+   if(!measurement||!window.MrCustomerTracking?.canTrack('google')){
+     measurement?.whatsappClick(e);
+     location.assign(url);
+     return;
+   }
+   let done=false,timer;
+   const navigate=()=>{if(done)return;done=true;clearTimeout(timer);location.assign(url);};
+   timer=setTimeout(navigate,500);
+   try{if(!measurement.whatsappClick(e,navigate))navigate();}catch(_){navigate();}
  },true);
  if(location.pathname.replace(/\/+$/,'')==='/whatsapp'){const url=destination(location.href);if(url)location.replace(url);}
 })();

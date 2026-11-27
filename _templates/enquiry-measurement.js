@@ -24,13 +24,13 @@
   forms.set(form,eventId);
   return emit('mrsewing:enquiry-accepted',{eventId,kind,service,outcome:'provider_accepted'});
  }
- function whatsappClick(event){
+ function whatsappClick(event,onGoogleComplete){
   if(event&&typeof event==='object'){
    if(clicks.has(event))return false;
    clicks.add(event);
   }
   const eventId=id();if(!eventId)return false;
-  return emit('mrsewing:whatsapp-click',{eventId,interaction:'whatsapp_contact_click'});
+  return emit('mrsewing:whatsapp-click',{eventId,interaction:'whatsapp_contact_click',...(typeof onGoogleComplete==='function'?{onGoogleComplete}:{})});
  }
  function support(form,eventName,step){
   if(!form||form.id!=='customerRequestForm'||!kinds.has(form.dataset?.kind)||

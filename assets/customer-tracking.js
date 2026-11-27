@@ -32,11 +32,13 @@
      /^\/services\/(?:custom-tailoring\/(?:special-order|standard-order|design-choice)|vip\/subscription)(?:\/|$)/.test(route))return true;
   try{return !!document.querySelector('#customerRequestForm,#submissionForm,#bookingForm,form[data-commerce-form],form[data-shop-whatsapp-form],form[data-request-form],form[data-quotation-form]');}catch{return true;}
  }
+ // Only a bounded, non-personal Tag Assistant marker is eligible for Google debugging.
+ function googleDebugMarker(k,v,vendor){return vendor==='google'&&k==='gtm_debug'&&(v==='x'||/^\d{13}$/.test(v));}
  function safeURL(raw,vendor){
   try{
    const u=new URL(raw,location.href);if(u.hash)return false;
    const keys=vendor==='google'?new Set(['gclid','gbraid','wbraid']):new Set(['fbclid']);
-   for(const[k,v]of u.searchParams){if(k==='gender'&&['men','women','all'].includes(v))continue;if(!keys.has(k)||!campaignValue(k,v))return false;}
+   for(const[k,v]of u.searchParams){if(k==='gender'&&['men','women','all'].includes(v))continue;if(googleDebugMarker(k,v,vendor)&&u.searchParams.getAll(k).length===1)continue;if(!keys.has(k)||!campaignValue(k,v))return false;}
    return true;
   }catch{return false;}
  }
@@ -45,7 +47,7 @@
   // SDKs can read referrers independently; never rely only on custom URL fields.
   if(document.referrer){
    try{const r=new URL(document.referrer);if(r.hash)return false;
-    if(r.origin===location.origin){if(!config.publicReferrerPaths.includes(r.pathname))return false;for(const[k,v]of r.searchParams)if(k!=='gender'||!['men','women','all'].includes(v))return false;}
+    if(r.origin===location.origin){if(!config.publicReferrerPaths.includes(r.pathname))return false;for(const[k,v]of r.searchParams)if((k!=='gender'||!['men','women','all'].includes(v))&&!(googleDebugMarker(k,v,vendor)&&r.searchParams.getAll(k).length===1))return false;}
     else if(r.pathname!=='/'||r.search)return false;
    }catch{return false;}
   }
@@ -86,11 +88,12 @@
   if(Number.isInteger(raw.step)&&raw.step>=1&&raw.step<=6)value.step=raw.step;
   return value;
  }
- function deliver(value){
+ function deliver(value,onGoogleComplete){
   const key=value.eventName+':'+value.eventId;let sent=false;
   if(config.gtm.productionEnabled&&config.googleAds.enabled&&canTrack('google')&&!sentGoogle.has(key)){
    startGoogle();sentGoogle.add(key);
    window.dataLayer.push({event:value.eventName,event_id:value.eventId,mr_measurement_allowed:true,mr_consent_google:true,
+    ...(value.eventName==='whatsapp_contact_click'&&typeof onGoogleComplete==='function'?{eventCallback:onGoogleComplete,eventTimeout:500}:{}),
     ...(value.service?{service:value.service}:{}),...(value.kind?{request_kind:value.kind}:{}),
     ...(value.fabricPreference?{fabric_preference:value.fabricPreference}:{}),...(value.step?{request_step:value.step}:{})});
    sent=true;
@@ -110,10 +113,10 @@
   }
   if(remaining.length)store(sessionStore,pendingKey,remaining.slice(-30));
  }
- function signal(raw){
+ function signal(raw,onGoogleComplete){
   const value=minimal(raw);if(!value||!consentGranted()||!official()||!topLevel)return false;
   const key=value.eventName+':'+value.eventId;if(received.has(key))return false;received.add(key);
-  if(!deliver(value)&&['quote_request_success','lead_form_success','whatsapp_contact_click','website_call_click','directions_click'].includes(value.eventName)){
+  if(!deliver(value,onGoogleComplete)&&['quote_request_success','lead_form_success','whatsapp_contact_click','website_call_click','directions_click'].includes(value.eventName)){
    const old=read(sessionStore,pendingKey),queue=Array.isArray(old)?old.filter(x=>x&&x.time<=Date.now()&&Date.now()-x.time<pendingTtl):[];
    queue.push({time:Date.now(),value});store(sessionStore,pendingKey,queue.slice(-30));
   }
@@ -143,7 +146,7 @@
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',localSignals,{once:true});else localSignals();
  if(!topLevel)return; // Embedded enquiry documents never load vendor tags or their own banner.
  window.addEventListener('mrsewing:measurement-input',e=>signal(e.detail));
- window.addEventListener('mrsewing:whatsapp-click',e=>signal({eventName:'whatsapp_contact_click',eventId:e.detail?.eventId}));
+ window.addEventListener('mrsewing:whatsapp-click',e=>signal({eventName:'whatsapp_contact_click',eventId:e.detail?.eventId},e.detail?.onGoogleComplete));
  window.addEventListener('mrsewing:enquiry-accepted',e=>{
   const d=e.detail;if(d?.outcome!=='provider_accepted'||!['quotation','consultation','product'].includes(d.kind)||!allowedServices.has(d.service))return;
   signal({eventName:d.kind==='quotation'&&d.service==='custom-tailoring'?'quote_request_success':'lead_form_success',eventId:d.eventId,service:d.service,kind:d.kind});
