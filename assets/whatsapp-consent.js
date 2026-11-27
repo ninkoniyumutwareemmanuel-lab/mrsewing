@@ -12,6 +12,7 @@
  document.addEventListener('click',e=>{
    const a=e.target.closest?.('a[href]');if(!a||a.getAttribute('aria-disabled')==='true')return;
    const url=destination(a.href);if(!url)return;
+   window.MrEnquiryMeasurement?.whatsappClick(e);
    e.preventDefault();e.stopImmediatePropagation();
    if(e.ctrlKey||e.metaKey||e.shiftKey||a.target==='_blank')window.open(url,'_blank','noopener');
    else location.assign(url);

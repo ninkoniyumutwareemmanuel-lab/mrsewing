@@ -5,9 +5,11 @@ R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
 from site_seo import DOMAIN,INDEXABLE_ROUTES
 from build_public_routes import public_routes,candidates
 urls=[x.text for x in E.parse(R/'sitemap.xml').findall('.//{*}loc')]
-assert len(urls)==len(set(urls))==64
+assert len(urls)==len(set(urls))==len(INDEXABLE_ROUTES)
 assert set(urls)=={DOMAIN+r for r in public_routes()}
 assert INDEXABLE_ROUTES.issubset(set(candidates()))
+from shop_release_hold import public_indexing
+if not public_indexing():assert not any('/shop/' in url for url in urls),'Temporarily held Shop routes must stay out of the public sitemap'
 assert 'Sitemap: '+DOMAIN+'/sitemap.xml' in (R/'robots.txt').read_text()
 for u in urls:
  assert u.startswith(DOMAIN+'/') and '.pages.dev' not in u
@@ -17,4 +19,4 @@ for u in urls:
 for p in ['request/index.html','staff/customer-requests/index.html','shop/sky-blue-elegance-suit/index.html']:
  assert 'name="robots" content="noindex' in (R/p).read_text()
 assert 'X-Robots-Tag: noindex, nofollow, noarchive' in (R/'_headers').read_text()
-print('PASS64uniqueXML/canonical/indexableURLs;allapprovedroutesdiscovered;productionrobots;private/request/draftproducts excluded;stagingnoindex')
+print(f'PASS{len(urls)}uniqueXML/canonical/indexableURLs;allapprovedroutesdiscovered;productionrobots;private/request/heldShop excluded;stagingnoindex')

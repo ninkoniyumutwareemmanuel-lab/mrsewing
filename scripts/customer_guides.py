@@ -9,18 +9,29 @@ def photos():return json.loads((ROOT/'_data/customer-guide-images.json').read_te
 def image(key,sizes='(min-width: 1000px) 360px, (min-width: 600px) 45vw, 100vw'):
  d=photos()[key];variants=d['variants']+[{'src':d['src'],'width':d['width']}];src=variants[0]['src']
  return '<img src="'+quote(src,safe='/')+'" data-original="'+quote(d['src'],safe='/')+'" srcset="'+', '.join(quote(v['src'],safe='/')+' '+str(v['width'])+'w' for v in variants)+'" sizes="'+sizes+'" width="'+str(d['width'])+'" height="'+str(d['height'])+'" alt="'+escape(d['alt'],quote=True)+'" loading="lazy" decoding="async">'
-def cards(category,selectable=False):
+def cards(category,selectable=False,show_images=True):
  out='<div class="fabric-grid">'
  for f in [f for f in fabrics() if f['category']==category]:
   ident='fabric-'+f['id'];out+='<article class="fabric-card" data-fabric-id="'+f['id']+'">'
   if selectable:out+='<label for="'+ident+'" class="fabric-selection-label"><input type="radio" id="'+ident+'" name="fabricRef" value="'+f['id']+'"> Select '+escape(f['name'])+'</label>'
-  out+=image(f['image'])+'<div class="fabric-card-copy"><p class="fabric-tier">Tier '+str(f['tier'])+' / Quality '+str(f['tier'])+'</p><h3>'+escape(f['name'])+'</h3><p class="fabric-card-description">'+escape(f['description'])+'</p>'
+  out+=(image(f['image']) if show_images else '')+'<div class="fabric-card-copy"><p class="fabric-tier">Tier '+str(f['tier'])+' / Quality '+str(f['tier'])+'</p><h3>'+escape(f['name'])+'</h3><p class="fabric-card-description">'+escape(f['description'])+'</p>'
   out+='<details class="fabric-details"><summary>View Fabric Details</summary><dl><dt>Reference collection</dt><dd>'+('Men’s suits' if category=='men' else 'Women’s suits')+'</dd><dt>Specifications and care</dt><dd>'+escape(f['specificationNote'])+'</dd>'
   if f.get('generalBackground'):out+='<dt>General textile background</dt><dd>'+escape(f['generalBackground'])+'</dd><dd class="fabric-reference-scope">This does not verify the composition of this fabric reference.</dd>'
   out+='</dl></details></div></article>'
  return out+'</div>'
+def legacy_fabric_guide():
+ return '<section class="guide-collection" aria-labelledby="fabric-references-title"><h2 id="fabric-references-title">Compare Fabric References</h2><p>Compare fabric names and descriptions to find a suitable tailoring option.</p><p class="guide-notice">Exact material, suitability, colours and availability are confirmed with our team.</p><h2>Suit fabric references</h2>'+cards('men',show_images=False)+'<h2>Additional suit fabric references</h2>'+cards('women',show_images=False)+'</section>'
+
 def fabric_guide():
- return '<section class="guide-collection" aria-labelledby="fabric-references-title"><h2 id="fabric-references-title">Compare Fabric References</h2><p>Explore the fabric photographs, reference names and assigned Tier / Quality in each collection.</p><p class="guide-notice">These are reference labels. Exact material, suitability, colours and availability require confirmation; photographs may differ from actual fabric shades.</p><h2>Men’s suit fabrics</h2>'+cards('men')+'<h2>Women’s suit fabrics</h2>'+cards('women')+'</section>'
+ return (ROOT/'_templates/fabric-showroom-home.html').read_text().replace('/assets/fabric-showroom.js','/assets/fabric-showroom.js?v=recovery-20261125')
+
+def request_fabrics():
+ from fabric_collections import fabrics as collections
+ return {**{f['id']:f for f in fabrics()},**collections()}
+
+def showroom_routes():
+ return ["super","americano","wool","star","polyester","cotton","linen"]
+
 def measurements():
  d=json.loads((ROOT/'_data/measurement-guide-images.json').read_text());out='<section class="guide-collection" aria-labelledby="measurement-photos-title"><h2 id="measurement-photos-title">Measurement Illustrations</h2><p class="guide-notice">Use these pictures to identify measurement areas. Illustrated tape numbers are not your measurements or a calibrated scale. Follow the instructions confirmed for your garment and ask for assistance if the starting point, path or endpoint is unclear.</p><div class="measurement-photo-grid">'
  for m in d['measurements']:out+='<figure class="measurement-photo" id="measure-'+m['id']+'">'+'<a class="measurement-enlarge" data-enlarge href="'+quote(photos()[m['image']]['src'],safe='/')+'" aria-label="Enlarge '+escape(m['title'])+' measurement illustration">'+image(m['image'])+'</a><figcaption><h3>'+escape(m['title'])+'</h3><p>'+escape(m['caption'])+'</p></figcaption></figure>'

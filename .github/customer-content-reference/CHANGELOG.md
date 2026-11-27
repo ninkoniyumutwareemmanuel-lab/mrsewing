@@ -150,3 +150,25 @@ Owner approval13November2026, implementation resumed18November2026. Preserve pri
 ## 2026-11-18-02 — R50 owner-directed reviewed release publication
 
 Recorded the owner's latest direct main/live publication instruction after the report disclosed managed-proxy inability to render staging/live. The approved e495100 R35–R49 candidate and completed local/provider evidence remain the release scope. This supersedes the earlier publication hold for this specific release without claiming rendered checks passed, waiving all tests, bypassing branch protections or approving unfinished/private/payment features. No business policy, product, page, form, SEO or deployment setting changed in this documentation update. Previous five snapshots preserved verbatim as prefixes, current pointer/hash manifest synchronized. Actual main/deployment/live-verification evidence remains the release executor's responsibility.
+
+## 2026-11-22-01 — R59 tailoring-first customer experience, staging only
+
+Owner's 22 November 2026 final customer-experience redesign authorizes homepage, custom-tailoring hub, two eligible clothing-category cards, shared Showroom filtering, documented date-backed ordering, tailoring-oriented Shop discovery and the visible Backorder label. Keep the original policy references and earlier version history byte-identical; this is a design/journey addendum, **not** approval of new prices, rates, media rights, Shop sale stock, video posters or PDF Terms legal activation. Terms reader was previously approved and merged as a separate release; R59 does not change its content. Rights-held R53 photographs/videos are registered but not activated. The present staging release is isolated from main; check the R59 brief for exact routes, tests and release status. Source authority: owner prompt and explicit staging-only final instruction, 22 November 2026.
+
+##25November2026—website recovery
+Newdatedreference2026-11-25-01preserves precedingfilesandaddslatestownerrecovery/scope/evidenceboundaries. Implementation/deploymentoutcomesremaininprogresspendingactualchecks; noMainorofficialsiteauthority. See masterregister.
+
+## 26 November 2026 — technical CI follow-up
+The resumed recovery identified and repaired a workspace-specific synthetic-test artifact path. Security assertions, application code and business approvals remain unchanged. See the master reconciliation register; remote CI and permanent-origin verification remain distinct checks.
+
+
+## 26 November 2026 — comprehensive customer-experience assignment
+Created2026-11-26-01by preserving each prior five-document snapshot verbatim as a prefix and appending the owner's latest staging-only audit/design/journey/service/SEO scope. Updated current pointer/hash manifest together. Approved existing Standard-only exceptional advance remains distinct from new inactive Flexible Advance Payment proposal; older25kconsultation is not restored over35k; historical service tariffs and fabric imagery require current publication/mapping evidence. Leadership/workmanship truthfulness, exact selection/payload/route compatibility, unchanged Main and actual deployment-verification limits are explicit. Source/brief updates do not claim implementation or test completion.
+
+
+## 2026-11-26-02 — targeted final release preparation
+Preserved previous snapshots as exact prefixes. Recorded temporary Shop navigation/public-projection hold, six exact Google Ads sitelink routes, essential release/manual checks and honest first-party enquiry versus conversion/receipt distinctions. Current contract, prices, reviewed hero/services and pending proposals unchanged. Main/production remain protected; no invented Google destination or vendor activation. Updated pointer/manifest/source matrix/unresolved/page map together.
+
+
+##2026-11-27-01 — owner26Nov finaltracking/conditionalrelease
+Preservepriorprefixes;recordexactGoogleIDs,supportedminimaltracking,freshconsent,privacy/attribution,existingMeta/noinventedCAPI andconditionalMaingates. No commercialpolicy/PDF/Shopactivation/spend change. Account/origin/isolatedreceipt remains separate evidence.

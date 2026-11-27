@@ -1,0 +1,49 @@
+{
+  "layer": "Local Chromium with actual selected-design validator and mocked providers",
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "scenarios": {
+    "ordinary120s": {
+      "status": "PASS"
+    },
+    "currentShowroomBrowsing": {
+      "status": "PASS"
+    },
+    "quotationHandoffAndBack": {
+      "status": "PASS"
+    },
+    "mixedTenSharing": {
+      "status": "PASS"
+    },
+    "mixedTenQuotationPayload": {
+      "status": "PASS"
+    },
+    "express24hRecovery": {
+      "status": "PASS"
+    },
+    "specialIndependentJourney": {
+      "status": "PASS"
+    },
+    "consultationBooking": {
+      "status": "PASS"
+    },
+    "refundReview": {
+      "status": "PASS"
+    },
+    "faqSearchAndAnchors": {
+      "status": "PASS"
+    }
+  },
+  "errors": [],
+  "missing": [],
+  "realMessages": false,
+  "realCalls": false,
+  "realSubmissions": false,
+  "providerCalls": 3,
+  "genericProviderCalls": 4,
+  "status": "PASS"
+}

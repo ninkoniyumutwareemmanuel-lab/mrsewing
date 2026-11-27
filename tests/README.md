@@ -482,3 +482,11 @@ slides, hidden-page suspension, reduced motion, five project viewers, nine navig
 Shop coming soon, About logo and preserved Collections media/registry/controllers.
 Artifacts default to `/workspace/artifacts/final-v2/`; browser tests send no
 messages. The existing 15 browser suites and 14 static checks remain relevant.
+
+##26November2026 current customer-experience checks
+
+Use the latest dated reference and source map. `tests/tailoring_request_dialog.cjs` exercises actual guided selection clicks, mixed designs, quantities, three sharedfabric paths, conditional requeststeps, consent, native Back, explicit Add/Change draft inheritance and realvalidators with mocked providers. Existing `recovery_journeys.cjs` and `recovery-fabric-browser.cjs` now explicitly cover preserved standalone/direct-route compatibility.
+
+Run current `customer_gallery_experience.py`, `service_landings.py`, `about_leadership.py`, `analytics_privacy.cjs`, `customer_navigation.spec.cjs`, `home_about_customer_experience.cjs`, `service_landings_browser.cjs`, `customer_gallery_browser.cjs` and `shop_customer_experience.cjs` in addition to the build/SEO/sitemap/recovery/backend checks. Browser tests accept REVIEW_BASE_URL/REVIEW_ARTIFACTS; use CHROMIUM_BINARY for installed systemChrome when appropriate. Block/mock all external messaging/provider traffic.
+
+Historical snapshot suites are not silently converted into passes: `selection_session_preservation.py` expects fabric implementationmarkers already absent from the starting b388 tree; the older `commerce.spec.mjs` expects an empty public storefront even though26owner-approved enquiry displays now exist, and older commercefixtures predate the current backend contract. Their attempted outcomes are recorded in the internal26Novreview package. Current Shop enquiryUI, fingerprint/stock/publication rejection and actual selected-request/provider security are tested separately; no real merchandise approval or sale is inferred.

@@ -37,6 +37,8 @@
   function value(label,text){const term=document.createElement('dt'),definition=document.createElement('dd');term.textContent=label;definition.textContent=text;values.append(term,definition);}
   if(details.choice==='now'){
    value('Selected Fabric',details.fabricName||details.label||'Selected fabric');
+   if(details.collectionName)value('Collection',details.collectionName);
+   if(details.patternName)value('Pattern & Texture',details.patternName);
    value('Preferred Colour',details.colourName?(details.colourName+(details.colourDescription?' — '+details.colourDescription:'')):'Not specified');
   }else value('Fabric Preference',details.label||(details.choice==='own'?'I Have My Own Fabric':'Help Me Choose Fabric'));
   section.append(values);

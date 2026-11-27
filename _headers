@@ -3,3 +3,9 @@ https://mrsewing-staging.pages.dev/*
   X-Robots-Tag: noindex, nofollow, noarchive
 https://:preview.mrsewing-staging.pages.dev/*
   X-Robots-Tag: noindex, nofollow, noarchive
+
+# Temporary Shop exclusion; public service pages remain unaffected.
+/shop
+  X-Robots-Tag: noindex, follow
+/shop/*
+  X-Robots-Tag: noindex, follow

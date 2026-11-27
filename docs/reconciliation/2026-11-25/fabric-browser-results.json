@@ -1,0 +1,43 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "status": "PASS",
+      "collections": 7,
+      "styles": 26,
+      "patterns": 17,
+      "colours": 50,
+      "mixedPhotosPreserved": true
+    },
+    {
+      "width": 390,
+      "status": "PASS",
+      "collections": 7,
+      "styles": 26,
+      "patterns": 17,
+      "colours": 50,
+      "mixedPhotosPreserved": true
+    },
+    {
+      "width": 768,
+      "status": "PASS",
+      "collections": 7,
+      "styles": 26,
+      "patterns": 17,
+      "colours": 50,
+      "mixedPhotosPreserved": true
+    },
+    {
+      "width": 1440,
+      "status": "PASS",
+      "collections": 7,
+      "styles": 26,
+      "patterns": 17,
+      "colours": 50,
+      "mixedPhotosPreserved": true
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "realSubmissions": false
+}

@@ -1,0 +1,3138 @@
+[
+  {
+    "id": "45615768626",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45615768626",
+    "title": "Verify owner-uploaded Terms v1.1 and generate staging reader after ex\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:38:54Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "0acf34d",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45615768625",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45615768625",
+    "title": "Verify owner-uploaded Terms v1.1 and generate staging reader after ex\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:38:54Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "0acf34d",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45614867995",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45614867995",
+    "title": "Preserve owner PDF upload separately and restore immutable v1.0 reade\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:33:18Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "a039e70",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/a039e70aefb9d3d88642a19031f4940767dc27e4",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45614516094",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45614516094",
+    "title": "Add files via upload",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:31:07Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "bc3c62c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/bc3c62cc9987775e22238e0ff7d63930177bea45",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45612781575",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45612781575",
+    "title": "Improve About Us: company identity, customer commitment and service n\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:20:18Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "f3b621c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/f3b621c71832bd7865bc392ba2e757e11d89ed69",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45612775024",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45612775024",
+    "title": "Improve About Us: company identity, customer commitment and service n\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:20:15Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3248e01",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3248e01ded37d7e48404c22d41f15e0800ac0065",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45612768591",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45612768591",
+    "title": "Improve About Us: company identity, customer commitment and service n\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T12:20:13Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "143fb01",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/143fb01934dc11feb38372497b856b54d157362d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45609513571",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45609513571",
+    "title": "Fix staging collection template path used by site generator",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T11:59:39Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "94064a1",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/94064a1e328645a969ad7f7ef13ca44e155381da",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45609513569",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45609513569",
+    "title": "Fix staging collection template path used by site generator",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T11:59:39Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "94064a1",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/94064a1e328645a969ad7f7ef13ca44e155381da",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45608729470",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45608729470",
+    "title": "Remove unused fabric illustration blocking staging asset validation",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T11:54:23Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3704938",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/37049381a41618b46506105ccb0ffa79098a7af4",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45607600195",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45607600195",
+    "title": "Stage approved v1.1 tailoring payment, refund and FAQ guidance",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-25T11:46:53Z",
+      "isToday": true,
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "55cef7c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/55cef7cc8db551bcf3fe1c2e75da29a99ba8f74f",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45349815622",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45349815622",
+    "title": "Make staging Fabric Guide text-first with descriptive fabric and patt\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-24T07:40:30Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "b4210fe",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/b4210fe2a0ae02fb77de25cc392b4ae008f15958",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45348580537",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45348580537",
+    "title": "Redesign staging Fabric Guide with premium and standard collection pages",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-24T07:30:57Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "291a156",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/291a15679a1a47a1dab77881fb7b4083c77203c2",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45348580504",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45348580504",
+    "title": "Redesign staging Fabric Guide with premium and standard collection pages",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-24T07:30:57Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "291a156",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/291a15679a1a47a1dab77881fb7b4083c77203c2",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45188676046",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45188676046",
+    "title": "R67 staging: document approved customer-guide page brief and release \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T13:55:04Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "68be838",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/68be83813f067336c935a3b5708817cf01ea4d2e",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45188450038",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45188450038",
+    "title": "R67 staging: show express surcharge directly in quick fact",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T13:53:42Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "72eb3cb",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/72eb3cbdb39c2945ba47b6b815e00f369f34538a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45188331304",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45188331304",
+    "title": "R67 staging: browser checks for policy facts, fabric links and respon\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T13:52:59Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "40b5dee",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/40b5dee862797cfb3d359cfd0f552018f31ab581",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45188272261",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45188272261",
+    "title": "R67 staging: accessible mobile layouts for tailoring guidance",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T13:52:37Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "95b7471",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/95b747139cae2fbd88e80e0f5d6688481a996add",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45188172081",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45188172081",
+    "title": "R67 staging: clear tailoring order facts, fabric guidance and service\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T13:52:01Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "4c827c0",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/4c827c046683db7602e12799a972b4fd9d4e14c6",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45133375289",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45133375289",
+    "title": "R66: record staging SEO repair evidence, blockers and release gates",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:45:07Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "6891ea2",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/6891ea24ae01d3198c39514291bb2a329c800294",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45133118941",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45133118941",
+    "title": "R66: require service crawlability regression at every staging build",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:43:00Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "c75bb1e",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/c75bb1ed3aa6bcb6b028b65673496ce4f46bfa50",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45133101816",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45133101816",
+    "title": "R66: protect canonical and discoverability of tailoring service pages",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:42:52Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "f8a85b0",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/f8a85b03d69a18bdc850b8f16766a44f045c69e8",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132935558",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132935558",
+    "title": "R66: enforce SEO legacy redirect guard in website build",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:41:26Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "0087e52",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/0087e5255027e543ce002ff9beb0b0565d233710",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132909053",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132909053",
+    "title": "R66: add legacy canonical redirect and staging noindex regression test",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:41:12Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "cab4e03",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/cab4e0351bfbd1d21fdbb2251befd7d3e0b0e950",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132818020",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132818020",
+    "title": "R66 staging: canonical redirect for legacy measurement-submission.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:27Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "74aba62",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/74aba628c6b79fd8a574d468db04bd94998b952a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132812541",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132812541",
+    "title": "R66 staging: canonical redirect for legacy booking-workplace.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:25Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "5bb90b9",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/5bb90b9102a0b18d5fa4344c5643a852110fb674",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132803531",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132803531",
+    "title": "R66 staging: canonical redirect for legacy booking-housecall.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:21Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "710c52b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/710c52b57dfc324e9cb634865a4d115e7d403caf",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132796907",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132796907",
+    "title": "R66 staging: canonical redirect for legacy booking-adjustment.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:18Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "2b6ddcf",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/2b6ddcfe591f87b46c9859be221681a8fc8c9b94",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132790400",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132790400",
+    "title": "R66 staging: canonical redirect for legacy booking.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:15Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "ade7060",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/ade7060f7fdbc4aa590b8cca7eb99ea42e0517af",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132781778",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132781778",
+    "title": "R66 staging: canonical redirect for legacy terms-and-conditions.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:11Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "86add6f",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/86add6f6435186e006ad226ccb968f369410f7a6",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132781761",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132781761",
+    "title": "R66 staging: canonical redirect for legacy terms-and-conditions.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:11Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "86add6f",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/86add6f6435186e006ad226ccb968f369410f7a6",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132773717",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132773717",
+    "title": "R66 staging: canonical redirect for legacy refund-policy.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:40:07Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "99f4336",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/99f43368e892d4bdda744e044baa5c02f081d002",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132747516",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132747516",
+    "title": "R66 staging: canonical redirect for legacy privacy-policy.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:55Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "821afd1",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/821afd11004d40a1ba00f3035c42242414be61c0",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132740802",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132740802",
+    "title": "R66 staging: canonical redirect for legacy reviews.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:51Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "43e6262",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/43e6262b52a759c3280ada561eae40a7a79cfdc6",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132733641",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132733641",
+    "title": "R66 staging: canonical redirect for legacy service-workplace.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:47Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "84b5c5d",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/84b5c5db211017cd33401acdf31438a68796ff35",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132727151",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132727151",
+    "title": "R66 staging: canonical redirect for legacy service-housecall.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:44Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "dff9c5f",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/dff9c5f53506a0ec4601cd3bc4b710b76828473a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132722371",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132722371",
+    "title": "R66 staging: canonical redirect for legacy service-sketches.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:41Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "9e6d950",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/9e6d9504b7d008b47d2ed559bfae465b4ccc6c42",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132715343",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132715343",
+    "title": "R66 staging: canonical redirect for legacy service-cmt.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:38Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "1bd0a1f",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/1bd0a1fe59558c17fab457e35090633c6e433e2d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132708663",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132708663",
+    "title": "R66 staging: canonical redirect for legacy service-standard.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:35Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "77af0c4",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/77af0c4d6015c9d3446d031149d92a58cdeea2d1",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132678060",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132678060",
+    "title": "R66 staging: canonical redirect for legacy service-express.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:19Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "02205c3",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/02205c3138a8301a5a2f5ec35828772b5a4fc803",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132669949",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132669949",
+    "title": "R66 staging: canonical redirect for legacy services.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:15Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "1f94a83",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/1f94a83931a823e5ec7fc7b8885a0c1409da0c1d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132664604",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132664604",
+    "title": "R66 staging: canonical redirect for legacy w-modernsuits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:12Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "421707b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/421707bc61984d5e13edac541a70857022421dea",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132658125",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132658125",
+    "title": "R66 staging: canonical redirect for legacy w-doublebreasted.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:09Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "387dfa1",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/387dfa172b6a48f1e3225f0b478c971fb775f26f",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132650746",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132650746",
+    "title": "R66 staging: canonical redirect for legacy w-classicsuits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:06Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "828e2ff",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/828e2ff8b1b8f658a1c8fc683fe01d5033c9b1f1",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132644201",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132644201",
+    "title": "R66 staging: canonical redirect for legacy m-modernsuits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:39:03Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "8f7cb98",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/8f7cb980ef69c0ff6e7dcb632e43bbf2b3619dd4",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132637780",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132637780",
+    "title": "R66 staging: canonical redirect for legacy m-kaundasuits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:59Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3d7fe88",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3d7fe880e1c0854f8b25bf65a613e6b8a4e0c318",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132631999",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132631999",
+    "title": "R66 staging: canonical redirect for legacy m-doublebreasted.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:57Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "9322a36",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/9322a36ed2d7aa1a1a35da71b8b6f2cae54a8710",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132625625",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132625625",
+    "title": "R66 staging: canonical redirect for legacy m-classicsuits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:53Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "d177e2f",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/d177e2f535e89b23a08af4ab4a2d8b1d53205647",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132601021",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132601021",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy faq.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:41Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "639c55c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/639c55cda00a6a236909c1a3eabcbfdd7787bc1d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132593886",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132593886",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy measuremen\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:37Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "5f0a64b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/5f0a64bdf01b089f2a4c0d947a8aeb3554413008",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132588514",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132588514",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy suits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:34Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "b032182",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/b0321829dee35b0a4f39b7301417db96864f5fed",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132583154",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132583154",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy contact.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:32Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "79de668",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/79de668c7c93c85049a620cad6b82d9f2fa8b389",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132575814",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132575814",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy collection\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:28Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "32ec078",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/32ec0783ac4480a7c5489eebbf270a5aec2045f1",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132568516",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132568516",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy womensuits\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:24Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "6d0ddd9",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/6d0ddd9445b496629716aa9263c0b357d87ae227",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132561933",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132561933",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy mensuits.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:21Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "f92e432",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/f92e432dcc810273f28e265af75d1f8124637ee5",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132553104",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132553104",
+    "title": "R66 staging: add permanent HTML-refresh fallback to legacy about.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:38:17Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "9df4117",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/9df411796cfb7bab0f0c47d1ece240001e8f7172",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132474612",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132474612",
+    "title": "R66 staging: consolidate legacy HTML aliases without redirecting cano\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:37:37Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "c646a8b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/c646a8b276ecac39740bbcae1fd4e76341f0200a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45132469799",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45132469799",
+    "title": "R66 staging: consolidate legacy HTML aliases without redirecting cano\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T07:37:34Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "cb6a023",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/cb6a023290228a47a05b21cf3636febc63a7e6ee",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119370235",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119370235",
+    "title": "Remove rendered Services dropdown from staging services/custom-tailor\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:41:35Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "edb9c85",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/edb9c85663f2abc1011cdf54db4a7a69deb83b6b",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119364098",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119364098",
+    "title": "Remove rendered Services dropdown from staging about/index.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:41:32Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "4ef9238",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/4ef923836a88f51d850e935aad918f5974f63833",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119357493",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119357493",
+    "title": "Remove rendered Services dropdown from staging index.html",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:41:28Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "1c8a76c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/1c8a76c712a01dad23171ad9db93482a27c1f836",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119281666",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119281666",
+    "title": "Ensure navigation has no Services item on staging",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:40:43Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "bf64627",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/bf6462735b36f907cb4434d2c8b1bfdac264b171",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119275864",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119275864",
+    "title": "Remove redundant Services link from legacy navigation on staging",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:40:39Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "5991c17",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/5991c17455a27fdec5e37ce975fb4975b8f6c985",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119271280",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119271280",
+    "title": "Remove redundant Services dropdown from staging primary navigation",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:40:37Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "2712b74",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/2712b745f82accb30fae1ed4ec29d865ac40442c",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119265464",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119265464",
+    "title": "Read standalone Services picker template after menu removal",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:40:33Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "bcaf724",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/bcaf724768f6e2445d7c1ad78d85ed6b458a72e7",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119260773",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119260773",
+    "title": "Make About Us services picker independent of primary menu",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:40:31Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "612ad80",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/612ad809b398740e95be7f9a471dbccf1d4aa94e",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45119255992",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45119255992",
+    "title": "Preserve About Us service picker separately from global navigation",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:40:28Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "4bddf88",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/4bddf887dbc3d87bd8eadb423ca02035a3ae401b",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45118824284",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45118824284",
+    "title": "Verify staging navigation hides redundant Services entry and keeps ta\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:36:20Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "328cba8",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/328cba8e5e30189b68905d64dc132f21f93c0cd0",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45118819157",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45118819157",
+    "title": "Remove redundant Services navigation item while retaining service lin\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:36:17Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "5a2edbb",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/5a2edbbd97cbf59a31438e0cbb973f3d84aaaf6a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45118815953",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45118815953",
+    "title": "Allow About Services picker to reuse links from a hidden global menu",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-23T05:36:15Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "2148da6",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/2148da6a1f5b79bf93463a1c0a15657320a8e880",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45051881707",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45051881707",
+    "title": "R65 staging QA: return to homepage after consultation popup before ex\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:52:38Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "99d731c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/99d731c16477c42b9f4186a280ace062451006c3",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45051634293",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45051634293",
+    "title": "R65 staging: open existing quotation and consultation forms in mobile\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:49:57Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "a5ac3bd",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/a5ac3bdf894452b7e7c5b1e1c5cff73880a22f7a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45050148114",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45050148114",
+    "title": "R64 staging: remove visible gallery pause buttons and video captions/\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:33:51Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3f75b05",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3f75b05b8a23401e48549e6faa8974b76b4e2ba2",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45049400104",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45049400104",
+    "title": "R63 staging: align suit-video gate test with looping playback and pau\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:25:50Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "34723bb",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/34723bb53cade324060095242b4ec6930c37fc79",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45049319133",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45049319133",
+    "title": "R63 staging: restore Shop, simplify tailoring heading and stack loopi\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:25:00Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "866f86d",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/866f86d367f311efb169574c031055dbec0ff95a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45047500496",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45047500496",
+    "title": "R62 staging: inventory generated video posters and prepare media befo\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:05:55Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3a6b857",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3a6b857c0125fc30ec9114f39b8d0f20aeaa0c2a",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45047321301",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45047321301",
+    "title": "R61 staging: use exact suit-video posters and silent clips; record ow\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:04:04Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "8853313",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/88533130222ccf9ebbf2dc87b17f7e388cfd0876",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45046937093",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45046937093",
+    "title": "R60 staging: restore useful tailoring homepage sections, publish two \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T17:00:14Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "e775991",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/e7759910b6b047dc478b828df05aebad9d2f8209",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45039025762",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45039025762",
+    "title": "R59 staging Terms reader: add requested accessible Open PDF action wi\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:34:03Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "160ccbc",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/160ccbc1b70f934394348f35e0b20b6b01077b7f",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45039025753",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45039025753",
+    "title": "R59 staging Terms reader: add requested accessible Open PDF action wi\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:34:03Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "160ccbc",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/160ccbc1b70f934394348f35e0b20b6b01077b7f",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45038778269",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45038778269",
+    "title": "Fix newline in staging R53 held-media redirect generator",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:31:25Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "d8c1047",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/d8c10471796b3c108b9fbc31de9e5802ac354acc",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45038700646",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45038700646",
+    "title": "R59 staging: source-driven temporary redirects block direct held R53 \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:30:38Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "23c05dd",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/23c05ddef0c515c68d9170cbc67d5ec58d4b8abe",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45038500139",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45038500139",
+    "title": "R59 staging: source-driven future video gates with approved photo fal\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:28:26Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "c2feaa4",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/c2feaa4915a523df351e4e5d70181a5af16b6273",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45038096623",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45038096623",
+    "title": "R59 CI: install FFmpeg for verified temporary audio-free media checks",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:24:01Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "562ddae",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/562ddae80e9ea242b8514a1fa749007990362f35",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45038005274",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45038005274",
+    "title": "R59 staging: browser screenshots, verified-date, Shop and silent-vide\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:23:03Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "d059301",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/d0593012d214927b2d2e3a6f010bee43057d63a6",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037913481",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037913481",
+    "title": "R59 staging: dated approved design addendum, preserved policy referen\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:22:07Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "65f8d51",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/65f8d51f019f549b6758e7ad6ffc324903e49d31",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037729306",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037729306",
+    "title": "R59 staging: verified-date newest-first sorter, stable legacy fallbac\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:20:11Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "c179c81",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/c179c81a34b93569e92a142688ebcf69c6b5f751",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037449215",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037449215",
+    "title": "R59 staging Shop: approved Backorder wording, safe quotation gates, t\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:17:09Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "b975cbf",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/b975cbf2b3e9d9a67ed16703759b8fae7548d630",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037303313",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037303313",
+    "title": "R59 staging: tailor-first service hub, two publication-gated clothing\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:15:34Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "1e41473",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/1e41473bc348f574ff7ddb7f30efbf8d514360ac",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037303284",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037303284",
+    "title": "R59 staging: tailor-first service hub, two publication-gated clothing\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:15:34Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "1e41473",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/1e41473bc348f574ff7ddb7f30efbf8d514360ac",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037200435",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037200435",
+    "title": "Preserve R53 evidence fields in JSON; scope collection migration CSV \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:14:28Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "fd2c8f9",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/fd2c8f93a3dc9ad6c73d29d468af0d0f08f4c878",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037135907",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037135907",
+    "title": "Use existing approved JPEG sources for photo placeholders and feature",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:13:43Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "249ce1a",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/249ce1aeb092f8747669008476ebd55e67937c7d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037133634",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037133634",
+    "title": "Fix R59 homepage hero selector in source-driven builder",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:13:42Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "d9201f8",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/d9201f899e76122e9096fa08f76bc4a8813fd3b4",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45037069872",
+    "name": "R59 staging tailoring-first build and regression",
+    "workflowFilePath": ".github/workflows/r59-staging-build.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45037069872",
+    "title": "R59: automate staging-only generated-page checks and synchronization",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T15:13:02Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "0565758",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/05657582472ef9edec25509af8e9810bd901c1a7",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45034619278",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45034619278",
+    "title": "Publish reviewed staging Terms PDF reader only",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T14:46:17Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "33620fe",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/33620fe4dc38ec81905fd2556a19db15f5c06db3",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45034510372",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45034510372",
+    "title": "Publish reviewed staging Terms PDF reader only",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T14:45:09Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/main",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/main",
+      "title": "main"
+    },
+    "description": {
+      "linkText": "33620fe",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/33620fe4dc38ec81905fd2556a19db15f5c06db3",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "45034510086",
+    "name": "pages build and deployment",
+    "workflowFilePath": "dynamic/pages/pages-build-deployment",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45034510086",
+    "title": "pages build and deployment",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T14:45:09Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/main",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/main",
+      "title": "main"
+    },
+    "description": {
+      "linkText": null,
+      "linkUrl": null,
+      "primaryText": null
+    }
+  },
+  {
+    "id": "45034396293",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45034396293",
+    "title": "Release staging Terms & Conditions reader only (protect existing policies)",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T14:43:54Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/release/terms-reader-only-2026-11-22",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/release/terms-reader-only-2026-11-22",
+      "title": "release/terms-reader-only-2026-11-22"
+    },
+    "description": {
+      "linkText": "#8",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/pull/8",
+      "primaryText": "Pull request"
+    }
+  },
+  {
+    "id": "45034338324",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45034338324",
+    "title": "Release staging Terms & Conditions reader only (protect existing policies)",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T14:43:11Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/release/terms-reader-only-2026-11-22",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/release/terms-reader-only-2026-11-22",
+      "title": "release/terms-reader-only-2026-11-22"
+    },
+    "description": {
+      "linkText": "#8",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/pull/8",
+      "primaryText": "Pull request"
+    }
+  },
+  {
+    "id": "45034230397",
+    "name": "Terms PDF reader release regression",
+    "workflowFilePath": ".github/workflows/terms-reader-qa.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/45034230397",
+    "title": "Release staging Terms & Conditions reader only (protect existing policies)",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T14:42:02Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/release/terms-reader-only-2026-11-22",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/release/terms-reader-only-2026-11-22",
+      "title": "release/terms-reader-only-2026-11-22"
+    },
+    "description": {
+      "linkText": "#8",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/pull/8",
+      "primaryText": "Pull request"
+    }
+  },
+  {
+    "id": "44987249104",
+    "name": "R54 staging Terms validation",
+    "workflowFilePath": ".github/workflows/r54-terms-staging-check.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44987249104",
+    "title": "R58: check restored homepage in isolation; avoid unrelated customer-p\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T04:56:57Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3e0c73b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44987249093",
+    "name": "R58 original homepage parity to main (staging only)",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44987249093",
+    "title": "R58: check restored homepage in isolation; avoid unrelated customer-p\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T04:56:57Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3e0c73b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44987209778",
+    "name": "R58 original homepage parity to main (staging only)",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44987209778",
+    "title": "R58: check restored homepage in isolation; avoid unrelated customer-p\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T04:56:24Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r58-restore-main-homepage-2026-11-22",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r58-restore-main-homepage-2026-11-22",
+      "title": "work/r58-restore-main-homepage-2026-11-22"
+    },
+    "description": {
+      "linkText": "3e0c73b",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44987155141",
+    "name": "R58 original homepage parity to main (staging only)",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44987155141",
+    "title": "R58: restore exact main homepage HTML, scripts, styles and builder on\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-22T04:55:35Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r58-restore-main-homepage-2026-11-22",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r58-restore-main-homepage-2026-11-22",
+      "title": "work/r58-restore-main-homepage-2026-11-22"
+    },
+    "description": {
+      "linkText": "cf7cc49",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/cf7cc49da905943090c347f1662a03553ba5f643",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44930820319",
+    "name": "R57 preserve original homepage, surgical enhancements",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930820319",
+    "title": "R57: record verified original-homepage preservation and make staging \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:34:49Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3bcf142",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44930820221",
+    "name": "R54 staging Terms validation",
+    "workflowFilePath": ".github/workflows/r54-terms-staging-check.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930820221",
+    "title": "R57: record verified original-homepage preservation and make staging \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:34:49Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "3bcf142",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44930793880",
+    "name": "R57 preserve original homepage, surgical enhancements",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930793880",
+    "title": "R57: record verified original-homepage preservation and make staging \u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:34:33Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "title": "work/r57-preserve-existing-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "3bcf142",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44930603290",
+    "name": "R57 preserve original homepage, surgical enhancements",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930603290",
+    "title": "R57: explicitly document preserved staging noindex boundary",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:32:27Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "title": "work/r57-preserve-existing-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "1a4036c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/1a4036c169c3a8ba9ae1142e33a87ff7173e0436",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44930526877",
+    "name": "R57 preserve original homepage, surgical enhancements",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930526877",
+    "title": "R57: preserve support form while directing consent to currently effec\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:31:37Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "title": "work/r57-preserve-existing-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "7d85ee3",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/7d85ee3590462c999cca47239e60e57cc859e984",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44930400043",
+    "name": "R57 preserve original homepage, surgical enhancements",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44930400043",
+    "title": "R57: enforce preservation of all original homepage sections and brows\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:30:20Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r57-preserve-existing-homepage-2026-11-21",
+      "title": "work/r57-preserve-existing-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "4ba436c",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/4ba436cf1953f6eeaad1da4e0880f464642720aa",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929802224",
+    "name": "R54 staging Terms validation",
+    "workflowFilePath": ".github/workflows/r54-terms-staging-check.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929802224",
+    "title": "R56 CI: install FFmpeg only when missing for nonpublic silent-video c\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:23:40Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "47b5966",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/47b5966bd01002b36581d1f2534cc8dae666cf48",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929801960",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929801960",
+    "title": "R56 CI: install FFmpeg only when missing for nonpublic silent-video c\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:23:39Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "47b5966",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/47b5966bd01002b36581d1f2534cc8dae666cf48",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929623274",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929623274",
+    "title": "R56 CI: install FFmpeg only when missing for nonpublic silent-video c\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:21:45Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "47b5966",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/47b5966bd01002b36581d1f2534cc8dae666cf48",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929544952",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929544952",
+    "title": "R56: prepare silent video derivatives privately and make completed ho\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:20:55Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "0b38497",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/0b38497c6908a6d98c680a9502f87af52abc4b7d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929328080",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929328080",
+    "title": "R56 QA: replace obsolete 20-design count check with unchanged 28-publ\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:18:41Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "ce85325",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/ce85325d08230359a7619054907a27a0db23fccc",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929212414",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929212414",
+    "title": "R56 fix: correct quoted Escape keyboard acceptance test",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:17:21Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "3bad8d7",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/3bad8d73b78d1070f5199ba56015ffdba78bd098",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929142385",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929142385",
+    "title": "R56: keep photo-rights evidence in source registry; preserve inventor\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:16:33Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "e05bbc2",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/e05bbc2dd27be69d5ac3831fa3a1f5c7079a6968",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929077520",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929077520",
+    "title": "R56 fix: accept verified in-repository WebP hero and root-relative so\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:15:52Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "5b94b06",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/5b94b067a941c2c3f91d3175403c25f8ea28289b",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44929020154",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44929020154",
+    "title": "R56 fix: select new approved tailor-first hero with exact class",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:15:16Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "b4da975",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/b4da97570081f29d87a59bea7d7885e3d6f938c1",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44928965120",
+    "name": "R56 tailoring-first homepage staging verification",
+    "workflowFilePath": ".github/workflows/r56-homepage.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44928965120",
+    "title": "R56: add strict homepage rights/order, SEO and mobile Chromium accept\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T17:14:40Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r56-tailoring-first-homepage-2026-11-21",
+      "title": "work/r56-tailoring-first-homepage-2026-11-21"
+    },
+    "description": {
+      "linkText": "eb36136",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/eb3613696264e7aab313cd8ddb0f2bf4598409f2",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44927275381",
+    "name": "R55 full-screen Terms popup staging integration",
+    "workflowFilePath": ".github/workflows/r55-terms-popup.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44927275381",
+    "title": "R55: record verified mobile popup QA and restrict CI to read-only sta\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T16:56:18Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "4d7c282",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/4d7c28261afe2a40aaba05b513b2d835071edd81",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44927275376",
+    "name": "R54 staging Terms validation",
+    "workflowFilePath": ".github/workflows/r54-terms-staging-check.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44927275376",
+    "title": "R55: record verified mobile popup QA and restrict CI to read-only sta\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T16:56:18Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/phase1/customer-journey-repairs",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/phase1/customer-journey-repairs",
+      "title": "phase1/customer-journey-repairs"
+    },
+    "description": {
+      "linkText": "4d7c282",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/4d7c28261afe2a40aaba05b513b2d835071edd81",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44927046343",
+    "name": "R55 full-screen Terms popup staging integration",
+    "workflowFilePath": ".github/workflows/r55-terms-popup.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44927046343",
+    "title": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T16:53:44Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r55-terms-fullscreen-popup-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r55-terms-fullscreen-popup-2026-11-21",
+      "title": "work/r55-terms-fullscreen-popup-2026-11-21"
+    },
+    "description": {
+      "linkText": "8d59050",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/8d5905070cda35f99f1cc84e959a024c1c7f361d",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44926956389",
+    "name": "R55 full-screen Terms popup staging integration",
+    "workflowFilePath": ".github/workflows/r55-terms-popup.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44926956389",
+    "title": "R55: validate actual full-screen Terms UI in Chromium phone and deskt\u2026",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_FAILURE"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T16:52:42Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r55-terms-fullscreen-popup-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r55-terms-fullscreen-popup-2026-11-21",
+      "title": "work/r55-terms-fullscreen-popup-2026-11-21"
+    },
+    "description": {
+      "linkText": "331ead1",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/331ead1e4934b3e46c6575d303ea4c403136d150",
+      "primaryText": "Commit"
+    }
+  },
+  {
+    "id": "44926866894",
+    "name": "R55 full-screen Terms popup staging integration",
+    "workflowFilePath": ".github/workflows/r55-terms-popup.yml",
+    "runUrl": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/actions/runs/44926866894",
+    "title": "R55: cache-bust popup JS and CSS for existing mobile visitors",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "createdAt": {
+      "timestamp": "2026-11-21T16:51:43Z",
+      "isCurrentYear": true
+    },
+    "branch": {
+      "name": "refs/heads/work/r55-terms-fullscreen-popup-2026-11-21",
+      "url": "/ninkoniyumutwareemmanuel-lab/mrsewing/tree/refs/heads/work/r55-terms-fullscreen-popup-2026-11-21",
+      "title": "work/r55-terms-fullscreen-popup-2026-11-21"
+    },
+    "description": {
+      "linkText": "e4bbbbe",
+      "linkUrl": "/ninkoniyumutwareemmanuel-lab/mrsewing/commit/e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+      "primaryText": "Commit"
+    }
+  }
+]

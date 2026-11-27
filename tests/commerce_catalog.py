@@ -13,7 +13,7 @@ for change in [{'availability':'Made to Order'},{'priceApproved':False},{'priceR
  try:valid([q]);raise RuntimeError('Invalid record accepted '+repr(change))
  except AssertionError:pass
 q=copy.deepcopy(p);q['publicationStatus']='draft';assert valid([q])==[]
-for status in ['Available on Orders','Out of Stock']:
+for status in ['Available on Backorder','Out of Stock']:
  q=copy.deepcopy(p);q['availability']=status;q['stockQuantity']=0;q['priceRwf']=None
  for v in q['variations']:v['stockQuantity']=0
  assert valid([q])==[q]
@@ -52,7 +52,7 @@ with tempfile.TemporaryDirectory() as tmp:
 
 # Fixture products are rendered outside deployment root for browser interception only.
 ps=[]
-for n,status in enumerate(['Available in Stock','Available on Orders','Out of Stock']):
+for n,status in enumerate(['Available in Stock','Available on Backorder','Out of Stock']):
  q=copy.deepcopy(p);q.update(id='QA_'+str(n),slug='qa-only-'+str(n),name='Synthetic QA '+str(n),availability=status,category=["Men's Suits",'Clothes Hangers','Garment Covers'][n])
  if n:
   q['stockQuantity']=0;q['priceRwf']=None

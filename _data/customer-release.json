@@ -375,7 +375,7 @@
         },
         {
           "id": "starting-prices",
-          "title": "Two-piece and three-piece starting prices",
+          "title": "Suit quotations and quality options",
           "paragraphs": [
             "{{policySuitPrices}}"
           ]
@@ -393,7 +393,7 @@
     "/refund-policy/": {
       "title": "Refund & Cancellation Policy",
       "intro": "Submit a request for human assessment. An enquiry or form acknowledgement is not an approved refund.",
-      "source": "S-OWNER-2026-11-05 §§19–20",
+      "source": "S-OWNER-2026-11-05 §§19–20; Customer Terms & Conditions v1.1, owner-approved 25 November 2026, staging review only",
       "sections": [
         {
           "id": "1",
@@ -428,6 +428,11 @@
           "title": "Cancellation and changes",
           "paragraphs": [
             "Tell us promptly if you wish to cancel or change an order, service or visit. Include whether a quotation has been accepted, payment has been made, materials have been committed or work has started. Changes require feasibility, quotation and scheduling agreement before the team proceeds.",
+            "{{policyRefundBeforeProduction}}",
+            "{{policyRefundAfterProduction}}",
+            "{{policyOverdueAdvance}}",
+            "{{policyOverdueCancellation}}",
+            "{{policyRefundAssessment}}",
             "The team assesses your request and supporting information and communicates its decision. Submitting a request does not itself approve a refund or fix a deduction or payment date. These procedures do not remove applicable customer rights."
           ]
         }
@@ -436,7 +441,7 @@
     "/privacy-policy/": {
       "title": "Privacy Policy",
       "intro": "Find out what personal information we collect, how we use it and how you can manage your privacy.",
-      "source": "S-OWNER-2026-11-05 §22; observed repository integration; owner-approved simplification 21 November 2026",
+      "source": "S-OWNER-2026-11-05 §22; observed repository integration; owner-approved simplification 21 November 2026; owner26November2026 tracking/consent instruction implemented27November2026 (technical disclosure, not qualified legal certification)",
       "sections": [
         {
           "id": "1",
@@ -466,8 +471,10 @@
           "title": "Cookies and advertising",
           "paragraphs": [
             "Our website may use browser storage to remember service and design selections and help you return to an unfinished enquiry. You can manage stored website information in your browser settings.",
-            "If you choose Allow for optional advertising cookies, we use advertising technology provided by Meta (Facebook and Instagram) to measure website visits and assess our advertising. Meta may receive information about pages visited, basic browser and device details, and online identifiers. This information may be processed outside Rwanda, and Meta may use it for advertising measurement and audience selection under its own policies.",
-            "You can choose Reject without losing access to our services, or change your choice later through Cookie preferences in our website footer. Withdrawing permission stops future advertising events from this browser after the page reload, but does not undo information already processed. For further information about Meta, see https://www.facebook.com/privacy/policy/."
+            "With your permission, we use Google Tag Manager to load Google Ads measurement and the existing Meta Pixel for Facebook and Instagram. They can measure eligible browsing, garment views, deliberate contact clicks and positively acknowledged quotation or service enquiries. A contact click is not a conversation, an appointment request is not a confirmed appointment, and an enquiry is not a purchase.",
+            "Optional measurement uses online identifiers and limited campaign information. We keep approved campaign identifiers and labels in this browser tab for up to 24 hours after consent, and minimal pending event identifiers for up to 30 minutes when waiting for a suitable page. These stores do not contain contact details, measurements, addresses, photographs or enquiry message contents. Normal website links and canonical URLs stay clean. We do not enable enhanced conversions, automatic customer matching or customer-data uploads.",
+            "Google and Meta may receive online identifiers and basic page, browser and device information and process information outside Rwanda under their policies. We do not include your form contents in advertising event parameters. For details see https://policies.google.com/privacy and https://www.facebook.com/privacy/policy/.",
+            "Choose Reject to continue using our services without optional advertising measurement. Cookie preferences lets you change your choice. A fresh choice is requested for this Google and Meta measurement setup; an earlier Meta-only choice is not reused. Withdrawal clears our campaign and pending-event stores and stops subsequent measurement from this controller, with a page reload where possible. It does not undo information already processed by independent providers."
           ]
         },
         {
@@ -578,7 +585,7 @@
     {
       "id": "custom-tailoring",
       "route": "/services/custom-tailoring/",
-      "title": "Custom Tailoring & Suits",
+      "title": "Tailoring & Clothing Services",
       "intro": "Personalised garment design, fabric preferences, measurements and fitting arrangements for your individual tailoring request.",
       "sections": [
         [
@@ -595,7 +602,7 @@
         ],
         [
           "Payment and confirmation",
-          "{{policyDomesticPayment}} {{policyInternationalPayment}} {{policyPaymentVerification}}"
+          "{{policyDomesticPayment}} {{policyExpressAdvance}} {{policyFlexibleAdvance}} {{policyOverdueAdvance}} {{policyInternationalPayment}} {{policyPaymentVerification}}"
         ]
       ]
     },

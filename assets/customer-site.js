@@ -1,27 +1,77 @@
+/* Shared navigation: native links/disclosures plus a focus-safe mobile menu. */
 (function setupHomepageMenu() {
   const button = document.querySelector('.home-menu-toggle');
   const menu = document.getElementById('home-navigation');
   if (!button || !menu) return;
-  function setOpen(open, restoreFocus = false) {
-    button.setAttribute('aria-expanded', String(open));
-    button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    menu.dataset.open = String(open);
-    if (restoreFocus) button.focus();
+  const mobile = matchMedia('(max-width: 1099px)');
+  const disclosures = [...menu.querySelectorAll('details')];
+  const background = new Map();
+  const backdrop = document.createElement('div');
+  backdrop.className = 'home-nav-backdrop';
+  backdrop.hidden = true;
+  backdrop.setAttribute('aria-hidden', 'true');
+  document.body.append(backdrop);
+  function open() { return mobile.matches && button.getAttribute('aria-expanded') === 'true'; }
+  function setBackground(blocked) {
+    if (blocked) {
+      for (const node of document.querySelectorAll('main,body>footer,#site-footer,.selected-design-bar')) {
+        if (background.has(node)) continue;
+        background.set(node, node.inert);
+        node.inert = true;
+      }
+    } else {
+      for (const [node, inert] of background) node.inert = inert;
+      background.clear();
+    }
   }
-  button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+  function setOpen(value, restoreFocus = false) {
+    const show = value && mobile.matches;
+    button.setAttribute('aria-expanded', String(show));
+    button.setAttribute('aria-label', show ? 'Close navigation' : 'Open navigation');
+    menu.dataset.open = String(show);
+    backdrop.hidden = !show;
+    document.documentElement.classList.toggle('home-navigation-open', show);
+    if (show) {
+      const bottom = menu.closest('.homepage-header')?.getBoundingClientRect().bottom || 110;
+      menu.style.setProperty('--home-nav-top', Math.max(0, bottom) + 'px');
+    } else {
+      for (const disclosure of disclosures) disclosure.open = false;
+    }
+    setBackground(show);
+    if (restoreFocus) button.focus({ preventScroll: true });
+  }
+  for (const disclosure of disclosures) {
+    const summary = disclosure.querySelector('summary');
+    if (!summary) continue;
+    summary.setAttribute('aria-expanded', String(disclosure.open));
+    disclosure.addEventListener('toggle', () => {
+      summary.setAttribute('aria-expanded', String(disclosure.open));
+      if (disclosure.open) for (const other of disclosures) if (other !== disclosure) other.open = false;
+    });
+    disclosure.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && disclosure.open) {
+        event.preventDefault(); event.stopPropagation();
+        disclosure.open = false; summary.focus();
+      } else if (event.target === summary && ['ArrowDown', 'ArrowUp'].includes(event.key)) {
+        event.preventDefault(); disclosure.open = true;
+        const links = [...disclosure.querySelectorAll('a[href]')];
+        (event.key === 'ArrowDown' ? links[0] : links.at(-1))?.focus();
+      }
+    });
+  }
+  button.addEventListener('click', () => setOpen(!open()));
+  backdrop.addEventListener('click', () => setOpen(false, true));
   menu.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (!link) return;
     setOpen(false);
-    // In-page navigation must not leave focus inside the now-hidden dropdown.
     const url = new URL(link.href, location.href);
     if (url.pathname === location.pathname && url.hash) {
       const section = document.getElementById(decodeURIComponent(url.hash.slice(1)));
       const target = section && (section.querySelector('h1,h2') || section);
       if (target) {
         target.tabIndex = -1;
-        // Let the native fragment navigation finish before placing focus.
-        requestAnimationFrame(() => target.focus({ preventScroll:true }));
+        requestAnimationFrame(() => target.focus({ preventScroll: true }));
       }
     }
   });
@@ -29,10 +79,20 @@
     if (!menu.contains(event.target) && !button.contains(event.target)) setOpen(false);
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false, true);
+    if (event.key === 'Escape' && open()) { event.preventDefault(); setOpen(false, true); return; }
+    if (event.key !== 'Tab' || !open()) return;
+    const targets = [button, ...menu.querySelectorAll('a[href],summary,button:not([disabled])')]
+      .filter(node => node.getClientRects().length && !node.closest('[inert]'));
+    const current = targets.indexOf(document.activeElement);
+    // The toggle follows the nav in DOM order; explicitly keep a logical loop
+    // rather than allowing Tab to leave the menu or skip its first link.
+    event.preventDefault();
+    const next = current < 0 ? (event.shiftKey ? targets.length - 1 : 0)
+      : (current + (event.shiftKey ? -1 : 1) + targets.length) % targets.length;
+    targets[next]?.focus();
   });
-  // Reset on the layout breakpoint only, not while mobile browser chrome resizes.
-  matchMedia('(max-width: 1099px)').addEventListener('change', () => setOpen(false));
+  mobile.addEventListener('change', () => setOpen(false));
+  addEventListener('pageshow', () => setOpen(false));
 })();
 
 /* Reviewed quotations, private-upload adapter and genuine portfolio references. No order/payment confirmation. */
@@ -61,13 +121,16 @@ function valid(){if(window.MrDesignSelections?.isBatch()&&!window.MrDesignSelect
 if(kind==='quotation'&&service.value==='custom-tailoring'&&order.value==='standard'&&!general&&!window.MrSelectedDesign?.resolve(context?.read()||{})){status.textContent='Choose a published design photograph before reviewing your request.';return false;}if(fabricSelection&&!fabricSelection.disabled)fabricSelection.setCustomValidity(fabricData[fabricSelection.value]?'':'Select a fabric or ask for help choosing.');if(customQuotation()&&!window.MrCustomQuotation.valid())return false;if(selectedSuit()&&!customQuotation()&&window.MrSelectedSuitQuote&&!window.MrSelectedSuitQuote.valid())return false;if(!form.reportValidity())return false;if(kind==='quotation'&&!general&&service.value==='custom-tailoring'&&order.value==='standard'&&!choices[design.value]){status.textContent='Choose a published website design before reviewing a Standard Order, or choose Special Order for your own inspiration.';design.closest('div').querySelector('a').focus();return false;}return true;}
 for(const e of form.querySelectorAll('input,textarea'))e.addEventListener('input',()=>e.setCustomValidity(''));
 function payload(){const d=Object.fromEntries(new FormData(form));if(kind==='quotation'&&portfolio&&service?.value==='custom-tailoring'){d['Portfolio Reference']=saved.project;d['Portfolio Project']=portfolio.name;}delete d.botcheck;for(const k of Object.keys(d))if(typeof d[k]==='string')d[k]=d[k].trim();if(service)d.Service=names[service.value];if(experience)d['Service Experience']=experience.value==='vip'?'VIP Service':'Standard Service';if(order&&!order.disabled&&service.value==='custom-tailoring')d['Design Order Type']=general||order.value==='general'?'General quotation enquiry':order.value==='special'?'Special Order':'Standard Order';if(priority&&!selectedSuit())d['Order Priority']=priority.value==='express'?'Express Priority':'Standard Priority';if(design&&!design.disabled){d['Design Name']=choices[design.value];const selected=window.MrSelectedDesign?.resolve(context?.read()||{});if(selected){d['Selected Photograph URL']=selected.photoURL;d['Design Image']=selected.photoURL;d['Design Link']=new URL(selected.route,'https://mrsewingfashion.com').href;if(selected.project)d['Project Page URL']=new URL(selected.route,'https://mrsewingfashion.com').href;}}if(kind==='quotation'&&service?.value==='custom-tailoring'&&suitLabels[saved.suitCategory]){d['Suit Category']=suitLabels[saved.suitCategory];d['Suit Category Reference']=saved.suitCategory;}if(kind==='quotation'&&service?.value==='custom-tailoring'&&saved.category)d['Suit Audience']=saved.category==='women'?"Women's Suits":"Men's Suits";if(fabric&&service.value==='custom-tailoring'){d['Fabric Choice']=fabric.value==='own'?'Customer-Supplied Fabric':fabric.value==='advice'?'Help Me Choose Fabric':'Customer fabric choice';if(fabric.value==='own')d['Fabric Preference']='Customer-Supplied Fabric';else if(fabric.value==='advice')d['Fabric Assistance']='Requested';else if(fabricData[fabricSelection?.value]){const f=fabricData[fabricSelection.value];d['Selected Fabric']=f.name;d['Fabric Reference']=f.id;d['Fabric Category']=f.category==='men'?'Men’s Suits':'Women’s Suits';d['Fabric Tier']='Tier '+f.tier;d['Fabric Availability']='Availability and final quotation require confirmation';}}if(d['Email Address'])d.replyto=d['Email Address'];d['Entry Page']=location.origin+location.pathname;d['Request Type']=kind;if(kind==='quotation'&&service?.value==='custom-tailoring')d['Picture Sharing']=order?.value==='standard'?'Approved website photograph supplied by URL; no file attachment':'Our team may request reference pictures through WhatsApp after review';window.mrConsultation?.decorate(d);const selected=window.MrDesignSelections?.decorate(d)||d;return customQuotation()?window.MrCustomQuotation.decorate(selected):selected;}
-function startReview(){status.textContent='';if(!valid())return;const d=payload();send.textContent=kind==='quotation'&&priority?.value==='express'&&['alterations','garment-care'].includes(service?.value)&&!window.MrRequestUploads?.configured?'Continue Express Request on WhatsApp':kind==='subscription'?'Submit Subscription Enquiry':kind==='consultation'?'Submit Consultation Request':kind==='quotation'?'Submit Quotation Request':kind==='refund'?'Submit Refund Request':'Submit Support Request';fingerprint=JSON.stringify(d);const dl=$('reviewDetails');dl.replaceChildren();if(!customQuotation())for(const [k,v]of Object.entries(d)){if((selectedSuit()&&['Service Experience','Design Order Type','Suit Audience','Suit Category','Design Reference','Design Name','Design Link','Design Image','Selected Photograph URL','Selected Photograph URLs','Portfolio Reference','Portfolio Project','Project Page URL','Selected Design IDs','Selected Design Count','Quantity','Total Garments','Fabric Choice','Fabric Reference','Fabric Preferences','Fabric Preference','Selected Fabric','Fabric Assistance','Fabric Category','Fabric Tier','Fabric Availability','Shared Fabric Preference','Preferred Colour','Preferred Colour Reference','Colour Description','Fabric Preference Scope','Picture Sharing'].includes(k))||['access_key','subject','from_name','replyto','Entry Page','Request Type','Suit Category Reference','Fabric Reference','Selected Designs'].includes(k)||!v||k==='Design Image'&&d['Selected Photograph URL']||k==='Design Link'&&v===d['Project Page URL'])continue;const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;if(['Selected Photograph URL','Design Image','Design Link','Project Page URL'].includes(k)&&/^https:\/\/mrsewingfashion\.com\//.test(v)){const a=document.createElement('a');a.href=v;a.target='_blank';a.rel='noopener';a.textContent=v;dd.append(a);}else dd.textContent=v;dl.append(dt,dd);}if(customQuotation())window.MrCustomQuotation.renderReview(dl);else window.MrDesignSelections?.review(dl);window.MrRequestUploads?.renderReview(review);form.hidden=true;review.hidden=false;if(kind==='quotation'){review.style.scrollMarginTop=((document.getElementById('site-header')?.getBoundingClientRect().height||100)+16)+'px';review.scrollIntoView({block:'start',behavior:'instant'});$('review-title').focus({preventScroll:true});}else $('review-title').focus();}
+function startReview(){status.textContent='';if(!valid())return;const d=payload();send.textContent=kind==='quotation'&&priority?.value==='express'&&['alterations','garment-care'].includes(service?.value)&&!window.MrRequestUploads?.configured?'Continue Express Request on WhatsApp':kind==='subscription'?'Submit Subscription Enquiry':kind==='consultation'?'Submit Consultation Request':kind==='quotation'?'Submit Request':kind==='refund'?'Submit Refund Request':'Submit Support Request';fingerprint=JSON.stringify(d);const dl=$('reviewDetails');dl.replaceChildren();if(!customQuotation())for(const [k,v]of Object.entries(d)){if((selectedSuit()&&['Service Experience','Design Order Type','Suit Audience','Suit Category','Design Reference','Design Name','Design Link','Design Image','Selected Photograph URL','Selected Photograph URLs','Portfolio Reference','Portfolio Project','Project Page URL','Selected Design IDs','Selected Design Count','Quantity','Total Garments','Fabric Choice','Fabric Reference','Fabric Preferences','Fabric Preference','Selected Fabric','Fabric Assistance','Fabric Category','Fabric Tier','Fabric Availability','Shared Fabric Preference','Preferred Colour','Preferred Colour Reference','Colour Description','Fabric Preference Scope','Picture Sharing'].includes(k))||['access_key','subject','from_name','replyto','Entry Page','Request Type','Suit Category Reference','Fabric Reference','Selected Designs'].includes(k)||!v||k==='Design Image'&&d['Selected Photograph URL']||k==='Design Link'&&v===d['Project Page URL'])continue;const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;if(['Selected Photograph URL','Design Image','Design Link','Project Page URL'].includes(k)&&/^https:\/\/mrsewingfashion\.com\//.test(v)){const a=document.createElement('a');a.href=v;a.target='_blank';a.rel='noopener';a.textContent=v;dd.append(a);}else dd.textContent=v;dl.append(dt,dd);}if(customQuotation())window.MrCustomQuotation.renderReview(dl);else window.MrDesignSelections?.review(dl);window.MrRequestUploads?.renderReview(review);form.hidden=true;review.hidden=false;if(kind==='quotation'){review.style.scrollMarginTop=((document.getElementById('site-header')?.getBoundingClientRect().height||100)+16)+'px';review.scrollIntoView({block:'start',behavior:'instant'});$('review-title').focus({preventScroll:true});}else $('review-title').focus();}
 reviewButton.addEventListener('click',startReview);edit.addEventListener('click',()=>{review.hidden=true;form.hidden=false;(service?.type==='hidden'?$('requestName'):service||$('requestName')).focus();});reviewButton.disabled=false;send.disabled=false;
 form.addEventListener('submit',async e=>{e.preventDefault();if(pending)return;if(!fingerprint||review.hidden){startReview();return;}if(!valid()||fingerprint!==JSON.stringify(payload())){status.textContent='Your request changed. Review the current details before submitting.';review.hidden=true;form.hidden=false;fingerprint='';return;}if(form.elements.botcheck.value){status.textContent='We could not confirm your request. Please contact Customer Support.';return;}
 if(kind==='quotation'&&['alterations','garment-care'].includes(service?.value)&&priority.value==='express'&&!window.MrRequestUploads?.configured){status.textContent='Your details remain in this form. This request has not been recorded in the website system. WhatsApp opens a prepared enquiry; press Send there. Express availability requires confirmation.';window.MrSewingWhatsApp.open('Hello Mr Sewing. Express enquiry for '+names[service.value]+'. '+Object.entries(payload()).filter(([k,v])=>['Full Name','Phone Number','Email Address','Location','Quantity','Garment Type','Other Garment','Garment Condition','Preferred Date','Customer Message'].includes(k)&&v).map(([k,v])=>k+': '+v).join('; '),send);return;}
 pending=true;send.disabled=true;edit.disabled=true;send.textContent='Sending…';status.textContent='Sending your request for human review.';const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
-try{let stored;if(window.MrRequestUploads?.configured){stored=await window.MrRequestUploads.submit(payload());}else{const selected=customQuotation()||kind==='quotation'&&service?.value==='custom-tailoring'&&order?.value==='standard'&&!general;const requestBody=selected?{fields:payload(),...(customQuotation()&&window.MrCustomQuotation.mode()==='special'?{}:{selections:window.MrDesignSelections?.submission()}),...(customQuotation()?{quotationDetails:window.MrCustomQuotation.details()}:{}),...(window.MrDesignSelections?.fabricPreference()&&(!customQuotation()||window.MrCustomQuotation.mode()==='suit')?{fabricPreference:window.MrDesignSelections.fabricPreference()}:{}),termsAccepted:$('requestConsent').checked,botcheck:form.elements.botcheck.value}:payload();const r=await fetch(selected?(window.MrPublicAPI?.url('/api/selected-design-request')||'/api/selected-design-request'):form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(requestBody),signal:controller.signal});const result=await r.json();if(!r.ok||result.success!==true)throw Object.assign(Error(selected?(result.error||'Your selected-design request was not confirmed.'):'Not confirmed'),{selectedSubmission:selected});}window.mrSavedReference=stored?.reference||'';status.textContent='';review.hidden=true;form.hidden=true;success.hidden=false;if(customQuotation()){success.querySelector('h2').textContent='Request Submitted for Review';success.querySelector('p').textContent='Thank you. Mr Sewing Fashion will review your request and contact you through WhatsApp or by phone about your quotation.';const note=document.createElement('p');note.textContent='Your order and requested completion date are not yet confirmed.';success.append(note);}if(stored){success.querySelector('p').textContent='Your request was saved privately. Reference: '+stored.reference+'. '+(stored.files?'Your reference images were saved with it. ':'')+(stored.emailStatus==='accepted'?'The email service accepted the notification; inbox receipt is not confirmed.':'The email notification is pending or could not be confirmed. Contact Customer Support with your reference.')+' This is not an accepted production order.';if(general||service.value==='custom-tailoring'||priority.value==='express'&&['alterations','garment-care'].includes(service.value)){const expressService=priority.value==='express'&&['alterations','garment-care'].includes(service.value);const handoff=document.createElement('button');handoff.type='button';handoff.className='home-button home-button-gold';handoff.textContent=expressService?'Continue Express Request on WhatsApp':'Continue on WhatsApp';handoff.addEventListener('click',()=>window.MrSewingWhatsApp.open('Hello Mr Sewing. '+(expressService?'Express request ':'Quotation request ')+stored.reference+' for '+names[service.value]+'. '+(portfolio?'Project: '+portfolio.name+'. ':'')+(design&&!design.disabled&&design.value?'Design: '+(choices[design.value]||design.value)+' — '+(window.MrSelectedDesign?.resolve(context?.read()||{})?.photoURL||new URL('/collections/designs/'+design.value.toLowerCase()+'/','https://mrsewingfashion.com').href)+'. ':'')+'Priority: '+priority.value+'. '+$('requestMessage').value,handoff));success.append(handoff);const note=document.createElement('p');note.textContent='WhatsApp opens a prepared message. Choose Send inside WhatsApp. Photographs are not attached automatically.';success.append(note);}window.MrRequestUploads.complete();}success.focus();}
-catch(error){status.textContent=error.selectedSubmission?error.message:window.MrRequestUploads?.configured?error.message:error.name==='AbortError'?'We could not confirm delivery before the timeout. Your request may have arrived. Contact Customer Support before trying again.':'We could not confirm your request. Your entries are preserved. Edit the request or try again, or contact Customer Support.';}
-finally{clearTimeout(timer);pending=false;send.disabled=false;edit.disabled=false;send.textContent=kind==='refund'?'Submit Refund Request':kind==='support'?'Submit Support Request':kind==='subscription'?'Submit Subscription Enquiry':kind==='consultation'?'Submit Consultation Request':'Submit Quotation Request';}
+try{let stored;if(window.MrRequestUploads?.configured){stored=await window.MrRequestUploads.submit(payload());}else{const selected=customQuotation()||kind==='quotation'&&service?.value==='custom-tailoring'&&order?.value==='standard'&&!general;const requestBody=selected?{fields:payload(),...(customQuotation()&&window.MrCustomQuotation.mode()==='special'?{}:{selections:window.MrDesignSelections?.submission()}),...(customQuotation()?{quotationDetails:window.MrCustomQuotation.details()}:{}),...(window.MrDesignSelections?.fabricPreference()&&(!customQuotation()||window.MrCustomQuotation.mode()==='suit')?{fabricPreference:window.MrDesignSelections.fabricPreference()}:{}),termsAccepted:$('requestConsent').checked,botcheck:form.elements.botcheck.value}:payload();const r=await fetch(selected?(window.MrPublicAPI?.url('/api/selected-design-request')||'/api/selected-design-request'):form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(requestBody),signal:controller.signal});const result=await r.json();if(!r.ok||result.success!==true)throw Object.assign(Error(selected?(result.error||'Your selected-design request was not confirmed.'):'Not confirmed'),{selectedSubmission:selected});}if(!window.MrRequestUploads?.configured)window.MrEnquiryMeasurement?.providerAccepted(form,kind,service?.value);window.mrSavedReference=stored?.reference||'';status.textContent='';review.hidden=true;form.hidden=true;success.hidden=false;if(customQuotation()){success.querySelector('h2').textContent='Request Submitted for Review';success.querySelector('p').textContent='Thank you. Mr Sewing Fashion will review your request and contact you through WhatsApp or by phone about your quotation.';const note=document.createElement('p');note.textContent='Your order and requested completion date are not yet confirmed.';success.append(note);}if(stored){success.querySelector('p').textContent='Your request was saved privately. Reference: '+stored.reference+'. '+(stored.files?'Your reference images were saved with it. ':'')+(stored.emailStatus==='accepted'?'The email service accepted the notification; inbox receipt is not confirmed.':'The email notification is pending or could not be confirmed. Contact Customer Support with your reference.')+' This is not an accepted production order.';if(general||service.value==='custom-tailoring'||priority.value==='express'&&['alterations','garment-care'].includes(service.value)){const expressService=priority.value==='express'&&['alterations','garment-care'].includes(service.value);const handoff=document.createElement('button');handoff.type='button';handoff.className='home-button home-button-gold';handoff.textContent=expressService?'Continue Express Request on WhatsApp':'Continue on WhatsApp';handoff.addEventListener('click',()=>window.MrSewingWhatsApp.open('Hello Mr Sewing. '+(expressService?'Express request ':'Quotation request ')+stored.reference+' for '+names[service.value]+'. '+(portfolio?'Project: '+portfolio.name+'. ':'')+(design&&!design.disabled&&design.value?'Design: '+(choices[design.value]||design.value)+' — '+(window.MrSelectedDesign?.resolve(context?.read()||{})?.photoURL||new URL('/collections/designs/'+design.value.toLowerCase()+'/','https://mrsewingfashion.com').href)+'. ':'')+'Priority: '+priority.value+'. '+$('requestMessage').value,handoff));success.append(handoff);const note=document.createElement('p');note.textContent='WhatsApp opens a prepared message. Choose Send inside WhatsApp. Photographs are not attached automatically.';success.append(note);}window.MrRequestUploads.complete();}success.focus();}
+catch(error){window.MrEnquiryMeasurement?.support(form,'request_submission_failed');status.textContent=error.selectedSubmission?error.message:window.MrRequestUploads?.configured?error.message:error.name==='AbortError'?'We could not confirm delivery before the timeout. Your request may have arrived. Contact Customer Support before trying again.':'We could not confirm your request. Your entries are preserved. Edit the request or try again, or contact Customer Support.';status.scrollIntoView({block:'nearest',behavior:'instant'});}
+finally{clearTimeout(timer);pending=false;send.disabled=false;edit.disabled=false;send.textContent=kind==='refund'?'Submit Refund Request':kind==='support'?'Submit Support Request':kind==='subscription'?'Submit Subscription Enquiry':kind==='consultation'?'Submit Consultation Request':'Submit Request';}
 });
 });
+
+/* Fabric Guide selection is a customer preference, not a confirmed stock or price. */
+(()=>{function apply(){const p=new URLSearchParams(location.search),value=p.get('fabricPreference');if(location.pathname!=='/request/'||p.get('general')!=='1'||!value||value.length>200)return;const field=document.getElementById('requestFabric'),message=document.getElementById('requestMessage');if(field&&!field.value){field.value=value;field.dispatchEvent(new Event('input',{bubbles:true}));}if(message&&!message.value){message.value='I would like a quotation using this fabric preference: '+value+'.';message.dispatchEvent(new Event('input',{bubbles:true}));}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();})();

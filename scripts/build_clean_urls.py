@@ -34,6 +34,8 @@ def legacy_script(name):
 def clean_document(name):
     source = (ROOT / name).read_text()
     source = LEGACY.sub('', source)
+    # The legacy .html refresh must never leak into the canonical /index.html copy.
+    source = re.sub(r'<meta\s+data-legacy-canonical-redirect\b[^>]*>', '', source, flags=re.I)
     # Modernise only legacy component mounts; preserve existing body/form controls.
     if re.search(r'<div[^>]*id="site-header"[^>]*>\s*</div>',source):
         import shared_components as shared

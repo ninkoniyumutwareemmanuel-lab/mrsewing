@@ -2,10 +2,13 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const {chromium}=require('playwright');
-const base='http://127.0.0.1:8020';
+const crypto=require('node:crypto');
+const {chromium}=(()=>{try{return require('playwright');}catch(e){if(e.code!=='MODULE_NOT_FOUND')throw e;return require('playwright-core');}})();
+const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8020';
+const entry=require('../_data/policy-documents.json').documents['terms-and-conditions'].receivedVersions.at(-1);
+const expected=entry.technicalInspection.pages;
 (async()=>{
- const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_BINARY?{executablePath:process.env.CHROMIUM_BINARY}:{}),args:['--no-sandbox']});
  try{
   fs.mkdirSync('artifacts/r55-terms',{recursive:true});
   for(const width of [320,390,768,1440]){
@@ -21,7 +24,15 @@ const base='http://127.0.0.1:8020';
    const bounds=await modal.boundingBox();
    assert(bounds&&Math.abs(bounds.width-width)<=2,'Popup fills mobile/desktop width: '+width);
    assert(Math.abs(bounds.height-height)<=3,'Popup fills mobile/desktop height: '+width);
-   assert.equal(await page.locator('.terms-popup-page').count(),5,'all original PDF pages are present');
+   assert.equal(await page.locator('.terms-popup-page').count(),expected,'all original PDF pages are present');
+   assert((await page.locator('.terms-popup-filename').innerText()).includes('v'+entry.version+'_Staging_Review.pdf'),'actual uploaded version is identified as staging review');
+   const open=page.getByRole('link',{name:'Open the staging-review PDF in a new tab'});
+   const download=page.getByRole('link',{name:'Download the original staging-review PDF'});
+   assert.equal(await open.getAttribute('href'),entry.publishedPath);
+   assert.equal(await download.getAttribute('href'),entry.publishedPath,'view and download resolve to identical document');
+   const pdf=await page.request.get(base+entry.publishedPath);
+   assert.equal(pdf.status(),200);
+   assert.equal(crypto.createHash('sha256').update(await pdf.body()).digest('hex'),entry.sha256,'served PDF bytes match registered upload');
    assert.equal(await page.locator('object[type="application/pdf"]').count(),0,'does not rely on unsupported native PDF');
    assert.equal(await page.locator('.terms-document-state').count(),0,'old brochure header has been removed');
    await page.locator('.terms-popup-page img').first().waitFor({state:'visible'});
@@ -37,7 +48,7 @@ const base='http://127.0.0.1:8020';
    if(width===390||width===1440){await page.screenshot({path:path.join('artifacts/r55-terms','terms-'+width+'.png'),fullPage:false});}
    await page.evaluate(()=>{const s=document.querySelector('[data-terms-scroll]');s.scrollTop=s.scrollHeight;});
    await page.waitForTimeout(250);
-   assert.equal(await page.locator('[data-terms-page-number]').textContent(),'5','scroll reaches final PDF page');
+   assert.equal(await page.locator('[data-terms-page-number]').textContent(),String(expected),'scroll reaches final PDF page');
    await page.locator('[data-terms-zoom-in]').click();
    const widthIn=await page.locator('[data-terms-pages]').evaluate(n=>n.clientWidth);
    await page.locator('[data-terms-zoom-out]').click();
@@ -46,7 +57,7 @@ const base='http://127.0.0.1:8020';
    assert.deepEqual(errors,[],'no page JS errors');
    await page.locator('[data-terms-close]').click();
    await page.waitForURL(base+'/',{timeout:15000});
-   console.log('PASS: R55 Chromium popup at '+width+'px, five pages, scroll/zoom/close, no plug-in');
+   console.log('PASS: R55 Chromium popup at '+width+'px, '+expected+' pages, scroll/zoom/close, no plug-in');
    await context.close();
   }
  }finally{await browser.close();}

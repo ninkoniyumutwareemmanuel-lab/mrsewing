@@ -49,3 +49,5 @@
 /service-express /services/express-tailoring/ 301
 /happy-customers.html /our-work/ 301
 /happy-customers /our-work/ 301
+/happy-customers/ /our-work/ 301
+# Staging-only R59 held R53 photo/video originals: temporary redirect to 404. Do not merge to main.

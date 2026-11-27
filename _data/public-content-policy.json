@@ -1,0 +1,13 @@
+{
+  "rule": "R51 / R67 / recovery25November2026",
+  "approvalStatus": "APPROVED FOR STAGING ONLY",
+  "servicePricesVisible": false,
+  "serviceSurchargeRatesVisible": true,
+  "shopProductPricesVisible": true,
+  "paymentObligationsVisible": true,
+  "benefitEligibilityVisible": true,
+  "existingIndividualQuotationsUnaffected": true,
+  "source": "Owner R51 quotation-first service instruction,18November2026; R67 Express quick-fact instruction,23November2026; owner master recovery,25November2026",
+  "scope": "Public service tariff schedules only. Approved payment percentages, Express/after-hours surcharge conditions, benefit eligibility, accepted quotations and customer-specific calculated delivery disclosures remain visible. Internal approved prices and Shop prices remain authoritative.",
+  "history": "R51 removed public service prices. Later main-based recovery lost its presentation adapter. R67 explicitly restored public35%Express guidance; preserve approved surcharge disclosure rather than reapply the former blanket percentage suppression."
+}

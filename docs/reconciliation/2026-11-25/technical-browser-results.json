@@ -1,0 +1,2598 @@
+{
+  "scope": "Local Chromium, all external interactions blocked; not deployed verification",
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "pages": [
+    {
+      "width": 320,
+      "route": "/",
+      "final": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/about/",
+      "final": "/about/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/contact/",
+      "final": "/contact/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/",
+      "final": "/services/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/custom-tailoring/",
+      "final": "/services/custom-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/mensuits/",
+      "final": "/mensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/womensuits/",
+      "final": "/womensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/collections/",
+      "final": "/collections/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/showroom/?audience=women&service=custom-tailoring",
+      "final": "/collections/?service=custom-tailoring&gender=women",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/alterations/",
+      "final": "/services/alterations/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/garment-care/",
+      "final": "/services/garment-care/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/mobile-fitting/",
+      "final": "/services/mobile-fitting/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/vip/",
+      "final": "/services/vip/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/express-tailoring/",
+      "final": "/services/express-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/wedding-tailoring/",
+      "final": "/services/wedding-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/graduation-tailoring/",
+      "final": "/services/graduation-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/our-work/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/guides/fabrics/",
+      "final": "/guides/fabrics/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/guides/fabrics/super/",
+      "final": "/guides/fabrics/super/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/guides/fabrics/linen/",
+      "final": "/guides/fabrics/linen/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/measurements/",
+      "final": "/measurements/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/custom-tailoring/special-order/",
+      "final": "/services/custom-tailoring/special-order/?quotationSession=9287414e-23e2-4ff4-a32b-b759de3b5ea0&service=custom-tailoring&experience=standard&order=special&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/custom-tailoring/selected-designs/",
+      "final": "/services/custom-tailoring/selected-designs/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/services/custom-tailoring/fabric/",
+      "final": "/services/custom-tailoring/fabric/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/request/",
+      "final": "/request/?service=custom-tailoring&experience=standard&order=general&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/request/alterations/",
+      "final": "/request/alterations/?service=alterations&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/request/garment-care/",
+      "final": "/request/garment-care/?service=garment-care&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/request/mobile-fitting/",
+      "final": "/request/mobile-fitting/?service=mobile-fitting&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/request/vip/",
+      "final": "/request/vip/?service=vip&experience=vip&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/booking/",
+      "final": "/booking/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/shop/",
+      "final": "/shop/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/shop/sky-blue-elegance-suit/",
+      "final": "/shop/sky-blue-elegance-suit/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "route": "/customer-information/",
+      "final": "/customer-information/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/our-process/",
+      "final": "/our-process/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/delivery-and-collection/",
+      "final": "/delivery-and-collection/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/refund-policy/",
+      "final": "/refund-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/privacy-policy/",
+      "final": "/privacy-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/faq/",
+      "final": "/faq/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/faq/prices-packages-payments/",
+      "final": "/faq/prices-packages-payments/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/faq/cancellations-changes/",
+      "final": "/faq/cancellations-changes/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/terms-and-conditions/",
+      "final": "/terms-and-conditions/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/terms-and-conditions/current/",
+      "final": "/terms-and-conditions/current/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/why-choose/",
+      "final": "/why-choose/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 320,
+      "route": "/happy-customers/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/mensuits/single-breasted/",
+      "final": "/mensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/mensuits/double-breasted/",
+      "final": "/mensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/mensuits/three-piece/",
+      "final": "/mensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/mensuits/tuxedos-formalwear/",
+      "final": "/mensuits/tuxedos-formalwear/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/mensuits/kaunda/",
+      "final": "/mensuits/kaunda/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/womensuits/single-breasted/",
+      "final": "/womensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/womensuits/double-breasted/",
+      "final": "/womensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/womensuits/skirt-suits/",
+      "final": "/womensuits/skirt-suits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 320,
+      "route": "/womensuits/three-piece/",
+      "final": "/womensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 320,
+        "width": 320
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "final": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/about/",
+      "final": "/about/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/contact/",
+      "final": "/contact/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/",
+      "final": "/services/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/custom-tailoring/",
+      "final": "/services/custom-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/mensuits/",
+      "final": "/mensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/womensuits/",
+      "final": "/womensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/collections/",
+      "final": "/collections/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/showroom/?audience=women&service=custom-tailoring",
+      "final": "/collections/?service=custom-tailoring&gender=women",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/alterations/",
+      "final": "/services/alterations/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/garment-care/",
+      "final": "/services/garment-care/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/mobile-fitting/",
+      "final": "/services/mobile-fitting/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/vip/",
+      "final": "/services/vip/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/express-tailoring/",
+      "final": "/services/express-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/wedding-tailoring/",
+      "final": "/services/wedding-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/graduation-tailoring/",
+      "final": "/services/graduation-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/our-work/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/guides/fabrics/",
+      "final": "/guides/fabrics/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/guides/fabrics/super/",
+      "final": "/guides/fabrics/super/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/guides/fabrics/linen/",
+      "final": "/guides/fabrics/linen/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/measurements/",
+      "final": "/measurements/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/custom-tailoring/special-order/",
+      "final": "/services/custom-tailoring/special-order/?quotationSession=fbabac98-aa43-4551-9076-a0b2f697dbdf&service=custom-tailoring&experience=standard&order=special&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/custom-tailoring/selected-designs/",
+      "final": "/services/custom-tailoring/selected-designs/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/services/custom-tailoring/fabric/",
+      "final": "/services/custom-tailoring/fabric/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/request/",
+      "final": "/request/?service=custom-tailoring&experience=standard&order=general&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/request/alterations/",
+      "final": "/request/alterations/?service=alterations&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/request/garment-care/",
+      "final": "/request/garment-care/?service=garment-care&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/request/mobile-fitting/",
+      "final": "/request/mobile-fitting/?service=mobile-fitting&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/request/vip/",
+      "final": "/request/vip/?service=vip&experience=vip&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/booking/",
+      "final": "/booking/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/shop/",
+      "final": "/shop/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/shop/sky-blue-elegance-suit/",
+      "final": "/shop/sky-blue-elegance-suit/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "route": "/customer-information/",
+      "final": "/customer-information/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/our-process/",
+      "final": "/our-process/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/delivery-and-collection/",
+      "final": "/delivery-and-collection/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/refund-policy/",
+      "final": "/refund-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/privacy-policy/",
+      "final": "/privacy-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/faq/",
+      "final": "/faq/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/faq/prices-packages-payments/",
+      "final": "/faq/prices-packages-payments/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/faq/cancellations-changes/",
+      "final": "/faq/cancellations-changes/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/terms-and-conditions/",
+      "final": "/terms-and-conditions/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/terms-and-conditions/current/",
+      "final": "/terms-and-conditions/current/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/why-choose/",
+      "final": "/why-choose/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 390,
+      "route": "/happy-customers/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/mensuits/single-breasted/",
+      "final": "/mensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/mensuits/double-breasted/",
+      "final": "/mensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/mensuits/three-piece/",
+      "final": "/mensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/mensuits/tuxedos-formalwear/",
+      "final": "/mensuits/tuxedos-formalwear/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/mensuits/kaunda/",
+      "final": "/mensuits/kaunda/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/womensuits/single-breasted/",
+      "final": "/womensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/womensuits/double-breasted/",
+      "final": "/womensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/womensuits/skirt-suits/",
+      "final": "/womensuits/skirt-suits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 390,
+      "route": "/womensuits/three-piece/",
+      "final": "/womensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 390,
+        "width": 390
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "final": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/about/",
+      "final": "/about/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/contact/",
+      "final": "/contact/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/",
+      "final": "/services/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/custom-tailoring/",
+      "final": "/services/custom-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/mensuits/",
+      "final": "/mensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/womensuits/",
+      "final": "/womensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/collections/",
+      "final": "/collections/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/showroom/?audience=women&service=custom-tailoring",
+      "final": "/collections/?service=custom-tailoring&gender=women",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/alterations/",
+      "final": "/services/alterations/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/garment-care/",
+      "final": "/services/garment-care/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/mobile-fitting/",
+      "final": "/services/mobile-fitting/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/vip/",
+      "final": "/services/vip/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/express-tailoring/",
+      "final": "/services/express-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/wedding-tailoring/",
+      "final": "/services/wedding-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/graduation-tailoring/",
+      "final": "/services/graduation-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/our-work/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/guides/fabrics/",
+      "final": "/guides/fabrics/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/guides/fabrics/super/",
+      "final": "/guides/fabrics/super/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/guides/fabrics/linen/",
+      "final": "/guides/fabrics/linen/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/measurements/",
+      "final": "/measurements/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/custom-tailoring/special-order/",
+      "final": "/services/custom-tailoring/special-order/?quotationSession=dc13a802-9bd0-48ed-ae3a-853e5e236a8d&service=custom-tailoring&experience=standard&order=special&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/custom-tailoring/selected-designs/",
+      "final": "/services/custom-tailoring/selected-designs/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/services/custom-tailoring/fabric/",
+      "final": "/services/custom-tailoring/fabric/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/request/",
+      "final": "/request/?service=custom-tailoring&experience=standard&order=general&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/request/alterations/",
+      "final": "/request/alterations/?service=alterations&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/request/garment-care/",
+      "final": "/request/garment-care/?service=garment-care&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/request/mobile-fitting/",
+      "final": "/request/mobile-fitting/?service=mobile-fitting&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/request/vip/",
+      "final": "/request/vip/?service=vip&experience=vip&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/booking/",
+      "final": "/booking/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/shop/",
+      "final": "/shop/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/shop/sky-blue-elegance-suit/",
+      "final": "/shop/sky-blue-elegance-suit/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "route": "/customer-information/",
+      "final": "/customer-information/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/our-process/",
+      "final": "/our-process/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/delivery-and-collection/",
+      "final": "/delivery-and-collection/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/refund-policy/",
+      "final": "/refund-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/privacy-policy/",
+      "final": "/privacy-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/faq/",
+      "final": "/faq/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/faq/prices-packages-payments/",
+      "final": "/faq/prices-packages-payments/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/faq/cancellations-changes/",
+      "final": "/faq/cancellations-changes/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/terms-and-conditions/",
+      "final": "/terms-and-conditions/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/terms-and-conditions/current/",
+      "final": "/terms-and-conditions/current/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/why-choose/",
+      "final": "/why-choose/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 768,
+      "route": "/happy-customers/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/mensuits/single-breasted/",
+      "final": "/mensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/mensuits/double-breasted/",
+      "final": "/mensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/mensuits/three-piece/",
+      "final": "/mensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/mensuits/tuxedos-formalwear/",
+      "final": "/mensuits/tuxedos-formalwear/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/mensuits/kaunda/",
+      "final": "/mensuits/kaunda/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/womensuits/single-breasted/",
+      "final": "/womensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/womensuits/double-breasted/",
+      "final": "/womensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/womensuits/skirt-suits/",
+      "final": "/womensuits/skirt-suits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 768,
+      "route": "/womensuits/three-piece/",
+      "final": "/womensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 768,
+        "width": 768
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "final": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/about/",
+      "final": "/about/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/contact/",
+      "final": "/contact/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/",
+      "final": "/services/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/custom-tailoring/",
+      "final": "/services/custom-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/mensuits/",
+      "final": "/mensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/womensuits/",
+      "final": "/womensuits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/collections/",
+      "final": "/collections/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/showroom/?audience=women&service=custom-tailoring",
+      "final": "/collections/?service=custom-tailoring&gender=women",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/alterations/",
+      "final": "/services/alterations/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/garment-care/",
+      "final": "/services/garment-care/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/mobile-fitting/",
+      "final": "/services/mobile-fitting/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/vip/",
+      "final": "/services/vip/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/express-tailoring/",
+      "final": "/services/express-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/wedding-tailoring/",
+      "final": "/services/wedding-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/graduation-tailoring/",
+      "final": "/services/graduation-tailoring/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/our-work/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/guides/fabrics/",
+      "final": "/guides/fabrics/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/guides/fabrics/super/",
+      "final": "/guides/fabrics/super/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/guides/fabrics/linen/",
+      "final": "/guides/fabrics/linen/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/measurements/",
+      "final": "/measurements/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/custom-tailoring/special-order/",
+      "final": "/services/custom-tailoring/special-order/?quotationSession=56c7ea76-cd66-445c-b310-e43ac844972b&service=custom-tailoring&experience=standard&order=special&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/custom-tailoring/selected-designs/",
+      "final": "/services/custom-tailoring/selected-designs/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/services/custom-tailoring/fabric/",
+      "final": "/services/custom-tailoring/fabric/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/request/",
+      "final": "/request/?service=custom-tailoring&experience=standard&order=general&priority=standard&afterHours=no&category=women&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/request/alterations/",
+      "final": "/request/alterations/?service=alterations&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/request/garment-care/",
+      "final": "/request/garment-care/?service=garment-care&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/request/mobile-fitting/",
+      "final": "/request/mobile-fitting/?service=mobile-fitting&experience=standard&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/request/vip/",
+      "final": "/request/vip/?service=vip&experience=vip&order=general&priority=standard&afterHours=no&fabricChoice=advice",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/booking/",
+      "final": "/booking/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/shop/",
+      "final": "/shop/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/shop/sky-blue-elegance-suit/",
+      "final": "/shop/sky-blue-elegance-suit/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "route": "/customer-information/",
+      "final": "/customer-information/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/our-process/",
+      "final": "/our-process/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/delivery-and-collection/",
+      "final": "/delivery-and-collection/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/refund-policy/",
+      "final": "/refund-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/privacy-policy/",
+      "final": "/privacy-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/faq/",
+      "final": "/faq/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/faq/prices-packages-payments/",
+      "final": "/faq/prices-packages-payments/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/faq/cancellations-changes/",
+      "final": "/faq/cancellations-changes/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/terms-and-conditions/",
+      "final": "/terms-and-conditions/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/terms-and-conditions/current/",
+      "final": "/terms-and-conditions/current/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/why-choose/",
+      "final": "/why-choose/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "noindex, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/happy-customers/",
+      "final": "/our-work/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/mensuits/single-breasted/",
+      "final": "/mensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/mensuits/double-breasted/",
+      "final": "/mensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/mensuits/three-piece/",
+      "final": "/mensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/mensuits/tuxedos-formalwear/",
+      "final": "/mensuits/tuxedos-formalwear/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/mensuits/kaunda/",
+      "final": "/mensuits/kaunda/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/womensuits/single-breasted/",
+      "final": "/womensuits/single-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/womensuits/double-breasted/",
+      "final": "/womensuits/double-breasted/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/womensuits/skirt-suits/",
+      "final": "/womensuits/skirt-suits/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    },
+    {
+      "width": 1440,
+      "route": "/womensuits/three-piece/",
+      "final": "/womensuits/three-piece/",
+      "status": 200,
+      "h1": 1,
+      "overflow": {
+        "viewport": 1440,
+        "width": 1440
+      },
+      "jsRobots": "index, follow"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "violations": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/services/custom-tailoring/",
+      "violations": []
+    },
+    {
+      "route": "/guides/fabrics/",
+      "violations": []
+    },
+    {
+      "route": "/faq/",
+      "violations": []
+    }
+  ],
+  "interactions": {
+    "showroomCompatibility": "PASS oldaudience translated; service/selectioncontext/hash preserved",
+    "legacyDesignContext": "PASS existingexactdetailredirect preservesvaliddesign/photo/servicecontext; normalpublicURLcleaningretained",
+    "termsReader": "PASS scrolling/directPDF/downloadidentity/keyboardcloseandnavigation"
+  },
+  "screenshots": [
+    "/workspace/artifacts/recovery-2026-11-25/home-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/about-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/services-custom-tailoring-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/collections-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/guides-fabrics-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/refund-policy-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/terms-and-conditions-390.png",
+    "/workspace/artifacts/recovery-2026-11-25/home-1440.png",
+    "/workspace/artifacts/recovery-2026-11-25/about-1440.png",
+    "/workspace/artifacts/recovery-2026-11-25/services-custom-tailoring-1440.png",
+    "/workspace/artifacts/recovery-2026-11-25/collections-1440.png",
+    "/workspace/artifacts/recovery-2026-11-25/guides-fabrics-1440.png",
+    "/workspace/artifacts/recovery-2026-11-25/refund-policy-1440.png",
+    "/workspace/artifacts/recovery-2026-11-25/terms-and-conditions-1440.png"
+  ],
+  "externalPosts": 0,
+  "status": "PASS"
+}

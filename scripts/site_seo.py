@@ -38,6 +38,9 @@ INDEXABLE_ROUTES = {
     *[shop_product_route(p) for p in shop_products()],
     *[category_route(c) for c in shop_categories()],
 }
+from shop_release_hold import public_indexing, public_page_navigation
+if not public_indexing():
+    INDEXABLE_ROUTES = {route for route in INDEXABLE_ROUTES if not route.startswith('/shop/')}
 STAGING='<script data-staging-indexing>if(location.hostname.endsWith(".pages.dev")){const m=document.querySelector(\'meta[name="robots"]\');if(m)m.content="noindex, nofollow";}</script>'
 def route_for(path):
     rel=Path(path).relative_to(ROOT)
@@ -48,6 +51,7 @@ def route_for(path):
     return '/'+(str(rel.parent) if rel.name=='index.html' else str(rel.with_suffix(''))) .strip('/')+'/'
 def finalize(source,path):
     route=route_for(path)
+    source=public_page_navigation(source)
     # Use a square favicon while preserving the approved non-square logo asset.
     source=re.sub(r'<link\b[^>]*\brel=["\'](?:icon|shortcut icon)["\'][^>]*>',lambda m:re.sub(r'\btype=["\'][^"\']*["\']','type="image/png"',re.sub(r'\bhref=["\'][^"\']*["\']','href="/assets/images/favicon-192.png"',m[0])),source,flags=re.I)
     override=json.loads((ROOT/'_data/public-page-seo.json').read_text()).get(route)
@@ -62,13 +66,17 @@ def finalize(source,path):
     for asset in ['customer-site.js','request-draft.js','customer-refinements.js']:
         source=re.sub(r'src="/assets/'+re.escape(asset)+r'(?:\?v=[^"]*)?"','src="/assets/'+asset+'?v=staging-r49"',source)
     source=re.sub(r'<script id="designSelectionData".*?</script>|<script src="/assets/design-selections.js[^"]*" defer></script>|<link rel="stylesheet" href="/assets/design-selections.css[^\"]*">','',source,flags=re.S)
-    if route.startswith(('/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
+    if route=='/collections/' or route.startswith(('/mensuits/','/womensuits/','/collections/designs/','/services/custom-tailoring/','/request/','/our-work/','/guides/fabrics/')):
         refs=json.loads((ROOT/'_data/request-reference-allowlist.json').read_text());slugs={d['id']:d['slug'] for d in json.loads((ROOT/'_data/collection-designs.json').read_text())['designs']}
         for id,d in refs.items():d['id']=id;d['route']='/collections/designs/'+slugs[id]+'/'
         from customer_policies import facts as _facts
-        fabrics={f['id']:f for f in json.loads((ROOT/'_data/fabric-reference-catalogue.json').read_text())['fabrics']}
-        selection_data={'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics,'colours':{c['id']:c for c in json.loads((ROOT/'_data/fabric-colours.json').read_text())['colours']},'colourGroups':json.loads((ROOT/'_data/fabric-colours.json').read_text()).get('groups',[])}
-        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=staging-r49" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r49"></head>',1)
+        fabrics=__import__('customer_guides').request_fabrics()
+        selection_data={'patterns':__import__('fabric_collections').patterns(),'designs':refs,'projects':json.loads((ROOT/'_data/portfolio-request-allowlist.json').read_text()),'fabrics':fabrics,'colours':{c['id']:c for c in json.loads((ROOT/'_data/fabric-colours.json').read_text())['colours']},'colourGroups':json.loads((ROOT/'_data/fabric-colours.json').read_text()).get('groups',[])}
+        source=source.replace('</head>','<script id="designSelectionData" type="application/json">'+json.dumps(selection_data,ensure_ascii=False).replace('<','\\u003c')+'</script><script src="/assets/design-selections.js?v=recovery-20261125" defer></script><link rel="stylesheet" href="/assets/design-selections.css?v=staging-r49"></head>',1)
+    #26Nov presentation/controller release: refresh changed assets without
+    #changing approved canonical URLs or environment-specific indexing rules.
+    for asset in ['design-selections.js','design-selections.css','customer-site.js','request-draft.js','commerce.js','homepage.js','about-navigation.js','contact-navigation.js','collections-navigation.js','journey-navigation.js','collections-v3.js','fabric-showroom.js','fabric-showroom.css','service-landings.css']:
+        source=re.sub(r'(?P<attribute>src|href)="/assets/'+re.escape(asset)+r'(?:\?[^"]*)?"',lambda m:m['attribute']+'="/assets/'+asset+'?v=experience-20261126"',source)
     source=re.sub(r'<script data-staging-indexing>.*?</script>','',source,flags=re.S)
     source=re.sub(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>','',source,flags=re.I)
     rel=Path(path).relative_to(ROOT);aliases=json.loads((ROOT/'_data/route-aliases.json').read_text())
@@ -84,6 +92,17 @@ def finalize(source,path):
     source=source.replace('</head>','<meta name="robots" content="'+robots+'">'+STAGING+'</head>',1)
     from whatsapp_consent import protect
     source=protect(source)
-    source=re.sub(r'<script src="/assets/customer-interactions.js" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
-    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js" defer></script></head>',1)
+    source=re.sub(r'<script src="/assets/customer-interactions[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/customer-interactions.css">','',source)
+    source=re.sub(r'<script src="/assets/enquiry-measurement[.]js(?:\?[^"]*)?" defer></script>','',source)
+    source=re.sub(r'<script src="/assets/(?:customer-tracking|meta-event-adapter)[.]js(?:\?[^"]*)?" defer></script>|<link rel="stylesheet" href="/assets/customer-tracking[.]css(?:\?[^"]*)?">','',source)
+    source=source.replace('</head>','<link rel="stylesheet" href="/assets/customer-tracking.css?v=20261127"><script src="/assets/meta-event-adapter.js?v=20261127" defer></script><script src="/assets/customer-tracking.js?v=20261127" defer></script><script src="/assets/enquiry-measurement.js?v=release-20261126" defer></script><link rel="stylesheet" href="/assets/customer-interactions.css"><script src="/assets/customer-interactions.js?v=tracking-20261127" defer></script></head>',1)
+    # GitHub Pages serves legacy .html files without interpreting Cloudflare _redirects.
+    # An instant HTML refresh is a crawler-readable canonical redirect fallback;
+    # existing data-legacy-url JavaScript still preserves query strings and hashes.
+    # Do not put a refresh on root index.html: it also serves the homepage at /.
+    source=re.sub(r'<meta\s+data-legacy-canonical-redirect\b[^>]*>', '', source, flags=re.I)
+    if rel.parent==Path('.') and rel.suffix=='.html' and rel.name!='index.html':
+        redirect='<meta data-legacy-canonical-redirect http-equiv="refresh" content="0;url='+escape(route,quote=True)+'">'
+        if source.count('</head>')!=1:raise ValueError('Expected one head on legacy page: '+rel.name)
+        source=source.replace('</head>',redirect+'</head>',1)
     return '\n'.join(line.rstrip() for line in source.splitlines())+'\n'

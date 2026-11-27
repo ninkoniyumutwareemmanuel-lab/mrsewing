@@ -17,5 +17,6 @@ def projects():
         if p.get('testimonial'):assert p['testimonial'].get('approvalEvidenceRef') and p['testimonial'].get('text')
         published.append(p)
     assert len({p['slug'] for p in records})==len(records)
-    return published
+    from media_sorting import newest_first
+    return newest_first(published)
 

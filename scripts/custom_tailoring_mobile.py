@@ -47,5 +47,6 @@ def content(service,hero,section,link):
 def decorate(source):
     from announcement_bar import decorate as with_offer
     styles=(ROOT/'_templates/custom-tailoring-mobile.css').read_text()+'\n'
+    styles+=(ROOT/'_templates/tailoring-services-hub.css').read_text()+'\n'
     source=source.replace('</style>',styles+'</style>',1).replace('class="tailoring-page customer-site"','class="tailoring-page customer-site custom-tailoring-mobile"')
     return with_offer(source)

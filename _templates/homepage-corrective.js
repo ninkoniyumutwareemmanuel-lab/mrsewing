@@ -22,3 +22,59 @@ function setupEnquiry(prefix,formId){
 }
 setupEnquiry('support','supportForm');
 })();
+
+/* R64: silent automatic suit videos with clean visuals; tap video or use Enter/Space to pause. */
+(()=>{'use strict';
+ const videos=[...document.querySelectorAll('.tailoring-video-card video[data-tailoring-loop]')];
+ if(!videos.length)return;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+ const manualPause=new WeakSet(),visible=new WeakMap();
+ function reflect(v){
+   const playing=!v.paused;
+   v.setAttribute('aria-pressed',String(playing));
+   v.setAttribute('aria-label',(playing?'Pause ':'Play ')+(v.dataset.videoTitle||'suit reference')+' video; tap or press Enter');
+ }
+ function stop(v){v.pause();reflect(v);}
+ function play(v,manual=false){
+   if(document.hidden||!visible.get(v))return;
+   if(!manual&&(reduce.matches||manualPause.has(v)))return;
+   v.muted=true;
+   try{
+     const task=v.play();
+     if(task&&typeof task.catch==='function')task.catch(()=>reflect(v));
+   }catch(_){/* Browser policy may block autoplay; the poster remains. */}
+   reflect(v);
+ }
+ function toggle(v){
+   if(v.paused){manualPause.delete(v);play(v,true);}
+   else{manualPause.add(v);stop(v);}
+ }
+ videos.forEach(v=>{
+   v.controls=false;v.muted=true;v.loop=true;v.playsInline=true;
+   v.setAttribute('role','button');v.tabIndex=0;
+   visible.set(v,false);
+   v.addEventListener('play',()=>reflect(v));
+   v.addEventListener('pause',()=>reflect(v));
+   v.addEventListener('click',()=>toggle(v));
+   v.addEventListener('keydown',e=>{
+     if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(v);}
+   });
+   reflect(v);
+ });
+ const observer=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{
+     const v=entry.target;
+     const canPlay=entry.isIntersecting&&entry.intersectionRatio>=.35;
+     visible.set(v,canPlay);
+     if(canPlay)play(v);else stop(v);
+   });
+ },{threshold:[0,.35,.65]}):null;
+ if(observer)videos.forEach(v=>observer.observe(v));
+ else videos.forEach(v=>{visible.set(v,true);play(v);});
+ function reconcile(){videos.forEach(v=>{
+   if(document.hidden||reduce.matches)stop(v);else play(v);
+ });}
+ document.addEventListener('visibilitychange',reconcile);
+ reduce.addEventListener('change',reconcile);
+ window.addEventListener('pagehide',()=>videos.forEach(stop));
+})();

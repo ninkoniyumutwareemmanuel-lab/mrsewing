@@ -17,23 +17,25 @@ def legacy_header(page='/'):
     markup = (SHARED/'header.html').read_text().rstrip()
     if page != '/':
         markup = markup.replace('href="#customers-section"', 'href="/#customers-section"').replace('href="#services"', 'href="/#services"')
-    return markup.replace(f'<a href="{page}">', f'<a href="{page}" aria-current="page">', 1)
+    from shop_release_hold import public_navigation
+    return public_navigation(markup.replace(f'<a href="{page}">', f'<a href="{page}" aria-current="page">', 1))
 
 def footer():
     from custom_tailoring import component
     return component('footer')+'<script src="/assets/request-context.js" defer></script>'
 
 def legacy_footer():
-    return (SHARED/'footer.html').read_text().rstrip()
+    from shop_release_hold import public_navigation
+    return public_navigation((SHARED/'footer.html').read_text().rstrip())
 
 def site_css():
-    return (SHARED/'site.css').read_text()
+    return (SHARED/'site.css').read_text()+'\n'+(SHARED/'navigation.css').read_text()
 
 def menu_script():
     return (SHARED/'navigation.js').read_text()
 
 def component_css():
-    return shared_css(site_css())+'\n'+(ROOT/'_templates/homepage-phase1.css').read_text()+'\n.request-context-note{background:#151514;color:#ead099;border:1px solid #8d6d2c;padding:14px;font-size:14px;line-height:1.6;margin:20px auto;max-width:1100px}'
+    return shared_css(site_css())+'\n'+(ROOT/'_templates/homepage-phase1.css').read_text()+'\n'+(SHARED/'navigation.css').read_text()+'\n.request-context-note{background:#151514;color:#ead099;border:1px solid #8d6d2c;padding:14px;font-size:14px;line-height:1.6;margin:20px auto;max-width:1100px}'
 
 def shared_css(source):
     """Select common design rules without shipping homepage gallery/hero styles.
@@ -75,13 +77,14 @@ at-rules fail explicitly so a future design change cannot silently corrupt CSS.
 
 
 def services_picker(label='Explore Our Services'):
-    """Reuse exactly the header's service links; there is no second navigation list."""
+    """Use the preserved five service destinations in the About Us picker."""
     from html import escape
-    source=(ROOT/'_templates/homepage-header.html').read_text()
-    match=re.search(r'<li class="services-dropdown">\s*(<details(?:\s[^>]*)?>.*?</details>)\s*</li>',source,re.S)
+    source=(ROOT/'_templates/services-picker-source.html').read_text()
+    match=re.search(r'<li class="services-dropdown"(?:\s[^>]*)?>\s*(<details(?:\s[^>]*)?>.*?</details>)\s*</li>',source,re.S)
     if not match:raise ValueError('The approved header Services component was not found')
     fragment=match[1]
     if len(re.findall(r'<a\b',fragment))!=5:raise ValueError('Expected the five approved Services destinations')
     fragment=fragment.replace('<details>','<details class="about-services-picker" data-service-picker>',1)
     fragment=re.sub(r'<summary>.*?</summary>',lambda _: '<summary class="home-button home-button-gold" role="button" aria-expanded="false">'+escape(label)+' <span aria-hidden="true">⌄</span></summary>',fragment,count=1,flags=re.S)
-    return fragment
+    from customer_interface import navigation_labels
+    return navigation_labels(fragment)

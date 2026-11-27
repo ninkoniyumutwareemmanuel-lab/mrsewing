@@ -1,0 +1,720 @@
+{
+  "investigationDate": "2026-11-25",
+  "scope": "READ-ONLY localworkspace/artifact/attachment audit, supplemented by fetchedrefs; root handlesliveGitHubCloudflare/finalimplementation",
+  "initialLocalHead": "cb245b573156ac7805e0d5ff10accba277222175",
+  "initialRemoteMain": "33620fe4dc38ec81905fd2556a19db15f5c06db3",
+  "initialRemoteStaging": "0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+  "localBranches": [
+    {
+      "branch": "phase1/customer-journey-repairs",
+      "commit": "cb245b573156ac7805e0d5ff10accba277222175",
+      "commitsOutsideCurrentMainAndStaging": 4
+    },
+    {
+      "branch": "production-release-2026-11-11",
+      "commit": "4d972f29417fa60366ebdb6348e1599208f6ae08",
+      "commitsOutsideCurrentMainAndStaging": 0
+    },
+    {
+      "branch": "production/parity-repair-2026-11-06",
+      "commit": "bae385ec7c12e99178b1d8b20f35737ba645ace2",
+      "commitsOutsideCurrentMainAndStaging": 0
+    },
+    {
+      "branch": "review/customer-policy-2026-11-07",
+      "commit": "16214a75ca60e02054b5af2fb6ae6b64e89723b2",
+      "commitsOutsideCurrentMainAndStaging": 0
+    },
+    {
+      "branch": "staging-adjustments-2026-11-11",
+      "commit": "84b33d611c8f5b6a4a4bf0d68c2a815c3bbcc97b",
+      "commitsOutsideCurrentMainAndStaging": 0
+    },
+    {
+      "branch": "work",
+      "commit": "ba27bab0425a9df1948fe8f45dd3b941cb322f4c",
+      "commitsOutsideCurrentMainAndStaging": 0
+    }
+  ],
+  "stashes": [],
+  "recoverableBackup": {
+    "head": "cb245b573156ac7805e0d5ff10accba277222175",
+    "branch": "phase1/customer-journey-repairs",
+    "trackedChanged": 348,
+    "untracked": 177,
+    "archiveSha256": "f862fa76fa79c8637286966d727ec345194ea41232979d777683ac0af76a7c20"
+  },
+  "attachments": [
+    {
+      "path": "/workspace/attachments/06102922-450b-49e8-bc99-d8ae01a585e8/Pasted text.txt",
+      "sha256": "2bf4e74c3eeb859909c3584f1e0b3ee0d0e12421ca95fc9f724042a6873eb0c5",
+      "title": "# CODEX — FINAL MR SEWING FASHION HOMEPAGE CORRECTIONS",
+      "bytes": 11497,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/4d221152-8e48-43cf-a035-a90d180aa3d4/Pasted text.txt",
+      "sha256": "2e7a6a230cd16c581305236b89427bf4a299b2613fdebac2e912d69e17e3c98e",
+      "title": "# MR SEWING FASHION — COMPLETE WEBSITE CORRECTIONS AND CUSTOMER JOURNEY UPDATE",
+      "bytes": 21973,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/52933429-1bae-4e30-b551-9dfcfbc7bc0b/Pasted text.txt",
+      "sha256": "97287a16230c423647d7219d7050c994a2cd4e97dae9189b689c29da0701b18c",
+      "title": "# MR SEWING FASHION — VERSION 2 WEBSITE CORRECTIONS, IMPLEMENTATION & STAGING VERIFICATION",
+      "bytes": 20518,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/7472d17e-7d54-4ce0-a1c3-b15c2998482e/Pasted text.txt",
+      "sha256": "2e7a6a230cd16c581305236b89427bf4a299b2613fdebac2e912d69e17e3c98e",
+      "title": "# MR SEWING FASHION — COMPLETE WEBSITE CORRECTIONS AND CUSTOMER JOURNEY UPDATE",
+      "bytes": 21973,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/814eac2c-7db9-4bfe-8c99-4efe313e5899/Pasted text.txt",
+      "sha256": "9cba4fb25b09e05b4e4fe6bcb44fd7d9f550580de6ada4c6f4b5fbd0d40619af",
+      "title": "# CODEX IMPLEMENTATION TASK — MR SEWING FASHION HOMEPAGE",
+      "bytes": 13847,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/a8ff5527-8ccb-45ac-9ccc-b7a973e158f1/Pasted text.txt",
+      "sha256": "630d3f0e5e5cecbcf55c02e917aee940179f2b30ac66a409ceb02d5c751b0cde",
+      "title": "# CODEX TASK — MR SEWING FASHION HOMEPAGE IMPROVEMENT",
+      "bytes": 15398,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/ad5d0b6c-c006-4c8a-bd09-9692345f7588/Pasted text.txt",
+      "sha256": "2e7a6a230cd16c581305236b89427bf4a299b2613fdebac2e912d69e17e3c98e",
+      "title": "# MR SEWING FASHION — COMPLETE WEBSITE CORRECTIONS AND CUSTOMER JOURNEY UPDATE",
+      "bytes": 21973,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/af645ab5-682e-46f0-9d40-ab1ef5e83efe/Pasted text.txt",
+      "sha256": "630d3f0e5e5cecbcf55c02e917aee940179f2b30ac66a409ceb02d5c751b0cde",
+      "title": "# CODEX TASK — MR SEWING FASHION HOMEPAGE IMPROVEMENT",
+      "bytes": 15398,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/c1fbd13b-867e-4a87-a255-3c080c3cee86/Pasted text.txt",
+      "sha256": "2e7a6a230cd16c581305236b89427bf4a299b2613fdebac2e912d69e17e3c98e",
+      "title": "# MR SEWING FASHION — COMPLETE WEBSITE CORRECTIONS AND CUSTOMER JOURNEY UPDATE",
+      "bytes": 21973,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    },
+    {
+      "path": "/workspace/attachments/ff81da60-3cfc-4344-86f4-081d4e1d593c/Pasted text.txt",
+      "sha256": "2e7a6a230cd16c581305236b89427bf4a299b2613fdebac2e912d69e17e3c98e",
+      "title": "# MR SEWING FASHION — COMPLETE WEBSITE CORRECTIONS AND CUSTOMER JOURNEY UPDATE",
+      "bytes": 21973,
+      "relevance": "Historical owner website instructions; no v1.1 Terms source or25Novemberpolicy document."
+    }
+  ],
+  "uniqueAttachmentPayloads": 5,
+  "reportIndex": [
+    {
+      "path": "/workspace/review/commerce/REPORT.md",
+      "sha256": "7852b83f2c4fd12fbd3f06b7947f3b131a53ed1fccd87666c8a863bba60480dc",
+      "title": "# Loyalty, Referral & Shop — Staging Implementation Report",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/consultation/REPORT.md",
+      "sha256": "654018ff988c2ceb7012cebb118c25006df6ad3c56c2a6404722e1a0a47a09d8",
+      "title": "# Mr Sewing Fashion — consultation form implementation report",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/consultation-correction/REPORT.md",
+      "sha256": "2a961b740a7b81ec50f4ef4db1651454b339d0af9f9b5ec7296de06af1ea9d75",
+      "title": "# Mr Sewing Fashion — consultation design-reference correction",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/custom-tailoring-final-2026-11-12/DEPLOYMENT_REPORT.md",
+      "sha256": "9c8217c4e6ebeb7bbe425f0bc825d1915073002fcda8b1884e7639efcd31752e",
+      "title": "# R36 staging delivery — 12 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/custom-tailoring-mobile-2026-11-12/DEPLOYMENT_REPORT.md",
+      "sha256": "b8e0a731856ef8c65aee0e5ef1704eac01af12e8164db397d6e0881b86fa9b65",
+      "title": "# R35 staging delivery — 12 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/custom-tailoring-release-2026-11-13/FINAL_REPORT.md",
+      "sha256": "8bc78119f7ce5e926c46fedb356c6042651fd2243081982ffbb2c536432ffb2f",
+      "title": "# R49 — Custom Tailoring completion and prepared complete release",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/customer-policy-2026-11-07/PUBLIC_TEXT_REVIEW.md",
+      "sha256": "50018959dbcb7568b907b90ec5a50f7f16c087e5945c018d0d37db368cb64211",
+      "title": "# Proposed customer-facing text — owner review before production",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/customer-policy-2026-11-07/REFUND_RECONCILIATION_AND_PROPOSALS.md",
+      "sha256": "985f473123683b8019c4a24056c01958b21842a977169e7dff16ec6d8ffc571a",
+      "title": "# Refund/cancellation reconciliation —20 required topics",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/design-catalogue-2026-11-19/MATCHING_REVIEW.md",
+      "sha256": "5fdc6d45d470c4acbcca20f74270ae48bc0fd7c58b0cf51d6a88d0b9c90109e5",
+      "title": "# Design catalogue — draft matching review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/design-catalogue-2026-11-19/OWNER_DRAFT.md",
+      "sha256": "1aa3b4c07a2fd911af608dd6056d3acb8b6216f39d6f69f036dbd5016d560315",
+      "title": "# MR SEWING FASHION",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/final-journeys/REPORT.md",
+      "sha256": "47ca7ac0b6235212ecc4e908c65e28750946e61b7d88f1c831e1f1e5c208512b",
+      "title": "# Final Homepage, Our Work and Customer Forms — Implementation Report",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/homepage-recheck-2026-11-06/REPORT.md",
+      "sha256": "193ec3c4cee7a48d05b25dd54521187f12bd6708980fc13d371aa656c05f6456",
+      "title": "# Homepage task — fresh verification",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/homepage-update/REPORT.md",
+      "sha256": "8f367bbd5b977395f91af300be7f08bf9dec2a371c7d6592b8c5c766d1afa363",
+      "title": "# Homepage improvement — staging review report",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/main-parity/REPORT.md",
+      "sha256": "3ce6f10ea7a29741784204194ec1a00e2791b144179417d1c38d2f7a9ce82ea5",
+      "title": "# Main/staging parity repair — 6 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/CUSTOMER_FACING_SOURCE_REGISTER.md",
+      "sha256": "797fd643843b6cbc1046f7ccac7c7fc26074d62eb95d71a103cd001221895a68",
+      "title": "# Customer-facing source register — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/CUSTOMER_JOURNEY_SPECIFICATION.md",
+      "sha256": "651a8de8056fe0495fc376731cfbeb80ccda23a077f0ee1e0368712245703c9c",
+      "title": "# Customer journey specification — Phase B",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/IMPLEMENTATION_REPORT.md",
+      "sha256": "ef136271b02a86ecb33220520201202b8109c52d8242e99b763d69195d0d1ae9",
+      "title": "# Implementation report — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md",
+      "sha256": "a6321ee2cbe02a758b57236baeff1e1f2a6ac78a9c2edaefd96f87b7da1a536d",
+      "title": "# Mr Sewing customer communication library",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md",
+      "sha256": "4fc7de211a4e007bdbadea53499fb96a888b857d049cab1dfbc313f84f99a761",
+      "title": "# Mr Sewing customer information master",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/MR_SEWING_PAGE_CONTENT_MAP.md",
+      "sha256": "3a8325cb82843087593f89f0a75c2692df0642e53d2fd9b9af23debb4b0b51da",
+      "title": "# Mr Sewing page content and button map",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/MR_SEWING_POLICY_SOURCE_MATRIX.md",
+      "sha256": "be2d3915c74267010c4937433536b323b832acad7cb327d1565d7fe369a78390",
+      "title": "# Mr Sewing policy source matrix",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md",
+      "sha256": "5ed40fcb260079309ce5b0f267aea7eaebb0c3a58e5b9f6544ecbc9a3e3398c6",
+      "title": "# Mr Sewing unresolved policy register",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/POLICY_RECONCILIATION_REPORT.md",
+      "sha256": "e195adbfa3f3f52def1175b03325f4f22d00d422e05afc1a9bef9e4612477b3a",
+      "title": "# Policy reconciliation — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/QA_REPORT.md",
+      "sha256": "150a1ab2444a61877ecfdbf10e41da8b134450045c55a66c5abbbaea3025bdb9",
+      "title": "# QA report — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/UNRESOLVED_DECISIONS.md",
+      "sha256": "d6f59f302200357b606289691bb09982678e275cb8475945b785ab0809d8b986",
+      "title": "# Unresolved decisions — owner review required",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/mrsewing-master/WEBSITE_PAGE_MAP.md",
+      "sha256": "6332b986a141e35596108e67a5910d0f78e59dfd7feff7d2be4d217d19e4eba4",
+      "title": "# Website page map — Phase B",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/new-suits-final-report.md",
+      "sha256": "a275820f72d03bf302cd49c0e685b693f80f92a68d87ef8af58d5c285dbda86e",
+      "title": "# Production photo release report — 7 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/nov6/FINAL_CORRECTION_AND_PUBLICATION_READINESS_REPORT.md",
+      "sha256": "4c756a1d7323cfffb15466504731741018044547c7f25695036caffd01bd1dac",
+      "title": "# MR SEWING FASHION — FINAL CORRECTION AND PUBLICATION READINESS REPORT",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/nov6/SCREENSHOTS.md",
+      "sha256": "0bad30680bfaf8322157dc08817360da702f52c53bb62ae9adee7c8f8dd75985",
+      "title": "#6November2026 — screenshot review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/pricing-benefits-2026-11-12/DEPLOYMENT_REPORT.md",
+      "sha256": "cbd79b74e164f235f1df4bba68fa1db1ae30824f05d41e5f1dfe22f6edf7bb5a",
+      "title": "# R37 staging deployment — 12 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/production-publication-attempt/REPORT.md",
+      "sha256": "d0883b28d99e7b37f185989efa0394e68bdade5aa3aa4f4883bb492f5bf6edb6",
+      "title": "# Mr Sewing Fashion — authorised Version1 production publication preflight",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/production-release-2026-11-11/DEPLOYMENT_REPORT.md",
+      "sha256": "67f210e48fe7b27773bb077d74a325ec678f4db9ded2930eb0f94d024131f51a",
+      "title": "# Production release — 11 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/production-release-2026-11-18/FINAL_RELEASE_REPORT.md",
+      "sha256": "ab3411174b351c0991ca930657cb630696f6870d672d2b6133c94f96ac0f8edf",
+      "title": "# Mr Sewing Fashion — production release18November2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/production-v2/REPORT.md",
+      "sha256": "edbdaccdd7844369bf460b682dfc4e09e1062d4f1b6744419953e005c52bc965",
+      "title": "# Mr Sewing Fashion — Version 2 production release check",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/publication-audit/FINAL_WEBSITE_READINESS_REPORT.md",
+      "sha256": "6a45c9f036085c61d88eae3997fad34ecc9bea8b59ac5a36a00b6eb0bf41ff2c",
+      "title": "# MR SEWING FASHION — FINAL WEBSITE IMPLEMENTATION, TESTING AND PUBLICATION READINESS REPORT",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/publication-audit/SCREENSHOT_REVIEW.md",
+      "sha256": "d28a8ddd5059381880afbc98fe8b031c8e5b07a99f6dec40153e9bf362929b3e",
+      "title": "# Mr Sewing Fashion — local screenshot review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/r51-restructure-2026-11-19/CODE_REVIEW.md",
+      "sha256": "d4a62a69702811c76527319f32255cda0f659ad6b3719ac8914eec259e54c8c5",
+      "title": "# R51 independent code review —19November2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/r51-restructure-2026-11-19/FINAL_REPORT.md",
+      "sha256": "30b1edb2f822f8828225ec9eb75d8064dcec8b2daf24caeebb060e460e4e31b9",
+      "title": "# R51 completion and staging deployment evidence",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/r52-tailoring-first-2026-11-19/FINAL_REPORT.md",
+      "sha256": "6ccce4574b35d7d393f3598a3d5eaca84d3393b8a99622558bda40c3107c6b8d",
+      "title": "# R52 final staging report",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/r53-uploaded-integration-2026-11-19/FINAL_REPORT.md",
+      "sha256": "87272d9a6ce430d8d90c527335ba5d97743fa39c30ca8b44ffddc7ff7760dabc",
+      "title": "# R53 final implementation and staging deployment evidence",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/safety-check-nov6/REPORT.md",
+      "sha256": "a8294df6d5bddff45ad5b781c86a8e805a53f764fdf451d315afee1cfc510e43",
+      "title": "# Mr Sewing Fashion — pre-publication safety check",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/seo-readonly/SEO_AND_STAGING_REVIEW.md",
+      "sha256": "ed915c842921f84a6b3af17ab864c3e664f89b525f6f01d6ecb6454d86e80fdc",
+      "title": "# Mr Sewing Fashion — read-only SEO, technical and staging review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/shop-images/REPORT.md",
+      "sha256": "07a86fbfc53d5709bf8447f7fb76a1a1630627bb277cffcdc76cc4de2724c268",
+      "title": "# Existing GitHub Shop Images — Preparation Report",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/shop-preview/FOLLOWUP_REPORT.md",
+      "sha256": "5e96a5d15994f3ecd06ce01a99ce1e39df92be9e3d92ec0f32de51ff9daed32c",
+      "title": "# Shop staging storefront preview — 6 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/shop-preview/REPORT.md",
+      "sha256": "c82248331011041926cfe700834b0febb5e686e85fd0d94400bdcf63ab817047",
+      "title": "# Shop staging storefront preview — 6 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/shop-white/NAVIGATION_REPORT.md",
+      "sha256": "14567af882d67eb0a2f7970abd161449ab67879119aa1b8da5f7b5060514acf0",
+      "title": "# Shop navigation correction — 6 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/shop-white/PAYMENT_REPORT.md",
+      "sha256": "d671fe9bc3b6660fcef739e2e35625d063b67c9124ef37622706c892dc4e4dd5",
+      "title": "# Shop payment methods — 6 November2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/shop-white/REPORT.md",
+      "sha256": "57d26f4db6a27c35a405a4d1b6a5fbecfb79ac69115f9128839738642dacabfc",
+      "title": "# White Shop and manual purchase enquiries — 6 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/staging-adjustments/DEPLOYMENT.md",
+      "sha256": "240fc6b079521ccefce5048f5615bc75dd1df9ccd934bbc76034b8d13209c1fe",
+      "title": "# Staging deployment evidence",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/sticky-special-kaunda-2026-11-12/DEPLOYMENT_REPORT.md",
+      "sha256": "f4042b519abad9265d51813c6e9fdaebda3f608f19162103ccb19e4c87262f11",
+      "title": "# R38 staging delivery — 12 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/suit-landing-refinement-2026-11-12/DEPLOYMENT_REPORT.md",
+      "sha256": "75ba3735c22f994adad5f0139a9b3e60a124a9aa9b75393dd09960ed42131b51",
+      "title": "# R39 staging delivery — 12 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/urgent-corrections/MR_SEWING_FINAL_CORRECTION_VERIFICATION_AND_WEBSITE_READINESS_REPORT.md",
+      "sha256": "363b7932a367c5113eec20b021f021dd47f93108e7cec85454a9aaba9f2cf093",
+      "title": "# MR SEWING FASHION — FINAL CORRECTION VERIFICATION AND WEBSITE READINESS REPORT",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/v1-blockers/REPORT.md",
+      "sha256": "f7e1e874bdedaeed5b0bfa3e6884237edc2939717a77dbc89d5de6aecb775387",
+      "title": "# Mr Sewing Fashion — Version1 launch blocker fixes",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/v2/REPORT.md",
+      "sha256": "d099689f899b5ce77388618be7ba2ffbc4318d399f726cb701366d56209e0c99",
+      "title": "# Mr Sewing Fashion — Version 2 implementation, QA and staging review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/review/website-corrections/IMPLEMENTATION_REPORT.md",
+      "sha256": "e05da1582ea9d92aec11659f3e6199b34f8582155e7e4fc1bacc2aaf2adc2830",
+      "title": "# Website corrections review — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/approved-service-heroes/IMPLEMENTATION_REPORT.md",
+      "sha256": "2baba6154c5c6262c35d35d7a0a30ca9406a2f0875ac5a6abb219e03a1e136c5",
+      "title": "# Approved service hero integration — R2",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/consolidated-revision/IMPLEMENTATION_REPORT.md",
+      "sha256": "03961d5d33368a2d11e4f7d206d0dde4677c300c2424b2892f4931253b1633f2",
+      "title": "# Consolidated website revision R1 — owner review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/custom-tailoring/custom-tailoring-service-review.md",
+      "sha256": "0585021c819ce5ea79e61d180e4fbe9e03dffdd11444e5ea9dd134f26378cd4f",
+      "title": "# Custom Tailoring & Suits — staging owner review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/custom-tailoring/custom-tailoring-upload-options.md",
+      "sha256": "39e8421787ad82e0fe6ccca5563977d46eee81325312d82ab8b6c93af844267a",
+      "title": "# Special Order attachments — options and recommendation",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/custom-tailoring/web3forms-official-readme.md",
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+      "title": "404: Not Found",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/guides-mobile-update/IMPLEMENTATION_REPORT.md",
+      "sha256": "c70636ee417fa1b45874cb9d5693b67fc640972a3a6c48ff01026a2aa4e730e5",
+      "title": "# Website images and customer guides — R3 staging review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/homepage-final-qa/QA-report.md",
+      "sha256": "a682bc87650c32f929e80e9b84b33e70eb9806f19ac9689cfde033ff1ed9444f",
+      "title": "# Mr Sewing Fashion — final homepage QA and sign-off review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/suit-reference-pages/IMPLEMENTATION_REPORT.md",
+      "sha256": "6cbd6166e351b7a0470a231acf182925a1d9a30de06db0fd5af919ee88a47b9c",
+      "title": "# Suit-reference pages — R4 staging review",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/urgent-corrections/READINESS_REPORT.md",
+      "sha256": "363b7932a367c5113eec20b021f021dd47f93108e7cec85454a9aaba9f2cf093",
+      "title": "# MR SEWING FASHION — FINAL CORRECTION VERIFICATION AND WEBSITE READINESS REPORT",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/urgent-corrections/STAGING_CONFIGURATION_REQUIRED.md",
+      "sha256": "efc8a18e3ae481afbb31c8c240813d021cab03974eecd9e93f7cef894c3f4a9c",
+      "title": "# Exact staging configuration and deployment investigation — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/website-corrections/IMPLEMENTATION_REPORT.md",
+      "sha256": "e05da1582ea9d92aec11659f3e6199b34f8582155e7e4fc1bacc2aaf2adc2830",
+      "title": "# Website corrections review — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    },
+    {
+      "path": "/workspace/artifacts/website-corrections/PRIVATE_REQUESTS_DEPENDENCIES.md",
+      "sha256": "bb75207a73134a5413862a051f9ebbf71a6f9ea2f3fcfe1d71f8c565076d01e5",
+      "title": "# R5 private requests and attachment readiness — 5 November 2026",
+      "review": "Full-text indexed for R54–R59/Terms1.1; key reconciliation/deployment reports substantively reviewed as cited separately."
+    }
+  ],
+  "deploymentArtifactIndex": "deployment-artifact-index.json",
+  "changes": [
+    {
+      "id": "WS01",
+      "feature": "R35–R50 established tailoring/forms/selection release",
+      "source": "/workspace/review/production-release-2026-11-18/FINAL_RELEASE_REPORT.md; R49_DEPLOYMENT_EVIDENCE.json",
+      "commit": "b2b8946882929da4ce7e0e01de4ba1511eed818a",
+      "approval": "Historical owner release instruction18November",
+      "status": "Approved and implemented historically; latest branch behavior needs current tests",
+      "decision": "Preserve valid journey behavior; old price-publication decisions superseded by quotation-first instruction."
+    },
+    {
+      "id": "WS02",
+      "feature": "R51 maintainable single-source architecture, media library, service price suppression",
+      "source": "/workspace/review/r51-restructure-2026-11-19/FINAL_REPORT.md; local R51 docs/source map",
+      "commit": "749b21d99f0dacf21d260b1adfc3ebca52a76447",
+      "approval": "Owner master task18/19November",
+      "status": "Implemented in older branch; newer main-derived architecture differs",
+      "decision": "Recover valid ownership/documentation concepts against actual latest paths; do not wholesale merge competing builders."
+    },
+    {
+      "id": "WS03",
+      "feature": "R52 tailor-first message and Terms-aware WhatsApp",
+      "source": "/workspace/review/r52-tailoring-first-2026-11-19/FINAL_REPORT.md",
+      "commit": "812aaca489bec127308520dce166b9298419d9d2",
+      "approval": "Owner follow-up19November",
+      "status": "Superseded in presentation by R59–R65",
+      "decision": "Preserve tailoring focus; latest explicit direct-chat/consent sources control current behavior."
+    },
+    {
+      "id": "WS04",
+      "feature": "25-image draft matching no-files conclusion",
+      "source": "/workspace/review/design-catalogue-2026-11-19/MATCHING_REVIEW.md",
+      "commit": "812aaca489bec127308520dce166b9298419d9d2 baseline",
+      "approval": "Draft catalogue, no publication approval at that point",
+      "status": "Superseded by actual uploadce98ee3 and R53/R61",
+      "decision": "Do not reuse historical missing-file conclusion or request owner reupload."
+    },
+    {
+      "id": "WS05",
+      "feature": "R53 25photos/22designvariants/17families, original25file mapping",
+      "source": "/workspace/review/r53-uploaded-integration-2026-11-19/FINAL_REPORT.md; docs/R53_IMAGE_MATCHING.md in oldlocalcheckout",
+      "commit": "cb245b573156ac7805e0d5ff10accba277222175",
+      "approval": "Owner corrective upload implementation19November; laterR61mediaauthorization",
+      "status": "Implemented olderbranch; latest main-derived design data must be compared individually",
+      "decision": "Recover names/grouping/mapping if missing; later actual owner media permission supersedes blanket R53hold where applicable."
+    },
+    {
+      "id": "WS06",
+      "feature": "R54 unfinished uncommitted redesign",
+      "source": "/workspace/mrsewing dirtytree; /workspace/review/r54-redesign-2026-11-20/source.json, browser-partial.json",
+      "commit": "uncommitted aftercb245b5",
+      "approval": "Owner20November scope, later superseded in part",
+      "status": "Approved but incomplete/notdeployed;348trackedchanges/177untracked captured",
+      "decision": "Preserve archive. SourcecheckPASS;8widthlayout/6axe partialPASS; fulljourney browser failed stale selector; noR54commit/deployment evidence. Reconcile useful fixes only against latestR59–R67."
+    },
+    {
+      "id": "WS07",
+      "feature": "R54 silent-video derivatives",
+      "source": "_media/prepared in olddirtycheckout; docs/R54_SILENT_MEDIA.md",
+      "commit": "uncommitted",
+      "approval": "Owner approved silent technical copies20November; laterR61publication",
+      "status": "Prepared then superseded by R61silent assets/posters",
+      "decision": "Preserve originals and archive oldderivatives; use newer verified assets/videos/suit-light-silent.mp4 and suit-black-silent.mp4 rather than duplicate physicalfiles."
+    },
+    {
+      "id": "WS08",
+      "feature": "R54 category config/sorting/ShopBackorder/PDFcurrentroute",
+      "source": "olddirty _data/clothing-categories.json, media-ordering.json and builders",
+      "commit": "uncommitted",
+      "approval": "Owner20November; reimplementedR59",
+      "status": "Superseded by R59 implementations",
+      "decision": "Latest _data/clothing-category-config.json, scripts/media_sorting.py, Shopstatuses and terms_reader.py are current architecture. Do not create duplicate centraldata sources."
+    },
+    {
+      "id": "WS09",
+      "feature": "R55–R58 fullscreenTerms and homepage preservation/restoration",
+      "source": "remote work/r55*,work/r56*,work/r57*,work/r58* refs; latestR59source docs",
+      "commit": "4d7c2826,47b5966b,3bcf142d,3e0c73b6",
+      "approval": "Dated branch docs/history, subsequentR59directive",
+      "status": "Historical/superseded homepage proposals; Termsreader carried into main",
+      "decision": "Do not restore R54 orR56homepage merely because latestlocaldirtytree contains it."
+    },
+    {
+      "id": "WS10",
+      "feature": "R59 universal /collections/ Showroom and central hub",
+      "source": "docs/R59_TAILORING_FIRST_STAGING_2026-11-22.md; R59_TAILORING_FIRST_OWNER_DIRECTIVE.md",
+      "commit": "1e41473b,da803bca,c179c81a,b975cbf2",
+      "approval": "Explicit22Novemberowner redesign",
+      "status": "Approved and implemented on currentremotestaging",
+      "decision": "Preserve /collections/?gender=men/women as current filter architecture, map old /showroom/ compatibly instead of duplicate galleries."
+    },
+    {
+      "id": "WS11",
+      "feature": "R61 repository media permission and actual silentclips/posters",
+      "source": "docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; _data/media-video-records.json",
+      "commit": "88533130,3a6b857c",
+      "approval": "Owner22November confirmedrepositorymedia may be used; owner-represented permission, not independentcreatorlicenseaudit",
+      "status": "Approved and implemented for2videos; remainingphoto records require current sourceaudit",
+      "decision": "Do not reapply obsolete blanketR53/R54holds to approved2videos; do not misrepresent references asOurWork."
+    },
+    {
+      "id": "WS12",
+      "feature": "R63 latesthero wording/Shopbutton/mobilevideo stacking",
+      "source": "docs/R63_STAGING_HOMEPAGE_PRESENTATION_2026-11-22.md",
+      "commit": "866f86d3",
+      "approval": "Owner22November",
+      "status": "Approved and implemented",
+      "decision": "Preserve Professional Tailoring & Custom-Made Clothing H1, Kigali SEO, goldShopnav, stackedmobile2videos."
+    },
+    {
+      "id": "WS13",
+      "feature": "R64 cleanedmotion/video controls",
+      "source": "docs/R64_CLEAN_HOMEPAGE_MOTION_2026-11-22.md",
+      "commit": "3f75b05b",
+      "approval": "Owner22November",
+      "status": "Approved and implemented",
+      "decision": "No visiblepausebuttons/captions; retain tap/keyboard/Escape/reducedmotion behavior; do not restore R54visiblepause."
+    },
+    {
+      "id": "WS14",
+      "feature": "R65 existingform popup presentation",
+      "source": "docs/R65_STAGING_FORMS_POPUP_2026-11-22.md",
+      "commit": "a5ac3bdf,99d731c1",
+      "approval": "Owner22November",
+      "status": "Approved and implemented",
+      "decision": "Retain sameoriginexistingforms/native dialog/focusrestore/standalonefallback. No duplicateforms."
+    },
+    {
+      "id": "WS15",
+      "feature": "R66 technicalSEO redirects/crawlability",
+      "source": "docs/R66_STAGING_INDEXING_REPAIR_2026-11-23.md",
+      "commit": "6891ea24,c75bb1ed,f8a85b03,0087e525",
+      "approval": "Owner SEO preservation/repair scope",
+      "status": "Approved and implemented; deployedresponse unknown",
+      "decision": "Retain sourceguards; do not infer actual permanentstaging headers/Googleindexing from localsource."
+    },
+    {
+      "id": "WS16",
+      "feature": "R67 improvedtailoringhub/customer facts",
+      "source": "docs/R67_TAILORING_HUB_CUSTOMER_GUIDE_2026-11-23.md",
+      "commit": "4c827c04,95b74713,40b5dee8,72eb3cbd",
+      "approval": "Owner23November screenshot/proposalacceptance recorded",
+      "status": "Approved and implemented",
+      "decision": "Preserve exactly2clothing+4services, customerfabricassessment, source-scopepolicyfacts; later25Novpaymentterms control exceptions."
+    },
+    {
+      "id": "WS17",
+      "feature": "Fabric seven-collection textfirst redesign",
+      "source": "currentremotestaging history291a1567,b4210fe2; owner25Novmasterconfirms",
+      "commit": "291a1567,b4210fe2",
+      "approval": "Latestownerconfirms7collections/26styles/17patterns/50colours, noimages",
+      "status": "Approved/implemented subjectfabricagentcurrenttests",
+      "decision": "Do not recover older mens/womensfabricphoto guide or simulatedillustrations."
+    },
+    {
+      "id": "WS18",
+      "feature": "25Novpolicyv1.1 staged guidance/PDFuploadrepair",
+      "source": "docs/POLICY_V1_1_OWNER_APPROVAL_2026-11-25.md; commits55cef7cc,a039e70a,0acf34dc",
+      "commit": "55cef7cc,a039e70a,0acf34dc",
+      "approval": "Owner25Novemberapprovedsixpagecontent; Librarycopy notlocallyaccessible",
+      "status": "Implemented lastremotecommitclaims exacttextverification; requires independentPDFaudit",
+      "decision": "Preserve v1.0 history/currentconsent; donotclaimactualLibrarycomparison unless bytes/textavailable."
+    },
+    {
+      "id": "WS19",
+      "feature": "Stale secondcheckout",
+      "source": "/workspace/mrsewing-production-repair/.git linkedworktree",
+      "commit": "4d972f29417fa60366ebdb6348e1599208f6ae08",
+      "approval": "Historical11Novemberrelease",
+      "status": "Historical; no trackededits; allcommitsreachablefromcurrentmain/staging",
+      "decision": "Read-onlyreference; no missingnewapprovedfeatures found here."
+    },
+    {
+      "id": "WS20",
+      "feature": "Unreachable amended customerworkflow commit",
+      "source": "gitfsck/reflogs; /workspace/recovery/2026-11-25/unreachable-reference-8bf7c118.patch",
+      "commit": "8bf7c1188d628813c8b8ca0636e9c39c14b20399",
+      "approval": "Historical5Novcustomerreferenceworkflow",
+      "status": "Historical/amended; noapplicationfeature",
+      "decision": "Preservepatch; donotrestoreoutdateddatedreference over currentrules."
+    }
+  ],
+  "unavailable": [
+    "No ChatGPT Library API/files found; /workspace/library-files is empty.",
+    "Previous ChatGPT conversations not available except currentinheritedhistory, attachedownerinstructions and saveddocs/reports.",
+    "No previous Codex task backend/sessionhistory API available; localcheckouts/reflogs/reports are accessibleevidence.",
+    "No additional private companyhandbooks/financialsources found locally; historicalreports must not be called independentverifiedoriginals.",
+    "No current independent Cloudflare/deployedHTTP verification performed by thissubtask; all historicalproviderstatus is reportedmetadata only.",
+    "Deletedremote branch history without remainingref/reflog cannot be exhaustivelyrecovered."
+  ],
+  "notes": [
+    "No implementationfile edited by thissubtask.",
+    "Artifacts include963image screenshotfiles; indexed as historicalevidence, not a claimof963visualreviews.",
+    "All44deploymentJSONfiles parsed as reportedstatus; keyR49/R51/R52/R53reports substantivelyreviewed."
+  ]
+}

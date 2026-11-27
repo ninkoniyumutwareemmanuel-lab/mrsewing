@@ -5,7 +5,7 @@ const { validate, handle } = await import(
       fs.readFileSync("functions/_lib/shop-handler.js").toString("base64")
   ),
   products = JSON.parse(
-    fs.readFileSync("/workspace/review/commerce/fixtures.json"),
+    fs.readFileSync(process.env.SHOP_FIXTURE_PATH || "/workspace/review/commerce/fixtures.json"),
   );
 const customer = {
   "Full Name": "Synthetic QA",

@@ -76,5 +76,5 @@ await reject({...base,fields:{...fields,'Additional Information':'x'.repeat(3100
 const legacy={...base,quotationDetails:undefined,fields:{...fields,'Delivery Location / Address':'Legacy fictional address','Customer Message':'Legacy request'}};await pass(legacy);assert(!('Provisional Service Assessment'in sent));assert.equal(sent['Delivery Location / Address'],'Legacy fictional address');
 const before=calls;const origin=await handleSelected(request(base,{Origin:'https://foreign.invalid'}),'synthetic',provider,NOW);assert.equal(origin.status,403);assert.equal(calls,before);
 for(const failure of[async()=>new Response('{"success":false}'),async()=>new Response('{"success":true}',{status:500}),async()=>{throw Error('Synthetic provider failure')}])assert.equal((await handleSelected(request(),'synthetic',failure,NOW)).status,502);
-assert.equal((await handleSelected(request(),'')).status,503);
+assert.equal((await handleSelected(request(),'',provider,NOW)).status,503);
 console.log('PASS V2ordinary+Special/commonprovider/futureKigalideadlines/StandardExpressboundary/conditionalmeasurements/deliveryfeesandaddresses/collection/optionalOther/completephotos+quantity/security+legacy/no real submissions');

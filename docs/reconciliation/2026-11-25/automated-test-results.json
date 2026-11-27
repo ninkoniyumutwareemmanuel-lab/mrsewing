@@ -1,0 +1,212 @@
+[
+  {
+    "command": "python tests/recovery_workflow.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.11,
+    "log": "/workspace/recovery/2026-11-25/tests/recovery_workflow.log",
+    "summary": "PASS event-commit/staging-only/read-only CI; no automatic PDF activation or generated-push race\n"
+  },
+  {
+    "command": "python tests/recovery_policies.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 3.4,
+    "log": "/workspace/recovery/2026-11-25/tests/recovery_policies.log",
+    "summary": "PASS recovery policies: exact scoped70/30/100/35+25/three-day/no-forfeiture; shared FAQ/search; quotation-first public tariffs; internal schedules/Shop/fee inputs preserved\n"
+  },
+  {
+    "command": "python tests/recovery_technical.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 17.69,
+    "log": "/workspace/recovery/2026-11-25/tests/recovery_technical.log",
+    "summary": "PASS silent-only actual-track/hash/poster/path guards; current About source;22prepared25photos with R61 rights and preserved unpublished status/grouping\nPASS recovered Showroom query compatibility/legacy destinations and publication-gated same-audience family navigation fixtures\nPASS strict website asset inventory remains enforced after excluding local QA/dependency roots\n"
+  },
+  {
+    "command": "python tests/terms_recovery.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 1.04,
+    "log": "/workspace/recovery/2026-11-25/tests/terms_recovery.log",
+    "summary": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.626s\n\nOK\n"
+  },
+  {
+    "command": "python tests/terms_reader_main_base.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.24,
+    "log": "/workspace/recovery/2026-11-25/tests/terms_reader_main_base.log",
+    "summary": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.108s\n\nOK\n"
+  },
+  {
+    "command": "python tests/seo_preservation.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.49,
+    "log": "/workspace/recovery/2026-11-25/tests/seo_preservation.log",
+    "summary": "PASS 64 canonical pages: unique titles/canonicals, descriptions/H1/alt attributes, JSON-LD syntax, local internal-link targets, distinct primary topics; staging noindex header preserved. Live responses/Google indexing not verified.\n"
+  },
+  {
+    "command": "python tests/sitemap_discovery.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 2.75,
+    "log": "/workspace/recovery/2026-11-25/tests/sitemap_discovery.log",
+    "summary": "PASS64uniqueXML/canonical/indexableURLs;allapprovedroutesdiscovered;productionrobots;private/request/draftproducts excluded;stagingnoindex\n"
+  },
+  {
+    "command": "python tests/seo_legacy_redirects.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.2,
+    "log": "/workspace/recovery/2026-11-25/tests/seo_legacy_redirects.log",
+    "summary": "PASS: 31 legacy .html redirects; canonical copies safe; staging noindex config retained.\n"
+  },
+  {
+    "command": "python tests/seo_core_services.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.1,
+    "log": "/workspace/recovery/2026-11-25/tests/seo_core_services.log",
+    "summary": "PASS: 7 core service routes have sitemap, canonical, indexable production metadata, H1, and crawlable links; staging still noindex.\n"
+  },
+  {
+    "command": "python tests/media_sorting_r59.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.74,
+    "log": "/workspace/recovery/2026-11-25/tests/media_sorting_r59.log",
+    "summary": "PASS: verified dates, unknowns, ties, filters, grouped views and held-media exclusion\n"
+  },
+  {
+    "command": "python tests/homepage_video_gate_r59.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.4,
+    "log": "/workspace/recovery/2026-11-25/tests/homepage_video_gate_r59.log",
+    "summary": "PASS: both matching video posters and playable video streams without audio\n"
+  },
+  {
+    "command": "python tests/held_media_redirects_r59.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 1.28,
+    "log": "/workspace/recovery/2026-11-25/tests/held_media_redirects_r59.log",
+    "summary": "PASS R61 owner-authorized media no longer falsely blocked; temporary unapproved media retains exact-path gate\n"
+  },
+  {
+    "command": "python tests/shop_status_r59.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.92,
+    "log": "/workspace/recovery/2026-11-25/tests/shop_status_r59.log",
+    "summary": "PASS: three availability labels, honest Shop inspiration, sale publication/stock and quote gate\n"
+  },
+  {
+    "command": "python tests/public_enquiries.py",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.13,
+    "log": "/workspace/recovery/2026-11-25/tests/public_enquiries.log",
+    "summary": "PASS26explicit public enquiry approvals;future draft excluded;changed content rejected;raw drafts/commerce publication gate preserved\n"
+  },
+  {
+    "command": "python scripts/render_terms_page_images.py --check",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 4.48,
+    "log": "/workspace/recovery/2026-11-25/tests/render_terms_page_images.log",
+    "summary": "PASS: 6 PDF-derived pages from registered staging-review version 1.2; not activated\n"
+  },
+  {
+    "command": "python scripts/import_owner_terms_v1_1.py --check",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.21,
+    "log": "/workspace/recovery/2026-11-25/tests/import_owner_terms_v1_1.log",
+    "summary": "PASS: actual uploaded Version 1.2 registered for staging review; not verified as v1.1 and not activated\n"
+  },
+  {
+    "command": "node tests/multi-design-validation.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.26,
+    "log": "/workspace/recovery/2026-11-25/tests/multi-design-validation.log",
+    "summary": "PASS canonical multi-photo/name/page/fabric/quantity reconstruction;invalid IDs/photos/projects/fabrics/quantities/duplicates/consent rejected before provider;failure preserved;no real email\n"
+  },
+  {
+    "command": "node tests/shared-fabric-validation.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.59,
+    "log": "/workspace/recovery/2026-11-25/tests/shared-fabric-validation.log",
+    "summary": "PASS sharedfabric/49colours+Other/mixed10and28designs/allphotos+qty/securecanonicalreconstruction/legacycompatibility/validation+size+failure/no real submissions\n"
+  },
+  {
+    "command": "node tests/quotation-completion-validation.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.3,
+    "log": "/workspace/recovery/2026-11-25/tests/quotation-completion-validation.log",
+    "summary": "PASS V2ordinary+Special/commonprovider/futureKigalideadlines/StandardExpressboundary/conditionalmeasurements/deliveryfeesandaddresses/collection/optionalOther/completephotos+quantity/security+legacy/no real submissions\n"
+  },
+  {
+    "command": "node tests/selected-photo-validation.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.28,
+    "log": "/workspace/recovery/2026-11-25/tests/selected-photo-validation.log",
+    "summary": "PASS 35 approved design/project image mappings; canonical image normalization, foreign/external URL rejection, fabric/terms/honeypot validation, positive-only provider response and4failure modes; no actual email/files/storage\n"
+  },
+  {
+    "command": "node tests/selected-suit-refinement.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.51,
+    "log": "/workspace/recovery/2026-11-25/tests/selected-suit-refinement.log",
+    "summary": "PASS selected suit single/10/28 complete provider payload; contact/deadline/country/address validation; optional email/message; exact IDs/photos/qty/fabrics; no automatic priority; no truncation; other services unchanged; no real messages\n"
+  },
+  {
+    "command": "node tests/recovery_fabric_validation.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.2,
+    "log": "/workspace/recovery/2026-11-25/tests/recovery_fabric_validation.log",
+    "summary": "PASS7collections/26styles/17patterns/50colours; realvalidator with mockedprovider; exactmixedphotos+quantities; canonicalnames/patterns; no inventedtier; invalidrejection; legacy4/new5partstorage\n"
+  },
+  {
+    "command": "node tests/shop-preview-route.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.67,
+    "log": "/workspace/recovery/2026-11-25/tests/shop-preview-route.log",
+    "summary": "PASS server route: 26 fingerprint-approved enquiry cards, 33 preview routes, 2 staging hosts;5 nonstaging hosts fall through;cart/POST unchanged;noindex/no-store\n"
+  },
+  {
+    "command": "node tests/shop-draft-request-gate.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.36,
+    "log": "/workspace/recovery/2026-11-25/tests/shop-draft-request-gate.log",
+    "summary": "PASS actual email endpoint rejects draft product purchase/quote before provider call; no emails sent\n"
+  },
+  {
+    "command": "node tests/private-requests.mjs",
+    "result": "PASS",
+    "exitCode": 0,
+    "seconds": 0.93,
+    "log": "/workspace/recovery/2026-11-25/tests/private-requests.log",
+    "summary": "PASS portfolio provenance normalization, mismatches and inherited-key rejection\nPASS 12 backend/security groups: exact production apex permitted; missing bindings fail closed; spoofed host denied; cross-origin intake rejected; missing bindings fail closed; real encoded JPEG PNG WebP type/dimension validation; durable save and idempotent same-reference retry; separate SQLite connection retrieves persisted request; missing/forged/wrong audience/expired/unlisted staff denied; signed staff JWT retrieves actual private stored bytes; unrelated object denied; unknown design/missing terms/spoofed/too many/oversized/unsafe files rejected; email rejection never loses saved record or claims email success; partial storage failure cleaned; no false success or orphaned private file; server-side hourly rate limit rejects further requests\n"
+  },
+  {
+    "command": "node tests/recovery_source_boundary.mjs",
+    "result": "PASS",
+    "scope": "Mocked actual middleware + compiled/local Pages HTTP checked separately"
+  },
+  {
+    "command": "python tests/recovery_links.py",
+    "result": "PASS",
+    "scope": "305HTML/131FAQ source mappings/1309valid fragments"
+  }
+]

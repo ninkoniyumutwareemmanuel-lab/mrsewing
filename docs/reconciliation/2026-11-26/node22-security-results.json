@@ -1,0 +1,32 @@
+[
+  {
+    "test": "multi-design-validation.mjs",
+    "returnCode": 0,
+    "output": "PASS canonical multi-photo/name/page/fabric/quantity reconstruction;invalid IDs/photos/projects/fabrics/quantities/duplicates/consent rejected before provider;failure preserved;no real email\n"
+  },
+  {
+    "test": "shared-fabric-validation.mjs",
+    "returnCode": 0,
+    "output": "PASS sharedfabric/49colours+Other/mixed10and28designs/allphotos+qty/securecanonicalreconstruction/legacycompatibility/validation+size+failure/no real submissions\n"
+  },
+  {
+    "test": "quotation-completion-validation.mjs",
+    "returnCode": 0,
+    "output": "PASS V2ordinary+Special/commonprovider/futureKigalideadlines/StandardExpressboundary/conditionalmeasurements/deliveryfeesandaddresses/collection/optionalOther/completephotos+quantity/security+legacy/no real submissions\n"
+  },
+  {
+    "test": "recovery_fabric_validation.mjs",
+    "returnCode": 0,
+    "output": "PASS7collections/26styles/17patterns/50colours; realvalidator with mockedprovider; exactmixedphotos+quantities; canonicalnames/patterns; no inventedtier; invalidrejection; legacy4/new5partstorage\n"
+  },
+  {
+    "test": "shop-draft-request-gate.mjs",
+    "returnCode": 0,
+    "output": "PASS actual email endpoint rejects draft product purchase/quote before provider call; no emails sent\n"
+  },
+  {
+    "test": "recovery_source_boundary.mjs",
+    "returnCode": 0,
+    "output": "PASS real staging-only source boundary; internal selling/source records404; public assets/PDF/forms/Shop/API unchanged; no production-host behavior change\n"
+  }
+]

@@ -1,0 +1,4402 @@
+{
+  "scope": "Local source/output inventory before final reconciliation build; not deployed verification",
+  "htmlCount": 305,
+  "formCount": 60,
+  "forms": [
+    {
+      "page": "/booking-housecall.html",
+      "id": "bookingForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/refund-policy.html",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/booking-adjustment.html",
+      "id": "bookingForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/measurement-submission.html",
+      "id": "submissionForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/booking.html",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/",
+      "id": "supportForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/booking-workplace.html",
+      "id": "bookingForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/faq.html",
+      "id": "faq-search",
+      "action": "/faq/",
+      "method": "get"
+    },
+    {
+      "page": "/referral-program/",
+      "id": null,
+      "action": "/api/shop-request",
+      "method": "post"
+    },
+    {
+      "page": "/booking-workplace/",
+      "id": "bookingForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/faq/",
+      "id": "faq-search",
+      "action": "/faq/",
+      "method": "get"
+    },
+    {
+      "page": "/refund-policy/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/booking-adjustment/",
+      "id": "bookingForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/measurement-submission/",
+      "id": "submissionForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/customer-support/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/booking-housecall/",
+      "id": "bookingForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "POST"
+    },
+    {
+      "page": "/booking/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/shop/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/request/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/services/custom-tailoring/special-order/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/services/custom-tailoring/fabric/",
+      "id": "fabricChoiceForm",
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/midnight-black-double-breasted-gold/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/burgundy-grace-women-s-single-breasted-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/skyline-double-breasted-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/black-clothes-hangers/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/rose-elegance-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/natural-coloured-clothes-hangers/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/royal-blue-executive-womens-three-piece/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/dark-brown-hanger-with-clips/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/silver-coloured-hangers-composite-reference/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/royal-ivory-three-piece-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/white-formal-shirt/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/geometric-pattern-slide-sandals/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/royal-ivory-shawl-lapel-tuxedo/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/black-garment-cover-reference/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/black-broad-shoulder-hangers/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/camel-grace-women-s-three-piece-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/ivory-elegance-single-breasted-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/burgundy-royale-women-s-skirt-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/garment-cover-and-hangers-composite-reference/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/midnight-elegance-women-s-double-breasted-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/beige-clothes-hangers/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/black-suit-garment-cover/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/ivory-elegance-shawl-tuxedo-black-tie/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/cart/",
+      "id": null,
+      "action": "/api/shop-request",
+      "method": "post"
+    },
+    {
+      "page": "/shop/black-and-white-formal-shirts/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/patterned-sandals-composite-reference/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/sky-blue-elegance-suit/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/category/footwear/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/category/womens-suits/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/category/garment-covers/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/category/shirts/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/category/clothes-hangers/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/shop/category/mens-suits/",
+      "id": null,
+      "action": null,
+      "method": "get"
+    },
+    {
+      "page": "/request/vip/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/request/custom-tailoring/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/request/vip-subscription/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/request/alterations/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/request/garment-care/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    },
+    {
+      "page": "/request/mobile-fitting/",
+      "id": "customerRequestForm",
+      "action": "https://api.web3forms.com/submit",
+      "method": "post"
+    }
+  ],
+  "metadata": [
+    {
+      "file": "w-doublebreasted.html",
+      "route": "/w-doublebreasted.html",
+      "canonical": [
+        "https://mrsewingfashion.com/w-doublebreasted/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-housecall.html",
+      "route": "/service-housecall.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/mobile-fitting/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking-housecall.html",
+      "route": "/booking-housecall.html",
+      "canonical": [
+        "https://mrsewingfashion.com/booking-housecall/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "views.html",
+      "route": "/views.html",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 0,
+      "titles": 1,
+      "descriptions": 0
+    },
+    {
+      "file": "happy-customers.html",
+      "route": "/happy-customers.html",
+      "canonical": [
+        "https://mrsewingfashion.com/happy-customers/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "about.html",
+      "route": "/about.html",
+      "canonical": [
+        "https://mrsewingfashion.com/about/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "refund-policy.html",
+      "route": "/refund-policy.html",
+      "canonical": [
+        "https://mrsewingfashion.com/refund-policy/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking-adjustment.html",
+      "route": "/booking-adjustment.html",
+      "canonical": [
+        "https://mrsewingfashion.com/booking-adjustment/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "privacy-policy.html",
+      "route": "/privacy-policy.html",
+      "canonical": [
+        "https://mrsewingfashion.com/privacy-policy/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "measurement-submission.html",
+      "route": "/measurement-submission.html",
+      "canonical": [
+        "https://mrsewingfashion.com/measurement-submission/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "womensuits.html",
+      "route": "/womensuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-kaundasuits.html",
+      "route": "/m-kaundasuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/m-kaundasuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "reviews.html",
+      "route": "/reviews.html",
+      "canonical": [
+        "https://mrsewingfashion.com/reviews/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "why-choose.html",
+      "route": "/why-choose.html",
+      "canonical": [
+        "https://mrsewingfashion.com/why-choose/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-sketches.html",
+      "route": "/service-sketches.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "contact.html",
+      "route": "/contact.html",
+      "canonical": [
+        "https://mrsewingfashion.com/contact/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "w-classicsuits.html",
+      "route": "/w-classicsuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/w-classicsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services.html",
+      "route": "/services.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "measurements.html",
+      "route": "/measurements.html",
+      "canonical": [
+        "https://mrsewingfashion.com/measurements/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections.html",
+      "route": "/collections.html",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking.html",
+      "route": "/booking.html",
+      "canonical": [
+        "https://mrsewingfashion.com/booking/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-cmt.html",
+      "route": "/service-cmt.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "w-modernsuits.html",
+      "route": "/w-modernsuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/w-modernsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-modernsuits.html",
+      "route": "/m-modernsuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/m-modernsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "index.html",
+      "route": "/",
+      "canonical": [
+        "https://mrsewingfashion.com/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-standard.html",
+      "route": "/service-standard.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "suits.html",
+      "route": "/suits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/suits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "hero.html",
+      "route": "/hero.html",
+      "canonical": [],
+      "robots": [],
+      "h1": 1,
+      "titles": 0,
+      "descriptions": 0
+    },
+    {
+      "file": "service-express.html",
+      "route": "/service-express.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/express-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits.html",
+      "route": "/mensuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking-workplace.html",
+      "route": "/booking-workplace.html",
+      "canonical": [
+        "https://mrsewingfashion.com/booking-workplace/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "header.html",
+      "route": "/header.html",
+      "canonical": [],
+      "robots": [],
+      "h1": 0,
+      "titles": 0,
+      "descriptions": 0
+    },
+    {
+      "file": "faq.html",
+      "route": "/faq.html",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-workplace.html",
+      "route": "/service-workplace.html",
+      "canonical": [
+        "https://mrsewingfashion.com/services/mobile-fitting/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-classicsuits.html",
+      "route": "/m-classicsuits.html",
+      "canonical": [
+        "https://mrsewingfashion.com/m-classicsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "footer.html",
+      "route": "/footer.html",
+      "canonical": [],
+      "robots": [],
+      "h1": 0,
+      "titles": 0,
+      "descriptions": 0
+    },
+    {
+      "file": "404.html",
+      "route": "/404.html",
+      "canonical": [],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "terms-and-conditions.html",
+      "route": "/terms-and-conditions.html",
+      "canonical": [
+        "https://mrsewingfashion.com/terms-and-conditions/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "why-mtm.html",
+      "route": "/why-mtm.html",
+      "canonical": [],
+      "robots": [],
+      "h1": 0,
+      "titles": 0,
+      "descriptions": 0
+    },
+    {
+      "file": "m-doublebreasted.html",
+      "route": "/m-doublebreasted.html",
+      "canonical": [
+        "https://mrsewingfashion.com/m-doublebreasted/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "why-choose/index.html",
+      "route": "/why-choose/",
+      "canonical": [
+        "https://mrsewingfashion.com/why-choose/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "contact/index.html",
+      "route": "/contact/",
+      "canonical": [
+        "https://mrsewingfashion.com/contact/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "loyalty-program/index.html",
+      "route": "/loyalty-program/",
+      "canonical": [
+        "https://mrsewingfashion.com/loyalty-program/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-sketches/index.html",
+      "route": "/service-sketches/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "referral-program/index.html",
+      "route": "/referral-program/",
+      "canonical": [
+        "https://mrsewingfashion.com/referral-program/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits/index.html",
+      "route": "/mensuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "media-kit/index.html",
+      "route": "/media-kit/",
+      "canonical": [
+        "https://mrsewingfashion.com/media-kit/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking-workplace/index.html",
+      "route": "/booking-workplace/",
+      "canonical": [
+        "https://mrsewingfashion.com/booking-workplace/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "w-modernsuits/index.html",
+      "route": "/w-modernsuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/w-modernsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-kaundasuits/index.html",
+      "route": "/m-kaundasuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/m-kaundasuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-work/index.html",
+      "route": "/our-work/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/index.html",
+      "route": "/services/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/index.html",
+      "route": "/faq/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "benefits/index.html",
+      "route": "/benefits/",
+      "canonical": [
+        "https://mrsewingfashion.com/benefits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "suits/index.html",
+      "route": "/suits/",
+      "canonical": [
+        "https://mrsewingfashion.com/suits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-housecall/index.html",
+      "route": "/service-housecall/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/mobile-fitting/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-doublebreasted/index.html",
+      "route": "/m-doublebreasted/",
+      "canonical": [
+        "https://mrsewingfashion.com/m-doublebreasted/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "views/index.html",
+      "route": "/views/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 0,
+      "titles": 1,
+      "descriptions": 0
+    },
+    {
+      "file": "service-cmt/index.html",
+      "route": "/service-cmt/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-process/index.html",
+      "route": "/our-process/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-process/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "refund-policy/index.html",
+      "route": "/refund-policy/",
+      "canonical": [
+        "https://mrsewingfashion.com/refund-policy/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "terms-and-conditions/index.html",
+      "route": "/terms-and-conditions/",
+      "canonical": [
+        "https://mrsewingfashion.com/terms-and-conditions/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking-adjustment/index.html",
+      "route": "/booking-adjustment/",
+      "canonical": [
+        "https://mrsewingfashion.com/booking-adjustment/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "reviews/index.html",
+      "route": "/reviews/",
+      "canonical": [
+        "https://mrsewingfashion.com/reviews/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "measurements/index.html",
+      "route": "/measurements/",
+      "canonical": [
+        "https://mrsewingfashion.com/measurements/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "womensuits/index.html",
+      "route": "/womensuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "w-classicsuits/index.html",
+      "route": "/w-classicsuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/w-classicsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-standard/index.html",
+      "route": "/service-standard/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "showroom/index.html",
+      "route": "/showroom/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "measurement-submission/index.html",
+      "route": "/measurement-submission/",
+      "canonical": [
+        "https://mrsewingfashion.com/measurement-submission/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "whatsapp/index.html",
+      "route": "/whatsapp/",
+      "canonical": [
+        "https://mrsewingfashion.com/whatsapp/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-express/index.html",
+      "route": "/service-express/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/express-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "w-doublebreasted/index.html",
+      "route": "/w-doublebreasted/",
+      "canonical": [
+        "https://mrsewingfashion.com/w-doublebreasted/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "customer-support/index.html",
+      "route": "/customer-support/",
+      "canonical": [
+        "https://mrsewingfashion.com/customer-support/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-modernsuits/index.html",
+      "route": "/m-modernsuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/m-modernsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking-housecall/index.html",
+      "route": "/booking-housecall/",
+      "canonical": [
+        "https://mrsewingfashion.com/booking-housecall/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "made-to-measure/index.html",
+      "route": "/made-to-measure/",
+      "canonical": [
+        "https://mrsewingfashion.com/made-to-measure/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "delivery-and-collection/index.html",
+      "route": "/delivery-and-collection/",
+      "canonical": [
+        "https://mrsewingfashion.com/delivery-and-collection/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "service-workplace/index.html",
+      "route": "/service-workplace/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/mobile-fitting/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "happy-customers/index.html",
+      "route": "/happy-customers/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "customer-information/index.html",
+      "route": "/customer-information/",
+      "canonical": [
+        "https://mrsewingfashion.com/customer-information/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "about/index.html",
+      "route": "/about/",
+      "canonical": [
+        "https://mrsewingfashion.com/about/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "booking/index.html",
+      "route": "/booking/",
+      "canonical": [
+        "https://mrsewingfashion.com/booking/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/index.html",
+      "route": "/shop/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "privacy-policy/index.html",
+      "route": "/privacy-policy/",
+      "canonical": [
+        "https://mrsewingfashion.com/privacy-policy/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/index.html",
+      "route": "/collections/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/index.html",
+      "route": "/request/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "m-classicsuits/index.html",
+      "route": "/m-classicsuits/",
+      "canonical": [
+        "https://mrsewingfashion.com/m-classicsuits/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/index.html",
+      "route": "/guides/fabrics/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/cotton/index.html",
+      "route": "/guides/fabrics/cotton/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/cotton/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/linen/index.html",
+      "route": "/guides/fabrics/linen/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/linen/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/americano/index.html",
+      "route": "/guides/fabrics/americano/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/americano/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/star/index.html",
+      "route": "/guides/fabrics/star/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/star/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/super/index.html",
+      "route": "/guides/fabrics/super/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/super/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/polyester/index.html",
+      "route": "/guides/fabrics/polyester/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/polyester/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "guides/fabrics/wool/index.html",
+      "route": "/guides/fabrics/wool/",
+      "canonical": [
+        "https://mrsewingfashion.com/guides/fabrics/wool/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits/kaunda/index.html",
+      "route": "/mensuits/kaunda/",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/kaunda/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits/single-breasted/index.html",
+      "route": "/mensuits/single-breasted/",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/single-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits/three-piece/index.html",
+      "route": "/mensuits/three-piece/",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/three-piece/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits/tuxedos-formalwear/index.html",
+      "route": "/mensuits/tuxedos-formalwear/",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/tuxedos-formalwear/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "mensuits/double-breasted/index.html",
+      "route": "/mensuits/double-breasted/",
+      "canonical": [
+        "https://mrsewingfashion.com/mensuits/double-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-work/cobalt-blue-suit/index.html",
+      "route": "/our-work/cobalt-blue-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/cobalt-blue-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-work/soft-ivory-tailoring/index.html",
+      "route": "/our-work/soft-ivory-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/soft-ivory-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-work/off-white-graduation-suit/index.html",
+      "route": "/our-work/off-white-graduation-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/off-white-graduation-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-work/light-grey-and-navy/index.html",
+      "route": "/our-work/light-grey-and-navy/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/light-grey-and-navy/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "our-work/blue-jacket-black-trousers/index.html",
+      "route": "/our-work/blue-jacket-black-trousers/",
+      "canonical": [
+        "https://mrsewingfashion.com/our-work/blue-jacket-black-trousers/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/graduation-tailoring/index.html",
+      "route": "/services/graduation-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/graduation-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/wedding-tailoring/index.html",
+      "route": "/services/wedding-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/wedding-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/vip/index.html",
+      "route": "/services/vip/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/vip/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/custom-tailoring/index.html",
+      "route": "/services/custom-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/alterations/index.html",
+      "route": "/services/alterations/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/alterations/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/garment-care/index.html",
+      "route": "/services/garment-care/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/garment-care/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/mobile-fitting/index.html",
+      "route": "/services/mobile-fitting/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/mobile-fitting/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/express-tailoring/index.html",
+      "route": "/services/express-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/express-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/vip/subscription/index.html",
+      "route": "/services/vip/subscription/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/vip/subscription/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/custom-tailoring/selected-designs/index.html",
+      "route": "/services/custom-tailoring/selected-designs/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/selected-designs/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/custom-tailoring/special-order/index.html",
+      "route": "/services/custom-tailoring/special-order/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/special-order/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/custom-tailoring/standard-order/index.html",
+      "route": "/services/custom-tailoring/standard-order/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/standard-order/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/custom-tailoring/fabric/index.html",
+      "route": "/services/custom-tailoring/fabric/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/fabric/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/custom-tailoring/design-choice/index.html",
+      "route": "/services/custom-tailoring/design-choice/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/custom-tailoring/design-choice/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/garment-care/services/index.html",
+      "route": "/services/garment-care/services/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/garment-care/services/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "services/garment-care/planning/index.html",
+      "route": "/services/garment-care/planning/",
+      "canonical": [
+        "https://mrsewingfashion.com/services/garment-care/planning/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/graduation-tailoring/index.html",
+      "route": "/faq/graduation-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/graduation-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/wedding-tailoring/index.html",
+      "route": "/faq/wedding-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/wedding-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/production-delivery/index.html",
+      "route": "/faq/production-delivery/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/production-delivery/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/collections-designs/index.html",
+      "route": "/faq/collections-designs/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/collections-designs/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/prices-packages-payments/index.html",
+      "route": "/faq/prices-packages-payments/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/prices-packages-payments/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/privacy-photographs/index.html",
+      "route": "/faq/privacy-photographs/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/privacy-photographs/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/cancellations-changes/index.html",
+      "route": "/faq/cancellations-changes/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/cancellations-changes/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/custom-tailoring/index.html",
+      "route": "/faq/custom-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/custom-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/alterations/index.html",
+      "route": "/faq/alterations/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/alterations/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/garment-care/index.html",
+      "route": "/faq/garment-care/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/garment-care/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/measurements-fittings/index.html",
+      "route": "/faq/measurements-fittings/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/measurements-fittings/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/mobile-fitting/index.html",
+      "route": "/faq/mobile-fitting/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/mobile-fitting/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/booking-visiting/index.html",
+      "route": "/faq/booking-visiting/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/booking-visiting/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "faq/express-tailoring/index.html",
+      "route": "/faq/express-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/faq/express-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "terms-and-conditions/current/index.html",
+      "route": "/terms-and-conditions/current/",
+      "canonical": [
+        "https://mrsewingfashion.com/terms-and-conditions/current/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "staff/customer-requests/index.html",
+      "route": "/staff/customer-requests/",
+      "canonical": [
+        "https://mrsewingfashion.com/staff/customer-requests/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "womensuits/single-breasted/index.html",
+      "route": "/womensuits/single-breasted/",
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/single-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "womensuits/three-piece/index.html",
+      "route": "/womensuits/three-piece/",
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/three-piece/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "womensuits/skirt-suits/index.html",
+      "route": "/womensuits/skirt-suits/",
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/skirt-suits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "womensuits/double-breasted/index.html",
+      "route": "/womensuits/double-breasted/",
+      "canonical": [
+        "https://mrsewingfashion.com/womensuits/double-breasted/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/midnight-black-double-breasted-gold/index.html",
+      "route": "/shop/midnight-black-double-breasted-gold/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/midnight-black-double-breasted-gold/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/burgundy-grace-women-s-single-breasted-suit/index.html",
+      "route": "/shop/burgundy-grace-women-s-single-breasted-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/burgundy-grace-women-s-single-breasted-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/skyline-double-breasted-suit/index.html",
+      "route": "/shop/skyline-double-breasted-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/skyline-double-breasted-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/black-clothes-hangers/index.html",
+      "route": "/shop/black-clothes-hangers/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/black-clothes-hangers/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/rose-elegance-suit/index.html",
+      "route": "/shop/rose-elegance-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/rose-elegance-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/natural-coloured-clothes-hangers/index.html",
+      "route": "/shop/natural-coloured-clothes-hangers/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/natural-coloured-clothes-hangers/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/royal-blue-executive-womens-three-piece/index.html",
+      "route": "/shop/royal-blue-executive-womens-three-piece/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/royal-blue-executive-womens-three-piece/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/dark-brown-hanger-with-clips/index.html",
+      "route": "/shop/dark-brown-hanger-with-clips/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/dark-brown-hanger-with-clips/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/silver-coloured-hangers-composite-reference/index.html",
+      "route": "/shop/silver-coloured-hangers-composite-reference/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/silver-coloured-hangers-composite-reference/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/royal-ivory-three-piece-suit/index.html",
+      "route": "/shop/royal-ivory-three-piece-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/royal-ivory-three-piece-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/white-formal-shirt/index.html",
+      "route": "/shop/white-formal-shirt/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/white-formal-shirt/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/geometric-pattern-slide-sandals/index.html",
+      "route": "/shop/geometric-pattern-slide-sandals/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/geometric-pattern-slide-sandals/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/royal-ivory-shawl-lapel-tuxedo/index.html",
+      "route": "/shop/royal-ivory-shawl-lapel-tuxedo/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/royal-ivory-shawl-lapel-tuxedo/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/black-garment-cover-reference/index.html",
+      "route": "/shop/black-garment-cover-reference/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/black-garment-cover-reference/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/black-broad-shoulder-hangers/index.html",
+      "route": "/shop/black-broad-shoulder-hangers/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/black-broad-shoulder-hangers/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/camel-grace-women-s-three-piece-suit/index.html",
+      "route": "/shop/camel-grace-women-s-three-piece-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/camel-grace-women-s-three-piece-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/ivory-elegance-single-breasted-suit/index.html",
+      "route": "/shop/ivory-elegance-single-breasted-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/ivory-elegance-single-breasted-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/burgundy-royale-women-s-skirt-suit/index.html",
+      "route": "/shop/burgundy-royale-women-s-skirt-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/burgundy-royale-women-s-skirt-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/garment-cover-and-hangers-composite-reference/index.html",
+      "route": "/shop/garment-cover-and-hangers-composite-reference/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/garment-cover-and-hangers-composite-reference/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/midnight-elegance-women-s-double-breasted-suit/index.html",
+      "route": "/shop/midnight-elegance-women-s-double-breasted-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/midnight-elegance-women-s-double-breasted-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/beige-clothes-hangers/index.html",
+      "route": "/shop/beige-clothes-hangers/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/beige-clothes-hangers/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/black-suit-garment-cover/index.html",
+      "route": "/shop/black-suit-garment-cover/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/black-suit-garment-cover/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/ivory-elegance-shawl-tuxedo-black-tie/index.html",
+      "route": "/shop/ivory-elegance-shawl-tuxedo-black-tie/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/ivory-elegance-shawl-tuxedo-black-tie/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/cart/index.html",
+      "route": "/shop/cart/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/cart/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/black-and-white-formal-shirts/index.html",
+      "route": "/shop/black-and-white-formal-shirts/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/black-and-white-formal-shirts/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/patterned-sandals-composite-reference/index.html",
+      "route": "/shop/patterned-sandals-composite-reference/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/patterned-sandals-composite-reference/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/sky-blue-elegance-suit/index.html",
+      "route": "/shop/sky-blue-elegance-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/sky-blue-elegance-suit/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/category/footwear/index.html",
+      "route": "/shop/category/footwear/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/footwear/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/category/womens-suits/index.html",
+      "route": "/shop/category/womens-suits/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/womens-suits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/category/garment-covers/index.html",
+      "route": "/shop/category/garment-covers/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/garment-covers/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/category/shirts/index.html",
+      "route": "/shop/category/shirts/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/shirts/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/category/clothes-hangers/index.html",
+      "route": "/shop/category/clothes-hangers/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/clothes-hangers/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "shop/category/mens-suits/index.html",
+      "route": "/shop/category/mens-suits/",
+      "canonical": [
+        "https://mrsewingfashion.com/shop/category/mens-suits/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-047/index.html",
+      "route": "/collections/designs/ms-047/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-047/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-007/index.html",
+      "route": "/collections/designs/ms-007/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-007/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-088/index.html",
+      "route": "/collections/designs/ms-088/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-088/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-146/index.html",
+      "route": "/collections/designs/ms-146/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-146/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-010/index.html",
+      "route": "/collections/designs/ms-010/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-010/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-130/index.html",
+      "route": "/collections/designs/ms-130/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-130/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/midnight-black-double-breasted-gold/index.html",
+      "route": "/collections/designs/midnight-black-double-breasted-gold/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/midnight-black-double-breasted-gold/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-136/index.html",
+      "route": "/collections/designs/ms-136/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-136/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-078/index.html",
+      "route": "/collections/designs/ms-078/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-078/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/rose-elegance-suit/index.html",
+      "route": "/collections/designs/rose-elegance-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/rose-elegance-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-072/index.html",
+      "route": "/collections/designs/ms-072/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-072/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-014/index.html",
+      "route": "/collections/designs/ms-014/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-014/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-074/index.html",
+      "route": "/collections/designs/ms-074/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-074/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-064/index.html",
+      "route": "/collections/designs/ms-064/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-064/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-121/index.html",
+      "route": "/collections/designs/ms-121/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-121/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-013/index.html",
+      "route": "/collections/designs/ms-013/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-013/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-105/index.html",
+      "route": "/collections/designs/ms-105/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-105/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-087/index.html",
+      "route": "/collections/designs/ms-087/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-087/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-104/index.html",
+      "route": "/collections/designs/ms-104/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-104/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/royal-blue-executive-womens-three-piece/index.html",
+      "route": "/collections/designs/royal-blue-executive-womens-three-piece/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/royal-blue-executive-womens-three-piece/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-004/index.html",
+      "route": "/collections/designs/ms-004/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-004/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-045/index.html",
+      "route": "/collections/designs/ms-045/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-045/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-015/index.html",
+      "route": "/collections/designs/ms-015/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-015/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-082/index.html",
+      "route": "/collections/designs/ms-082/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-082/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-069/index.html",
+      "route": "/collections/designs/ms-069/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-069/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-126/index.html",
+      "route": "/collections/designs/ms-126/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-126/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-075/index.html",
+      "route": "/collections/designs/ms-075/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-075/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-066/index.html",
+      "route": "/collections/designs/ms-066/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-066/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-102/index.html",
+      "route": "/collections/designs/ms-102/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-102/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-143/index.html",
+      "route": "/collections/designs/ms-143/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-143/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-068/index.html",
+      "route": "/collections/designs/ms-068/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-068/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-024/index.html",
+      "route": "/collections/designs/ms-024/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-024/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-135/index.html",
+      "route": "/collections/designs/ms-135/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-135/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-139/index.html",
+      "route": "/collections/designs/ms-139/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-139/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-046/index.html",
+      "route": "/collections/designs/ms-046/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-046/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-048/index.html",
+      "route": "/collections/designs/ms-048/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-048/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-090/index.html",
+      "route": "/collections/designs/ms-090/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-090/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-009/index.html",
+      "route": "/collections/designs/ms-009/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-009/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-034/index.html",
+      "route": "/collections/designs/ms-034/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-034/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-058/index.html",
+      "route": "/collections/designs/ms-058/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-058/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-094/index.html",
+      "route": "/collections/designs/ms-094/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-094/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-067/index.html",
+      "route": "/collections/designs/ms-067/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-067/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-103/index.html",
+      "route": "/collections/designs/ms-103/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-103/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-021/index.html",
+      "route": "/collections/designs/ms-021/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-021/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-099/index.html",
+      "route": "/collections/designs/ms-099/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-099/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-133/index.html",
+      "route": "/collections/designs/ms-133/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-133/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-127/index.html",
+      "route": "/collections/designs/ms-127/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-127/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-050/index.html",
+      "route": "/collections/designs/ms-050/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-050/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-118/index.html",
+      "route": "/collections/designs/ms-118/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-118/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-062/index.html",
+      "route": "/collections/designs/ms-062/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-062/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-056/index.html",
+      "route": "/collections/designs/ms-056/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-056/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-141/index.html",
+      "route": "/collections/designs/ms-141/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-141/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-128/index.html",
+      "route": "/collections/designs/ms-128/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-128/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-016/index.html",
+      "route": "/collections/designs/ms-016/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-016/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-059/index.html",
+      "route": "/collections/designs/ms-059/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-059/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-131/index.html",
+      "route": "/collections/designs/ms-131/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-131/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-005/index.html",
+      "route": "/collections/designs/ms-005/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-005/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-140/index.html",
+      "route": "/collections/designs/ms-140/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-140/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-084/index.html",
+      "route": "/collections/designs/ms-084/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-084/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-027/index.html",
+      "route": "/collections/designs/ms-027/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-027/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-142/index.html",
+      "route": "/collections/designs/ms-142/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-142/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-144/index.html",
+      "route": "/collections/designs/ms-144/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-144/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-019/index.html",
+      "route": "/collections/designs/ms-019/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-019/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-101/index.html",
+      "route": "/collections/designs/ms-101/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-101/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-031/index.html",
+      "route": "/collections/designs/ms-031/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-031/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-145/index.html",
+      "route": "/collections/designs/ms-145/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-145/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-123/index.html",
+      "route": "/collections/designs/ms-123/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-123/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-089/index.html",
+      "route": "/collections/designs/ms-089/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-089/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-011/index.html",
+      "route": "/collections/designs/ms-011/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-011/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-006/index.html",
+      "route": "/collections/designs/ms-006/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-006/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-017/index.html",
+      "route": "/collections/designs/ms-017/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-017/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-095/index.html",
+      "route": "/collections/designs/ms-095/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-095/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-022/index.html",
+      "route": "/collections/designs/ms-022/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-022/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-033/index.html",
+      "route": "/collections/designs/ms-033/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-033/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-044/index.html",
+      "route": "/collections/designs/ms-044/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-044/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-086/index.html",
+      "route": "/collections/designs/ms-086/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-086/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-018/index.html",
+      "route": "/collections/designs/ms-018/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-018/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-051/index.html",
+      "route": "/collections/designs/ms-051/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-051/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-137/index.html",
+      "route": "/collections/designs/ms-137/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-137/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-039/index.html",
+      "route": "/collections/designs/ms-039/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-039/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-012/index.html",
+      "route": "/collections/designs/ms-012/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-012/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-038/index.html",
+      "route": "/collections/designs/ms-038/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-038/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-049/index.html",
+      "route": "/collections/designs/ms-049/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-049/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-032/index.html",
+      "route": "/collections/designs/ms-032/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-032/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-063/index.html",
+      "route": "/collections/designs/ms-063/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-063/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-117/index.html",
+      "route": "/collections/designs/ms-117/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-117/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-076/index.html",
+      "route": "/collections/designs/ms-076/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-076/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-040/index.html",
+      "route": "/collections/designs/ms-040/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-040/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-119/index.html",
+      "route": "/collections/designs/ms-119/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-119/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-035/index.html",
+      "route": "/collections/designs/ms-035/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-035/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-132/index.html",
+      "route": "/collections/designs/ms-132/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-132/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-125/index.html",
+      "route": "/collections/designs/ms-125/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-125/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-079/index.html",
+      "route": "/collections/designs/ms-079/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-079/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-025/index.html",
+      "route": "/collections/designs/ms-025/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-025/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-042/index.html",
+      "route": "/collections/designs/ms-042/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-042/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-071/index.html",
+      "route": "/collections/designs/ms-071/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-071/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-083/index.html",
+      "route": "/collections/designs/ms-083/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-083/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-041/index.html",
+      "route": "/collections/designs/ms-041/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-041/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-020/index.html",
+      "route": "/collections/designs/ms-020/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-020/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-120/index.html",
+      "route": "/collections/designs/ms-120/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-120/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-054/index.html",
+      "route": "/collections/designs/ms-054/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-054/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ivory-elegance-shawl-tuxedo-black-tie/index.html",
+      "route": "/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-092/index.html",
+      "route": "/collections/designs/ms-092/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-092/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-093/index.html",
+      "route": "/collections/designs/ms-093/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-093/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-129/index.html",
+      "route": "/collections/designs/ms-129/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-129/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-023/index.html",
+      "route": "/collections/designs/ms-023/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-023/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-122/index.html",
+      "route": "/collections/designs/ms-122/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-122/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-052/index.html",
+      "route": "/collections/designs/ms-052/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-052/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-037/index.html",
+      "route": "/collections/designs/ms-037/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-037/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-030/index.html",
+      "route": "/collections/designs/ms-030/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-030/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-134/index.html",
+      "route": "/collections/designs/ms-134/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-134/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-077/index.html",
+      "route": "/collections/designs/ms-077/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-077/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-036/index.html",
+      "route": "/collections/designs/ms-036/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-036/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/sky-blue-elegance-suit/index.html",
+      "route": "/collections/designs/sky-blue-elegance-suit/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/sky-blue-elegance-suit/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-080/index.html",
+      "route": "/collections/designs/ms-080/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-080/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-043/index.html",
+      "route": "/collections/designs/ms-043/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-043/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-081/index.html",
+      "route": "/collections/designs/ms-081/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-081/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-026/index.html",
+      "route": "/collections/designs/ms-026/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-026/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-001/index.html",
+      "route": "/collections/designs/ms-001/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-001/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-124/index.html",
+      "route": "/collections/designs/ms-124/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-124/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-096/index.html",
+      "route": "/collections/designs/ms-096/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-096/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-053/index.html",
+      "route": "/collections/designs/ms-053/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-053/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-029/index.html",
+      "route": "/collections/designs/ms-029/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-029/"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "collections/designs/ms-028/index.html",
+      "route": "/collections/designs/ms-028/",
+      "canonical": [
+        "https://mrsewingfashion.com/collections/designs/ms-028/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/vip/index.html",
+      "route": "/request/vip/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/vip/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/custom-tailoring/index.html",
+      "route": "/request/custom-tailoring/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/custom-tailoring/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/vip-subscription/index.html",
+      "route": "/request/vip-subscription/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/vip-subscription/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/alterations/index.html",
+      "route": "/request/alterations/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/alterations/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/garment-care/index.html",
+      "route": "/request/garment-care/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/garment-care/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    },
+    {
+      "file": "request/mobile-fitting/index.html",
+      "route": "/request/mobile-fitting/",
+      "canonical": [
+        "https://mrsewingfashion.com/request/mobile-fitting/"
+      ],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1,
+      "titles": 1,
+      "descriptions": 1
+    }
+  ],
+  "missingLocalTargets": [],
+  "jsSources": [
+    "/assets/about-navigation.js",
+    "/assets/business-hours.js",
+    "/assets/collection-design.js",
+    "/assets/collections-navigation.js",
+    "/assets/collections-v3.js",
+    "/assets/commerce.js",
+    "/assets/consultation.js",
+    "/assets/contact-navigation.js",
+    "/assets/customer-interactions.js",
+    "/assets/customer-refinements.js",
+    "/assets/customer-site.js",
+    "/assets/design-selection-sharing.js",
+    "/assets/design-selections.js",
+    "/assets/fabric-showroom.js",
+    "/assets/faq-help.js",
+    "/assets/forms.js",
+    "/assets/homepage.js",
+    "/assets/journey-navigation.js",
+    "/assets/navigation.js",
+    "/assets/project-gallery.js",
+    "/assets/public-api.js",
+    "/assets/request-context.js",
+    "/assets/request-draft.js",
+    "/assets/request-storage.js",
+    "/assets/selected-design.js",
+    "/assets/staff-requests.js",
+    "/assets/terms-reader.js",
+    "/assets/whatsapp-consent.js"
+  ],
+  "externalHosts": [
+    "allianceflaxlinenhemp.eu",
+    "api.whatsapp.com",
+    "cdnjs.cloudflare.com",
+    "dpo.gov.rw",
+    "maps.app.goo.gl",
+    "mutsaerstextiles.com",
+    "www.facebook.com",
+    "www.instagram.com",
+    "www.nooteboomtextiles.com",
+    "www.tiktok.com",
+    "www.woolmark.com",
+    "youtube.com"
+  ],
+  "extensions": {
+    ".mp4": 11,
+    ".jpeg": 155,
+    ".webp": 209,
+    ".pdf": 6,
+    ".html": 338,
+    ".ico": 1,
+    ".json": 73,
+    ".png": 15,
+    "": 4,
+    ".txt": 22,
+    ".md": 398,
+    ".xml": 2,
+    ".css": 36,
+    ".js": 82,
+    ".py": 115,
+    ".cjs": 80,
+    ".mjs": 18,
+    ".csv": 3,
+    ".sql": 1,
+    ".yml": 2,
+    ".avif": 58,
+    ".jpg": 3,
+    ".pyc": 66
+  },
+  "videos": [
+    {
+      "file": "assets/videos/suit-light-silent.mp4",
+      "sha256": "0737d9b2749e2d6a492e302713cdc4e54d529d872aca9d2afe42926861049e97",
+      "streams": [
+        "video"
+      ]
+    },
+    {
+      "file": "assets/videos/suit-black-silent.mp4",
+      "sha256": "28dd184f147b5c7a37bab94262a8f1a40e74055a81000684e1ec10fe20e1af83",
+      "streams": [
+        "video"
+      ]
+    }
+  ]
+}

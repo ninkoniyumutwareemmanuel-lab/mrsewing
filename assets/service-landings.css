@@ -1,0 +1,35 @@
+/* Scoped service landing presentation; preserves forms and global navigation. */
+.service-overview{--service-ink:#f3ead8;--service-muted:#d1c7b6;--service-line:#5b4b31}
+.service-overview .service-hero{margin-bottom:28px;min-height:420px}
+.service-overview .service-hero-copy{padding:30px}
+.service-overview .service-hero h1{font-size:clamp(30px,3.8vw,52px)}
+.service-overview .service-hero-copy>p:not(.home-eyebrow):not(.service-breadcrumb){margin:18px 0;line-height:1.65}
+.service-overview .service-breadcrumb{margin-bottom:24px}
+.service-overview .service-breadcrumb a{text-decoration:none}
+.service-overview .service-features{margin-top:24px}
+.service-overview .home-button-gold{color:#211b10}
+.service-overview .service-section{padding:24px 0;scroll-margin-top:160px;border-top:1px solid var(--service-line)}
+.service-overview .service-section h2{font:400 clamp(25px,3vw,34px)/1.25 Georgia,serif;color:var(--service-ink);margin:0 0 14px}
+.service-overview .service-section p,.service-overview .service-combined p{font-size:15px;line-height:1.7;color:var(--service-muted);margin:12px 0}
+.service-overview .service-section a:not(.home-button){color:#e2bd65;text-underline-offset:3px}
+.service-overview .service-scope{display:flex;flex-wrap:wrap;gap:8px 25px;padding-left:20px;margin:16px 0;line-height:1.6;color:var(--service-ink);font-size:15px}
+.service-overview .service-scope li{padding:2px 0}
+.service-overview .service-facts{display:grid;gap:0 32px}
+.service-overview .service-facts .service-section h2{font-size:26px}
+.service-overview .service-comparison{display:grid;gap:16px 26px;margin:20px 0}
+.service-overview .service-comparison article{min-width:0;border-left:2px solid #b38e42;padding-left:18px}
+.service-overview h3{font:400 23px/1.3 Georgia,serif;color:var(--service-ink)}
+.service-overview .service-comparison p{margin-bottom:0}
+.service-overview .service-steps{list-style:decimal-leading-zero;display:grid;gap:18px 32px;padding-left:30px;margin:18px 0;color:#d8b96b}
+.service-overview .service-steps li{padding-left:4px;min-width:0}
+.service-overview .service-steps strong{display:block;color:var(--service-ink);font-size:16px;line-height:1.5}
+.service-overview .service-steps span{display:block;color:var(--service-muted);font-size:14px;line-height:1.65;margin-top:5px}
+.service-overview .service-contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 12px}
+.service-overview .service-contact-actions .home-button{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+.service-overview .service-small{font-size:13px!important;line-height:1.7}
+.service-overview .service-policy-links{display:flex;flex-wrap:wrap;gap:8px 22px}
+.service-overview .service-policy-links a{min-height:44px;display:inline-flex;align-items:center}
+.service-overview .service-combined{border-left:3px solid #bd9447;padding:20px 24px;margin:20px 0;background:#211e18}
+.service-overview :focus-visible{outline:3px solid #f1cb75;outline-offset:4px}
+@media(min-width:760px){.service-overview .service-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.service-overview .service-comparison,.service-overview .service-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:850px){.service-overview .service-hero{min-height:450px}.service-overview .service-hero-copy{padding:28px 22px}.service-overview .service-hero h1{font-size:clamp(29px,7vw,40px)}.service-overview .service-hero-actions .home-button{width:auto;min-width:0;flex:none}.service-overview .service-features{gap:8px 16px}.service-overview .service-section{padding:22px 0}.service-overview .service-combined{padding:18px}.service-overview .service-contact-actions .home-button{width:100%}}

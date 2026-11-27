@@ -42,7 +42,7 @@ for typ,groups in [('duplicate title',titles),('duplicate canonical',canon)]:
  for key,rs in groups.items():
   if len(rs)>1:issues.append({'type':typ,'value':key,'routes':rs})
 headers=(R/'_headers').read_text();assert 'X-Robots-Tag: noindex, nofollow, noarchive' in headers
-out={'scope':'64 sitemap-listed canonical pages, local generated staging source; excludes held/legacy/request pages from duplicate comparisons','pages':results,'issues':issues,'stagingHeaderPreserved':True,'limitations':['JSON-LD syntax checked; Google rich-result eligibility not independently verified.','Live rendering and Search Console indexing not checked; environment previously blocked pages.dev and production domains.','Internal link target files checked; server redirects, external links and remote responses not checked.']}
+out={'scope':f'{len(results)} sitemap-listed canonical pages, local generated staging source; excludes held/legacy/request pages from duplicate comparisons','pages':results,'issues':issues,'stagingHeaderPreserved':True,'limitations':['JSON-LD syntax checked; Google rich-result eligibility not independently verified.','Live rendering and Search Console indexing not checked; environment previously blocked pages.dev and production domains.','Internal link target files checked; server redirects, external links and remote responses not checked.']}
 
 import argparse
 parser=argparse.ArgumentParser();parser.add_argument('--report');args=parser.parse_args()

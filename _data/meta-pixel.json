@@ -5,7 +5,7 @@
   "status": "owner-approved-production",
   "ownerSource": "Owner explicit instruction to activate live Meta Pixel 21 November 2026",
   "trackingPurposes": [
-    "Optional Meta ad measurement on consented public browsing pages"
+    "Optional consented advertising measurement of browsing, garment views, contact intent and positive quotation/service enquiries"
   ],
-  "activationNotes": "Owner expressly requested immediate activation; only consented PageView tracking enabled. No advertising spending or additional events authorised."
+  "activationNotes": "Owner26Nov2026 authorizes supported PageView/ViewContent/Contact/Lead with fresh unified consent, safe contexts and eventID deduplication. No Purchase, unconfirmed Schedule, enhanced matching or fabricated CAPI. Account/server connections and receipt remain unverified."
 }

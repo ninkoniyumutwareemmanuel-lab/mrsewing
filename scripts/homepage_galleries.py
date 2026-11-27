@@ -5,18 +5,24 @@ import math,re
 def collection_items(gender):
  from build_collections import load
  from suit_references import categories,references,model
- designs=load()[0];labels=model()['references'];items=[];seen=set()
+ designs=load()[0];labels=model()['references'];items=[];seen=set();eligible={}
  for category in categories():
   if category['gender']!=gender or category.get('homepagePreview') is False:continue
   for design in references(category,designs):
-   for photo in design['images']:
-    if photo['src'] in seen:continue
-    seen.add(photo['src']);items.append({'id':design['id'],'photo':photo,'caption':labels.get(design['id'],{}).get('label') or design['name'],'category':category['title'],'kind':'design'})
+   eligible.setdefault(design['id'],category['title'])
+ # Maintain the one source-driven verified-date order across categories. Photos within a design remain grouped.
+ for design in designs:
+  if design['id'] not in eligible:continue
+  for photo in design['images']:
+   if photo['src'] in seen:continue
+   seen.add(photo['src']);items.append({'id':design['id'],'photo':photo,'caption':labels.get(design['id'],{}).get('label') or design['name'],'category':eligible[design['id']],'kind':'design'})
  return items
 
 def project_items():
  from build_journey import projects
- return [{'id':p['slug'],'photo':photo,'caption':p['title'],'category':'Completed Mr Sewing project','kind':'project'} for p in projects() for photo in p['images']]
+ from media_sorting import newest_first
+ eligible=newest_first(projects())
+ return [{'id':p['slug'],'photo':photo,'caption':p['title'],'category':'Completed Mr Sewing project','kind':'project'} for p in eligible for photo in p['images']]
 
 def gallery(items,name):
  from build_collections import picture
@@ -31,19 +37,21 @@ def gallery(items,name):
    html=re.sub(r'sizes="[^"]*"','sizes="(max-width:600px) 174px,260px"',html)
    cards.append('<figure class="moving-gallery-card" data-photo-source="'+escape(photo['src'],quote=True)+'" data-reference="'+escape(item['id'],quote=True)+'"'+(' aria-hidden="true"' if duplicate else '')+'>'+html+'<figcaption>'+escape(item['caption'])+'</figcaption></figure>')
   groups.append('<div class="moving-gallery-group"'+(' aria-hidden="true"' if group else '')+'>'+''.join(cards)+'</div>')
- return '<div class="moving-gallery" data-moving-gallery aria-label="'+escape(name,quote=True)+'"><div class="moving-gallery-track" style="--gallery-duration:'+str(len(tiles)*10)+'s">'+''.join(groups)+'</div></div>'
+ return '<div class="moving-gallery" data-moving-gallery data-gallery-title="'+escape(name,quote=True)+'" role="region" tabindex="0" aria-keyshortcuts="Enter Space Escape" aria-label="'+escape(name,quote=True)+' photograph gallery"><button type="button" class="gallery-motion-control" data-gallery-motion-control aria-pressed="false">Pause moving photographs</button><div class="moving-gallery-track" style="--gallery-duration:'+str(len(tiles)*10)+'s">'+''.join(groups)+'</div></div>'
 
 def suit_section():
- result='<section id="suit-collections" class="home-section suit-collections"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Find your inspiration</p><h2>Explore Our <em>Suit Collections</em></h2><p>Discover men\'s and women\'s suit styles and find inspiration for your next outfit.</p></div><p class="gallery-motion-note">Motion follows your device preferences. Press Escape to stop gallery movement.</p>'
+ result='<section id="suit-collections" class="home-section suit-collections"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Find your inspiration</p><h2>Explore Our <em>Suit Collections</em></h2><p>Discover men\'s and women\'s suit styles and find inspiration for your next outfit.</p></div>'
  for gender,title in [('men',"Men's Suits"),('women',"Women's Suits")]:
   text="Explore men's suits in Kigali, from single-breasted styles to three-piece tailoring and formalwear." if gender=='men' else "Find inspiration for women's suits in Kigali, including tailored trousers, skirt suits and three-piece styles."
-  result+='<section class="collection-preview" aria-labelledby="'+gender+'-gallery-heading"><h3 id="'+gender+'-gallery-heading">'+escape(title)+'</h3><p>'+text+'</p>'+gallery(collection_items(gender),title)+'<div class="section-action"><a class="home-button home-button-gold" href="/'+('mensuits' if gender=='men' else 'womensuits')+'/">View All '+escape(title)+'</a></div></section>'
+  result+='<section class="collection-preview" aria-labelledby="'+gender+'-gallery-heading"><h3 id="'+gender+'-gallery-heading">'+escape(title)+'</h3><p>'+text+'</p>'+gallery(collection_items(gender),title)+'<div class="section-action"><a class="home-button home-button-gold" href="/collections/?gender='+gender+'">View All '+escape(title)+'</a></div></section>'
  return result+'</div></section>'
 def moments_gallery():
  return gallery(project_items(),'Completed Mr Sewing tailoring projects')+'<div class="section-action"><a class="home-button home-button-gold" href="/our-work/">Explore Our Work</a></div>'
 
 
 def shop_category_section():
+ from shop_release_hold import settings
+ if not settings()['publicNavigation']:return ''
  from public_enquiries import approved
  from build_commerce import photo
  from shop_catalog import category_route

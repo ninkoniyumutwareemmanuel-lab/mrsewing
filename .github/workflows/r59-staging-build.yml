@@ -1,0 +1,129 @@
+name: R59 staging tailoring-first build and regression
+on:
+  push:
+    branches: [phase1/customer-journey-repairs]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: staging-verification-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build-and-verify:
+    if: github.ref == 'refs/heads/phase1/customer-journey-repairs'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          # Scoped preservation tests compare against the recorded recovery baseline.
+          fetch-depth: 0
+          # Default checkout is the event commit, not a moving branch tip.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verified silent-video preparation dependency
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null || ! command -v pdftoppm >/dev/null || ! command -v pdftotext >/dev/null || ! command -v pdfinfo >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y ffmpeg poppler-utils
+          fi
+      # PDF verification/activation is an explicit reviewed operation. A new
+      # arbitrary upload must not mutate the published registry during every build.
+      - name: Verify committed silent media without rewriting approved playback assets
+        run: |
+          python scripts/prepare_silent_homepage_videos.py
+          python tests/homepage_video_gate_r59.py
+          # Regeneration and hash changes require a deliberate developer review.
+      - name: Build and check customer website
+        run: |
+          python scripts/build_site.py
+          python scripts/build_site.py --check
+      - name: Check metadata, routes, media, and Terms
+        run: |
+          python tests/seo_preservation.py
+          python tests/sitemap_discovery.py
+          python tests/terms_reader_main_base.py
+          python tests/media_sorting_r59.py
+          python tests/homepage_video_gate_r59.py
+          python tests/held_media_redirects_r59.py
+          python tests/shop_status_r59.py
+          python tests/terms_recovery.py
+          python scripts/import_owner_terms_v1_1.py --check
+          python tests/recovery_policies.py
+          python tests/recovery_technical.py
+          python tests/recovery_workflow.py
+          python tests/recovery_links.py
+          python tests/customer_gallery_experience.py
+          python tests/service_landings.py
+          python tests/about_leadership.py
+          python tests/prelaunch_security_content.py
+          python tests/release_candidate.py
+          python tests/shop_release_preparation.py
+          python tests/tracking_workspace.py
+          python scripts/build_tracking_workspace.py --check
+          python scripts/prepare_silent_homepage_videos.py
+          python -m py_compile scripts/build_homepage.py scripts/homepage_galleries.py scripts/customer_site.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Record the test Node runtime
+        run: node --version
+      - name: Verify multi-design payload reconstruction
+        run: node tests/multi-design-validation.mjs
+      - name: Verify shared fabric validation and portable evidence output
+        run: node tests/shared-fabric-validation.mjs
+      - name: Verify quotation deadline, measurement and delivery validation
+        run: node tests/quotation-completion-validation.mjs
+      - name: Verify the recovered fabric catalogue payload
+        run: node tests/recovery_fabric_validation.mjs
+      - name: Verify draft Shop request rejection
+        run: node tests/shop-draft-request-gate.mjs
+      - name: Verify consent and transactional analytics isolation
+        run: node tests/analytics_privacy.cjs
+      - name: Verify the staging source boundary
+        run: node tests/recovery_source_boundary.mjs
+      - name: Verify current Shop contracts and contact tracking safeguards
+        run: |
+          python tests/prelaunch_shop_contract.py
+          node tests/prelaunch_tracking_contacts.cjs
+          node tests/enquiry_measurement.cjs
+          node tests/tracking_privacy.cjs
+          node tests/meta_event_adapter.cjs
+      - name: Install Chromium browser QA
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test staging-designed local browser at four widths
+        run: |
+          # The Ads checks verify redirects and host-scoped staging headers.
+          # Use the same loopback Pages simulation as local release QA.
+          python tests/preview_server.py --port 8020 > /tmp/r59-http.log 2>&1 &
+          python scripts/run_customer_browser_checks.py
+      - name: Save browser review screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r59-staging-browser-screenshots
+          path: |
+            artifacts/r59-browser/*.png
+            artifacts/r55-terms/*.png
+            artifacts/recovery-fabric/*.png
+            artifacts/recovery-journeys/*.png
+            artifacts/recovery-journeys/results.json
+            artifacts/shared-fabric/example-backend-enquiry.json
+            artifacts/tailoring-dialog/
+            artifacts/gallery-experience/
+            artifacts/shop-customer/
+            artifacts/home-about/
+            artifacts/services/
+            artifacts/navigation/
+            artifacts/browser-checks/
+            artifacts/ads-sitelinks/
+            artifacts/tracking/
+          if-no-files-found: ignore
+      - name: Verify generated outputs are committed for this exact event
+        run: |
+          git diff --exit-code
+          # All generation is reviewed and committed by the developer before push.
+          # CI never commits/pushes or races a newer owner upload.

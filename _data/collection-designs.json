@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "nextId": 152,
+  "nextId": 174,
   "retiredIds": [],
   "designs": [
     {
@@ -138,7 +138,8 @@
           "position": "center",
           "width": 797,
           "height": 995,
-          "originalPath": "h1.jpeg"
+          "originalPath": "h1.jpeg",
+          "viewLabel": "Front View"
         }
       ],
       "provenance": "unverified",
@@ -176,7 +177,8 @@
           "position": "center",
           "width": 750,
           "height": 938,
-          "originalPath": "h2.jpeg"
+          "originalPath": "h2.jpeg",
+          "viewLabel": "Side View"
         }
       ],
       "provenance": "unverified",
@@ -214,7 +216,8 @@
           "position": "center",
           "width": 750,
           "height": 938,
-          "originalPath": "h3.jpeg"
+          "originalPath": "h3.jpeg",
+          "viewLabel": "Graduation View"
         }
       ],
       "provenance": "unverified",
@@ -1004,7 +1007,7 @@
     {
       "id": "MS-029",
       "slug": "ms-029",
-      "name": "Men’s Kaunda suit",
+      "name": "Kaunda Jacket Style Selection",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1012,11 +1015,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "Eight stand-collar Kaunda jacket references in different colours, shown on dress forms.",
       "images": [
         {
           "src": "/m-kaundasuits1.jpeg",
-          "alt": "Men’s Kaunda suit — MS-029",
+          "alt": "Eight stand-collar Kaunda jacket references in different colours, shown on dress forms.",
           "position": "center",
           "width": 716,
           "height": 715,
@@ -1034,6 +1037,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits1.jpeg",
@@ -1047,7 +1054,7 @@
     {
       "id": "MS-030",
       "slug": "ms-030",
-      "name": "Men’s Kaunda suit",
+      "name": "Black Short-Sleeved Kaunda Suit",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1055,11 +1062,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A black short-sleeved Kaunda jacket with a stand collar, buttoned front and flap pockets, shown with matching trousers.",
       "images": [
         {
           "src": "/m-kaundasuits2.jpeg",
-          "alt": "Men’s Kaunda suit — MS-030",
+          "alt": "A black short-sleeved Kaunda jacket with a stand collar, buttoned front and flap pockets, shown with matching trousers.",
           "position": "center",
           "width": 542,
           "height": 658,
@@ -1077,6 +1084,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits2.jpeg",
@@ -1090,7 +1101,7 @@
     {
       "id": "MS-031",
       "slug": "ms-031",
-      "name": "Men’s Kaunda suit",
+      "name": "Black Stand-Collar Kaunda Suit",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1098,11 +1109,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A black Kaunda jacket with a stand collar, buttoned front and flap pockets, paired with matching trousers.",
       "images": [
         {
           "src": "/m-kaundasuits3.jpeg",
-          "alt": "Men’s Kaunda suit — MS-031",
+          "alt": "A black Kaunda jacket with a stand collar, buttoned front and flap pockets, paired with matching trousers.",
           "position": "center",
           "width": 657,
           "height": 658,
@@ -1120,6 +1131,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits3.jpeg",
@@ -1133,7 +1148,7 @@
     {
       "id": "MS-032",
       "slug": "ms-032",
-      "name": "Men’s Kaunda suit",
+      "name": "Burgundy Stand-Collar Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1141,11 +1156,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A burgundy Kaunda jacket with a stand collar, contrasting buttons and flap pockets, shown on a dress form.",
       "images": [
         {
           "src": "/m-kaundasuits4.jpeg",
-          "alt": "Men’s Kaunda suit — MS-032",
+          "alt": "A burgundy Kaunda jacket with a stand collar, contrasting buttons and flap pockets, shown on a dress form.",
           "position": "center",
           "width": 528,
           "height": 658,
@@ -1163,6 +1178,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits4.jpeg",
@@ -1176,7 +1195,7 @@
     {
       "id": "MS-033",
       "slug": "ms-033",
-      "name": "Men’s Kaunda suit",
+      "name": "Teal Stand-Collar Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1184,11 +1203,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A dark teal Kaunda jacket with a stand collar and contrasting buttons, styled with a pocket square.",
       "images": [
         {
           "src": "/m-kaundasuits5.jpeg",
-          "alt": "Men’s Kaunda suit — MS-033",
+          "alt": "A dark teal Kaunda jacket with a stand collar and contrasting buttons, styled with a pocket square.",
           "position": "center",
           "width": 476,
           "height": 658,
@@ -1206,6 +1225,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits5.jpeg",
@@ -1219,7 +1242,7 @@
     {
       "id": "MS-034",
       "slug": "ms-034",
-      "name": "Men’s Kaunda suit",
+      "name": "Light Blue Four-Pocket Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1227,11 +1250,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A light blue Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown with a tie.",
       "images": [
         {
           "src": "/m-kaundasuits6.jpeg",
-          "alt": "Men’s Kaunda suit — MS-034",
+          "alt": "A light blue Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown with a tie.",
           "position": "center",
           "width": 461,
           "height": 658,
@@ -1249,6 +1272,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits6.jpeg",
@@ -1262,7 +1289,7 @@
     {
       "id": "MS-035",
       "slug": "ms-035",
-      "name": "Men’s Kaunda suit",
+      "name": "Navy Stand-Collar Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1270,11 +1297,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A navy Kaunda jacket with a stand collar, buttoned front and flap pockets, shown against a plain background.",
       "images": [
         {
           "src": "/m-kaundasuits7.jpeg",
-          "alt": "Men’s Kaunda suit — MS-035",
+          "alt": "A navy Kaunda jacket with a stand collar, buttoned front and flap pockets, shown against a plain background.",
           "position": "center",
           "width": 658,
           "height": 658,
@@ -1292,6 +1319,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits7.jpeg",
@@ -1305,7 +1336,7 @@
     {
       "id": "MS-036",
       "slug": "ms-036",
-      "name": "Men’s Kaunda suit",
+      "name": "Cream Four-Pocket Kaunda Jacket",
       "gender": "men",
       "styles": [
         "kaunda"
@@ -1313,11 +1344,11 @@
       "occasions": [],
       "colors": [],
       "garmentType": "suit",
-      "description": "",
+      "description": "A cream Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown on a dress form.",
       "images": [
         {
           "src": "/m-kaundasuits8.jpeg",
-          "alt": "Men’s Kaunda suit — MS-036",
+          "alt": "A cream Kaunda jacket with a shirt-style collar, four flap pockets and contrasting buttons, shown on a dress form.",
           "position": "center",
           "width": 566,
           "height": 658,
@@ -1335,6 +1366,10 @@
         {
           "field": "style",
           "source": "m-kaundasuits.html"
+        },
+        {
+          "field": "public name, description and alt text",
+          "source": "docs/CUSTOMER_EXPERIENCE_GALLERY_2026-11-26.md; original photograph inspected26November2026"
         }
       ],
       "sourceAnchor": "m-kaundasuits8.jpeg",
@@ -5017,6 +5052,1452 @@
       ],
       "metadataEvidence": [],
       "sourceAnchor": "Royal Blue Executive Women's Three-Piece Pantsuit – Signature Collection.webp"
+    },
+    {
+      "id": "MS-152",
+      "slug": "stone-regent-elegance",
+      "name": "Stone Regent Elegance",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Stone Beige"
+      ],
+      "garmentType": "suit",
+      "description": "Light stone-beige double-breasted jacket with peak lapels, dark buttons and a gold-toned chain brooch, shown with a brown tie and dark brown trousers. A fashion reference for an individually assessed tailoring request.",
+      "images": [
+        {
+          "src": "/stone-regent-chain-brooch-double-breasted-suit-01.webp",
+          "originalPath": "stone-regent-chain-brooch-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Stone-beige double-breasted jacket with peak lapels, brown buttons and gold-toned chain brooch",
+          "viewLabel": "Reference view",
+          "catalogueNo": 1
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "stone-regent-chain-brooch-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "stone-regent-elegance",
+        "name": "Stone Regent Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        1
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-153",
+      "slug": "steel-grey-signature",
+      "name": "Steel Grey Signature",
+      "gender": "women",
+      "styles": [
+        "three-piece"
+      ],
+      "occasions": [],
+      "colors": [
+        "Grey"
+      ],
+      "garmentType": "suit",
+      "description": "Grey women’s three-piece suit with a blazer, buttoned waistcoat and matching trousers, styled with a white shirt. This photograph is a tailoring reference, not confirmed ready stock.",
+      "images": [
+        {
+          "src": "/steel-grey-signature-three-piece-womens-suit.webp",
+          "originalPath": "steel-grey-signature-three-piece-womens-suit.webp",
+          "width": 1024,
+          "height": 1536,
+          "position": "50% 0%",
+          "alt": "Grey women’s blazer, buttoned waistcoat and trousers worn with a white shirt",
+          "viewLabel": "Reference view",
+          "catalogueNo": 2
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "steel-grey-signature-three-piece-womens-suit.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "steel-grey-signature",
+        "name": "Steel Grey Signature",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        2
+      ],
+      "proposedCategoryId": "women-three-piece",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-154",
+      "slug": "sovereign-gold-button-elegance-black",
+      "name": "Sovereign Gold-Button Elegance — Black",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Black"
+      ],
+      "garmentType": "suit",
+      "description": "Black double-breasted jacket with peak lapels and gold-toned buttons, shown with a white shirt, ivory trousers and burgundy shoes. Design and accessories are reference styling only.",
+      "images": [
+        {
+          "src": "/sovereign-gold-button-double-breasted-suit-04-black.webp",
+          "originalPath": "sovereign-gold-button-double-breasted-suit-04-black.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Black Sovereign double-breasted jacket with gold-toned buttons and ivory trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 3
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "sovereign-gold-button-double-breasted-suit-04-black.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "sovereign-gold-button-elegance",
+        "name": "Sovereign Gold-Button Elegance",
+        "variant": {
+          "id": "black",
+          "label": "Black",
+          "colour": "Black",
+          "catalogueVariant": "04"
+        }
+      },
+      "catalogueNumbers": [
+        3
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-155",
+      "slug": "sovereign-gold-button-elegance-navy-blue",
+      "name": "Sovereign Gold-Button Elegance — Navy Blue",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Navy Blue"
+      ],
+      "garmentType": "suit",
+      "description": "Navy-blue double-breasted jacket with peak lapels and gold-toned buttons, shown with a white shirt and light trousers. A colour variant within the Sovereign design family.",
+      "images": [
+        {
+          "src": "/sovereign-gold-button-double-breasted-suit-03-navy.webp",
+          "originalPath": "sovereign-gold-button-double-breasted-suit-03-navy.webp",
+          "width": 1122,
+          "height": 1402,
+          "position": "50% 0%",
+          "alt": "Navy-blue Sovereign double-breasted jacket with gold-toned buttons and light trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 4
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "sovereign-gold-button-double-breasted-suit-03-navy.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "sovereign-gold-button-elegance",
+        "name": "Sovereign Gold-Button Elegance",
+        "variant": {
+          "id": "navy-blue",
+          "label": "Navy Blue",
+          "colour": "Navy Blue",
+          "catalogueVariant": "03"
+        }
+      },
+      "catalogueNumbers": [
+        4
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-156",
+      "slug": "sovereign-gold-button-elegance-burgundy",
+      "name": "Sovereign Gold-Button Elegance — Burgundy",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Burgundy"
+      ],
+      "garmentType": "suit",
+      "description": "Burgundy double-breasted jacket with gold-toned buttons and peak lapels, shown with ivory trousers. Two photographs present different styling views of this colour variant; the source filename of the front view incorrectly says olive.",
+      "images": [
+        {
+          "src": "/sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp",
+          "originalPath": "sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Angled styling view of a burgundy Sovereign double-breasted jacket with gold-toned buttons and ivory trousers",
+          "viewLabel": "Angled styling view",
+          "catalogueNo": 5
+        },
+        {
+          "src": "/sovereign-gold-button-double-breasted-suit-01-olive.webp",
+          "originalPath": "sovereign-gold-button-double-breasted-suit-01-olive.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Front styling view of a burgundy gold-button Sovereign jacket; the original filename incorrectly labels it olive",
+          "viewLabel": "Additional front styling view — Burgundy, source filename mismatch",
+          "catalogueNo": 12
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "R54 owner20November2026 explicitly confirms catalogue image12 as Burgundy despite its Olive filename; retained in R59 approved visual direction. Source filename preserved for traceability. Reconciled25November2026."
+      ],
+      "sourceAnchor": "sovereign-gold-button-double-breasted-suit-02-burgundy-angle-02.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "sovereign-gold-button-elegance",
+        "name": "Sovereign Gold-Button Elegance",
+        "variant": {
+          "id": "burgundy",
+          "label": "Burgundy",
+          "colour": "Burgundy",
+          "catalogueVariant": "02"
+        }
+      },
+      "catalogueNumbers": [
+        5,
+        12
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_gallery_placement",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "groupingEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Catalogue5 and the actual Burgundy photograph incorrectly named Olive in12 share the gold-button Burgundy design-family variant, with different styling views. This does not prove the same physical garment or approve the source-label correction. R54 owner confirmation resolves the source-label correction; original file and grouped Burgundy views are unchanged.",
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-157",
+      "slug": "sovereign-gold-button-elegance-olive-green",
+      "name": "Sovereign Gold-Button Elegance — Olive Green",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Olive Green"
+      ],
+      "garmentType": "suit",
+      "description": "Olive-green double-breasted jacket with peak lapels, gold-toned buttons and flap pockets, shown with a green tie, white pocket square and white trousers. A Sovereign family colour reference.",
+      "images": [
+        {
+          "src": "/olive-sovereign-gold-button-double-breasted-suit-01.webp",
+          "originalPath": "olive-sovereign-gold-button-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Olive-green Sovereign double-breasted jacket with gold-toned buttons, green tie and white trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 6
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "olive-sovereign-gold-button-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "sovereign-gold-button-elegance",
+        "name": "Sovereign Gold-Button Elegance",
+        "variant": {
+          "id": "olive-green",
+          "label": "Olive Green",
+          "colour": "Olive Green",
+          "catalogueVariant": "01"
+        }
+      },
+      "catalogueNumbers": [
+        6
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-158",
+      "slug": "scarlet-crest-elegance",
+      "name": "Scarlet Crest Elegance",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Scarlet Red"
+      ],
+      "garmentType": "suit",
+      "description": "Scarlet-red double-breasted jacket with peak lapels, gold-toned buttons and a decorative floral chain brooch, styled with a black tie, pocket square and dark trousers.",
+      "images": [
+        {
+          "src": "/scarlet-crest-chain-brooch-double-breasted-suit-01.webp",
+          "originalPath": "scarlet-crest-chain-brooch-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Scarlet double-breasted jacket with gold-toned buttons, peak lapels and floral chain brooch",
+          "viewLabel": "Reference view",
+          "catalogueNo": 7
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "scarlet-crest-chain-brooch-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "scarlet-crest-elegance",
+        "name": "Scarlet Crest Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        7
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-159",
+      "slug": "sandstone-navy-elegance",
+      "name": "Sandstone Navy Elegance",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Sandstone Beige"
+      ],
+      "garmentType": "suit",
+      "description": "Sandstone-beige double-breasted jacket with peak lapels, gold-toned buttons and patch-style pockets, styled with a navy tie, pocket square and dark navy trousers.",
+      "images": [
+        {
+          "src": "/sandstone-navy-gold-button-double-breasted-suit-01.webp",
+          "originalPath": "sandstone-navy-gold-button-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Sandstone double-breasted jacket with gold-toned buttons, patch pockets and navy tie",
+          "viewLabel": "Reference view",
+          "catalogueNo": 8
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "sandstone-navy-gold-button-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "sandstone-navy-elegance",
+        "name": "Sandstone Navy Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        8
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-160",
+      "slug": "admiral-chain-brooch-elegance-pink",
+      "name": "Admiral Chain-Brooch Elegance — Pink",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Pink"
+      ],
+      "garmentType": "suit",
+      "description": "Pink double-breasted jacket with contrasting dark buttons, patterned tie and pocket square, plus a decorative gold-toned chain brooch. Matching trousers and dress shoes are shown as styling references.",
+      "images": [
+        {
+          "src": "/pink-admiral-chain-brooch-double-breasted-suit-02.webp",
+          "originalPath": "pink-admiral-chain-brooch-double-breasted-suit-02.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Pink Admiral double-breasted jacket with dark buttons, patterned tie and chain brooch",
+          "viewLabel": "Reference view",
+          "catalogueNo": 9
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "pink-admiral-chain-brooch-double-breasted-suit-02.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "admiral-chain-brooch-elegance",
+        "name": "Admiral Chain-Brooch Elegance",
+        "variant": {
+          "id": "pink",
+          "label": "Pink",
+          "colour": "Pink",
+          "catalogueVariant": "02"
+        }
+      },
+      "catalogueNumbers": [
+        9
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-161",
+      "slug": "pearl-gold-executive",
+      "name": "Pearl Gold Executive",
+      "gender": "women",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "White"
+      ],
+      "garmentType": "suit",
+      "description": "White women’s two-piece pantsuit with a four-button double-breasted blazer, notched lapels, flap pockets and matching trousers, shown over a black underlayer. The visible buttons are black; no gold accessories are confirmed.",
+      "images": [
+        {
+          "src": "/pearl-gold-executive-womens-suit.webp",
+          "originalPath": "pearl-gold-executive-womens-suit.webp",
+          "width": 900,
+          "height": 1200,
+          "position": "50% 0%",
+          "alt": "White women’s double-breasted pantsuit with four black buttons and a black underlayer",
+          "viewLabel": "Reference view",
+          "catalogueNo": 10
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "pearl-gold-executive-womens-suit.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "pearl-gold-executive",
+        "name": "Pearl Gold Executive",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        10
+      ],
+      "proposedCategoryId": "women-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "editorialReview": {
+        "status": "completed",
+        "reviewedOn": "2026-11-20",
+        "finding": "Individual photograph confirms a white two-piece women’s double-breasted pantsuit with four black buttons, notched lapels, flap pockets and black underlayer. Pearl Gold Executive remains the owner-provided design name, not a claim of gold hardware. Separate from Ivory Noir Elegance as instructed. Publication-rights hold remains."
+      },
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-162",
+      "slug": "onyx-silver-chain-elegance",
+      "name": "Onyx Silver-Chain Elegance",
+      "gender": "men",
+      "styles": [
+        "asymmetric",
+        "formalwear"
+      ],
+      "occasions": [],
+      "colors": [
+        "Black"
+      ],
+      "garmentType": "suit",
+      "description": "Black formal suit with an asymmetric jacket closure, silver-toned waist and cuff buckles and a floral chain brooch, styled with a striped tie. A contemporary formalwear reference.",
+      "images": [
+        {
+          "src": "/onyx-silver-chain-asymmetric-suit-01.webp",
+          "originalPath": "onyx-silver-chain-asymmetric-suit-01.webp",
+          "width": 1122,
+          "height": 1402,
+          "position": "50% 0%",
+          "alt": "Black asymmetric formal jacket with silver-toned waist and cuff buckles and chain brooch",
+          "viewLabel": "Reference view",
+          "catalogueNo": 11
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "onyx-silver-chain-asymmetric-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "onyx-silver-chain-elegance",
+        "name": "Onyx Silver-Chain Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        11
+      ],
+      "proposedCategoryId": "men-tuxedos-formalwear",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-163",
+      "slug": "navy-atelier-elegance",
+      "name": "Navy Atelier Elegance",
+      "gender": "women",
+      "styles": [
+        "skirt-suit",
+        "single-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Navy Blue"
+      ],
+      "garmentType": "suit",
+      "description": "Navy-blue women’s skirt suit with a single-breasted blazer, structured lapels, front pockets and a matching pencil skirt. Shown as a professional tailoring reference.",
+      "images": [
+        {
+          "src": "/navy-atelier-tailored-skirt-suit.webp",
+          "originalPath": "navy-atelier-tailored-skirt-suit.webp",
+          "width": 1024,
+          "height": 1536,
+          "position": "50% 0%",
+          "alt": "Navy women’s single-breasted blazer with matching pencil skirt",
+          "viewLabel": "Reference view",
+          "catalogueNo": 13
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "navy-atelier-tailored-skirt-suit.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "navy-atelier-elegance",
+        "name": "Navy Atelier Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        13
+      ],
+      "proposedCategoryId": "women-skirt-suits",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-164",
+      "slug": "mahogany-paisley-elegance",
+      "name": "Mahogany Paisley Elegance",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Chocolate Brown"
+      ],
+      "garmentType": "suit",
+      "description": "Chocolate-brown double-breasted jacket with gold-toned buttons, patterned detailing at the lower front and a coordinating tie and pocket square, shown with cream trousers.",
+      "images": [
+        {
+          "src": "/mahogany-paisley-asymmetric-double-breasted-suit-01.webp",
+          "originalPath": "mahogany-paisley-asymmetric-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Chocolate-brown double-breasted jacket with patterned lower-front detail and cream trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 14
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "mahogany-paisley-asymmetric-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "mahogany-paisley-elegance",
+        "name": "Mahogany Paisley Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        14
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-165",
+      "slug": "ivory-noir-shawl-elegance",
+      "name": "Ivory Noir Shawl Elegance",
+      "gender": "men",
+      "styles": [
+        "tuxedo",
+        "formalwear"
+      ],
+      "occasions": [],
+      "colors": [
+        "White and Black"
+      ],
+      "garmentType": "tuxedo",
+      "description": "White double-breasted tuxedo jacket with black piping around the shawl-style lapels and front edges, black buttons and contrasting pocket trim, styled with a black bow tie and black trousers.",
+      "images": [
+        {
+          "src": "/ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp",
+          "originalPath": "ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "White double-breasted tuxedo jacket with black piping around shawl lapels and black trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 15
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "ivory-noir-shawl-collar-double-breasted-tuxedo-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "ivory-noir-shawl-elegance",
+        "name": "Ivory Noir Shawl Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        15
+      ],
+      "proposedCategoryId": "men-tuxedos-formalwear",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-166",
+      "slug": "ivory-noir-elegance",
+      "name": "Ivory Noir Elegance",
+      "gender": "women",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "White"
+      ],
+      "garmentType": "suit",
+      "description": "White women’s two-piece pantsuit with a double-breasted blazer, contrasting black buttons, notched lapels and matching trousers. This remains separate from the Pearl Gold Executive reference.",
+      "images": [
+        {
+          "src": "/ivory-noir-elegance-womens-suit.webp",
+          "originalPath": "ivory-noir-elegance-womens-suit.webp",
+          "width": 1024,
+          "height": 1536,
+          "position": "50% 0%",
+          "alt": "White women’s double-breasted blazer with black buttons and matching trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 16
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "ivory-noir-elegance-womens-suit.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "ivory-noir-elegance",
+        "name": "Ivory Noir Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        16
+      ],
+      "proposedCategoryId": "women-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-167",
+      "slug": "ivory-nocturne-elegance",
+      "name": "Ivory Nocturne Elegance",
+      "gender": "men",
+      "styles": [
+        "asymmetric",
+        "formalwear"
+      ],
+      "occasions": [],
+      "colors": [
+        "Ivory and Black"
+      ],
+      "garmentType": "suit",
+      "description": "Ivory formal jacket with black piping and an asymmetric black waist sash, gold-toned buckle accent, black high-neck underlayer and black trousers. A contemporary formalwear reference, not a standard package promise.",
+      "images": [
+        {
+          "src": "/ivory-nocturne-sash-waist-formal-suit-01.webp",
+          "originalPath": "ivory-nocturne-sash-waist-formal-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Ivory formal jacket with black piping, asymmetric black waist sash and gold-toned buckle",
+          "viewLabel": "Reference view",
+          "catalogueNo": 17
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "ivory-nocturne-sash-waist-formal-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "ivory-nocturne-elegance",
+        "name": "Ivory Nocturne Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        17
+      ],
+      "proposedCategoryId": "men-tuxedos-formalwear",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-168",
+      "slug": "ivory-midnight-speckled-tuxedo",
+      "name": "Ivory Midnight Speckled Tuxedo",
+      "gender": "men",
+      "styles": [
+        "tuxedo",
+        "formalwear"
+      ],
+      "occasions": [],
+      "colors": [
+        "White"
+      ],
+      "garmentType": "tuxedo",
+      "description": "White formal jacket with black-and-white speckled detailing on the front and sleeve cuffs, styled with a white shirt and black bow tie.",
+      "images": [
+        {
+          "src": "/ivory-midnight-speckled-tuxedo-jacket.webp",
+          "originalPath": "ivory-midnight-speckled-tuxedo-jacket.webp",
+          "width": 1122,
+          "height": 1402,
+          "position": "50% 0%",
+          "alt": "White formal jacket with black-and-white speckled front and cuff details and black bow tie",
+          "viewLabel": "Reference view",
+          "catalogueNo": 18
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "ivory-midnight-speckled-tuxedo-jacket.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "ivory-midnight-speckled-tuxedo",
+        "name": "Ivory Midnight Speckled Tuxedo",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        18
+      ],
+      "proposedCategoryId": "men-tuxedos-formalwear",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-169",
+      "slug": "ivory-heritage-elegance",
+      "name": "Ivory Heritage Elegance",
+      "gender": "men",
+      "styles": [
+        "single-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Ivory"
+      ],
+      "garmentType": "suit",
+      "description": "Ivory single-breasted jacket with notched lapels, decorative edge stitching, rounded patch pockets and coordinated buttons. Angled, front and close-up photographs show the same design reference.",
+      "images": [
+        {
+          "src": "/ivory-heritage-patch-pocket-suit-01.webp",
+          "originalPath": "ivory-heritage-patch-pocket-suit-01.webp",
+          "width": 1122,
+          "height": 1402,
+          "position": "50% 0%",
+          "alt": "Angled view of the ivory Heritage jacket with patch pockets, edge stitching and gold-toned tie",
+          "viewLabel": "Angled view",
+          "catalogueNo": 21
+        },
+        {
+          "src": "/ivory-heritage-patch-pocket-suit-03.webp",
+          "originalPath": "ivory-heritage-patch-pocket-suit-03.webp",
+          "width": 1122,
+          "height": 1402,
+          "position": "50% 0%",
+          "alt": "Front view of an ivory single-breasted Heritage jacket with rounded patch pockets and edge stitching",
+          "viewLabel": "Front view",
+          "catalogueNo": 19
+        },
+        {
+          "src": "/ivory-heritage-patch-pocket-suit-02.webp",
+          "originalPath": "ivory-heritage-patch-pocket-suit-02.webp",
+          "width": 1122,
+          "height": 1402,
+          "position": "50% 0%",
+          "alt": "Close-up of the ivory Heritage jacket showing lapel stitching, rounded chest pocket and buttons",
+          "viewLabel": "Close-up detail",
+          "catalogueNo": 20
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "ivory-heritage-patch-pocket-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "ivory-heritage-elegance",
+        "name": "Ivory Heritage Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        21,
+        19,
+        20
+      ],
+      "proposedCategoryId": "men-single-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "groupingEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. Catalogue19/20/21 and matching visible patch pockets, button placement and edge stitching establish three views. Original order: angled21, front19, detail20.",
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-170",
+      "slug": "ivory-diamond-lattice-elegance",
+      "name": "Ivory Diamond Lattice Elegance",
+      "gender": "men",
+      "styles": [
+        "tuxedo",
+        "formalwear"
+      ],
+      "occasions": [],
+      "colors": [
+        "White"
+      ],
+      "garmentType": "tuxedo",
+      "description": "White formal tuxedo jacket with decorative diamond-lattice shawl-lapel detailing, styled with a pleated white shirt, black bow tie and black trousers.",
+      "images": [
+        {
+          "src": "/ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp",
+          "originalPath": "ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "White tuxedo jacket with diamond-lattice shawl-lapel decoration, black bow tie and black trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 22
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "ivory-diamond-lattice-shawl-lapel-tuxedo-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "ivory-diamond-lattice-elegance",
+        "name": "Ivory Diamond Lattice Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        22
+      ],
+      "proposedCategoryId": "men-tuxedos-formalwear",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-171",
+      "slug": "admiral-chain-brooch-elegance-crimson-red",
+      "name": "Admiral Chain-Brooch Elegance — Crimson Red",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Crimson Red"
+      ],
+      "garmentType": "suit",
+      "description": "Crimson-red double-breasted jacket with dark buttons, peak lapels, patterned tie and pocket square, and a decorative gold-toned chain brooch, shown with matching trousers and burgundy shoes.",
+      "images": [
+        {
+          "src": "/crimson-admiral-chain-brooch-double-breasted-suit-03.webp",
+          "originalPath": "crimson-admiral-chain-brooch-double-breasted-suit-03.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Crimson Admiral double-breasted jacket with dark buttons, patterned tie and gold-toned chain brooch",
+          "viewLabel": "Reference view",
+          "catalogueNo": 23
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "crimson-admiral-chain-brooch-double-breasted-suit-03.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "admiral-chain-brooch-elegance",
+        "name": "Admiral Chain-Brooch Elegance",
+        "variant": {
+          "id": "crimson-red",
+          "label": "Crimson Red",
+          "colour": "Crimson Red",
+          "catalogueVariant": "03"
+        }
+      },
+      "catalogueNumbers": [
+        23
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-172",
+      "slug": "champagne-cocoa-elegance",
+      "name": "Champagne Cocoa Elegance",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Champagne Beige and Brown"
+      ],
+      "garmentType": "suit",
+      "description": "Champagne-beige double-breasted jacket with chocolate-brown contrast lapels, dark buttons and coordinated pocket trim, styled with a patterned brown tie, pocket square and brown trousers.",
+      "images": [
+        {
+          "src": "/champagne-cocoa-peak-lapel-double-breasted-suit-01.webp",
+          "originalPath": "champagne-cocoa-peak-lapel-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Champagne-beige double-breasted jacket with chocolate-brown contrast lapels and matching brown trousers",
+          "viewLabel": "Reference view",
+          "catalogueNo": 24
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "champagne-cocoa-peak-lapel-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "champagne-cocoa-elegance",
+        "name": "Champagne Cocoa Elegance",
+        "variant": null
+      },
+      "catalogueNumbers": [
+        24
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
+    },
+    {
+      "id": "MS-173",
+      "slug": "admiral-chain-brooch-elegance-burgundy",
+      "name": "Admiral Chain-Brooch Elegance — Burgundy",
+      "gender": "men",
+      "styles": [
+        "double-breasted"
+      ],
+      "occasions": [],
+      "colors": [
+        "Burgundy"
+      ],
+      "garmentType": "suit",
+      "description": "Burgundy double-breasted jacket with dark buttons, peak lapels, patterned tie and pocket square, and a decorative gold-toned chain brooch, shown with matching trousers and burgundy shoes.",
+      "images": [
+        {
+          "src": "/burgundy-admiral-chain-brooch-double-breasted-suit-01.webp",
+          "originalPath": "burgundy-admiral-chain-brooch-double-breasted-suit-01.webp",
+          "width": 1086,
+          "height": 1448,
+          "position": "50% 0%",
+          "alt": "Burgundy Admiral double-breasted jacket with dark buttons, patterned tie and gold-toned chain brooch",
+          "viewLabel": "Reference view",
+          "catalogueNo": 25
+        }
+      ],
+      "provenance": "design_inspiration",
+      "provenanceEvidence": "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval. The owner identifies these as fashion reference designs, not verified completed Mr Sewing work.",
+      "rightsStatus": "approved",
+      "published": false,
+      "publicationBasis": "prepared_owner_catalogue_pending_gallery_placement",
+      "sources": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval.",
+        "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026."
+      ],
+      "metadataEvidence": [
+        "Owner Image Catalogue19November2026 and corrective integration instruction; actual source upload ce98ee3991a43483357304b5fe9f2f0a83f7ae27; direct visual inspection19November2026. Metadata/reference classification only, not usage-rights approval."
+      ],
+      "sourceAnchor": "burgundy-admiral-chain-brooch-double-breasted-suit-01.webp",
+      "classification": "reference-design",
+      "family": {
+        "id": "admiral-chain-brooch-elegance",
+        "name": "Admiral Chain-Brooch Elegance",
+        "variant": {
+          "id": "burgundy",
+          "label": "Burgundy",
+          "colour": "Burgundy",
+          "catalogueVariant": "01"
+        }
+      },
+      "catalogueNumbers": [
+        25
+      ],
+      "proposedCategoryId": "men-double-breasted",
+      "metadataReviewStatus": "visually_reviewed_pending_owner_publication",
+      "publicationBlockers": [
+        "Prepared reference design remains unpublished until deliberate collection placement and validation of the existing category/design-detail enquiry mapping. Owner permission is recorded under R61; this is not a missing-permission hold."
+      ],
+      "uploadCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+      "sourceOrCreator": null,
+      "publicationPermission": {
+        "approved": true,
+        "date": "2026-11-22",
+        "evidenceRef": "Owner22November2026R61 repository-media authorization, recorded in docs/R61_OWNER_MEDIA_AND_TAILORING_HOMEPAGE_2026-11-22.md; owner-represented permission, not independent creator/licence verification. Reconciled25November2026.",
+        "scope": "Owner authorizes website use of repository photographs; deliberate collection placement remains separate."
+      }
     }
   ]
 }

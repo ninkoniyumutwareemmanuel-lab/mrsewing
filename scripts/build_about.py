@@ -15,6 +15,40 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'https://mrsewingfashion.com/about/'
 
 
+def leadership_section(record=None):
+    """Render only a deliberately published, owner-approved leadership record."""
+    if record is None:
+        record = json.loads((ROOT/'_data/about-leadership.json').read_text())
+    if not record.get('published'):
+        return ''
+    if record.get('approvalStatus') != 'approved':
+        raise ValueError('Leadership publication requires approved public content')
+    for field in ('name', 'title', 'biography'):
+        if not isinstance(record.get(field), str) or not record[field].strip():
+            raise ValueError('Leadership publication requires ' + field)
+    portrait = record.get('portrait')
+    if not isinstance(portrait, dict) or portrait.get('publicationApproved') is not True:
+        raise ValueError('Leadership portrait publication permission is required')
+    path = portrait.get('path', '')
+    image = (ROOT/path).resolve()
+    if not path or not image.is_relative_to(ROOT) or not image.is_file() or image.suffix.lower() not in ('.jpg', '.jpeg', '.png', '.webp', '.avif'):
+        raise ValueError('Leadership portrait must resolve to an approved local image')
+    if not isinstance(portrait.get('alt'), str) or not portrait['alt'].strip():
+        raise ValueError('Leadership portrait needs descriptive alternative text')
+    if any(not isinstance(portrait.get(k), int) or isinstance(portrait[k], bool) or portrait[k] <= 0 for k in ('width', 'height')):
+        raise ValueError('Leadership portrait needs positive intrinsic dimensions')
+    photo = ('<img src="/'+escape(path.lstrip('/'), quote=True)+'" alt="'+escape(portrait['alt'], quote=True)+'" '
+        f'width="{portrait["width"]}" height="{portrait["height"]}" loading="lazy" decoding="async">')
+    copy = [record['biography']]
+    copy.extend(record[k] for k in ('motivation', 'philosophy', 'vision') if isinstance(record.get(k), str) and record[k].strip())
+    values = {'leadership_portrait':photo, 'leadership_name':escape(record['name']),
+        'leadership_role':escape(record['title']), 'leadership_copy':''.join('<p>'+escape(p)+'</p>' for p in copy)}
+    output = (ROOT/'_templates/about-leadership.html').read_text()
+    for key, value in values.items():
+        output = output.replace('{{'+key+'}}', value)
+    return output
+
+
 def render():
     return legacy_render()
 
@@ -33,15 +67,15 @@ def legacy_render():
         {'@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':'Home','item':'https://mrsewingfashion.com/'},
             {'@type':'ListItem','position':2,'name':'About Mr Sewing','item':PAGE}]}]}
-    # Official existing logo, using its established responsive WebP derivatives.
+    # Keep the operating-company logo subordinate to the Mr Sewing brand story.
     image = ('<img class="about-hero-image about-logo" src="assets/images/nexus-logo-480.webp" '
         'srcset="assets/images/nexus-logo-480.webp 480w, assets/images/nexus-logo-960.webp 960w" '
-        'sizes="(min-width: 768px) 360px, 80vw" width="1536" height="1024" loading="eager" '
-        'fetchpriority="high" decoding="async" alt="Owner-supplied Nexus company logo">')
+        'sizes="140px" width="1536" height="1024" loading="lazy" '
+        'decoding="async" alt="NINKONIYUMUTWARE NEXUS LTD operating-company logo">')
     header = delivery(re.sub(r'<img\b[^>]*>', reserve_image_space, shared.header('/about/')), 'header')
     values = {'services_picker':shared.services_picker(),'header':header,'footer':delivery(shared.footer(),'footer'),
         'styles':shared.component_css()+'\n'+ICON_CSS+'\n'+(ROOT/'_templates/about.css').read_text(),
-        'schema':json.dumps(schema,ensure_ascii=False,indent=2),'hero_image':image,
+        'schema':json.dumps(schema,ensure_ascii=False,indent=2),'hero_image':image,'leadership':leadership_section(),
         'legacy_redirect':legacy_script('about.html'),
         'page_title':escape(seo['title'],quote=True),'page_description':escape(seo['description'],quote=True)}
     output = (ROOT/'_templates/about.html').read_text()

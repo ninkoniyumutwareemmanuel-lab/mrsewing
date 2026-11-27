@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "authority": "Video-only publication and classification records. Existing image approvals remain in collection-designs.json and customer-projects.json.",
+  "instructions": "Owner authorised all repository images and videos for website use on 22 November 2026. The two reviewed videos are staging-authorized. Do not claim third-party rights were independently audited.",
+  "videos": [
+    {
+      "assetPath": "/1024X768VIDEO.mp4",
+      "title": "Light double-breasted suit reference video",
+      "alternativeText": "A light ivory-coloured double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "description": "A light ivory-coloured double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "audience": "men",
+      "garmentType": "suit",
+      "styleTags": [
+        "double-breasted"
+      ],
+      "classification": "reference-design",
+      "publicationStatus": "published",
+      "sourceOrCreator": null,
+      "durationSeconds": 22.845578,
+      "posterMediaId": null,
+      "usageRights": {
+        "approved": true,
+        "evidenceRef": "Owner direct instruction in Mr Sewing Fashion project conversation, 22 November 2026, authorising use of repository media on the website.",
+        "date": "2026-11-22",
+        "scope": "Staging website demonstration; owner-represented permission, not independently verified creator rights"
+      },
+      "metadataApproval": {
+        "approved": true,
+        "evidenceRef": "Owner 22 November 2026 instruction to use repository media; retained reviewed descriptive titles.",
+        "date": "2026-11-22"
+      },
+      "technicalReview": {
+        "status": "verified",
+        "reviewedOn": "2026-11-19",
+        "method": "ffprobe; full ffmpeg decode; ISO BMFF box inspection; visual samples at five-second intervals and frame20s for black video",
+        "sourceCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "sha256": "787bb40456b856e67995bd3444ffe21bc40ac465c0a0ed9ad671e4f21cb87756",
+        "bytes": 3017971,
+        "width": 720,
+        "height": 1280,
+        "displayAspectRatio": "9:16",
+        "framesPerSecond": 30,
+        "videoCodec": "h264",
+        "videoProfile": "High",
+        "pixelFormat": "yuv420p",
+        "videoDurationSeconds": 22.733333,
+        "audioCodec": "aac",
+        "audioProfile": "HE-AAC",
+        "audioChannels": 2,
+        "audioSampleRateHz": 44100,
+        "containerBitRate": 1056824,
+        "fastStart": true,
+        "decodeCheck": "passed; no decode errors",
+        "audioReview": "Audio stream exists; spoken/music content and recording or music rights are not established."
+      },
+      "posterPreparation": {
+        "status": "prepared_for_review_outside_public_tree",
+        "sourceTimeSeconds": 1,
+        "width": 720,
+        "height": 1280,
+        "sha256": "05f6fdfd82386ac26c7a218d05c43208d6449f202aabdbd041a614befcd2becc",
+        "publicationApproved": false,
+        "note": "Exact extracted video-frame candidate is retained only in review artifacts; no unapproved poster was copied into public assets."
+      },
+      "publicationBlockers": [],
+      "uploadMetadata": {
+        "originalFilename": "1024X768VIDEO.mp4",
+        "repositoryCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "source": "Owner-uploaded branch files; corrective implementation instruction19November2026",
+        "rightsImplication": "Upload and technical preparation do not establish publication rights or Mr Sewing workmanship."
+      },
+      "displayNotes": "R61/R64 staging presentation uses only the verified silent derivative and extracted source-frame poster; muted looping playback with keyboard/tap pause and reduced-motion support. Reference design, not verified completed Mr Sewing work.",
+      "playback": {
+        "assetPath": "/assets/videos/suit-light-silent.mp4",
+        "sha256": "0737d9b2749e2d6a492e302713cdc4e54d529d872aca9d2afe42926861049e97",
+        "bytes": 2785145,
+        "sourceSha256": "787bb40456b856e67995bd3444ffe21bc40ac465c0a0ed9ad671e4f21cb87756",
+        "posterPath": "/assets/videos/suit-light-poster.jpg",
+        "posterSha256": "b7590268efc68685b8399cd73936a125a200cdfe390ae62185fddd423356749a",
+        "audioStreams": 0,
+        "verification": "25 November 2026 recovery: ffprobe confirms exactly one video track and zero audio; source identity and existing R61 derived poster retained. Playback is validated separately from original upload rights."
+      }
+    },
+    {
+      "assetPath": "/1024X768black.mp4",
+      "title": "Black double-breasted suit reference video",
+      "alternativeText": "A black double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "description": "A black double-breasted suit displayed on a mannequin with a patterned tie and pocket square in a clothing-store interior.",
+      "audience": "men",
+      "garmentType": "suit",
+      "styleTags": [
+        "double-breasted"
+      ],
+      "classification": "reference-design",
+      "publicationStatus": "published",
+      "sourceOrCreator": null,
+      "durationSeconds": 21.94,
+      "posterMediaId": null,
+      "usageRights": {
+        "approved": true,
+        "evidenceRef": "Owner direct instruction in Mr Sewing Fashion project conversation, 22 November 2026, authorising use of repository media on the website.",
+        "date": "2026-11-22",
+        "scope": "Staging website demonstration; owner-represented permission, not independently verified creator rights"
+      },
+      "metadataApproval": {
+        "approved": true,
+        "evidenceRef": "Owner 22 November 2026 instruction to use repository media; retained reviewed descriptive titles.",
+        "date": "2026-11-22"
+      },
+      "technicalReview": {
+        "status": "verified",
+        "reviewedOn": "2026-11-19",
+        "method": "ffprobe; full ffmpeg decode; ISO BMFF box inspection; visual samples at five-second intervals and frame20s for black video",
+        "sourceCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "sha256": "56dfbf5dc08bd27f6965eaa3a7ec6269419a8f107461161b63f2ab47a3a6763a",
+        "bytes": 2681007,
+        "width": 720,
+        "height": 1280,
+        "displayAspectRatio": "9:16",
+        "framesPerSecond": 30,
+        "videoCodec": "h264",
+        "videoProfile": "High",
+        "pixelFormat": "yuv420p",
+        "videoDurationSeconds": 21.833333,
+        "audioCodec": "aac",
+        "audioProfile": "HE-AAC",
+        "audioChannels": 2,
+        "audioSampleRateHz": 44100,
+        "containerBitRate": 977577,
+        "fastStart": true,
+        "decodeCheck": "passed; no decode errors",
+        "audioReview": "Audio stream exists; spoken/music content and recording or music rights are not established."
+      },
+      "posterPreparation": {
+        "status": "prepared_for_review_outside_public_tree",
+        "sourceTimeSeconds": 1,
+        "width": 720,
+        "height": 1280,
+        "sha256": "d387086a3d92341218600864331cc160f67b26d99ac759200779f972fbadc8e7",
+        "publicationApproved": false,
+        "note": "Exact extracted video-frame candidate is retained only in review artifacts; no unapproved poster was copied into public assets."
+      },
+      "publicationBlockers": [],
+      "uploadMetadata": {
+        "originalFilename": "1024X768black.mp4",
+        "repositoryCommit": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "source": "Owner-uploaded branch files; corrective implementation instruction19November2026",
+        "rightsImplication": "Upload and technical preparation do not establish publication rights or Mr Sewing workmanship."
+      },
+      "displayNotes": "R61/R64 staging presentation uses only the verified silent derivative and extracted source-frame poster; muted looping playback with keyboard/tap pause and reduced-motion support. Reference design, not verified completed Mr Sewing work.",
+      "playback": {
+        "assetPath": "/assets/videos/suit-black-silent.mp4",
+        "sha256": "28dd184f147b5c7a37bab94262a8f1a40e74055a81000684e1ec10fe20e1af83",
+        "bytes": 2516804,
+        "sourceSha256": "56dfbf5dc08bd27f6965eaa3a7ec6269419a8f107461161b63f2ab47a3a6763a",
+        "posterPath": "/assets/videos/suit-black-poster.jpg",
+        "posterSha256": "e2d112eada9d81caeaa5b30ee483ba9c523e9e479d53b0a622c22c5c6424b4df",
+        "audioStreams": 0,
+        "verification": "25 November 2026 recovery: ffprobe confirms exactly one video track and zero audio; source identity and existing R61 derived poster retained. Playback is validated separately from original upload rights."
+      }
+    }
+  ]
+}

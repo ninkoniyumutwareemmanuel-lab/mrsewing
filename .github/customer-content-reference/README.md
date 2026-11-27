@@ -1,21 +1,37 @@
+## Latest tracking and conditional release —27November2026
+Owner26Nov suppliesconfirmedGoogleIDs/labels and conditionally authorizesproduction only aftermandatoryactualwebsite/provider/hostinggates. Readcurrent2026-11-27-01 and docs/TRACKING_IMPLEMENTATION_2026-11-27.md. Prior staging-only/release paragraphs below are historical for their own scopes. No missingcheck is waived.
+
+## Current final release preparation — 26 November 2026
+Read current **versions/2026-11-27-01** and [final release brief](../../docs/FINAL_RELEASE_PREPARATION_2026-11-26.md). Latest owner authorizes the temporary Shop navigation/production-projection hold and targeted staging tests/measurement preparation only. Preserve tailoring hero, service navigation, current effective Terms and all Shop development code. No Main/production or external Ads-account change. Earlier scoped release authorities below remain historical for their own candidates.
+
+## 22 November 2026 — R61 owner media authorization (latest; staging only)
+
+Owner expressly confirmed that photographs and videos placed in this GitHub repository are authorised by the owner for use on the Mr Sewing Fashion website. Do not request a second owner permission solely because an image or video is stored in the repository. This instruction supersedes earlier internal "owner permission pending" status for those repository assets. The statement is the owner's authorization, not an independent audit of third-party licenses, person/creator permissions, or music rights. Do not falsely label fashion reference pictures as completed customer work, proof of available stock, or real garment manufacturing dates. Continue to check accuracy and appropriate category placement. The two R53 videos have a verified, silent staging presentation with exact-frame posters. Other gallery records remain unpublished until deliberate placement/categorisation; this is not a request to publish every image immediately. This authorization does not permit production publication, merge into main or changes to external accounts.
+
 # Customer-Facing Website Content Reference
 
 Permanent repository reference for future Codex website tasks. Read the root AGENTS.md first.
 
-Current reviewed reference: **versions/2026-11-18-02**. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
+**Current26November2026customer-experience assignment:** comprehensive audited staging improvements only, following the recovered baseline. Read [the implementation brief](../../docs/CUSTOMER_EXPERIENCE_IMPLEMENTATION_BRIEF_2026-11-26.md). Read [master reconciliation register](../../docs/WEBSITE_RECONCILIATION_2026-11-25.md) and the latest dated sources; preserveR61media/R63–R67design/forms/SEO and text-firstfabric decisions. NewestPDFupload must retain its actualversion/stagingreview distinction. Main/officialwebsite are read-only.
+
+
+Current reviewed reference: **versions/2026-11-27-01**, preserving all prior snapshots as exact prefixes and appending the owner's26November2026staging customer-experience direction. The new Flexible Advance Payment proposal remains inactive and does not supersede the existing approved Standard-only exception. No new customer financial or legal terms are approved by the version change. Policy approval remains rule-specific; this label does not approve incomplete policies. Original company Sources remain unavailable as recorded in the matrix. This is a sanitised customer-information development reference, not a confidential document store, final legal policy, or authorisation to publish.
 
 **Current R49 release authority:** The owner's13November2026 instruction authorizes the complete approved R35–R49 release after critical staging verification. Earlier staging-only paragraphs below are historical for that verified scope; unresolved/private/unapproved features and future unfinished work remain held. This reference does not claim production has been deployed. See [R49 release brief](R49_RELEASE_BRIEF_2026-11-13.md), [full branch reconciliation](R49_RELEASE_RECONCILIATION_2026-11-13.md) and [policy reconciliation](R49_POLICY_RECONCILIATION_2026-11-13.md).
 
 **Latest R50 publication instruction,18November2026:** After receiving the exact proxy-verification limitation, the owner directly instructed publication of the reviewed staging release to main/live. This supersedes the prior publication hold for this candidate while preserving local/provider checks, branch protections and honest separation of deployment success from unavailable live rendering. It changes no business policy and claims no completed production deployment. See [release execution record](PRODUCTION_RELEASE_EXECUTION_2026-11-18.md).
 
+**R59 visual decision (22 November 2026):** [Tailoring-first staging owner directive](versions/2026-11-22-01/R59_TAILORING_FIRST_OWNER_DIRECTIVE.md) and [implementation/source map](../../docs/R59_TAILORING_FIRST_STAGING_2026-11-22.md). Media rights, video posters, legal PDF activation, merchandise stock and real customer enquiries remain separately gated. This staging authority does not authorize a production release.
+
 Read in order:
 
-1. [Customer information master](versions/2026-11-18-02/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
-2. [Policy source matrix](versions/2026-11-18-02/MR_SEWING_POLICY_SOURCE_MATRIX.md)
-3. [Unresolved register](versions/2026-11-18-02/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
-4. [Page content map](versions/2026-11-18-02/MR_SEWING_PAGE_CONTENT_MAP.md)
-5. [Communication drafts](versions/2026-11-18-02/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
-6. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
+1. [Customer information master](versions/2026-11-27-01/MR_SEWING_CUSTOMER_INFORMATION_MASTER.md)
+2. [Policy source matrix](versions/2026-11-27-01/MR_SEWING_POLICY_SOURCE_MATRIX.md)
+3. [Unresolved register](versions/2026-11-27-01/MR_SEWING_UNRESOLVED_POLICY_REGISTER.md)
+4. [Page content map](versions/2026-11-27-01/MR_SEWING_PAGE_CONTENT_MAP.md)
+5. [Communication drafts](versions/2026-11-27-01/MR_SEWING_CUSTOMER_COMMUNICATION_LIBRARY.md)
+6. [R59 approved design scope](versions/2026-11-22-01/R59_TAILORING_FIRST_OWNER_DIRECTIVE.md)
+7. [Required page brief](PAGE_BRIEF_TEMPLATE.md)
 
 ## Update and history rules
 

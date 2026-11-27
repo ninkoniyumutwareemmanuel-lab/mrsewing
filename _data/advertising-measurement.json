@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "status": "website-configured-account-publication-and-receipt-unverified",
+  "externalEventsEnabled": true,
+  "ownerSource": "Owner final tracking implementation and conditional production release, 26 November 2026; resumed27November2026",
+  "gtm": {
+    "containerId": "GTM-WHR49M4D",
+    "productionEnabled": true,
+    "accountPublicationVerified": false
+  },
+  "googleAds": {
+    "conversionId": "18587874562",
+    "tagId": "AW-18587874562",
+    "enabled": true,
+    "transport": "existing-gtm-container-only",
+    "enhancedConversions": false,
+    "adPersonalization": false
+  },
+  "ga4": {
+    "measurementId": null,
+    "enabled": false
+  },
+  "conversions": [
+    {
+      "event": "whatsapp_contact_click",
+      "name": "Whatsap Contact",
+      "label": "zHM6CL_CjsAdEILqsZ9F",
+      "sendTo": "AW-18587874562/zHM6CL_CjsAdEILqsZ9F",
+      "enabled": true,
+      "recommendedOptimization": "Primary initially"
+    },
+    {
+      "event": "website_call_click",
+      "name": "Click to call",
+      "label": "tT1uCMLCjsAdEILqsZ9F",
+      "sendTo": "AW-18587874562/tT1uCMLCjsAdEILqsZ9F",
+      "enabled": true,
+      "recommendedOptimization": "Secondary"
+    },
+    {
+      "event": "appointment_confirmed",
+      "name": "Book appointment",
+      "label": "_QXPCMXCjsAdEILqsZ9F",
+      "sendTo": "AW-18587874562/_QXPCMXCjsAdEILqsZ9F",
+      "enabled": false,
+      "recommendedOptimization": "Inactive until genuine confirmation"
+    },
+    {
+      "event": "directions_click",
+      "name": "Get directions",
+      "label": "55vTCMjCjsAdEILqsZ9F",
+      "sendTo": "AW-18587874562/55vTCMjCjsAdEILqsZ9F",
+      "enabled": true,
+      "recommendedOptimization": "Secondary"
+    },
+    {
+      "event": "quote_request_success",
+      "name": "Request quote",
+      "label": "ZHLFCMvCjsAdEILqsZ9F",
+      "sendTo": "AW-18587874562/ZHLFCMvCjsAdEILqsZ9F",
+      "enabled": true,
+      "recommendedOptimization": "Primary"
+    },
+    {
+      "event": "lead_form_success",
+      "name": "Submit lead form",
+      "label": "p9FJCM7CjsAdEILqsZ9F",
+      "sendTo": "AW-18587874562/p9FJCM7CjsAdEILqsZ9F",
+      "enabled": true,
+      "recommendedOptimization": "Primary"
+    }
+  ],
+  "attribution": {
+    "storage": "per-tab sessionStorage only after fresh measurement consent",
+    "ttlMs": 86400000,
+    "pendingEventTtlMs": 1800000,
+    "keys": [
+      "gclid",
+      "gbraid",
+      "wbraid",
+      "fbclid",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term"
+    ]
+  },
+  "contact": {
+    "telephone": "+250787411501",
+    "email": "mrsewingfashiondesigner@gmail.com",
+    "directionsURLs": [
+      "https://maps.app.goo.gl/qz1GzkBunkmzVKXQ6?g_st=ac"
+    ]
+  },
+  "meaning": "Contact clicks are intent only. Positive enquiries are not inbox receipt, appointments, orders, payments or purchases. No conversion values/currency/customer data are sent.",
+  "publicReferrerPaths": [
+    "/",
+    "/about/",
+    "/collections/",
+    "/collections/designs/ivory-elegance-shawl-tuxedo-black-tie/",
+    "/collections/designs/midnight-black-double-breasted-gold/",
+    "/collections/designs/ms-005/",
+    "/collections/designs/ms-006/",
+    "/collections/designs/ms-029/",
+    "/collections/designs/ms-030/",
+    "/collections/designs/ms-031/",
+    "/collections/designs/ms-032/",
+    "/collections/designs/ms-033/",
+    "/collections/designs/ms-034/",
+    "/collections/designs/ms-035/",
+    "/collections/designs/ms-036/",
+    "/collections/designs/ms-069/",
+    "/collections/designs/ms-083/",
+    "/collections/designs/ms-096/",
+    "/collections/designs/ms-117/",
+    "/collections/designs/ms-139/",
+    "/collections/designs/ms-140/",
+    "/collections/designs/ms-141/",
+    "/collections/designs/ms-142/",
+    "/collections/designs/ms-143/",
+    "/collections/designs/ms-144/",
+    "/collections/designs/ms-145/",
+    "/collections/designs/ms-146/",
+    "/collections/designs/rose-elegance-suit/",
+    "/collections/designs/royal-blue-executive-womens-three-piece/",
+    "/collections/designs/sky-blue-elegance-suit/",
+    "/contact/",
+    "/faq/",
+    "/guides/fabrics/",
+    "/loyalty-program/",
+    "/measurements/",
+    "/mensuits/",
+    "/mensuits/double-breasted/",
+    "/mensuits/kaunda/",
+    "/mensuits/single-breasted/",
+    "/mensuits/three-piece/",
+    "/mensuits/tuxedos-formalwear/",
+    "/our-work/",
+    "/our-work/blue-jacket-black-trousers/",
+    "/our-work/cobalt-blue-suit/",
+    "/our-work/light-grey-and-navy/",
+    "/our-work/off-white-graduation-suit/",
+    "/our-work/soft-ivory-tailoring/",
+    "/referral-program/",
+    "/services/alterations/",
+    "/services/custom-tailoring/",
+    "/services/garment-care/",
+    "/services/mobile-fitting/",
+    "/services/vip/",
+    "/womensuits/",
+    "/womensuits/double-breasted/",
+    "/womensuits/single-breasted/",
+    "/womensuits/skirt-suits/",
+    "/womensuits/three-piece/"
+  ]
+}

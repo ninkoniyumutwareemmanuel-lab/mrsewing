@@ -26,8 +26,8 @@
         "8",
         "mobile-fees"
       ],
-      "pendingNotice": "An owner-approved PDF is available for staging review below. Its official effective date is the date of publication on the official website; the current online Terms remain available during operational reconciliation.",
-      "authority": "Owner R53 corrective instruction,19 November2026: supplied PDF content is approved. Staging review is not official production publication; retain the current online Terms until the effective date and operational scope are reconciled.",
+      "pendingNotice": "The latest uploaded Version 1.2 is displayed for staging review only. Currently effective contractual consent remains unchanged; official publication and document reconciliation require separate authorization.",
+      "authority": "Version 1.0 content approval/history preserved. Owner 25 November 2026 latest-upload clarification authorizes staging review of the actual uploaded Version 1.2, without official activation or a false Version 1.1 identity.",
       "replacementWorkflow": "docs/POLICY_DOCUMENT_WORKFLOW.md",
       "receivedVersions": [
         {
@@ -82,6 +82,51 @@
           "sourcePath": ".github/policy-documents/terms-and-conditions/1.0.pdf",
           "publishedPath": "/assets/policy-documents/terms-and-conditions/1.0.pdf",
           "sha256": "9b35d9384cf4d06dec88e92cfcde4c30d687ea1b126b6e0a8164784f5ee057c0"
+        },
+        {
+          "documentId": "terms-and-conditions",
+          "version": "1.2",
+          "approvalStatus": "approved-for-staging-review",
+          "approvedBy": "Business owner",
+          "approvalDate": "2026-11-25",
+          "sourceReference": "Owner 25 November 2026 recovery clarification directs using the latest uploaded files for staging. Actual upload declares Version 1.2, twenty sections and six pages. This records review-display authorization, not verification against the inaccessible approved Version 1.1 Library document or contractual activation.",
+          "publicationStatus": "staging-review",
+          "activationStatus": "awaiting-official-publication",
+          "effectiveDate": null,
+          "effectiveDateBasis": "official-website-publication-after-separate-owner-authorization",
+          "preparedDate": null,
+          "originalUploadPath": "Mr_Sewing_Fashion_Terms_and_Conditions_v1.1_Uploaded.pdf",
+          "sourceFilename": "Mr_Sewing_Fashion_Terms_and_Conditions_v1.2_Staging_Review.pdf",
+          "sourcePath": ".github/policy-documents/terms-and-conditions/1.2.pdf",
+          "publishedPath": "/assets/policy-documents/terms-and-conditions/1.2.pdf",
+          "sha256": "d12476d31e6ac6d2943a6f18c2577774b5905f985ca9d8d5521624a5f4a77cb0",
+          "technicalInspection": {
+            "pages": 6,
+            "bytes": 1264717,
+            "pdfVersion": "1.4",
+            "encrypted": false,
+            "javascript": false,
+            "forms": "none",
+            "tagged": false,
+            "selectableText": true,
+            "declaredVersion": "1.2",
+            "numberedSections": 20,
+            "normalizedCompleteTextSha256": "5c7123f88ea7971cb38c9d5dea052167041d50ba42763316b14af59ba57b7d45",
+            "legalReviewClaim": "No completed legal review is asserted.",
+            "companyRegistrationDate": null
+          },
+          "reconciliation": {
+            "status": "staging-review-authorized-approval-comparison-unresolved",
+            "reviewedBy": "Codex technical document recovery",
+            "reviewedOn": "2026-11-25",
+            "reference": "docs/RECOVERY_TERMS_2026-11-25.md",
+            "approvedV1_1Comparison": "Unavailable approved ChatGPT Library source; current upload is substantively different in version and section structure. It must not be labeled verified approved v1.1.",
+            "activationRequirements": [
+              "Separate owner authorization for official contractual activation and actual publication date.",
+              "Verify the exact approved Version 1.1 source or obtain explicit approval of this actual Version 1.2 text before treating it as the effective contractual document.",
+              "Reconcile the generalized Version 1.2 payment, exceptions, surcharge and cancellation clauses with current explicit approved service policies and preserve confirmed customer agreements."
+            ]
+          }
         }
       ],
       "mainBaselineReview": {

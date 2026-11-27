@@ -1,0 +1,766 @@
+0acf34dc 2026-11-25 Verify owner-uploaded Terms v1.1 and generate staging reader after exact text match
+a039e70a 2026-11-25 Preserve owner PDF upload separately and restore immutable v1.0 reader source
+bc3c62cc 2026-11-25 Add files via upload
+f3b621c7 2026-11-25 Improve About Us: company identity, customer commitment and service navigation
+3248e01d 2026-11-25 Improve About Us: company identity, customer commitment and service navigation
+143fb019 2026-11-25 Improve About Us: company identity, customer commitment and service navigation
+a8cddf33 2026-11-25 R59 staging generated page and asset sync [generated]
+94064a1e 2026-11-25 Fix staging collection template path used by site generator
+37049381 2026-11-25 Remove unused fabric illustration blocking staging asset validation
+55cef7cc 2026-11-25 Stage approved v1.1 tailoring payment, refund and FAQ guidance
+b4210fe2 2026-11-24 Make staging Fabric Guide text-first with descriptive fabric and pattern choices
+291a1567 2026-11-24 Redesign staging Fabric Guide with premium and standard collection pages
+8dc65678 2026-11-23 R59 staging generated page and asset sync [generated]
+68be8381 2026-11-23 R67 staging: document approved customer-guide page brief and release holds
+72eb3cbd 2026-11-23 R67 staging: show express surcharge directly in quick fact
+40b5dee8 2026-11-23 R67 staging: browser checks for policy facts, fabric links and responsive layout
+95b74713 2026-11-23 R67 staging: accessible mobile layouts for tailoring guidance
+4c827c04 2026-11-23 R67 staging: clear tailoring order facts, fabric guidance and service navigation
+6891ea24 2026-11-23 R66: record staging SEO repair evidence, blockers and release gates
+3906d88d 2026-11-23 R59 staging generated page and asset sync [generated]
+c75bb1ed 2026-11-23 R66: require service crawlability regression at every staging build
+f8a85b03 2026-11-23 R66: protect canonical and discoverability of tailoring service pages
+0087e525 2026-11-23 R66: enforce SEO legacy redirect guard in website build
+cab4e035 2026-11-23 R66: add legacy canonical redirect and staging noindex regression test
+74aba628 2026-11-23 R66 staging: canonical redirect for legacy measurement-submission.html
+5bb90b91 2026-11-23 R66 staging: canonical redirect for legacy booking-workplace.html
+710c52b5 2026-11-23 R66 staging: canonical redirect for legacy booking-housecall.html
+2b6ddcfe 2026-11-23 R66 staging: canonical redirect for legacy booking-adjustment.html
+ade7060f 2026-11-23 R66 staging: canonical redirect for legacy booking.html
+86add6f6 2026-11-23 R66 staging: canonical redirect for legacy terms-and-conditions.html
+99f43368 2026-11-23 R66 staging: canonical redirect for legacy refund-policy.html
+821afd11 2026-11-23 R66 staging: canonical redirect for legacy privacy-policy.html
+43e6262b 2026-11-23 R66 staging: canonical redirect for legacy reviews.html
+84b5c5db 2026-11-23 R66 staging: canonical redirect for legacy service-workplace.html
+dff9c5f5 2026-11-23 R66 staging: canonical redirect for legacy service-housecall.html
+9e6d9504 2026-11-23 R66 staging: canonical redirect for legacy service-sketches.html
+1bd0a1fe 2026-11-23 R66 staging: canonical redirect for legacy service-cmt.html
+77af0c4d 2026-11-23 R66 staging: canonical redirect for legacy service-standard.html
+02205c31 2026-11-23 R66 staging: canonical redirect for legacy service-express.html
+1f94a839 2026-11-23 R66 staging: canonical redirect for legacy services.html
+421707bc 2026-11-23 R66 staging: canonical redirect for legacy w-modernsuits.html
+387dfa17 2026-11-23 R66 staging: canonical redirect for legacy w-doublebreasted.html
+828e2ff8 2026-11-23 R66 staging: canonical redirect for legacy w-classicsuits.html
+8f7cb980 2026-11-23 R66 staging: canonical redirect for legacy m-modernsuits.html
+3d7fe880 2026-11-23 R66 staging: canonical redirect for legacy m-kaundasuits.html
+9322a36e 2026-11-23 R66 staging: canonical redirect for legacy m-doublebreasted.html
+d177e2f5 2026-11-23 R66 staging: canonical redirect for legacy m-classicsuits.html
+639c55cd 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy faq.html
+5f0a64bd 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy measurements.html
+b0321829 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy suits.html
+79de668c 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy contact.html
+32ec0783 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy collections.html
+6d0ddd94 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy womensuits.html
+f92e432d 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy mensuits.html
+9df41179 2026-11-23 R66 staging: add permanent HTML-refresh fallback to legacy about.html
+c646a8b2 2026-11-23 R66 staging: consolidate legacy HTML aliases without redirecting canonical pages
+cb6a0232 2026-11-23 R66 staging: consolidate legacy HTML aliases without redirecting canonical pages
+3cac6e7c 2026-11-23 R59 staging generated page and asset sync [generated]
+edb9c856 2026-11-23 Remove rendered Services dropdown from staging services/custom-tailoring/index.html
+4ef92383 2026-11-23 Remove rendered Services dropdown from staging about/index.html
+1c8a76c7 2026-11-23 Remove rendered Services dropdown from staging index.html
+bf646273 2026-11-23 Ensure navigation has no Services item on staging
+5991c174 2026-11-23 Remove redundant Services link from legacy navigation on staging
+2712b745 2026-11-23 Remove redundant Services dropdown from staging primary navigation
+bcaf7247 2026-11-23 Read standalone Services picker template after menu removal
+612ad809 2026-11-23 Make About Us services picker independent of primary menu
+4bddf887 2026-11-23 Preserve About Us service picker separately from global navigation
+4b73fa6e 2026-11-23 R59 staging generated page and asset sync [generated]
+328cba8e 2026-11-23 Verify staging navigation hides redundant Services entry and keeps tailoring link
+5a2edbbd 2026-11-23 Remove redundant Services navigation item while retaining service links in About picker
+2148da6a 2026-11-23 Allow About Services picker to reuse links from a hidden global menu
+f9ad7bd5 2026-11-22 R59 staging generated page and asset sync [generated]
+99d731c1 2026-11-22 R65 staging QA: return to homepage after consultation popup before existing gallery tests
+a5ac3bdf 2026-11-22 R65 staging: open existing quotation and consultation forms in mobile-friendly pop-ups
+98e6c0f7 2026-11-22 R59 staging generated page and asset sync [generated]
+3f75b05b 2026-11-22 R64 staging: remove visible gallery pause buttons and video captions/controls
+5545f986 2026-11-22 R59 staging generated page and asset sync [generated]
+34723bb5 2026-11-22 R63 staging: align suit-video gate test with looping playback and pause controls
+866f86d3 2026-11-22 R63 staging: restore Shop, simplify tailoring heading and stack looping suit videos
+d47584ad 2026-11-22 R59 staging generated page and asset sync [generated]
+3a6b857c 2026-11-22 R62 staging: inventory generated video posters and prepare media before site build
+88533130 2026-11-22 R61 staging: use exact suit-video posters and silent clips; record owner repository-media authorization
+80cccac2 2026-11-22 R59 staging generated page and asset sync [generated]
+e7759910 2026-11-22 R60 staging: restore useful tailoring homepage sections, publish two owner-authorized videos and refine local SEO
+ce7b2364 2026-11-22 R59 staging generated page and asset sync [generated]
+160ccbc1 2026-11-22 R59 staging Terms reader: add requested accessible Open PDF action without activating policy
+cbedb7f7 2026-11-22 R59 staging generated page and asset sync [generated]
+d8c10471 2026-11-22 Fix newline in staging R53 held-media redirect generator
+23c05dde 2026-11-22 R59 staging: source-driven temporary redirects block direct held R53 photo/video paths
+7a2e37ad 2026-11-22 R59 staging generated page and asset sync [generated]
+c2feaa49 2026-11-22 R59 staging: source-driven future video gates with approved photo fallbacks; consistent tailoring label
+562ddae8 2026-11-22 R59 CI: install FFmpeg for verified temporary audio-free media checks
+d0593012 2026-11-22 R59 staging: browser screenshots, verified-date, Shop and silent-video regression workflow
+65f8d51f 2026-11-22 R59 staging: dated approved design addendum, preserved policy references, page/source map and release gates
+c8985ece 2026-11-22 R59 staging generated page and asset sync [generated]
+c179c81a 2026-11-22 R59 staging: verified-date newest-first sorter, stable legacy fallback and held silent-video preparation
+83e47217 2026-11-22 R59 staging generated page and asset sync [generated]
+b975cbf2 2026-11-22 R59 staging Shop: approved Backorder wording, safe quotation gates, tailoring design inspiration
+b0137511 2026-11-22 R59 staging generated page and asset sync [generated]
+1e41473b 2026-11-22 R59 staging: tailor-first service hub, two publication-gated clothing categories, and filtered Universal Showroom
+c697e0cb 2026-11-22 R59 staging generated page and asset sync [generated]
+fd2c8f93 2026-11-22 Preserve R53 evidence fields in JSON; scope collection migration CSV to declared columns
+249ce1ae 2026-11-22 Use existing approved JPEG sources for photo placeholders and feature
+d9201f89 2026-11-22 Fix R59 homepage hero selector in source-driven builder
+05657582 2026-11-22 R59: automate staging-only generated-page checks and synchronization
+da803bca 2026-11-22 R59 staging homepage: professional tailoring first, approved photo fallback, compact VIP/service cards and opposite gallery motion
+cd493e8a 2026-11-22 Staging: restore R53 held photo/video records and inventory Terms PDF page assets
+33620fe4 2026-11-22 Publish reviewed staging Terms PDF reader only
+ce4632b9 2026-11-22 Validate unchanged sitemap XML without broken baseline collection-inventory builder
+647b68dd 2026-11-22 Scope release CI to Terms without unrelated pre-existing image-inventory build failure
+ef7e68cd 2026-11-22 Add focused Terms reader CI before production release
+48022a6b 2026-11-22 Release staging Terms PDF reader only; preserve existing effective HTML Terms
+3e0c73b6 2026-11-22 R58: check restored homepage in isolation; avoid unrelated customer-page regeneration
+cf7cc49d 2026-11-22 R58: restore exact main homepage HTML, scripts, styles and builder on staging
+3bcf142d 2026-11-21 R57: record verified original-homepage preservation and make staging validation read-only
+2953dfad 2026-11-21 R57: synchronize generated original-layout homepage with requested additions
+1a4036c1 2026-11-21 R57: explicitly document preserved staging noindex boundary
+7d85ee35 2026-11-21 R57: preserve support form while directing consent to currently effective Terms
+4ba436cf 2026-11-21 R57: enforce preservation of all original homepage sections and browser-functional additions
+f0e18453 2026-11-21 R57: retain original suit galleries with approved newest photos and opposite-direction pauseable motion
+042d9b8d 2026-11-21 R57: restore all existing homepage sections and add only owner-requested hero/media/service highlights
+47b5966b 2026-11-21 R56 CI: install FFmpeg only when missing for nonpublic silent-video checks
+0b38497c 2026-11-21 R56: prepare silent video derivatives privately and make completed homepage CI read-only
+082a819e 2026-11-21 R56: synchronize generated tailor-first homepage
+ce85325d 2026-11-21 R56 QA: replace obsolete 20-design count check with unchanged 28-public-design preservation
+3bad8d73 2026-11-21 R56 fix: correct quoted Escape keyboard acceptance test
+e05bbc2d 2026-11-21 R56: keep photo-rights evidence in source registry; preserve inventory CSV schema
+5b94b067 2026-11-21 R56 fix: accept verified in-repository WebP hero and root-relative source paths
+b4da9757 2026-11-21 R56 fix: select new approved tailor-first hero with exact class
+eb361369 2026-11-21 R56: add strict homepage rights/order, SEO and mobile Chromium acceptance tests
+a84660da 2026-11-21 R56: source-driven approved-photo galleries, two media fallbacks and VIP/tailoring cards
+ff15e1ee 2026-11-21 R56: build shorter tailor-first homepage shell and responsive editorial styles
+b717c489 2026-11-21 R56: restore R53 photo catalog, record owner-attested homepage rights, keep video publication held
+4d7c2826 2026-11-21 R55: record verified mobile popup QA and restrict CI to read-only staging checks
+8d590507 2026-11-21 R55 browser QA: pin supported Ubuntu 24.04 Chromium runner
+331ead1e 2026-11-21 R55: validate actual full-screen Terms UI in Chromium phone and desktop widths
+8d1c158c 2026-11-21 R55: verified five approved PDF page renders and synchronized Terms popup
+e4bbbbe8 2026-11-21 R55: cache-bust popup JS and CSS for existing mobile visitors
+e9c0e05b 2026-11-21 R55: verified five approved PDF page renders and synchronized Terms popup
+650de162 2026-11-21 R55: register five approved-PDF technical page renders without clothing-gallery publication
+5a85d15f 2026-11-21 CI R55: render approved PDF pages and validate full-screen popup
+f0dcc2a0 2026-11-21 R55: full-screen, scrollable Terms popup with actual-PDF page rendering source
+c727540b 2026-11-21 R54: make completed Terms CI read-only and validate staging branch
+656d3e4a 2026-11-21 R54: correct preserved current-Terms canonical and duplicate robots metadata
+b039e807 2026-11-21 R54: synchronize generated Terms reader pages only
+3b2714c5 2026-11-21 R54 CI: commit only rebuilt Terms HTML after successful tests
+49952ac7 2026-11-21 R54 CI: report source-to-generated drift before staging submission
+d9708fbf 2026-11-21 R54: preserve held R53 images in main inventory schema; make full-build failures visible
+7dfa6096 2026-11-21 R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build
+3d5738c0 2026-11-21 R54 CI: continue to Terms checks when baseline main media inventory build fails
+54d31096 2026-11-21 CI-only: verify R54 Terms viewer on copied main branch
+c4d2f9df 2026-11-21 R54: protect consent path to current Terms and add focused regression tests
+999ab477 2026-11-21 R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval
+f07e3b38 2026-11-21 Redesign Contact Us for fast mobile enquiries and improve tailoring service SEO
+2a985a3a 2026-11-21 Publish responsive Refund Policy redesign with clear review journey
+698e6a49 2026-11-21 Fix Privacy Policy jump links and simplify customer data disclosures
+ab53756c 2026-11-21 Correct section numbering in redesigned Privacy Policy
+4b18462b 2026-11-21 Publish approved responsive Privacy Policy redesign
+a74a5998 2026-11-21 Finish direct WhatsApp fallback and add visible footer Terms styling
+ccf9bb12 2026-11-21 Open WhatsApp directly without Terms modal; expose footer Terms shortcut
+7e14a777 2026-11-21 Connect homepage hero Request a Quote to existing WhatsApp enquiry flow
+b507a2b5 2026-11-21 Refresh consent banner asset URL for compact live cookie UI
+ac4b6c40 2026-11-21 Replace oversized Meta consent popup with approved compact cookie bar
+8175509d 2026-11-21 Activate opt-in Meta Pixel PageView on live site and disclose tracking
+1e15ebc2 2026-11-21 Place opt-in Meta Pixel integration on main; hold tracking pending privacy approval
+7f2bda86 2026-11-21 Prepare consent-gated Meta Pixel integration on staging; keep tracking disabled
+cb245b57 2026-11-20 Integrate uploaded design families, gated videos and approved Terms preview
+ff1248ce 2026-11-19 Add files via upload
+ce98ee39 2026-11-19 Add files via upload
+812aaca4 2026-11-19 Present tailoring-first services and shared WhatsApp design enquiries
+749b21d9 2026-11-19 Add quotation-first Showroom and shared content architecture on staging
+b2b89468 2026-11-18 Record owner-directed publication of reviewed tailoring release
+e4951002 2026-11-18 Complete approved tailoring quotation framework and release references
+663c8f5d 2026-11-13 Complete shared fabric and colour selection for suit quotations
+c1428b99 2026-11-13 Add verified favicon and static 404 SEO repairs on staging
+ce312f68 2026-11-13 Expire unfinished design selections after two minutes away
+ff750462 2026-11-12 Simplify selected-suit sharing and quotations with required Kigali deadlines
+3fd899e8 2026-11-12 Refine category-based detail recommendations, breadcrumbs and selection visibility
+77855579 2026-11-12 Improve shared design review and add consent-gated selection sharing
+4c9dd3cd 2026-11-12 Refine suit gallery cards and share sticky OFFER throughout suit browsing
+d0885a73 2026-11-12 Record mandatory two-level SEO preservation and canonical-page audit
+7707c0f6 2026-11-12 Restore eight owner-approved Men’s Kaunda references on staging
+33d23e34 2026-11-12 Shorten suit landing introductions and remove landing Special Order actions
+2c8b2fa0 2026-11-12 Keep offers sticky at 75 seconds and reuse Special Tailoring enquiry on staging
+0ab19a14 2026-11-12 Unify tier pricing and benefits, simplify Fabric Guide and update FAQs on staging
+0a446ad2 2026-11-12 Refine Custom Tailoring offers, pricing and concise service guidance on staging
+09fe4f70 2026-11-12 Improve Custom Tailoring mobile prices, family discount and payment guidance on staging
+4d972f29 2026-11-11 Merge reviewed customer information and quotation improvements into main
+84b33d61 2026-11-11 Record owner-approved production release audit and update regression baselines
+9fe41cdf 2026-11-11 Match FAQs to black and gold and browse fabrics per selected design
+53229ad5 2026-11-11 Prepare staging help centre, multi-design quotations and Nexus About logo
+16214a75 2026-11-11 Merge remote-tracking branch 'origin/main' into review/customer-policy-2026-11-07
+4fefad3f 2026-11-11 Add files via upload
+68bc9c98 2026-11-11 Normalize policy review document line endings
+019b4493 2026-11-11 Prepare owner-reviewed customer policy facts and source-linked FAQ search
+bae385ec 2026-11-07 Keep public navigation canonical while preserving quotation choices
+6550b88d 2026-11-07 Expand production sitemap to 55 approved public browsing pages
+edaaeb9b 2026-11-07 Publish five approved suit photographs and increase gallery speed 20 percent
+7daf8466 2026-11-07 Add files via upload
+51d46b1e 2026-11-06 Use Special Order form on legacy custom request and retain own fabric
+b56fcea5 2026-11-06 Route Fabric Guide own-fabric action to exact Special Order form
+30dec766 2026-11-06 Simplify Shop introduction and use service enquiry for own fabric
+afd677d6 2026-11-06 Add search-first responsive Shop masthead and category navigation
+eda7a7dc 2026-11-06 Keep homepage galleries moving through retained touch hover
+b6e4d1bc 2026-11-06 Fix live static Shop parity, public intake routing and mobile gallery motion
+a2ae98f5 2026-11-06 Merge pull request #5 from ninkoniyumutwareemmanuel-lab/phase1/customer-journey-repairs
+501ccc16 2026-11-06 Place measurement submission after all guide photographs and notes
+3d66b510 2026-11-06 Implement Version 2 customer journeys, FAQ actions and homepage payments
+9bd678ff 2026-11-06 Show three accepted manual payment methods with accessible Shop symbols
+03101d3a 2026-11-06 Remove product information and payment delivery panel from Shop details
+2abf34e6 2026-11-06 Keep Shop navigation local and move enquiries to product details only
+b6624fff 2026-11-06 Enable accessible product-photo enlargement and hide internal draft labels
+1cb930d9 2026-11-06 Create white Shop storefront with terms-gated product WhatsApp enquiries
+7e1fd427 2026-11-06 Merge remote-tracking branch 'origin/phase1/customer-journey-repairs' into phase1/customer-journey-repairs
+7d5ee4de 2026-11-06 Document owner-approved V2 staging corrections and review gates
+acdcd751 2026-11-06 Serve Shop draft previews through an isolated staging Pages route
+b69c9303 2026-11-06 Preview draft merchandise safely in the staging Shop storefront
+582c4aa9 2026-11-06 Merge remote-tracking branch 'origin/phase1/customer-journey-repairs' into phase1/customer-journey-repairs
+28bae036 2026-11-06 Unify approved photo quotation journeys and refine portfolio usability
+889da379 2026-11-06 Add temporary staging-only visual review for 21 unpublished Shop candidates
+9a54b918 2026-11-06 Inventory uploaded shop images and prepare gated merchandise drafts
+626ccd81 2026-11-06 Add files via upload
+7abd8e04 2026-11-06 Add loyalty referral and catalogue-driven shop request journeys
+09be5c7d 2026-11-06 Improve homepage with source-driven galleries and booking guidance
+e2139dec 2026-11-06 Keep consultation design references in universal email request flow
+90a18ca5 2026-11-06 Improve consultation requests with service and location-specific fields
+967401e4 2026-11-06 Noindex non-priority pages while keeping them accessible
+60859aa8 2026-11-06 Noindex non-priority pages while keeping them accessible
+08d5a704 2026-11-06 Noindex non-priority pages while keeping them accessible
+e1f1bcfd 2026-11-06 Noindex non-priority pages while keeping them accessible
+6646deaa 2026-11-06 Noindex non-priority pages while keeping them accessible
+aba30b00 2026-11-06 Noindex non-priority pages while keeping them accessible
+109fc856 2026-11-06 Noindex non-priority pages while keeping them accessible
+9ddffbd9 2026-11-06 Noindex non-priority pages while keeping them accessible
+41f70faf 2026-11-06 Noindex non-priority pages while keeping them accessible
+1e93b727 2026-11-06 Noindex non-priority pages while keeping them accessible
+0f74b595 2026-11-06 Noindex non-priority pages while keeping them accessible
+acc8b986 2026-11-06 Noindex non-priority pages while keeping them accessible
+dc6efa50 2026-11-06 Noindex non-priority pages while keeping them accessible
+1d4743eb 2026-11-06 Noindex non-priority pages while keeping them accessible
+9a570117 2026-11-06 Noindex non-priority pages while keeping them accessible
+7454bbb4 2026-11-06 Noindex non-priority pages while keeping them accessible
+4b8a0f51 2026-11-06 Noindex non-priority pages while keeping them accessible
+ea79e4c9 2026-11-06 Noindex non-priority pages while keeping them accessible
+7442d04f 2026-11-06 Noindex non-priority pages while keeping them accessible
+483f389c 2026-11-06 Noindex non-priority pages while keeping them accessible
+d3ff103b 2026-11-06 Noindex non-priority pages while keeping them accessible
+2eaeb21e 2026-11-06 Noindex non-priority pages while keeping them accessible
+2d06c322 2026-11-06 Noindex non-priority pages while keeping them accessible
+0d7f8e33 2026-11-06 Noindex non-priority pages while keeping them accessible
+380ed8ae 2026-11-06 Noindex non-priority pages while keeping them accessible
+5617109a 2026-11-06 Noindex non-priority pages while keeping them accessible
+708631ec 2026-11-06 Noindex non-priority pages while keeping them accessible
+bfda9c51 2026-11-06 Noindex non-priority pages while keeping them accessible
+9588ea5a 2026-11-06 Noindex non-priority pages while keeping them accessible
+24ca62a7 2026-11-06 Noindex non-priority pages while keeping them accessible
+d47f3af2 2026-11-06 Noindex non-priority pages while keeping them accessible
+cd2da1a2 2026-11-06 Noindex non-priority pages while keeping them accessible
+b94ad799 2026-11-06 Noindex non-priority pages while keeping them accessible
+7c13c56d 2026-11-06 Noindex non-priority pages while keeping them accessible
+64797710 2026-11-06 Noindex non-priority pages while keeping them accessible
+b2bb162b 2026-11-06 Noindex non-priority pages while keeping them accessible
+d49eeb87 2026-11-06 Noindex non-priority pages while keeping them accessible
+9e1dbaf3 2026-11-06 Noindex non-priority pages while keeping them accessible
+b0c2bae6 2026-11-06 Noindex non-priority pages while keeping them accessible
+d049214c 2026-11-06 Noindex non-priority pages while keeping them accessible
+1a8db102 2026-11-06 Noindex non-priority pages while keeping them accessible
+b7fea045 2026-11-06 Noindex non-priority pages while keeping them accessible
+15dff41b 2026-11-06 Noindex non-priority pages while keeping them accessible
+41831684 2026-11-06 Noindex non-priority pages while keeping them accessible
+7dd2e24c 2026-11-06 Noindex non-priority pages while keeping them accessible
+d69231ff 2026-11-06 Noindex non-priority pages while keeping them accessible
+8c1d3d94 2026-11-06 Noindex non-priority pages while keeping them accessible
+1e118fd8 2026-11-06 Noindex non-priority pages while keeping them accessible
+38c96b50 2026-11-06 Noindex non-priority pages while keeping them accessible
+d0f55620 2026-11-06 Keep non-priority public page accessible but noindex
+d93dbd31 2026-11-06 Keep non-priority public page accessible but noindex
+4721ea8d 2026-11-06 Keep non-priority public page accessible but noindex
+2872999d 2026-11-06 Keep non-priority public page accessible but noindex
+6f772737 2026-11-06 Keep non-priority public page accessible but noindex
+c07939b3 2026-11-06 Keep non-priority public page accessible but noindex
+84f85e39 2026-11-06 Keep non-priority public page accessible but noindex
+7debdbcc 2026-11-06 Keep non-priority public page accessible but noindex
+692e10f1 2026-11-06 Keep non-priority public page accessible but noindex
+9b18e6c1 2026-11-06 Publish sitemap with exactly 14 approved indexable URLs
+ecd405d5 2026-11-06 Generate sitemap exclusively from approved 14 indexable pages
+5df5a8a5 2026-11-06 Limit SEO indexing to 14 owner-approved public routes
+e8925199 2026-11-06 Merge pull request #4 from ninkoniyumutwareemmanuel-lab/phase1/customer-journey-repairs
+81efee62 2026-11-06 Restore V1 email submissions and prepare gated production API routing
+6177038a 2026-11-06 Complete approved November 6 customer forms, pricing and service navigation
+50ae5b65 2026-11-05 Repair portfolio quotations, measurement ordering and staging build data
+b83720b1 2026-11-05 Fix About Services dropdown and complete staged customer journey corrections
+433107ea 2026-11-05 Add approved suit references and refine customer request navigation
+70dfdd77 2026-11-05 Add files via upload
+c291521d 2026-11-05 Build matching suit-reference categories and preserve enquiry context
+fea75aa7 2026-11-05 Update fabric and measurement guides, mobile heroes and VIP ticket
+b6b1d514 2026-11-05 Add files via upload
+229f5bea 2026-11-05 Add files via upload
+539be1f1 2026-11-05 Integrate five owner-approved service hero photographs
+a58aa96b 2026-11-05 Add files via upload
+7115a121 2026-11-05 Simplify service journeys and add dedicated VIP entry with pending hero assets
+0e610018 2026-11-05 Establish versioned customer content reference and mandatory page workflow
+6fcaca98 2026-11-05 Build source-scoped customer service journeys and policy review pages
+717ac625 2026-11-04 Build tailoring service with Standard and text-only Special Order journeys
+c1763994 2026-11-04 Align homepage navigation footer and support with four approved services
+6aa203b0 2026-11-04 Document final homepage QA evidence and conditional sign-off readiness
+a4600b44 2026-11-04 Make homepage Moments photographs static and complete final QA checks
+f752755e 2026-11-04 Refine homepage support, footer and four-second order carousel
+30b55a8e 2026-11-04 Add accessible automatic order carousel and remove concept captions
+01371819 2026-11-04 Finalize homepage service process and programme content
+e4d5b574 2026-11-04 Refine mobile homepage and restore focused quotation journeys
+521840cb 2026-11-04 Isolate homepage visual review and disconnect destination actions
+96ca876d 2026-11-04 Correct homepage visual design with photographic hero and quotation form
+0e405956 2026-11-04 Rebuild homepage customer journey and preserve upcoming programs
+ba27bab0 2026-10-30 Publish reviewed Mr Sewing website and FAQ help centre
+171ba92c 2026-10-30 Build topic-based FAQ help centre and restore Coming Soon previews
+40c18afc 2026-10-30 Reconcile customer-information drafts and refine the ten-second hero
+ac639f14 2026-10-30 Complete V2 hero, garment care planning and genuine project portfolio
+ce32d5ff 2026-10-30 Integrate Customer Journey V1 services, care and evidence-led Our Work
+08191fde 2026-10-30 Build Collections V3 luxury showroom and static garment pages
+cf3d68b2 2026-10-29 Build Collections V2 showroom with stable design registry, sharing and favourites
+4a8b61d9 2026-10-29 Build editorial About Us V2 with shared components and approved brand story
+1fce4f52 2026-10-29 Share approved V2 header and footer and refine Contact hero
+5a872d1e 2026-10-29 Rebuild Contact Us with approved V2 design and direct booking actions
+8c45a363 2026-10-29 Finalize planned photoshoot announcement and desktop program layout
+e8c095f5 2026-10-29 Add coming-soon complimentary photoshoot announcement
+cdeab536 2026-10-29 Introduce coming-soon Shop and customer program announcements
+3e6c5bf9 2026-10-29 Refine homepage branding, compact mobile navigation and hero spacing
+bcf48a87 2026-10-29 Build V2 Stage A editorial homepage and compact responsive footer
+c58805e3 2026-10-29 Refine homepage design-sharing journey and accessible mobile navigation
+8419a616 2026-10-29 Merge pull request #2 from ninkoniyumutwareemmanuel-lab/phase1/customer-journey-repairs
+2dbd5db9 2026-10-29 Add accurate Markdown guidance and valid ARD discovery manifest
+8fd3c08b 2026-10-29 Optimize homepage delivery and correct Kigali business hours
+f547a927 2026-10-28 Normalize generated clean page whitespace
+d87856d4 2026-10-28 Correct weekend availability and generate clean website URLs
+1f44c9ab 2026-10-28 Merge pull request #1 from ninkoniyumutwareemmanuel-lab/phase1/customer-journey-repairs
+db92d244 2026-10-28 Remove header consultation link and extend responsive checks
+386e7856 2026-10-28 Optimize responsive image delivery and defer off-screen video
+2a0fc70c 2026-10-28 Refine page metadata and accessible heading hierarchy
+6088f892 2026-10-28 Unify business schema, confirmed hours and contact email
+1e9d5d53 2026-10-28 Render homepage sections statically and prioritize hero loading
+910d4c3d 2026-10-28 Include canonical content pages in XML sitemap
+c29c45d3 2026-10-28 Standardize homepage links and sitemap on root URL
+a496ebba 2026-10-28 Remove duplicate standalone page canonical tags
+9893098d 2026-10-28 Correct collections canonical and Open Graph URL
+901d70e4 2026-10-28 Remove duplicate customer navigation row
+e7c76b82 2026-10-28 Repair galleries and simplify consultation journeys
+8e276bbf 2026-10-28 Add files via upload
+76d7e520 2026-10-28 Update w-classicsuits.html
+2d50804a 2026-10-28 Add files via upload
+4ddf1951 2026-10-27 Add files via upload
+b772d3d6 2026-10-27 Update happy-customers.html
+c9372d56 2026-10-27 Update happy-customers.html
+3cc48ed2 2026-10-27 Update happy-customers.html
+b8c05c93 2026-10-26 Update m-doublebreasted.html
+7d4b09b6 2026-10-26 Update m-classicsuits.html
+0810a810 2026-10-26 Update m-modernsuits.html
+0e585f3b 2026-10-26 Update m-modernsuits.html
+c32dd537 2026-10-26 Add files via upload
+b73c1aab 2026-10-25 Update m-kaundasuits.html
+d773c1fe 2026-10-25 Update m-kaundasuits.html
+692786aa 2026-10-25 Add files via upload
+1386335f 2026-10-25 Update refund-policy.html
+cec68ee9 2026-10-25 Update privacy-policy.html
+045f4404 2026-10-24 Update m-kaundasuits.html
+55d78502 2026-10-24 Update m-doublebreasted.html
+c724f700 2026-10-24 Update m-doublebreasted.html
+723a1e74 2026-10-24 Update m-doublebreasted.html
+f7994b63 2026-10-24 Add files via upload
+a93b663b 2026-10-23 Update m-doublebreasted.html
+b0cca98b 2026-10-23 Update m-doublebreasted.html
+496dc13a 2026-10-23 Add files via upload
+8f91f96d 2026-10-23 Update m-doublebreasted.html
+5496cf8d 2026-10-23 Update m-doublebreasted.html
+7c5e3c81 2026-10-23 Update m-doublebreasted.html
+178568af 2026-10-23 Update m-doublebreasted.html
+de74cc08 2026-10-23 Update terms-and-conditions.html
+0e449d73 2026-10-23 Update faq.html
+e5bdd98c 2026-10-23 Update m-classicsuits.html
+2690ce4c 2026-10-23 Update m-classicsuits.html
+f1dd4f4a 2026-10-22 Update contact.html
+4e25e009 2026-10-22 Update index.html
+c42ec12c 2026-10-22 Update sitemap.xml
+4e39f5b1 2026-10-22 Update services.html
+7d946de9 2026-10-22 Update collections.html
+fcc82783 2026-10-22 Update contact.html
+31c4eb58 2026-10-22 Update faq.html
+4c82f2f4 2026-10-22 Update measurements.html
+5efb452c 2026-10-22 Update womensuits.html
+93ce34f2 2026-10-22 Update mensuits.html
+4d60d83b 2026-10-22 Update suits.html
+2a2ccf2e 2026-10-22 Add files via upload
+ead1736a 2026-10-22 Update m-classicsuits.html
+9499b2d2 2026-10-22 Rename m-classicsuictwo4.jpeg to m-classicsuittwo4.jpeg
+e2adb863 2026-10-22 Rename m-classicsuictwo3.jpeg to m-classicsuittwo3.jpeg
+33eb5c6c 2026-10-22 Rename m-classicsuictwo2.jpeg to m-classicsuittwo2.jpeg
+d88deb48 2026-10-22 Rename m-classicsuitstwo1.jpeg to m-classicsuittwo1.jpeg
+496d2d30 2026-10-22 Add files via upload
+760ef8f3 2026-10-22 Update m-classicsuits.html
+e2c7032a 2026-10-22 Update m-classicsuits.html
+5b32a500 2026-10-22 Update m-classicsuits.html
+15766323 2026-10-22 Update m-classicsuits.html
+e5ba9f53 2026-10-22 Update measurements.html
+96c6a4ba 2026-10-21 Update w-classicsuits.html
+59305036 2026-10-21 Update m-classicsuits.html
+b6004cad 2026-10-21 Update m-doublebreasted.html
+a84dcd0d 2026-10-21 Update w-doublebreasted.html
+b4cb2db1 2026-10-21 Update w-doublebreasted.html
+236a050a 2026-10-21 Update m-doublebreasted.html
+8c500bbe 2026-10-21 Update m-doublebreasted.html
+1b8c58fc 2026-10-21 Update m-classicsuits.html
+9dadd71c 2026-10-21 Update w-classicsuits.html
+5ebc4fbf 2026-10-21 Update mensuits.html
+4ab73f23 2026-10-21 Update womensuits.html
+b72f302c 2026-10-21 Update suits.html
+5ffd8526 2026-10-21 Update collections.html
+a91d7e37 2026-10-21 Create m-kaundasuits.html
+1fa8d252 2026-10-21 Create w-modernsuits.html
+2547563d 2026-10-21 Create m-modernsuits.html
+900cc1f9 2026-10-21 Create w-doublebreasted.html
+4276c8d2 2026-10-21 Create m-doublebreasted.html
+32b084bb 2026-10-21 Create w-classicsuits.html
+1f778446 2026-10-21 Create m-classicsuits.html
+e9ff1adf 2026-10-21 Add files via upload
+77179900 2026-10-21 Update service-workplace.html
+bcb4df2a 2026-10-21 Update service-housecall.html
+5c9dc76b 2026-10-20 Update measurements.html
+a97799b4 2026-10-20 Update and rename submission-page.html to measurement-submission.html
+4f507765 2026-10-20 Add files via upload
+262b302f 2026-10-20 Update measurements.html
+301714d0 2026-10-20 Add files via upload
+3edfab72 2026-10-20 Update measurements.html
+d6b3c7da 2026-10-20 Update service-cmt.html
+4425c193 2026-10-20 Update faq.html
+d9963801 2026-10-20 Add files via upload
+27bed409 2026-10-20 Update faq.html
+816f4dc3 2026-10-20 Update faq.html
+37983eeb 2026-10-20 Update sitemap.xml
+6e65b6e7 2026-10-19 Update refund-policy.html
+c6aa8db3 2026-10-19 Update services.html
+c5d8c8ff 2026-10-19 Create service-housecall.html
+0a839238 2026-10-19 Create service-workplace.html
+09dddfaf 2026-10-19 Create service-cmt.html
+18b839a6 2026-10-19 Add files via upload
+98d4b159 2026-10-19 Add files via upload
+3e1960b5 2026-10-19 Create service-sketches.html
+c94898e6 2026-10-19 Update reviews.html
+4e1d8fed 2026-10-19 Update reviews.html
+597948b5 2026-10-19 Update reviews.html
+056688e1 2026-10-19 Update service-standard.html
+67f3b3a2 2026-10-19 Add files via upload
+ceef08b5 2026-10-19 Update refund-policy.html
+611754c8 2026-10-19 Add files via upload
+2076b31f 2026-10-19 Add files via upload
+9c278c82 2026-10-19 Update privacy-policy.html
+1a9f615c 2026-10-19 Update terms-and-conditions.html
+6ceefca7 2026-10-19 Create service-standard.html
+06671670 2026-10-19 Update service-express.html
+544d9cc3 2026-10-19 Update service-express.html
+3a488de0 2026-10-19 Add files via upload
+d0e8edd2 2026-10-19 Create service-express.html
+ba25a8f5 2026-10-19 Update services.html
+0c913f98 2026-10-19 Update reviews.html
+cc989f62 2026-10-19 Update reviews.html
+5587a835 2026-10-19 Update collections.html
+431796e7 2026-10-19 Update collections.html
+21d93dc9 2026-10-19 Update happy-customers.html
+faa16897 2026-10-19 Update happy-customers.html
+be227bdb 2026-10-19 Update index.html
+871463b6 2026-10-19 Update happy-customers.html
+653f90e4 2026-10-19 Update happy-customers.html
+0705e93e 2026-10-19 Update index.html
+aa1ab46e 2026-10-19 Update happy-customers.html
+aaa7e986 2026-10-19 Update index.html
+e5270836 2026-10-19 Add files via upload
+67f747c4 2026-10-19 Update index.html
+75754b7e 2026-10-19 Update index.html
+eec2e8dd 2026-10-19 Update happy-customers.html
+f97770b2 2026-10-19 Update happy-customers.html
+f9053868 2026-10-19 Rename h4.jpeg to r7.jpeg
+f7b418ef 2026-10-19 Rename h3.jpeg to r6.jpeg
+014e684a 2026-10-19 Rename h2.jpeg to s5.jpeg
+0c9b9a86 2026-10-19 Rename h1.jpeg to r4.jpeg
+88bd6a53 2026-10-19 Update happy-customers.html
+453cfd22 2026-10-19 Update happy-customers.html
+60d02178 2026-10-19 Update happy-customers.html
+d9b7ccb6 2026-10-19 Update index.html
+3b107e60 2026-10-19 Update index.html
+fe037b1c 2026-10-19 Update index.html
+79254eba 2026-10-19 Update index.html
+07df8dd1 2026-10-19 Update index.html
+cb46d39a 2026-10-19 Update index.html
+01654a6a 2026-10-19 Update collections.html
+b14e5c87 2026-10-19 Update services.html
+bc959d38 2026-10-19 Update suits.html
+edc4c0a9 2026-10-19 Add files via upload
+726061d1 2026-10-19 Update suits.html
+9a6d86b7 2026-10-19 Update suits.html
+22c478fc 2026-10-19 Update sitemap.xml
+eaaac266 2026-10-18 Update suits.html
+491fb138 2026-10-18 Update suits.html
+45881ef0 2026-10-18 Update suits.html
+82f4a44d 2026-10-18 Update suits.html
+748f8ed3 2026-10-18 Update suits.html
+bb7e692d 2026-10-18 Update suits.html
+0bdc3d14 2026-10-18 Delete suit.html
+38ea7778 2026-10-18 Update suits.html
+0da105ff 2026-10-18 Update mensuits.html
+a24081f6 2026-10-18 Update mensuits.html
+d33b6ac3 2026-10-18 Update mensuits.html
+52c5ce10 2026-10-18 Update mensuits.html
+d76f7a96 2026-10-18 Update suits.html
+61f12b69 2026-10-18 Update services.html
+83d987d4 2026-10-18 Update collections.html
+ed1f6e37 2026-10-18 Add files via upload
+b5cb7879 2026-10-18 Update index.html
+3a387657 2026-10-18 Add files via upload
+c13d072e 2026-10-18 Add files via upload
+c38f491d 2026-10-18 Add files via upload
+ceba8196 2026-10-18 Update collections.html
+a95f8c2d 2026-10-18 Update collections.html
+9b1cecfe 2026-10-18 Add files via upload
+36f8de11 2026-10-18 Update collections.html
+3e58d0c6 2026-10-18 Update collections.html
+a0f49cf8 2026-10-18 Update collections.html
+eb881aeb 2026-10-18 Update collections.html
+8beebc43 2026-10-18 Update collections.html
+de716c77 2026-10-18 Update happy-customers.html
+41139388 2026-10-18 Rename 4.jpeg to h4.jpeg
+be63e4ed 2026-10-18 Rename 3.jpeg to h3.jpeg
+78557090 2026-10-18 Rename 2.jpeg to h2.jpeg
+9dbf3587 2026-10-18 Rename 1.jpeg to h1.jpeg
+649b5bcb 2026-10-18 Update collections.html
+ddd51873 2026-10-18 Update collections.html
+bcd66156 2026-10-18 Update collections.html
+4f732184 2026-10-18 Update collections.html
+e6ac931a 2026-10-18 Add files via upload
+93463dc2 2026-10-18 Add files via upload
+9b7a1c99 2026-10-18 Add files via upload
+b1821915 2026-10-18 Update happy-customers.html
+b3ce4801 2026-10-18 Update happy-customers.html
+c5b5ab06 2026-10-18 Update happy-customers.html
+cb45242b 2026-10-18 Update happy-customers.html
+d8f160b1 2026-10-18 Update happy-customers.html
+8bc9cbd4 2026-10-18 Add files via upload
+c73bd735 2026-10-18 Update submission-page.html
+ee66a43e 2026-10-18 Update submission-page.html
+a601901d 2026-10-18 Update submission-page.html
+bd709734 2026-10-18 Update booking-adjustment.html
+6dcd1851 2026-10-18 Update booking-housecall.html
+fa6f09b0 2026-10-18 Update booking-workplace.html
+fb7cd828 2026-10-18 Update submission-page.html
+db951c64 2026-10-18 Update booking.html
+a30dd46f 2026-10-18 Update booking.html
+ec8e30d3 2026-10-18 Update submission-page.html
+7e5ac602 2026-10-18 Update contact.html
+05ef20b5 2026-10-18 Update contact.html
+742df955 2026-10-18 Update submission-page.html
+655ed783 2026-10-18 Create submission-page.html
+8479c8ba 2026-10-18 Update contact.html
+7ecda947 2026-10-18 Update faq.html
+5aac0571 2026-10-18 Update measurements.html
+2ec912c5 2026-10-18 Update womensuits.html
+14c8ba61 2026-10-18 Add files via upload
+acf1b0d9 2026-10-18 Add files via upload
+38b6cede 2026-10-18 Update mensuits.html
+f2ff6e49 2026-10-18 Update mensuits.html
+7ea54289 2026-10-18 Update suits.html
+4edc6561 2026-10-18 Update index.html
+ef652744 2026-10-18 Update about.html
+ccc6b065 2026-10-18 Update index.html
+74114bd8 2026-10-18 Update about.html
+5030e502 2026-10-18 Update index.html
+4c12fd3a 2026-10-18 Update footer.html
+7d40c384 2026-10-18 Update header.html
+5922daef 2026-10-18 Update index.html
+6b2485d9 2026-10-18 Update services.html
+2b1e09be 2026-10-18 Create booking-adjustment.html
+367f7f18 2026-10-18 Create booking-housecall.html
+543569be 2026-10-18 Create booking-workplace.html
+0557cd20 2026-10-18 Update index.html
+1f10018f 2026-10-18 Update index.html
+0233df1f 2026-10-18 Update collections.html
+fe5cb3a8 2026-10-18 Update collections.html
+06453930 2026-10-17 Update collections.html
+dad59f3e 2026-10-17 Update suits.html
+d0fac4a5 2026-10-17 Update suits.html
+d941c724 2026-10-17 Update sitemap.xml
+e7219753 2026-10-17 Update suits.html
+6408abae 2026-10-17 Update hero.html
+4a794fba 2026-10-17 Update suits.html
+319da39c 2026-10-17 Update collections.html
+8fd53319 2026-10-17 Update womensuits.html
+07513caa 2026-10-17 Update mensuits.html
+4df33512 2026-10-17 Create mensuits.html
+802f2713 2026-10-17 Create womensuits.html
+fa96dc90 2026-10-17 Update reviews.html
+4dd05516 2026-10-17 Update reviews.html
+624c36ca 2026-10-17 Update reviews.html
+bdfa52aa 2026-10-17 Add files via upload
+a0166dec 2026-10-17 Add files via upload
+3725447a 2026-10-17 Add files via upload
+ec5b1fa6 2026-10-17 Add files via upload
+7dbdabf9 2026-10-17 Add files via upload
+4471e414 2026-10-17 Update booking.html
+767379b6 2026-10-17 Update booking.html
+a831d032 2026-10-17 Update booking.html
+2ff932d1 2026-10-17 Update booking.html
+ccb0d416 2026-10-17 Create booking.html
+e237d125 2026-10-17 Update index.html
+8d7837e1 2026-10-17 Create services.html
+42fc0372 2026-10-17 Update collections.html
+a4eb49cc 2026-10-17 Update happy-customers.html
+234d6062 2026-10-17 Update header.html
+3f0787f7 2026-10-17 Update index.html
+b5a98438 2026-10-17 Update index.html
+cae986db 2026-10-17 Create hero.html
+72a6109d 2026-10-17 Update index.html
+6bbcd7ca 2026-10-17 Update index.html
+36889128 2026-10-17 Create why-choose.html
+594136ec 2026-10-17 Create why-mtm.html
+aa9d1999 2026-10-17 Create collections.html
+bd4a733a 2026-10-17 Create happy-customers.html
+85fd12aa 2026-10-17 Update index.html
+85da5e0c 2026-10-17 Update footer.html
+f01ce36b 2026-10-17 Update footer.html
+3e1cca40 2026-10-17 Update footer.html
+b29c2c55 2026-10-17 Update header.html
+ccb8cd8d 2026-10-17 Update header.html
+656d9aee 2026-10-17 Update privacy-policy.html
+26e7d750 2026-10-17 Update refund-policy.html
+d0b757ce 2026-10-17 Update terms-and-conditions.html
+5da977e7 2026-10-17 Update header.html
+34dfe917 2026-10-17 Update header.html
+2d8f963b 2026-10-17 Update privacy-policy.html
+d32e4cef 2026-10-17 Update refund-policy.html
+5d95b0c8 2026-10-17 Update terms-and-conditions.html
+60a4c664 2026-10-17 Update header.html
+200dc71a 2026-10-17 Update privacy-policy.html
+682563ef 2026-10-17 Update refund-policy.html
+0cab0a18 2026-10-17 Update terms-and-conditions.html
+64c53231 2026-10-17 Update terms-and-conditions.html
+2c98cbfb 2026-10-17 Update refund-policy.html
+a7fbb9a0 2026-10-17 Update privacy-policy.html
+eecd99df 2026-10-17 Update header.html
+161fd088 2026-10-17 Update header.html
+e591d452 2026-10-17 Update terms-and-conditions.html
+37411f1a 2026-10-17 Update privacy-policy.html
+727a0281 2026-10-17 Update refund-policy.html
+fc9f567e 2026-10-17 Update terms-and-conditions.html
+c1ea47eb 2026-10-17 Update terms-and-conditions.html
+1989f25e 2026-10-17 Update privacy-policy.html
+54c7be59 2026-10-17 Update refund-policy.html
+4b9b316a 2026-10-17 Update header.html
+3a53e7e4 2026-10-17 Update header.html
+4de462a4 2026-10-17 Update privacy-policy.html
+b3fa5868 2026-10-17 Update refund-policy.html
+d5ece90c 2026-10-17 Update terms-and-conditions.html
+c5ddcd34 2026-10-17 Update footer.html
+07e8411e 2026-10-17 Update header.html
+ba2cf9a4 2026-10-17 Create footer.html
+ac4cee7e 2026-10-17 Create header.html
+910d13d8 2026-10-17 Update terms-and-conditions.html
+43fbbf56 2026-10-17 Create robots.txt
+9e2a4a6a 2026-10-17 Update sitemap.xml
+85f7f1a5 2026-10-16 Update index.html
+3d8bf42c 2026-10-16 Update index.html
+b6b0bd7e 2026-10-16 Update index.html
+b388c272 2026-10-16 Update index.html
+8189d018 2026-10-16 Update index.html
+393035da 2026-10-16 Update contact.html
+18d2d915 2026-10-16 Update faq.html
+a29b37f6 2026-10-16 Update measurements.html
+63c94538 2026-10-16 Update suits.html
+9d104498 2026-10-16 Update about.html
+85f06d74 2026-10-16 Update measurements.html
+a521f1d1 2026-10-16 Update measurements.html
+f91a94cd 2026-10-16 Update index.html
+29aa14fe 2026-10-16 Update index.html
+a7b8794a 2026-10-16 Update index.html
+772d2995 2026-10-16 Update index.html
+b9ac44fc 2026-10-16 Update index.html
+0e2f43cb 2026-10-16 Update contact.html
+71fcacec 2026-10-16 Update faq.html
+e58112fa 2026-10-16 Update index.html
+deaa7b0b 2026-10-16 Rename contacts.html to contact.html
+dac30650 2026-10-16 Rename faqs.html to faq.html
+f3d1c98e 2026-10-16 Update index.html
+f81072a3 2026-10-16 Create privacy-policy.html
+88d02872 2026-10-16 Create terms-and-conditions.html
+aacef765 2026-10-16 Create refund-policy.html
+ff4183d2 2026-10-16 Create contacts.html
+e9ad6019 2026-10-16 Create faqs.html
+1f296c6f 2026-10-16 Update suits.html
+915a7d8e 2026-10-16 Update measurements.html
+7e1409aa 2026-10-16 Update suits.html
+470fb40f 2026-10-16 Update suits.html
+a1b9d3c7 2026-10-16 Update measurements.html
+d67fa26e 2026-10-16 Update measurements.html
+32a47aec 2026-10-16 Update measurements.html
+75022a91 2026-10-16 Rename measurements.htm to measurements.html
+b9301a8a 2026-10-16 Add files via upload
+bcd44f5b 2026-10-16 Create measurements.htm
+19f0f096 2026-10-16 Add files via upload
+f4b1199c 2026-10-16 Add files via upload
+2253c8ea 2026-10-16 Update index.html
+dd2e825e 2026-10-16 Create suits.html
+df0ee432 2026-10-16 Update about.html
+85433611 2026-10-16 Add files via upload
+daa2701e 2026-10-16 Add files via upload
+ee299ca2 2026-10-16 Add files via upload
+19edf52b 2026-10-16 Create about.html
+ce1196a4 2026-10-16 Add files via upload
+e1c91549 2026-10-16 Add files via upload
+ded517ea 2026-10-16 Add files via upload
+c8377a69 2026-10-16 Update index.html
+fadade80 2026-10-16 Update index.html
+a0650d23 2026-10-16 Update index.html
+ac9556c4 2026-10-16 Update index.html
+829055c4 2026-10-16 Update index.html
+c89a1b09 2026-10-16 Update index.html
+8d89216c 2026-10-16 Add files via upload
+29d1536a 2026-10-16 Add files via upload
+91db855c 2026-10-16 Update index.html
+25bd65bc 2026-10-15 Update index.html
+d66fd48e 2026-10-15 Update index.html
+78816781 2026-10-15 Delete certificate.pdf
+312324b9 2026-10-15 Update index.html
+3bc04155 2026-10-15 Update index.html
+88cf5bbf 2026-10-15 Add files via upload
+b870e5c6 2026-10-15 Update index.html
+413b1dcc 2026-10-15 Add files via upload
+c45eafa6 2026-10-15 Update index.html
+26309ffb 2026-10-15 Update index.html
+7592ad3e 2026-10-15 Update index.html
+35c108be 2026-10-15 Update index.html
+6785a3ae 2026-10-15 Rename sitemap xml to sitemap.xml
+c4884dcb 2026-10-15 Create sitemap xml
+bef918f7 2026-10-15 Update index.html
+f601df16 2026-10-15 Update index.html
+0a4d88b6 2026-10-15 Update index.html
+a440c746 2026-10-15 Update index.html
+226614fa 2026-10-15 Update index.html
+ce25a182 2026-10-15 Update index.html
+daf534dc 2026-10-15 Update index.html
+1886727b 2026-10-15 Update index.html
+0a0a1272 2026-10-15 Update index.html
+be3f992a 2026-10-15 Update index.html
+23f1d554 2026-10-15 Update index.html
+d63cf5fc 2026-10-15 Update index.html
+d70234ec 2026-10-15 Add files via upload
+6d83af94 2026-10-15 Update index.html
+dcd06345 2026-10-15 Update index.html
+c8cc6028 2026-10-15 Update index.html
+7acb41ce 2026-10-15 Update index.html
+a9d4ee46 2026-10-15 Update index.html
+c9501ac1 2026-10-15 Add files via upload
+f93ffea2 2026-10-15 Update index.html
+3ceed057 2026-10-15 Update index.html
+4b4a96f2 2026-10-15 Update index.html
+e5404bc9 2026-10-15 Update index.html
+34827844 2026-10-15 Update index.html
+2c691098 2026-10-15 Add files via upload
+93f252f4 2026-10-15 Update index.html
+4374ac24 2026-10-15 Create CNAME
+aae2192e 2026-10-15 Create index.html

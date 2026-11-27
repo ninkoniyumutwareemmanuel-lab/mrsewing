@@ -12,6 +12,7 @@ def decorate(body):
     if n!=7:raise ValueError('Expected seven privacy sections')
     # Add links to public privacy resources after escaping the source disclosure text.
     rest=rest.replace('https://www.facebook.com/privacy/policy/','<a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta privacy policy</a>')
+    rest=rest.replace('https://policies.google.com/privacy','<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google privacy policy</a>')
     rest=rest.replace('https://dpo.gov.rw/','<a href="https://dpo.gov.rw/" target="_blank" rel="noopener noreferrer">Rwanda Data Protection &amp; Privacy Office</a>')
     def toc():
         return ''.join('<a href="/privacy-policy/#'+str(s['id'])+'"><span>'+str(i+1).zfill(2)+'</span>'+escape(s['title'])+'</a>' for i,s in enumerate(config['sections']))

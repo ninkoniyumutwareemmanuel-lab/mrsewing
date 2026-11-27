@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "approvalSource": "Owner Fabric Guide redesign and text-first correction, implemented291a1567 andb4210fe2; owner recovery instruction25November2026 confirms7collections/26styles/17patterns. General references, not supplier stock specifications.",
+  "collections": [
+    {
+      "id": "super",
+      "name": "Super Collection",
+      "group": "premium",
+      "styles": [
+        {
+          "id": "super-1",
+          "name": "Super 100s"
+        },
+        {
+          "id": "super-2",
+          "name": "Super 120s"
+        },
+        {
+          "id": "super-3",
+          "name": "Super 150s"
+        },
+        {
+          "id": "super-4",
+          "name": "Super 180s"
+        }
+      ]
+    },
+    {
+      "id": "americano",
+      "name": "Americano Collection",
+      "group": "premium",
+      "styles": [
+        {
+          "id": "americano-1",
+          "name": "Stretch Bengaline"
+        },
+        {
+          "id": "americano-2",
+          "name": "Ponte Roma"
+        },
+        {
+          "id": "americano-3",
+          "name": "Four-way Stretch"
+        }
+      ]
+    },
+    {
+      "id": "wool",
+      "name": "Wool Collection",
+      "group": "premium",
+      "styles": [
+        {
+          "id": "wool-1",
+          "name": "Worsted Wool"
+        },
+        {
+          "id": "wool-2",
+          "name": "Tweed"
+        },
+        {
+          "id": "wool-3",
+          "name": "Polyester-Wool Blend"
+        },
+        {
+          "id": "wool-4",
+          "name": "Wool Flannel"
+        }
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Star Collection",
+      "group": "premium",
+      "styles": [
+        {
+          "id": "star-1",
+          "name": "Stretch Gabardine"
+        },
+        {
+          "id": "star-2",
+          "name": "Stretch Twill"
+        },
+        {
+          "id": "star-3",
+          "name": "Stretch Crepe"
+        }
+      ]
+    },
+    {
+      "id": "linen",
+      "name": "Linen Collection",
+      "group": "premium",
+      "styles": [
+        {
+          "id": "linen-1",
+          "name": "Classic Linen"
+        },
+        {
+          "id": "linen-2",
+          "name": "Textured Linen"
+        },
+        {
+          "id": "linen-3",
+          "name": "Linen-Cotton Blend"
+        },
+        {
+          "id": "linen-4",
+          "name": "Striped Linen"
+        }
+      ]
+    },
+    {
+      "id": "polyester",
+      "name": "Polyester Collection",
+      "group": "standard",
+      "styles": [
+        {
+          "id": "polyester-1",
+          "name": "Classic Polyester"
+        },
+        {
+          "id": "polyester-2",
+          "name": "Polyester-Viscose"
+        },
+        {
+          "id": "polyester-3",
+          "name": "Polyester Gabardine"
+        },
+        {
+          "id": "polyester-4",
+          "name": "Polyester Crepe"
+        }
+      ]
+    },
+    {
+      "id": "cotton",
+      "name": "Cotton Collection",
+      "group": "standard",
+      "styles": [
+        {
+          "id": "cotton-1",
+          "name": "Cotton Twill / Dubai"
+        },
+        {
+          "id": "cotton-2",
+          "name": "Cotton Gabardine"
+        },
+        {
+          "id": "cotton-3",
+          "name": "Stretch Cotton"
+        },
+        {
+          "id": "cotton-4",
+          "name": "Cotton Seersucker"
+        }
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "plain",
+      "name": "Plain",
+      "description": "Single-colour or solid appearance"
+    },
+    {
+      "id": "pinstripe",
+      "name": "Pinstripe",
+      "description": "Fine, regularly spaced lines"
+    },
+    {
+      "id": "chalk-stripe",
+      "name": "Chalk Stripe",
+      "description": "Softer, wider-looking stripes"
+    },
+    {
+      "id": "shadow-stripe",
+      "name": "Shadow Stripe",
+      "description": "Subtle tonal stripes"
+    },
+    {
+      "id": "herringbone",
+      "name": "Herringbone",
+      "description": "Repeated zigzag weave"
+    },
+    {
+      "id": "windowpane",
+      "name": "Windowpane",
+      "description": "Large intersecting checks"
+    },
+    {
+      "id": "prince-of-wales",
+      "name": "Prince of Wales Check",
+      "description": "Small checks combined with larger checks"
+    },
+    {
+      "id": "houndstooth",
+      "name": "Houndstooth",
+      "description": "Angular broken-check pattern"
+    },
+    {
+      "id": "plaid",
+      "name": "Plaid",
+      "description": "Intersecting coloured bands"
+    },
+    {
+      "id": "sharkskin",
+      "name": "Sharkskin / Pick and Pick",
+      "description": "Fine alternating threads"
+    },
+    {
+      "id": "birdseye",
+      "name": "Birdseye",
+      "description": "Small repeating eye-like dots"
+    },
+    {
+      "id": "nailhead",
+      "name": "Nailhead",
+      "description": "Fine contrasting dots"
+    },
+    {
+      "id": "melange",
+      "name": "Mélange",
+      "description": "Mixed-tone yarn appearance"
+    },
+    {
+      "id": "donegal",
+      "name": "Donegal Tweed",
+      "description": "Small contrasting flecks"
+    },
+    {
+      "id": "hopsack",
+      "name": "Hopsack",
+      "description": "Basket-like weave"
+    },
+    {
+      "id": "textured-check",
+      "name": "Textured Check",
+      "description": "Checks on a textured ground"
+    },
+    {
+      "id": "crosshatch",
+      "name": "Crosshatch",
+      "description": "Intersecting fine threads"
+    }
+  ],
+  "supplierEvidence": [
+    {
+      "reference": "Jindeli113096",
+      "observedLabel": "T/R/SP",
+      "compositionPercentages": null,
+      "status": "Owner-reported25November2026; original supplier sample image not located; no collection assignment"
+    },
+    {
+      "reference": "Lycra Breezer",
+      "observedLabel": null,
+      "status": "Owner-reported25November2026; original supplier sample image not located; no composition or collection assignment"
+    },
+    {
+      "reference": "Madagascar208",
+      "observedLabel": "100%Polyester; Made in India",
+      "status": "Owner-reported25November2026; original supplier sample image not located; not generalised to any collection"
+    },
+    {
+      "reference": "Fashion First",
+      "observedLabel": "Polyester material; Made in India",
+      "status": "Owner-reported25November2026; original supplier sample image not located; not generalised to any collection"
+    }
+  ],
+  "careNotice": "Ask our team to confirm care instructions for the actual cloth and finished garment. Follow the confirmed garment care label; collection names alone do not establish washing or cleaning instructions."
+}

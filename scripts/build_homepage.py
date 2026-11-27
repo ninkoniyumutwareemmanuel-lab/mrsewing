@@ -21,15 +21,14 @@ HOMEPAGE_VISUAL_REVIEW = False
 # Source document, selected element, identifying attribute (if needed).
 SECTIONS = {
     'header': ('_templates/homepage-header.html', 'header', None),
-    'hero': ('_templates/homepage-sections.html', 'section', ('class', 'hero-section')),
-    'customers': ('_templates/homepage-sections.html', 'section', ('class', 'customers-section home-section')),
-    'process': ('_templates/homepage-sections.html', 'section', ('class', 'home-process home-section')),
-    'benefits': ('_templates/homepage-sections.html', 'section', ('class', 'home-benefits home-section')),
-    'services': ('_templates/homepage-sections.html', 'section', ('id', 'services')),
-    'information': ('_templates/homepage-sections.html', 'section', ('id', 'customer-information')),
-    'options': ('_templates/homepage-sections.html', 'section', ('id', 'order-options')),
-    'programs': ('_templates/homepage-sections.html', 'div', ('id', 'programs')),
-    'final': ('_templates/homepage-sections.html', 'section', ('class', 'home-final home-section')),
+    'hero': ('_templates/homepage-tailoring.html', 'section', ('class', 'hero-section tailoring-first-hero')),
+    'services': ('_templates/homepage-tailoring.html', 'section', ('id', 'services')),
+    'information': ('_templates/homepage-tailoring.html', 'section', ('id', 'customer-information')),
+    'process': ('_templates/homepage-tailoring.html', 'section', ('id', 'tailoring-process')),
+    'benefits': ('_templates/homepage-tailoring.html', 'section', ('id', 'tailoring-benefits')),
+    'options': ('_templates/homepage-tailoring.html', 'section', ('id', 'order-options')),
+    'programs': ('_templates/homepage-tailoring.html', 'section', ('id', 'customer-programs')),
+    'final': ('_templates/homepage-tailoring.html', 'section', ('id', 'tailoring-final')),
     'contact': ('_templates/homepage-sections.html', 'section', ('id', 'customer-support')),
     'footer': ('_templates/homepage-footer.html', 'footer', None),
 }
@@ -108,6 +107,8 @@ def reserve_image_space(match):
 
 def render():
     template = (ROOT / '_templates/homepage.html').read_text().replace('{{agent_discovery}}', DISCOVERY_LINKS)
+    for retired_section in ('customers',):
+        template = template.replace('{{'+retired_section+'}}', '')
     styles = []
     for key, (filename, tag, identifier) in SECTIONS.items():
         source = (ROOT / filename).read_text()
@@ -117,24 +118,16 @@ def render():
             raise ValueError(f'Missing homepage section: {filename}')
         markup = parser.markup
         if key in ('header', 'footer'):
-            from html import escape
-            import json
-            guides = json.loads((ROOT/'_data/homepage-guides.json').read_text())
-            items = []
-            for guide in guides:
-                label = escape(guide['label'])
-                if guide['href']:
-                    assert (ROOT/guide['href'].strip('/')/'index.html').is_file(), 'Missing customer guide route'
-                    items.append('<li><a href="'+escape(guide['href'], quote=True)+'">'+label+'</a></li>')
-                else:
-                    pending_class = 'footer-guide-pending' if key == 'footer' else 'nav-guide-pending'
-                    span_class = 'pending-guide' if key == 'footer' else 'home-nav-pending'
-                    items.append('<li class="'+pending_class+'"><span class="'+span_class+'" title="This guide will be developed separately">'+label+'</span></li>')
-            markup = markup.replace('{{customer_guides}}', ''.join(items))
+            # Same authoritative header/footer expansion as every generated page.
+            from custom_tailoring import component
+            markup = component(key, '/')
         if key == 'footer':
             markup = markup.replace('2026 Mr Sewing Fashion. All Rights Reserved.', '2026 NINKONIYUMUTWARE NEXUS LTD. All Rights Reserved.')
         if key == 'header':
             markup = markup.replace('<a href="/">Home</a>', '<a href="/" aria-current="page" class="active">Home</a>', 1)
+        if key == 'services':
+            from homepage_video_cards import render as render_tailoring_media
+            markup = markup.replace('{{tailoring_media_cards}}', render_tailoring_media())
         if re.search(r'<(?:head|meta|link|script|style)\b', markup, re.I):
             raise ValueError(f'Unexpected document metadata/script in section: {filename}')
         markup = re.sub(r'<img\b[^>]*>', reserve_image_space, markup)
@@ -148,8 +141,9 @@ def render():
     template=template.replace('{{payment_methods}}','<section id="payment-methods" class="home-section home-payments"><div class="home-shell"><div class="section-heading centered"><p class="home-eyebrow">Pay with confidence</p><h2>Payment Methods</h2><p>We accept Mobile Money, Bank Transfer and Cryptocurrency. Our team provides payment instructions after reviewing your request.</p></div>'+payment_methods()+'</div></section>')
     styles.append((ROOT/'_templates/payment-methods.css').read_text())
     from homepage_galleries import suit_section,moments_gallery,shop_category_section
-    template=template.replace('{{suit_collections}}',suit_section()+shop_category_section()).replace('{{moments_gallery}}',moments_gallery())
+    template=template.replace('{{suit_collections}}',suit_section()).replace('{{moments_gallery}}',moments_gallery())
     styles.append((ROOT/'_templates/homepage-galleries.css').read_text())
+    styles.append((ROOT/'_templates/homepage-tailoring.css').read_text())
     styles.append(RESOURCE_CSS)
     styles.append(shared.site_css())
     styles.append((ROOT/'_templates/homepage-motion.css').read_text())

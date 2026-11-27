@@ -1,0 +1,194 @@
+[
+  {
+    "commit": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "ref": "refs/remotes/audit-origin/backup/main-before-terms-release-2026-11-22",
+    "preview": "https://f0ea0400.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: f07e3b3 Status: \u2705 Deploy successful! Preview URL: https://f0ea0400.mrsewing-staging.pages.dev Branch Preview URL: https://release-terms-reader-only-20.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137244066241",
+    "deploymentId": "f0ea0400-eb7c-4656-b9ce-b5219c324314"
+  },
+  {
+    "commit": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "ref": "refs/remotes/audit-origin/backup/main-before-terms-release-2026-11-22",
+    "preview": "https://release-terms-reader-only-20.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: f07e3b3 Status: \u2705 Deploy successful! Preview URL: https://f0ea0400.mrsewing-staging.pages.dev Branch Preview URL: https://release-terms-reader-only-20.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137244066241",
+    "deploymentId": "f0ea0400-eb7c-4656-b9ce-b5219c324314"
+  },
+  {
+    "commit": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+    "ref": "refs/remotes/audit-origin/work/r57-preserve-existing-homepage-2026-11-21",
+    "preview": "https://352b9d57.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 3bcf142 Status: \u2705 Deploy successful! Preview URL: https://352b9d57.mrsewing-staging.pages.dev Branch Preview URL: https://work-r58-restore-main-homepa.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137100062171",
+    "deploymentId": "352b9d57-0604-4526-8ebd-3a9b3c792c51"
+  },
+  {
+    "commit": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+    "ref": "refs/remotes/audit-origin/work/r57-preserve-existing-homepage-2026-11-21",
+    "preview": "https://work-r58-restore-main-homepa.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 3bcf142 Status: \u2705 Deploy successful! Preview URL: https://352b9d57.mrsewing-staging.pages.dev Branch Preview URL: https://work-r58-restore-main-homepa.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137100062171",
+    "deploymentId": "352b9d57-0604-4526-8ebd-3a9b3c792c51"
+  },
+  {
+    "commit": "7f2bda869fab476775206049adf22535354ced54",
+    "ref": "refs/remotes/audit-origin/backup/staging-before-terms-2026-11-21",
+    "preview": "https://a04c38fb.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 7f2bda8 Status: \u2705 Deploy successful! Preview URL: https://a04c38fb.mrsewing-staging.pages.dev Branch Preview URL: https://backup-staging-before-terms.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136906053403",
+    "deploymentId": "a04c38fb-a2db-45dc-92f7-048bcfe5470e"
+  },
+  {
+    "commit": "7f2bda869fab476775206049adf22535354ced54",
+    "ref": "refs/remotes/audit-origin/backup/staging-before-terms-2026-11-21",
+    "preview": "https://backup-staging-before-terms.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 7f2bda8 Status: \u2705 Deploy successful! Preview URL: https://a04c38fb.mrsewing-staging.pages.dev Branch Preview URL: https://backup-staging-before-terms.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136906053403",
+    "deploymentId": "a04c38fb-a2db-45dc-92f7-048bcfe5470e"
+  },
+  {
+    "commit": "3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+    "ref": "refs/remotes/audit-origin/work/r58-restore-main-homepage-2026-11-22",
+    "preview": "https://backup-staging-before-terms-65ui.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 3e0c73b Status: \u2705 Deploy successful! Preview URL: https://d6807fa3.mrsewing-staging.pages.dev Branch Preview URL: https://backup-staging-before-terms-65ui.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137243467056",
+    "deploymentId": "d6807fa3-f82b-4551-9706-c49f73d22d07"
+  },
+  {
+    "commit": "3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+    "ref": "refs/remotes/audit-origin/work/r58-restore-main-homepage-2026-11-22",
+    "preview": "https://d6807fa3.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 3e0c73b Status: \u2705 Deploy successful! Preview URL: https://d6807fa3.mrsewing-staging.pages.dev Branch Preview URL: https://backup-staging-before-terms-65ui.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137243467056",
+    "deploymentId": "d6807fa3-f82b-4551-9706-c49f73d22d07"
+  },
+  {
+    "commit": "c58805e3ea1f570846b4dbaf90706cd9128b6fdf",
+    "ref": "refs/remotes/audit-origin/backup/staging-before-v2-stage-a-20261029",
+    "preview": "https://552e14dd.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: c58805e Status: \u2705 Deploy successful! Preview URL: https://552e14dd.mrsewing-staging.pages.dev Branch Preview URL: https://backup-staging-before-v2-sta.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/123400424833",
+    "deploymentId": "552e14dd-cb58-4112-b342-8fc3a7ae2920"
+  },
+  {
+    "commit": "c58805e3ea1f570846b4dbaf90706cd9128b6fdf",
+    "ref": "refs/remotes/audit-origin/backup/staging-before-v2-stage-a-20261029",
+    "preview": "https://backup-staging-before-v2-sta.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: c58805e Status: \u2705 Deploy successful! Preview URL: https://552e14dd.mrsewing-staging.pages.dev Branch Preview URL: https://backup-staging-before-v2-sta.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/123400424833",
+    "deploymentId": "552e14dd-cb58-4112-b342-8fc3a7ae2920"
+  },
+  {
+    "commit": "33620fe4dc38ec81905fd2556a19db15f5c06db3",
+    "ref": "refs/remotes/audit-origin/main",
+    "preview": "https://ba58d9be.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 33620fe Status: \u2705 Deploy successful! Preview URL: https://ba58d9be.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137245567126",
+    "deploymentId": "ba58d9be-e6b8-4b9d-82a8-d84db57e798e"
+  },
+  {
+    "commit": "0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+    "ref": "refs/remotes/audit-origin/phase1/customer-journey-repairs",
+    "preview": "https://20c36335.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 0acf34d Status: \u2705 Deploy successful! Preview URL: https://20c36335.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/139210850250",
+    "deploymentId": "20c36335-0705-4d1d-b863-34fd5f2dea22"
+  },
+  {
+    "commit": "2dbd5db9ededaa0319a7a3c945bf9bf6e2599f2d",
+    "ref": "refs/remotes/audit-origin/phase2/website-corrections",
+    "preview": "https://9382ebf9.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 2dbd5db Status: \u2705 Deploy successful! Preview URL: https://9382ebf9.mrsewing-staging.pages.dev Branch Preview URL: https://phase2-website-corrections.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/123309566112",
+    "deploymentId": "9382ebf9-fbf4-4afd-b1a1-b21a50462c40"
+  },
+  {
+    "commit": "2dbd5db9ededaa0319a7a3c945bf9bf6e2599f2d",
+    "ref": "refs/remotes/audit-origin/phase2/website-corrections",
+    "preview": "https://phase2-website-corrections.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 2dbd5db Status: \u2705 Deploy successful! Preview URL: https://9382ebf9.mrsewing-staging.pages.dev Branch Preview URL: https://phase2-website-corrections.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/123309566112",
+    "deploymentId": "9382ebf9-fbf4-4afd-b1a1-b21a50462c40"
+  },
+  {
+    "commit": "ce4632b9eb97e12c021da64024972bb5f82894d1",
+    "ref": "refs/remotes/audit-origin/release/terms-reader-only-2026-11-22",
+    "preview": "https://157b1be6.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: ce4632b Status: \u2705 Deploy successful! Preview URL: https://157b1be6.mrsewing-staging.pages.dev Branch Preview URL: https://release-terms-reader-only-20.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137244853819",
+    "deploymentId": "157b1be6-8c79-4882-8f71-f8ee3aa84d94"
+  },
+  {
+    "commit": "ce4632b9eb97e12c021da64024972bb5f82894d1",
+    "ref": "refs/remotes/audit-origin/release/terms-reader-only-2026-11-22",
+    "preview": "https://release-terms-reader-only-20.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: ce4632b Status: \u2705 Deploy successful! Preview URL: https://157b1be6.mrsewing-staging.pages.dev Branch Preview URL: https://release-terms-reader-only-20.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/137244853819",
+    "deploymentId": "157b1be6-8c79-4882-8f71-f8ee3aa84d94"
+  },
+  {
+    "commit": "68bc9c98d1ce84e2f4318a051a265e16911640e7",
+    "ref": "refs/remotes/audit-origin/review/customer-policy-2026-11-07",
+    "preview": "https://d2b55c91.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 68bc9c9 Status: \u2705 Deploy successful! Preview URL: https://d2b55c91.mrsewing-staging.pages.dev Branch Preview URL: https://review-customer-policy-2026.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/130640295292",
+    "deploymentId": "d2b55c91-7612-4c84-9b40-0e329998d8b8"
+  },
+  {
+    "commit": "68bc9c98d1ce84e2f4318a051a265e16911640e7",
+    "ref": "refs/remotes/audit-origin/review/customer-policy-2026-11-07",
+    "preview": "https://review-customer-policy-2026.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 68bc9c9 Status: \u2705 Deploy successful! Preview URL: https://d2b55c91.mrsewing-staging.pages.dev Branch Preview URL: https://review-customer-policy-2026.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/130640295292",
+    "deploymentId": "d2b55c91-7612-4c84-9b40-0e329998d8b8"
+  },
+  {
+    "commit": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+    "ref": "refs/remotes/audit-origin/work/r55-terms-fullscreen-popup-2026-11-21",
+    "preview": "https://7d1cea06.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 4d7c282 Status: \u2705 Deploy successful! Preview URL: https://7d1cea06.mrsewing-staging.pages.dev Branch Preview URL: https://work-r56-tailoring-first-hom.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136918435893",
+    "deploymentId": "7d1cea06-f216-458f-95df-7c12e4eb7236"
+  },
+  {
+    "commit": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+    "ref": "refs/remotes/audit-origin/work/r55-terms-fullscreen-popup-2026-11-21",
+    "preview": "https://work-r56-tailoring-first-hom.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 4d7c282 Status: \u2705 Deploy successful! Preview URL: https://7d1cea06.mrsewing-staging.pages.dev Branch Preview URL: https://work-r56-tailoring-first-hom.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136918435893",
+    "deploymentId": "7d1cea06-f216-458f-95df-7c12e4eb7236"
+  },
+  {
+    "commit": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+    "ref": "refs/remotes/audit-origin/work/r56-tailoring-first-homepage-2026-11-21",
+    "preview": "https://8e955119.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 47b5966 Status: \u2705 Deploy successful! Preview URL: https://8e955119.mrsewing-staging.pages.dev Branch Preview URL: https://work-r57-preserve-existing-h.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136924816844",
+    "deploymentId": "8e955119-c31a-40e8-9a1b-537a36cad4c1"
+  },
+  {
+    "commit": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+    "ref": "refs/remotes/audit-origin/work/r56-tailoring-first-homepage-2026-11-21",
+    "preview": "https://work-r57-preserve-existing-h.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: 47b5966 Status: \u2705 Deploy successful! Preview URL: https://8e955119.mrsewing-staging.pages.dev Branch Preview URL: https://work-r57-preserve-existing-h.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136924816844",
+    "deploymentId": "8e955119-c31a-40e8-9a1b-537a36cad4c1"
+  },
+  {
+    "commit": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+    "ref": "refs/remotes/audit-origin/work/terms-pdf-main-base-2026-11-21",
+    "preview": "https://2e81dd3f.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: c727540 Status: \u2705 Deploy successful! Preview URL: https://2e81dd3f.mrsewing-staging.pages.dev Branch Preview URL: https://work-r55-terms-fullscreen-po.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136913595820",
+    "deploymentId": "2e81dd3f-c59f-4c93-b326-a0cebfec6eb0"
+  },
+  {
+    "commit": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+    "ref": "refs/remotes/audit-origin/work/terms-pdf-main-base-2026-11-21",
+    "preview": "https://work-r55-terms-fullscreen-po.mrsewing-staging.pages.dev",
+    "providerSummary": "Deployed successfully Latest commit: c727540 Status: \u2705 Deploy successful! Preview URL: https://2e81dd3f.mrsewing-staging.pages.dev Branch Preview URL: https://work-r55-terms-fullscreen-po.mrsewing-staging.pages.dev View logs",
+    "evidence": "https://github.com/ninkoniyumutwareemmanuel-lab/mrsewing/runs/136913595820",
+    "deploymentId": "2e81dd3f-c59f-4c93-b326-a0cebfec6eb0"
+  }
+]

@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,re
 ROOT=Path(__file__).resolve().parents[1]
-STATUSES=('Available in Stock','Available on Orders','Out of Stock')
+STATUSES=('Available in Stock','Available on Backorder','Out of Stock')
 def load(source=None):
  data=source if source is not None else json.loads((ROOT/'_data/shop-products.json').read_text())
  assert data.get('schemaVersion')==1 and isinstance(data.get('products'),list),'Unsupported catalogue'
@@ -30,7 +30,7 @@ def load(source=None):
   price=p.get('priceRwf')
   assert price is None or type(price) is int and 0<price<=100000000,'Invalid approved price'
   assert price is None or p.get('priceApproved') is True,'Price approval required'
-  assert p['availability']!='Available on Orders' or price is None,'On-order products have no fixed price'
+  assert p['availability']!='Available on Backorder' or price is None,'On-order products have no fixed price'
   assert p['availability']!='Available in Stock' or price is not None,'Stock price required'
   assert type(p.get('stockQuantity')) is int and p['stockQuantity']>=0,'Stock quantity required'
   assert isinstance(p.get('variations'),list) and p['variations'],'Explicit variations required (use Not applicable if genuinely unsized)'

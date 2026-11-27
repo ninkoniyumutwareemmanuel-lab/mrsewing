@@ -24,9 +24,15 @@ def component(name,current=None):
             items.append(f'<li class="{cls}"><span class="{span}" title="This guide will be developed separately">{label}</span></li>')
     markup=markup.replace('{{customer_guides}}',''.join(items))
     if name=='header':
+        markup=markup.replace('{{services_navigation}}',(ROOT/'_templates/services-picker-source.html').read_text().strip())
+    from customer_interface import service_name,navigation_labels
+    markup=markup.replace('{{tailoring_service_name}}',escape(service_name('custom-tailoring')))
+    markup=navigation_labels(markup)
+    if name=='header':
         markup=markup.replace(' href="/" aria-current="page"',' href="/"')
         markup=markup.replace('href="'+(current or BASE)+'"','href="'+(current or BASE)+'" aria-current="page"',1)
-    return delivery(markup,name)
+    from shop_release_hold import public_navigation
+    return delivery(public_navigation(markup),name)
 
 def render(kind='landing'):
     import customer_site as release

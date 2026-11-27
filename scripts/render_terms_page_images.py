@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render five pages of the immutable approved Terms PDF for mobile WebViews.
+"""Render every page of the registered staging-review Terms PDF for mobile WebViews.
 
 Manual build prerequisite for an R55 release: install poppler-utils (pdftoppm).
 PNG image pixels are derived only from the verified approved PDF. The original
@@ -30,7 +30,8 @@ def render_images(check=False):
         raise RuntimeError('Install poppler-utils / pdftoppm to generate genuine PDF page renders')
     with tempfile.TemporaryDirectory() as folder:
         prefix=Path(folder)/'terms'
-        subprocess.run([executable,'-f','1','-l',str(count),'-r',str(RENDER_DPI),'-png',str(source),str(prefix)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        size_args=['-r',str(RENDER_DPI)] if entry['version']=='1.0' else ['-scale-to-x','1360','-scale-to-y','-1']
+        subprocess.run([executable,'-f','1','-l',str(count),*size_args,'-png',str(source),str(prefix)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         renders=sorted(Path(folder).glob('terms-*.png'),key=lambda p:int(p.stem.split('-')[-1]))
         if len(renders)!=count:
             raise ValueError('Expected %d original approved PDF pages; got %d' %(count,len(renders)))
@@ -40,7 +41,7 @@ def render_images(check=False):
             if not raw.startswith(b'\x89PNG\r\n\x1a\n') or raw[12:16]!=b'IHDR':
                 raise ValueError('Invalid rendered PNG')
             width,height=struct.unpack('>II',raw[16:24])
-            if (width,height)!=(1360,1760):
+            if width!=1360 or not 1000<=height<=2400 or (entry['version']=='1.0' and height!=1760):
                 raise ValueError('Unexpected PDF page dimensions: %r' % ((width,height),))
             name=Path(page_url(entry,number)).name
             target=destination/name
@@ -54,7 +55,7 @@ def render_images(check=False):
             files.append({'page':number,'path':'/assets/policy-documents/terms-and-conditions/pages/'+name,
                           'width':width,'height':height,'sha256':hashlib.sha256(raw).hexdigest()})
         manifest={'sourcePdfSha256':entry['sha256'],'version':entry['version'],'publicationStatus':'staging-review',
-                  'effectiveDate':None,'dpi':RENDER_DPI,'pages':files}
+                  'effectiveDate':None,'rendering':{'dpi':RENDER_DPI} if entry['version']=='1.0' else {'widthPixels':1360},'pages':files}
         text=json.dumps(manifest,ensure_ascii=False,indent=2)+'\n'
         target=destination/'manifest.json'
         if check:
@@ -63,7 +64,13 @@ def render_images(check=False):
         else:
             if not target.is_file() or target.read_text()!=text:
                 target.write_text(text)
-    print('PASS: %d PDF-derived pages from immutable approved version %s; not activated' %(count,entry['version']))
+        archived=destination/('manifest-'+entry['version']+'.json')
+        if check:
+            if not archived.is_file() or archived.read_text()!=text:
+                raise ValueError('Stale version-specific Terms page manifest')
+        elif not archived.is_file() or archived.read_text()!=text:
+            archived.write_text(text)
+    print('PASS: %d PDF-derived pages from registered staging-review version %s; not activated' %(count,entry['version']))
 
 
 if __name__=='__main__':

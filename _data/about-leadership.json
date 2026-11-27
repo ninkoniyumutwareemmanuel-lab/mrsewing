@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "published": false,
+  "approvalStatus": "pending-owner-content",
+  "sourceReference": "Owner website assignment, 26 November 2026, section 16.1",
+  "name": null,
+  "title": null,
+  "biography": null,
+  "motivation": null,
+  "philosophy": null,
+  "vision": null,
+  "portrait": null,
+  "requiredReview": [
+    "Approved public name and leadership title",
+    "Approved biography and personal statements",
+    "Approved professional portrait, descriptive alt text and publication permission"
+  ]
+}

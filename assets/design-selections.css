@@ -3,6 +3,29 @@
 
 html.has-selected-designs body{padding-bottom:110px}
 
+/* Compact selection review. Original photographs remain available at full size. */
+[data-selection-list]{display:grid!important;grid-template-columns:1fr!important;gap:0!important;margin:12px 0!important}
+[data-selection-list] article{display:grid!important;grid-template-columns:76px minmax(0,1fr)!important;gap:14px;padding:14px 0!important;border:0!important;border-bottom:1px solid #88704466!important;border-radius:0!important;align-items:start!important}
+[data-selection-list] .selection-photo{width:76px!important;background:#eee7dc}
+[data-selection-list] img{width:76px!important;height:100px!important;object-fit:contain!important}
+[data-selection-list] .selection-design-details{min-width:0}
+[data-selection-list] h2{font:600 16px/1.4 Arial,sans-serif!important;margin:0 0 8px!important}
+[data-selection-list] .selection-quantity{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+[data-selection-list] .selection-quantity label{font-size:12px;margin:0!important;display:flex;align-items:center;gap:8px}
+[data-selection-list] .selection-quantity input{width:56px;min-height:44px;padding:6px;text-align:center;margin:0;font-size:16px}
+[data-selection-list] .selection-quantity button{width:44px;min-height:44px;padding:6px!important;margin:0;font-size:18px}
+[data-selection-list] .selection-design-details>button{font-size:12px;min-height:44px;border:0!important;padding:6px 0!important;margin:4px 0 0!important;text-decoration:underline}
+[data-selection-total]{font-size:14px;color:#d8bd7d;margin:8px 0}
+.selection-actions{display:block!important;margin:16px 0!important}.selection-actions[hidden]{display:none!important}
+.selection-actions section{border:0!important;background:transparent!important;padding:12px 0!important}
+.selection-actions h2{font-size:20px!important;margin:0!important}.selection-actions p{margin:6px 0!important;font-size:13px!important;line-height:1.6!important}
+.selection-actions .home-button{margin-top:8px!important;min-height:44px!important;width:auto!important;padding:10px 14px!important;font-size:13px}
+.selection-actions .selection-next .home-button{width:100%!important;font-size:15px}
+#fabricChoiceForm{margin:12px 0!important}#fabricChoiceForm fieldset{border:0!important;padding:0!important;margin:12px 0!important}
+#fabricChoiceForm .fabric-choice{display:flex!important;gap:12px;align-items:center;min-height:50px;padding:12px!important;margin:8px 0!important;border:1px solid #8c753866;border-radius:5px;cursor:pointer}
+#fabricChoiceForm .fabric-choice:has(input:checked){background:#d8b65722;border-color:#d8b657}
+#fabricChoiceForm .fabric-choice input{margin:0;width:18px;height:18px;accent-color:#b68c32}
+
 /* Contextual fabric browsing stays within the existing quotation journey. */
 .fabric-picker-choice[hidden],.fabric-card[hidden]{display:none!important}.fabric-picker-choice p{margin:12px 0}.fabric-picker-context{border:1px solid #8c7538;padding:20px;margin-bottom:28px;scroll-margin-top:140px}.fabric-picker-context p{margin:16px 0}.fabric-card [data-pick-fabric]{margin-top:18px;width:100%;min-height:48px}.fabric-picker-choice a:focus-visible,.fabric-picker-context a:focus-visible,[data-pick-fabric]:focus-visible{outline:3px solid #e2bc62;outline-offset:3px}#fabric-choice-status:empty{display:none}
 
@@ -158,3 +181,14 @@ html.has-selected-designs{scroll-padding-bottom:110px}html.has-selected-designs 
 .custom-quotation-page #requestReview .request-actions button{min-height:48px}
 @media(min-width:700px){.custom-quotation-form [data-quotation-section=information]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.custom-quotation-form [data-quotation-section=information] .custom-quotation-field{margin:0}.custom-quotation-form .custom-appointment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.custom-quotation-form .custom-appointment-grid>p{grid-column:1/-1}.custom-quotation-form .custom-quotation-section{padding:20px}}
 @media(max-width:430px){.custom-quotation-page #customerRequestForm{padding:16px 10px}.custom-quotation-form .custom-quotation-section{padding:16px 12px}.custom-quotation-form .custom-express-assessment .request-actions>*{width:100%}.custom-quotation-form .selected-quote-summary .batch-design-summary article{grid-template-columns:64px minmax(0,1fr);gap:10px}.custom-quotation-form .selected-quote-summary img,.custom-quotation-form .selected-quote-summary .selected-quote-photo{width:64px}.custom-quotation-form #reviewRequest{width:100%}}
+
+/* Scoped dialog shell and compact existing request pages; no global redesign. */
+html.tailoring-dialog-open{overflow:hidden}html.tailoring-dialog-open .selected-design-bar{visibility:hidden}
+.tailoring-request-dialog{padding:0;border:1px solid #b6944b;border-radius:12px;width:min(880px,calc(100vw - 32px));height:min(880px,calc(100dvh - 32px));max-width:none;max-height:none;background:#111110;color:#f3ead6;overflow:hidden;box-shadow:0 20px 80px #0009}
+.tailoring-request-dialog::backdrop{background:#000b}.tailoring-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid #b6944b66;background:#171614}.tailoring-dialog-header h2{font:400 clamp(19px,3vw,25px)/1.3 Georgia,serif;margin:4px 0;color:#f3ead6}.tailoring-dialog-progress{font:12px/1.5 Arial,sans-serif;letter-spacing:.04em;color:#d9bb75;margin:0}.tailoring-dialog-close{min-width:54px;min-height:44px;background:transparent;color:#f3ead6;border:1px solid #a98a47;border-radius:4px;font:600 14px Arial,sans-serif;cursor:pointer}.tailoring-dialog-close:focus-visible{outline:3px solid #e6c474;outline-offset:3px}.tailoring-dialog-frame{display:block;width:100%;height:calc(100% - 88px);border:0;background:#111110}
+.request-dialog-embedded{scroll-padding-top:12px!important;--site-header-height:0px!important}.request-dialog-embedded body{padding-top:0!important;padding-bottom:0!important}.request-dialog-embedded #site-header,.request-dialog-embedded .homepage-header,.request-dialog-embedded .homepage-footer,.request-dialog-embedded footer,.request-dialog-embedded .offer-announcement,.request-dialog-embedded .announcement-bar,.request-dialog-embedded .selected-design-bar,.request-dialog-embedded .skip-link,.request-dialog-embedded .customer-breadcrumb,.request-dialog-embedded .release-intro,.request-dialog-embedded .request-progress{display:none!important}.request-dialog-embedded .home-shell.release-main{width:100%;max-width:100%;padding:14px 18px!important}.request-dialog-embedded main{padding-top:0!important;min-height:0!important}.request-dialog-embedded .release-section{margin:0!important;padding:0!important;border:0!important}.request-dialog-embedded .request-dialog-back{min-height:44px;margin:0 0 12px;padding:8px 14px;font-size:14px}.request-dialog-embedded #customerRequestForm,.request-dialog-embedded #requestReview{padding:14px!important;margin:0!important;border:0!important;border-radius:5px}.request-dialog-embedded .custom-quotation-section{padding:0!important;margin:0!important;border:0!important}.request-dialog-embedded .custom-quotation-section[hidden],.request-dialog-embedded [hidden]{display:none!important}.request-dialog-embedded .custom-quotation-section>legend{font-size:22px;margin-bottom:16px}.request-dialog-embedded .custom-quotation-layout{display:block!important}.request-dialog-embedded .request-dialog-step-actions{margin-top:18px;display:flex;justify-content:flex-end}.request-dialog-embedded .custom-quotation-section input,.request-dialog-embedded .custom-quotation-section select{min-height:44px}.request-dialog-embedded .custom-quotation-section .custom-quotation-field{margin:12px 0}.request-dialog-embedded .fg-showroom{margin:0!important;padding:0!important;border:0!important}.request-dialog-embedded .fg-hero{padding:0!important;min-height:0!important}.request-dialog-embedded .fg-hero h1{font-size:24px}.request-dialog-embedded .fg-home-intro{padding:0!important}
+@media(max-width:600px){.tailoring-request-dialog{width:100%;height:100dvh;border-radius:0;border:0;margin:0}.tailoring-dialog-header{padding:10px 14px}.tailoring-dialog-frame{height:calc(100% - 82px)}.request-dialog-embedded .home-shell.release-main{padding:12px!important}}
+.request-dialog-embedded .request-dialog-back{background:transparent;color:#e7cb85;border:1px solid #a58a4a;border-radius:4px}
+.request-dialog-embedded .custom-quotation-section{background:transparent!important}
+.request-dialog-embedded .selected-quote-preference{border:0!important;background:transparent!important;padding:6px 0!important}
+.tailoring-resume-request{margin:16px 0;min-height:44px}

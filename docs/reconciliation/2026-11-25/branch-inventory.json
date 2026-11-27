@@ -1,0 +1,1621 @@
+[
+  {
+    "ref": "refs/remotes/audit-origin/1",
+    "commit": "f81072a359e39a061f5fc6d837daf4624b2a26b1",
+    "mergeBaseWithStaging": "f81072a359e39a061f5fc6d837daf4624b2a26b1",
+    "stagingOnlyCommitCount": 638,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1581
+  },
+  {
+    "ref": "refs/remotes/audit-origin/111",
+    "commit": "4471e414764320748e705fe2d4fbe0d6c18961ca",
+    "mergeBaseWithStaging": "4471e414764320748e705fe2d4fbe0d6c18961ca",
+    "stagingOnlyCommitCount": 554,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1578
+  },
+  {
+    "ref": "refs/remotes/audit-origin/2",
+    "commit": "393035da99fc2f4dea8660b0c40024503dcc7dbd",
+    "mergeBaseWithStaging": "393035da99fc2f4dea8660b0c40024503dcc7dbd",
+    "stagingOnlyCommitCount": 620,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1579
+  },
+  {
+    "ref": "refs/remotes/audit-origin/backup/main-before-terms-release-2026-11-22",
+    "commit": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 413
+  },
+  {
+    "ref": "refs/remotes/audit-origin/backup/staging-before-main-homepage-recovery-2026-11-22",
+    "commit": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 39,
+    "sourceOnlyCommits": [
+      {
+        "sha": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+        "date": "2026-11-21T19:34:28+02:00",
+        "subject": "R57: record verified original-homepage preservation and make staging validation read-only"
+      },
+      {
+        "sha": "2953dfad2f66d505ab5d57f8a3533a1eb97375b2",
+        "date": "2026-11-21T17:33:50Z",
+        "subject": "R57: synchronize generated original-layout homepage with requested additions"
+      },
+      {
+        "sha": "1a4036c169c3a8ba9ae1142e33a87ff7173e0436",
+        "date": "2026-11-21T19:32:25+02:00",
+        "subject": "R57: explicitly document preserved staging noindex boundary"
+      },
+      {
+        "sha": "7d85ee3590462c999cca47239e60e57cc859e984",
+        "date": "2026-11-21T19:31:33+02:00",
+        "subject": "R57: preserve support form while directing consent to currently effective Terms"
+      },
+      {
+        "sha": "4ba436cf1953f6eeaad1da4e0880f464642720aa",
+        "date": "2026-11-21T19:30:16+02:00",
+        "subject": "R57: enforce preservation of all original homepage sections and browser-functional additions"
+      },
+      {
+        "sha": "f0e1845342330a84df593982edc764ad7b74af5c",
+        "date": "2026-11-21T19:29:08+02:00",
+        "subject": "R57: retain original suit galleries with approved newest photos and opposite-direction pauseable motion"
+      },
+      {
+        "sha": "042d9b8d4987aeb43fbcba29ec91e7f67917468a",
+        "date": "2026-11-21T19:28:25+02:00",
+        "subject": "R57: restore all existing homepage sections and add only owner-requested hero/media/service highlights"
+      },
+      {
+        "sha": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+        "date": "2026-11-21T19:21:43+02:00",
+        "subject": "R56 CI: install FFmpeg only when missing for nonpublic silent-video checks"
+      },
+      {
+        "sha": "0b38497c6908a6d98c680a9502f87af52abc4b7d",
+        "date": "2026-11-21T19:20:51+02:00",
+        "subject": "R56: prepare silent video derivatives privately and make completed homepage CI read-only"
+      },
+      {
+        "sha": "082a819ed64e99309b2b52de55d1121ec5551ff9",
+        "date": "2026-11-21T17:19:59Z",
+        "subject": "R56: synchronize generated tailor-first homepage"
+      },
+      {
+        "sha": "ce85325d08230359a7619054907a27a0db23fccc",
+        "date": "2026-11-21T19:18:37+02:00",
+        "subject": "R56 QA: replace obsolete 20-design count check with unchanged 28-public-design preservation"
+      },
+      {
+        "sha": "3bad8d73b78d1070f5199ba56015ffdba78bd098",
+        "date": "2026-11-21T19:17:19+02:00",
+        "subject": "R56 fix: correct quoted Escape keyboard acceptance test"
+      },
+      {
+        "sha": "e05bbc2dd27be69d5ac3831fa3a1f5c7079a6968",
+        "date": "2026-11-21T19:16:31+02:00",
+        "subject": "R56: keep photo-rights evidence in source registry; preserve inventory CSV schema"
+      },
+      {
+        "sha": "5b94b067a941c2c3f91d3175403c25f8ea28289b",
+        "date": "2026-11-21T19:15:50+02:00",
+        "subject": "R56 fix: accept verified in-repository WebP hero and root-relative source paths"
+      },
+      {
+        "sha": "b4da97570081f29d87a59bea7d7885e3d6f938c1",
+        "date": "2026-11-21T19:15:14+02:00",
+        "subject": "R56 fix: select new approved tailor-first hero with exact class"
+      },
+      {
+        "sha": "eb3613696264e7aab313cd8ddb0f2bf4598409f2",
+        "date": "2026-11-21T19:14:36+02:00",
+        "subject": "R56: add strict homepage rights/order, SEO and mobile Chromium acceptance tests"
+      },
+      {
+        "sha": "a84660da124c040399e2533cb19b00f85471972e",
+        "date": "2026-11-21T19:13:30+02:00",
+        "subject": "R56: source-driven approved-photo galleries, two media fallbacks and VIP/tailoring cards"
+      },
+      {
+        "sha": "ff15e1ee33f67023632418e6f342f06ea237bafc",
+        "date": "2026-11-21T19:12:11+02:00",
+        "subject": "R56: build shorter tailor-first homepage shell and responsive editorial styles"
+      },
+      {
+        "sha": "b717c489d5afdfb8cde8620d81e6effcd2e4e0f4",
+        "date": "2026-11-21T19:10:28+02:00",
+        "subject": "R56: restore R53 photo catalog, record owner-attested homepage rights, keep video publication held"
+      },
+      {
+        "sha": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+        "date": "2026-11-21T18:55:59+02:00",
+        "subject": "R55: record verified mobile popup QA and restrict CI to read-only staging checks"
+      },
+      {
+        "sha": "8d5905070cda35f99f1cc84e959a024c1c7f361d",
+        "date": "2026-11-21T18:53:42+02:00",
+        "subject": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner"
+      },
+      {
+        "sha": "331ead1e4934b3e46c6575d303ea4c403136d150",
+        "date": "2026-11-21T18:52:38+02:00",
+        "subject": "R55: validate actual full-screen Terms UI in Chromium phone and desktop widths"
+      },
+      {
+        "sha": "8d1c158c0b9cb932dedaa9bc4989fa4db2c62dd5",
+        "date": "2026-11-21T16:52:26Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+        "date": "2026-11-21T18:51:38+02:00",
+        "subject": "R55: cache-bust popup JS and CSS for existing mobile visitors"
+      },
+      {
+        "sha": "e9c0e05b9d298179dd3db3a98cf443862d2dc370",
+        "date": "2026-11-21T16:50:28Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "650de162ee6a3b3f7e3cc9c37f740b1731bace4f",
+        "date": "2026-11-21T18:49:47+02:00",
+        "subject": "R55: register five approved-PDF technical page renders without clothing-gallery publication"
+      },
+      {
+        "sha": "5a85d15f9c4a93705b9492e95a4f4b6addd7c00c",
+        "date": "2026-11-21T18:48:53+02:00",
+        "subject": "CI R55: render approved PDF pages and validate full-screen popup"
+      },
+      {
+        "sha": "f0dcc2a042597bb138341a2e20dbcdb14105a110",
+        "date": "2026-11-21T18:48:28+02:00",
+        "subject": "R55: full-screen, scrollable Terms popup with actual-PDF page rendering source"
+      },
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 419
+  },
+  {
+    "ref": "refs/remotes/audit-origin/backup/staging-before-terms-2026-11-21",
+    "commit": "7f2bda869fab476775206049adf22535354ced54",
+    "mergeBaseWithStaging": "b2b8946882929da4ce7e0e01de4ba1511eed818a",
+    "stagingOnlyCommitCount": 121,
+    "sourceOnlyCommitCount": 5,
+    "sourceOnlyCommits": [
+      {
+        "sha": "7f2bda869fab476775206049adf22535354ced54",
+        "date": "2026-11-21T09:52:29+02:00",
+        "subject": "Prepare consent-gated Meta Pixel integration on staging; keep tracking disabled"
+      },
+      {
+        "sha": "cb245b573156ac7805e0d5ff10accba277222175",
+        "date": "2026-11-20T03:55:02Z",
+        "subject": "Integrate uploaded design families, gated videos and approved Terms preview"
+      },
+      {
+        "sha": "ce98ee3991a43483357304b5fe9f2f0a83f7ae27",
+        "date": "2026-11-19T19:32:12+02:00",
+        "subject": "Add files via upload"
+      },
+      {
+        "sha": "812aaca489bec127308520dce166b9298419d9d2",
+        "date": "2026-11-19T15:14:30Z",
+        "subject": "Present tailoring-first services and shared WhatsApp design enquiries"
+      },
+      {
+        "sha": "749b21d99f0dacf21d260b1adfc3ebca52a76447",
+        "date": "2026-11-19T10:00:03Z",
+        "subject": "Add quotation-first Showroom and shared content architecture on staging"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 537
+  },
+  {
+    "ref": "refs/remotes/audit-origin/backup/staging-before-terms-release-reset-2026-11-22",
+    "commit": "3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 41,
+    "sourceOnlyCommits": [
+      {
+        "sha": "3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+        "date": "2026-11-22T06:56:22+02:00",
+        "subject": "R58: check restored homepage in isolation; avoid unrelated customer-page regeneration"
+      },
+      {
+        "sha": "cf7cc49da905943090c347f1662a03553ba5f643",
+        "date": "2026-11-22T06:55:30+02:00",
+        "subject": "R58: restore exact main homepage HTML, scripts, styles and builder on staging"
+      },
+      {
+        "sha": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+        "date": "2026-11-21T19:34:28+02:00",
+        "subject": "R57: record verified original-homepage preservation and make staging validation read-only"
+      },
+      {
+        "sha": "2953dfad2f66d505ab5d57f8a3533a1eb97375b2",
+        "date": "2026-11-21T17:33:50Z",
+        "subject": "R57: synchronize generated original-layout homepage with requested additions"
+      },
+      {
+        "sha": "1a4036c169c3a8ba9ae1142e33a87ff7173e0436",
+        "date": "2026-11-21T19:32:25+02:00",
+        "subject": "R57: explicitly document preserved staging noindex boundary"
+      },
+      {
+        "sha": "7d85ee3590462c999cca47239e60e57cc859e984",
+        "date": "2026-11-21T19:31:33+02:00",
+        "subject": "R57: preserve support form while directing consent to currently effective Terms"
+      },
+      {
+        "sha": "4ba436cf1953f6eeaad1da4e0880f464642720aa",
+        "date": "2026-11-21T19:30:16+02:00",
+        "subject": "R57: enforce preservation of all original homepage sections and browser-functional additions"
+      },
+      {
+        "sha": "f0e1845342330a84df593982edc764ad7b74af5c",
+        "date": "2026-11-21T19:29:08+02:00",
+        "subject": "R57: retain original suit galleries with approved newest photos and opposite-direction pauseable motion"
+      },
+      {
+        "sha": "042d9b8d4987aeb43fbcba29ec91e7f67917468a",
+        "date": "2026-11-21T19:28:25+02:00",
+        "subject": "R57: restore all existing homepage sections and add only owner-requested hero/media/service highlights"
+      },
+      {
+        "sha": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+        "date": "2026-11-21T19:21:43+02:00",
+        "subject": "R56 CI: install FFmpeg only when missing for nonpublic silent-video checks"
+      },
+      {
+        "sha": "0b38497c6908a6d98c680a9502f87af52abc4b7d",
+        "date": "2026-11-21T19:20:51+02:00",
+        "subject": "R56: prepare silent video derivatives privately and make completed homepage CI read-only"
+      },
+      {
+        "sha": "082a819ed64e99309b2b52de55d1121ec5551ff9",
+        "date": "2026-11-21T17:19:59Z",
+        "subject": "R56: synchronize generated tailor-first homepage"
+      },
+      {
+        "sha": "ce85325d08230359a7619054907a27a0db23fccc",
+        "date": "2026-11-21T19:18:37+02:00",
+        "subject": "R56 QA: replace obsolete 20-design count check with unchanged 28-public-design preservation"
+      },
+      {
+        "sha": "3bad8d73b78d1070f5199ba56015ffdba78bd098",
+        "date": "2026-11-21T19:17:19+02:00",
+        "subject": "R56 fix: correct quoted Escape keyboard acceptance test"
+      },
+      {
+        "sha": "e05bbc2dd27be69d5ac3831fa3a1f5c7079a6968",
+        "date": "2026-11-21T19:16:31+02:00",
+        "subject": "R56: keep photo-rights evidence in source registry; preserve inventory CSV schema"
+      },
+      {
+        "sha": "5b94b067a941c2c3f91d3175403c25f8ea28289b",
+        "date": "2026-11-21T19:15:50+02:00",
+        "subject": "R56 fix: accept verified in-repository WebP hero and root-relative source paths"
+      },
+      {
+        "sha": "b4da97570081f29d87a59bea7d7885e3d6f938c1",
+        "date": "2026-11-21T19:15:14+02:00",
+        "subject": "R56 fix: select new approved tailor-first hero with exact class"
+      },
+      {
+        "sha": "eb3613696264e7aab313cd8ddb0f2bf4598409f2",
+        "date": "2026-11-21T19:14:36+02:00",
+        "subject": "R56: add strict homepage rights/order, SEO and mobile Chromium acceptance tests"
+      },
+      {
+        "sha": "a84660da124c040399e2533cb19b00f85471972e",
+        "date": "2026-11-21T19:13:30+02:00",
+        "subject": "R56: source-driven approved-photo galleries, two media fallbacks and VIP/tailoring cards"
+      },
+      {
+        "sha": "ff15e1ee33f67023632418e6f342f06ea237bafc",
+        "date": "2026-11-21T19:12:11+02:00",
+        "subject": "R56: build shorter tailor-first homepage shell and responsive editorial styles"
+      },
+      {
+        "sha": "b717c489d5afdfb8cde8620d81e6effcd2e4e0f4",
+        "date": "2026-11-21T19:10:28+02:00",
+        "subject": "R56: restore R53 photo catalog, record owner-attested homepage rights, keep video publication held"
+      },
+      {
+        "sha": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+        "date": "2026-11-21T18:55:59+02:00",
+        "subject": "R55: record verified mobile popup QA and restrict CI to read-only staging checks"
+      },
+      {
+        "sha": "8d5905070cda35f99f1cc84e959a024c1c7f361d",
+        "date": "2026-11-21T18:53:42+02:00",
+        "subject": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner"
+      },
+      {
+        "sha": "331ead1e4934b3e46c6575d303ea4c403136d150",
+        "date": "2026-11-21T18:52:38+02:00",
+        "subject": "R55: validate actual full-screen Terms UI in Chromium phone and desktop widths"
+      },
+      {
+        "sha": "8d1c158c0b9cb932dedaa9bc4989fa4db2c62dd5",
+        "date": "2026-11-21T16:52:26Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+        "date": "2026-11-21T18:51:38+02:00",
+        "subject": "R55: cache-bust popup JS and CSS for existing mobile visitors"
+      },
+      {
+        "sha": "e9c0e05b9d298179dd3db3a98cf443862d2dc370",
+        "date": "2026-11-21T16:50:28Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "650de162ee6a3b3f7e3cc9c37f740b1731bace4f",
+        "date": "2026-11-21T18:49:47+02:00",
+        "subject": "R55: register five approved-PDF technical page renders without clothing-gallery publication"
+      },
+      {
+        "sha": "5a85d15f9c4a93705b9492e95a4f4b6addd7c00c",
+        "date": "2026-11-21T18:48:53+02:00",
+        "subject": "CI R55: render approved PDF pages and validate full-screen popup"
+      },
+      {
+        "sha": "f0dcc2a042597bb138341a2e20dbcdb14105a110",
+        "date": "2026-11-21T18:48:28+02:00",
+        "subject": "R55: full-screen, scrollable Terms popup with actual-PDF page rendering source"
+      },
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 418
+  },
+  {
+    "ref": "refs/remotes/audit-origin/backup/staging-before-v2-stage-a-20261029",
+    "commit": "c58805e3ea1f570846b4dbaf90706cd9128b6fdf",
+    "mergeBaseWithStaging": "c58805e3ea1f570846b4dbaf90706cd9128b6fdf",
+    "stagingOnlyCommitCount": 280,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1259
+  },
+  {
+    "ref": "refs/remotes/audit-origin/last-section",
+    "commit": "25bd65bcb9490d02801ee171590b99403c36735d",
+    "mergeBaseWithStaging": "25bd65bcb9490d02801ee171590b99403c36735d",
+    "stagingOnlyCommitCount": 673,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1587
+  },
+  {
+    "ref": "refs/remotes/audit-origin/last-section2",
+    "commit": "c89a1b0933ef447aed6850e2f83b3ad0c9aa1ad4",
+    "mergeBaseWithStaging": "8d89216c08e8fe97e04a17c49c54485fe4649599",
+    "stagingOnlyCommitCount": 670,
+    "sourceOnlyCommitCount": 1,
+    "sourceOnlyCommits": [
+      {
+        "sha": "c89a1b0933ef447aed6850e2f83b3ad0c9aa1ad4",
+        "date": "2026-10-16T07:54:14+02:00",
+        "subject": "Update index.html"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1580
+  },
+  {
+    "ref": "refs/remotes/audit-origin/last-section3",
+    "commit": "ded517ea8bce26900fc8b86c21a56982dbfdcbee",
+    "mergeBaseWithStaging": "ded517ea8bce26900fc8b86c21a56982dbfdcbee",
+    "stagingOnlyCommitCount": 664,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1580
+  },
+  {
+    "ref": "refs/remotes/audit-origin/main",
+    "commit": "33620fe4dc38ec81905fd2556a19db15f5c06db3",
+    "mergeBaseWithStaging": "33620fe4dc38ec81905fd2556a19db15f5c06db3",
+    "stagingOnlyCommitCount": 107,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 400
+  },
+  {
+    "ref": "refs/remotes/audit-origin/modula-homepage",
+    "commit": "85da5e0c070080926104373e60c8630fa36d2fa2",
+    "mergeBaseWithStaging": "85da5e0c070080926104373e60c8630fa36d2fa2",
+    "stagingOnlyCommitCount": 574,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1578
+  },
+  {
+    "ref": "refs/remotes/audit-origin/phase1/customer-journey-repairs",
+    "commit": "0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+    "mergeBaseWithStaging": "0acf34dc9c606c0fe283d48177c39ebc7a92b20f",
+    "stagingOnlyCommitCount": 0,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": true,
+    "treeDiffCount": 0
+  },
+  {
+    "ref": "refs/remotes/audit-origin/phase2/website-corrections",
+    "commit": "2dbd5db9ededaa0319a7a3c945bf9bf6e2599f2d",
+    "mergeBaseWithStaging": "2dbd5db9ededaa0319a7a3c945bf9bf6e2599f2d",
+    "stagingOnlyCommitCount": 281,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1258
+  },
+  {
+    "ref": "refs/remotes/audit-origin/release/terms-reader-only-2026-11-22",
+    "commit": "ce4632b9eb97e12c021da64024972bb5f82894d1",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 4,
+    "sourceOnlyCommits": [
+      {
+        "sha": "ce4632b9eb97e12c021da64024972bb5f82894d1",
+        "date": "2026-11-22T16:43:48+02:00",
+        "subject": "Validate unchanged sitemap XML without broken baseline collection-inventory builder"
+      },
+      {
+        "sha": "647b68dd220ab3ffe3c8f236a8634b81d0462697",
+        "date": "2026-11-22T16:43:06+02:00",
+        "subject": "Scope release CI to Terms without unrelated pre-existing image-inventory build failure"
+      },
+      {
+        "sha": "ef7e68cd84502915a123c5643fac61192d2c334b",
+        "date": "2026-11-22T16:41:45+02:00",
+        "subject": "Add focused Terms reader CI before production release"
+      },
+      {
+        "sha": "48022a6b8c7e92e7489b06119b1d5e8534ed87a0",
+        "date": "2026-11-22T16:41:01+02:00",
+        "subject": "Release staging Terms PDF reader only; preserve existing effective HTML Terms"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 400
+  },
+  {
+    "ref": "refs/remotes/audit-origin/review/customer-policy-2026-11-07",
+    "commit": "68bc9c98d1ce84e2f4318a051a265e16911640e7",
+    "mergeBaseWithStaging": "68bc9c98d1ce84e2f4318a051a265e16911640e7",
+    "stagingOnlyCommitCount": 143,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 727
+  },
+  {
+    "ref": "refs/remotes/audit-origin/save1",
+    "commit": "f4b1199cf141d406dffaefd00bee060a7e23c4f3",
+    "mergeBaseWithStaging": "f4b1199cf141d406dffaefd00bee060a7e23c4f3",
+    "stagingOnlyCommitCount": 654,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1579
+  },
+  {
+    "ref": "refs/remotes/audit-origin/section1",
+    "commit": "f601df16bf5886aedea984a0870b66d5b77a8916",
+    "mergeBaseWithStaging": "ce25a18255baa1d435504b28c3d838942298b50b",
+    "stagingOnlyCommitCount": 687,
+    "sourceOnlyCommitCount": 4,
+    "sourceOnlyCommits": [
+      {
+        "sha": "f601df16bf5886aedea984a0870b66d5b77a8916",
+        "date": "2026-10-15T16:21:57+02:00",
+        "subject": "Update index.html"
+      },
+      {
+        "sha": "0a4d88b6c9d162f54fafaf2d6ba2d8513de5f59b",
+        "date": "2026-10-15T16:13:25+02:00",
+        "subject": "Update index.html"
+      },
+      {
+        "sha": "a440c7469c3848a29cc9f457dfd5474c70cc0395",
+        "date": "2026-10-15T16:06:54+02:00",
+        "subject": "Update index.html"
+      },
+      {
+        "sha": "226614fa13d5be1afe6a97fb38b778e165a90bc3",
+        "date": "2026-10-15T15:41:47+02:00",
+        "subject": "Update index.html"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1587
+  },
+  {
+    "ref": "refs/remotes/audit-origin/section2",
+    "commit": "35c108bebdddaf0f45c4976db5524c7f58eb4060",
+    "mergeBaseWithStaging": "35c108bebdddaf0f45c4976db5524c7f58eb4060",
+    "stagingOnlyCommitCount": 683,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1587
+  },
+  {
+    "ref": "refs/remotes/audit-origin/section4",
+    "commit": "26309ffbba9b5d211f95a093fd2658cfe9673515",
+    "mergeBaseWithStaging": "7592ad3e0458a04b891466112b740dc3ce439f24",
+    "stagingOnlyCommitCount": 682,
+    "sourceOnlyCommitCount": 1,
+    "sourceOnlyCommits": [
+      {
+        "sha": "26309ffbba9b5d211f95a093fd2658cfe9673515",
+        "date": "2026-10-15T18:38:26+02:00",
+        "subject": "Update index.html"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1587
+  },
+  {
+    "ref": "refs/remotes/audit-origin/work/r55-terms-fullscreen-popup-2026-11-21",
+    "commit": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 20,
+    "sourceOnlyCommits": [
+      {
+        "sha": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+        "date": "2026-11-21T18:55:59+02:00",
+        "subject": "R55: record verified mobile popup QA and restrict CI to read-only staging checks"
+      },
+      {
+        "sha": "8d5905070cda35f99f1cc84e959a024c1c7f361d",
+        "date": "2026-11-21T18:53:42+02:00",
+        "subject": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner"
+      },
+      {
+        "sha": "331ead1e4934b3e46c6575d303ea4c403136d150",
+        "date": "2026-11-21T18:52:38+02:00",
+        "subject": "R55: validate actual full-screen Terms UI in Chromium phone and desktop widths"
+      },
+      {
+        "sha": "8d1c158c0b9cb932dedaa9bc4989fa4db2c62dd5",
+        "date": "2026-11-21T16:52:26Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+        "date": "2026-11-21T18:51:38+02:00",
+        "subject": "R55: cache-bust popup JS and CSS for existing mobile visitors"
+      },
+      {
+        "sha": "e9c0e05b9d298179dd3db3a98cf443862d2dc370",
+        "date": "2026-11-21T16:50:28Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "650de162ee6a3b3f7e3cc9c37f740b1731bace4f",
+        "date": "2026-11-21T18:49:47+02:00",
+        "subject": "R55: register five approved-PDF technical page renders without clothing-gallery publication"
+      },
+      {
+        "sha": "5a85d15f9c4a93705b9492e95a4f4b6addd7c00c",
+        "date": "2026-11-21T18:48:53+02:00",
+        "subject": "CI R55: render approved PDF pages and validate full-screen popup"
+      },
+      {
+        "sha": "f0dcc2a042597bb138341a2e20dbcdb14105a110",
+        "date": "2026-11-21T18:48:28+02:00",
+        "subject": "R55: full-screen, scrollable Terms popup with actual-PDF page rendering source"
+      },
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 405
+  },
+  {
+    "ref": "refs/remotes/audit-origin/work/r56-tailoring-first-homepage-2026-11-21",
+    "commit": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 32,
+    "sourceOnlyCommits": [
+      {
+        "sha": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+        "date": "2026-11-21T19:21:43+02:00",
+        "subject": "R56 CI: install FFmpeg only when missing for nonpublic silent-video checks"
+      },
+      {
+        "sha": "0b38497c6908a6d98c680a9502f87af52abc4b7d",
+        "date": "2026-11-21T19:20:51+02:00",
+        "subject": "R56: prepare silent video derivatives privately and make completed homepage CI read-only"
+      },
+      {
+        "sha": "082a819ed64e99309b2b52de55d1121ec5551ff9",
+        "date": "2026-11-21T17:19:59Z",
+        "subject": "R56: synchronize generated tailor-first homepage"
+      },
+      {
+        "sha": "ce85325d08230359a7619054907a27a0db23fccc",
+        "date": "2026-11-21T19:18:37+02:00",
+        "subject": "R56 QA: replace obsolete 20-design count check with unchanged 28-public-design preservation"
+      },
+      {
+        "sha": "3bad8d73b78d1070f5199ba56015ffdba78bd098",
+        "date": "2026-11-21T19:17:19+02:00",
+        "subject": "R56 fix: correct quoted Escape keyboard acceptance test"
+      },
+      {
+        "sha": "e05bbc2dd27be69d5ac3831fa3a1f5c7079a6968",
+        "date": "2026-11-21T19:16:31+02:00",
+        "subject": "R56: keep photo-rights evidence in source registry; preserve inventory CSV schema"
+      },
+      {
+        "sha": "5b94b067a941c2c3f91d3175403c25f8ea28289b",
+        "date": "2026-11-21T19:15:50+02:00",
+        "subject": "R56 fix: accept verified in-repository WebP hero and root-relative source paths"
+      },
+      {
+        "sha": "b4da97570081f29d87a59bea7d7885e3d6f938c1",
+        "date": "2026-11-21T19:15:14+02:00",
+        "subject": "R56 fix: select new approved tailor-first hero with exact class"
+      },
+      {
+        "sha": "eb3613696264e7aab313cd8ddb0f2bf4598409f2",
+        "date": "2026-11-21T19:14:36+02:00",
+        "subject": "R56: add strict homepage rights/order, SEO and mobile Chromium acceptance tests"
+      },
+      {
+        "sha": "a84660da124c040399e2533cb19b00f85471972e",
+        "date": "2026-11-21T19:13:30+02:00",
+        "subject": "R56: source-driven approved-photo galleries, two media fallbacks and VIP/tailoring cards"
+      },
+      {
+        "sha": "ff15e1ee33f67023632418e6f342f06ea237bafc",
+        "date": "2026-11-21T19:12:11+02:00",
+        "subject": "R56: build shorter tailor-first homepage shell and responsive editorial styles"
+      },
+      {
+        "sha": "b717c489d5afdfb8cde8620d81e6effcd2e4e0f4",
+        "date": "2026-11-21T19:10:28+02:00",
+        "subject": "R56: restore R53 photo catalog, record owner-attested homepage rights, keep video publication held"
+      },
+      {
+        "sha": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+        "date": "2026-11-21T18:55:59+02:00",
+        "subject": "R55: record verified mobile popup QA and restrict CI to read-only staging checks"
+      },
+      {
+        "sha": "8d5905070cda35f99f1cc84e959a024c1c7f361d",
+        "date": "2026-11-21T18:53:42+02:00",
+        "subject": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner"
+      },
+      {
+        "sha": "331ead1e4934b3e46c6575d303ea4c403136d150",
+        "date": "2026-11-21T18:52:38+02:00",
+        "subject": "R55: validate actual full-screen Terms UI in Chromium phone and desktop widths"
+      },
+      {
+        "sha": "8d1c158c0b9cb932dedaa9bc4989fa4db2c62dd5",
+        "date": "2026-11-21T16:52:26Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+        "date": "2026-11-21T18:51:38+02:00",
+        "subject": "R55: cache-bust popup JS and CSS for existing mobile visitors"
+      },
+      {
+        "sha": "e9c0e05b9d298179dd3db3a98cf443862d2dc370",
+        "date": "2026-11-21T16:50:28Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "650de162ee6a3b3f7e3cc9c37f740b1731bace4f",
+        "date": "2026-11-21T18:49:47+02:00",
+        "subject": "R55: register five approved-PDF technical page renders without clothing-gallery publication"
+      },
+      {
+        "sha": "5a85d15f9c4a93705b9492e95a4f4b6addd7c00c",
+        "date": "2026-11-21T18:48:53+02:00",
+        "subject": "CI R55: render approved PDF pages and validate full-screen popup"
+      },
+      {
+        "sha": "f0dcc2a042597bb138341a2e20dbcdb14105a110",
+        "date": "2026-11-21T18:48:28+02:00",
+        "subject": "R55: full-screen, scrollable Terms popup with actual-PDF page rendering source"
+      },
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 413
+  },
+  {
+    "ref": "refs/remotes/audit-origin/work/r57-preserve-existing-homepage-2026-11-21",
+    "commit": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 39,
+    "sourceOnlyCommits": [
+      {
+        "sha": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+        "date": "2026-11-21T19:34:28+02:00",
+        "subject": "R57: record verified original-homepage preservation and make staging validation read-only"
+      },
+      {
+        "sha": "2953dfad2f66d505ab5d57f8a3533a1eb97375b2",
+        "date": "2026-11-21T17:33:50Z",
+        "subject": "R57: synchronize generated original-layout homepage with requested additions"
+      },
+      {
+        "sha": "1a4036c169c3a8ba9ae1142e33a87ff7173e0436",
+        "date": "2026-11-21T19:32:25+02:00",
+        "subject": "R57: explicitly document preserved staging noindex boundary"
+      },
+      {
+        "sha": "7d85ee3590462c999cca47239e60e57cc859e984",
+        "date": "2026-11-21T19:31:33+02:00",
+        "subject": "R57: preserve support form while directing consent to currently effective Terms"
+      },
+      {
+        "sha": "4ba436cf1953f6eeaad1da4e0880f464642720aa",
+        "date": "2026-11-21T19:30:16+02:00",
+        "subject": "R57: enforce preservation of all original homepage sections and browser-functional additions"
+      },
+      {
+        "sha": "f0e1845342330a84df593982edc764ad7b74af5c",
+        "date": "2026-11-21T19:29:08+02:00",
+        "subject": "R57: retain original suit galleries with approved newest photos and opposite-direction pauseable motion"
+      },
+      {
+        "sha": "042d9b8d4987aeb43fbcba29ec91e7f67917468a",
+        "date": "2026-11-21T19:28:25+02:00",
+        "subject": "R57: restore all existing homepage sections and add only owner-requested hero/media/service highlights"
+      },
+      {
+        "sha": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+        "date": "2026-11-21T19:21:43+02:00",
+        "subject": "R56 CI: install FFmpeg only when missing for nonpublic silent-video checks"
+      },
+      {
+        "sha": "0b38497c6908a6d98c680a9502f87af52abc4b7d",
+        "date": "2026-11-21T19:20:51+02:00",
+        "subject": "R56: prepare silent video derivatives privately and make completed homepage CI read-only"
+      },
+      {
+        "sha": "082a819ed64e99309b2b52de55d1121ec5551ff9",
+        "date": "2026-11-21T17:19:59Z",
+        "subject": "R56: synchronize generated tailor-first homepage"
+      },
+      {
+        "sha": "ce85325d08230359a7619054907a27a0db23fccc",
+        "date": "2026-11-21T19:18:37+02:00",
+        "subject": "R56 QA: replace obsolete 20-design count check with unchanged 28-public-design preservation"
+      },
+      {
+        "sha": "3bad8d73b78d1070f5199ba56015ffdba78bd098",
+        "date": "2026-11-21T19:17:19+02:00",
+        "subject": "R56 fix: correct quoted Escape keyboard acceptance test"
+      },
+      {
+        "sha": "e05bbc2dd27be69d5ac3831fa3a1f5c7079a6968",
+        "date": "2026-11-21T19:16:31+02:00",
+        "subject": "R56: keep photo-rights evidence in source registry; preserve inventory CSV schema"
+      },
+      {
+        "sha": "5b94b067a941c2c3f91d3175403c25f8ea28289b",
+        "date": "2026-11-21T19:15:50+02:00",
+        "subject": "R56 fix: accept verified in-repository WebP hero and root-relative source paths"
+      },
+      {
+        "sha": "b4da97570081f29d87a59bea7d7885e3d6f938c1",
+        "date": "2026-11-21T19:15:14+02:00",
+        "subject": "R56 fix: select new approved tailor-first hero with exact class"
+      },
+      {
+        "sha": "eb3613696264e7aab313cd8ddb0f2bf4598409f2",
+        "date": "2026-11-21T19:14:36+02:00",
+        "subject": "R56: add strict homepage rights/order, SEO and mobile Chromium acceptance tests"
+      },
+      {
+        "sha": "a84660da124c040399e2533cb19b00f85471972e",
+        "date": "2026-11-21T19:13:30+02:00",
+        "subject": "R56: source-driven approved-photo galleries, two media fallbacks and VIP/tailoring cards"
+      },
+      {
+        "sha": "ff15e1ee33f67023632418e6f342f06ea237bafc",
+        "date": "2026-11-21T19:12:11+02:00",
+        "subject": "R56: build shorter tailor-first homepage shell and responsive editorial styles"
+      },
+      {
+        "sha": "b717c489d5afdfb8cde8620d81e6effcd2e4e0f4",
+        "date": "2026-11-21T19:10:28+02:00",
+        "subject": "R56: restore R53 photo catalog, record owner-attested homepage rights, keep video publication held"
+      },
+      {
+        "sha": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+        "date": "2026-11-21T18:55:59+02:00",
+        "subject": "R55: record verified mobile popup QA and restrict CI to read-only staging checks"
+      },
+      {
+        "sha": "8d5905070cda35f99f1cc84e959a024c1c7f361d",
+        "date": "2026-11-21T18:53:42+02:00",
+        "subject": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner"
+      },
+      {
+        "sha": "331ead1e4934b3e46c6575d303ea4c403136d150",
+        "date": "2026-11-21T18:52:38+02:00",
+        "subject": "R55: validate actual full-screen Terms UI in Chromium phone and desktop widths"
+      },
+      {
+        "sha": "8d1c158c0b9cb932dedaa9bc4989fa4db2c62dd5",
+        "date": "2026-11-21T16:52:26Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+        "date": "2026-11-21T18:51:38+02:00",
+        "subject": "R55: cache-bust popup JS and CSS for existing mobile visitors"
+      },
+      {
+        "sha": "e9c0e05b9d298179dd3db3a98cf443862d2dc370",
+        "date": "2026-11-21T16:50:28Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "650de162ee6a3b3f7e3cc9c37f740b1731bace4f",
+        "date": "2026-11-21T18:49:47+02:00",
+        "subject": "R55: register five approved-PDF technical page renders without clothing-gallery publication"
+      },
+      {
+        "sha": "5a85d15f9c4a93705b9492e95a4f4b6addd7c00c",
+        "date": "2026-11-21T18:48:53+02:00",
+        "subject": "CI R55: render approved PDF pages and validate full-screen popup"
+      },
+      {
+        "sha": "f0dcc2a042597bb138341a2e20dbcdb14105a110",
+        "date": "2026-11-21T18:48:28+02:00",
+        "subject": "R55: full-screen, scrollable Terms popup with actual-PDF page rendering source"
+      },
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 419
+  },
+  {
+    "ref": "refs/remotes/audit-origin/work/r58-restore-main-homepage-2026-11-22",
+    "commit": "3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 41,
+    "sourceOnlyCommits": [
+      {
+        "sha": "3e0c73b672ec94c11307fade73f7b5de4e9e6f17",
+        "date": "2026-11-22T06:56:22+02:00",
+        "subject": "R58: check restored homepage in isolation; avoid unrelated customer-page regeneration"
+      },
+      {
+        "sha": "cf7cc49da905943090c347f1662a03553ba5f643",
+        "date": "2026-11-22T06:55:30+02:00",
+        "subject": "R58: restore exact main homepage HTML, scripts, styles and builder on staging"
+      },
+      {
+        "sha": "3bcf142ddb3ba1ef17b55566cb7d822dd142641b",
+        "date": "2026-11-21T19:34:28+02:00",
+        "subject": "R57: record verified original-homepage preservation and make staging validation read-only"
+      },
+      {
+        "sha": "2953dfad2f66d505ab5d57f8a3533a1eb97375b2",
+        "date": "2026-11-21T17:33:50Z",
+        "subject": "R57: synchronize generated original-layout homepage with requested additions"
+      },
+      {
+        "sha": "1a4036c169c3a8ba9ae1142e33a87ff7173e0436",
+        "date": "2026-11-21T19:32:25+02:00",
+        "subject": "R57: explicitly document preserved staging noindex boundary"
+      },
+      {
+        "sha": "7d85ee3590462c999cca47239e60e57cc859e984",
+        "date": "2026-11-21T19:31:33+02:00",
+        "subject": "R57: preserve support form while directing consent to currently effective Terms"
+      },
+      {
+        "sha": "4ba436cf1953f6eeaad1da4e0880f464642720aa",
+        "date": "2026-11-21T19:30:16+02:00",
+        "subject": "R57: enforce preservation of all original homepage sections and browser-functional additions"
+      },
+      {
+        "sha": "f0e1845342330a84df593982edc764ad7b74af5c",
+        "date": "2026-11-21T19:29:08+02:00",
+        "subject": "R57: retain original suit galleries with approved newest photos and opposite-direction pauseable motion"
+      },
+      {
+        "sha": "042d9b8d4987aeb43fbcba29ec91e7f67917468a",
+        "date": "2026-11-21T19:28:25+02:00",
+        "subject": "R57: restore all existing homepage sections and add only owner-requested hero/media/service highlights"
+      },
+      {
+        "sha": "47b5966bd01002b36581d1f2534cc8dae666cf48",
+        "date": "2026-11-21T19:21:43+02:00",
+        "subject": "R56 CI: install FFmpeg only when missing for nonpublic silent-video checks"
+      },
+      {
+        "sha": "0b38497c6908a6d98c680a9502f87af52abc4b7d",
+        "date": "2026-11-21T19:20:51+02:00",
+        "subject": "R56: prepare silent video derivatives privately and make completed homepage CI read-only"
+      },
+      {
+        "sha": "082a819ed64e99309b2b52de55d1121ec5551ff9",
+        "date": "2026-11-21T17:19:59Z",
+        "subject": "R56: synchronize generated tailor-first homepage"
+      },
+      {
+        "sha": "ce85325d08230359a7619054907a27a0db23fccc",
+        "date": "2026-11-21T19:18:37+02:00",
+        "subject": "R56 QA: replace obsolete 20-design count check with unchanged 28-public-design preservation"
+      },
+      {
+        "sha": "3bad8d73b78d1070f5199ba56015ffdba78bd098",
+        "date": "2026-11-21T19:17:19+02:00",
+        "subject": "R56 fix: correct quoted Escape keyboard acceptance test"
+      },
+      {
+        "sha": "e05bbc2dd27be69d5ac3831fa3a1f5c7079a6968",
+        "date": "2026-11-21T19:16:31+02:00",
+        "subject": "R56: keep photo-rights evidence in source registry; preserve inventory CSV schema"
+      },
+      {
+        "sha": "5b94b067a941c2c3f91d3175403c25f8ea28289b",
+        "date": "2026-11-21T19:15:50+02:00",
+        "subject": "R56 fix: accept verified in-repository WebP hero and root-relative source paths"
+      },
+      {
+        "sha": "b4da97570081f29d87a59bea7d7885e3d6f938c1",
+        "date": "2026-11-21T19:15:14+02:00",
+        "subject": "R56 fix: select new approved tailor-first hero with exact class"
+      },
+      {
+        "sha": "eb3613696264e7aab313cd8ddb0f2bf4598409f2",
+        "date": "2026-11-21T19:14:36+02:00",
+        "subject": "R56: add strict homepage rights/order, SEO and mobile Chromium acceptance tests"
+      },
+      {
+        "sha": "a84660da124c040399e2533cb19b00f85471972e",
+        "date": "2026-11-21T19:13:30+02:00",
+        "subject": "R56: source-driven approved-photo galleries, two media fallbacks and VIP/tailoring cards"
+      },
+      {
+        "sha": "ff15e1ee33f67023632418e6f342f06ea237bafc",
+        "date": "2026-11-21T19:12:11+02:00",
+        "subject": "R56: build shorter tailor-first homepage shell and responsive editorial styles"
+      },
+      {
+        "sha": "b717c489d5afdfb8cde8620d81e6effcd2e4e0f4",
+        "date": "2026-11-21T19:10:28+02:00",
+        "subject": "R56: restore R53 photo catalog, record owner-attested homepage rights, keep video publication held"
+      },
+      {
+        "sha": "4d7c28261afe2a40aaba05b513b2d835071edd81",
+        "date": "2026-11-21T18:55:59+02:00",
+        "subject": "R55: record verified mobile popup QA and restrict CI to read-only staging checks"
+      },
+      {
+        "sha": "8d5905070cda35f99f1cc84e959a024c1c7f361d",
+        "date": "2026-11-21T18:53:42+02:00",
+        "subject": "R55 browser QA: pin supported Ubuntu 24.04 Chromium runner"
+      },
+      {
+        "sha": "331ead1e4934b3e46c6575d303ea4c403136d150",
+        "date": "2026-11-21T18:52:38+02:00",
+        "subject": "R55: validate actual full-screen Terms UI in Chromium phone and desktop widths"
+      },
+      {
+        "sha": "8d1c158c0b9cb932dedaa9bc4989fa4db2c62dd5",
+        "date": "2026-11-21T16:52:26Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "e4bbbbe82bc733d6ae3b6065e4986545a33b7c7f",
+        "date": "2026-11-21T18:51:38+02:00",
+        "subject": "R55: cache-bust popup JS and CSS for existing mobile visitors"
+      },
+      {
+        "sha": "e9c0e05b9d298179dd3db3a98cf443862d2dc370",
+        "date": "2026-11-21T16:50:28Z",
+        "subject": "R55: verified five approved PDF page renders and synchronized Terms popup"
+      },
+      {
+        "sha": "650de162ee6a3b3f7e3cc9c37f740b1731bace4f",
+        "date": "2026-11-21T18:49:47+02:00",
+        "subject": "R55: register five approved-PDF technical page renders without clothing-gallery publication"
+      },
+      {
+        "sha": "5a85d15f9c4a93705b9492e95a4f4b6addd7c00c",
+        "date": "2026-11-21T18:48:53+02:00",
+        "subject": "CI R55: render approved PDF pages and validate full-screen popup"
+      },
+      {
+        "sha": "f0dcc2a042597bb138341a2e20dbcdb14105a110",
+        "date": "2026-11-21T18:48:28+02:00",
+        "subject": "R55: full-screen, scrollable Terms popup with actual-PDF page rendering source"
+      },
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 418
+  },
+  {
+    "ref": "refs/remotes/audit-origin/work/terms-pdf-main-base-2026-11-21",
+    "commit": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 11,
+    "sourceOnlyCommits": [
+      {
+        "sha": "c727540b4efffbef74a9b0ffd689843c9dee41b8",
+        "date": "2026-11-21T18:33:22+02:00",
+        "subject": "R54: make completed Terms CI read-only and validate staging branch"
+      },
+      {
+        "sha": "656d3e4a0dc12b876c96a32ac2cb9ac8c0e7a36c",
+        "date": "2026-11-21T18:32:20+02:00",
+        "subject": "R54: correct preserved current-Terms canonical and duplicate robots metadata"
+      },
+      {
+        "sha": "b039e807f705619ee7f45a30955b08756886d71d",
+        "date": "2026-11-21T16:31:34Z",
+        "subject": "R54: synchronize generated Terms reader pages only"
+      },
+      {
+        "sha": "3b2714c5f9ad9b48e38df0337b433dc7cf2ad7fb",
+        "date": "2026-11-21T18:30:48+02:00",
+        "subject": "R54 CI: commit only rebuilt Terms HTML after successful tests"
+      },
+      {
+        "sha": "49952ac71e224361fa8bcbdbbc5b89bc77393551",
+        "date": "2026-11-21T18:29:12+02:00",
+        "subject": "R54 CI: report source-to-generated drift before staging submission"
+      },
+      {
+        "sha": "d9708fbffdabdd6b9efd018e7728b4aebdfa103f",
+        "date": "2026-11-21T18:27:40+02:00",
+        "subject": "R54: preserve held R53 images in main inventory schema; make full-build failures visible"
+      },
+      {
+        "sha": "7dfa60961fb4d3c4557533d9aec8a96830fae29f",
+        "date": "2026-11-21T18:26:05+02:00",
+        "subject": "R54 prerequisite: carry over 25 R53 held-only image inventory records for main-copy build"
+      },
+      {
+        "sha": "3d5738c0ffe2ec8e71e13f23f0962ce422539fdd",
+        "date": "2026-11-21T18:24:46+02:00",
+        "subject": "R54 CI: continue to Terms checks when baseline main media inventory build fails"
+      },
+      {
+        "sha": "54d31096d60c09c2cdb05350dcb20fe0d95e7460",
+        "date": "2026-11-21T18:23:44+02:00",
+        "subject": "CI-only: verify R54 Terms viewer on copied main branch"
+      },
+      {
+        "sha": "c4d2f9df6564a590bc82b85e2912f910dc66e2dc",
+        "date": "2026-11-21T18:23:14+02:00",
+        "subject": "R54: protect consent path to current Terms and add focused regression tests"
+      },
+      {
+        "sha": "999ab477a701b41fac50d4d50987db92e7865883",
+        "date": "2026-11-21T18:21:56+02:00",
+        "subject": "R54: stage PDF-first Terms reader on copied main, preserve current terms and R53 approval"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 412
+  },
+  {
+    "ref": "refs/remotes/audit-pull/1",
+    "commit": "db92d244d4f997123d35412290825d39dffa4130",
+    "mergeBaseWithStaging": "db92d244d4f997123d35412290825d39dffa4130",
+    "stagingOnlyCommitCount": 286,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1335
+  },
+  {
+    "ref": "refs/remotes/audit-pull/2",
+    "commit": "2dbd5db9ededaa0319a7a3c945bf9bf6e2599f2d",
+    "mergeBaseWithStaging": "2dbd5db9ededaa0319a7a3c945bf9bf6e2599f2d",
+    "stagingOnlyCommitCount": 281,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1258
+  },
+  {
+    "ref": "refs/remotes/audit-pull/3",
+    "commit": "171ba92c9c872382010ceee9cb514473d7e69acf",
+    "mergeBaseWithStaging": "171ba92c9c872382010ceee9cb514473d7e69acf",
+    "stagingOnlyCommitCount": 266,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 1185
+  },
+  {
+    "ref": "refs/remotes/audit-pull/4",
+    "commit": "81efee629849df046b29b959bdf912947e10e43e",
+    "mergeBaseWithStaging": "81efee629849df046b29b959bdf912947e10e43e",
+    "stagingOnlyCommitCount": 238,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 956
+  },
+  {
+    "ref": "refs/remotes/audit-pull/5",
+    "commit": "501ccc1643774568ff39a4f452b01164dd9dbd17",
+    "mergeBaseWithStaging": "501ccc1643774568ff39a4f452b01164dd9dbd17",
+    "stagingOnlyCommitCount": 156,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 810
+  },
+  {
+    "ref": "refs/remotes/audit-pull/7",
+    "commit": "b6e4d1bcbb03f4bc5b78b7961ea2e7a92481a7db",
+    "mergeBaseWithStaging": "b6e4d1bcbb03f4bc5b78b7961ea2e7a92481a7db",
+    "stagingOnlyCommitCount": 154,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 790
+  },
+  {
+    "ref": "refs/remotes/audit-pull/8",
+    "commit": "ce4632b9eb97e12c021da64024972bb5f82894d1",
+    "mergeBaseWithStaging": "f07e3b3839b0faf133af77f3aca62779b3369be5",
+    "stagingOnlyCommitCount": 108,
+    "sourceOnlyCommitCount": 4,
+    "sourceOnlyCommits": [
+      {
+        "sha": "ce4632b9eb97e12c021da64024972bb5f82894d1",
+        "date": "2026-11-22T16:43:48+02:00",
+        "subject": "Validate unchanged sitemap XML without broken baseline collection-inventory builder"
+      },
+      {
+        "sha": "647b68dd220ab3ffe3c8f236a8634b81d0462697",
+        "date": "2026-11-22T16:43:06+02:00",
+        "subject": "Scope release CI to Terms without unrelated pre-existing image-inventory build failure"
+      },
+      {
+        "sha": "ef7e68cd84502915a123c5643fac61192d2c334b",
+        "date": "2026-11-22T16:41:45+02:00",
+        "subject": "Add focused Terms reader CI before production release"
+      },
+      {
+        "sha": "48022a6b8c7e92e7489b06119b1d5e8534ed87a0",
+        "date": "2026-11-22T16:41:01+02:00",
+        "subject": "Release staging Terms PDF reader only; preserve existing effective HTML Terms"
+      }
+    ],
+    "stagingContainsTip": false,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 400
+  },
+  {
+    "ref": "refs/tags/rollback/production-before-parity-repair-2026-11-06",
+    "commit": "a2ae98f5d51549e05adee35f809e3f364645ba1a",
+    "mergeBaseWithStaging": "a2ae98f5d51549e05adee35f809e3f364645ba1a",
+    "stagingOnlyCommitCount": 155,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 810
+  },
+  {
+    "ref": "refs/tags/rollback/production-before-photo-update-2026-11-07",
+    "commit": "7daf8466ae72b7bdfd6933599500718ea818643a",
+    "mergeBaseWithStaging": "7daf8466ae72b7bdfd6933599500718ea818643a",
+    "stagingOnlyCommitCount": 148,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 779
+  },
+  {
+    "ref": "refs/tags/rollback/production-before-v2-2026-11-06",
+    "commit": "967401e4f7550fcfb58c3e9b06b01e90898f9e3b",
+    "mergeBaseWithStaging": "967401e4f7550fcfb58c3e9b06b01e90898f9e3b",
+    "stagingOnlyCommitCount": 176,
+    "sourceOnlyCommitCount": 0,
+    "sourceOnlyCommits": [],
+    "stagingContainsTip": true,
+    "sourceContainsStaging": false,
+    "treeDiffCount": 956
+  }
+]
