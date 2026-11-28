@@ -22,6 +22,7 @@ CHECKS = [
     ('gallery', 'tests/customer_gallery_browser.cjs', 'artifacts/gallery-experience'),
     ('shop', 'tests/shop_customer_experience.cjs', 'artifacts/shop-customer'),
     ('home-about', 'tests/home_about_customer_experience.cjs', 'artifacts/home-about'),
+    ('architecture-homepage', 'tests/architecture_homepage.cjs', 'artifacts/architecture-homepage'),
     ('services', 'tests/service_landings_browser.cjs', 'artifacts/services'),
     ('navigation', 'tests/customer_navigation.spec.cjs', 'artifacts/navigation'),
     ('ads-sitelinks', 'tests/final_release_sitelinks.cjs', 'artifacts/ads-sitelinks'),
@@ -37,7 +38,9 @@ def main():
         env = dict(os.environ)
         env['REVIEW_ARTIFACTS'] = artifacts
         env['RECOVERY_EVIDENCE_DIR'] = artifacts
-        env.setdefault('BASE_URL', 'http://127.0.0.1:8020')
+        base_url = env.get('REVIEW_BASE_URL') or env.get('BASE_URL') or 'http://127.0.0.1:8020'
+        env.setdefault('BASE_URL', base_url)
+        env.setdefault('REVIEW_BASE_URL', base_url)
         start = time.monotonic()
         try:
             result = subprocess.run(['node', script], cwd=ROOT, env=env, text=True,

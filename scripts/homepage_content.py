@@ -43,7 +43,16 @@ def heading(record, ident):
 
 
 def section(ident, classes, record, body):
-    return '<section class="home-section ' + classes + '" id="' + ident + '" aria-labelledby="' + ident + '-title"><div class="home-shell">' + heading(record, ident + '-title') + body + '</div></section>'
+    # Preserve established homepage heading anchors through the source refactor.
+    title_id = {
+        'customer-information': 'tailor-essentials-title',
+        'tailoring-process': 'tailor-process-title',
+        'tailoring-benefits': 'tailor-benefits-title',
+        'order-options': 'tailor-options-title',
+        'customer-programs': 'tailor-programs-title',
+        'tailoring-final': 'tailor-final-title',
+    }.get(ident, ident + '-title')
+    return '<section class="home-section ' + classes + '" id="' + ident + '" aria-labelledby="' + title_id + '"><div class="home-shell">' + heading(record, title_id) + body + '</div></section>'
 
 
 def design_contact():

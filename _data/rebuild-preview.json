@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "enabled": true,
+  "project": "mrsewing-staging",
+  "allowedBranches": [
+    "phase1/customer-journey-repairs",
+    "rebuild/architecture-phase1-2026-11-28"
+  ],
+  "tokenSha256": "76d3f2964f28ea626019cf73636d4f6e08688518d03ebefcb4b0fc90fd8489fe",
+  "expiresAt": "2026-12-28T23:59:59Z",
+  "publication": "authenticated-preview",
+  "submissionsEnabled": false,
+  "trackingEnabled": false
+}

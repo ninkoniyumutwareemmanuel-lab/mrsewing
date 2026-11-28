@@ -5,7 +5,7 @@ function library(){for(const name of ['playwright','playwright-core','/workspace
 const {chromium}=library(),ROOT=path.resolve(__dirname,'..'),BASE=(process.env.REVIEW_BASE_URL||'http://127.0.0.1:3170').replace(/\/$/,''),OUT=process.env.REVIEW_ARTIFACTS||'/tmp/mrsewing-architecture-homepage';
 const result={layer:'Local Chromium, external traffic blocked, synthetic support-provider responses only',widths:[320,390,768,1440],views:[],checks:[],errors:[],missing:[],axe:[],realSubmissions:false,externalReceipt:'NOT TESTED'};
 let browser,page;
-(async()=>{fs.mkdirSync(OUT,{recursive:true});browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_BINARY||'/usr/bin/chromium',args:['--no-sandbox']});try{
+(async()=>{fs.mkdirSync(OUT,{recursive:true});browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_BINARY||process.env.CHROMIUM_PATH||(fs.existsSync('/usr/bin/chromium')?'/usr/bin/chromium':undefined),args:['--no-sandbox']});try{
  const ctx=await browser.newContext({reducedMotion:'reduce',viewport:{width:390,height:900}});
  let supportCalls=0,accept=false,supportPayload;
  const handoffs=[];
@@ -58,7 +58,7 @@ let browser,page;
    await page.locator('#services').screenshot({path:path.join(OUT,'services-'+width+'.png')});
    await page.locator('.tailoring-feature-photo').screenshot({path:path.join(OUT,'feature-'+width+'.png')});
    await page.screenshot({path:path.join(OUT,'homepage-after-'+width+'.png'),fullPage:true});
-   await page.addScriptTag({path:'/workspace/tools/homepage-qa/node_modules/axe-core/axe.min.js'});
+   let axePath=process.env.AXE_PATH||'/workspace/tools/homepage-qa/node_modules/axe-core/axe.min.js';if(!fs.existsSync(axePath))axePath=require.resolve('axe-core/axe.min.js');await page.addScriptTag({path:axePath});
    const violations=await page.evaluate(async()=>(await axe.run('main',{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}})).violations.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.map(n=>n.target)})));
    result.axe.push({width,scope:'main',violations});assert.deepEqual(violations,[]);
   }

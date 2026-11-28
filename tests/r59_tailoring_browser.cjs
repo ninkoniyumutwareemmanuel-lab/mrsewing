@@ -1,11 +1,14 @@
 /* R59 staging browser QA: no real customer enquiries or external requests. */
 'use strict';
-const {chromium}=(()=>{try{return require('playwright');}catch(e){if(e.code!=='MODULE_NOT_FOUND')throw e;return require('playwright-core');}})();
+const {chromium}=(()=>{if(process.env.PLAYWRIGHT_MODULE)return require(process.env.PLAYWRIGHT_MODULE);try{return require('playwright');}catch(e){if(e.code!=='MODULE_NOT_FOUND')throw e;return require('playwright-core');}})();
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:8020';
-const dest='artifacts/r59-browser';
+const dest=process.env.REVIEW_ARTIFACTS||'artifacts/r59-browser';
+const shell=require('../_data/site-shell.json'),labels=require('../_data/customer-interface-labels.json'),homepageContent=require('../_data/homepage-content.json');
+const serviceMessages=require('../_data/service-contact-actions.json').messages;
+assert.deepEqual(shell.serviceNavigation,['custom-tailoring','alterations','garment-care','combined'],'Phase1 primary services approved in central projection');
 (async()=>{
  fs.mkdirSync(dest,{recursive:true});
  const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_BINARY?{executablePath:process.env.CHROMIUM_BINARY}:{}),args:['--no-sandbox']});
@@ -60,7 +63,13 @@ const dest='artifacts/r59-browser';
    }
    const servicesMenu=page.locator('#home-navigation > ul > li.services-dropdown');
    assert.equal(await servicesMenu.count(),1,'one shared Services menu');
-   assert.deepEqual(await servicesMenu.locator('a').evaluateAll(a=>a.map(x=>new URL(x.href).pathname)),['/services/custom-tailoring/','/services/alterations/','/services/garment-care/','/services/mobile-fitting/','/services/vip/'],'five approved service destinations');
+   assert.equal(await servicesMenu.locator('a').count(),shell.serviceNavigation.length,'exact central service destinations');
+   for(const[index,key]of shell.serviceNavigation.entries()){
+    const item=shell.destinations[key],link=servicesMenu.locator('a').nth(index),url=new URL(await link.getAttribute('href'),base);
+    assert.equal(await link.textContent(),item.navLabel||labels.services[item.serviceId]||item.label);
+    if(item.whatsappMessageId){assert.equal(url.pathname,'/whatsapp/');assert.equal(url.searchParams.get('text'),serviceMessages[item.whatsappMessageId]);}
+    else assert.equal(url.pathname,item.href);
+   }
    const navToggle=page.locator('.home-menu-toggle'),serviceDisclosure=servicesMenu.locator('details'),serviceSummary=serviceDisclosure.locator('summary');
    if(width<1100)await navToggle.click();
    await serviceSummary.focus();await page.keyboard.press('Enter');
@@ -78,7 +87,10 @@ const dest='artifacts/r59-browser';
    for(const id of ['#tailor-essentials-title','#tailor-process-title','#tailor-benefits-title','#tailor-options-title','#tailor-programs-title','#tailor-final-title'])assert(await page.locator(id).isVisible(),id+' absent');
    assert(await page.locator('#payment-methods h2').isVisible());
    assert.equal(await page.locator('#customer-support form').count(),1);
-   assert.equal(await page.locator('.tailoring-primary-card').count(),2);
+   assert.equal(await page.locator('.tailoring-primary-card').count(),homepageContent.services.cards.length);
+   assert.equal(homepageContent.services.cards.length,4,'four approved primary service summaries');
+   assert.equal(await page.locator('.home-work-card').count(),2,'two source-gated completed-work preview cards');
+   for(const link of await page.locator('.home-work-card').all())assert((await link.getAttribute('href')).startsWith('/our-work/'),'work proof remains separate from inspiration');
    assert.equal(await page.locator('[data-moving-gallery]').count(),2);
    const motion=await page.locator('.moving-gallery-track').evaluateAll(x=>x.map(e=>getComputedStyle(e).animationName));
    assert.equal(motion[0],'gallery-drift','first moving row right to left');
@@ -147,6 +159,7 @@ const dest='artifacts/r59-browser';
    console.log('PASS R59 local Chromium '+width+'px: homepage, gallery tap-to-pause, clean autoplay videos, hub, Showroom filters, Shop, '+(width===390?'Terms':'no Terms rerun'));
   }
   const reduced=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  await reduced.route('**/*',route=>new URL(route.request().url()).origin===base?route.continue():route.abort());
   const page=await reduced.newPage();await page.goto(base+'/',{waitUntil:'domcontentloaded'});
   const styles=await page.locator('.moving-gallery-track').evaluateAll(x=>x.map(e=>getComputedStyle(e).animationName));
   assert(styles.every(x=>x==='none'),'reduced-motion disables both moving galleries');

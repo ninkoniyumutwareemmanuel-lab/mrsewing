@@ -15,3 +15,6 @@ for script in ['sync_business_hours.py', 'sync_business_schema.py', 'build_techn
 # Fail staging builds if legacy URL redirects point to the wrong page or leak to canonical URLs.
 subprocess.run([sys.executable, str(ROOT/'tests'/'seo_legacy_redirects.py')], cwd=ROOT, check=True)
 subprocess.run([sys.executable, str(ROOT/'tests'/'seo_core_services.py')], cwd=ROOT, check=True)
+# An opt-in, branch-restricted review deployment. No project/global configuration
+# changes; Main cannot build this review-mode configuration.
+subprocess.run([sys.executable, str(ROOT/'scripts'/'build_rebuild_preview.py'), *(['--check'] if args.check else [])], cwd=ROOT, check=True)

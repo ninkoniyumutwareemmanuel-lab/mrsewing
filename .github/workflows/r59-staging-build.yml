@@ -41,6 +41,13 @@ jobs:
           python scripts/build_site.py --check
       - name: Check metadata, routes, media, and Terms
         run: |
+          python tests/rebuild_preview_build.py
+          python tests/site_shell.py
+          python tests/homepage_metadata.py
+          python tests/homepage_architecture.py
+          python tests/business_settings_sync.py
+          python tests/content_offers.py
+          python tests/media_publication_order.py
           python tests/seo_preservation.py
           python tests/sitemap_discovery.py
           python tests/terms_reader_main_base.py
@@ -69,6 +76,8 @@ jobs:
           node-version: '22'
       - name: Record the test Node runtime
         run: node --version
+      - name: Verify authenticated read-only staging worker
+        run: node tests/rebuild_preview_worker.mjs
       - name: Verify multi-design payload reconstruction
         run: node tests/multi-design-validation.mjs
       - name: Verify shared fabric validation and portable evidence output
@@ -92,7 +101,7 @@ jobs:
           node tests/meta_event_adapter.cjs
       - name: Install Chromium browser QA
         run: |
-          npm install --no-save --no-package-lock playwright@1.56.1
+          npm install --no-save --no-package-lock playwright@1.56.1 axe-core@4.14.0
           npx playwright install --with-deps chromium
       - name: Test staging-designed local browser at four widths
         run: |
