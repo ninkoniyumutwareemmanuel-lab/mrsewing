@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "designMessage": "Hello Mr Sewing Fashion, I would like to discuss my clothing design and a quotation.",
+  "hero": {
+    "title": "Professional Tailoring",
+    "emphasis": "& Custom-Made Clothing",
+    "description": "Custom suits and clothing, made to suit your design, style and measurements.",
+    "actions": [
+      {
+        "label": "Send Your Design on WhatsApp",
+        "designContact": true
+      },
+      {
+        "label": "Explore Clothing Designs",
+        "href": "/collections/"
+      },
+      {
+        "label": "Tailoring & Clothing Services",
+        "href": "/services/custom-tailoring/"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Made for your measurements",
+    "title": "Professional Tailoring & Personal Service",
+    "description": "Start with your clothing design, explore suit references, or discuss the support your garment needs.",
+    "cards": [
+      {
+        "destinationId": "custom-tailoring",
+        "kicker": "Made to your requirements",
+        "description": "Explore custom-made clothing, suit designs, fabric options, measurements and fittings. Share your design for assessment and a personalised quotation.",
+        "action": "Explore tailoring services"
+      },
+      {
+        "destinationId": "alterations",
+        "kicker": "Improve the fit",
+        "description": "Discuss adjustments, resizing and repairs for existing garments. The work and fitting requirements are confirmed after assessment.",
+        "action": "Explore alterations & repairs"
+      },
+      {
+        "destinationId": "garment-care",
+        "kicker": "Care for your garments",
+        "description": "Discuss professional garment care and cleaning, with treatment and service arrangements confirmed after garment assessment.",
+        "action": "Explore garment care"
+      },
+      {
+        "destinationId": "combined",
+        "kicker": "One coordinated enquiry",
+        "description": "Arrange garment repairs and cleaning together. Each service is assessed and quoted individually; additional work needs your approval.",
+        "action": "Contact Us on WhatsApp"
+      }
+    ]
+  },
+  "suits": {
+    "title": "Explore Suit Tailoring",
+    "description": "Discuss men's and women's suits, fabric options, measurements and fittings.",
+    "action": "Explore suit options"
+  },
+  "feature": {
+    "title": "Made for your style",
+    "href": "/services/custom-tailoring/"
+  },
+  "information": {
+    "eyebrow": "Before you begin",
+    "title": "Plan Your Tailoring Order with Confidence",
+    "description": "Useful details for custom-made clothing, suit fittings and service enquiries in Kigali, Rwanda.",
+    "cards": [
+      {
+        "title": "Quotations & Pricing",
+        "description": "Discuss the design, fabric and scope. Your final price is confirmed in a quotation.",
+        "action": "Customer information",
+        "href": "/customer-information/"
+      },
+      {
+        "title": "Measurements & Fittings",
+        "description": "Learn what measurements are needed and how a fitting is arranged.",
+        "action": "Measurement guide",
+        "href": "/measurements/"
+      },
+      {
+        "title": "Express Tailoring",
+        "description": "Urgent requests depend on capacity, feasibility and an agreed deadline and quotation.",
+        "action": "Express information",
+        "href": "/services/express-tailoring/"
+      },
+      {
+        "title": "Delivery & Collection",
+        "description": "We agree on collection or delivery arrangements when confirming your order.",
+        "action": "Plan your order",
+        "href": "/customer-information/"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How tailoring works",
+    "title": "Your Tailoring Journey",
+    "description": "From your first clothing idea to the final fitting and agreed handover.",
+    "steps": [
+      {
+        "title": "Share Your Design",
+        "description": "Tell us what you want made or show us a reference."
+      },
+      {
+        "title": "Discuss Fit & Fabric",
+        "description": "Review design, measurements, materials and feasibility."
+      },
+      {
+        "title": "Receive Your Quotation",
+        "description": "Confirm the work, full price and proposed schedule in writing."
+      },
+      {
+        "title": "Confirm & Pay",
+        "description": "Accept the quotation and make the required verified advance."
+      },
+      {
+        "title": "Tailoring & Fittings",
+        "description": "Your order is produced and checked, with fittings as agreed."
+      },
+      {
+        "title": "Final Handover",
+        "description": "Settle the balance and arrange collection or delivery."
+      }
+    ],
+    "href": "/our-process/",
+    "action": "Read the Full Order Process"
+  },
+  "benefits": {
+    "eyebrow": "Why choose us",
+    "title": "Why Choose Mr Sewing Fashion?",
+    "cards": [
+      {
+        "title": "Made for Your Style",
+        "description": "Discuss a suit or custom outfit designed around your preferences."
+      },
+      {
+        "title": "Measurements & Fittings",
+        "description": "Plan garment fit through the appropriate measurement and fitting process."
+      },
+      {
+        "title": "Attention to Detail",
+        "description": "Agree on fabric, garment features and the finish you want before production."
+      },
+      {
+        "title": "Clear Communication",
+        "description": "Receive a quotation and discuss requirements, changes and next steps."
+      }
+    ],
+    "href": "/about/",
+    "action": "Learn About Mr Sewing Fashion"
+  },
+  "options": {
+    "eyebrow": "Made around your needs",
+    "title": "Explore Your Order Options",
+    "cards": [
+      {
+        "title": "Standard Order",
+        "kicker": "Regular planning",
+        "description": "Custom-made clothing with an agreed design, quotation, measurements and schedule.",
+        "action": "Explore Standard Tailoring",
+        "href": "/services/custom-tailoring/standard-order/"
+      },
+      {
+        "title": "Express Order",
+        "kicker": "Priority request",
+        "description": "Urgent tailoring requests depend on feasibility, availability and an agreed Express quotation.",
+        "action": "Discuss Express Tailoring",
+        "href": "/services/express-tailoring/"
+      },
+      {
+        "title": "VIP Order",
+        "kicker": "Personalised assistance",
+        "description": "Tailoring, styling or event requirements assessed individually with a personalised quotation.",
+        "action": "Explore VIP Services",
+        "href": "/services/vip/"
+      },
+      {
+        "title": "On-Site Services",
+        "kicker": "Individually arranged visits",
+        "description": "Discuss measurements, fittings or professional assistance at your location. Scope, eligibility and any visit fee are confirmed separately.",
+        "action": "Discuss a professional visit",
+        "href": "/services/mobile-fitting/"
+      },
+      {
+        "title": "After-Hours Assistance",
+        "kicker": "Subject to availability",
+        "description": "Discuss work outside normal opening hours before confirming an appointment or order. Any applicable charges require agreement.",
+        "action": "Read the applicable conditions",
+        "href": "/customer-information/"
+      },
+      {
+        "title": "Collection & Delivery",
+        "kicker": "Agreed transport arrangements",
+        "description": "Discuss garment collection or delivery separately from professional visits. Availability, inclusions and any charges depend on the confirmed service.",
+        "action": "Plan collection or delivery",
+        "href": "/delivery-and-collection/"
+      }
+    ]
+  },
+  "programs": {
+    "eyebrow": "More from Mr Sewing",
+    "title": "Customer Benefits & Information",
+    "cards": [
+      {
+        "title": "Loyalty Programme",
+        "description": "Read about eligibility and current loyalty terms.",
+        "href": "/loyalty-program/"
+      },
+      {
+        "title": "Referral Programme",
+        "description": "Explore referral information and qualifying conditions.",
+        "href": "/referral-program/"
+      },
+      {
+        "title": "Customer Guidance",
+        "description": "Find payment, delivery and service information before placing an order.",
+        "href": "/customer-information/"
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "Your next outfit starts here",
+    "title": "Let's Discuss Your Custom-Made Outfit",
+    "description": "Share your design or tailoring requirements with Mr Sewing Fashion in Kigali. We will review your request before confirming a quotation or appointment.",
+    "actions": [
+      {
+        "label": "Send Your Design on WhatsApp",
+        "designContact": true
+      },
+      {
+        "action": "requestQuote",
+        "href": "/request/?general=1"
+      }
+    ]
+  },
+  "recentWork": {
+    "eyebrow": "Our workmanship",
+    "title": "Made by Mr Sewing",
+    "description": "Explore completed tailoring projects, separate from our design inspiration.",
+    "action": "Explore Our Work"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "authority": "Feature selection only. Publication rights remain in collection-designs/customer-projects and video-only records. IDs resolve against the effective approved library.",
+  "authority": "Feature selection only. Active homepage.featuredDesign resolves through the existing publication-gated design loader; IDs never grant publication permission. Other older MEDIA-ID settings are retained for traceability and are not active selectors.",
   "homepage": {
     "cards": [
       {
@@ -36,6 +36,10 @@
         "Exact poster must be approved and registered.",
         "Choose a truthful two-card composition without classifying a men’s video as women’s tailoring."
       ]
+    },
+    "featuredDesign": {
+      "designId": "MS-096",
+      "imageSrc": "/r4.jpeg"
     }
   }
 }

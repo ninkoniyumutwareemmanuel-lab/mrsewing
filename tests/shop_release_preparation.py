@@ -14,6 +14,10 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 from shop_release_hold import settings, public_navigation, public_page_navigation, holding_page, http_headers
 from custom_tailoring import component
 from prepare_release_candidate import projection
+from homepage_content import render_sections
+from html import unescape
+from html.parser import HTMLParser
+from urllib.parse import parse_qs, urlsplit
 
 
 class ShopReleasePreparationTests(unittest.TestCase):
@@ -27,8 +31,24 @@ class ShopReleasePreparationTests(unittest.TestCase):
         self.assertNotIn('/shop/', public_navigation('<a class="button" href="https://mrsewingfashion.com/shop/">Shop</a>'))
         masthead = '<header class="shop-masthead"><a href="/shop/">Home</a></header>'
         self.assertEqual(public_page_navigation(masthead), masthead)
-        hero = '_templates/homepage-tailoring.html'
-        self.assertEqual((ROOT / hero).read_bytes(), subprocess.check_output(['git', 'show', '7808a5a1:' + hero], cwd=ROOT))
+        # Phase1 explicitly moves editable copy into its central record. Preserve
+        # the actual hero presentation/actions, not its former source-file shape.
+        reference = subprocess.check_output(['git', 'show', '7808a5a1:_templates/homepage-tailoring.html'], cwd=ROOT, text=True)
+        reference = re.search(r'<section class="hero-section.*?</section>', reference, re.S)[0]
+        current = render_sections()['hero']
+        plain = lambda source: ' '.join(unescape(re.sub(r'<[^>]+>', ' ', source)).split())
+        self.assertEqual(plain(current), plain(reference))
+        class Hero(HTMLParser):
+            def __init__(self, source):
+                super().__init__(); self.images=[]; self.links=[]; self.feed(source)
+            def handle_starttag(self, tag, attrs):
+                item=dict(attrs)
+                if tag=='img': self.images.append(item)
+                if tag=='a':
+                    url=urlsplit(item['href'])
+                    self.links.append((url.path,parse_qs(url.query),url.fragment,item.get('class')))
+        self.assertEqual(Hero(current).images, Hero(reference).images)
+        self.assertEqual(Hero(current).links, Hero(reference).links)
 
     def test_sitemap_and_all_direct_staging_pages_are_excluded(self):
         urls = [node.text for node in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]

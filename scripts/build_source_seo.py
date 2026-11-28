@@ -6,6 +6,8 @@ from sync_page_seo import apply
 from site_seo import ROOT,finalize
 p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args()
 for name,data in json.loads((ROOT/'_data/page-seo.json').read_text()).items():
+    # H01 owns one effective metadata source, rendered by homepage_metadata.
+    if name=='index.html':continue
     if name in json.loads((ROOT/'_data/route-aliases.json').read_text()):continue
     path=ROOT/('_templates/homepage.html' if name=='index.html' else name)
     old=path.read_text();new=apply(old,data)

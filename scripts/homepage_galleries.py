@@ -48,6 +48,20 @@ def suit_section():
 def moments_gallery():
  return gallery(project_items(),'Completed Mr Sewing tailoring projects')+'<div class="section-action"><a class="home-button home-button-gold" href="/our-work/">Explore Our Work</a></div>'
 
+def recent_work():
+ """A compact proof preview from the same eligible project families, not references."""
+ from build_journey import projects,project_picture
+ from media_sorting import newest_first
+ from homepage_content import content,heading
+ copy=content()['recentWork']
+ items=newest_first(projects())[:2]
+ if not items:return ''
+ cards=[]
+ for project in items:
+  photo=project_picture(project['images'][0],sizes='(min-width: 900px) 560px, 50vw')
+  cards.append('<a class="home-work-card" href="/our-work/'+escape(project['slug'],quote=True)+'/"><figure>'+photo+'<figcaption><span>'+escape(copy['title'])+'</span><strong>'+escape(project['title'])+'</strong></figcaption></figure></a>')
+ return '<section class="home-section home-work-preview" aria-labelledby="home-work-title"><div class="home-shell">'+heading(copy,'home-work-title')+'<div class="home-work-grid">'+''.join(cards)+'</div><div class="section-action"><a class="tailor-text-link" href="/our-work/">'+escape(copy['action'])+' →</a></div></div></section>'
+
 
 def shop_category_section():
  from shop_release_hold import settings

@@ -52,6 +52,10 @@ def main():
     pages = json.loads((ROOT / '_data/page-seo.json').read_text())
     stale = []
     for name, data in pages.items():
+        # H01 renders its effective metadata from public-page-seo.json['/'].
+        # Keep the legacy index key for route inventories, not template writes.
+        if name == 'index.html':
+            continue
         if name in json.loads((ROOT/'_data/route-aliases.json').read_text()):continue
         path = ROOT / ('_templates/homepage.html' if name == 'index.html' else name)
         old = path.read_text()

@@ -9,7 +9,7 @@ from suit_references import categories,references
 from build_journey import projects
 from build_homepage import render
 for gender in ['men','women']:
- expected={i['src'] for c in categories() if c['gender']==gender for d in references(c,load()[0]) for i in d['images']}
+ expected={i['src'] for c in categories() if c['gender']==gender and c.get('homepagePreview') is not False for d in references(c,load()[0]) for i in d['images']}
  assert {x['photo']['src'] for x in collection_items(gender)}==expected
 assert [x['photo']['src'] for x in project_items()]==[i['src'] for p in projects() for i in p['images']]
 p=ROOT/'_data/suit-reference-categories.json';original=p.read_bytes()

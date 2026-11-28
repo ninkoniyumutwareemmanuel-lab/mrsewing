@@ -15,11 +15,11 @@ if(!axePath){try{axePath=require.resolve('axe-core/axe.min.js')}catch{}}
   await page.setViewportSize({width,height:900});await page.goto(BASE+'/',{waitUntil:'domcontentloaded'});
   const feature=page.locator('.tailoring-feature-photo');await feature.scrollIntoViewIfNeeded();await feature.locator('img').evaluate(i=>i.decode());
   assert.equal(await feature.getAttribute('href'),'/services/custom-tailoring/');
-  assert((await feature.locator('img').getAttribute('src')).endsWith('r4.jpeg'));
-  assert(/ivory.*jacket.*trousers/i.test(await feature.locator('img').getAttribute('alt')));
+  assert((await feature.locator('img').getAttribute('srcset')).includes('/r4.jpeg'),'original approved photograph remains available through responsive sources');
+  assert(/light.*jacket.*trousers/i.test(await feature.locator('img').getAttribute('alt')),'approved library description replaces separately editable home alt');
   assert.equal(await feature.locator('img').evaluate(i=>getComputedStyle(i).objectFit),'contain','full original portrait must remain visible');
   if(width<=760){const box=await feature.locator('img').boundingBox();assert(Math.abs(box.width/box.height-1792/2400)<.02,'mobile uses original portrait proportions');}
-  assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.tailoring-primary-card').count(),2);
+  assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.tailoring-primary-card').count(),4);
   assert.equal(await page.locator('[data-moving-gallery]').count(),2);
   assert.equal(await page.locator('#tailoring-final a[href="/request/?general=1"]').innerText(),'Request a Quote');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'home overflow '+width);

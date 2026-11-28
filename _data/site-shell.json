@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "destinations": {
+    "home": {"label": "Home", "href": "/"},
+    "custom-tailoring": {"serviceId": "custom-tailoring", "navLabel": "Custom Tailoring", "href": "/services/custom-tailoring/"},
+    "alterations": {"serviceId": "alterations", "navLabel": "Alterations & Repairs", "href": "/services/alterations/"},
+    "garment-care": {"serviceId": "garment-care", "navLabel": "Garment Care", "href": "/services/garment-care/"},
+    "combined": {"label": "Garment Repair & Care", "whatsappMessageId": "combined"},
+    "suits": {"label": "Suits", "href": "/services/custom-tailoring/#tailoring-hub-categories"},
+    "showroom": {"label": "Showroom", "href": "/collections/"},
+    "our-work": {"label": "Our Work", "href": "/our-work/"},
+    "about": {"label": "About Us", "href": "/about/"},
+    "contact": {"actionId": "contact", "href": "/contact/"},
+    "mobile-fitting": {"serviceId": "mobile-fitting", "href": "/services/mobile-fitting/"},
+    "vip": {"serviceId": "vip", "href": "/services/vip/"},
+    "faq": {"label": "FAQs", "href": "/faq/"},
+    "location": {"label": "Location", "href": "/contact/#locations-heading"},
+    "hours": {"label": "Opening Hours", "href": "/contact/#hours-heading"},
+    "terms": {"label": "Terms & Conditions", "href": "/terms-and-conditions/"},
+    "privacy": {"label": "Privacy Policy", "href": "/privacy-policy/"},
+    "refund": {"label": "Refund Policy", "href": "/refund-policy/"},
+    "loyalty": {"label": "Loyalty Program", "href": "/loyalty-program/"},
+    "referral": {"label": "Referral Program", "href": "/referral-program/"}
+  },
+  "primaryNavigation": ["home", "services", "suits", "showroom", "our-work", "about", "contact"],
+  "serviceNavigation": ["custom-tailoring", "alterations", "garment-care", "combined"],
+  "footerServices": ["custom-tailoring", "alterations", "garment-care", "combined", "mobile-fitting", "vip"],
+  "footerInformation": ["faq", "location", "hours", "about", "contact"],
+  "footerPrograms": ["loyalty", "referral"],
+  "footerPolicies": ["terms", "privacy", "refund"],
+  "socialOrder": ["facebook", "instagram", "tiktok", "youtube"],
+  "copyrightYear": 2026
+}

@@ -10,29 +10,13 @@ STANDARD=BASE+'standard-order/'
 SPECIAL=BASE+'special-order/'
 
 def component(name,current=None):
-    markup=(ROOT/f'_templates/homepage-{name}.html').read_text()
-    items=[]
-    for g in json.loads((ROOT/'_data/homepage-guides.json').read_text()):
-        label=escape(g['label'])
-        if g['label']=='Fabric Guide':g={**g,'href':'/guides/fabrics/'}
-        if g['href']:
-            assert g['href']=='/guides/fabrics/' or (ROOT/g['href'].strip('/')/'index.html').is_file()
-            items.append('<li><a href="'+escape(g['href'],quote=True)+'">'+label+'</a></li>')
-        else:
-            cls='footer-guide-pending' if name=='footer' else 'nav-guide-pending'
-            span='pending-guide' if name=='footer' else 'home-nav-pending'
-            items.append(f'<li class="{cls}"><span class="{span}" title="This guide will be developed separately">{label}</span></li>')
-    markup=markup.replace('{{customer_guides}}',''.join(items))
-    if name=='header':
-        markup=markup.replace('{{services_navigation}}',(ROOT/'_templates/services-picker-source.html').read_text().strip())
-    from customer_interface import service_name,navigation_labels
-    markup=markup.replace('{{tailoring_service_name}}',escape(service_name('custom-tailoring')))
-    markup=navigation_labels(markup)
-    if name=='header':
-        markup=markup.replace(' href="/" aria-current="page"',' href="/"')
-        markup=markup.replace('href="'+(current or BASE)+'"','href="'+(current or BASE)+'" aria-current="page"',1)
+    from site_shell import render as render_shell
+    markup=render_shell(name,current or BASE,root=ROOT)
     from shop_release_hold import public_navigation
-    return delivery(public_navigation(markup),name)
+    # Normalize contact links at the shared boundary as well as in final pages,
+    # so source-rendered Contact/About and finalized FAQ consumers agree.
+    from whatsapp_consent import protect
+    return delivery(public_navigation(protect(markup)),name)
 
 def render(kind='landing'):
     import customer_site as release

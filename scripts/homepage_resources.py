@@ -40,10 +40,12 @@ def delivery(markup, key):
     return markup
 
 
-def hero_preloads():
+def hero_preloads(source=None):
     # Derive the hint from the source portrait so photo/layout edits have one
     # source of truth. Omit href to avoid unsupported responsive double-fetches.
-    source=(ROOT/'_templates/homepage-sections.html').read_text()
+    if source is None:
+        from homepage_content import render_sections
+        source = render_sections()['hero']
     match=re.search(r'<img\b(?=[^>]*\bclass="[^"]*\bhero-lcp\b)[^>]*>',source)
     if not match:raise ValueError('Homepage needs an explicit hero portrait')
     attrs=dict(re.findall(r'([\w-]+)="([^"]*)"',match[0]))
