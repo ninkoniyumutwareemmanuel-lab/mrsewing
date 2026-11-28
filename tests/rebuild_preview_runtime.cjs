@@ -113,12 +113,12 @@ async function check(name, run) {
     page.on('pageerror', error => report.errors.push(error.message));
     page.on('response', response => {
       const url = new URL(response.url());
-      if (url.origin === ORIGIN && response.status() >= 400 && !['/', '/__preview/session'].includes(url.pathname) && !url.pathname.startsWith('/api/')) {
+      if (url.origin === ORIGIN && response.status() >= 400 && !['/', '/rebuild-review/', '/__preview/session'].includes(url.pathname) && !url.pathname.startsWith('/api/')) {
         report.unexpectedMissing.push({ path: url.pathname, status: response.status() });
       }
     });
     await check('Phone fragment link authenticates through actual Worker, sets secure HttpOnly cookie and erases key', async () => {
-      try { await page.goto(ORIGIN + '/#review=' + syntheticKey, { waitUntil: 'domcontentloaded' }); }
+      try { await page.goto(ORIGIN + '/rebuild-review/#review=' + syntheticKey, { waitUntil: 'domcontentloaded' }); }
       catch (error) { if (!/ERR_ABORTED/.test(error.message)) throw error; }
       await page.locator('#hero-title').waitFor({ state: 'visible' });
       await page.waitForURL(url => url.pathname === '/' && !url.hash);

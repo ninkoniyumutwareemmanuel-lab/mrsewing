@@ -64,7 +64,7 @@ const checks = [];
 async function test(name, run) { await run(); checks.push(name); }
 
 await test('Unauthenticated pages/assets return self-contained private login, no source fetch', async () => {
-  for (const path of ['/', '/assets/photo.jpg', '/contact/']) {
+  for (const path of ['/', '/rebuild-review/', '/assets/photo.jpg', '/contact/']) {
     const r = await w.fetch(request(path), env); guard(r); assert.equal(r.status, 401);
     const html = await r.text();
     assert(html.includes('Private Website Preview'));
@@ -79,6 +79,7 @@ await test('Unauthenticated pages/assets return self-contained private login, no
 await test('Same-origin bounded JSON review-key exchange sets only secure private authentication', async () => {
   const r = await w.fetch(request('/__preview/session', { method: 'POST', headers: { Origin: origin, 'Content-Type': 'application/json' }, body: JSON.stringify({ review: key }) }), env);
   guard(r); assert.equal(r.status, 200); assert.deepEqual(await r.json(), { authenticated: true, preview: true });
+  const entry = await w.fetch(request('/rebuild-review/', { authenticated: true }), env); guard(entry); assert.equal(entry.status, 302); assert.equal(entry.headers.get('Location'), '/#');
   const cookie = r.headers.get('Set-Cookie');
   for (const part of ['__Host-ms-preview=' + key, 'Secure', 'HttpOnly', 'SameSite=Strict', 'Path=/', 'Max-Age=604800']) assert(cookie.includes(part));
   assert(!cookie.includes('Domain='));
