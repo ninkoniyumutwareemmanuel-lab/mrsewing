@@ -94,11 +94,12 @@ class SiteShellTests(unittest.TestCase):
         self.assertNotIn('@mr.sewingfashion', footer)
 
     def test_navigation_label_update_propagates_without_changing_api_service(self):
+        original = shell.read('customer-interface-labels.json', self.fixture)['services']['custom-tailoring']
         self.edit('site-shell.json', lambda d: d['destinations']['custom-tailoring'].update(navLabel='Fixture Tailoring'))
         self.assertIn('>Fixture Tailoring</a>', self.render('header'))
         self.assertIn('>Fixture Tailoring</a>', self.render('footer'))
         self.assertEqual(shell.destination('custom-tailoring', self.fixture)['label'], 'Fixture Tailoring')
-        self.assertEqual(shell.read('customer-interface-labels.json', self.fixture)['services']['custom-tailoring'], 'Tailoring & Clothing Services')
+        self.assertEqual(shell.read('customer-interface-labels.json', self.fixture)['services']['custom-tailoring'], original)
         self.edit('customer-interface-labels.json', lambda d: d['actions'].update(contact='Fixture Contact'))
         for name in ('header', 'footer'):
             self.assertIn('>Fixture Contact</a>', self.render(name))

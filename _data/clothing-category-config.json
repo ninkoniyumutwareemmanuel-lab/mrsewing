@@ -8,6 +8,7 @@
       "description": "Explore approved men's suit and formalwear references, then discuss your fit, fabric and quotation.",
       "filterField": "gender",
       "filterValue": "men",
+      "landingRoute": "/mensuits/",
       "coverDesignId": "MS-149"
     },
     {
@@ -16,6 +17,7 @@
       "description": "Explore approved women's tailored suits and outfit references for work and special occasions.",
       "filterField": "gender",
       "filterValue": "women",
+      "landingRoute": "/womensuits/",
       "coverDesignId": "MS-151"
     }
   ]

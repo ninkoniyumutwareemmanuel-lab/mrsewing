@@ -39,9 +39,14 @@
     },
     {
       "route": "/services/custom-tailoring/",
-      "primaryTopic": "Custom Tailoring & Suits in Kigali, Rwanda",
-      "secondaryTopics": [],
-      "basis": "Existing approved page title/content; R41 owner search-intent guidance. Editorial planning only; no metadata generated from this file."
+      "primaryTopic": "custom tailoring and custom clothing in Kigali",
+      "secondaryTopics": [
+        "customer-supplied fabric tailoring",
+        "personal design tailoring",
+        "made-to-measure clothing",
+        "fabric selection and fittings"
+      ],
+      "basis": "Owner-approved V1 SEO master S01,27November2026; Phase2A authorization28November2026. Broad suits intent reserved for queued I01; gender/style intent remains with existing category pages."
     },
     {
       "route": "/services/mobile-fitting/",

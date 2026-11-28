@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "pageId": "S01",
+  "hero": {
+    "title": "Custom Tailoring & Clothing Services",
+    "description": "Clothing made around your design, preferences and measurements in Kigali, Rwanda. Discuss a garment of your own, explore fabric options and request a personalised quotation."
+  },
+  "scope": {
+    "title": "Your Garment. Your Starting Point.",
+    "description": "You can enquire directly without choosing a gallery design. Share what you would like made, the occasion and your preferred completion date; we assess the requirements before accepting an order.",
+    "items": [
+      {"title": "Custom clothing & special requests", "description": "Discuss shirts, trousers, dresses, jackets, coats or another garment idea. A reference photograph helps explain the style; construction, materials and feasibility must be agreed individually."},
+      {"title": "Customer-supplied fabric", "description": "Have material you would like us to use? Ask about cut, make and trim (CMT): making an agreed garment using your fabric, subject to assessment and confirmation of the work and additional materials required."}
+    ]
+  },
+  "preparation": {
+    "title": "Fabric, Measurements & Fittings",
+    "description": "Start with the design, colour, feel and occasion you have in mind. Your fabric preference is a starting point for discussion, not confirmation of stock or suitability.",
+    "fabricTitle": "Choose fabric or ask for guidance",
+    "fabricDescription": "Explore the Fabric Guide, request help choosing, or tell us you will supply your own material. We confirm suitability and available options before agreeing the quotation.",
+    "measurementsTitle": "Arrange the right fit",
+    "measurementsDescription": "You do not need final measurements to begin an enquiry. We discuss the measurements and fittings your garment needs; follow the guide or ask about an individually arranged visit.",
+    "ownFabricSummary": "What happens if I supply the fabric?",
+    "ownFabricPolicyKey": "policyOwnFabric"
+  },
+  "process": {
+    "title": "From Your Idea to an Agreed Order",
+    "steps": [
+      {"title": "Describe your garment", "description": "Tell us the design, quantity, occasion, fabric preference and requested date. You can discuss reference pictures with the team."},
+      {"title": "Agree the details", "description": "We assess feasibility, materials, measurements and fittings, then confirm the proposed work, inclusions, price and completion arrangements in a quotation."},
+      {"title": "Confirm the order", "description": "Accept the quotation and complete its applicable payment and order requirements. An enquiry, payment screenshot or requested date does not confirm a production order."},
+      {"title": "Fittings & handover", "description": "Production follows the official start notice. Complete agreed fittings and payment, then confirm the collection or delivery arrangements for your garment."}
+    ]
+  },
+  "conditions": {
+    "title": "Before You Confirm",
+    "description": "Your quotation confirms the actual garment, materials, inclusions, applicable charges and completion date. These estimates do not guarantee acceptance of a requested deadline.",
+    "details": [
+      {"id": "service-info-timing", "title": "Production timing & the official start notice", "policyKeys": ["policyTailoringTime", "policyProductionStart"]},
+      {"id": "payment-arrangements", "title": "Payment, completion balance & verified receipt", "policyKeys": ["policyDomesticPayment"]},
+      {"id": "service-info-charges", "title": "Express, after-hours & overnight requests", "policyKeys": ["policyCharges", "policyExpressAdvance"]},
+      {"id": "service-info-international", "title": "International custom orders", "policyKeys": ["policyInternationalPayment"]},
+      {"id": "service-info-exception", "title": "Existing Standard-order advance exception", "policyKeys": ["policyFlexibleAdvance", "policyOverdueAdvance"]},
+      {"id": "service-info-transport", "title": "Collection & delivery arrangements", "policyKeys": ["policyCustomDelivery"]}
+    ]
+  },
+  "suits": {
+    "title": "Looking for a Suit?",
+    "description": "Explore men's or women's suit categories, including the styles available for quotation. Choose a reference, then continue with your selections, quantities and fabric preference.",
+    "action": "Browse Designs"
+  },
+  "support": {
+    "title": "Guidance for Your Request",
+    "description": "Read the applicable order conditions before confirming. Suit-package benefits and eligibility are explained separately; a reference image is not a promise of exact reproduction or stock.",
+    "links": [
+      {"href": "/customer-information/", "label": "Order & payment guidance"},
+      {"href": "/faq/custom-tailoring/", "label": "Tailoring questions & suit benefits"},
+      {"href": "/refund-policy/", "label": "Changes, cancellations & refund assessment"},
+      {"href": "/terms-and-conditions/current/", "label": "Terms & Conditions"},
+      {"href": "/services/mobile-fitting/", "label": "Measurement visits & on-site assistance"},
+      {"href": "/services/vip/", "label": "Individually assessed VIP assistance"}
+    ]
+  },
+  "final": {
+    "title": "Tell Us What You Would Like Made",
+    "description": "Request a quotation directly or discuss your design on WhatsApp. Sending an enquiry does not confirm an order or a completion date."
+  }
+}

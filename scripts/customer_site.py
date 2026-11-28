@@ -57,8 +57,8 @@ def frame(route,title,description,content,kind='WebPage',service=None):
 def service_page(ident):
  s=service_map()[ident]
  if ident=='custom-tailoring':
-  body=__import__('tailoring_services_hub').content(s,hero,section,link)
-  return frame(s['route'],'Tailoring & Clothing Services','Professional tailoring in Kigali: choose clothing categories, discuss your own design and arrange fittings, quotations or garment services.',body,service=s)
+  body=__import__('custom_tailoring_landing').render(s,hero)
+  return frame(s['route'],s['title'],s['intro'],body,service=s)
  body=__import__('service_landings').content(s,hero,link)
  return frame(s['route'],s['title'],s['intro'],body,service=s)
 

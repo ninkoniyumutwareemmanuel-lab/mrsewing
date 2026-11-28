@@ -1,5 +1,25 @@
 # Website source map
 
+## 28 November 2026 — current rebuild, through Phase 2A
+
+The four owner-supplied Version 1 masters govern this isolated rebuild. Phase 1 homepage is owner-reviewed; Phase 2A changes only Custom Tailoring and necessary shared form compatibility. The next Suits hub (Phase 2B) is held for explicit approval. Historical recovery/release instructions below remain history and do not authorize Main publication.
+
+| Owner | Source | Consumers / edit workflow |
+|---|---|---|
+| Shared navigation and footer | `_data/site-shell.json`, `scripts/site_shell.py`, existing shared templates | All rebuilt pages; contact, hours and social facts retain `business.json`, `business-hours.json` and `contact-v2.json` owners |
+| Homepage editorial content | `_data/homepage-content.json`, `scripts/homepage_content.py` | Approved Phase 1 homepage; do not duplicate service policies or photo lists |
+| S01 Custom Tailoring editorial content | `_data/custom-tailoring-content.json`, `scripts/custom_tailoring_landing.py` | `/services/custom-tailoring/` via `customer_site.service_page`, `build_customer_release.py` and `build_journey.py`; `tailoring_services_hub.py` is a compatibility delegate only |
+| S01 styling and hero | `_templates/custom-tailoring-landing.css`, existing shared hero and `_data/service-hero-images.json` | Scoped landing styling; no replacement image or new media registry |
+| S01 customer rules | `_data/customer-policy-facts.json` through `customer_policies.facts` and `public_content.public_texts` | Editorial records reference rule keys; change approved facts once, then rebuild and test all consumers. Do not type another independent policy in S01 |
+| Suit category orientation | `_data/clothing-category-config.json`, `clothing_categories.active`, existing gated collection loader | Existing `landingRoute` opens the independently accessible men's/women's category. Showroom `url` still derives its filter. Until Phase 2B, preserve the `tailoring-hub-categories` anchor used by shared navigation |
+| S01 SEO | `_data/public-page-seo.json`, `_data/seo-search-intent.json` | Unique custom-clothing intent; broad suits belongs to I01 and gender/style searches to their existing pages. URL/canonical and sitemap eligibility preserved |
+| Direct custom-clothing enquiry | Existing `/services/custom-tailoring/special-order/`, `_templates/customer-interactions.js` | Reuse the existing form/dialog; same unfinished context reopens in place. New context or a completed submission loads a fresh form. All selected-design, fabric, validation/provider and consent contracts retain their existing owners |
+| Protected preview | `_data/rebuild-preview.json`, `_templates/rebuild-preview-worker.js`, `scripts/build_rebuild_preview.py` | Generated `_worker.js`/`_routes.json`; authenticated, noindex/no-store, source denied, submissions and external tracking blocked. Never commit the owner's raw review credential |
+
+Run `python scripts/build_site.py`, its `--check`, `python tests/custom_tailoring_architecture.py`, SEO/sitemap checks and the existing customer browser runner. Browser runner includes `tests/custom_tailoring_landing.cjs` with a real validator and mocked provider; that is not actual inbox-receipt evidence. The permanent development register, master copies, private review link and screenshot/test reports live outside deployed website assets.
+
+For every phase/correction: update the permanent register, test, commit/push **only** `phase1/customer-journey-repairs`, provide the complete private staging link plus branch/commit/results/limits/next phase, then stop for owner review. Keep the pre-rebuild staging backup tag recoverable. Do not alter `main.mrsewing-staging.pages.dev`: the live site still depends on that Main API deployment. No Main, live hosting, advertising or commercial-policy changes are authorized here.
+
 Last reconciled: 25 November 2026. Start with [the dated master register](WEBSITE_RECONCILIATION_2026-11-25.md), `AGENTS.md` and `.github/customer-content-reference/README.md`. The authorized implementation branch is **phase1/customer-journey-repairs**. Main and the official website are read-only during this recovery.
 
 ## Sources and generated outputs

@@ -172,3 +172,6 @@ Preserved previous snapshots as exact prefixes. Recorded temporary Shop navigati
 
 ##2026-11-27-01 — owner26Nov finaltracking/conditionalrelease
 Preservepriorprefixes;recordexactGoogleIDs,supportedminimaltracking,freshconsent,privacy/attribution,existingMeta/noinventedCAPI andconditionalMaingates. No commercialpolicy/PDF/Shopactivation/spend change. Account/origin/isolatedreceipt remains separate evidence.
+
+##2026-11-28-01 — V1 rebuild Phase1 acceptance and Phase2A
+Owner accepts private homepage foundation and authorizes only Custom Tailoring next. Preserve all older snapshots and approved commercial facts. Record independent S01/I01 ownership and permanent commit/deploy/link/report/review-stop requirement. No Main/live or advertising changes.

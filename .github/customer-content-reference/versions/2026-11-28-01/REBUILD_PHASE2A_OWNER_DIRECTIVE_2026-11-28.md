@@ -1,0 +1,8 @@
+# Current owner scope
+
+
+## 28 November 2026 — V1 architectural rebuild, Phase2A only
+
+Owner reviewed the authenticated Phase1 homepage and accepted its design and architecture. All four owner-supplied V1 masters dated27November2026 govern the continuing rebuild; private originals and hashes are preserved in the permanent development records outside deployed assets. Current approval is Phase1 acceptance and Phase2A Custom Tailoring only. S01 owns custom clothing, personal designs, customer-supplied fabric/CMT assessment, measurements/fittings and direct quotations. I01 Suits is the separate next phase; preserve useful existing category destinations until that hub is reviewed. No new commercial facts, price visibility, policies or external accounts approved. Latest verified customer-policy-facts remains authoritative; existing Standard-only advance exception is distinct from the inactive proposed Flexible Advance Payment. Preserve effective Terms, original media, adaptive forms, selections, API/payloads, tracking and consent.
+
+Permanent reporting requirement: test, commit and deploy each finished phase/correction to protected staging; repeat the complete clickable private review link in every handoff; explain changes and preservation; report actual technical/SEO/functional outcomes, unresolved issues and unverified integrations; include branch/commit/next phase; update the permanent register; stop for owner review. Never put the private review key or confidential reports in public source/assets. No next phase without explicit Approved. Continue. Main/live/advertising/budgets remain protected. Owner-observed hosted Home review is evidence of that review only, not independent Cloudflare/account/provider receipt.

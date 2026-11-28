@@ -113,22 +113,24 @@ assert.deepEqual(shell.serviceNavigation,['custom-tailoring','alterations','garm
     await page.screenshot({path:path.join(dest,'homepage-'+width+'.png'),fullPage:true});
    }
    await page.goto(base+'/services/custom-tailoring/',{waitUntil:'domcontentloaded'});
-   assert.equal((await page.locator('h1').innerText()).trim(),'Tailoring & Clothing Services');
+   assert.equal((await page.locator('h1').innerText()).trim(),'Custom Tailoring & Clothing Services');
    const categories=page.locator('.tailoring-hub-category');
    assert.equal(await categories.count(),2,'exactly two current clothing category cards');
-   assert((await categories.nth(0).getAttribute('href')).includes('gender=men'));
-   assert((await categories.nth(1).getAttribute('href')).includes('gender=women'));
-   assert.equal(await page.locator('.tailoring-hub-service').count(),4);
+   assert.equal(await categories.nth(0).getAttribute('href'),'/mensuits/');
+   assert.equal(await categories.nth(1).getAttribute('href'),'/womensuits/');
+   assert.equal(await page.locator('.tailoring-hub-service').count(),0,'S01 is custom clothing, not another service overview');
    assert.equal(await page.locator('.tailoring-hub-fact').count(),4,'four customer policy facts');
-   assert.equal(await page.locator('.tailoring-hub-steps li').count(),4,'four actual customer journey steps');
-   assert.equal(await page.locator('.tailoring-hub-fabric-card').count(),2,'fabric supplied by us or customer');
-   assert.equal(await page.locator('.tailoring-hub-faq-list details').count(),3,'three customer questions');
-   assert(await page.locator('.tailoring-hub-essentials').innerText().then(t=>t.includes('1–3 weeks')&&t.includes('2–3 days')&&t.includes('70%')&&t.includes('35%')),'approved tailoring estimates and deposit are visible');
+   assert.equal(await page.locator('.s01-steps li').count(),4,'four actual customer journey steps');
+   assert.equal(await page.locator('#fabric-and-fitting').locator('..').locator('.s01-columns article').count(),2,'fabric and fitting guidance');
+   assert.equal(await page.locator('.s01-conditions details').count(),6,'scoped shared conditions');
+   assert(await page.locator('.tailoring-hub-fact-grid').innerText().then(t=>t.includes('1–3 weeks')&&t.includes('2–3 days')&&t.includes('70%')&&t.includes('30%')),'approved tailoring estimates and payments are visible');
+   await page.locator('#service-info-charges summary').click();
+   assert((await page.locator('#service-info-charges').innerText()).includes('35%'),'agreed surcharge remains available');
    for(const href of ['/guides/fabrics/','/measurements/','/customer-information/','/services/custom-tailoring/special-order/','/services/alterations/','/services/garment-care/','/services/mobile-fitting/']){
     assert(await page.locator('a[href="'+href+'"]').count()>0,'missing customer guidance/service route '+href);
    }
    const factsColumns=await page.locator('.tailoring-hub-fact-grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length);
-   assert.equal(factsColumns,width<=320?1:2,'policy card layout '+width);
+   assert.equal(factsColumns,width<=320?1:width<=850?2:4,'policy card layout '+width);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'hub horizontal overflow '+width);
    if(width===390||width===1440)await page.screenshot({path:path.join(dest,'tailoring-services-'+width+'.png'),fullPage:true});
    await page.goto(base+'/collections/?gender=men',{waitUntil:'domcontentloaded'});

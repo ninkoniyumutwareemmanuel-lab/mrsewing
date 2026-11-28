@@ -24,9 +24,10 @@ document.addEventListener('click',e=>{
 (()=>{'use strict';
  if(window.self!==window.top)return; // Never nest a popup inside the form iframe.
  let popup,frame,closeButton,titleNode,loadingNode,opener;
- const supported=path=>path==='/booking/'||path==='/booking.html'||path==='/request/'||path==='/request.html'||/^\/request\/[^/]+\/$/.test(path);
+ const customRequest=path=>path==='/services/custom-tailoring/special-order/';
+ const supported=path=>path==='/booking/'||path==='/booking.html'||path==='/request/'||path==='/request.html'||/^\/request\/[^/]+\/$/.test(path)||customRequest(path);
  const kind=path=>path.startsWith('/booking')?'consultation':'quotation';
- const isRequestForm=path=>path.startsWith('/request/')||path==='/request.html'||path.startsWith('/booking/');
+ const isRequestForm=path=>path.startsWith('/request/')||path==='/request.html'||path.startsWith('/booking/')||customRequest(path);
  const frameStyle=`
  html{scroll-behavior:auto!important;scroll-padding-top:0!important}
  body{margin:0!important;padding:0!important;min-height:0!important;overflow:auto!important}
@@ -99,11 +100,24 @@ document.addEventListener('click',e=>{
  function open(link,url){
    if(!popup)makeDialog();
    opener=link;
+   const src=new URL(url.href);src.searchParams.set('popup','1');
+   const target=src.pathname+src.search+src.hash;
+   // Reopen the same unfinished form in place. Rebuilding its iframe discards
+   // conditional field state before the existing draft adapter can restore it.
+   // A different route/context or a completed request always loads afresh.
+   let resume=false;
+   try{
+     const prior=new URL(frame.getAttribute('src'),location.origin),next=new URL(src.href);
+     // The shared context controller annotates a clicked Special link with
+     // these fixed route facts. They do not start a different custom request.
+     if(customRequest(src.pathname))for(const key of ['service','experience','order']){prior.searchParams.delete(key);next.searchParams.delete(key);}
+     resume=prior.href===next.href&&frame.contentWindow.location.pathname===src.pathname&&!!frame.contentDocument.getElementById('customerRequestForm')&&frame.contentDocument.getElementById('requestSuccess')?.hidden===true;
+   }catch(_){}
+   if(resume){if(!popup.open)popup.showModal();closeButton.focus({preventScroll:true});return;}
    titleNode.textContent=kind(url.pathname)==='consultation'?'Book a Consultation':'Request a Quotation';
    loadingNode.textContent='Opening your form…';loadingNode.hidden=false;
    frame.style.visibility='hidden';
-   const src=new URL(url.href);src.searchParams.set('popup','1');
-   frame.src=src.pathname+src.search+src.hash;
+   frame.src=target;
    if(!popup.open)popup.showModal();
    closeButton.focus({preventScroll:true});
  }

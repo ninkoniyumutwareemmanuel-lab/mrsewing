@@ -45,6 +45,7 @@ jobs:
           python tests/site_shell.py
           python tests/homepage_metadata.py
           python tests/homepage_architecture.py
+          python tests/custom_tailoring_architecture.py
           python tests/business_settings_sync.py
           python tests/content_offers.py
           python tests/media_publication_order.py

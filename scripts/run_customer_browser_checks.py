@@ -19,6 +19,7 @@ CHECKS = [
     ('fabric', 'tests/recovery-fabric-browser.cjs', 'artifacts/recovery-fabric'),
     ('legacy-journeys', 'tests/recovery_journeys.cjs', 'artifacts/recovery-journeys'),
     ('guided-dialog', 'tests/tailoring_request_dialog.cjs', 'artifacts/tailoring-dialog'),
+    ('custom-tailoring', 'tests/custom_tailoring_landing.cjs', 'artifacts/custom-tailoring'),
     ('gallery', 'tests/customer_gallery_browser.cjs', 'artifacts/gallery-experience'),
     ('shop', 'tests/shop_customer_experience.cjs', 'artifacts/shop-customer'),
     ('home-about', 'tests/home_about_customer_experience.cjs', 'artifacts/home-about'),
